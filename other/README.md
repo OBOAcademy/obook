@@ -11,6 +11,12 @@ I suggest starting with [Ontologies 101](https://github.com/OHSUBD2K/BDK14-Ontol
 - [Unit 3: Ontology Community](https://github.com/OHSUBD2K/BDK14-Ontologies-101/blob/master/BDK14-3.pptx) (Powerpoint Slides)
 - [BDK14 Ontologies 101 repository](https://github.com/OHSUBD2K/BDK14-Ontologies-101)
 
+If you're new to scientific computing more generally,
+then I strongly recommend [Software Carpentry](https://software-carpentry.org),
+which provides a set of very pragmatic introductions to
+the Unix command line, git, Python, Make,
+and other tools widely used by OBO developers.
+
 
 ## Open Biological and Biomedical Ontologies
 
