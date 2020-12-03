@@ -65,6 +65,7 @@ This is the suite of open source software that most OBO developers use.
   is a command-line tool for automating ontology tasks. (Java)
     - [ROBOT tutorial](https://github.com/ontodev/robot-tutorial)
     - [ROBOT: A Tool for Automating Ontology Workflows](https://link.springer.com/article/10.1186/s12859-019-3002-3) (journal article)
+    - [ENVO ROBOT Template and Merge Workflow](https://github.com/EnvironmentOntology/envo/wiki/ENVO-Robot-template-and-merge-workflow)
 - [DOS-DP](https://github.com/INCATools/dead_simple_owl_design_patterns)
   is a command-line tool for working with ontology design patterns. (Python)
 - [ODK: Ontology Development Kit](https://github.com/INCATools/ontology-development-kit)
