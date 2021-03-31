@@ -16,7 +16,7 @@ Modelling and querying data with RDF triples, and working with RDF using tables
 RDF Based Knowledge Engineering
 
 ## Software Carpentry Lessons
-Using Databases and SQL
+[Using Databases and SQL](http://swcarpentry.github.io/sql-novice-survey/)
 
 ## New Material
 - tables and triples
