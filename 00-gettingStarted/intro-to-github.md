@@ -27,7 +27,7 @@ Git supports the following types of primary entities:
 The relationships between any combination of these entities is many-to-many, with the nuanced exception of repositories.
 For our purposes today we will oversimplify by saying that a repositoy belongs *either* to a single organization or to a single *individual*.
 
-![](../howto/images/github-organizations-teams-repos.png)
+![](../docs/images/github-organizations-teams-repos.png)
 
 ### Task - create a new GitHub repository
 - [Create your GitHub account](https://github.com/join) if you do not already have one
