@@ -1,7 +1,8 @@
 # Week 8: Ontology Development
 
 **First Instructor:** Nico Matentzoglu  
-**Second Instructor:** Becky Jackson
+**Second Instructor:** Becky Jackson  
+**Third Instructor:** Nicole Vasilevsky
 
 ## Description
 Bringing the previous work together into daily ontology development in OBO.
