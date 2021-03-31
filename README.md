@@ -7,7 +7,7 @@ Since there isn't much here yet, it's best to start here: [Other resources](othe
 
 # C-Path Institute Ontology Training Table of Contents
 
-- "Week 0 (4/5/2021) - [Getting Started]()
+- "Week 0 (4/5/2021) - [Getting Started](https://github.com/jamesaoverton/obook/tree/master/gettingStarted)
 - "Week 1 (4/14/2021) - [Scientific computing](https://github.com/jamesaoverton/obook/tree/master/week01)
 - "Week 2 (4/21/2021) - [Linked Data](https://github.com/jamesaoverton/obook/tree/master/week02)
 - "Week 3 (4/28/2021) - [RDF](https://github.com/jamesaoverton/obook/tree/master/week03)
