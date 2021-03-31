@@ -16,13 +16,12 @@ GitHub is increasingly used by software developers, programmers and project mana
 Git supports the following types of primary entities:
 
 - **Individual:** A person who contributes to GitHub (that's you!) 
-  - Example individual [http://github.com/jmcmurry](http://github.com/jmcmurry)
+  - Example individual [http://github.com/nicolevasilevsky](http://github.com/nicolevasilevsky)
 - **Organization:** An entity that may correspond to an actual organization (such as a university) or to a meaningful grouping of repositories. Organizations are like individuals except that they can establish teams. 
-  - Example organization: [http://github.com/data2health](http://github.com/data2health)
+  - Example organization: [https://github.com/monarch-initiative](https://github.com/monarch-initiative)
 - **Repository:** A collection of versioned files (of any type)
-  - Example repository [http://github.com/data2health/mtip-tutorial](http://github.com/data2health/mtip-tutorial)
+  - Example repository [https://github.com/monarch-initiative/mondo/](https://github.com/monarch-initiative/mondo/)
 - **Teams**: A group of individuals assembled by the administrators of an organization. An individual may participate in many teams and organizations, however a team is always bound to a single organization. Nesting teams saves time; [instructions here](https://github.blog/2017-06-13-nested-teams-add-depth-to-your-team-structure/).
-  - Example team [https://github.com/orgs/data2health/teams/mtiptutorial](https://github.com/orgs/data2health/teams/mtiptutorial)
 
 The relationships between any combination of these entities is many-to-many, with the nuanced exception of repositories.
 For our purposes today we will oversimplify by saying that a repositoy belongs *either* to a single organization or to a single *individual*.
@@ -33,8 +32,6 @@ For our purposes today we will oversimplify by saying that a repositoy belongs *
 - [Create your GitHub account](https://github.com/join) if you do not already have one
 - Customize your avatar if you haven't already
 	- Go to [settings](https://github.com/settings/profile) and upload any picture (it doesn't have to be your face)
-- Create a repository 
-	- For directions specific to CD2H Phase II projects, see the FAQ [here](https://docs.google.com/document/d/1UNNxrOpHm7B9hw2Xn2JP_O1DYa7tCHx8OYEC1r0YAyU/edit#)
 
 ### Markdown
 
@@ -98,7 +95,4 @@ However, it is more capable for some filetypes than it is for others. Certain fi
 - [Git 101: Git and GitHub for Beginners](http://www.slideshare.net/HubSpot/git-101-git-and-github-for-beginners)
 - [Mastering Issues (10 min read)](https://guides.github.com/features/issues/)
 
-
-##### [Click here for Lesson 6](https://data2health.github.io/mtip-tutorial/lessons/Lesson6.html) 
-### [Back to Home](../index.md)
 
