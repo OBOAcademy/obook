@@ -1,5 +1,7 @@
 # Week 1: Scientific computing
 
+## Working with data efficiently and reproducibly
+
 **First Instructor:**  James Overton  
 **Second Instructor:** Nico Matentzoglu  
 

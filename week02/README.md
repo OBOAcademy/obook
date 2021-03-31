@@ -1,4 +1,3 @@
-
 # Week 2: Linked Data
 
 **First Instructor:** Nico Matentzoglu  
