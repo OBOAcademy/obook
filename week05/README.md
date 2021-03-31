@@ -1,6 +1,6 @@
 # Week 5: Ontology Practise
 
-**First Instructor:** TBD
+**First Instructor:** TBD  
 **Second Instructor:** Nico Matentzoglu
 
 ## Description
@@ -13,7 +13,7 @@ Practical use of OWL in science, including debugging and quality assurance.
 - automated testing
 
 ## Software Carpentry Lessons
-Automation and Make
+[Automation and Make](http://swcarpentry.github.io/make-novice/)
 
 ## New Material
 - Protege advanced features
