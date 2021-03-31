@@ -14,7 +14,7 @@ The basic ideas behind the semantic web, and why they're important.
 - Turtle
 
 ## OpenHPI Course Content
-Knowledge Engineering and the Web of Data
+[Knowledge Engineering and the Web of Data](https://open.hpi.de/courses/semanticweb2015/items/6RmGZmGabGuqGs8EGHfYBr)
 
 ## New material:
 - the landscape of standards
