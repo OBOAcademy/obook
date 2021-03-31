@@ -1,6 +1,6 @@
 # Week 8: Ontology Development
 
-**First Instructor:** Nico Matentzoglu
+**First Instructor:** Nico Matentzoglu  
 **Second Instructor:** Becky Jackson
 
 ## Description
@@ -10,7 +10,7 @@ Bringing the previous work together into daily ontology development in OBO.
 TBD 
 
 ## OpenHPI Course Content
-Knowledge Engineering
+[Knowledge Engineering](https://open.hpi.de/courses/semanticweb2015/items/6V96GOecoS3u481LerzYx2)
 
 ## New Material
 - ROBOT
