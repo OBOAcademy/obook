@@ -7,7 +7,7 @@ Software Carpentry:
 
 New material:
 - Docker (ODK)
-- GitHub
+- Introduction to GitHub
 - maybe formats:
     - Tables: CSV, Spreadsheets, Databases
     - JSON
