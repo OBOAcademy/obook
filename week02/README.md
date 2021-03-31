@@ -1,7 +1,7 @@
 
 # Week 2: Linked Data
 
-**First Instructor:** Nico Matentzoglu
+**First Instructor:** Nico Matentzoglu  
 **Second Instructor:** Nicole Vasilevsky
 
 - the landscape of standards
