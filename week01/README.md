@@ -1,16 +1,17 @@
 # Week 1: Scientific computing
 
-## Working with data efficiently and reproducibly
-
 **First Instructor:**  James Overton  
 **Second Instructor:** Nico Matentzoglu  
 
-Software Carpentry:
+## Description
+Working with data efficiently and reproducibly
+
+## Software Carpentry:
 - The Unix Shell
 - Version Control with Git
 - maybe: Programming with Python
 
-New material:
+## New material:
 - Docker (ODK)
 - Introduction to GitHub
 - maybe formats:
