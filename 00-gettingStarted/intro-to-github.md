@@ -67,7 +67,7 @@ However, it is more capable for some filetypes than it is for others. Certain fi
 - CSV, TSV (note that files named type '.tab' will not render properly in the UI.)
 - Markdown
 - Software code (eg. including json, HTML, xml etc)
-- 
+
 ### Task - create a new GitHub repository
 - [Create your GitHub account](https://github.com/join) if you do not already have one
 - Customize your avatar if you haven't already
