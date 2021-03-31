@@ -1,6 +1,6 @@
 # Week 4:
 
-**First Instructor:** Nicole Vasilevsky
+**First Instructor:** Nicole Vasilevsky  
 **Second Instructor:** Nico Matentzoglu
 
 ## Description
@@ -13,8 +13,8 @@
 - OWL
  
 ## OpenHPI Course Content
-- Ontologies and Logic
-- OWL, Rules, and Reasoning
+- [Ontologies and Logic](https://open.hpi.de/courses/semanticweb2015/items/2oYC9PkLYvxv4InZuBMBVl)
+- [OWL, Rules, and Reasoning](https://open.hpi.de/courses/semanticweb2015/items/2oCcvFX4bzhBbNWE6EVpoV)
 
 ## New Material
 - Protege basic features
