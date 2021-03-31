@@ -1,18 +1,23 @@
-# Week 4: Ontology Practise
+# Week 4:
 
-## Practical use of OWL in science, including debugging and quality assurance.
-
-**First Instructor:** TBD
+**First Instructor:** Nicole Vasilevsky
 **Second Instructor:** Nico Matentzoglu
 
-- use of OWL in OBO
-- explanations and debugging
-- DL query
-- automated testing
+## Description
 
-- Protege advanced features
-- OWL and OBO examples
-- explanations and debugging
-- DL query
-- ROBOT report
-- automated testing
+## Topics
+- history of ontology
+- predicate logic
+- FOL
+- description logic
+- OWL
+ 
+## OpenHPI Course Content
+- Ontologies and Logic
+- OWL, Rules, and Reasoning
+
+## New Material
+- Protege basic features
+- Reasoners: HermiT, ELK
+- Pizza Tutorial
+- OBO format logic

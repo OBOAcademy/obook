@@ -3,6 +3,20 @@
 **First Instructor:** Nico Matentzoglu  
 **Second Instructor:** Nicole Vasilevsky
 
+## Description
+The basic ideas behind the semantic web, and why they're important.
+
+## Topics
+- The Web
+- semantics
+- URL/URI/IRI
+- RDF triples
+- Turtle
+
+## OpenHPI Course Content
+Knowledge Engineering and the Web of Data
+
+## New material:
 - the landscape of standards
 - the Open Bio Ontologies
 - FAIR
