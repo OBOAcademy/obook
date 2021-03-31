@@ -1,6 +1,6 @@
 # Week 6: Ontology Design
 
-**First Instructor:** Becky Jackson
+**First Instructor:** Becky Jackson  
 **Second Instructor:** 
 
 ## Description
@@ -10,7 +10,7 @@ Building high quality ontologies with reuse and design patterns.
 TBD
 
 ## OpenHPI Course Content
-Ontological Engineering
+[Ontological Engineering](https://open.hpi.de/courses/semanticweb2015/items/1iXXFr86raHqrB5bRBJZeM)
 
 ## New Material
 - OWL imports: MIREOT, SLME
