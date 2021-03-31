@@ -7,7 +7,7 @@
 Working with data efficiently and reproducibly
 
 ## Software Carpentry:
-- The Unix Shell
+- [The Unix Shell](http://swcarpentry.github.io/shell-novice/)
 - Version Control with Git
 - maybe: Programming with Python
 
