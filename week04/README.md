@@ -6,7 +6,7 @@
 ## Description
 
 ## Topics
-- history of ontology
+- history of ontologies
 - predicate logic
 - FOL
 - description logic
