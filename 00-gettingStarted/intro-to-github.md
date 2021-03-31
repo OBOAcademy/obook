@@ -1,5 +1,6 @@
 ## Introduction to GitHub
-##### [Back to Home](https://github.com/jamesaoverton/obook)
+##### [Back to Getting Started](https://github.com/jamesaoverton/obook/tree/master/00-gettingStarted)
+##### [Back to Main Repo](https://github.com/jamesaoverton/obook)
 ### Overview:
 - [Getting started](#getting-started)
 - [Organization](#organization)
