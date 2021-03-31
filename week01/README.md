@@ -1,6 +1,6 @@
 # Week 1: Scientific computing
 
-**First Instructor:**  James Overton
+**First Instructor:**  James Overton  
 **Second Instructor:** Nico Matentzoglu  
 
 Software Carpentry:
