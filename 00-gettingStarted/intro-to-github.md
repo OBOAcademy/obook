@@ -28,10 +28,6 @@ For our purposes today we will oversimplify by saying that a repositoy belongs *
 
 ![](../docs/images/github-organizations-teams-repos.png)
 
-### Task - create a new GitHub repository
-- [Create your GitHub account](https://github.com/join) if you do not already have one
-- Customize your avatar if you haven't already
-	- Go to [settings](https://github.com/settings/profile) and upload any picture (it doesn't have to be your face)
 
 ### Markdown
 
@@ -61,13 +57,6 @@ Here is an example of a bulleted list:
 - Two
 - Three
 
-### Task - update the content in your README
-- Go back to the repository you just created
-- Click the pencil icon in the right corner of your README.md file
-- Add some content to your file that includes a header, italics, bold, strikethrough, and lists
-- You can preview your changes before committing by clicking 'Preview changes'.
-- Commit your changes by clicking the commit button at the bottom of the page.
-
 ### Content types
 
 GitHub can store any kind of content, provided it isn't too big. (And now [even this is possible](https://git-lfs.github.com/)).
@@ -78,15 +67,25 @@ However, it is more capable for some filetypes than it is for others. Certain fi
 - CSV, TSV (note that files named type '.tab' will not render properly in the UI.)
 - Markdown
 - Software code (eg. including json, HTML, xml etc)
+- 
+### Task - create a new GitHub repository
+- [Create your GitHub account](https://github.com/join) if you do not already have one
+- Customize your avatar if you haven't already
+	- Go to [settings](https://github.com/settings/profile) and upload any picture (it doesn't have to be your face)
+- Create a repository 
+
+### Task - update the content in your README
+- Go back to the repository you just created
+- Click the pencil icon in the right corner of your README.md file
+- Add some content to your file that includes a header, italics, bold, strikethrough, and lists
+- You can preview your changes before committing by clicking 'Preview changes'.
+- Commit your changes by clicking the commit button at the bottom of the page.
 
 ### Task - add content to your repository
 - Click on the code button
 - Click upload file
 - Upload a file by dragging and dropping or browse for file
 - Trying uploading an Excel file vs a TSV or CSV file. How are these displayed differently?
-
-### Chat
-- For realtime help with this tutorial, please go to our Gitter chat [here](https://gitter.im/tis-lab/MTIP-tutorial?utm_source=share-link&utm_medium=link&utm_campaign=share-link). You will need to log in with GitHub (preferable) or Twitter.
 
 ### Additional Resources
 - [Frequently Asked Questions](https://docs.google.com/document/d/1UNNxrOpHm7B9hw2Xn2JP_O1DYa7tCHx8OYEC1r0YAyU/edit#)
