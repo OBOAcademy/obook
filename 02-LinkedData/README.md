@@ -8,7 +8,7 @@ The basic ideas behind the semantic web, and why they're important.
 
 ## Topics
 - The Web
-- semantics
+- Semantics
 - URL/URI/IRI
 - RDF triples
 - Turtle
