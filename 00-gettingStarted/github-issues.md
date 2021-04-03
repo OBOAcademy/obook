@@ -44,7 +44,7 @@ Follow the instructions above to create a ticket about a hypothetical issue (suc
 - On the top right hand side, click "Assignees"
 - You can assign issues to yourself or other people who are part of the repository
 - In the box, start typing type their name or GitHub handle
-- It is possible to assign up to 9 handles at once (assignment to a team is currently not supported)
+- It is possible to assign up to 10 handles at once (assignment to a team is currently not supported)
 - Best practice is to assign only the people that are on the critical path at any given time; once that person has completed their portion of the issue, it can be reassigned to the next person who is on the critical path.
 - Best practice is that any given ticket that is part of a milestone should be assigned to someone
 - No milestone should be without corresponding issues.
