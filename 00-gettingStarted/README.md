@@ -10,7 +10,7 @@ Students’ experience with GitHub, command-line, programming languages
 - [Introduction to GitHub](https://github.com/jamesaoverton/obook/blob/master/00-gettingStarted/intro-to-github.md)
 - [Managing and tracking issues in GitHub](https://github.com/jamesaoverton/obook/blob/master/00-gettingStarted/github-issues.md)
 
-### Additional Resources
+#### Additional Resources
 - [Frequently Asked Questions](https://docs.google.com/document/d/1UNNxrOpHm7B9hw2Xn2JP_O1DYa7tCHx8OYEC1r0YAyU/edit#)
 - [Git and GitHub for Documentation](http://www.slideshare.net/annegentle/git-and-github-for-documentation)
 - [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
