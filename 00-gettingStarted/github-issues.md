@@ -105,7 +105,7 @@ You can link documents and files by:
 
 - If your ticket is a duplicate or related to another ticket, you can cross reference another ticket
 - Type # and you will see a list of other tickets in that repo
-- Type #TicketNumber and that will link to the other ticket. For example [#1](https://github.com/nicolevasilevsky/c-path-practice/issues/1) will link to [this ticket](https://github.com/nicolevasilevsky/c-path-practice/issues/1)
+- Type #TicketNumber and that will link to the other ticket.
 
 **_Before saving your changes, you can preview the comment to ensure the correct formatting._**
 
@@ -113,7 +113,7 @@ You can link documents and files by:
 
 - Follow the instructions above to comment on a ticket that someone created.
 - Mention Nicole
-- Attach a picture of a cat (such as a picture you copy from the internet, or attach a picture you have saved on your computer)
+- Attach a picture (such as a picture you copy from the internet, or attach a picture you have saved on your computer)
 - Include a comment that says, 'related to #1' and link to ticket [#1](https://github.com/nicolevasilevsky/c-path-practice/issues/1)
 
 ### Organize issues
@@ -154,7 +154,7 @@ Create a new project and add columns and add cards to the columns.
 ### Query issues
 [Back to top](#overview)
 
-Once you start using GitHub for lots of things it is easy to get overwhelmed by the number of issues. I find the query dashboard, [https://github.com/issues](https://github.com/issues), much more relevant to me than the notification page. [https://github.com/notifications](https://github.com/notifications).
+Once you start using GitHub for lots of things it is easy to get overwhelmed by the number of issues. The query dashboard [https://github.com/issues](https://github.com/issues) allows you to filter on tickets.
 - All issues assigned to me: [https://github.com/issues/assigned](https://github.com/issues/assigned)
 - All issues on which I am @ mentioned: [https://github.com/issues/mentioned](https://github.com/issues/mentioned)
 
