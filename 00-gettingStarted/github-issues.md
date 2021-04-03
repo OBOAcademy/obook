@@ -22,7 +22,7 @@
 
 How to create an issue in GitHub:
 
-- We will practice creating tickets in this repository [https://github.com/jamesaoverton/obook](https://github.com/jamesaoverton/obook)
+- We will practice creating tickets in this repository [https://github.com/nicolevasilevsky/c-path-practice/issues](https://github.com/nicolevasilevsky/c-path-practice/issues)
 - Click "issues"
 - Click "New Issue" (note the word 'issue' and 'ticket' are frequently used interchangeably)
 - Write an informative title
