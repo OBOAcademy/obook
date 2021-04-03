@@ -28,7 +28,7 @@ How to create an issue in GitHub:
 - Write an informative title
 - Write a detailed explanation of your issue
 - In the case of reporting software bugs, provide some context in which the issue was encountered (e.g. bug detected when using Google Chrome on a Mac OS)
-- If you know the sub-tasks that are involved, list these using `- [ ] ` markdown syntax before each bullet. Note, you can also add sub-tasks by clicking the 'add a task list' button in the tool bar. The status of the tasks in an issue (eg. [https://github.com/jamesaoverton/obook/issues/1](https://github.com/jamesaoverton/obook/issues/1) will then be reflected in any summary view. Eg. [https://github.com/jamesaoverton/obook/issues](https://github.com/jamesaoverton/obook/issues).
+- If you know the sub-tasks that are involved, list these using `- [ ] ` markdown syntax before each bullet. Note, you can also add sub-tasks by clicking the 'add a task list' button in the tool bar. The status of the tasks in an issue (eg. [https://github.com/nicolevasilevsky/c-path-practice/issues/1](https://github.com/nicolevasilevsky/c-path-practice/issues/1) will then be reflected in any summary view. Eg. [https://github.com/nicolevasilevsky/c-path-practice/issues](https://github.com/nicolevasilevsky/c-path-practice/issues).
 - Click Submit new issue
 - Edit the issue (if needed) (Note that post-hoc edits will not propagate to email notifications).
 
@@ -79,7 +79,7 @@ On the ticket you previously created:
 
 **Comment on issues**
 
-- Click on an issue in the issue tracker in the [https://github.com/jamesaoverton/obook/issues](https://github.com/jamesaoverton/obook/issues) repo
+- Click on an issue in the issue tracker in the [https://github.com/nicolevasilevsky/c-path-practice/issues](https://github.com/nicolevasilevsky/c-path-practice/issues) repo
 - Scroll to the bottom of the issue, and add content in the "Leave a comment" field
 - Use the top tool bar to format your text, add **bold**, *italic*, lists etc.
 - Preview your text to see how your formatting looks
@@ -110,7 +110,7 @@ You can link documents and files by:
 
 - If your ticket is a duplicate or related to another ticket, you can cross reference another ticket
 - Type # and you will see a list of other tickets in that repo
-- Type #TicketNumber and that will link to the other ticket. For example [#1](https://github.com/jamesaoverton/obook/issues/1) will link to [this ticket](https://github.com/jamesaoverton/obook/issues/1)
+- Type #TicketNumber and that will link to the other ticket. For example [#1](https://github.com/nicolevasilevsky/c-path-practice/issues/1) will link to [this ticket](https://github.com/nicolevasilevsky/c-path-practice/issues/1)
 
 **_Before saving your changes, you can preview the comment to ensure the correct formatting._**
 
@@ -119,7 +119,7 @@ You can link documents and files by:
 - Follow the instructions above to comment on a ticket that someone created.
 - Mention Nicole
 - Attach a picture of a cat (such as a picture you copy from the internet, or attach a picture you have saved on your computer)
-- Include a comment that says, 'related to #1' and link to ticket [#1](https://github.com/jamesaoverton/obook/issues/1)
+- Include a comment that says, 'related to #1' and link to ticket [#1](https://github.com/nicolevasilevsky/c-path-practice/issues/1)
 
 ### Organize issues
 [Back to top](#overview)
