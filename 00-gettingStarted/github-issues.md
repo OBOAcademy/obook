@@ -160,23 +160,25 @@ Once you start using GitHub for lots of things it is easy to get overwhelmed by 
 
 More complex queries are also possible.
 
-- All issues either assigned to me OR on which I have commented OR am mentioned: [https://github.com/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+involves%3Anicolevasilevsky+](https://github.com/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+involves%3Ajmcmurry+)
-- All issues in all repos within an organization: [https://github.com/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+org%3Ajamesaoverton](https://github.com/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+org%3Ajamesaoverton)
+- All issues either assigned to me OR on which I have commented OR am mentioned: [https://github.com/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+involves%3Anicolevasilevsky+](https://github.com/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+involves%3Anicolevasilevsky+)
 
 Further reading on [Issue querys](https://help.github.com/articles/searching-issues/)
 
-#### Configure emails for mentions
+#### Nofifications
 
-You can set rules in your email to filter for emails that mention you, ie @username.
+- When you join a repository, by default, you are 'watching' all activity. You can change the setting to 'Participating and @mentions' to only get notifications that mention you
+- You can set rules in your email to filter for emails that mention you, ie @username.
 
 ### Help
 [Back to top](#overview)
 
-If you have an issue with GitHub itself (bug, feature request, etc) where do you go? Ironically, there is no good place. If you want to look up things that others have reported, isaacs has a good resource. [https://github.com/isaacs/github/issues/](https://github.com/isaacs/github/issues/). However, this is a rogue repo and a bit contentious.
-
 - You may find the answers you seek in  [StackOverflow](http://stackoverflow.com/questions/tagged/github), although it is primarily geared towards programmers.
 - GitHub kind of monitors [https://github.com/isaacs/github/issues/](https://github.com/isaacs/github/issues/) but not with any rigor.
 - To be safe, contact GitHub directly at [https://github.com/contact](https://github.com/contact), but recognize that they support literally millions of users and responsiveness is not guaranteed. Forums like isaacs sometimes offer some help because other users can help identify workarounds, for instance, as shown [here](https://github.com/isaacs/github/issues/65#issuecomment-123740194).
+
+#### Acknowledgements
+
+_Adopted from [CD2H MTIP tutorial](https://data2health.github.io/mtip-tutorial/)_
 
 
 
