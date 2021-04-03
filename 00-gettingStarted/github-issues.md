@@ -55,8 +55,7 @@ Follow the instructions above to create a ticket about a hypothetical issue (suc
 
 **New Labels**
 
- - On GitHub, navigate to the main page of the repository Issues and pull requests tab selection
- - Under your repository name, click  Issues (or  Pull requests)
+ - In GitHub, navigate to the [Issues page](https://github.com/nicolevasilevsky/c-path-practice/issues) or the [pull requests tab](https://github.com/nicolevasilevsky/c-path-practice/pulls)
  - Click Labels button next to the search field
  - Click New Label to create a new label, or click Edit to edit an existing one.
  - In the text box, type your new label name.
@@ -86,7 +85,6 @@ On the ticket you previously created:
 - If an issue has been addressed, click Close Issue. Best practice is to point to the work (whether code, documentation, etc) that has been done to close it.
 - Only close the ticket if the issue has been resolved, usually someone will write a comment describing the action they did to close the issue and click Close Issue. 
 - The issue will no longer be dispalyed in the list of open issue, but will be archived.
-- Some issues have a long half life without being addressed. It is best practice to have some way of designated these issues as having been triaged and determined not to be a priority. This can either be achieved with the use of a label or milestone (eg: 'parked' or 'parking lot').
 - When making a change to code or documentation in GitHub, it is possible to automatically couple a change to an issue and close it. Just use 'fixes' or 'closes' followed by the issue number.
 
 **Use direct @ mentions**
@@ -99,7 +97,7 @@ On the ticket you previously created:
 You can link documents and files by:
 
 - copy and pasting URL
-- you can attach files by dragging and dropping.
+- you can attach files by dragging and dropping
 - You can link one issue to another in the same repo by typing '#' followed by the title of the ticket
 - This approach also works across repos but you need to use the full URL (no autocomplete available). Doing this will also cause the referent issue to display that it has been referenced.
 
