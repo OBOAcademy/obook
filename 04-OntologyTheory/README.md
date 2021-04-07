@@ -4,6 +4,15 @@
 **Second Instructor:** Nico Matentzoglu
 
 ## Description
+We discuss the need for ontologies and explain the basic principles of ontology engineering. By the end of this course you should:
+
+1. Be able to explain why we need ontologies.
+2. Build a basic ontology yourself.
+3. Know how to bring your ontology engineering skills to the next level.
+
+## Outline
+
+#
 
 ## Topics
 - history of ontologies

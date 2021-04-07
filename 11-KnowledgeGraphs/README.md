@@ -6,8 +6,13 @@
 ## Description
 Changing gears from deterministic to statistical reasoning.
 
+
 ## Topics
-TBD
+- Knowledge Graph Learning
+- Enterprise Knowledge Graphs
+- Shape Validation
+- Graph Embeddings
+- The advent of neurosymbolic architectures
 
 ## New Material
 TBD

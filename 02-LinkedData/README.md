@@ -42,12 +42,14 @@ We discuss the basic ideas behind behind Linked Data and the Semantic Web, and d
         - OBO Dashboard
     - Knowledge Graphs
       - Key distinguishing feature: the URI
+      - Google Knowledge Graph and Google search with Microformats and RDFa
 - Evolution and the "Semantic Battlegrounds"
   - *The* Semantic Web vs Semantic Web Technologies
     - Linked Open Data Cloud vs Semantic Web Layer Cake
   - Shapes vs Ontologies
   - Controlled (Linked Open Data) Vocabularies vs Ontologies
   - RDF vs OWL
+    - Why do we need OWL Reasoning?
   - OWL vs OBO
     - The History of the OBO Format
     - The Future of the OBO Format
