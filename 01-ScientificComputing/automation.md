@@ -1,5 +1,7 @@
 # Automation
 
+By: [James Overton](https://orcid.org/0000-0001-5139-5557)
+
 Automation is part of the foundation of the modern world.
 The key to using and building automation
 is a certain way of thinking about processes,
@@ -340,7 +342,7 @@ Given a bunch of inputs,
 some of which pass the test and some of which fail it,
 we can think of the test as *determining* some way in which
 all the things that pass are the **same**
-and all the things that fail are teh **same**.
+and all the things that fail are the **same**.
 Programmers will also be familiar with more complex conditionals
 such as if-then-else, if-elseif-else, and "case",
 which divide process execution across multiple "branches".
@@ -354,7 +356,7 @@ expect it to take three times as long to write,
 for the same reasons mentioned above for notes.
 
 If a task is simple
-and I can hold all the step in my head,
+and I can hold all the steps in my head,
 and I can finish it in one sitting without distractions,
 then I won't bother with a checklist.
 But more and more I find myself writing myself a checklist
@@ -366,7 +368,7 @@ and I check them off as I go.
 Sometimes I start making the checklist days before I need it,
 so I have lots of time to think about it and improve it.
 If there's a job that I'm worried about,
-breaking it down into small pieces
+breaking it down into smaller pieces
 usually helps to make the job feel more manageable.
 Actually, I try to start every workday
 by skimming my (long) To Do list,
