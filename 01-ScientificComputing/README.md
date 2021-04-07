@@ -3,11 +3,11 @@
 **First Instructor:**  James Overton
 **Second Instructor:** Nico Matentzoglu
 
-## Description
+## Overview
 
 Working with data efficiently and reproducibly.
 
-## Software Carpentry
+## Content
 
 - [The Unix Shell](http://swcarpentry.github.io/shell-novice/)
 - [Version Control with Git](http://swcarpentry.github.io/git-novice/)
