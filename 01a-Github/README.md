@@ -7,7 +7,7 @@ Students’ experience with GitHub, command-line, programming languages
 **Instructor**: Nicole Vasilevsky
 
 ### Materials
-- [Introduction to GitHub](https://github.com/jamesaoverton/obook/blob/master/00-gettingStarted/intro-to-github.md)
+- [Introduction to GitHub](https://github.com/jamesaoverton/obook/blob/master/01a-Github/github-issues.md)
 - [Managing and tracking issues in GitHub](https://github.com/jamesaoverton/obook/blob/master/00-gettingStarted/github-issues.md)
 
 #### Additional Resources
