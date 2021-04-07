@@ -21,6 +21,8 @@ Since there isn't much here yet, it's best to start here: [Other resources](othe
 - Week 11 (6/23/2021) - [Knowledge Graphs](https://github.com/jamesaoverton/obook/tree/master/11-KnowledgeGraphs)
 - Week 12 (6/30/2021) - [Review](https://github.com/jamesaoverton/obook/tree/master/12-Review)
 
+**[Notes doc](https://docs.google.com/document/d/1gd6c-15E3hMUKkfvQY2gsPmJ6LyIvPPLkj76qlKQ8Ds/edit#)**
+
 ## License
 
 This content is available under the [Creative Commons CC0 Public Domain Dedication](LICENSE).
