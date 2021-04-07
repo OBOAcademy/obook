@@ -75,7 +75,7 @@ but a lot of software automation stays inside the computer,
 working on data in files and databases,
 and across networks.
 We'll be focused on this kind of software automation,
-transforms data into data.
+transforming data into data.
 
 The interesting thing about this is that source code is a kind of data,
 so there are software automation workflows
