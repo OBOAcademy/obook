@@ -4,15 +4,38 @@
 **Second Instructor:** Nico Matentzoglu
 
 ## Description
-We discuss the need for ontologies and explain the basic principles of ontology engineering. By the end of this course you should:
+We discuss the need for ontologies and explain the basic principles of ontology engineering. By the end of this session you should:
 
-1. Be able to explain why we need ontologies.
-2. Build a basic ontology yourself.
-3. Know how to bring your ontology engineering skills to the next level.
+1. Be able to explain why we need ontologies
+2. Build a basic ontology yourself
+3. Know how to bring your ontology engineering skills to the next level
+4. Be able to create a branch in GitHub, make edits in Protege and create a pull request
+5. Know how to write a good ticket on the issue tracker
+
+## Preparation
+
+Participants will need to have access to the following resources and tools prior to the training:
+- **GitHub account** - register for a free GitHub account [here](https://github.com/join?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home)
+- **Protege** - Please install Protege 5.5, download it [here](https://protege.stanford.edu/)
+- Please try and install **ELK 0.5** (_For a video showing how to install Elk, click [here](https://www.dropbox.com/s/n3td2n48xmwd3mj/Install_ELK_0.5.mov?dl=0)._) 
+  - Click here to get the latest [Protege Plugin latest build](https://oss.sonatype.org/service/local/artifact/maven/content?r=snapshots&g=org.semanticweb.elk&a=elk-distribution-protege&e=zip&v=LATEST) (this is available on the bottom of [ELK pages](https://github.com/liveontologies/elk-reasoner/wiki/GettingElk). This will download a zipped file.)
+  - When downloaded, unzip and copy puli and elk jars (two .jar files) in the unpacked directory.
+  -  Paste these files in your Protege plugin directory. This is in one of two locations:
+    - ~/.Protege/plugins (note this is usually hidden from finder, but you can see it in the terminal) **or**
+    - Go to Protege in Applications (Finder), right click, 'Show package contents' -> Java -> plugins
+  - Restart Protege. You should see ELK 0.5 installed in your Reasoner menu. 
+  - Important: it seems Elk 0.5. Does not work with all versions of Protege, in particular, 5.2 and below. These instructions were only tested with Protege 5.5!
+- _Optional_ **GitHub Desktop** - Please make sure you have some kind of git client installed on your Machine. If you are new to Git, please install [GitHub Desktop](https://desktop.github.com/)
 
 ## Outline
 
-#
+1. Ontology principles, formalism, semantics (Nico) (~30 min)
+2. Protege tutorial (Nicole) (~90 min) 
+3. Review of the Protege interface (Emily and Daniel)
+4. Implement a real world problem (ie work on real GitHub isssues)
+  - Create a branch from GitHub
+  - Edit an ontology in Protege
+  - Create a pull request in GitHub
 
 ## Topics
 - history of ontologies
