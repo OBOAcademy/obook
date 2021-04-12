@@ -2,7 +2,7 @@
 
 By: [James Overton](https://orcid.org/0000-0001-5139-5557)
 
-Automation is part of the foundation of the modern world.
+Automation is part of the foundation of nnn modern world.
 The key to using and building automation
 is a certain way of thinking about processes,
 how they can be divided into simple steps,
@@ -522,7 +522,7 @@ saving yourself time and effort next time.
 A "script" is a kind of program that's easy to edit and run.
 There are technical distinctions to be made
 between "compiled" programs and "interpreted" programs,
-but they turns out to be more complicated and less helpful than they seems at first.
+but they turn out to be more complicated and less helpful than they seem at first.
 Technically, a checkscript is just a script
 that waits for you to do the hard parts.
 In this section I want to talk about "fully automated" or "standalone" scripts
