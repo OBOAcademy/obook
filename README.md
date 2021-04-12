@@ -5,7 +5,7 @@ For now, they're just the opinionated notes of [@jamesaoverton](https://github.c
 
 Since there isn't much here yet, it's best to start here: [Other resources](other/README.md).
 
-# C-Path Institute Ontology Training Table of Contents
+# Training Schedule
 
 - Week 0 (4/07/2021) - [Getting Started](https://github.com/jamesaoverton/obook/tree/master/00-gettingStarted)
 - Week 1 (4/14/2021) - [Scientific computing](https://github.com/jamesaoverton/obook/tree/master/01-ScientificComputing)
@@ -21,7 +21,7 @@ Since there isn't much here yet, it's best to start here: [Other resources](othe
 - Week 11 (6/23/2021) - [Knowledge Graphs](https://github.com/jamesaoverton/obook/tree/master/11-KnowledgeGraphs)
 - Week 12 (6/30/2021) - [Review](https://github.com/jamesaoverton/obook/tree/master/12-Review)
 
-**[Notes doc](https://docs.google.com/document/d/1gd6c-15E3hMUKkfvQY2gsPmJ6LyIvPPLkj76qlKQ8Ds/edit#)**
+**[Notes doc (private)](https://docs.google.com/document/d/1gd6c-15E3hMUKkfvQY2gsPmJ6LyIvPPLkj76qlKQ8Ds/edit#)**
 
 ## License
 
