@@ -85,7 +85,7 @@ It might be a set of papers or data from those papers.
 Start by finding that data
 and selecting a particular version of it.
 Write that down clearly in your notes.
-If possible, include a unique identifier such as a URL or DOI.
+If possible, include a unique identifier such as a ([persistent](https://en.wikipedia.org/wiki/Persistent_uniform_resource_locator)) URL or DOI.
 If that's not possible, write down the steps you took.
 If the data isn't too big,
 keep a copy of it in your fresh new project directory.
@@ -93,7 +93,7 @@ If the data is a bit too big,
 keep a compressed copy in a `zip` or `gz` file.
 A lot of software is perfectly happy to read directly from compressed files,
 and you can compress or uncompress data using piped commands in your shell or script.
-If the data is really to big,
+If the data is really too big,
 then be extra careful to keep notes
 on **exactly** where you can find it again.
 Consider storing just the
@@ -102,7 +102,7 @@ of the big files,
 so you can confirm that they have exactly the same contents.
 
 If you know from the start
-that you will need to compare you results with some other group,
+that you will need to compare your results with someone else's,
 make sure that you're using the **same** reference data
 that they are.
 This may require a conversation,
@@ -138,7 +138,7 @@ you could automate this step,
 or you could just do it manually.
 It might take three times as long to automate it, right?
 So you can save yourself some precious time
-but just opening Excel and "fixing" things by hand.
+by just opening Excel and "fixing" things by hand.
 
 Sometimes that bet will pay off,
 but I lose that bet most of the time.
@@ -163,7 +163,7 @@ and quickly check the results.
 
 ## Test from the Start
 
-Tests are another thing that take
+Tests are another thing that take time to implement.
 
 One of the key benefits to tests is (again) communication.
 When assessing or trying out some new piece of software
