@@ -9,7 +9,7 @@ Some people use "scientific computing" to mean something more specific,
 focusing on computational modelling or computationally intensive analysis.
 We'll be focusing on more general and day-to-day topics:
 how can a scientist make best use of a computer
-to do her work well?
+to do their work well?
 
 These three things apply to lots of fields,
 but are particularly important to scientists:
@@ -80,7 +80,7 @@ But try to clear some space to make a fresh start.
 A lot of data analysis starts with a reference data set.
 It might be a genome or a proteome.
 It might be a corpus.
-It might be a set of paper or data from those papers.
+It might be a set of papers or data from those papers.
 
 Start by finding that data
 and selecting a particular version of it.
@@ -214,7 +214,7 @@ We think about the documentation we write as being for other people,
 but for a lot of small projects
 it's really for your future self.
 Be kind to your future self.
-She may be even more tired, even more stressed than you are today.
+They may be even more tired, even more stressed than you are today.
 
 There's a range of different forms of documentation,
 worth a whole discussion of its own.
