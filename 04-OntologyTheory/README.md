@@ -57,3 +57,9 @@ Icebreaker:
 - Reasoners: HermiT, ELK
 - Pizza Tutorial
 - OBO format logic
+
+## Resources
+
+[Ontology tutorials and Resources](https://tislab.org/ontologyResources.html)
+[Monkeying around with OWL: Musings on building and using ontologies, posts by Chris Mungall](https://douroucouli.wordpress.com/)
+[Documentation on Cell Ontology relations](https://github.com/obophenotype/cell-ontology/blob/master/documentation/relations_guide.md)
