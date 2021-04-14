@@ -29,14 +29,12 @@ Participants will need to have access to the following resources and tools prior
 
 ## Outline
 
-Icebreaker: 
-- questions about [pizza tutorial](https://www.michaeldebellis.com/post/new-protege-pizza-tutorial)
-- any issues with installing Protege or GitHub desktop?
-
 1. Ontology principles, formalism, semantics (Nico) (~30 min)
 2. Protege tutorial (Nicole) (~90 min) 
   - Review of the Protege interface (Emily and Daniel)
-  - Implement a real world problem (ie work on real GitHub isssues)
+    - questions about [pizza tutorial](https://www.michaeldebellis.com/post/new-protege-pizza-tutorial)
+    - any issues with installing Protege or GitHub desktop?
+  - Implement a real world problem (ie work on real GitHub isssues). See training [doc](https://docs.google.com/document/d/1dPeCH2NFYb_akfv1vhlMFdQHjm_1VRoX5LH7_n4j2oE/edit#heading=h.30zswce50eac)
   - Create a branch from GitHub
   - Edit an ontology in Protege
   - Create a pull request in GitHub
