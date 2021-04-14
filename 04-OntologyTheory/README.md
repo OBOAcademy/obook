@@ -31,7 +31,7 @@ Participants will need to have access to the following resources and tools prior
 
 Icebreaker: 
 - questions about [pizza tutorial](https://www.michaeldebellis.com/post/new-protege-pizza-tutorial)
-- any issues with installing Protege?
+- any issues with installing Protege or GitHub desktop?
 
 1. Ontology principles, formalism, semantics (Nico) (~30 min)
 2. Protege tutorial (Nicole) (~90 min) 
