@@ -1,0 +1,54 @@
+# The Linked Data landscape from an OBO perspective: Standards, Services and Tools
+- Landscape (focus on this and make sure this is covered)
+  - Linked data in biomedical sciences
+    - Finding data
+    - Annotating data (so it becomes discoverable)
+    - Analysing data  
+  - Important vocabularies/knowledge graphs and a realistic view of their utility
+    - [Linked Open Data (LOD) cloud](https://lod-cloud.net/): The flagship project of the Semantic Web. An attempt to make all, or anyways a lot, of linked data accessible in one giant knowledge graph. A good overview can be found in [this](https://medium.com/virtuoso-blog/what-is-the-linked-open-data-cloud-and-why-is-it-important-1901a7cb7b1f) medium article.
+    - [Schema.org](https://schema.org/): General purpose vocabulary for entities on the web. To get a better sense of the types of entities and relationships covered see [here](https://schema.org/docs/full.html).
+    - [Friend of a friend (FOAF)](http://xmlns.com/foaf/spec/): A previously popular vocabulary that has been used mainly for encoding information about people in a structured manner. In the end, the uptake was quite limited, but you will find `foaf:` entities everywhere in Linked Data repositories.
+    - [DBpedia](https://www.dbpedia.org/): Project that extracts structured data from Wikipedia and makes it available as a giant knowledge graph. The [associated ontology](http://mappings.dbpedia.org/server/ontology/classes/), similar to schema.org, covers entities encountered in common sense knowledge.
+    - [Wikidata](https://www.wikidata.org/wiki/Wikidata:Main_Page): Free and open knowledge base that can be edited in much the same way as Wikipedia is edited.
+  - The biomedical domain
+    - Where to find ontologies: Ontology repositories
+      - OBO Foundry Ontology Library
+      - [BioPortal](https://bioportal.bioontology.org/)
+        - [CPT Story](https://www.bioontology.org/why-bioportal-no-longer-offers-the-current-procedural-terminology-cpt/). The Current Procedural Terminology was the by far most highly accessed Terminology on Bioportal - for many years. Due to license concerns, it had to be withdrawn from the repository. This story serves a cautionary tale of using terminologies with non-open or non-transparent licensing schemes.
+      - [AgroPortal](http://agroportal.lirmm.fr/)
+    - Term browsers
+      - OLS
+      - Ontobee
+      - AberOWL
+      - identifiers.org
+    - The most important biomedical ontologies
+      - What does "important" mean?
+      - SNOMED vs OBO vs NCIt
+      - EFO
+    - Applications:
+      
+      - RightField
+      - CEDAR
+      - Populous/Webulous
+      - Open Refine
+    - Standards:
+      - The Layer Cake
+    - Some larger efforts in the biomedical domain that make significant use of ontologies:
+      - [Open Targets](https://www.opentargets.org/)
+      - A lot of Covid-19 knowledge graphs
+        - [KG Covid 19]()
+
+## Evolution and the "Semantic Battlegrounds"
+- *The* Semantic Web vs Semantic Web Technologies
+  - Linked Open Data Cloud vs Semantic Web Layer Cake
+- Shapes vs Ontologies
+- Controlled (Linked Open Data) Vocabularies vs Ontologies
+- RDF vs OWL
+  - Why do we need OWL Reasoning?
+- OWL vs OBO
+  - The History of the OBO Format
+  - The Future of the OBO Format
+- SKOS vs OWL (Taxonomies vs Ontologies)
+- Human vs Machine Curation
+- Linked Data Principles vs. FAIR principles vs OBO principles
+- Triple stores vs LPG Databases
