@@ -173,7 +173,7 @@ Here are a few key research areas, which are, by no means (!), exhaustive.
 - Other research areas (not in any way exhaustive):
    - Web decentralisation and privacy:
      - [Solid](https://solidproject.org/): Solid (Social Linked Data) is a web decentralization project led by Tim Berners-Lee, with the aim of true ownership of personal data and improved privacy. "Pods" are like secure personal web servers for data from which application can request data.
-     - [Shape validation](https://www.w3.org/2014/data-shapes/wiki/Main_Page): It is very difficult to validate huge Knowledge Graphs of interrelated data efficiently (by validate we can mean a lot of things, such as making sure that your cat does not accidentally end up as someones "Mendelian Disease"). Shape languages such as Shex and SHACL are poised to solve this problem, but the research is ongoing.
+     - [Shape validation](https://www.w3.org/2014/data-shapes/wiki/Main_Page): It is very difficult to validate huge Knowledge Graphs of interrelated data efficiently (by validate we can mean a lot of things, such as making sure that your cat does not accidentally end up as someone's "Mendelian Disease"). Shape languages such as Shex and SHACL are poised to solve this problem, but the research is ongoing.
    - New standards and tools: There is always someone proposing a new semantic standard for something or building a new kind of triple store, SPARQL extension or similar.
    
 ## Typical Jobs of Semantic Data Engineers in the biomedical domain
