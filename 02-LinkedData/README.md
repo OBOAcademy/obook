@@ -32,5 +32,5 @@ The open courses of the [Hasso Plattner Institute](https://open.hpi.de/) (HPI) o
 - Find terms:
   - [Ontology Lookup Service](https://www.ebi.ac.uk/ols/index)
   - [BioPortal](https://bioportal.bioontology.org/)
-- Publish, and find, ontologies:
+- Publish, and find ontologies:
   - [OBO Foundry](http://obofoundry.org/)
