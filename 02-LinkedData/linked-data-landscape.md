@@ -1,54 +1,65 @@
 # The Linked Data landscape from an OBO perspective: Standards, Services and Tools
-- Landscape (focus on this and make sure this is covered)
-  - Linked data in biomedical sciences
-    - Finding data
-    - Annotating data (so it becomes discoverable)
-    - Analysing data  
-  - Important vocabularies/knowledge graphs and a realistic view of their utility
-    - [Linked Open Data (LOD) cloud](https://lod-cloud.net/): The flagship project of the Semantic Web. An attempt to make all, or anyways a lot, of linked data accessible in one giant knowledge graph. A good overview can be found in [this](https://medium.com/virtuoso-blog/what-is-the-linked-open-data-cloud-and-why-is-it-important-1901a7cb7b1f) medium article.
-    - [Schema.org](https://schema.org/): General purpose vocabulary for entities on the web. To get a better sense of the types of entities and relationships covered see [here](https://schema.org/docs/full.html).
-    - [Friend of a friend (FOAF)](http://xmlns.com/foaf/spec/): A previously popular vocabulary that has been used mainly for encoding information about people in a structured manner. In the end, the uptake was quite limited, but you will find `foaf:` entities everywhere in Linked Data repositories.
-    - [DBpedia](https://www.dbpedia.org/): Project that extracts structured data from Wikipedia and makes it available as a giant knowledge graph. The [associated ontology](http://mappings.dbpedia.org/server/ontology/classes/), similar to schema.org, covers entities encountered in common sense knowledge.
-    - [Wikidata](https://www.wikidata.org/wiki/Wikidata:Main_Page): Free and open knowledge base that can be edited in much the same way as Wikipedia is edited.
-  - The biomedical domain
-    - Where to find ontologies: Ontology repositories
-      - OBO Foundry Ontology Library
-      - [BioPortal](https://bioportal.bioontology.org/)
-        - [CPT Story](https://www.bioontology.org/why-bioportal-no-longer-offers-the-current-procedural-terminology-cpt/). The Current Procedural Terminology was the by far most highly accessed Terminology on Bioportal - for many years. Due to license concerns, it had to be withdrawn from the repository. This story serves a cautionary tale of using terminologies with non-open or non-transparent licensing schemes.
-      - [AgroPortal](http://agroportal.lirmm.fr/)
-    - Term browsers
-      - OLS
-      - Ontobee
-      - AberOWL
-      - identifiers.org
-    - The most important biomedical ontologies
-      - What does "important" mean?
-      - SNOMED vs OBO vs NCIt
-      - EFO
-    - Applications:
-      
-      - RightField
-      - CEDAR
-      - Populous/Webulous
-      - Open Refine
-    - Standards:
-      - The Layer Cake
-    - Some larger efforts in the biomedical domain that make significant use of ontologies:
-      - [Open Targets](https://www.opentargets.org/)
-      - A lot of Covid-19 knowledge graphs
-        - [KG Covid 19]()
 
-## Evolution and the "Semantic Battlegrounds"
-- *The* Semantic Web vs Semantic Web Technologies
-  - Linked Open Data Cloud vs Semantic Web Layer Cake
-- Shapes vs Ontologies
-- Controlled (Linked Open Data) Vocabularies vs Ontologies
-- RDF vs OWL
-  - Why do we need OWL Reasoning?
-- OWL vs OBO
-  - The History of the OBO Format
-  - The Future of the OBO Format
-- SKOS vs OWL (Taxonomies vs Ontologies)
-- Human vs Machine Curation
-- Linked Data Principles vs. FAIR principles vs OBO principles
-- Triple stores vs LPG Databases
+In the following we will look a bit at the general Linked Data landscape, and name some of its flagship projects and standards. It is important to be clear that the Semantic Web field is a very heterogenous one: 
+
+## Flagship projects of the wider Semantic Web community
+
+- [Linked Open Data (LOD) cloud](https://lod-cloud.net/): The flagship project of the Semantic Web. An attempt to make all, or anyways a lot, of Linked Data accessible in one giant knowledge graph. A good overview can be found in [this](https://medium.com/virtuoso-blog/what-is-the-linked-open-data-cloud-and-why-is-it-important-1901a7cb7b1f) medium article. Note that some people seem to think that the Semantic Web _is_ (or should be) the Linked Open Data cloud. I would question this view, but I am not yet decided what my position is.
+- [Schema.org](https://schema.org/): General purpose vocabulary for entities on the web, founded by Google, Microsoft, Yahoo and Yandex. To get a better sense of the types of entities and relationships covered see [here](https://schema.org/docs/full.html).
+- [DBpedia](https://www.dbpedia.org/): Project that extracts structured data from Wikipedia and makes it available as a giant knowledge graph. The [associated ontology](http://mappings.dbpedia.org/server/ontology/classes/), similar to schema.org, covers entities encountered in common sense knowledge.
+- [Wikidata](https://www.wikidata.org/wiki/Wikidata:Main_Page): Free and open knowledge base that can be edited in much the same way as Wikipedia is edited.
+
+While these Semantic Web flagship projects are doubtlessly useful, it is sometimes hard to see how they can help for your biomedical research. We rarely make use of them in our day to day work as ontologists, but there are some notable exceptions:
+- Where our work involves modelling environmental factors, we sometimes use wikidata as a standard way to refer for example to countries.
+- For some more common sense knowledge use cases, such as nutrition, consider augmenting your knowledge graph with data from wikidata or dbpedia. While they may be a bit more messy and not directly useful for exploration by humans, it is quite possible that Machine Learning approaches can use the additional context provided by these knowledge graphs to improve embeddings and deliver more meaningful link predictions.
+- Some OBO ontologies are already on Wikidata - perhaps you can find additional synonyms and labels which help with your data mapping problems!
+
+## Where the OBO and Semantic Web communities are slightly at odds
+
+The [OBO format](http://owlcollab.github.io/oboformat/doc/obo-syntax.html#5.1) is a very popular syntax for representing biomedical ontologies. A lot of tools have been build over the years to hack OBO ontologies on the basis of that format - I still work with it on a daily basis. Although it has semantically been proven to be a subset of OWL (i.e. there is a lossless mapping of OBO into OWL) and can be viewed as just another syntax, it is in many ways ideosyncratic. For starters, you wont find many, if any, IRIs in OBO ontologies. The format itself uses CURIEs which are mapped to the general OBO PURL namespace during transformation to OWL. For example, if you see MONDO:0003847 in an OBO file, and were to translate it to OWL, you will see this term being translated to http://purl.obolibrary.org/obo/MONDO_0003847. Secondly, you have a bunch of built-in properties like BROAD or ABBREVIATION that mapped to a vocabulary called oboInOwl (oio). These are pretty non-standard on the general Semantic Web, and  often have to be manually mapped to the more popular counterparts in the Dublin Core or SKOS namespaces.
+
+Having URIs as identifiers is not generally popular in the life sciences. As discussed elsewhere, it is much more likely to encounter CURIEs such as MONDO:0003847 than URIs such as http://purl.obolibrary.org/obo/MONDO_0003847 in biomedical databases.
+
+## Useful tools for biomedical research
+
+Why does the biomedical research, and clinical, community care about the Semantic Web and Linked Data? There are endless lists of applications that try to apply semantic technologies to biomedical problems, but for this week, we only want to look at the broader picture. In our experience, the use cases where Semantic Web standards are applied successfully are:
+
+- Where to find ontologies: Ontology repositories
+   - [OBO Foundry Ontology Library](http://obofoundry.org/)
+   - [BioPortal](https://bioportal.bioontology.org/)
+     - [CPT Story](https://www.bioontology.org/why-bioportal-no-longer-offers-the-current-procedural-terminology-cpt/). The Current Procedural Terminology was the by far most highly accessed Terminology on Bioportal - for many years. Due to license concerns, it had to be withdrawn from the repository. This story serves a cautionary tale of using terminologies with non-open or non-transparent licensing schemes.
+   - [AgroPortal](http://agroportal.lirmm.fr/): Like BioPortal, but focussed on the Agronomy domain.
+   - [Linked Open Data Vocabularies (LOV)](https://lov.linkeddata.es/dataset/lov/): Lists the most important vocabularies in the Linked Data space, such as [Dublin Core](https://dublincore.org/), [SKOS](https://www.w3.org/TR/skos-reference/) and [Friend-of-a-Friend](http://xmlns.com/foaf/spec/) (FOAF).
+- Where to find terms: Term browsers
+   - [OLS](https://www.ebi.ac.uk/ols/index): The boss of the current term browsers out there. While the code base is a bit dated, it still gives access to a wide range of relevant open biomedical ontology terms. Note, while being a bit painful, it is possible to [set up your own OLS](https://github.com/EBISPOT/ontotools-docker-config) (for your organisation) which only contains those terms/ontologies that are relevant for your work.
+   - [Ontobee](http://www.ontobee.org/): The default term browser for OBO term purls. For example, click on http://purl.obolibrary.org/obo/OBI_0000070. This will redirect you directly to Ontobee, to show you the terms location in the hierarchy. In practice, there is no particular reason why you would favour Ontobee over OLS for example - I just sometimes prefer the way Ontobee presents annotations and "uses" by other ontologies, so I use both.
+   - [AberOWL](http://aber-owl.net/#/): Another ontology repository and semantic search engine. Some ontologies such as [PhenomeNet](http://aber-owl.net/ontology/PhenomeNET/) can only be found on AberOWL, however, I personally prefer OLS.
+   - [identifiers.org](https://identifiers.org/): A centralised registry for identifiers used in the life sciences. This is one of the tools that bridge the gap between CURIEs and URLs, but it does not cover (OBO) ontologies very well, and if so, is not aware of the proper URI prefixes (see for example [here](https://identifiers.org/resolve?query=HP:0000001), and HP term resolution that does not list the proper persistent URL of the HP identifier (http://purl.obolibrary.org/obo/HP_0000001)). Identifiers.org has mainly good coverage for databases/resources that use CURIE type identifiers. But: you can enter any id you find in your data and it will tell you what it is associated with.
+- Curate biomedical data. There are a lot of different tools in this space - which we will discuss in a bespoke unit later in the course. Examples:
+   - [RightField](https://rightfield.org.uk/about): System for curating ontology terms in Excel spreadsheets.
+   - [CEDAR Templates](https://more.metadatacenter.org/tools-training/cedar-template-tools): Basically a templating system that allows to create templates to record metadata, for example in a lab setting, of course with ontology integration.
+   - [Other examples](https://github.com/timrdf/csv2rdf4lod-automation/wiki/Alternative-Tabular-to-RDF-converters) of tabular data to RDF converters, but new ones coming up every year.
+- Building ontologies
+   - [Populous/Webulous](https://github.com/EBISPOT/webulous): A system to maintain/generate ontologies from spreadsheets. The idea was to basically to define patterns in a (now mostly dead) language called OPPL, and then apply them to spreadsheets to generate OWL axioms. EBI recently discontinued the service, as there is a general exodus to Google Sheets + ROBOT templates instead.
+   - [ROBOT templates + Google Sheets and Cogs](http://robot.obolibrary.org/template): A lightweight approach based on a set of tools that allows curating ontologies in spreadsheets (e.g. Google Sheets) which are converted into OWL using ROBOT.
+   - [DOSDP tools + Dead Simple Design Patterns (DOSDP)](https://github.com/INCATools/dead_simple_owl_design_patterns): Similar to ROBOT templates, DOSDPs (which really should be called DOSDTs, because they are not really design _patterns_; they are ontology templates), another system that allows the generation of OWL axioms based on spreadsheet data.
+- Cleaning messy data
+   - [OpenRefine](https://openrefine.org/): I have not myself used this ever, but some of my colleagues have. OpenRefine allows you to upload (spreadsheet) data, explore it and clean it (going as far as reconciling terms using Wikidata concepts).
+
+### Which biomedical ontologies should we use?
+
+As a rule of thumb, for every single problem/term/use case, you will have 3-6 options to choose from, in some cases even more. The criteria for selecting a good ontology are very much dependent on your particular use case, but some concerns are generally relevant. A good first pass is to apply to "[10 simple rules for selecting a Bio-ontology](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004743)" by Malone et al, but I would further recommend to ask yourself the following:
+
+- _Do I need the ontology for grouping and semantic analysis?_ In this case a high quality hierarchy reflecting biological subsumption is imperative. We will explain later what this means, but in essence, you should be able to ask the following question: "All instances/occurrences of this concept in the ontology are also instances of all its parent classes. Everything that is true about the parent class is always also true about instances of the children." It is important for you to understand that, while OWL semantics imply the above, OWL is difficult and many ontologies "pretend" that the subclass link means something else (like a rule of thumb grouping relation).
+- _Can I handle multiple inheritance in my analysis?_ While I personally recommend to _always_ consider multiple inheritance (i.e, allow a term to have more than one parent class), there are some analysis frameworks, in particular in the clinical domain, that make this hard. Some ontologies are inherently ploy-hierarchical (such as [Mondo](https://github.com/monarch-initiative/mondo)), while others strive to be single inheritance ([DO](https://disease-ontology.org/), ICD).
+- _Are key resources I am interested in using the ontology?_ Maybe the most important question that will drastically reduce the amount of data mapping work you will have to do: Does the resource you wish to integrate already annotate to a particular ontology? For example, EBI resources will be annotating phenotype data using EFO, which in turn used HPO identifiers. If your use case demands to integrate EBI databases, it is likely a good idea to consider using HPO as the reference ontology for your phenotype data.
+
+Aside from aspects of your analysis, there is one more thing you should consider carefully: the open-ness of your ontology in question. As a user, you have quite a bit of power on the future trajectory of the domain, and therefore should seek to endorse and promote open standards as much as possible (for egoistic reasons as well: you don't want to have to suddenly pay for the ontologies that drive your semantic analyses). It is true that ontologies such as [SNOMED](https://www.snomed.org/snomed-ct/five-step-briefing) have some great content, and, even more compellingly, some really great coverage. In fact, I would probably compare SNOMED not with any particular disease ontology, but with the OBO Foundry as a whole, and if you do that, it is a) cleaner, b) better integrated. But this comes at a cost. SNOMED is a commercial product - millions are being payed every year in license fees, and the more millions come, the better SNOMED will become - and the more drastic consequences will the lock-in have if one day you are forced to use SNOMED because OBO has fallen too far behind. Right now, the sum of all OBO ontologies is probably still richer and more valuable, given their use in many of the central biological databases (such as the ones hosted by the [EBI](https://www.ebi.ac.uk/)) - but as SNOMED is seeping into the all aspects of genomics now (for example, it will soon be featured on [OLS](https://www.ebi.ac.uk/ols/index)!) it will become increasingly important to _actively_ promote the use of open biomedical ontologies - by contributing to them as well as by using them.
+
+We will discuss ontologies in the medical, phenomics and genomics space in more detail in a later session of the course.
+
+### Other interesting links
+
+- [Linked Data in e-Government](https://joinup.ec.europa.eu/sites/default/files/inline-files/D4.3.2_Case_Study_Linked_Data_eGov.pdf)
+- [Industrial Ontologies Foundry](https://www.industrialontologies.org/): Something like the OBO Foundry for Industrial Ontologies
+- [OntoCommons](https://ontocommons.eu/): An H2020 CSA project dedicated to the standardisation of data documentation across all domains related to materials and manufacturing.

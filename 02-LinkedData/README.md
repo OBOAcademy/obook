@@ -4,11 +4,12 @@
 - **Second Instructor:** Nicole Vasilevsky
 
 ## Description
-We discuss the basic ideas behind behind Linked Data and the Semantic Web, and describe relevant sub-communities, tools and standards.
+We discuss the basic ideas behind behind Linked Data and the Semantic Web, and describe relevant sub-communities, tools and standards. The goal of this lesson is _not_ to understand the entire technology stack (aka [Layer Cake](https://en.wikipedia.org/wiki/Semantic_Web_Stack)) of the Semantic Web - other courses, such as the OpenHPI courses, do a much better job. The goal here is to understand the Linked Data landscape from the very practical perspective of the _Semantic Engineer_ or _Semantic Data Scientist_: *What can the Semantic Web do for our data analysis and data engineering problems?*
 
 ## Content
-- [Basic Linked data and Semantic Web Concepts](linked-data.md)
+- [Basic Linked data and Semantic Web Concepts for the Semantic Data Engineer](linked-data.md)
 - [The Semantic Web Landscape](linked-data-landscape.md)
+- [Discussion for CPath training](cpath.md)
 
 ## OpenHPI Courses
 
@@ -33,5 +34,3 @@ The open courses of the [Hasso Plattner Institute](https://open.hpi.de/) (HPI) o
   - [BioPortal](https://bioportal.bioontology.org/)
 - Publish, and find, ontologies:
   - [OBO Foundry](http://obofoundry.org/)
-- Standards
-  - [JSON-LD](https://json-ld.org/spec/latest/json-ld/)
