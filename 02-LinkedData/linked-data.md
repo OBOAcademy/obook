@@ -37,7 +37,7 @@ For example, to express "a mutation of SHH in humans causes isolated microphthal
 Examples include:
 - *controlled vocabularies*, that define, for example, how to refer to a disease (e.g., we use http://purl.obolibrary.org/obo/MONDO_0012709 to refer to "isolated microphthalmia with coloboma 5"), 
 - *terminologies* which describe how we humans refer to a disease (How is it called in German? Which other synonyms are used in the literature? How is the term defined in the medical literature?), 
-- *taxonomies* which define how diseases are related hierarchically ("microphthalmia, isolated, with coloboma 5 is kind of Mendelian disease"),  
+- *taxonomies* which define how diseases are related hierarchically ("microphthalmia, isolated, with coloboma 5 is a kind of Mendelian disease"),  
 - *ontologies* which further define how diseases are defined in terms of other entities, for example "microphthalmia, isolated, with coloboma 5 is a Mendelian disease that has its basis in the dysfunction of SSH".
 - _Note_: In practice, when we say "ontology", we mean *all of the above together* - it is, however, good to know that they are somewhat distinct, and that there are different "languages" that can be used for each of these distinctions.
 
