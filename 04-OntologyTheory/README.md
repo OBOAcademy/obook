@@ -28,8 +28,8 @@ By the end of this session you should:
 ## Preparation this week
 
 ### (Esssential) OpenHPI Course Content
-- [Ontologies and Logic](https://open.hpi.de/courses/semanticweb2015/items/2oYC9PkLYvxv4InZuBMBVl)
-- [OWL, Rules, and Reasoning](https://open.hpi.de/courses/semanticweb2015/items/2oCcvFX4bzhBbNWE6EVpoV)
+- [Ontologies and Logic](https://open.hpi.de/courses/semanticweb2015/items/2oYC9PkLYvxv4InZuBMBVl) (Videos 3.0-3.10, ~3.5 hrs)
+- [OWL, Rules, and Reasoning](https://open.hpi.de/courses/semanticweb2015/items/2oCcvFX4bzhBbNWE6EVpoV) (Videos 4.0-4.8, ~2.7 hrs)
 
 ### (Essential) Download/Install software
 
