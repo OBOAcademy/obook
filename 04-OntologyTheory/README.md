@@ -10,10 +10,10 @@ We discuss the need for ontologies and explain the basic principles of ontology 
 - history of ontologies
 - predicate logic
 - FOL
-- description logic
+- Description Logic
 - OWL
 
-## New Material
+### New Material
 - Protege basic features
 - Reasoners: HermiT, ELK
 - OBO format logic
