@@ -4,18 +4,37 @@
 **Second Instructor:** Nico Matentzoglu
 
 ## Description
-We discuss the need for ontologies and explain the basic principles of ontology engineering. By the end of this session you should:
+We discuss the need for ontologies and explain the basic principles of ontology engineering. 
 
+### Topics that will be covered
+- history of ontologies
+- predicate logic
+- FOL
+- description logic
+- OWL
+
+## New Material
+- Protege basic features
+- Reasoners: HermiT, ELK
+- OBO format logic
+
+## Learning objectives
+By the end of this session you should:
 1. Be able to explain why we need ontologies
 2. Build a basic ontology yourself
-3. Know how to bring your ontology engineering skills to the next level
-4. Be able to create a branch in GitHub, make edits in Protege and create a pull request
-5. Know how to write a good ticket on the issue tracker
+3. Be able to create a branch in GitHub, make edits in Protege and create a pull request
+4. Know how to write a good ticket on the issue tracker
 
-## Preparation
+## Preparation this week
+
+## (Esssential) OpenHPI Course Content
+- [Ontologies and Logic](https://open.hpi.de/courses/semanticweb2015/items/2oYC9PkLYvxv4InZuBMBVl)
+- [OWL, Rules, and Reasoning](https://open.hpi.de/courses/semanticweb2015/items/2oCcvFX4bzhBbNWE6EVpoV)
+
+### (Essential) Download/Install software
 
 Participants will need to have access to the following resources and tools prior to the training:
-- **GitHub account** - register for a free GitHub account [here](https://github.com/join?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home)
+- **GitHub account** - register for a free GitHub account [here](https://github.com/join?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home) (_this should alredy be done_)
 - **Protege** - Please install Protege 5.5, download it [here](https://protege.stanford.edu/)
 - Please try and install **ELK 0.5** (_For a video showing how to install Elk, click [here](https://www.dropbox.com/s/n3td2n48xmwd3mj/Install_ELK_0.5.mov?dl=0)._) 
   - Click here to get the latest [Protege Plugin latest build](https://oss.sonatype.org/service/local/artifact/maven/content?r=snapshots&g=org.semanticweb.elk&a=elk-distribution-protege&e=zip&v=LATEST) (this is available on the bottom of [ELK pages](https://github.com/liveontologies/elk-reasoner/wiki/GettingElk). This will download a zipped file.)
@@ -27,7 +46,11 @@ Participants will need to have access to the following resources and tools prior
   - Important: it seems Elk 0.5. Does not work with all versions of Protege, in particular, 5.2 and below. These instructions were only tested with Protege 5.5!
 - _Optional_ **GitHub Desktop** - Please make sure you have some kind of git client installed on your Machine. If you are new to Git, please install [GitHub Desktop](https://desktop.github.com/)
 
-## Outline
+### (Essential) Ontology tutorial based on the Cell Ontologyy
+
+1. Follow the steps in this [tutorial](https://docs.google.com/document/d/1dPeCH2NFYb_akfv1vhlMFdQHjm_1VRoX5LH7_n4j2oE/edit#) on your own to practice basic ontology editing.
+
+## Outline for in-person class
 
 1. Ontology principles, formalism, semantics (Nico) (~30 min)
 2. Protege tutorial (Nicole) (~90 min) 
@@ -38,23 +61,6 @@ Participants will need to have access to the following resources and tools prior
   - Create a branch from GitHub
   - Edit an ontology in Protege
   - Create a pull request in GitHub
-
-## Topics
-- history of ontologies
-- predicate logic
-- FOL
-- description logic
-- OWL
- 
-## OpenHPI Course Content
-- [Ontologies and Logic](https://open.hpi.de/courses/semanticweb2015/items/2oYC9PkLYvxv4InZuBMBVl)
-- [OWL, Rules, and Reasoning](https://open.hpi.de/courses/semanticweb2015/items/2oCcvFX4bzhBbNWE6EVpoV)
-
-## New Material
-- Protege basic features
-- Reasoners: HermiT, ELK
-- Pizza Tutorial
-- OBO format logic
 
 ## Resources
 
