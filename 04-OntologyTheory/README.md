@@ -57,6 +57,7 @@ Participants will need to have access to the following resources and tools prior
   - Review of the Protege interface (Emily and Daniel)
     - questions about [pizza tutorial](https://www.michaeldebellis.com/post/new-protege-pizza-tutorial)
     - any issues with installing Protege or GitHub desktop?
+    - any issues with the [tutorial](https://docs.google.com/document/d/1dPeCH2NFYb_akfv1vhlMFdQHjm_1VRoX5LH7_n4j2oE/edit#)?
   - Implement a real world problem (ie work on real GitHub isssues). See training [doc](https://docs.google.com/document/d/1dPeCH2NFYb_akfv1vhlMFdQHjm_1VRoX5LH7_n4j2oE/edit#heading=h.30zswce50eac)
   - Create a branch from GitHub
   - Edit an ontology in Protege
