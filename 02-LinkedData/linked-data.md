@@ -148,7 +148,7 @@ In the following, we will list some of the technologies you may find useful, or 
 | [Simple Knowledge Organization System](https://www.w3.org/2001/sw/wiki/SKOS) (SKOS)| Another, more lightweight, knowledge organisation system in many ways competing with OWL. | Not as widely used in the biomedical domain as OWL, but increasing uptake of "matching" vocabulary (skos:exactMatch, etc). |
 | [RDF-star](https://w3c.github.io/rdf-star/)| A key shortcoming of RDF is that, while I can in principle say everything about everything, I cannot directly talk about edges, for example to attribute provenance: "microphthalmia, isolated, with coloboma 5 is kind of Mendelian disease"--source: Wikipedia | Use cases [here](https://w3c.github.io/rdf-star/UCR/rdf-star-ucr.html).|
 |[JSON-LD](https://en.wikipedia.org/wiki/JSON-LD) | A method to encoding linked data in JSON format. | (Very useful to at least know about). |
-| [RDFa](https://en.wikipedia.org/wiki/RDFa)| W3C Recommendation to embed rich semantic metadata in HTML (and XML). | I have to admit - in 11 years Semantic Web Work I have not come across much use of RDFa in the biomedical domain. But perhaps there is. |
+| [RDFa](https://en.wikipedia.org/wiki/RDFa)| W3C Recommendation to embed rich semantic metadata in HTML (and XML). | I have to admit - in 11 years Semantic Web Work I have not come across much use of RDFa in the biomedical domain. But @jamesaoverton is using it in his tools! |
 
 A thorough overview of all the key standards and tools can be found on the [Awesome Semantic Web](https://github.com/semantalytics/awesome-semantic-web) repo.
 

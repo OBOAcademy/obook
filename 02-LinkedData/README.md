@@ -26,6 +26,7 @@ The open courses of the [Hasso Plattner Institute](https://open.hpi.de/) (HPI) o
 - Support
   - [Programming Historian Linked Data tutorial](https://programminghistorian.org/en/lessons/intro-to-linked-data)
   - [Original Whitepaper (Tim Berners Lee et al)](https://core.ac.uk/download/pdf/207601173.pdf)
+  - [Educational curriculum for Linked Data](https://euclid-project.eu/)
 - Tools: Browse through the tools and standards listed in the [Semantic Engineer Toolbox](#semantic-engineer-toolbox) below
 
 ## Semantic Engineer Toolbox
