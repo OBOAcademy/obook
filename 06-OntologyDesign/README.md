@@ -13,7 +13,7 @@ By the end of this session, you should be able to:
 - Create ROBOT templates using the ontology design patterns and use them to add to your ontology
 
 ## Preparation
-- TODO
+- Complete the [ROBOT Mini-Tutorial](https://github.com/jamesaoverton/obook/blob/master/06-OntologyDesign/ROBOT_tutorial.md) to learn four new ROBOT commands
 
 ## Outline
 - OWL ontology serializations ("formats")
