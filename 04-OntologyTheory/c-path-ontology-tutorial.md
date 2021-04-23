@@ -125,5 +125,5 @@ Note - a cool feature in the search tool in Protege is you can search on partial
 Editing Mondo
 =============
 
-Next you are going to practice some basic editing in Mondo, on your branch. See [editing Mondo instructions]().
+Next you are going to practice some basic editing in Mondo, on your branch. See [editing Mondo instructions](https://github.com/jamesaoverton/obook/blob/master/04-OntologyTheory/editing-mondo.md).
 
