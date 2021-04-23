@@ -67,3 +67,4 @@ Note: if you open a new ontology while viewing your current ontology, Protégé 
 
 The panel in the center is the ontology annotations panel. This panel contains basic metadata about the ontology, such as the authors, a short description and license information.
 
+![image](https://user-images.githubusercontent.com/6722114/115821747-34cb9800-a3b8-11eb-9ec4-302ed3fcd222.png)
