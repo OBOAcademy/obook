@@ -68,3 +68,93 @@ Note: if you open a new ontology while viewing your current ontology, Protégé 
 The panel in the center is the ontology annotations panel. This panel contains basic metadata about the ontology, such as the authors, a short description and license information.
 
 ![image](https://user-images.githubusercontent.com/6722114/115821747-34cb9800-a3b8-11eb-9ec4-302ed3fcd222.png)
+
+Running the reasoner
+--------------
+
+Before browsing  or searching an ontology, it is useful to run an OWL reasoner first.  This ensures that you can view the full, intended classification and allows you to run queries.  Navigate to the query menu, and run the ELK reasoner:
+
+![image](https://user-images.githubusercontent.com/6722114/115822558-9b04ea80-a3b9-11eb-922b-c4c908fd99cc.png)
+
+
+Entities tab
+--------------
+
+You will see various tabs along the top of the screen. Each tab provides a different perspective on the ontology. 
+For the purposes of this tutorial, we care mostly about the Entities tab, the DL query tab and the search tool.  OWL Entities include Classes (which we are focussed on editing in this tutorial), relations (OWL Object Properties) and Annotation Properties (terms like, 'definition' and 'label' which we use to annotate OWL entities.
+Select the Entities tab and then the Classes sub-tab.  Now choose the inferred view (as shown below).
+
+![image](https://user-images.githubusercontent.com/6722114/115822595-a9530680-a3b9-11eb-8797-b60964733067.png)
+
+The Entities tab is split into two halves. The left-hand side provides a suite of panels for selecting various entities in your ontology. When a particular entity is selected the panels on the right-hand side display information about that entity. The entities panel is context specific, so if you have a class selected (like Thing) then the panels on the right are aimed at editing classes. The panels on the right are customizable. Based on prior use you may see new panes or alternate arrangements.
+You should see the class OWL:Thing.  You could start browsing from here, but the upper level view of the ontology is too abstract for our purposes. To find something more interesting to look at we need to search or query.
+
+Searching in Protege
+--------------
+
+You can search for any entity using the search bar on the right:
+
+![image](https://user-images.githubusercontent.com/6722114/115822673-c8ea2f00-a3b9-11eb-9dca-dfe3d3bfe72a.png)
+
+The search window will open on top of your Protege pane, we recommend resizing it and moving it to the side of the main window so you can view together.  
+
+![image](https://user-images.githubusercontent.com/6722114/115822725-dacbd200-a3b9-11eb-96de-5b727f931a71.png)
+
+Here's an example search for 'COVID-19':
+![image](https://user-images.githubusercontent.com/6722114/115822742-e28b7680-a3b9-11eb-8d28-1046833b2f4d.png)
+
+It shows results found in display names, definitions, synonyms and more.  The default results list is truncated.  To see full results check the 'Show all results option'. You may need to resize the box to show all results.
+Double clicking on a result, displays details about it in the entities tab, e.g. 
+
+![image](https://user-images.githubusercontent.com/6722114/115822767-f040fc00-a3b9-11eb-8f90-5b1cc9a8775f.png)
+
+In the Entities, tab, you can browse related types, opening/closing branches and clicking on terms to see details on the right. In the default layout, annotations on a term are displayed in the top panel and logical assertions in the 'Description' panel at the bottom.
+
+Try to find these specific classes:
+- 'congenital heart disease'
+- 'Kindler syndrome'
+- 'kidney failure'
+
+Note - a cool feature in the search tool in Protege is you can search on partial string matching. For example, if you want to search for ‘down syndrome’, you could search on a partial string: ‘do synd’. 
+
+- Try searching for ‘br car and see what kind of results are returned.
+- **Question:** The search will also search on synonyms. Try searching for ‘shingles’ and see what results are returned. Were you able to find the term?
+
+**Note** - if the search is slow, you can uncheck the box ‘Search in annotation values. Try this and search for a term and note if the search is faster. Then search for ‘shingles’ again and note what results you get.
+
+Editing Mondo
+=============
+
+Next you are going to practice some basic editing in Mondo, on your branch.
+
+### Basic editing
+
+#### Practice 1:
+
+1.  Create a branch in Mondo and edit one or two of the definitions, per this ticket: <https://github.com/monarch-initiative/mondo/issues/2912>
+
+2.  Do a pull request
+
+#### Practice 2:
+
+1.  Create a branch in Mondo and relabel this class: <https://github.com/monarch-initiative/mondo/issues/2689>
+
+2.  Do a pull request
+
+### More advanced: 
+
+### Setup
+
+#### Setting Preferences for New entities
+
+Ontology terms have separate names and IDs. The names are annotation values (labels) and the IDs are represented using IRIs. The OBO foundry has a policy on IRI (or ID) generation (<http://www.obofoundry.org/principles/fp-003-uris.html>). You can set an ID strategy using the "New Entities" tab under the Protégé Preferences -- on the top toolbar, click the "Protégé dropdown, then click Preferences.
+
+![image](https://user-images.githubusercontent.com/6722114/115822913-3302d400-a3ba-11eb-89eb-70c767701843.png)
+
+
+
+
+
+
+
+
