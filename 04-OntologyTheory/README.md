@@ -4,19 +4,7 @@
 **Second Instructor:** Nico Matentzoglu
 
 ## Description
-We discuss the need for ontologies and explain the basic principles of ontology engineering. 
-
-### Topics that will be covered
-- history of ontologies
-- predicate logic
-- FOL
-- Description Logic
-- OWL
-
-### New Material
-- Protege basic features
-- Reasoners: HermiT, ELK
-- OBO format logic
+This week will cover the history of ontologies, ontology logic (predicate logic, OBO formal ontology logic, description logic), and OWL. We will cover the basic principles of ontology engineering, including basic features of the ontology software, Protege, and the use of reasoners (ELK). 
 
 ## Learning objectives
 By the end of this session you should:
@@ -27,11 +15,12 @@ By the end of this session you should:
 
 ## Preparation this week
 
-### (Esssential) OpenHPI Course Content
+### Esssential
+#### OpenHPI Course Content
 - [Ontologies and Logic](https://open.hpi.de/courses/semanticweb2015/items/2oYC9PkLYvxv4InZuBMBVl) (Videos 3.0-3.10 | **Duration:** ~3.5 hrs)
 - [OWL, Rules, and Reasoning](https://open.hpi.de/courses/semanticweb2015/items/2oCcvFX4bzhBbNWE6EVpoV) (Videos 4.0-4.8 | **Duration:** ~2.7 hrs)
 
-### (Essential) Download/Install software
+#### Download/Install software
 
 Participants will need to have access to the following resources and tools prior to the training:
 - **GitHub account** - register for a free GitHub account [here](https://github.com/join?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home) (_this should alredy be done_)
@@ -46,6 +35,15 @@ Participants will need to have access to the following resources and tools prior
   - Important: it seems Elk 0.5. Does not work with all versions of Protege, in particular, 5.2 and below. These instructions were only tested with Protege 5.5!
 - _Optional_ **GitHub Desktop** - Please make sure you have some kind of git client installed on your Machine. If you are new to Git, please install [GitHub Desktop](https://desktop.github.com/)
 
+### Support and Additional Resources
+- [Ontology tutorials and Resources](https://tislab.org/ontologyResources.html)
+- [Monkeying around with OWL: Musings on building and using ontologies, posts by Chris Mungall](https://douroucouli.wordpress.com/)
+- [Documentation on Cell Ontology relations](https://github.com/obophenotype/cell-ontology/blob/master/documentation/relations_guide.md)
+
+### Semantic Engineer Toolbox
+- [Protege](https://protege.stanford.edu/)
+- [ELK Protege Plugin](https://oss.sonatype.org/service/local/artifact/maven/content?r=snapshots&g=org.semanticweb.elk&a=elk-distribution-protege&e=zip&v=LATEST)
+- [GitHub Desktop](https://desktop.github.com/)
 
 ## Outline for in-person class
 
@@ -67,8 +65,5 @@ Participants will need to have access to the following resources and tools prior
 _In progress: the material above is based on the content in this training [doc](https://docs.google.com/document/d/1dPeCH2NFYb_akfv1vhlMFdQHjm_1VRoX5LH7_n4j2oE/edit#heading=h.30zswce50eac)_
 
 
-## Resources
 
-- [Ontology tutorials and Resources](https://tislab.org/ontologyResources.html)
-- [Monkeying around with OWL: Musings on building and using ontologies, posts by Chris Mungall](https://douroucouli.wordpress.com/)
-- [Documentation on Cell Ontology relations](https://github.com/obophenotype/cell-ontology/blob/master/documentation/relations_guide.md)
+
