@@ -31,5 +31,8 @@ Creating a branch using GitHub Desktop
 
 1.  Open GitHub Desktop
 2.  Clone the repository:
-1.  Go to <https://github.com/monarch-initiative/mondo>
-2.  Click 'Code', then Open with GitHub desktop
+
+![image](https://user-images.githubusercontent.com/6722114/115820985-c3d7b080-a3b6-11eb-8131-7b9c33cc294d.png)
+
+4.  Go to <https://github.com/monarch-initiative/mondo>
+5.  Click 'Code', then Open with GitHub desktop
