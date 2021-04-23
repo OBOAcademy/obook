@@ -46,9 +46,6 @@ Participants will need to have access to the following resources and tools prior
   - Important: it seems Elk 0.5. Does not work with all versions of Protege, in particular, 5.2 and below. These instructions were only tested with Protege 5.5!
 - _Optional_ **GitHub Desktop** - Please make sure you have some kind of git client installed on your Machine. If you are new to Git, please install [GitHub Desktop](https://desktop.github.com/)
 
-### (Essential) Ontology tutorial based on the Cell Ontology
-
-1. Follow the steps in this [tutorial](https://docs.google.com/document/d/1dPeCH2NFYb_akfv1vhlMFdQHjm_1VRoX5LH7_n4j2oE/edit#) on your own to practice basic ontology editing.
 
 ## Outline for in-person class
 
