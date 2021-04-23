@@ -3,10 +3,9 @@
 
 The objective of this tutorial is to introduce trainees to basic ontology editing in Protege and OWL logic. At the end of this tutorial, trainees should be able to:
 
--   create tickets in GitHub
--   do basic edits in the Cell Ontology 
+-   do basic edits in the Mondo Ontology 
 -   make pull requests to GitHub
-
+-   create tickets in GitHub
 
 # GitHub workflows
 
