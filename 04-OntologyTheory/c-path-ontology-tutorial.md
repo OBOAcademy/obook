@@ -40,3 +40,7 @@ Creating a branch using GitHub Desktop
 1. Click New Branch
 1. Give your branch a name: c-path-training-initials (ie `c-path-training-NV`)
 
+![image](https://user-images.githubusercontent.com/6722114/115821352-7ad42c00-a3b7-11eb-97e0-b02611eb77e6.png)
+
+
+
