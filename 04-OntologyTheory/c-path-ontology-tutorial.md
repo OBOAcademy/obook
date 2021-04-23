@@ -30,9 +30,13 @@ Creating a branch using GitHub Desktop
 --------------------------------------
 
 1.  Open GitHub Desktop
-2.  Clone the repository:
+1.  Clone the repository:
 
 ![image](https://user-images.githubusercontent.com/6722114/115820985-c3d7b080-a3b6-11eb-8131-7b9c33cc294d.png)
 
-4.  Go to <https://github.com/monarch-initiative/mondo>
-5.  Click 'Code', then Open with GitHub desktop
+1. Go to <https://github.com/monarch-initiative/mondo>
+1. Click 'Code', then Open with GitHub desktop
+1. Click the little arrow in Current Branch
+1. Click New Branch
+1. Give your branch a name: c-path-training-initials (ie `c-path-training-NV`)
+
