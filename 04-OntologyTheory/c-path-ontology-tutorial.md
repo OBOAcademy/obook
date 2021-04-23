@@ -1,5 +1,5 @@
-Objectives
-==========
+# Objectives
+
 
 The objective of this tutorial is to introduce trainees to basic Ontology editing in Protege, and OWL logic. At the end of this tutorial, trainees should be able to:
 
@@ -8,8 +8,8 @@ The objective of this tutorial is to introduce trainees to basic Ontology editin
 -   make pull requests to GitHub
 
 
-GitHub workflows
-================
+# GitHub workflows
+
 
 GitHub - distributed version control (Git) + social media for geeks who like to build code/documented collaboratively.
 
