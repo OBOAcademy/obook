@@ -34,4 +34,4 @@ Note: Creating a fork allows you to create your copy of the Mondo Ontology. You 
 
 2.  You will make changes to the Mondo on the branch of your local copy.
 
-[Instructions on Forking a Repo](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo)
+[Further instructions on forking a repo](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo)
