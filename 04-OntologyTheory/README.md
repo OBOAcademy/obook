@@ -45,7 +45,7 @@ Participants will need to have access to the following resources and tools prior
 - [ELK Protege Plugin](https://oss.sonatype.org/service/local/artifact/maven/content?r=snapshots&g=org.semanticweb.elk&a=elk-distribution-protege&e=zip&v=LATEST)
 - [GitHub Desktop](https://desktop.github.com/)
 
-## Outline for in-person class
+## Week 04 Content
 
  - Review of the Protege interface (Emily and Daniel)
     - questions about [pizza tutorial](https://www.michaeldebellis.com/post/new-protege-pizza-tutorial)
