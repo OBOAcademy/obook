@@ -64,7 +64,7 @@ Participants will need to have access to the following resources and tools prior
 5. Understand the basics of writing a good ticket
 6. Practice creating a ticket for a new term request in GitHub 
 
-_In progress: the material above is based on the content in this training [doc](https://docs.google.com/document/d/1dPeCH2NFYb_akfv1vhlMFdQHjm_1VRoX5LH7_n4j2oE/edit#heading=h.30zswce50eac)
+_In progress: the material above is based on the content in this training [doc](https://docs.google.com/document/d/1dPeCH2NFYb_akfv1vhlMFdQHjm_1VRoX5LH7_n4j2oE/edit#heading=h.30zswce50eac)_
 
 
 ## Resources
