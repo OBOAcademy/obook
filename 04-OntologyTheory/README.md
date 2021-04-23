@@ -49,15 +49,14 @@ Participants will need to have access to the following resources and tools prior
 
 ## Outline for in-person class
 
-1. Ontology principles, formalism, semantics (Nico) (~30 min)
-2. Protege tutorial (Nicole) (~90 min) 
-  - Review of the Protege interface (Emily and Daniel)
+ - Review of the Protege interface (Emily and Daniel)
     - questions about [pizza tutorial](https://www.michaeldebellis.com/post/new-protege-pizza-tutorial)
     - any issues with installing Protege or GitHub desktop?
-    - any issues with the [tutorial](https://docs.google.com/document/d/1dPeCH2NFYb_akfv1vhlMFdQHjm_1VRoX5LH7_n4j2oE/edit#)?
 
-# Outline
+1. Ontology principles, formalism, semantics (Nico) (~30 min)
+2. Protege tutorial (Nicole) (~90 min): 
 
+### Protege tutorial outline
 1. Download the Mondo ontology from GitHub (see instructions [here](https://github.com/jamesaoverton/obook/blob/master/04-OntologyTheory/github-workflow.md)).
 2. Open Mondo in Protege and browse and [search Mondo](https://github.com/jamesaoverton/obook/blob/master/04-OntologyTheory/SearchingMondo.md).
 3. Do [basic edits in Mondo](https://github.com/jamesaoverton/obook/blob/master/04-OntologyTheory/editing-mondo.md) and make a [pull request](https://github.com/jamesaoverton/obook/blob/master/04-OntologyTheory/pull-request.md) (PR).
