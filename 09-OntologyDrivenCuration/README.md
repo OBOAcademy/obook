@@ -1,7 +1,7 @@
 # Week 9: Ontology Driven Curation
 
-**First Instructor:** Nicole Vasilevsky
-**Second Instructor:** TBD
+**First Instructor:** Nicole Vasilevsky  
+**Second Instructor:** Becky Jackson  
 
 ## Description
 Using ontologies in scientific databases.
