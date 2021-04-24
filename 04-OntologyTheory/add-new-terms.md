@@ -12,8 +12,9 @@ Set your new entity preferences precisely as in the following screenshot of the 
 
 **Note** -  you have been assigned an ID range in the Mondo [idranges file](https://github.com/monarch-initiative/mondo/blob/master/src/ontology/mondo-idranges.owl)  - you should be able to find your own range assigned there.
 
+![image](https://user-images.githubusercontent.com/6722114/115964257-6a67a280-a4d8-11eb-8dcd-768b51d75720.png)
+
 Specified IRI: http://purl.obolibrary.org/obo/
-Note - if you edit more than one ontology in Protege, you will need to update your Preferences for each ontology before you edit.
 
 Note - if you edit more than one ontology in Protege, you will need to update your Preferences for each ontology before you edit.
 
@@ -23,7 +24,7 @@ User name: click Use supplied user name and enter your username in the field bel
 
 Click Use Git user name when available
 
-In the ORCID field, add your ORCID ID (in the format 0000-0000-0000-0000
+In the ORCID field, add your ORCID ID (in the format 0000-0000-0000-0000)
 
 ![](https://lh5.googleusercontent.com/zSBnZv_ki8Y_5Kll4mNKCpTOoS030-UGVww8D5E3-TyDKUTnVvYaNsHIGezIsHWM3LQLah5R5SFwdgAY8wppqRcORtwdGQfuO3Y7Up9QT7TSPZU938rcz3UujRijm6ejwGwuFKNw)
 
@@ -31,7 +32,7 @@ In the ORCID field, add your ORCID ID (in the format 0000-0000-0000-0000
 
 You can have Protege add a 'created by' annotation with your ORCID or GitHub username for every new term that you create.
 
-Set your preferences to match the screenshot below, in the New entities metadata tab (under preferences).\
+Set your preferences to match the screenshot below, in the New entities metadata tab (under preferences).
 
 If you do not have an ORCID, register for for free here: <https://orcid.org/> 
 
@@ -43,9 +44,9 @@ If you do not have an ORCID, register for for free here: <https://orcid.org/> 
 
 Before you start:
 
--   make sure you are working on a branch - see quick guide [here](https://docs.google.com/presentation/d/1M8NZQOIQVswng-so6ROxVeMJfDnzth7BYNj_5MXxEik/edit#slide=id.g9db6baf776_1_6).
+-   make sure you are working on a branch - see quick guide [here](https://docs.google.com/presentation/d/1M8NZQOIQVswng-so6ROxVeMJfDnzth7BYNj_5MXxEik/edit#slide=id.g9db6baf776_1_0).
 
--   make sure you have the editor's file open in Protege as detailed [here](https://docs.google.com/document/d/1dPeCH2NFYb_akfv1vhlMFdQHjm_1VRoX5LH7_n4j2oE/edit#heading=h.30zswce50eac).
+-   make sure you have the editor's file open in Protege as detailed [here](https://github.com/jamesaoverton/obook/blob/master/04-OntologyTheory/SearchingMondo.md).
 
 New classes are created in the Class hierarchy panel on the left.
 
@@ -54,14 +55,12 @@ There are three buttons at the top of the class hierarchy view. These allow you 
 Practice adding a new term:
 
 We will work on these two tickets:
-
 1.  <https://github.com/monarch-initiative/mondo/issues/616>
-
 2.  <https://github.com/monarch-initiative/mondo/issues/2541> 
 
 #### https://github.com/monarch-initiative/mondo/issues/616
 
--   Search for the parent term 'hypereosinophilic syndrome' (see [search guide](https://docs.google.com/document/d/1dPeCH2NFYb_akfv1vhlMFdQHjm_1VRoX5LH7_n4j2oE/edit#heading=h.yesckvmkqv7n) if you are unsure how to do this).
+-   Search for the parent term 'hypereosinophilic syndrome' (see [search guide](https://github.com/jamesaoverton/obook/blob/master/04-OntologyTheory/SearchingMondo.md) if you are unsure how to do this).
 
 -   When you are clicked on the term in the Class hierarchy pane, click the add subclass button to add a child class to 'hypereosinophilic syndrome'
 
@@ -78,19 +77,12 @@ A dialog will popup. Name this new subclass: migratory muscle precursor. Click "
 Using Protégé you can add annotations such as labels, definitions, synonyms, database cross references (dbxrefs) to any OWL entity. The panel on the right, named Annotations, is where these annotations are added. CL includes a pre-declared set of annotation properties. The most commonly used annotations are below. 
 
 -   rdfs:label
-
 -   definition
-
 -   has_exact_synonym
-
 -   has_broad_synonym
-
 -   has_narrow_synonym
-
 -   has_related synonym
-
 -   database_cross_reference
-
 -   rdfs:comment
 
 Note, most of these are bold in the annotation property list:
@@ -109,18 +101,12 @@ Definitions in Mondo should have a 'database cross reference' (dbxref), which is
 
 To add a dbxref to the definition:
 
--   click the @ symbol next to the definition
-
--   click the + button next in the pop-up window
-
+-   Click the @ symbol next to the definition
+-   Click the + button next in the pop-up window
 -   Scroll up on the left hand side until you find 'database_cross_reference', and click it
-
 -   Add the PMID in the editing box (PMID:25527564). _Note: the PMID should not have any spaces)
-
 -   Click OK
-
 -   Add the additional dbxref: GARD:0013029
-
 -   The dbxrefs should appear as below.
 
 ![](https://lh6.googleusercontent.com/l589uvv3OKKxrabrqKQdL-NF6PfKi_mSfaz-xk--59WtSD15VOy9CQVZXdE0SHl6ZA761zv9G0UULHF5EKRfMToX2F0kqrwuGbjdnzVV3JRRJbb2l40UjOLeXi-7aM_TBkCSkN3L)
@@ -130,37 +116,21 @@ To add a dbxref to the definition:
 #### Add Synonyms and Database cross reference
 
 1.  Add synonyms 
-
 1.  Click the add annotations button
-
 1.  Add the following synonyms as 'has_exact_synonym': 
-
 1.  EAE
-
-2.  Gleich's syndrome
-
-3.  Gleich syndrome
-
-3.  All synonyms in Mondo should have a dbxref on the synonym
-
+1.  Gleich's syndrome
+1.  Gleich syndrome
+1.  All synonyms in Mondo should have a dbxref on the synonym
 1.  Click the @ symbol next to the synonym
-
-2.  Click the + button
-
-3.  Add the dbxref to each synonym: GARD:0013029
-
-3.  Add database cross reference
-
+1.  Click the + button
+1.  Add the dbxref to each synonym: GARD:0013029
+1.  Add database cross reference
 1.  Click the add annotations button
-
 1.  Add the following database_cross_reference':
-
 1.  GARD:0013029
-
-3.  Click the @ symbol next to the synonym
-
-4.  Click the + button
-
-5.  Add source: MONDO:equivalentTo
+1.  Click the @ symbol next to the synonym
+1.  Click the + button
+1.  Add source: MONDO:equivalentTo
 
 Save your work.
