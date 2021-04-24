@@ -233,7 +233,7 @@ sw_id | first_name | last_name | occupation | father | lightsaber_color | ship
 1 | Luke | Skywalker | Jedi | 3 | green |
 2 | Leia | Organa | princess | 3 | |
 3 | Darth | Vader | | | red |
-4 | Han | Solo | scoundrel | | Millennium Falcon
+4 | Han | Solo | scoundrel | | | Millennium Falcon
 
 A bunch of these columns only apply to a few rows.
 Now we've got a lot more NULLs to deal with.
