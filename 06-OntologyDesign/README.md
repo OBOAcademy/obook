@@ -13,17 +13,19 @@ By the end of this session, you should be able to:
 - Create ROBOT templates using the ontology design patterns and use them to add to your ontology
 
 ## Preparation
+- Complete OpenHPI [Week 5: Ontology Engineering](https://open.hpi.de/courses/semanticweb2015/items/1iXXFr86raHqrB5bRBJZeM) videos 5.1 - 5.6; you can watch 5.7 and 5.8 if you'd like but they are not necessary (~2.75 hours)
 - Complete the [ROBOT Mini-Tutorial](https://github.com/jamesaoverton/obook/blob/master/06-OntologyDesign/ROBOT_tutorial.md) to learn four new ROBOT commands
 
 ## Outline
-- OWL ontology serializations ("formats")
-- Converting between serializations with [`robot convert`](http://robot.obolibrary.org/convert)
-- Creating modules from existing ontologies
+- OpenHPI course review: questions? (~15 minutes)
+- OWL ontology serializations ("formats") (~15 minutes)
+- Converting between serializations with [`robot convert`](http://robot.obolibrary.org/convert) (Review; ~15 minutes)
+- Creating modules from existing ontologies (~30 minutes)
   - What is a module?
-  - How do we use the modules in our ontologies? (Protege example)
+  - How do we use the modules in our ontologies?
   - Extraction methods: MIREOT vs. SLME
-- Creating a module to import with [`robot extract`](http://robot.obolibrary.org/extract)
-- Ontology design patterns
+- Creating a module to import with [`robot extract`](http://robot.obolibrary.org/extract) (Review; ~15 minutes)
+- Ontology design patterns (~15 minutes)
   - Real world example: Ontology for Biomedical Investigations (OBI)
-- Using design patterns in [`robot template`](http://robot.obolibrary.org/template)
+- Using design patterns in [`robot template`](http://robot.obolibrary.org/template) (Review; ~15 minutes)
 - If time: Combining modules with [`robot merge`](http://robot.obolibrary.org/merge)
