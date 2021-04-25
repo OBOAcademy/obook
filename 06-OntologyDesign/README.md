@@ -13,7 +13,7 @@ By the end of this session, you should be able to:
 - Create ROBOT templates using the ontology design patterns and use them to add to your ontology
 
 ## Preparation
-- Complete OpenHPI [Week 5: Ontology Engineering](https://open.hpi.de/courses/semanticweb2015/items/1iXXFr86raHqrB5bRBJZeM) videos 5.1 - 5.6; you can watch 5.7 and 5.8 if you'd like but they are not necessary (~2.75 hours)
+- Complete OpenHPI [Week 5: Ontology Engineering](https://open.hpi.de/courses/semanticweb2015/items/1iXXFr86raHqrB5bRBJZeM) videos 5.1 - 5.6 (~2.75 hours)
 - Complete the [ROBOT Mini-Tutorial](https://github.com/jamesaoverton/obook/blob/master/06-OntologyDesign/ROBOT_tutorial.md) to learn four new ROBOT commands
 
 ## Outline
