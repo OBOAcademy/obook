@@ -453,14 +453,14 @@ UNION ALL
 SELECT ""
 UNION ALL
 SELECT 
-   subject
+   sw_id
 || " "
-|| predicate
+|| property
 || " "
 || IF(
-     INSTR(object, ":"),
-     object,                -- CURIE
-     """" || object || """" -- literal
+     INSTR(value, ":"),
+     value,                -- CURIE
+     """" || value || """" -- literal
    )
 || " ."
 FROM triple_table;
