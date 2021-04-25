@@ -285,7 +285,7 @@ sw_id | father
 
 lightsaber_color table:
 
-sw_id | father
+sw_id | lightsaber_color
 ---|---
 1 | green
 3 | red
