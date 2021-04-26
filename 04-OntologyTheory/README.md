@@ -65,8 +65,4 @@ Participants will need to have access to the following resources and tools prior
     6. [Basics of writing a good ticket](https://docs.google.com/presentation/d/1xcw--zXZsN5fGogagRjhuaeh_h7DJKZZm0JClcKQ8Y8/edit#slide=id.g9b7706cb95_0_95)
     7. Practice creating a ticket for a new term request in [GitHub](https://github.com/nicolevasilevsky/c-path-practice) 
 
-_In progress: the material above is based on the content in this training [doc](https://docs.google.com/document/d/1dPeCH2NFYb_akfv1vhlMFdQHjm_1VRoX5LH7_n4j2oE/edit#heading=h.30zswce50eac)_
-
-
-
 
