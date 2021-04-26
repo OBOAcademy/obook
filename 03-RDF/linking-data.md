@@ -442,8 +442,8 @@ I'll use string concatenation to update the table:
 
 ```sql 
 -- update subject and groupd IDs
-UPDATE data SET subject_id="ex:subject-" || subject_id;
-UPDATE data SET group_id="ex:group-" || group_id;
+UPDATE data SET subject_id='ex:subject-' || subject_id;
+UPDATE data SET group_id='ex:group-' || group_id;
 ```
 
 Now I'll check my work:
@@ -559,11 +559,11 @@ CREATE TABLE data(
 INSERT INTO data SELECT * FROM data_csv;
 
 -- clean data
-UPDATE data SET investigator="JAO" WHERE investigator="JO";
+UPDATE data SET investigator='JAO' WHERE investigator='JO';
 
 -- update subject and groupd IDs
-UPDATE data SET subject_id="ex:subject-" || subject_id;
-UPDATE data SET group_id="ex:group-" || group_id;
+UPDATE data SET subject_id='ex:subject-' || subject_id;
+UPDATE data SET group_id='ex:group-' || group_id;
 ```
 
 I'll update the README:
@@ -683,59 +683,59 @@ CREATE TABLE triple (
 
 -- create triples from term table
 INSERT INTO triple(subject, predicate, object, literal)
-SELECT id, "rdfs:label", label, 1
+SELECT id, 'rdfs:label', label, 1
 FROM term;
 
 -- create triples from data table
 INSERT INTO triple(subject, predicate, object, literal)
-SELECT "ex:assay-" || data.rowid, "ex:column-assay_datetime", assay_datetime, 1
+SELECT 'ex:assay-' || data.rowid, 'ex:column-assay_datetime', assay_datetime, 1
 FROM data;
 
 INSERT INTO triple(subject, predicate, object, literal)
-SELECT "ex:assay-" || data.rowid, "ex:column-investigator", term.id, 0
+SELECT 'ex:assay-' || data.rowid, 'ex:column-investigator', term.id, 0
 FROM data
 JOIN term AS term ON data.investigator = term.code;
 
 INSERT INTO triple(subject, predicate, object, literal)
-SELECT "ex:assay-" || data.rowid, "ex:column-subject_id", subject_id, 0
+SELECT 'ex:assay-' || data.rowid, 'ex:column-subject_id', subject_id, 0
 FROM data;
 
 INSERT INTO triple(subject, predicate, object, literal)
-SELECT "ex:assay-" || data.rowid, "ex:column-species", term.id, 0
+SELECT 'ex:assay-' || data.rowid, 'ex:column-species', term.id, 0
 FROM data
 JOIN term AS term ON data.species = term.code;
 
 INSERT INTO triple(subject, predicate, object, literal)
-SELECT "ex:assay-" || data.rowid, "ex:column-strain", term.id, 0
+SELECT 'ex:assay-' || data.rowid, 'ex:column-strain', term.id, 0
 FROM data
 JOIN term AS term ON data.strain = term.code;
 
 INSERT INTO triple(subject, predicate, object, literal)
-SELECT "ex:assay-" || data.rowid, "ex:column-sex", term.id, 0
+SELECT 'ex:assay-' || data.rowid, 'ex:column-sex', term.id, 0
 FROM data
 JOIN term AS term ON data.sex = term.code;
 
 INSERT INTO triple(subject, predicate, object, literal)
-SELECT "ex:assay-" || data.rowid, "ex:column-group_id", group_id, 0
+SELECT 'ex:assay-' || data.rowid, 'ex:column-group_id', group_id, 0
 FROM data;
 
 INSERT INTO triple(subject, predicate, object, literal)
-SELECT "ex:assay-" || data.rowid, "ex:column-protocol", term.id, 0
+SELECT 'ex:assay-' || data.rowid, 'ex:column-protocol', term.id, 0
 FROM data
 JOIN term AS term ON data.protocol = term.code;
 
 INSERT INTO triple(subject, predicate, object, literal)
-SELECT "ex:assay-" || data.rowid, "ex:column-organ",term.id, 0
+SELECT 'ex:assay-' || data.rowid, 'ex:column-organ',term.id, 0
 FROM data
 JOIN term AS term ON data.organ= term.code;
 
 INSERT INTO triple(subject, predicate, object, literal)
-SELECT "ex:assay-" || data.rowid, "ex:column-disease", term.id, 0
+SELECT 'ex:assay-' || data.rowid, 'ex:column-disease', term.id, 0
 FROM data
 JOIN term AS term ON data.disease = term.code;
 
 INSERT INTO triple(subject, predicate, object, literal)
-SELECT "ex:assay-" || data.rowid, "ex:column-qualifier", term.id, 0
+SELECT 'ex:assay-' || data.rowid, 'ex:column-qualifier', term.id, 0
 FROM data
 JOIN term AS term ON data.qualifier = term.code;
 ```
@@ -744,18 +744,18 @@ Then I can turn triples into Turtle
 using string concatenation:
 
 ```sql #src/turtle.sql
-SELECT "@prefix " || prefix || ": <" || base || "> ."
+SELECT '@prefix ' || prefix || ': <' || base || '> .'
 FROM prefix
 UNION ALL
-SELECT ""
+SELECT ''
 UNION ALL
-SELECT subject || " " ||
-  predicate || " " ||
+SELECT subject || ' ' ||
+  predicate || ' ' ||
   CASE literal
-    WHEN 1 THEN """" || object || """"
+    WHEN 1 THEN '"' || object || '"'
     ELSE object
   END
-  || " . "
+  || ' . '
 FROM triple;
 ```
 
