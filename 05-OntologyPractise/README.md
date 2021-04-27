@@ -5,13 +5,13 @@
 
 ## Description
 
-This week, we will get more into ontology development, debugging, and quality control. This includes use of OWL class restrictions for automatic classfication and use of the DL query tab in Protégé. We will also introduce the [ROBOT command line tool](http://robot.obolibrary.org) and show how it can be used for quality control of the ontology (`robot report`) and for easy summaries of the terms (`robot export`).
+This week, we will get more into ontology development, debugging, and quality control. This includes use of OWL class restrictions for automatic classfication and use of the DL query tab in Protégé. We will also introduce the [ROBOT command line tool](http://robot.obolibrary.org) and show how it can be used for quality control of the ontology (`robot report`) and for easy summaries of the terms (`robot query`).
 
 By the end of this session, you should be able to:
 1. Add logic to terms using OWL class restrictions and understand resulting automatic classfications
 2. Query the ontology using the DL query tab
 3. Check that the ontology is in good shape by running `robot report`
-4. Generate CSVs (or TSVs!) containing term details using `robot export`
+4. Generate files containing term details from simmple SPARQL queries using `robot query`
 
 ## Preparation
 
@@ -34,7 +34,7 @@ This week is all hands on - no videos to watch! Please follow the steps below an
 
 ## Outline
 
-- OWL class restrictions (~30 minutes)
+- OWL axioms (~30 minutes)
   - Named vs. anonynmous classes
   - Superclasses, equivalent classes, and disjoint classes
   - "some" (existential) vs. "only" (universal)
@@ -51,10 +51,7 @@ This week is all hands on - no videos to watch! Please follow the steps below an
   - [What `report` checks for](http://robot.obolibrary.org/report_queries/)
   - Let's try it out!
   - Hands-on practice fixing common errors
-- [ROBOT export](http://robot.obolibrary.org/export) (~15 minutes)
-  - Export headers & formats
-  - Let's try it out!
-- If time: object property domains & ranges
+- [ROBOT query](http://robot.obolibrary.org/query) (~15 minutes)
 
 ## Semantic Engineer Toolbox
 
