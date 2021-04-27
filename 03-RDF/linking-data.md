@@ -79,7 +79,7 @@ $ git add README.md
 $ git commit -m "Initial commit"
 ```
 
-## 3. Getting Copies
+## 2. Getting Copies
 
 Data has an annoying tendency to get changed.
 You don't want it changing out from under you
@@ -115,7 +115,7 @@ $ ls -a
 .gitignore data README.md
 ```
 
-## 4. Getting My Bearings
+## 3. Getting My Bearings
 
 The first thing to do is look at the data.
 In this case I have just one table in CSV format,
@@ -169,7 +169,7 @@ You can see that I'm trying to figure out what's in each column.
 I'm also thinking ahead to OBO ontologies that I know of
 that may have terms that I can use for each column.
 
-## 5. Getting Structured
+## 4. Getting Structured
 
 In the end, I want to have nice, clean Linked Data.
 But I don't have to get there in one giant leap.
@@ -293,7 +293,7 @@ I'll modify the `src/data.sql` file
 in a series of small steps
 until it has the structure that I want.
 
-## 6. Getting Clean
+## 5. Getting Clean
 
 In the real world, data is always a mess.
 It takes real work to clean it up.
@@ -426,7 +426,7 @@ Cleaning can take a lot of work.
 This is example table is pretty clean already.
 The next hard part is sorting out your terminology.
 
-## 7. Getting Connected
+## 6. Getting Connected
 
 It's pretty easy to convert a table *structure* to triples.
 The hard part is converting the table *contents*.
@@ -697,7 +697,7 @@ $ git commit -m "Add linked_data tables"
 Now the tables use URLs and is connected to ontologies and stuff.
 But are we Linked yet?
 
-## 8. Getting Triples
+## 7. Getting Triples
 
 SQL tables aren't an official Linked Data format.
 Of all the RDF formats, I prefer Turtle.
@@ -829,7 +829,7 @@ Right?
 Well, it's kind of "flat".
 It still looks more like a table than a graph.
 
-## 9. Getting Linked
+## 8. Getting Linked
 
 The table I started with is very much focused on the data:
 there was some sort of assay done,
@@ -1008,7 +1008,7 @@ $ git add --update
 $ git commit -m "Build model.ttl"
 ```
 
-## 10. Getting It Done
+## 9. Getting It Done
 
 That was a lot of work for a small table.
 And I did all the hard work of mapping
