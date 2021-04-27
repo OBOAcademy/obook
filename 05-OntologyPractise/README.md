@@ -17,19 +17,23 @@ By the end of this session, you should be able to:
 
 This week is all hands on - no videos to watch! Please follow the steps below and if you run into any problems, please do not hesitate to email me (Becky). Remember that ROBOT is included in the Docker container, so it is not necessary to download and install ROBOT, but you might want it for future work!
 
+For the tutorial, don't worry too much about the IDs. You can continue to use the auto-generated IDs that we set up last week with the `MONDO` prefix. If you want to play around with changing the prefix, you can go to Preferences > New entities and change the prefix from `MONDO_` to `GO_`. If you don't want to mess with your settings, though, that's OK!
+
 - Clone the [Ontologies 101](https://github.com/OHSUBD2K/BDK14-Ontologies-101) repository, then open the folder `BDK14_exercises` from your file system
-- Open `basic-subclass/chromosome-parts.owl` in Protégé, then do the following exercises (in order; these will build on the same file):
-  - [Basic Subclass Hierarchy](https://ontology101tutorial.readthedocs.io/en/latest/EXERCISE_BasicSubclassHierarchy.html) (review)
+- Open `basic-subclass/chromosome-parts.owl` in Protégé, then do the following exercises:
+  - [Basic Subclass Hierarchy](https://ontology101tutorial.readthedocs.io/en/latest/EXERCISE_BasicSubclassHierarchy.html) (review) - make sure to look at the "detailed instructions" for adding annotations here, as it will go over adding annotations on annotation assertions
   - [Disjointness](https://ontology101tutorial.readthedocs.io/en/latest/Disjointness.html)
-  - [Object Properties](https://ontology101tutorial.readthedocs.io/en/latest/ObjectProperties.html)
+  - [Object Properties](https://ontology101tutorial.readthedocs.io/en/latest/ObjectProperties.html) - note that you will rarely, if ever, be making object properties, as most of the properties you'll ever need are defined in the [Relation Ontology](http://www.obofoundry.org/ontology/ro.html)
   - [OWL Class Restrictions](https://ontology101tutorial.readthedocs.io/en/latest/OWL_ClassRestrictions.html)
 - Open `basic-restriction/er-sec-complex.owl` in Protégé, then do the following exercise:
   - [Basic Restrictions](https://ontology101tutorial.readthedocs.io/en/latest/EXERCISE_BasicRestrictions.html)
 - Open `basic-dl-query/cc.owl` in Protégé, then do the following exercises:
-  - [DL Query Tab](https://ontology101tutorial.readthedocs.io/en/latest/DL_QueryTab.html)
+  - [DL Query Tab](https://ontology101tutorial.readthedocs.io/en/latest/DL_QueryTab.html) - note that `owl:Nothing` is defined as the very bottom node of an ontology, therefore the DL query results will show `owl:Nothing` as a subclass. This is expected and does not mean there is a problem with your ontology! It's only bad when something is a subclass of `owl:Nothing` and therefore *unsatisfiable* (more on that below).
   - [Basic DL Queries](https://ontology101tutorial.readthedocs.io/en/latest/EXERCISE_BasicDL_Queries.html)
 - Open `basic-classification/ubiq-ligase-complex.owl` in Protégé, then do the following exercises:
   - [Basic Classification](https://ontology101tutorial.readthedocs.io/en/latest/EXERCISE_BasicClassification.html)
+- Read [(I can't get no) satisfiability](http://ontogenesis.knowledgeblog.org/1329/)
+  - **Optional**: Open a new ontology in Protégé. Try creating an *inconsistent* ontology using the classes and instances in the first Pets example (hint: you'll also need to create the "eats" object property)... what happens when you run the reasoner? Don't spend too much time on this if you get stuck, we'll look at an example of an inconsistent ontology in our session.
 - **Optional**: [download ROBOT](http://robot.obolibrary.org) so you can use it outside of Docker (scroll down to find the Windows instructions)
 
 ## Outline
@@ -41,7 +45,7 @@ This week is all hands on - no videos to watch! Please follow the steps below an
   - Intersections ("and"), unions ("or"), and complements ("not")
 - Reasoning: classification and debugging (~30 minutes)
   - What is classification?
-  - How can you use the reasoner to debug?
+  - Debugging inconsistency and incoherency
 - Review the DL query tab (~15 minutes)
 - [ROBOT report](http://robot.obolibrary.org/report) (~30 minutes)
   - Download [`example.owl`](https://raw.githubusercontent.com/jamesaoverton/obook/master/05-OntologyPractise/example.owl), or get it via the command line:
