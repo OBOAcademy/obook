@@ -155,7 +155,7 @@ Then I'll make some notes for myself:
 - investigator: initials, ORCID?
 - subject: integer ID
 - species: common name for species, NCBITaxon?
-- strain: alphanumeric
+- strain: some sort of code with letters, numbers, spaces, some punctuation
 - sex: string female/male
 - group: integer ID
 - protocol: string, OBI?
@@ -452,6 +452,41 @@ Now I'll check my work:
 $ sqlite3 build/data.db <<< "SELECT * FROM data_csv LIMIT 1;"
 2014-01-01 10:21:00-0500|JAO|ex:subject-12|RAT|F 344/N|FEMALE|ex:group-1|HISTOPATHOLOGY|LUNG|ADENOCARCINOMA|SEVERE|
 ```
+
+I should take a moment to tell you,
+that while I was writing the Turtle conversion code later in this essay,
+I had to come back here and change these identifiers.
+The thing is that Turtle is often more strict than I expect
+about identifier syntax.
+Turtle identifiers *look* like
+[CURIEs](https://en.wikipedia.org/wiki/CURIE),
+but they're actually
+[QNames](https://en.wikipedia.org/wiki/QName).
+CURIEs are pretty much just just URLs shortened with a prefix,
+so almost anything goes.
+QNames come from [XML](https://en.wikipedia.org/wiki/XML),
+and Turtle identifiers have to be valid XML element names.
+
+I always remember that I need to stick to alphanumeric characters,
+and that I have to replace whitespace and punctuation with a `-` or `_`.
+I didn't remember that the local part (aka "suffix", aka "NCName")
+can't start with a digit.
+So I tried to use "subject:12" and "group:1" as my identifiers.
+That worked fine until I generated Turtle.
+The Turtle *looked* fine,
+so it took me quite a while to figure out why
+it looked very wrong when I converted it into RDXML format.
+
+This kind of thing happens to me all the time.
+I'm almost always using a mixture of technologies
+based on different sets of assumptions,
+and there are always things that don't line up.
+That's why I like to work in small iterations,
+checking my work as I go
+(preferrably with automated tests),
+and keeping everything in version control.
+When I need to make a change like this one,
+I just circle back and iterate again.
 
 The next thing is to tackle the terminology.
 First I'll just make a list of the terms I'm using
