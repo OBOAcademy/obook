@@ -1,6 +1,6 @@
 # Week 11: Knowledge Graphs
 
-**First Instructor:** Nico Matentzoglu
+**First Instructor:** Nico Matentzoglu  
 **Second Instructor:** TBD
 
 ## Description
