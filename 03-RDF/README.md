@@ -23,3 +23,6 @@ Modelling and querying data with RDF triples, and working with RDF using tables
 - annotating data
 - graph visualization
 - SKOS
+
+## Optional material
+- [Linking data](https://github.com/jamesaoverton/obook/blob/master/03-RDF/linking-data.md)
