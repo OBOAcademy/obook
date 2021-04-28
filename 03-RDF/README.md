@@ -10,7 +10,6 @@ Modelling and querying data with RDF triples, and working with RDF using tables
 - RDF modelling
 - RDFS
 - SPARQL
-- SKOS
 
 ## OpenHPI Course Content
 [RDF Based Knowledge Engineering](https://open.hpi.de/courses/semanticweb2015/items/2DXVQCd9tgUkhcTQkwpHfd)
