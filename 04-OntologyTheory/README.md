@@ -55,6 +55,7 @@ Participants will need to have access to the following resources and tools prior
 - Review of the Protege interface (Emily and Daniel)
     - questions about [pizza tutorial](https://www.michaeldebellis.com/post/new-protege-pizza-tutorial)
     - any issues with installing Protege or GitHub desktop?
+    - Make sure Emily and Daniel have access to [Mondo repo](https://github.com/monarch-initiative/mondo/settings/access)
 
 - Protege tutorial (Nicole)
     1. Download the Mondo ontology from GitHub (see instructions [here](https://github.com/jamesaoverton/obook/blob/master/04-OntologyTheory/github-workflow.md)).
