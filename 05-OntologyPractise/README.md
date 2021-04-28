@@ -35,7 +35,7 @@ For the tutorial, don't worry too much about the IDs. You can continue to use th
     - [Basic Classification](https://ontology101tutorial.readthedocs.io/en/latest/EXERCISE_BasicClassification.html)
 - Read [(I can't get no) satisfiability](http://ontogenesis.knowledgeblog.org/1329/) (~10 minutes)
   - **Optional**: Open a new ontology in Protégé. Try creating an *inconsistent* ontology using the classes and instances in the first Pets example (hint: you'll also need to create the "eats" object property)... what happens when you run the reasoner? Don't spend too much time on this if you get stuck, we'll look at an example of an inconsistent ontology in our session.
-- Complete [Constructing SPARQL Queries](https://medium.com/wallscope/constructing-sparql-queries-ca63b8b9ac02) tutorial (~45 minutes - 1 hour)
+- Complete [Running Basic SPARQL Queries](https://medium.com/virtuoso-blog/dbpedia-basic-queries-bc1ac172cc09) tutorial (~45 minutes - 1 hour)
 - **Optional**: [download ROBOT](http://robot.obolibrary.org) so you can use it outside of Docker (scroll down to find the Windows instructions)
 
 ## Outline
