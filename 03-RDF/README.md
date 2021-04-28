@@ -12,7 +12,11 @@ Modelling and querying data with RDF triples, and working with RDF using tables
 - SPARQL
 
 ## OpenHPI Course Content
-[RDF Based Knowledge Engineering](https://open.hpi.de/courses/semanticweb2015/items/2DXVQCd9tgUkhcTQkwpHfd)
+
+[OpenHPI Linked Data Engineering (2016)](https://open.hpi.de/courses/semanticweb2016)
+
+- Lesson 2 RDF
+- Lesson 4 SPARQL
 
 ## Software Carpentry Lessons
 [Using Databases and SQL](http://swcarpentry.github.io/sql-novice-survey/)
