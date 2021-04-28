@@ -40,16 +40,10 @@ For the tutorial, don't worry too much about the IDs. You can continue to use th
 
 ## Outline
 
-- OWL axioms (~30 minutes)
-  - Named vs. anonynmous classes
-  - Superclasses, equivalent classes, and disjoint classes
-  - "some" (existential) vs. "only" (universal)
-  - Intersections ("and"), unions ("or"), and complements ("not")
-- Reasoning: classification and debugging (~30 minutes)
-  - What is classification?
-  - Debugging inconsistency and incoherency
-- Review the DL query tab (~15 minutes)
-- [ROBOT report](http://robot.obolibrary.org/report) (~30 minutes)
+- Review & answer questions about the homework (~30 minutes)
+  - OWL axioms (restrictions, equivalent & disjoint class axioms)
+  - Reasoning: classification and debugging
+- [ROBOT report](http://robot.obolibrary.org/report) (~45 minutes)
   - Download [`example.owl`](https://raw.githubusercontent.com/jamesaoverton/obook/master/05-OntologyPractise/example.owl), or get it via the command line:
     ```
     curl https://raw.githubusercontent.com/jamesaoverton/obook/master/05-OntologyPractise/example.owl > example.owl
@@ -57,8 +51,8 @@ For the tutorial, don't worry too much about the IDs. You can continue to use th
   - [What `report` checks for](http://robot.obolibrary.org/report_queries/)
   - Let's try it out!
   - Hands-on practice fixing common errors
-- [ROBOT query](http://robot.obolibrary.org/query) (~15 minutes)
-  - Writing simple SPARQL queries
+- [ROBOT query](http://robot.obolibrary.org/query) (~45 minutes)
+  - Writing simple SPARQL queries (review)
   - Let's try it out!
 
 ## Semantic Engineer Toolbox
