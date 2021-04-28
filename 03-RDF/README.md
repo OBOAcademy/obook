@@ -29,6 +29,11 @@ Modelling and querying data with RDF triples, and working with RDF using tables
 
 ## Semantic Engineer Toolbox
 
+**Text editors:**
 - [Kakoune](https://kakoune.org/) text/code editor
-- [Yasgui SPARQL query tool](https://yasgui.triply.cc/#)
+- [Sublime](https://www.sublimetext.com/)
+- [Atom](https://atom.io/)
+
+**SPARQL query tool:**
+- [Yasgui](https://yasgui.triply.cc/#) 
 
