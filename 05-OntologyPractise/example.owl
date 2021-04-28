@@ -9,8 +9,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:terms="http://purl.org/dc/terms/">
-    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/obi.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/obi/2021-04-06/obi.owl"/>
+    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/cpath/cpath-robot-example.owl">
         <dc:title>C-Path ROBOT Report Example Ontology</dc:title>
         <terms:license>https://creativecommons.org/licenses/by/4.0/</terms:license>
     </owl:Ontology>
