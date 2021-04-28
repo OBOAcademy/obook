@@ -23,3 +23,7 @@ Modelling and querying data with RDF triples, and working with RDF using tables
 
 ## Optional material
 - [Linking data](https://github.com/jamesaoverton/obook/blob/master/03-RDF/linking-data.md)
+
+## Semantic Engineer Toolbox
+
+- [Yasgui SPARQL query tool](https://yasgui.triply.cc/#)
