@@ -4,13 +4,18 @@
 **Second Instructor:** Nicole Vasilevsky
 
 ## Description
-Using OBO for diseases and phenotypes, mapping standards.
+Using OBO for diseases and phenotypes, mapping standards. 
+
+## Learning Outcomes:
+- be aware of major disease and phenotype ontologies that are available
+- be able to decide which phenotype or disease ontology to use for different use casess
 
 ## Topics
 - [Phenotype and Disease Mappings](mappings.md)
 
 ## New Material
-TBD
+- Mapping to triples (review of [week 03](https://github.com/jamesaoverton/obook/tree/master/03-RDF))
+  - For example, how to a match phenotype description strings and annotate to ontologies
 
 ## Semantic Engineer Toolbox
 - Ontologies
