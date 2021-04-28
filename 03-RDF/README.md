@@ -19,7 +19,7 @@ Modelling and querying data with RDF triples, and working with RDF using tables
 [Using Databases and SQL](http://swcarpentry.github.io/sql-novice-survey/)
 
 ## New Material
-- tables and triples
+- [Tables and Triples](https://github.com/jamesaoverton/obook/blob/master/03-RDF/tables-and-triples.md)
 - annotating data
 - graph visualization
 - SKOS
