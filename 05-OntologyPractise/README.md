@@ -19,7 +19,7 @@ This week is all hands on - no videos to watch! Please follow the steps below an
 
 For the tutorial, don't worry too much about the IDs. You can continue to use the auto-generated IDs that we set up last week with the `MONDO` prefix. If you want to play around with changing the prefix, you can go to Preferences > New entities and change the prefix from `MONDO_` to `GO_`. If you don't want to mess with your settings, though, that's OK!
 
-- Complete part of the **Ontologies 101 Tutorial** (~1 - 1.5 hours)
+- Complete part of the **Ontologies 101 Tutorial** (~2 hours)
   - Clone the [Ontologies 101](https://github.com/OHSUBD2K/BDK14-Ontologies-101) repository, then open the folder `BDK14_exercises` from your file system
   - Open `basic-subclass/chromosome-parts.owl` in Protégé, then do the following exercises:
     - [Basic Subclass Hierarchy](https://ontology101tutorial.readthedocs.io/en/latest/EXERCISE_BasicSubclassHierarchy.html) (review) - make sure to look at the "detailed instructions" for adding annotations here, as it will go over adding annotations on annotation assertions
