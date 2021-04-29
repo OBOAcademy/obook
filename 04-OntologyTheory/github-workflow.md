@@ -15,8 +15,8 @@ You can copy (fork) any GitHub repo to some other location on GitHub without hav
 
 If you have permission from the owners, you can instead make a new branch. For this training, we gave you access to the repository. See the [Appendix](https://github.com/jamesaoverton/obook/blob/master/04-OntologyTheory/appendix.md) for instructions on how to make a fork.
 
-Creating a branch using GitHub Desktop
---------------------------------------
+Clone the Mondo repo
+--------------------
 
 1.  Open GitHub Desktop
 1.  Clone the repository:
@@ -25,8 +25,12 @@ Creating a branch using GitHub Desktop
 
 1. Go to <https://github.com/monarch-initiative/mondo>
 1. Click 'Code', then Open with GitHub desktop
-1. Click the little arrow in Current Branch
-1. Click New Branch
-1. Give your branch a name: c-path-training-initials (ie `c-path-training-NV`)
+
+Creating a branch using GitHub Desktop
+--------------------------------------
+
+3. Click the little arrow in Current Branch
+4. Click New Branch
+5. Give your branch a name: c-path-training-initials (ie `c-path-training-NV`)
 
 ![image](https://user-images.githubusercontent.com/6722114/115821352-7ad42c00-a3b7-11eb-97e0-b02611eb77e6.png)
