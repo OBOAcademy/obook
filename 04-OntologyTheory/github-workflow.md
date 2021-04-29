@@ -18,8 +18,11 @@ If you have permission from the owners, you can instead make a new branch. For t
 Clone the Mondo repo
 --------------------
 
-1.  Open GitHub Desktop
-1.  Clone the repository:
+1.  Open the [Mondo GitHub repository](https://github.com/monarch-initiative/mondo)
+2.  Click Code
+ ![image](https://user-images.githubusercontent.com/6722114/116610830-801b0480-a8ea-11eb-8567-9da0c1159954.png)
+
+4.  Clone the repository:
 
 ![image](https://user-images.githubusercontent.com/6722114/115820985-c3d7b080-a3b6-11eb-8131-7b9c33cc294d.png)
 
