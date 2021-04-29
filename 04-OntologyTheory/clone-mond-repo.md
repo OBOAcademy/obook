@@ -21,4 +21,4 @@ Open the Mondo Ontology in Protege
 2. Go to: File -> Open
 3. Navigate to mondo/src/ontology/mondo-edit.obo and open this file in Protege
 
-If this all works okay, you are all set. We'll go over editing workflows when we meet.
+If this all works okay, you are all set. We'll go over the editing workflows when we meet.
