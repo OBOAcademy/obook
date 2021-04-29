@@ -15,20 +15,6 @@ You can copy (fork) any GitHub repo to some other location on GitHub without hav
 
 If you have permission from the owners, you can instead make a new branch. For this training, we gave you access to the repository. See the [Appendix](https://github.com/jamesaoverton/obook/blob/master/04-OntologyTheory/appendix.md) for instructions on how to make a fork.
 
-Clone the Mondo repo
---------------------
-
-1.  Open the [Mondo GitHub repository](https://github.com/monarch-initiative/mondo)
-2.  Click Code
- ![image](https://user-images.githubusercontent.com/6722114/116610830-801b0480-a8ea-11eb-8567-9da0c1159954.png)
-
-4.  Clone the repository:
-
-![image](https://user-images.githubusercontent.com/6722114/115820985-c3d7b080-a3b6-11eb-8131-7b9c33cc294d.png)
-
-1. Go to <https://github.com/monarch-initiative/mondo>
-1. Click 'Code', then Open with GitHub desktop
-
 Creating a branch using GitHub Desktop
 --------------------------------------
 
