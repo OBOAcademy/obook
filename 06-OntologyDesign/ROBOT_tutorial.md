@@ -7,12 +7,11 @@ Last week, we were introduced to ROBOT for quality control and generating report
 * Merge
 
 Before starting this tutorial, either:
-* make sure Docker is running and you have your wrapper script ready to go (in this case, prefix each command with a call to your wrapper script, e.g. `./odk.sh robot ...`)
+* make sure Docker is running and you are in the container
 * [download and install ROBOT](http://robot.obolibrary.org/) for your operating system
 
 We will be using the files from the Ontologies 101 Tutorial that we started last week.
 In your terminal, navigate to the repository that you cloned and then into the `BDK14_exercises` folder.
-It may be easier to also copy the wrapper script to this directory so that you can access it with `../odk.sh` from any of the subdirectories.
 
 ## Convert
 
