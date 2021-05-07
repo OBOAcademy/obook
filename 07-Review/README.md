@@ -9,7 +9,7 @@
 ## Week 7 Content
 **Intstructor:** Nicole Vasilevsky
 
-These instructions will use the Mondo disease ontology as an example.
+These instructions will use the [Mondo disease ontology](https://github.com/monarch-initiative/mondo) as an example.
 1. Adding equivalent axioms 
 2. Running the reasoner and viewing the inferred hierarchy
 3. Debugging and viewing explanations
