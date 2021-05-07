@@ -1,4 +1,4 @@
-# Week 9: Ontology Mappings
+# Week 10: Ontology Mappings
 
 **First Instructor:** Nico Matentzoglu  
 **Second Instructor:** Nicole Vasilevsky    
