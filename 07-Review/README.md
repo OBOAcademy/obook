@@ -3,7 +3,7 @@
 **Instructors:** James Overton, Becky Jackson, Nico Matentzoglu, Nicole Vasilevsky
 
 ## Description
-- Review material covered to date.
+- Review material covered to date
 - Ontology editing in Protege: adding equivalence axioms, running the reasoner and debugging by viewing explanations
 
 ## Week 7 Content
