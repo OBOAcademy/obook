@@ -1,4 +1,4 @@
-# Week 10: Diseases and Phenotypes
+# Week 09: Diseases and Phenotypes
 
 **First Instructor:** Nico Matentzoglu  
 **Second Instructor:** Nicole Vasilevsky
