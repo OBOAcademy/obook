@@ -4,7 +4,7 @@
 
 ## Description
 - Review material covered to date
-- Ontology editing in Protege: adding equivalence axioms, running the reasoner and debugging by viewing explanations
+- Ontology editing in Protege: logic and debugging
 
 ## Week 7 Content
 **Intstructor:** Nicole Vasilevsky
