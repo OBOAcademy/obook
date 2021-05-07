@@ -1,7 +1,7 @@
-# Week 9: Ontology Driven Curation
+# Week 9: Ontology Mappings
 
-**First Instructor:** Nicole Vasilevsky  
-**Second Instructor:** Becky Jackson  
+**First Instructor:** Nico Matentzoglu  
+**Second Instructor:** Nicole Vasilevsky    
 
 ## Description
 Using ontologies in scientific databases.
