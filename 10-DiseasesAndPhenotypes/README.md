@@ -9,6 +9,8 @@ Using OBO for diseases and phenotypes, mapping standards.
 ## Learning Outcomes:
 - be aware of major disease and phenotype ontologies that are available
 - be able to decide which phenotype or disease ontology to use for different use casess
+- understand how to leverage disease and phenotype ontologies for advanced data analytics
+- have a basic understanding of where to find data (_Note: It is impossible to provide a comprehensive list_)
 
 ## Topics
 - [Phenotype and Disease Mappings](mappings.md)
