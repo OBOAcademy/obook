@@ -165,6 +165,14 @@ Go ahead and open `animals2.owl` in Protege. What's missing? The parent classes 
 This is because, even though ROBOT knew about these classes, we didn't ask for the original ontology to be included in the output, so no axioms from that ontology can be found in this newly-created one.
 Next week, we'll learn about combining ontologies with the **Merge** command.
 
+For now, let's add the original `animals.owl` file as an import:
+1. Go to the "Active ontology" tab and find the "Imported ontologies" section at the bottom
+2. Click the **+** next to "Direct imports"
+3. Select "Import an ontology contained in a local file" and click Continue
+4. Browse for the path to `animals.owl`, click Continue, and then click Finish
+
+Protégé will now load `animals.owl` as an import. When you return to the Entities tab, you'll see all those upper-level terms. Note the difference in how the terms are displayed in the class hierarchy.
+
 ### On Your Own
 
 1. Try adding another class or two to the `animals.tsv` template and regenerating `animals.owl`.
