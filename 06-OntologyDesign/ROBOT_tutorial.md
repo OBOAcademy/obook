@@ -4,7 +4,6 @@ Last week, we were introduced to ROBOT for quality control and generating report
 * Convert
 * Extract
 * Template
-* Merge
 
 Before starting this tutorial, either:
 * make sure Docker is running and you are in the container
@@ -163,15 +162,10 @@ This time, we did use the `--input` parameter and provided the animals ontology 
 This allows us to use any term in the `animals.owl` file in our `animals2.tsv` template and ROBOT will know what we're talking about.
 
 Go ahead and open `animals2.owl` in Protege. What's missing? The parent classes for "dog" and "cat" don't have labels, and the "animal" term is missing entirely.
-This is because, even though ROBOT knew about these classes, we didn't ask for the original ontology to be included in the output.
-Next, we'll learn about combining ontologies with the **Merge** command.
+This is because, even though ROBOT knew about these classes, we didn't ask for the original ontology to be included in the output, so no axioms from that ontology can be found in this newly-created one.
+Next week, we'll learn about combining ontologies with the **Merge** command.
 
 ### On Your Own
 
 1. Try adding another class or two to the `animals.tsv` template and regenerating `animals.owl`.
 2. Can you create your own template?
-
----
-
-## Merge
-
