@@ -28,3 +28,4 @@ By the end of this session, you should be able to:
 - Ontology design patterns (~15 minutes)
   - Real world example: Ontology for Biomedical Investigations (OBI)
 - Using design patterns in [`robot template`](http://robot.obolibrary.org/template) (Review; ~15 minutes)
+- Including your modules in your ontology as imports
