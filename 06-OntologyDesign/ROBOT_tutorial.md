@@ -4,15 +4,13 @@ Last week, we were introduced to ROBOT for quality control and generating report
 * Convert
 * Extract
 * Template
-* Merge
 
 Before starting this tutorial, either:
-* make sure Docker is running and you have your wrapper script ready to go (in this case, prefix each command with a call to your wrapper script, e.g. `./odk.sh robot ...`)
+* make sure Docker is running and you are in the container
 * [download and install ROBOT](http://robot.obolibrary.org/) for your operating system
 
 We will be using the files from the Ontologies 101 Tutorial that we started last week.
 In your terminal, navigate to the repository that you cloned and then into the `BDK14_exercises` folder.
-It may be easier to also copy the wrapper script to this directory so that you can access it with `../odk.sh` from any of the subdirectories.
 
 ## Convert
 
@@ -115,7 +113,7 @@ For now, we're going to create a new, small ontology with new terms using a temp
 
 ### Let's Try It!
 
-Download (or copy/paste) the [animals.tsv](https://github.com/jamesaoverton/obook/blob/master/06-OntologyDesign/animals.tsv) file and move it to the `basic-subclass/` folder.
+Download (or copy/paste) the [animals.tsv](https://github.com/jamesaoverton/obook/blob/master/06-OntologyDesign/animals.tsv) file and move it to the `basic-subclass/` folder (or whatever folder you would like to work in; we will not be using any of the Ontology 101 files anymore).
 This contains the following data:
 
 | CURIE       | Label  | Parent | Comment        |
@@ -164,15 +162,10 @@ This time, we did use the `--input` parameter and provided the animals ontology 
 This allows us to use any term in the `animals.owl` file in our `animals2.tsv` template and ROBOT will know what we're talking about.
 
 Go ahead and open `animals2.owl` in Protege. What's missing? The parent classes for "dog" and "cat" don't have labels, and the "animal" term is missing entirely.
-This is because, even though ROBOT knew about these classes, we didn't ask for the original ontology to be included in the output.
-Next, we'll learn about combining ontologies with the **Merge** command.
+This is because, even though ROBOT knew about these classes, we didn't ask for the original ontology to be included in the output, so no axioms from that ontology can be found in this newly-created one.
+Next week, we'll learn about combining ontologies with the **Merge** command.
 
 ### On Your Own
 
 1. Try adding another class or two to the `animals.tsv` template and regenerating `animals.owl`.
 2. Can you create your own template?
-
----
-
-## Merge
-

@@ -19,35 +19,31 @@ This week is all hands on - no videos to watch! Please follow the steps below an
 
 For the tutorial, don't worry too much about the IDs. You can continue to use the auto-generated IDs that we set up last week with the `MONDO` prefix. If you want to play around with changing the prefix, you can go to Preferences > New entities and change the prefix from `MONDO_` to `GO_`. If you don't want to mess with your settings, though, that's OK!
 
-- Clone the [Ontologies 101](https://github.com/OHSUBD2K/BDK14-Ontologies-101) repository, then open the folder `BDK14_exercises` from your file system
-- Open `basic-subclass/chromosome-parts.owl` in Protégé, then do the following exercises:
-  - [Basic Subclass Hierarchy](https://ontology101tutorial.readthedocs.io/en/latest/EXERCISE_BasicSubclassHierarchy.html) (review) - make sure to look at the "detailed instructions" for adding annotations here, as it will go over adding annotations on annotation assertions
-  - [Disjointness](https://ontology101tutorial.readthedocs.io/en/latest/Disjointness.html)
-  - [Object Properties](https://ontology101tutorial.readthedocs.io/en/latest/ObjectProperties.html) - note that you will rarely, if ever, be making object properties, as most of the properties you'll ever need are defined in the [Relation Ontology](http://www.obofoundry.org/ontology/ro.html)
-  - [OWL Class Restrictions](https://ontology101tutorial.readthedocs.io/en/latest/OWL_ClassRestrictions.html)
-- Open `basic-restriction/er-sec-complex.owl` in Protégé, then do the following exercise:
-  - [Basic Restrictions](https://ontology101tutorial.readthedocs.io/en/latest/EXERCISE_BasicRestrictions.html)
-- Open `basic-dl-query/cc.owl` in Protégé, then do the following exercises:
-  - [DL Query Tab](https://ontology101tutorial.readthedocs.io/en/latest/DL_QueryTab.html) - note that `owl:Nothing` is defined as the very bottom node of an ontology, therefore the DL query results will show `owl:Nothing` as a subclass. This is expected and does not mean there is a problem with your ontology! It's only bad when something is a subclass of `owl:Nothing` and therefore *unsatisfiable* (more on that below).
-  - [Basic DL Queries](https://ontology101tutorial.readthedocs.io/en/latest/EXERCISE_BasicDL_Queries.html)
-- Open `basic-classification/ubiq-ligase-complex.owl` in Protégé, then do the following exercises:
-  - [Basic Classification](https://ontology101tutorial.readthedocs.io/en/latest/EXERCISE_BasicClassification.html)
-- Read [(I can't get no) satisfiability](http://ontogenesis.knowledgeblog.org/1329/)
+- Complete part of the **Ontologies 101 Tutorial** (~2 hours)
+  - Clone the [Ontologies 101](https://github.com/OHSUBD2K/BDK14-Ontologies-101) repository, then open the folder `BDK14_exercises` from your file system
+  - Open `basic-subclass/chromosome-parts.owl` in Protégé, then do the following exercises:
+    - [Basic Subclass Hierarchy](https://ontology101tutorial.readthedocs.io/en/latest/EXERCISE_BasicSubclassHierarchy.html) (review) - make sure to look at the "detailed instructions" for adding annotations here, as it will go over adding annotations on annotation assertions
+    - [Disjointness](https://ontology101tutorial.readthedocs.io/en/latest/Disjointness.html)
+    - [Object Properties](https://ontology101tutorial.readthedocs.io/en/latest/ObjectProperties.html) - note that you will rarely, if ever, be making object properties, as most of the properties you'll ever need are defined in the [Relation Ontology](http://www.obofoundry.org/ontology/ro.html)
+    - [OWL Class Restrictions](https://ontology101tutorial.readthedocs.io/en/latest/OWL_ClassRestrictions.html)
+  - Open `basic-restriction/er-sec-complex.owl` in Protégé, then do the following exercise:
+    - [Basic Restrictions](https://ontology101tutorial.readthedocs.io/en/latest/EXERCISE_BasicRestrictions.html)
+  - Open `basic-dl-query/cc.owl` in Protégé, then do the following exercises:
+    - [DL Query Tab](https://ontology101tutorial.readthedocs.io/en/latest/DL_QueryTab.html) - note that `owl:Nothing` is defined as the very bottom node of an ontology, therefore the DL query results will show `owl:Nothing` as a subclass. This is expected and does not mean there is a problem with your ontology! It's only bad when something is a subclass of `owl:Nothing` and therefore *unsatisfiable* (more on that below).
+    - [Basic DL Queries](https://ontology101tutorial.readthedocs.io/en/latest/EXERCISE_BasicDL_Queries.html)
+  - Open `basic-classification/ubiq-ligase-complex.owl` in Protégé, then do the following exercises:
+    - [Basic Classification](https://ontology101tutorial.readthedocs.io/en/latest/EXERCISE_BasicClassification.html)
+- Read [(I can't get no) satisfiability](http://ontogenesis.knowledgeblog.org/1329/) (~10 minutes)
   - **Optional**: Open a new ontology in Protégé. Try creating an *inconsistent* ontology using the classes and instances in the first Pets example (hint: you'll also need to create the "eats" object property)... what happens when you run the reasoner? Don't spend too much time on this if you get stuck, we'll look at an example of an inconsistent ontology in our session.
+- Complete [Running Basic SPARQL Queries](https://medium.com/virtuoso-blog/dbpedia-basic-queries-bc1ac172cc09) tutorial (~45 minutes - 1 hour)
 - **Optional**: [download ROBOT](http://robot.obolibrary.org) so you can use it outside of Docker (scroll down to find the Windows instructions)
 
 ## Outline
 
-- OWL axioms (~30 minutes)
-  - Named vs. anonynmous classes
-  - Superclasses, equivalent classes, and disjoint classes
-  - "some" (existential) vs. "only" (universal)
-  - Intersections ("and"), unions ("or"), and complements ("not")
-- Reasoning: classification and debugging (~30 minutes)
-  - What is classification?
-  - Debugging inconsistency and incoherency
-- Review the DL query tab (~15 minutes)
-- [ROBOT report](http://robot.obolibrary.org/report) (~30 minutes)
+- Review & answer questions about the homework (~30 minutes)
+  - OWL axioms (restrictions, equivalent & disjoint class axioms)
+  - Reasoning: classification and debugging
+- [ROBOT report](http://robot.obolibrary.org/report) (~45 minutes)
   - Download [`example.owl`](https://raw.githubusercontent.com/jamesaoverton/obook/master/05-OntologyPractise/example.owl), or get it via the command line:
     ```
     curl https://raw.githubusercontent.com/jamesaoverton/obook/master/05-OntologyPractise/example.owl > example.owl
@@ -55,7 +51,9 @@ For the tutorial, don't worry too much about the IDs. You can continue to use th
   - [What `report` checks for](http://robot.obolibrary.org/report_queries/)
   - Let's try it out!
   - Hands-on practice fixing common errors
-- [ROBOT query](http://robot.obolibrary.org/query) (~15 minutes)
+- [ROBOT query](http://robot.obolibrary.org/query) (~45 minutes)
+  - Writing simple SPARQL queries (review)
+  - Let's try it out!
 
 ## Semantic Engineer Toolbox
 

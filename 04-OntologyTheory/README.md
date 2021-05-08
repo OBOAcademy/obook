@@ -34,7 +34,9 @@ Participants will need to have access to the following resources and tools prior
     - Go to Protege in Applications (Finder), right click, 'Show package contents' -> Java -> plugins
   - Restart Protege. You should see ELK 0.5 installed in your Reasoner menu. 
   - Important: it seems Elk 0.5. Does not work with all versions of Protege, in particular, 5.2 and below. These instructions were only tested with Protege 5.5!
-- _Optional_ **GitHub Desktop** - Please make sure you have some kind of git client installed on your Machine. If you are new to Git, please install [GitHub Desktop](https://desktop.github.com/)
+- **GitHub Desktop** - Please make sure you have some kind of git client installed on your Machine. If you are new to Git, please install [GitHub Desktop](https://desktop.github.com/)
+- **Clone Mondo repo** - Follow these instructions to [clone the Mondo repo](clone-mond-repo.md)
+
 
 ### Support and Additional Resources
 - [Ontology tutorials and Resources](https://tislab.org/ontologyResources.html)
@@ -55,6 +57,7 @@ Participants will need to have access to the following resources and tools prior
 - Review of the Protege interface (Emily and Daniel)
     - questions about [pizza tutorial](https://www.michaeldebellis.com/post/new-protege-pizza-tutorial)
     - any issues with installing Protege or GitHub desktop?
+    - Make sure Emily and Daniel have access to [Mondo repo](https://github.com/monarch-initiative/mondo/settings/access)
 
 - Protege tutorial (Nicole)
     1. Download the Mondo ontology from GitHub (see instructions [here](https://github.com/jamesaoverton/obook/blob/master/04-OntologyTheory/github-workflow.md)).
