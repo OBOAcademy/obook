@@ -113,7 +113,7 @@ For now, we're going to create a new, small ontology with new terms using a temp
 
 ### Let's Try It!
 
-Download (or copy/paste) the [animals.tsv](https://github.com/jamesaoverton/obook/blob/master/06-OntologyDesign/animals.tsv) file and move it to the `basic-subclass/` folder.
+Download (or copy/paste) the [animals.tsv](https://github.com/jamesaoverton/obook/blob/master/06-OntologyDesign/animals.tsv) file and move it to the `basic-subclass/` folder (or whatever folder you would like to work in; we will not be using any of the Ontology 101 files anymore).
 This contains the following data:
 
 | CURIE       | Label  | Parent | Comment        |
