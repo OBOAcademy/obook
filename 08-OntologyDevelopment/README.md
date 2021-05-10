@@ -19,7 +19,6 @@ By the end of this session, you should be able to:
 Please complete the following and then read the section below:
 - ROBOT Mini-Tutorial, part 2 (*TODO*)
 - Software Carpentry: [Automation and Make](http://swcarpentry.github.io/make-novice/)
-- Open HPI: [Knowledge Engineering](https://open.hpi.de/courses/semanticweb2015/items/6V96GOecoS3u481LerzYx2) (*maybe*)
 
 #### What is an ontology release?
 
