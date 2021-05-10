@@ -5,13 +5,13 @@
 
 ## Description
 
-This week, we will get more into ontology development, debugging, and quality control. This includes use of OWL class restrictions for automatic classfication and use of the DL query tab in Protégé. We will also introduce the [ROBOT command line tool](http://robot.obolibrary.org) and show how it can be used for quality control of the ontology (`robot report`) and for easy summaries of the terms (`robot query`).
+This week, we will get more into ontology development, debugging, and quality control. This includes use of OWL class restrictions for automatic classification and use of the DL query tab in Protégé. We will also introduce the [ROBOT command line tool](http://robot.obolibrary.org) and show how it can be used for quality control of the ontology (`robot report`) and for easy summaries of the terms (`robot query`).
 
 By the end of this session, you should be able to:
-1. Add logic to terms using OWL class restrictions and understand resulting automatic classfications
+1. Add logic to terms using OWL class restrictions and understand resulting automatic classifications
 2. Query the ontology using the DL query tab
 3. Check that the ontology is in good shape by running `robot report`
-4. Generate files containing term details from simmple SPARQL queries using `robot query`
+4. Generate files containing term details from simple SPARQL queries using `robot query`
 
 ## Preparation
 
