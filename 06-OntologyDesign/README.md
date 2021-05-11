@@ -15,7 +15,7 @@ By the end of this session, you should be able to:
 ## Preparation
 - Complete OpenHPI [Week 5: Ontology Engineering](https://open.hpi.de/courses/semanticweb2015/items/1iXXFr86raHqrB5bRBJZeM) videos 5.1, 5.2, and 5.4 - 5.6 (~2.5 hours)
   - We are skipping **5.3: Ontology Learning** and both sections on **MORE Ontology Evaluation** (5.7 and 5.8)
-- Complete the [ROBOT Mini-Tutorial](https://github.com/jamesaoverton/obook/blob/master/06-OntologyDesign/ROBOT_tutorial.md) to learn four new ROBOT commands
+- Complete the [ROBOT Mini-Tutorial](https://github.com/jamesaoverton/obook/blob/master/06-OntologyDesign/ROBOT_tutorial.md) to learn three new ROBOT commands
 
 ## Outline
 - OpenHPI course review: questions? (~15 minutes)
