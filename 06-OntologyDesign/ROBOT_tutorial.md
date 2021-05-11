@@ -1,6 +1,6 @@
 # ROBOT Mini-Tutorial
 
-Last week, we were introduced to ROBOT for quality control and generating reports about terms in an ontology. This week, we will learn about four new ROBOT commands:
+Last week, we were introduced to ROBOT for quality control and generating reports about terms in an ontology. This week, we will learn about three new ROBOT commands:
 * Convert
 * Extract
 * Template
