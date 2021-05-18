@@ -58,7 +58,11 @@ For this class, we want to follow the design pattern for [allergy](https://githu
 3. Mycotoxin is a child of a 'specifically dependent continuant' and and 'independent continuant' is disjoint with 'specifically dependent cotinuant'.
 4. This logical axiom uses the relation 'realized in response to stimulus'
 5. Click on this relation in Protege (you can click on the relation name in the equivalence axiom, or you can click on the Object properties tab and search for this relation.
-6. 
+6. There are domain and range restrictions on this property, where the range has to be a material enity. Chebi mycotoxin is actually a role, so it is not a material entity. 
+
+![image](https://user-images.githubusercontent.com/6722114/118698760-a33c2400-b7c5-11eb-8c8c-85c91c9a7dab.png)
+
+7. Go back to the entities pane and remove the equivalence axiom and run the reasoner again. You should now see no unsatisfiable classes.
 
 
 
