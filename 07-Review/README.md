@@ -13,4 +13,4 @@ These instructions will use the [Mondo disease ontology](https://github.com/mona
 - Adding equivalent axioms 
 - Running the reasoner and viewing the inferred hierarchy
 - Debugging and viewing explanations
-- _See instructions [here](https://github.com/jamesaoverton/obook/blob/master/07-Review/add-logical-axiom.md)_
+- _**Pracice**: See instructions [here](https://github.com/jamesaoverton/obook/blob/master/07-Review/add-logical-axiom.md)_
