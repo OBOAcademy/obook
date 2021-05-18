@@ -43,5 +43,9 @@ For this class, we want to follow the design pattern for [allergy](https://githu
 
 ![image](https://user-images.githubusercontent.com/6722114/118697511-37a58700-b7c4-11eb-82d1-9850c6e05811.png)
 
+1. Run the reasoner
+1. View the inferred hierarchy. You should see a child of owl:Nothing (and you should see this in the Description pane as well.)
+
+
 
 
