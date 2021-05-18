@@ -29,6 +29,6 @@ For this class, we want to follow the design pattern for [specific_infectious_di
 1. Run the reasoner
 1. View the inferred hierarchy.
 1. Confirm that there are no unsatisifiable classes and everything looks okay.
-1. Save your work and create a pull request and reference issue #1639.
+1. Save your work and create a pull request and reference issue [#1639](https://github.com/monarch-initiative/mondo/issues/1639).
 
 
