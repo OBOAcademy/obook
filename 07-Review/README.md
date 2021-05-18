@@ -7,11 +7,15 @@
 - Ontology editing in Protege: logic and debugging
 
 ## Week 7 Content
+
+### Applying logical axioms to ontology terms
 **Intstructor:** Nicole Vasilevsky
 
-These instructions will use the [Mondo disease ontology](https://github.com/monarch-initiative/mondo) as an example.
-- Adding equivalent axioms 
-- Running the reasoner and viewing the inferred hierarchy
+#### Learning objectives
+- Add equivalent axioms (logical definitions) to ontology terms
+- Run the reasoner and view the inferred hierarchy
 - Debugging and viewing explanations
-- _**Practice (Part 1)**: See instructions [here](https://github.com/jamesaoverton/obook/blob/master/07-Review/add-logical-axiom.md)_
-- _**Practice (Part 2)**: See instructions [here](https://github.com/jamesaoverton/obook/blob/master/07-Review/add-logical-axiom_part2.md)_
+
+These instructions will use the [Mondo disease ontology](https://github.com/monarch-initiative/mondo) as an example.
+1. **Practice (Part 1)**: See instructions [here](https://github.com/jamesaoverton/obook/blob/master/07-Review/add-logical-axiom.md)
+1. **Practice (Part 2)**: See instructions [here](https://github.com/jamesaoverton/obook/blob/master/07-Review/add-logical-axiom_part2.md)
