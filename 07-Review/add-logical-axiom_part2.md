@@ -24,11 +24,12 @@ For this class, we want to follow the design pattern for [specific_infectious_di
 1. Create a new branch (named farmer-lung) and open mondo-edit.obo in Protege.
 1. Search for the term `'farmer's lung disease'`
 1. Similar to above, we want to add a logical axiom. In this case though, Farmer's lung can be caused by more than one infectious agent, so we'll add this as a subclassOf axiom:
-`'disease has infectious agent' some Penicillium glabrum`
+ `'disease has infectious agent' some Penicillium glabrum`
+![image](https://user-images.githubusercontent.com/6722114/118717601-1f8d3200-b7db-11eb-9517-320a2e21445f.png)
 
 1. Run the reasoner
 1. View the inferred hierarchy.
-1. Confirm that there are no unsatisifiable classes and everything looks okay.
+1. Confirm that there are no unsatisifiable classes and everything looks okay. _Does the new inferred class make sense?_
 1. Save your work and create a pull request and reference issue [#1639](https://github.com/monarch-initiative/mondo/issues/1639).
 
 
