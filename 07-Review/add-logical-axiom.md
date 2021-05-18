@@ -46,6 +46,21 @@ For this class, we want to follow the design pattern for [allergy](https://githu
 1. Run the reasoner
 1. View the inferred hierarchy. You should see a child of owl:Nothing (and you should see this in the Description pane as well.)
 
+![image](https://user-images.githubusercontent.com/6722114/118697828-92d77980-b7c4-11eb-917b-0dca0e296013.png)
+
+![image](https://user-images.githubusercontent.com/6722114/118697862-9cf97800-b7c4-11eb-99e5-8b303ef9b37d.png)
+
+1. Click on the ? button next to the owl:Nothing in the Description view
+2. The explanation tells you the reason why this is unsatisfiable
+
+![image](https://user-images.githubusercontent.com/6722114/118697993-c3b7ae80-b7c4-11eb-8f6e-3f74fdd4b3da.png)
+
+3. Mycotoxin is a child of a 'specifically dependent continuant' and and 'independent continuant' is disjoint with 'specifically dependent cotinuant'.
+4. This logical axiom uses the relation 'realized in response to stimulus'
+5. Click on this relation in Protege (you can click on the relation name in the equivalence axiom, or you can click on the Object properties tab and search for this relation.
+6. 
+
+
 
 
 
