@@ -62,7 +62,7 @@ For this class, we want to follow the design pattern for [allergy](https://githu
 
 ![image](https://user-images.githubusercontent.com/6722114/118698760-a33c2400-b7c5-11eb-8c8c-85c91c9a7dab.png)
 
-7. Go back to the entities pane and remove the equivalence axiom and run the reasoner again. You should now see no unsatisfiable classes.
+7. Go back to the Classes or Entities pane and remove the equivalence axiom and run the reasoner again. You should now see no unsatisfiable classes.
 
 
 
