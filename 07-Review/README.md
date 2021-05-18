@@ -6,7 +6,7 @@
 - Review material covered to date 
 - Ontology editing in Protege: logic and debugging
 
-### Logic and debugging
+## Logic and debugging
 **Intstructor:** Nicole Vasilevsky
 
 #### Learning objectives
@@ -14,7 +14,7 @@
 - Run the reasoner and view the inferred hierarchy
 - Debugging and viewing explanations
 
-## Week 7 Content
+### Content
 
 These instructions will use the [Mondo disease ontology](https://github.com/monarch-initiative/mondo) as an example.
 1. **Practice (Part 1)**: See instructions [here](https://github.com/jamesaoverton/obook/blob/master/07-Review/add-logical-axiom.md)
