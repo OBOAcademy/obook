@@ -23,8 +23,18 @@ There are three buttons at the top of the class hierarchy view. These allow you 
 1. When you are clicked on the term in the Class hierarchy pane, click the add subclass button to add a child class to 'allergic disease'
 1. A dialog will popup. Name this new subclass: mycotoxin allergy. Click "OK" to add the class.
 
-#### Add a logical axiom 
+#### Add annotations and a logical axiom 
 
 Equivalence axioms in Mondo are added according to Dead Simple Ontology Design Patterns (DOSDPs). You can view all of the design patterns in Mondo by going to [code/src/patterns/dosdp-patterns/](https://github.com/monarch-initiative/mondo/tree/master/src/patterns/dosdp-patterns)
+
+For this class, we want to follow the design pattern for [allergy](https://github.com/monarch-initiative/mondo/blob/master/src/patterns/dosdp-patterns/allergy.yaml).
+
+1. Review this pattern before proceeding.
+1. Based on the pattern specifications, add a text definition to this term.
+1. Add the database cross reference to this term: MONDO:patterns/allergy
+1. Add a synonym that is consistent with this pattern.
+1. Add the equivalence axiom according to the pattern specifications.
+
+
 
 
