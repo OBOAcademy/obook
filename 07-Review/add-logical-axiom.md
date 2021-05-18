@@ -39,6 +39,9 @@ For this class, we want to follow the design pattern for [allergy](https://githu
 
 1. Add the equivalence axiom according to the pattern specifications.
 
+![image](https://user-images.githubusercontent.com/6722114/118697461-28263e00-b7c4-11eb-8821-f4ac77f99c81.png)
+
+![image](https://user-images.githubusercontent.com/6722114/118697511-37a58700-b7c4-11eb-82d1-9850c6e05811.png)
 
 
 
