@@ -14,7 +14,7 @@
 - Run the reasoner and view the inferred hierarchy
 - Debugging and viewing explanations
 
-### Content
+#### Content
 
 These instructions will use the [Mondo disease ontology](https://github.com/monarch-initiative/mondo) as an example.
 1. **Practice (Part 1)**: See instructions [here](https://github.com/jamesaoverton/obook/blob/master/07-Review/add-logical-axiom.md)
