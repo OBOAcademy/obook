@@ -19,6 +19,7 @@ There are three buttons at the top of the class hierarchy view. These allow you 
 
 #### Add the new term 'mycotoxin allergy'
 
+1. Navigate to the Mondo repo in GitHub Desktop, create a branch, and open mondo-edit.obo in Protege.
 1. Search for the parent term 'allergic disease' (see [search guide](https://github.com/jamesaoverton/obook/blob/master/04-OntologyTheory/SearchingMondo.md) if you are unsure how to do this).
 1. When you are clicked on the term in the Class hierarchy pane, click the add subclass button to add a child class to 'allergic disease'
 1. A dialog will popup. Name this new subclass: mycotoxin allergy. Click "OK" to add the class.
@@ -32,7 +33,6 @@ For this class, we want to follow the design pattern for [allergy](https://githu
 1. Review this pattern before proceeding.
 1. Based on the pattern specifications, add a text definition to this term.
 1. Add the database cross reference to this term: MONDO:patterns/allergy
-1. Add a synonym that is consistent with this pattern.
 1. Add a synonym that is consistent with this pattern.
 
 ![image](https://user-images.githubusercontent.com/6722114/118697325-07f67f00-b7c4-11eb-8d6d-7f2dd9cdcd62.png)
