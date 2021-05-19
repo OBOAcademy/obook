@@ -45,6 +45,7 @@ A vocabulary for clinical care, translational and basic research, and public inf
 **Number of disease classes (approx):**  
 **Open:** No  
 
+-----
 ### Phenotype ontologies
 -----
 #### Human Phenotype Ontology | HPO | 
