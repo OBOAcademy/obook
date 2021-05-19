@@ -10,4 +10,4 @@ Using ontologies in scientific databases.
 TBD
 
 ## New Material
-TBD
+- [Phenotype and Disease Mappings](mappings.md)
