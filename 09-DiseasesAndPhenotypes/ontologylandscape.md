@@ -61,9 +61,9 @@
 **Open:** Yes  
 
 #### Unified Phenotype Ontology (uPheno) 
-**Description:** The uPheno ontology integrates multiple phenotype ontologies into a unified cross-species phenotype ontology.  
-**Species:** Cross-species coverage
-**GitHub repo:**  https://github.com/obophenotype/upheno
-**OBO Foundry webpage:** http://obofoundry.org/ontology/upheno.html  
+**Description:** The uPheno ontology integrates multiple phenotype ontologies into a unified cross-species phenotype ontology.   
+**Species:** Cross-species coverage  
+**GitHub repo:**  https://github.com/obophenotype/upheno  
+**OBO Foundry webpage:** http://obofoundry.org/ontology/upheno.html    
 **Open:**  Yes  
 
