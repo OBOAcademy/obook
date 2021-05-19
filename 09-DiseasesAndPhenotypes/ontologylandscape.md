@@ -54,7 +54,7 @@
 
 #### Mammalian Phenotype Ontology (MP) 
 **Description:**  Standard terms for annotating mammalian phenotypic data.  
-**Species:**  Mammals (main focus is on mouse and rodents)
+**Species:**  Mammals (main focus is on mouse and rodents)  
 **GitHub repo:** https://github.com/obophenotype/mammalian-phenotype-ontology  
 **Website:**  http://www.informatics.jax.org/searches/MP_form.shtml  
 **OBO Foundry webpage:** http://obofoundry.org/ontology/mp.html  
