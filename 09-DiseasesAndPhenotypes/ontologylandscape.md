@@ -5,9 +5,9 @@
 #### Human Disease Ontology (DO)
 **Description:**  
 **GitHub repo:**  
-**Website:**
-**OBO Foundry webpage:**
-**Open:**  
+**Website:**  
+**OBO Foundry webpage:**  
+**Open:**   
 
 
 #### International Statistical Classification of Diseases and Related Health Problems (ICD-10)
