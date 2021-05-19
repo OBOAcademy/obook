@@ -13,11 +13,20 @@ Using OBO for diseases and phenotypes, mapping standards.
 - have a basic understanding of where to find data (_Note: It is impossible to provide a comprehensive list_)
 
 ## Topics
-- [Phenotype and Disease Mappings](mappings.md)
+- [Phenotype and Disease Mappings](mappings.md
+- Landscape of ontologies _(coming soon)_ 
+- Kinds of analyses that can be done with disease and phenotype ontologies
+	- how to link phenotypes to diseases
+	- match phenotypic profiles
+	- how to link phenotypes across organisms
 
 ## New Material
 - Mapping to triples (review of [week 03](https://github.com/jamesaoverton/obook/tree/master/03-RDF))
   - For example, how to a match phenotype description strings and annotate to ontologies
+- link your data to disease and phenotype ontologies
+- analyze your data across multiple different disease and phenotype ontologies
+- integrate phenotype data from across resources and organisms
+- link phenotypes to diseases
 
 ## Semantic Engineer Toolbox
 - Ontologies
