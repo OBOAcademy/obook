@@ -13,7 +13,7 @@ Using OBO for diseases and phenotypes, mapping standards.
 - have a basic understanding of where to find data (_Note: It is impossible to provide a comprehensive list_)
 
 ## Topics
-- Landscape of ontologies _(coming soon)_ 
+- [Landscape of ontologies](ontologylandscape.md)
 - Kinds of analyses that can be done with disease and phenotype ontologies
 	- how to link phenotypes to diseases
 	- match phenotypic profiles
