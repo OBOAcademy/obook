@@ -44,7 +44,7 @@
 -----
 ### Phenotype ontologies
 -----
-#### Human Phenotype Ontology | HPO | 
+#### Human Phenotype Ontology (HPO) 
 **Description:**  HPO provides a standardized vocabulary of phenotypic abnormalities encountered in human disease. Each term in the HPO describes a phenotypic abnormality.  
 **Species:**  Human  
 **GitHub repo:**  https://github.com/obophenotype/human-phenotype-ontology  
