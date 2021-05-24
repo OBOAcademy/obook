@@ -17,7 +17,7 @@ By the end of this session, you should be able to:
 ## Preparation
 
 Please complete the following and then read the section below:
-- ROBOT Mini-Tutorial, part 2 (*TODO*)
+- [ROBOT Mini-Tutorial, part 2](https://github.com/jamesaoverton/obook/blob/master/08-OntologyDevelopment/ROBOT_tutorial_2.md)
 - Software Carpentry: [Automation and Make](http://swcarpentry.github.io/make-novice/)
 
 #### What is an ontology release?
