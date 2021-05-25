@@ -62,6 +62,8 @@ In addition to ontology and version IRIs, you may also want to add some other me
 
 These three annotation properties all come from the [Dublin Core](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/), but they have slightly different namespaces. This is because DC is split into two parts: the `/terms/` and `/elements/1.1/` namespaces. Just remember to double check that you're using the correct namespace. If you click on the DC link, you can find the complete list of DC terms in their respective namespaces.
 
+ROBOT contains some built-in prefixes, which can be found [here](https://github.com/ontodev/robot/blob/master/robot-core/src/main/resources/obo_context.jsonld). the prefix `terms:` corresponds to the `/terms/` namespace and `dc11:` to `/elements/1.1/`. You may see different prefixes used (for example, `/terms/` is sometimes `dcterms:`), but the full namespace is what really matters as long as the prefix is defined somewhere.
+
 Let's go ahead and add a title and description to our `animals.owl` file. We'll do this using the `--annotation` option, which expects two arguments: (1) the CURIE of the annotation property, (2) the value of the annotation. The value of the annotation must be enclosed in double quotes if there are spaces. You can use any annotation property you want here, and include as many as you want! For now, we'll start with two:
 
 ```
