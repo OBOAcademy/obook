@@ -95,9 +95,9 @@ Another reason you may want to merge two ontologies is if you're adding new term
 
 ### Merging Multiple Files
 
-First, copy `animals2.owl` to `animals-new.owl`. In Windows, this command is `copy animals2.owl animals-new.owl`. For Docker and other Linux operating systems, this is `cp animals2.owl animals-new.owl`. Open `animals-new.owl` in Protégé and remove the import we added last time. This is done in the **Imported ontologies** section of the **Active ontology** tab. Just click the X on the right side of the imported animals ontology.
+First, copy `animals2.owl` to `animals-new.owl`. In Windows, this command is `copy animals2.owl animals-new.owl`. For Docker and other Linux operating systems, this is `cp animals2.owl animals-new.owl`. Open `animals-new.owl` in Protégé and remove the import we added last time. This is done in the **Imported ontologies** section of the **Active ontology** tab. Just click the X on the right side of the imported animals ontology. Don't forget to save!
 
-Continuing with the `animals.owl` file we created last week. Now run the following command:
+Continuing with the `animals.owl` file we created last week, now run the following command:
 
 ```
 robot merge --input animals.owl --input animals-new.owl --output animals-full.owl
@@ -121,7 +121,7 @@ We already have `animals.owl` imported into `animals2.owl`. Let's collapse the i
 robot merge --input animals2.owl --collapse-import-closure true --output animals-full-2.owl
 ```
 
-Even though we gave this a different file name, if you open `animals-full-2.owl` in Protégé, you'll notice that it's exactly the same as `animals-full.owl`! This is because we merged the same files together, just in a slightly different way.
+Even though we gave this a different file name, if you open `animals-full-2.owl` in Protégé, you'll notice that it's exactly the same as `animals-full.owl`! This is because we merged the same files together, just in a slightly different way. This time, though, the ontology IRI is the one for `animals2.owl`, not `animals.owl`. That is because that was our first input file.
 
 ---
 
@@ -184,7 +184,10 @@ The `diff` command can be used to compare the axioms in two ontologies to see wh
 We're going to generate an HTML diff of `ubiq-ligase-complex.owl` compared to the new `reasoned.owl` file to see what inferences have been asserted. `diff` takes a left ("original") and a right ("new") input to compare.
 
 ```
-robot diff --left ubiq-ligase-complex.owl --right reasoned.owl --format html --output diff.html
+robot diff --left ubiq-ligase-complex.owl \
+  --right reasoned.owl \
+  --format html \
+  --output diff.html
 ```
 
 Open `diff.html` in your browser side-by-side with `reasoned.owl` and you can see how the changes look in both.
