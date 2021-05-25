@@ -16,9 +16,8 @@
 
 #### International Classification of Diseases for Oncology (ICD-O) 
 **Description:**  A domain-specific extension of the International Statistical Classification of Diseases and Related Health Problems for tumor diseases.  
-**Website:**   
+**Website:** https://www.who.int/standards/classifications/other-classifications/international-classification-of-diseases-for-oncology  
 **Open:**  Yes
-
 
 #### Mondo Disease Ontology (Mondo) 
 **Description:**  An integrated disease ontology that provides precise mappings between source ontologies that comprehensively covers cross-species diseases, from common to rare diseases.  
