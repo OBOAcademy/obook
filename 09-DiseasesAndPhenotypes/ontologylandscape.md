@@ -42,6 +42,14 @@
 ### Phenotype ontologies
 -----
 
+#### Ascomycete phenotype ontology (APO)
+**Description:** A structured controlled vocabulary for the phenotypes of Ascomycete fungi.  
+**Species:**  Ascomycota  
+**GitHub repo:**  https://github.com/obophenotype/ascomycete-phenotype-ontology/  
+**Webpage:**  http://www.yeastgenome.org/
+**OBO Foundry webpage:**  http://obofoundry.org/ontology/wbphenotype.html  
+**Open:**  Yes  
+
 #### C. elegans phenotype (wbphenotype) 
 **Description:**   A structured controlled vocabulary of Caenorhabditis elegans phenotypes.  
 **Species:** C elegans  
@@ -55,6 +63,20 @@
 **GitHub repo:**   https://github.com/obophenotype/c-elegans-phenotype-ontology   
 **Webpage:**  http://purl.obolibrary.org/obo/fbcv  
 **OBO Foundry webpage:**  http://obofoundry.org/ontology/dpo.html  
+**Open:**  Yes  
+
+#### Flora Phenotype Ontology (FLOPO)
+**Description:**   Traits and phenotypes of flowering plants occurring in digitized Floras.       
+**Species:** Viridiplantae 
+**GitHub repo:**   https://github.com/flora-phenotype-ontology/flopoontology/  
+**OBO Foundry webpage:**  http://obofoundry.org/ontology/flopo.html 
+**Open:**  Yes  
+
+#### Fission Yeast Phenotype Ontology (FYPO)
+**Description:**   FYPO is a formal ontology of phenotypes observed in fission yeast.      
+**Species:** S. pombe  
+**GitHub repo:**   https://github.com/pombase/fypo  
+**OBO Foundry webpage:**  http://obofoundry.org/ontology/fypo.html   
 **Open:**  Yes  
 
 #### Human Phenotype Ontology (HPO) 
@@ -71,6 +93,13 @@
 **GitHub repo:** https://github.com/obophenotype/mammalian-phenotype-ontology  
 **Website:**  http://www.informatics.jax.org/searches/MP_form.shtml  
 **OBO Foundry webpage:** http://obofoundry.org/ontology/mp.html  
+**Open:** Yes  
+
+#### Ontology of Prokaryotic Phenotypic and Metabolic Characters
+**Description:**  An ontology of prokaryotic phenotypic and metabolic characters.  
+**Species:**  Includes terms and term synonyms extracted from > 1500 prokaryotic taxonomic descriptions, collected from a large number of taxonomic descriptions from Archaea, Cyanobacteria, Bacteroidetes, Firmicutes, and Mollicutes.
+**GitHub repo:** https://github.com/carrineblank/MicrO
+**OBO Foundry webpage:** http://obofoundry.org/ontology/micro.html
 **Open:** Yes  
 
 #### Unified Phenotype Ontology (uPheno) 
