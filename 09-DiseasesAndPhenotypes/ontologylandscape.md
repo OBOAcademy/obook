@@ -59,7 +59,7 @@
 
 #### Dictyostelium discoideum phenotype ontology (ddpheno)
 **Description:**   A structured controlled vocabulary of phenotypes of the slime-mould Dictyostelium discoideum.    
-**Species:** Dictyostelium discoideum
+**Species:** Dictyostelium discoideum  
 **GitHub repo:** https://github.com/obophenotype/dicty-phenotype-ontology/issues  
 **Webpage:** http://dictybase.org/  
 **OBO Foundry webpage:** http://obofoundry.org/ontology/ddpheno.html  
@@ -67,7 +67,7 @@
 
 #### Drosophila Phenotype Ontology (DPO) 
 **Description:**   An ontology of commonly encountered and/or high level Drosophila phenotypes.    
-**Species:** Drosophila 
+**Species:** Drosophila  
 **GitHub repo:**   https://github.com/obophenotype/c-elegans-phenotype-ontology   
 **Webpage:**  http://purl.obolibrary.org/obo/fbcv  
 **OBO Foundry webpage:**  http://obofoundry.org/ontology/dpo.html  
@@ -75,24 +75,24 @@
 
 #### Flora Phenotype Ontology (FLOPO)
 **Description:**   Traits and phenotypes of flowering plants occurring in digitized Floras.       
-**Species:** Viridiplantae 
+**Species:** Viridiplantae  
 **GitHub repo:**   https://github.com/flora-phenotype-ontology/flopoontology/  
-**OBO Foundry webpage:**  http://obofoundry.org/ontology/flopo.html 
+**OBO Foundry webpage:**  http://obofoundry.org/ontology/flopo.html  
 **Open:**  Yes  
 
-#### Fission Yeast Phenotype Ontology (FYPO)
-**Description:**   FYPO is a formal ontology of phenotypes observed in fission yeast.      
+#### Fission Yeast Phenotype Ontology (FYPO)  
+**Description:**   FYPO is a formal ontology of phenotypes observed in fission yeast.       
 **Species:** S. pombe  
 **GitHub repo:**   https://github.com/pombase/fypo  
 **OBO Foundry webpage:**  http://obofoundry.org/ontology/fypo.html   
 **Open:**  Yes  
 
 #### Human Phenotype Ontology (HPO) 
-**Description:**  HPO provides a standardized vocabulary of phenotypic abnormalities encountered in human disease. Each term in the HPO describes a phenotypic abnormality.  
-**Species:**  Human  
-**GitHub repo:**  https://github.com/obophenotype/human-phenotype-ontology  
-**Website:**  https://hpo.jax.org/app/
-**OBO Foundry webpage:** http://obofoundry.org/ontology/hp.html  
+**Description:**  HPO provides a standardized vocabulary of phenotypic abnormalities encountered in human disease. Each term in the HPO describes a phenotypic abnormality.   
+**Species:**  Human   
+**GitHub repo:**  https://github.com/obophenotype/human-phenotype-ontology   
+**Website:**  https://hpo.jax.org/app/  
+**OBO Foundry webpage:** http://obofoundry.org/ontology/hp.html   
 **Open:**  yes  
 
 #### Mammalian Phenotype Ontology (MP) 
@@ -115,43 +115,38 @@
 **Description:**  An ontology of phenotypes covering microbes.  
 **Species:** Prokaryotes
 **GitHub repo:** https://github.com/microbialphenotypes/OMP-ontology/issues  
-**Website:**  http://microbialphenotypes.org/
-**OBO Foundry webpage:** http://obofoundry.org/ontology/omp.html
+**Website:**  http://microbialphenotypes.org/  
+**OBO Foundry webpage:** http://obofoundry.org/ontology/omp.html  
 **Open:** Yes  
 
 #### Pathogen Host Interaction Phenotype Ontology
 **Description:** PHIPO is a formal ontology of species-neutral phenotypes observed in pathogen-host interactions.  
-**Species:** patogens
+**Species:** patogens  
 **GitHub repo:** https://github.com/PHI-base/phipo  
-**Website:**  http://www.phi-base.org
+**Website:**  http://www.phi-base.org  
 **OBO Foundry webpage:** http://obofoundry.org/ontology/phipo.html  
 **Open:** Yes  
 
 #### Planarian Phenotype Ontology (PLANP)
 **Description:**  Planarian Phenotype Ontology is an ontology of phenotypes observed in the planarian Schmidtea mediterranea.  
-**Species:** Schmidtea mediterranea
-**GitHub repo:** https://github.com/obophenotype/planarian-phenotype-ontology
-**OBO Foundry webpage:** http://obofoundry.org/ontology/planp.html
-**Open:** Yes 
+**Species:** Schmidtea mediterranea  
+**GitHub repo:** https://github.com/obophenotype/planarian-phenotype-ontology  
+**OBO Foundry webpage:** http://obofoundry.org/ontology/planp.html  
+**Open:** Yes  
 
 #### Plant Trait Ontology (TO)
 **Description:**  A controlled vocabulary of describe phenotypic traits in plants.  
-**Species:** Viridiplantae
+**Species:** Viridiplantae  
 **GitHub repo:** https://github.com/Planteome/plant-trait-ontology/  
-**OBO Foundry webpage:** http://obofoundry.org/ontology/to.html
+**OBO Foundry webpage:** http://obofoundry.org/ontology/to.html  
 **Open:** Yes  
 
 #### Plant Phenology Ontology
-**Description:**  An ontology for describing the phenology of individual plants and populations of plants, and for integrating plant phenological data across sources and scales.
-**Species:** Plants
-**GitHub repo:** https://github.com/PlantPhenoOntology/PPO 
+**Description:**  An ontology for describing the phenology of individual plants and populations of plants, and for integrating plant phenological data across sources and scales.  
+**Species:** Plants  
+**GitHub repo:** https://github.com/PlantPhenoOntology/PPO  
 **OBO Foundry webpage:** http://obofoundry.org/ontology/ppo.html  
-**Open:** Yes 
-**Description:**  An ontology for describing the phenology of individual plants and populations of plants, and for integrating plant phenological data across sources and scales.
-**Species:** Plants
-**GitHub repo:** https://github.com/PlantPhenoOntology/PPO 
-**OBO Foundry webpage:** http://obofoundry.org/ontology/ppo.html  
-**Open:** Yes 
+**Open:** Yes  
 
 #### Unified Phenotype Ontology (uPheno) 
 **Description:** The uPheno ontology integrates multiple phenotype ontologies into a unified cross-species phenotype ontology.   
@@ -160,14 +155,14 @@
 **OBO Foundry webpage:** http://obofoundry.org/ontology/upheno.html    
 **Open:**  Yes  
 
-#### Xenopus Phenotype Ontology (XPO)
+#### Xenopus Phenotype Ontology (XPO)  
 **Description:** XPO represents anatomical, cellular, and gene function phenotypes occurring throughout the development of the African frogs Xenopus laevis and tropicalis.    
 **Species:** Xenopus   
 **GitHub repo:**  https://github.com/obophenotype/xenopus-phenotype-ontology    
 **OBO Foundry webpage:**  http://obofoundry.org/ontology/xpo.html  
 **Open:**  Yes  
 
-#### Zebrafish Phenotype Ontology (ZP) 
+#### Zebrafish Phenotype Ontology (ZP)  
 **Description:** The Zebrafish Phenotype Ontology formally defines all phenotypes of the Zebrafish model organism.  
 **Species:** Zebrafish  
 **GitHub repo:** https://github.com/obophenotype/zebrafish-phenotype-ontology  
