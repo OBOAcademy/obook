@@ -42,6 +42,22 @@
 -----
 ### Phenotype ontologies
 -----
+
+#### C. elegans phenotype (wbphenotype) 
+**Description:**   A structured controlled vocabulary of Caenorhabditis elegans phenotypes.  
+**Species:** C elegans  
+**GitHub repo:**   https://github.com/obophenotype/c-elegans-phenotype-ontology  
+**OBO Foundry webpage:**  http://obofoundry.org/ontology/wbphenotype.html  
+**Open:**  Yes  
+
+#### Drosophila Phenotype Ontology (DPO) 
+**Description:**   An ontology of commonly encountered and/or high level Drosophila phenotypes.    
+**Species:** Drosophila 
+**GitHub repo:**   https://github.com/obophenotype/c-elegans-phenotype-ontology   
+**Webpage:**  http://purl.obolibrary.org/obo/fbcv  
+**OBO Foundry webpage:**  http://obofoundry.org/ontology/dpo.html  
+**Open:**  Yes  
+
 #### Human Phenotype Ontology (HPO) 
 **Description:**  HPO provides a standardized vocabulary of phenotypic abnormalities encountered in human disease. Each term in the HPO describes a phenotypic abnormality.  
 **Species:**  Human  
@@ -63,5 +79,12 @@
 **Species:** Cross-species coverage  
 **GitHub repo:**  https://github.com/obophenotype/upheno  
 **OBO Foundry webpage:** http://obofoundry.org/ontology/upheno.html    
+**Open:**  Yes  
+
+#### Zebrafish Phenotype Ontology (ZP) 
+**Description:**   
+**Species:** Zebrafish
+**GitHub repo:**   
+**OBO Foundry webpage:**  
 **Open:**  Yes  
 
