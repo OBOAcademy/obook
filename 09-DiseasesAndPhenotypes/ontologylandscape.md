@@ -34,9 +34,9 @@
 **Open:**  Yes
 
 #### SNOMED (SNOMED) 
-**Description:**  A comprehensive clinical terminology/ontology used in healthcare settings, such as Electronic Health Records (EHRs). 
-**Website:**  https://browser.ihtsdotools.org/?
-**Open:** No  
+**Description:**  A comprehensive clinical terminology/ontology used in healthcare settings, such as Electronic Health Records (EHRs).  
+**Website:**  https://browser.ihtsdotools.org/?  
+**Open:** No   
 
 -----
 ### Phenotype ontologies
@@ -127,19 +127,31 @@
 **OBO Foundry webpage:** http://obofoundry.org/ontology/phipo.html  
 **Open:** Yes  
 
-#### Planarian Phenotype Ontology (planp)
+#### Planarian Phenotype Ontology (PLANP)
 **Description:**  Planarian Phenotype Ontology is an ontology of phenotypes observed in the planarian Schmidtea mediterranea.  
 **Species:** Schmidtea mediterranea
 **GitHub repo:** https://github.com/obophenotype/planarian-phenotype-ontology
 **OBO Foundry webpage:** http://obofoundry.org/ontology/planp.html
 **Open:** Yes 
 
+#### Plant Trait Ontology (TO)
+**Description:**  A controlled vocabulary of describe phenotypic traits in plants.  
+**Species:** Viridiplantae
+**GitHub repo:** https://github.com/Planteome/plant-trait-ontology/  
+**OBO Foundry webpage:** http://obofoundry.org/ontology/to.html
+**Open:** Yes  
+
 #### Plant Phenology Ontology
 **Description:**  An ontology for describing the phenology of individual plants and populations of plants, and for integrating plant phenological data across sources and scales.
 **Species:** Plants
 **GitHub repo:** https://github.com/PlantPhenoOntology/PPO 
 **OBO Foundry webpage:** http://obofoundry.org/ontology/ppo.html  
-**Open:** Yes  
+**Open:** Yes 
+**Description:**  An ontology for describing the phenology of individual plants and populations of plants, and for integrating plant phenological data across sources and scales.
+**Species:** Plants
+**GitHub repo:** https://github.com/PlantPhenoOntology/PPO 
+**OBO Foundry webpage:** http://obofoundry.org/ontology/ppo.html  
+**Open:** Yes 
 
 #### Unified Phenotype Ontology (uPheno) 
 **Description:** The uPheno ontology integrates multiple phenotype ontologies into a unified cross-species phenotype ontology.   
@@ -148,10 +160,17 @@
 **OBO Foundry webpage:** http://obofoundry.org/ontology/upheno.html    
 **Open:**  Yes  
 
+#### Xenopus Phenotype Ontology (XPO)
+**Description:** XPO represents anatomical, cellular, and gene function phenotypes occurring throughout the development of the African frogs Xenopus laevis and tropicalis.    
+**Species:** Xenopus   
+**GitHub repo:**  https://github.com/obophenotype/xenopus-phenotype-ontology    
+**OBO Foundry webpage:**  http://obofoundry.org/ontology/xpo.html  
+**Open:**  Yes  
+
 #### Zebrafish Phenotype Ontology (ZP) 
-**Description:**   
+**Description:** The Zebrafish Phenotype Ontology formally defines all phenotypes of the Zebrafish model organism.  
 **Species:** Zebrafish  
-**GitHub repo:**    
-**OBO Foundry webpage:**  
+**GitHub repo:** https://github.com/obophenotype/zebrafish-phenotype-ontology  
+**OBO Foundry webpage:** http://obofoundry.org/ontology/zp.html  
 **Open:**  Yes  
 
