@@ -57,6 +57,14 @@
 **OBO Foundry webpage:**  http://obofoundry.org/ontology/wbphenotype.html  
 **Open:**  Yes  
 
+#### Dictyostelium discoideum phenotype ontology (ddpheno)
+**Description:**   A structured controlled vocabulary of phenotypes of the slime-mould Dictyostelium discoideum.    
+**Species:** Dictyostelium discoideum
+**GitHub repo:** https://github.com/obophenotype/dicty-phenotype-ontology/issues  
+**Webpage:** http://dictybase.org/  
+**OBO Foundry webpage:** http://obofoundry.org/ontology/ddpheno.html  
+**Open:**  Yes  
+
 #### Drosophila Phenotype Ontology (DPO) 
 **Description:**   An ontology of commonly encountered and/or high level Drosophila phenotypes.    
 **Species:** Drosophila 
@@ -111,6 +119,28 @@
 **OBO Foundry webpage:** http://obofoundry.org/ontology/omp.html
 **Open:** Yes  
 
+#### Pathogen Host Interaction Phenotype Ontology
+**Description:** PHIPO is a formal ontology of species-neutral phenotypes observed in pathogen-host interactions.  
+**Species:** patogens
+**GitHub repo:** https://github.com/PHI-base/phipo  
+**Website:**  http://www.phi-base.org
+**OBO Foundry webpage:** http://obofoundry.org/ontology/phipo.html  
+**Open:** Yes  
+
+#### Planarian Phenotype Ontology (planp)
+**Description:**  Planarian Phenotype Ontology is an ontology of phenotypes observed in the planarian Schmidtea mediterranea.  
+**Species:** Schmidtea mediterranea
+**GitHub repo:** https://github.com/obophenotype/planarian-phenotype-ontology
+**OBO Foundry webpage:** http://obofoundry.org/ontology/planp.html
+**Open:** Yes 
+
+#### Plant Phenology Ontology
+**Description:**  An ontology for describing the phenology of individual plants and populations of plants, and for integrating plant phenological data across sources and scales.
+**Species:** Plants
+**GitHub repo:** https://github.com/PlantPhenoOntology/PPO 
+**OBO Foundry webpage:** http://obofoundry.org/ontology/ppo.html  
+**Open:** Yes  
+
 #### Unified Phenotype Ontology (uPheno) 
 **Description:** The uPheno ontology integrates multiple phenotype ontologies into a unified cross-species phenotype ontology.   
 **Species:** Cross-species coverage  
@@ -120,8 +150,8 @@
 
 #### Zebrafish Phenotype Ontology (ZP) 
 **Description:**   
-**Species:** Zebrafish
-**GitHub repo:**   
+**Species:** Zebrafish  
+**GitHub repo:**    
 **OBO Foundry webpage:**  
 **Open:**  Yes  
 
