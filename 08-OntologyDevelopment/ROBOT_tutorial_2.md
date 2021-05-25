@@ -49,7 +49,9 @@ robot annotate --input animals.owl \
   --output animals.owl
 ```
 
-Let's break down this version IRI. We have the host (`http://example.com/`) followed by our ontology's namespace (`animals`). Next, we provided the date in the format of `YYYY-MM-DD`. Finally, we have the name of the file. This is standard for OBO Foundry, except with a different host. For example, you can find a release of OBI from [ADD DATE] at `http://purl.obolibrary.org/obo/obi/[ADD DATE]/obi.owl`. In this case, the host is `http://purl.obolibrary.org/obo/`. Of course, you may see different patterns in non-OBO-Foundry ontologies, but they should always resolve (hopefully!).
+Let's break down this version IRI. We have the host (`http://example.com/`) followed by our ontology's namespace (`animals`). Next, we provided the date in the format of `YYYY-MM-DD`. Finally, we have the name of the file. This is standard for OBO Foundry, except with a different host. For example, you can find a release of OBI from April 6, 2021 at `http://purl.obolibrary.org/obo/obi/2021-04-06/obi.owl`. In this case, the host is `http://purl.obolibrary.org/obo/`. Of course, you may see different patterns in non-OBO-Foundry ontologies, but they should always resolve (hopefully!).
+
+Go ahead and open or reload `animals.owl` in Protege. You'll see in the **Active Ontology** tab that now both the ontology IRI and version IRI fields are filled out.
 
 ### Ontology Annotations
 
