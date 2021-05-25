@@ -35,10 +35,8 @@
 **Open:**  Yes
 
 #### SNOMED (SNOMED) 
-**Description:**  
-**GitHub repo:**  
-**Website:**  
-**Number of disease classes (approx):**  
+**Description:**  A comprehensive clinical terminology/ontology used in healthcare settings, such as Electronic Health Records (EHRs). 
+**Website:**  https://browser.ihtsdotools.org/?
 **Open:** No  
 
 -----
