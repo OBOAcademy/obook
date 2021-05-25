@@ -95,11 +95,20 @@
 **OBO Foundry webpage:** http://obofoundry.org/ontology/mp.html  
 **Open:** Yes  
 
+#### Ontology of Microbial Phenotypes (OMP) 
+**Description:**  Standard terms for annotating mammalian phenotypic data.  
+**Species:**  Mammals (main focus is on mouse and rodents)  
+**GitHub repo:** https://github.com/obophenotype/mammalian-phenotype-ontology  
+**Website:**  http://www.informatics.jax.org/searches/MP_form.shtml  
+**OBO Foundry webpage:** http://obofoundry.org/ontology/mp.html  
+**Open:** Yes 
+
 #### Ontology of Prokaryotic Phenotypic and Metabolic Characters
-**Description:**  An ontology of prokaryotic phenotypic and metabolic characters.  
-**Species:**  Includes terms and term synonyms extracted from > 1500 prokaryotic taxonomic descriptions, collected from a large number of taxonomic descriptions from Archaea, Cyanobacteria, Bacteroidetes, Firmicutes, and Mollicutes.
-**GitHub repo:** https://github.com/carrineblank/MicrO
-**OBO Foundry webpage:** http://obofoundry.org/ontology/micro.html
+**Description:**  An ontology of phenotypes covering microbes.  
+**Species:** Prokaryotes
+**GitHub repo:** https://github.com/microbialphenotypes/OMP-ontology/issues  
+**Website:**  http://microbialphenotypes.org/
+**OBO Foundry webpage:** http://obofoundry.org/ontology/omp.html
 **Open:** Yes  
 
 #### Unified Phenotype Ontology (uPheno) 
