@@ -26,4 +26,6 @@ Using OBO for diseases and phenotypes, mapping standards.
 - Tools
   - [OxO](https://www.ebi.ac.uk/spot/oxo/)
   - [Zooma](https://www.ebi.ac.uk/spot/zooma/)
-  
+  - Python libraries 
+    - pandas
+    - rdflib
