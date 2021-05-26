@@ -2,8 +2,17 @@
 
 ### Disease ontologies
 -----
+#### Cardiovascular Disease Ontology (CVDO)
+**Description:**  An ontology to describe entities related to cardiovascular diseases.
+**Use Cases:**
+**GitHub repo:**  https://github.com/OpenLHS/CVDO/
+**Website:**  https://github.com/OpenLHS/CVDO
+**OBO Foundry webpage:**  http://obofoundry.org/ontology/cvdo.html
+**Open:** Yes  
+
 #### Human Disease Ontology (DO)
 **Description:**  An ontology for describing the classification of human diseases organized by etiology.  
+**Use Cases:**
 **GitHub repo:**  https://github.com/DiseaseOntology/HumanDiseaseOntology/issues  
 **Website:**  http://www.disease-ontology.org/  
 **OBO Foundry webpage:**  http://obofoundry.org/ontology/doid.html  
@@ -11,16 +20,19 @@
 
 #### International Statistical Classification of Diseases and Related Health Problems (ICD-10)
 **Description:**  A medical classification list by the World Health Organization (WHO) that contains codes for diseases, signs and symptoms, abnormal findings, complaints, social circumstances, and external causes of injury or diseases. _The main purpose of ICD-10 is for billing and coding for insurance companies._  
+**Use Cases:**
 **Website:**  
 **Open:**  Yes 
 
 #### International Classification of Diseases for Oncology (ICD-O) 
 **Description:**  A domain-specific extension of the International Statistical Classification of Diseases and Related Health Problems for tumor diseases.  
+**Use Cases:**
 **Website:** https://www.who.int/standards/classifications/other-classifications/international-classification-of-diseases-for-oncology  
 **Open:**  Yes
 
 #### Mondo Disease Ontology (Mondo) 
 **Description:**  An integrated disease ontology that provides precise mappings between source ontologies that comprehensively covers cross-species diseases, from common to rare diseases.  
+**Use Cases:**
 **GitHub repo:** https://github.com/monarch-initiative/mondo   
 **Website:**  https://mondo.monarchinitiative.org/   
 **OBO Foundry webpage:** http://obofoundry.org/ontology/mondo.html   
@@ -28,13 +40,22 @@
 
 #### National Cancer Institute Thesaurus (NCIT) 
 **Description:**  NCI Thesaurus (NCIt)is a reference terminology that includes broad coverage of the cancer domain, including cancer related diseases, findings and abnormalities. The NCIt OBO Edition aims to increase integration of the NCIt with OBO Library ontologies. NCIt OBO Edition releases should be considered experimental.  
+**Use Cases:**
 **GitHub repo:**  https://github.com/NCI-Thesaurus/thesaurus-obo-edition/issues  
 **Website:**  https://ncithesaurus.nci.nih.gov/ncitbrowser/pages/home.jsf?version=20.11e  
 **OBO Foundry webpage:** http://obofoundry.org/ontology/ncit.html  
 **Open:**  Yes
 
+#### Ontology for General Medical Science (OGMS)
+**Description:**  An ontology for representing treatment of disease and diagnosis and on carcinomas and other pathological entities.
+**Use Cases:** Provides a formal theory of disease that can be further elaborated by specific disease ontologies. It is intended to be used as a upper level ontology for other disease ontologies.
+**GitHub repo:**  https://github.com/OGMS/ogms  
+**OBO Foundry webpage:** http://obofoundry.org/ontology/ogms.html
+**Open:**  Yes
+
 #### SNOMED (SNOMED) 
 **Description:**  A comprehensive clinical terminology/ontology used in healthcare settings, such as Electronic Health Records (EHRs).  
+**Use Cases:**
 **Website:**  https://browser.ihtsdotools.org/?  
 **Open:** No   
 
@@ -44,6 +65,7 @@
 
 #### Ascomycete phenotype ontology (APO)
 **Description:** A structured controlled vocabulary for the phenotypes of Ascomycete fungi.  
+**Use Cases:**
 **Species:**  Ascomycota  
 **GitHub repo:**  https://github.com/obophenotype/ascomycete-phenotype-ontology/  
 **Webpage:**  http://www.yeastgenome.org/
@@ -52,6 +74,7 @@
 
 #### C. elegans phenotype (wbphenotype) 
 **Description:**   A structured controlled vocabulary of Caenorhabditis elegans phenotypes.  
+**Use Cases:**
 **Species:** C elegans  
 **GitHub repo:**   https://github.com/obophenotype/c-elegans-phenotype-ontology  
 **OBO Foundry webpage:**  http://obofoundry.org/ontology/wbphenotype.html  
@@ -59,6 +82,7 @@
 
 #### Dictyostelium discoideum phenotype ontology (ddpheno)
 **Description:**   A structured controlled vocabulary of phenotypes of the slime-mould Dictyostelium discoideum.    
+**Use Cases:**
 **Species:** Dictyostelium discoideum  
 **GitHub repo:** https://github.com/obophenotype/dicty-phenotype-ontology/issues  
 **Webpage:** http://dictybase.org/  
@@ -67,6 +91,7 @@
 
 #### Drosophila Phenotype Ontology (DPO) 
 **Description:**   An ontology of commonly encountered and/or high level Drosophila phenotypes.    
+**Use Cases:**
 **Species:** Drosophila  
 **GitHub repo:**   https://github.com/obophenotype/c-elegans-phenotype-ontology   
 **Webpage:**  http://purl.obolibrary.org/obo/fbcv  
@@ -75,6 +100,7 @@
 
 #### Flora Phenotype Ontology (FLOPO)
 **Description:**   Traits and phenotypes of flowering plants occurring in digitized Floras.       
+**Use Cases:**
 **Species:** Viridiplantae  
 **GitHub repo:**   https://github.com/flora-phenotype-ontology/flopoontology/  
 **OBO Foundry webpage:**  http://obofoundry.org/ontology/flopo.html  
@@ -82,6 +108,7 @@
 
 #### Fission Yeast Phenotype Ontology (FYPO)  
 **Description:**   FYPO is a formal ontology of phenotypes observed in fission yeast.       
+**Use Cases:**
 **Species:** S. pombe  
 **GitHub repo:**   https://github.com/pombase/fypo  
 **OBO Foundry webpage:**  http://obofoundry.org/ontology/fypo.html   
@@ -89,6 +116,7 @@
 
 #### Human Phenotype Ontology (HPO) 
 **Description:**  HPO provides a standardized vocabulary of phenotypic abnormalities encountered in human disease. Each term in the HPO describes a phenotypic abnormality.   
+**Use Cases:**
 **Species:**  Human   
 **GitHub repo:**  https://github.com/obophenotype/human-phenotype-ontology   
 **Website:**  https://hpo.jax.org/app/  
@@ -97,6 +125,7 @@
 
 #### Mammalian Phenotype Ontology (MP) 
 **Description:**  Standard terms for annotating mammalian phenotypic data.  
+**Use Cases:**
 **Species:**  Mammals (main focus is on mouse and rodents)  
 **GitHub repo:** https://github.com/obophenotype/mammalian-phenotype-ontology  
 **Website:**  http://www.informatics.jax.org/searches/MP_form.shtml  
@@ -105,6 +134,7 @@
 
 #### Ontology of Microbial Phenotypes (OMP) 
 **Description:**  Standard terms for annotating mammalian phenotypic data.  
+**Use Cases:**
 **Species:**  Mammals (main focus is on mouse and rodents)  
 **GitHub repo:** https://github.com/obophenotype/mammalian-phenotype-ontology  
 **Website:**  http://www.informatics.jax.org/searches/MP_form.shtml  
@@ -113,6 +143,7 @@
 
 #### Ontology of Prokaryotic Phenotypic and Metabolic Characters
 **Description:**  An ontology of phenotypes covering microbes.  
+**Use Cases:**
 **Species:** Prokaryotes
 **GitHub repo:** https://github.com/microbialphenotypes/OMP-ontology/issues  
 **Website:**  http://microbialphenotypes.org/  
@@ -121,6 +152,7 @@
 
 #### Pathogen Host Interaction Phenotype Ontology
 **Description:** PHIPO is a formal ontology of species-neutral phenotypes observed in pathogen-host interactions.  
+**Use Cases:**
 **Species:** patogens  
 **GitHub repo:** https://github.com/PHI-base/phipo  
 **Website:**  http://www.phi-base.org  
@@ -129,6 +161,7 @@
 
 #### Planarian Phenotype Ontology (PLANP)
 **Description:**  Planarian Phenotype Ontology is an ontology of phenotypes observed in the planarian Schmidtea mediterranea.  
+**Use Cases:**
 **Species:** Schmidtea mediterranea  
 **GitHub repo:** https://github.com/obophenotype/planarian-phenotype-ontology  
 **OBO Foundry webpage:** http://obofoundry.org/ontology/planp.html  
@@ -136,6 +169,7 @@
 
 #### Plant Trait Ontology (TO)
 **Description:**  A controlled vocabulary of describe phenotypic traits in plants.  
+**Use Cases:**
 **Species:** Viridiplantae  
 **GitHub repo:** https://github.com/Planteome/plant-trait-ontology/  
 **OBO Foundry webpage:** http://obofoundry.org/ontology/to.html  
@@ -143,6 +177,7 @@
 
 #### Plant Phenology Ontology
 **Description:**  An ontology for describing the phenology of individual plants and populations of plants, and for integrating plant phenological data across sources and scales.  
+**Use Cases:**
 **Species:** Plants  
 **GitHub repo:** https://github.com/PlantPhenoOntology/PPO  
 **OBO Foundry webpage:** http://obofoundry.org/ontology/ppo.html  
@@ -150,6 +185,7 @@
 
 #### Unified Phenotype Ontology (uPheno) 
 **Description:** The uPheno ontology integrates multiple phenotype ontologies into a unified cross-species phenotype ontology.   
+**Use Cases:**
 **Species:** Cross-species coverage  
 **GitHub repo:**  https://github.com/obophenotype/upheno  
 **OBO Foundry webpage:** http://obofoundry.org/ontology/upheno.html    
@@ -157,6 +193,7 @@
 
 #### Xenopus Phenotype Ontology (XPO)  
 **Description:** XPO represents anatomical, cellular, and gene function phenotypes occurring throughout the development of the African frogs Xenopus laevis and tropicalis.    
+**Use Cases:**
 **Species:** Xenopus   
 **GitHub repo:**  https://github.com/obophenotype/xenopus-phenotype-ontology    
 **OBO Foundry webpage:**  http://obofoundry.org/ontology/xpo.html  
@@ -164,6 +201,7 @@
 
 #### Zebrafish Phenotype Ontology (ZP)  
 **Description:** The Zebrafish Phenotype Ontology formally defines all phenotypes of the Zebrafish model organism.  
+**Use Cases:**
 **Species:** Zebrafish  
 **GitHub repo:** https://github.com/obophenotype/zebrafish-phenotype-ontology  
 **OBO Foundry webpage:** http://obofoundry.org/ontology/zp.html  
