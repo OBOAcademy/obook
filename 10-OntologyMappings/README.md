@@ -12,6 +12,10 @@ TBD
 ## New Material
 - [Phenotype and Disease Mappings](mappings.md)
 
+Making new requests
+  - [New term request to Mondo]()
+  - [New term request to OBI()
+
 Types of mappings 
   - string-term
   - term-term
