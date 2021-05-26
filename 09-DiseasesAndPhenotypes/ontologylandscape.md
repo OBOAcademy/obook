@@ -21,10 +21,10 @@
 
 #### Mondo Disease Ontology (Mondo) 
 **Description:**  An integrated disease ontology that provides precise mappings between source ontologies that comprehensively covers cross-species diseases, from common to rare diseases.  
-**GitHub repo:** https://github.com/monarch-initiative/mondo  
-**Website:**  https://mondo.monarchinitiative.org/ 
-**OBO Foundry webpage:** http://obofoundry.org/ontology/mondo.html 
-**Open:** yes
+**GitHub repo:** https://github.com/monarch-initiative/mondo   
+**Website:**  https://mondo.monarchinitiative.org/   
+**OBO Foundry webpage:** http://obofoundry.org/ontology/mondo.html   
+**Open:** yes  
 
 #### National Cancer Institute Thesaurus (NCIT) 
 **Description:**  NCI Thesaurus (NCIt)is a reference terminology that includes broad coverage of the cancer domain, including cancer related diseases, findings and abnormalities. The NCIt OBO Edition aims to increase integration of the NCIt with OBO Library ontologies. NCIt OBO Edition releases should be considered experimental.  
