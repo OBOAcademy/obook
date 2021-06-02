@@ -13,10 +13,19 @@
 #### Human Disease Ontology (DO)
 **Description:**  An ontology for describing the classification of human diseases organized by etiology.  
 **Use Cases:**
-**GitHub repo:**  https://github.com/DiseaseOntology/HumanDiseaseOntology/issues  
+**GitHub repo:**  https://github.com/DiseaseOntology/HumanDiseaseOntology/  
 **Website:**  http://www.disease-ontology.org/  
 **OBO Foundry webpage:**  http://obofoundry.org/ontology/doid.html  
 **Open:** Yes  
+
+#### Infectious Disease Ontology (IDO)  
+**Description:**  A set of interoperable ontologies that will together provide coverage of the infectious disease domain. IDO core is the upper-level ontology that hosts terms of general relevance across the domain, while extension ontologies host terms to specific to a particular part of the domain.   
+**Use Cases:**
+**GitHub repo:**  https://github.com/infectious-disease-ontology/infectious-disease-ontology/  
+**Website:**  http://www.bioontology.org/wiki/index.php/Infectious_Disease_Ontology  
+**OBO Foundry webpage:**  http://obofoundry.org/ontology/ido.html  
+**Open:** Yes  
+
 
 #### International Statistical Classification of Diseases and Related Health Problems (ICD-10)
 **Description:**  A medical classification list by the World Health Organization (WHO) that contains codes for diseases, signs and symptoms, abnormal findings, complaints, social circumstances, and external causes of injury or diseases. _The main purpose of ICD-10 is for billing and coding for insurance companies._  
