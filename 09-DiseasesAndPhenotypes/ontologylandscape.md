@@ -27,10 +27,10 @@
 **Open:** Yes  
 
 
-#### International Statistical Classification of Diseases and Related Health Problems (ICD-10)
-**Description:**  A medical classification list by the World Health Organization (WHO) that contains codes for diseases, signs and symptoms, abnormal findings, complaints, social circumstances, and external causes of injury or diseases. _The main purpose of ICD-10 is for billing and coding for insurance companies._  
-**Use Cases:**
-**Website:**  
+#### International Statistical Classification of Diseases and Related Health Problems (ICD-11)
+**Description:**  A medical classification list by the World Health Organization (WHO) that contains codes for diseases, signs and symptoms, abnormal findings, complaints, social circumstances, and external causes of injury or diseases.  
+**Use Cases:** The main purpose of ICD-11 is for billing and coding for insurance companies.    
+**Website:**  https://www.who.int/standards/classifications/classification-of-diseases  
 **Open:**  Yes 
 
 #### International Classification of Diseases for Oncology (ICD-O) 
