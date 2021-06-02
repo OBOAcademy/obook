@@ -2,14 +2,14 @@
 
 ### Disease ontologies
 -----
-#### Cardiovascular Disease Ontology (CVDO)
-**Description:**  An ontology to describe entities related to cardiovascular diseases.
-**Use Cases:**
-**GitHub repo:**  https://github.com/OpenLHS/CVDO/
-**Website:**  https://github.com/OpenLHS/CVDO
-**OBO Foundry webpage:**  http://obofoundry.org/ontology/cvdo.html
-**Open:** Yes  
-
+#### Cardiovascular Disease Ontology (CVDO)  
+**Description:**  An ontology to describe entities related to cardiovascular diseases.  
+**Use Cases:**  
+**GitHub repo:**  https://github.com/OpenLHS/CVDO/  
+**Website:**  https://github.com/OpenLHS/CVDO  
+**OBO Foundry webpage:**  http://obofoundry.org/ontology/cvdo.html  
+**Open:** Yes   
+ 
 #### Human Disease Ontology (DO)
 **Description:**  An ontology for describing the classification of human diseases organized by etiology.  
 **Use Cases:**
