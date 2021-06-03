@@ -69,11 +69,11 @@
 **Open:**  Yes
 
 #### Ontology for General Medical Science (OGMS)
-**Description:**  An ontology for representing treatment of disease and diagnosis and on carcinomas and other pathological entities.
-**Use Cases:** Provides a formal theory of disease that can be further elaborated by specific disease ontologies. It is intended to be used as a upper level ontology for other disease ontologies.
-**GitHub repo:**  https://github.com/OGMS/ogms  
-**OBO Foundry webpage:** http://obofoundry.org/ontology/ogms.html
-**Open:**  Yes
+**Description:**  An ontology for representing treatment of disease and diagnosis and on carcinomas and other pathological entities.  
+**Use Cases:** Provides a formal theory of disease that can be further elaborated by specific disease ontologies. It is intended to be used as a upper level ontology for other disease ontologies.  
+**GitHub repo:**  https://github.com/OGMS/ogms   
+**OBO Foundry webpage:** http://obofoundry.org/ontology/ogms.html  
+**Open:**  Yes  
 
 #### Ontology for Genetic Susceptibility Factor (OGSF)  
 **Description:**  An application ontology to represent genetic susceptibility to a specific disease, adverse event, or a pathological process.     
