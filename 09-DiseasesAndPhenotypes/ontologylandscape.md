@@ -77,6 +77,13 @@
 **OBO Foundry webpage:** http://obofoundry.org/ontology/ncit.html  
 **Open:**  Yes
 
+#### Online Mendelian Inheritance in Man 
+**Description:**  a comprehensive, authoritative compendium of human genes and genetic phenotypes that is freely available and updated daily.  
+**Disease area:**  Mendelian, genetic diseases.   
+**Use Cases:** Integrated into the disease ontology, used by the Human Phenotype Ontology for disease annotations, patients and researchers.
+**Website:**  https://omim.org/
+**Open:** yes
+
 #### Ontology for General Medical Science (OGMS)
 **Description:**  An ontology of entities involved in a clinical encounter.  
 **Use Cases:** Provides a formal theory of disease that can be further elaborated by specific disease ontologies. It is intended to be used as a upper level ontology for other disease ontologies.  Used by [Cardiovascular Disease Ontology](https://github.com/OpenLHS/CVDO).
@@ -86,7 +93,7 @@
 
 #### Ontology for Genetic Susceptibility Factor (OGSF)  
 **Description:**  An application ontology to represent genetic susceptibility to a specific disease, adverse event, or a pathological process.     
-**Use Cases:**  
+**Use Cases:**  Modeling genetic susceptibility to vaccine adverse events.
 **GitHub repo:** https://github.com/linikujp/OGSF   
 **OBO Foundry webpage:** http://obofoundry.org/ontology/ogsf.html     
 **Open:** Yes  
