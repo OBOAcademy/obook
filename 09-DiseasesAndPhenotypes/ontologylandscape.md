@@ -21,7 +21,38 @@ Experimental Factor Ontology (EFO) | Broad disease coverage, integrates the Mond
 Fibrotic Interstitial Lung Disease Ontology (FILDO)
 Genetic and Rare Diseases Information Center (GARD) | Rare diseases    
 Holistic Ontology of Rare Diseases | Rare disease 
-
+Human Dermatological Disease Ontology (DERMO) | Dermatology (skin)  
+Human Disease Ontology (DO) |  Human disease  
+Infectious Disease Ontology (IDO) | Infectious disease
+International Classification of Functioning, Disability and Health (ICF) | Cross-discipline, focuses on health and disability
+International Statistical Classification of Diseases and Related Health Problems (ICD-11) | Broad coverage of human disease features 
+International Classification of Diseases for Oncology (ICD-O) 
+Logical Observation Identifier Names and Codes (LOINC) | Broad coverage     
+Medical Subject Headings (MeSH) | Broad coverage     
+MedGen | Human medical genetics     
+Medical Dictionary for Regulatory Activities (MedDRA) | Broad coverage
+Mental Disease Ontology (MDO) | Mental functioning
+Mondo Disease Ontology (Mondo) | Broad coverage, Cross species
+National Cancer Institute Thesaurus (NCIT) | Humam cancer and neoplasms  
+Neurological Disease Ontology (ND) | Neurology 
+Online Mendelian Inheritance in Man (OMIM) | Mendelian, genetic diseases.   
+Ontology of Cardiovascular Drug Adverse Events	(OCVDAE)
+Ontology for General Medical Science (OGMS)
+Ontology for Genetic Susceptibility Factor (OGSF)  
+Ontology of Glucose Metabolism Disorder  
+Ontology of Language Disorder in Autism (LDA) | Austism
+The Oral Health and Disease Ontology (OHD)| Oral health and disease
+Orphanet | Rare diseases       
+Parkinson Disease Ontology (PDO)
+Pathogenic Disease Ontology (PDO)
+PolyCystic Ovary Syndrome Knowledgebase (PCOSKB)
+Rat Disease Ontology (RDO) | Broad coverage
+Removable Partial Denture Ontology (RPDO)
+Resource of Asian Primary Immunodeficiency Diseases (RPO)
+Sickle Cell Disease Ontology (SCDO)
+SNOMED Clinical Terminology (SNOMED CT) | Broad disease representation for human diseases.   
+Symptom Ontology | Human diseases    
+Unified Medical Language System | Broad coverage  
 
 #### Artificial Intelligence Rheumatology Consultant System Ontology (AI-RHEUM)
 **Description:**  Contains findings, such as clinical signs, symptoms, laboratory test results, radiologic observations, tissue biopsy results, and intermediate diagnosis hypotheses, for the diagnosis of rheumatic diseases.  
