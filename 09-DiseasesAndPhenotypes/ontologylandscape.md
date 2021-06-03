@@ -134,9 +134,9 @@
 **Open:** Yes   
 
 #### Orphanet
-**Description:**   
-**Disease area:**      
-**Use Cases:**  
+**Description:** The portal for rare diseases and orphan drugs. 
+**Disease area:** Rare diseases       
+**Use Cases:**  Used by rare disease research and clinical community. Integrated into the Mondo disease ontology, aligned with OMIM.  
 **Website:** https://www.orpha.net/consor/cgi-bin/index.php
 **Open:** Yes   
 
