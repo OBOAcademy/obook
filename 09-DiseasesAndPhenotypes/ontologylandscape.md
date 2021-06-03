@@ -433,6 +433,29 @@ Unified Medical Language System | Broad coverage
 ### Phenotype ontologies
 -----
 
+### Summary Table
+
+Name | Species Area 
+--- | ---
+Ascomycete phenotype ontology (APO) | Ascomycota  
+C. elegans phenotype (wbphenotype) | C elegans  
+Dictyostelium discoideum phenotype ontology (ddpheno) | Dictyostelium discoideum  
+Drosophila Phenotype Ontology (DPO) | Drosophila  
+Flora Phenotype Ontology (FLOPO) | Viridiplantae  
+Fission Yeast Phenotype Ontology (FYPO) | S. pombe  
+Human Phenotype Ontology (HPO) | Human   
+HPO - ORDO Ontological Module (HOOM) | Human    
+Mammalian Phenotype Ontology (MP) | Mammals 
+Ontology of Microbial Phenotypes (OMP) | Microbe  
+Ontology of Prokaryotic Phenotypic and Metabolic Characters | Prokaryotes
+Pathogen Host Interaction Phenotype Ontology | pathogens  
+Planarian Phenotype Ontology (PLANP) | Schmidtea mediterranea  
+Plant Trait Ontology (TO) | Viridiplantae  
+Plant Phenology Ontology | Plants  
+Unified Phenotype Ontology (uPheno) | Cross-species coverage  
+Xenopus Phenotype Ontology (XPO) | Xenopus   
+Zebrafish Phenotype Ontology (ZP) | Zebrafish  
+
 #### Ascomycete phenotype ontology (APO)
 **Description:** A structured controlled vocabulary for the phenotypes of Ascomycete fungi.  
 **Species:**  Ascomycota  
@@ -502,11 +525,11 @@ Unified Medical Language System | Broad coverage
 **Open:** Yes  
 
 #### Ontology of Microbial Phenotypes (OMP) 
-**Description:**  Standard terms for annotating mammalian phenotypic data.  
-**Species:**  Mammals (main focus is on mouse and rodents)  
-**GitHub repo:** https://github.com/obophenotype/mammalian-phenotype-ontology  
-**Website:**  http://www.informatics.jax.org/searches/MP_form.shtml  
-**OBO Foundry webpage:** http://obofoundry.org/ontology/mp.html  
+**Description:**  An ontology of phenotypes covering microbes.  
+**Species:**  microbes    
+**GitHub repo:** https://github.com/microbialphenotypes/OMP-ontology 
+**Website:**  http://microbialphenotypes.org
+**OBO Foundry webpage:** http://obofoundry.org/ontology/omp.html
 **Open:** Yes 
 
 #### Ontology of Prokaryotic Phenotypic and Metabolic Characters
@@ -519,7 +542,7 @@ Unified Medical Language System | Broad coverage
 
 #### Pathogen Host Interaction Phenotype Ontology
 **Description:** PHIPO is a formal ontology of species-neutral phenotypes observed in pathogen-host interactions.  
-**Species:** patogens  
+**Species:** pathogens  
 **GitHub repo:** https://github.com/PHI-base/phipo  
 **Website:**  http://www.phi-base.org  
 **OBO Foundry webpage:** http://obofoundry.org/ontology/phipo.html  
