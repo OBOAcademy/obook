@@ -54,7 +54,7 @@
 #### Mental Disease Ontology (MDO) 
 **Description:**  An ontology to describe and classify mental diseases such as schizophrenia, annotated with DSM-IV and ICD codes where applicable.   
 **Disease area:**  Mental functioning, including mental processes such as cognition and traits such as intelligence.   
-**Use Cases:** The ontology has been partially aligned with the related projects [Cognitive Atlas](http://www.cognitiveatlas.org/), knowledge base on cognitive science and the [Cognitive Paradigm Ontology](http://www.cogpo.org/), which is used in the [Brainmap](http://brainmap.org/), a database of neuroimaging experiments.
+**Use Cases:** The ontology has been partially aligned with the related projects [Cognitive Atlas](http://www.cognitiveatlas.org/), knowledge base on cognitive science and the [Cognitive Paradigm Ontology](http://www.cogpo.org/), which is used in the [Brainmap](http://brainmap.org/), a database of neuroimaging experiments.  
 **GitHub repo:** https://github.com/jannahastings/mental-functioning-ontology   
 **OBO Foundry webpage:** http://obofoundry.org/ontology/mfomd.html  
 **Open:** yes
