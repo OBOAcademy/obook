@@ -20,17 +20,17 @@
 **Open:** Yes  
 
 #### Experimental Factor Ontology (EFO)
-**Description:**   
-**Disease area:**  
-**Use Cases:**       
+**Description:**  Provides a systematic description of many experimental variables available in EBI databases, and for projects such as the GWAS catalog.  
+**Disease area:**  Broad disease coverage, integrates the Mondo disease ontology.  
+**Use Cases:**  Application ontology build for [European Bioinformatics (EBI)](https://www.ebi.ac.uk/) tools and databases and [Open Targets Genetics Portal](https://www.opentargets.org/).      
 **Website:** https://www.ebi.ac.uk/efo/  
 **Open:** Yes  
 
 #### Genetic and Rare Diseases Information Center (GARD)
-**Description:**   
-**Disease area:**    
-**Use Cases:**   
-**Website:** https://rarediseases.info.nih.gov/
+**Description:**   NIH resource that provides the public with access to current, reliable, and easy-to-understand information about rare or genetic diseases in English or Spanish.  
+**Disease area:**  Rare diseases    
+**Use Cases:**  Patient portal. Integrates defintions and synonyms from Orphanet, maps to HPO phenotypes, and is integrated by Mondo.   
+**Website:** https://rarediseases.info.nih.gov/  
 **Open:** Yes  
 
 #### Human Disease Ontology (DO)
