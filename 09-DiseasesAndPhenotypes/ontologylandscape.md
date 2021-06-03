@@ -65,18 +65,11 @@
 **Website:** https://www.who.int/standards/classifications/other-classifications/international-classification-of-diseases-for-oncology  
 **Open:**  Yes
 
-#### Medical Dictionary for Regulatory Activities (MeDRA)
-**Description:**   
-**Disease area:**    
-**Use Cases:**   
-**Website:** https://www.meddra.org/
-**Open:**  Yes 
-
 #### Medical Subject Headings (MeSH)
-**Description:**   
-**Disease area:**    
-**Use Cases:** 
-**Website:** https://id.nlm.nih.gov/mesh/
+**Description:**   Medical Subject Headings (MeSH) thesaurus is a controlled and hierarchically-organized vocabulary produced by the National Library of Medicine. 
+**Disease area:**  Broad coverage.    
+**Use Cases:**  It is used for indexing, cataloging, and searching of biomedical and health-related information.  Integrated into Mondo.  
+**Website:** https://meshb.nlm.nih.gov/search  
 **Open:**  Yes 
 
 #### MedGen
