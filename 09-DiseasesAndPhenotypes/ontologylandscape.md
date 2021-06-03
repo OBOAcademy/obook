@@ -13,7 +13,7 @@
 
 #### Coronavirus Infectious Disease Ontology (CIDO)
 **Description:** Aims to ontologically represent and standardize various aspects of coronavirus infectious diseases, including their etiology, transmission, epidemiology, pathogenesis, diagnosis, prevention, and treatment.  
-**Disease area:**  Coronavirus infectious diseases, including COVID-19, SARS, MERS; covers etiology, transmission, epidemiology, pathogenesis, diagnosis, prevention, and treatment.
+**Disease area:**  Coronavirus infectious diseases, including COVID-19, SARS, MERS; covers etiology, transmission, epidemiology, pathogenesis, diagnosis, prevention, and treatment.  
 **Use Cases:**  Used for disease annotations related to coronavirus infections.  
 **GitHub repo:**  https://github.com/cido-ontology/cido  
 **OBO Foundry webpage:**  http://obofoundry.org/ontology/cido.html  
@@ -30,7 +30,8 @@
 
 #### Infectious Disease Ontology (IDO)  
 **Description:**  A set of interoperable ontologies that will together provide coverage of the infectious disease domain. IDO core is the upper-level ontology that hosts terms of general relevance across the domain, while extension ontologies host terms to specific to a particular part of the domain.   
-**Use Cases:**
+**Disease area:**  Infectious disease features, such as acute, primary, secondary infection, and chronic, hospital acquired and local infection.   
+**Use Cases:**  Does not seem active, has not been released since 2017.  
 **GitHub repo:**  https://github.com/infectious-disease-ontology/infectious-disease-ontology/  
 **Website:**  http://www.bioontology.org/wiki/index.php/Infectious_Disease_Ontology  
 **OBO Foundry webpage:**  http://obofoundry.org/ontology/ido.html  
@@ -38,13 +39,15 @@
 
 #### International Statistical Classification of Diseases and Related Health Problems (ICD-11)
 **Description:**  A medical classification list by the World Health Organization (WHO) that contains codes for diseases, signs and symptoms, abnormal findings, complaints, social circumstances, and external causes of injury or diseases.  
-**Use Cases:** The main purpose of ICD-11 is for billing and coding for insurance companies.    
+**Disease area:**  Broad coverage of human disease features, such as disease of anatomical systems, infectious diseases, injuries, external causes of morbidity and mortality.  
+**Use Cases:** The main purpose of ICD-11 is for clinical care, billing and coding for insurance companies.    
 **Website:**  https://www.who.int/standards/classifications/classification-of-diseases  
 **Open:**  Yes 
 
 #### International Classification of Diseases for Oncology (ICD-O) 
 **Description:**  A domain-specific extension of the International Statistical Classification of Diseases and Related Health Problems for tumor diseases.  
-**Use Cases:**
+**Disease area:**  A multi-axial classification of the site, morphology, behaviour, and grading of neoplasms.  
+**Use Cases:** Used principally in tumour or cancer registries for coding the site (topography) and the histology (morphology) of neoplasms, usually obtained from a pathology report. 
 **Website:** https://www.who.int/standards/classifications/other-classifications/international-classification-of-diseases-for-oncology  
 **Open:**  Yes
 
