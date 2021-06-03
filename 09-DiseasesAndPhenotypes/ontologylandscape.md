@@ -79,7 +79,14 @@
 **Description:**  A comprehensive clinical terminology/ontology used in healthcare settings, such as Electronic Health Records (EHRs).  
 **Use Cases:**
 **Website:**  https://browser.ihtsdotools.org/?  
-**Open:** No   
+**Open:** No  
+
+#### Symptom Ontology
+**Description:**  An ontology of disease symptoms, with symptoms encompasing perceived changes in function, sensations or appearance reported by a patient indicative of a disease.   
+**Use Cases:** Developed by the [Disease Ontology (DO)](http://www.disease-ontology.org/) team and used for describing symptoms of human diseases in the DO.  
+**Website:**  http://symptomontologywiki.igs.umaryland.edu/mediawiki/index.php/Main_Page  
+**OBO Foundry webpage:** http://obofoundry.org/ontology/symp.html   
+**Open:** Yes    
 
 -----
 ### Phenotype ontologies
