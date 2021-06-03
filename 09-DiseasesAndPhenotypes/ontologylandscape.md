@@ -77,7 +77,7 @@
 **OBO Foundry webpage:** http://obofoundry.org/ontology/ncit.html  
 **Open:**  Yes
 
-#### Online Mendelian Inheritance in Man 
+#### Online Mendelian Inheritance in Man (OMIM)
 **Description:**  a comprehensive, authoritative compendium of human genes and genetic phenotypes that is freely available and updated daily.  
 **Disease area:**  Mendelian, genetic diseases.   
 **Use Cases:** Integrated into the disease ontology, used by the Human Phenotype Ontology for disease annotations, patients and researchers.
