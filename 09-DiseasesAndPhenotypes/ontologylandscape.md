@@ -127,10 +127,10 @@
 **Open:** Yes   
 
 #### Orphanet
-**Description:** The portal for rare diseases and orphan drugs. 
+**Description:** The portal for rare diseases and orphan drugs.  
 **Disease area:** Rare diseases       
 **Use Cases:**  Used by rare disease research and clinical community. Integrated into the Mondo disease ontology, aligned with OMIM.  
-**Website:** https://www.orpha.net/consor/cgi-bin/index.php
+**Website:** https://www.orpha.net/consor/cgi-bin/index.php  
 **Open:** Yes   
 
 #### SNOMED Clinical Terminology (SNOMED CT)
