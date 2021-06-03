@@ -17,7 +17,7 @@ test: build/report.html
 
 MODULES = build/disease_module.owl build/assay_module.owl
 
-build/%_module.owl: templates/%.tsv
+build/%_module.owl: templates/%.tsv | build
 	robot template --template $< --output $@
 
 

@@ -10,9 +10,12 @@ build:
 
 # $@ = target (output)
 # $< = first dependency
-# $^ = list of all dependencies
+# $^ = list of all dependencies (does not include order-only)
 # % = wildcard
 # $(VAR) = reference a variable named VAR
+# | = separate order-only prereqs in dependency list
+#     These do not cause a target to get rebuilt if the timestamp changes, it basically only checks that it exists
+#     ... so using order-only prereqs is perfect when you have a directory as a dependency, for example 'build'
 
 
 ### Main Process
