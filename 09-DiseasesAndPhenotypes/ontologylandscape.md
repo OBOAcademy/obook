@@ -66,16 +66,16 @@
 **Open:**  Yes
 
 #### Medical Subject Headings (MeSH)
-**Description:**   Medical Subject Headings (MeSH) thesaurus is a controlled and hierarchically-organized vocabulary produced by the National Library of Medicine. 
-**Disease area:**  Broad coverage.    
+**Description:**   Medical Subject Headings (MeSH) thesaurus is a controlled and hierarchically-organized vocabulary produced by the National Library of Medicine.  
+**Disease area:**  Broad coverage     
 **Use Cases:**  It is used for indexing, cataloging, and searching of biomedical and health-related information.  Integrated into Mondo.  
 **Website:** https://meshb.nlm.nih.gov/search  
 **Open:**  Yes 
 
 #### MedGen
-**Description:**   
-**Disease area:**    
-**Use Cases:** 
+**Description:**   Organizes information related to human medical genetics, such as attributes of conditions with a genetic contribution.  
+**Disease area:** Human medical genetics     
+**Use Cases:**  MedGen is NCBI's portal to information about conditions and phenotypes related to Medical Genetics. Terms from the NIH Genetic Testing Registry (GTR), UMLS,  HPO, Orphanet, ClinVar and other sources are aggregated into concepts, each of which is assigned a unique identifier and a preferred name and symbol. The core content of the record may include names, identifiers used by other databases, mode of inheritance, clinical features, and map location of the loci affecting the disorder. The concept identifier (CUI) is used to aggregate information about that concept, similar to the way NCBI Gene serves as a gateway to gene-related information.  
 **Website:** https://www.ncbi.nlm.nih.gov/medgen/  
 **Open:**  Yes  
 
@@ -149,9 +149,9 @@
 **Open:** Yes    
 
 #### Unified Medical Language System
-**Description:**   
-**Disease area:**      
-**Use Cases:**  
+**Description:**   The UMLS integrates and distributes key terminology, classification and coding standards, and associated resources to promote creation of more effective and interoperable biomedical information systems and services.    
+**Disease area:**  Broad coverage      
+**Use Cases:**  Healthcare settings including electronic health records and HL7.   
 **Website:** https://www.nlm.nih.gov/research/umls/index.html  
 **Open:** Yes    
 
