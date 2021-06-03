@@ -12,7 +12,7 @@
  
 #### Human Disease Ontology (DO)
 **Description:**  An ontology for describing the classification of human diseases organized by etiology.  
-**Use Cases:**
+**Use Cases:**  
 **GitHub repo:**  https://github.com/DiseaseOntology/HumanDiseaseOntology/  
 **Website:**  http://www.disease-ontology.org/  
 **OBO Foundry webpage:**  http://obofoundry.org/ontology/doid.html  
