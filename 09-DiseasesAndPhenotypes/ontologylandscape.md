@@ -80,9 +80,9 @@
 #### Online Mendelian Inheritance in Man (OMIM)
 **Description:**  a comprehensive, authoritative compendium of human genes and genetic phenotypes that is freely available and updated daily.  
 **Disease area:**  Mendelian, genetic diseases.   
-**Use Cases:** Integrated into the disease ontology, used by the Human Phenotype Ontology for disease annotations, patients and researchers.
-**Website:**  https://omim.org/
-**Open:** yes
+**Use Cases:** Integrated into the disease ontology, used by the Human Phenotype Ontology for disease annotations, patients and researchers.  
+**Website:**  https://omim.org/  
+**Open:** yes  
 
 #### Ontology for General Medical Science (OGMS)
 **Description:**  An ontology of entities involved in a clinical encounter.  
