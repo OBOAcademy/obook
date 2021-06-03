@@ -55,7 +55,7 @@
 
 #### National Cancer Institute Thesaurus (NCIT) 
 **Description:**  NCI Thesaurus (NCIt)is a reference terminology that includes broad coverage of the cancer domain, including cancer related diseases, findings and abnormalities. The NCIt OBO Edition aims to increase integration of the NCIt with OBO Library ontologies. NCIt OBO Edition releases should be considered experimental.  
-**Use Cases:**
+**Use Cases:** NCI Thesaurus (NCIt) provides reference terminology for many National Cancer Institute and other systems. It is used by the Clinical Data Interchange Standards Consortium Terminology (CDISC), the U.S. Food and Drug Administration (FDA), the Federal Medication Terminologies (FMT), and the National Council for Prescription Drug Programs (NCPDP).  
 **GitHub repo:**  https://github.com/NCI-Thesaurus/thesaurus-obo-edition/issues  
 **Website:**  https://ncithesaurus.nci.nih.gov/ncitbrowser/pages/home.jsf?version=20.11e  
 **OBO Foundry webpage:** http://obofoundry.org/ontology/ncit.html  
