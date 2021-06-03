@@ -26,7 +26,6 @@
 **OBO Foundry webpage:**  http://obofoundry.org/ontology/ido.html  
 **Open:** Yes  
 
-
 #### International Statistical Classification of Diseases and Related Health Problems (ICD-11)
 **Description:**  A medical classification list by the World Health Organization (WHO) that contains codes for diseases, signs and symptoms, abnormal findings, complaints, social circumstances, and external causes of injury or diseases.  
 **Use Cases:** The main purpose of ICD-11 is for billing and coding for insurance companies.    
@@ -38,6 +37,13 @@
 **Use Cases:**
 **Website:** https://www.who.int/standards/classifications/other-classifications/international-classification-of-diseases-for-oncology  
 **Open:**  Yes
+
+#### Mental Disease Ontology (MDO) 
+**Description:**  An ontology to describe and classify mental diseases such as schizophrenia, annotated with DSM-IV and ICD codes where applicable.   
+**Use Cases:**
+**GitHub repo:** https://github.com/jannahastings/mental-functioning-ontology   
+**OBO Foundry webpage:** http://obofoundry.org/ontology/mfomd.html  
+**Open:** yes
 
 #### Mondo Disease Ontology (Mondo) 
 **Description:**  An integrated disease ontology that provides precise mappings between source ontologies that comprehensively covers cross-species diseases, from common to rare diseases.  
@@ -61,6 +67,13 @@
 **GitHub repo:**  https://github.com/OGMS/ogms  
 **OBO Foundry webpage:** http://obofoundry.org/ontology/ogms.html
 **Open:**  Yes
+
+#### Ontology for Genetic Susceptibility Factor (OGSF)  
+**Description:**  An application ontology to represent genetic susceptibility to a specific disease, adverse event, or a pathological process.     
+**Use Cases:**  
+**GitHub repo:** https://github.com/linikujp/OGSF   
+**OBO Foundry webpage:** http://obofoundry.org/ontology/ogsf.html     
+**Open:** Yes  
 
 #### SNOMED (SNOMED) 
 **Description:**  A comprehensive clinical terminology/ontology used in healthcare settings, such as Electronic Health Records (EHRs).  
