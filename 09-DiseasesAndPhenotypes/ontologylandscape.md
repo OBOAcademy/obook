@@ -61,7 +61,7 @@
 
 #### Mondo Disease Ontology (Mondo) 
 **Description:**  An integrated disease ontology that provides precise mappings between source ontologies that comprehensively covers cross-species diseases, from common to rare diseases.  
-**Disease area:**  Cross species, intended to cover all areas of diseases, integrating source ontologies that cover Mendelian diseases (OMIM), rare diseases (Orphanet), neoplasms (NCIt), human diseases (DO), and others. See all sources [here](https://mondo.monarchinitiative.org/pages/sources/).
+**Disease area:**  Cross species, intended to cover all areas of diseases, integrating source ontologies that cover Mendelian diseases (OMIM), rare diseases (Orphanet), neoplasms (NCIt), human diseases (DO), and others. See all sources [here](https://mondo.monarchinitiative.org/pages/sources/).  
 **Use Cases:**  Mondo was developed for usage in the [Monarch Initiative](https://monarchinitiative.org/), a discovery system that allows navigation of similarities between phenotypes, organisms, and human diseases across many data sources and organisms. Mondo is also used by [ClinGen](https://www.clinicalgenome.org/) for disease curations, the [Kids First Data Resource Portal](https://portal.kidsfirstdrc.org/) for disease annotations and others, see an extensive list [here](https://mondo.monarchinitiative.org/pages/users/).  
 **GitHub repo:** https://github.com/monarch-initiative/mondo   
 **Website:**  https://mondo.monarchinitiative.org/   
