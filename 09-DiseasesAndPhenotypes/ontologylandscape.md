@@ -161,7 +161,7 @@
 
 #### Ascomycete phenotype ontology (APO)
 **Description:** A structured controlled vocabulary for the phenotypes of Ascomycete fungi.  
-**Use Cases:**
+**Use Cases:**  
 **Species:**  Ascomycota  
 **GitHub repo:**  https://github.com/obophenotype/ascomycete-phenotype-ontology/  
 **Webpage:**  http://www.yeastgenome.org/
@@ -170,7 +170,7 @@
 
 #### C. elegans phenotype (wbphenotype) 
 **Description:**   A structured controlled vocabulary of Caenorhabditis elegans phenotypes.  
-**Use Cases:**
+**Use Cases:**  
 **Species:** C elegans  
 **GitHub repo:**   https://github.com/obophenotype/c-elegans-phenotype-ontology  
 **OBO Foundry webpage:**  http://obofoundry.org/ontology/wbphenotype.html  
