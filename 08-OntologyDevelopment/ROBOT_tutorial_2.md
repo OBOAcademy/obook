@@ -49,16 +49,20 @@ robot annotate --input animals.owl \
   --output animals.owl
 ```
 
-Let's break down this version IRI. We have the host (`http://example.com/`) followed by our ontology's namespace (`animals`). Next, we provided the date in the format of `YYYY-MM-DD`. Finally, we have the name of the file. This is standard for OBO Foundry, except with a different host. For example, you can find a release of OBI from [ADD DATE] at `http://purl.obolibrary.org/obo/obi/[ADD DATE]/obi.owl`. In this case, the host is `http://purl.obolibrary.org/obo/`. Of course, you may see different patterns in non-OBO-Foundry ontologies, but they should always resolve (hopefully!).
+Let's break down this version IRI. We have the host (`http://example.com/`) followed by our ontology's namespace (`animals`). Next, we provided the date in the format of `YYYY-MM-DD`. Finally, we have the name of the file. This is standard for OBO Foundry, except with a different host. For example, you can find a release of OBI from April 6, 2021 at `http://purl.obolibrary.org/obo/obi/2021-04-06/obi.owl`. In this case, the host is `http://purl.obolibrary.org/obo/`. Of course, you may see different patterns in non-OBO-Foundry ontologies, but they should always resolve (hopefully!).
+
+Go ahead and open or reload `animals.owl` in Protege. You'll see in the **Active Ontology** tab that now both the ontology IRI and version IRI fields are filled out.
 
 ### Ontology Annotations
 
 In addition to ontology and version IRIs, you may also want to add some other metadata to your ontology. For example, when we were introduced to `report`, we added a description to the ontology to fix one of the report problems. The three ontology annotations that are required by the OBO Foundry are:
 * Title (`dc11:title`)
-* License (`terms:license`)
+* License (`dc:license`)
 * Description (`dc11:description`)
 
 These three annotation properties all come from the [Dublin Core](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/), but they have slightly different namespaces. This is because DC is split into two parts: the `/terms/` and `/elements/1.1/` namespaces. Just remember to double check that you're using the correct namespace. If you click on the DC link, you can find the complete list of DC terms in their respective namespaces.
+
+ROBOT contains some built-in prefixes, which can be found [here](https://github.com/ontodev/robot/blob/master/robot-core/src/main/resources/obo_context.jsonld). the prefix `dc:` corresponds to the `/terms/` namespace and `dc11:` to `/elements/1.1/`. You may see different prefixes used (for example, `/terms/` is sometimes `dcterms:` or just `terms:`), but the full namespace is what really matters as long as the prefix is defined somewhere.
 
 Let's go ahead and add a title and description to our `animals.owl` file. We'll do this using the `--annotation` option, which expects two arguments: (1) the CURIE of the annotation property, (2) the value of the annotation. The value of the annotation must be enclosed in double quotes if there are spaces. You can use any annotation property you want here, and include as many as you want! For now, we'll start with two:
 
@@ -73,7 +77,7 @@ robot annotate --input animals.owl \
 
 ```
 robot annotate --input animals.owl \
-  --link-annotation terms:license https://creativecommons.org/licenses/by/4.0/ \
+  --link-annotation dc:license https://creativecommons.org/licenses/by/4.0/ \
   --output animals.owl
 ```
 
@@ -91,9 +95,9 @@ Another reason you may want to merge two ontologies is if you're adding new term
 
 ### Merging Multiple Files
 
-First, copy `animals2.owl` to `animals-new.owl`. In Windows, this command is `copy animals2.owl animals-new.owl`. For Docker and other Linux operating systems, this is `cp animals2.owl animals-new.owl`. Open `animals-new.owl` in Protégé and remove the import we added last time. This is done in the **Imported ontologies** section of the **Active ontology** tab. Just click the X on the right side of the imported animals ontology.
+First, copy `animals2.owl` to `animals-new.owl`. In Windows, this command is `copy animals2.owl animals-new.owl`. For Docker and other Linux operating systems, this is `cp animals2.owl animals-new.owl`. Open `animals-new.owl` in Protégé and remove the import we added last time. This is done in the **Imported ontologies** section of the **Active ontology** tab. Just click the X on the right side of the imported animals ontology. Don't forget to save!
 
-Continuing with the `animals.owl` file we created last week. Now run the following command:
+Continuing with the `animals.owl` file we created last week, now run the following command:
 
 ```
 robot merge --input animals.owl --input animals-new.owl --output animals-full.owl
@@ -117,7 +121,7 @@ We already have `animals.owl` imported into `animals2.owl`. Let's collapse the i
 robot merge --input animals2.owl --collapse-import-closure true --output animals-full-2.owl
 ```
 
-Even though we gave this a different file name, if you open `animals-full-2.owl` in Protégé, you'll notice that it's exactly the same as `animals-full.owl`! This is because we merged the same files together, just in a slightly different way.
+Even though we gave this a different file name, if you open `animals-full-2.owl` in Protégé, you'll notice that it's exactly the same as `animals-full.owl`! This is because we merged the same files together, just in a slightly different way. This time, though, the ontology IRI is the one for `animals2.owl`, not `animals.owl`. That is because that was our first input file.
 
 ---
 
@@ -180,7 +184,10 @@ The `diff` command can be used to compare the axioms in two ontologies to see wh
 We're going to generate an HTML diff of `ubiq-ligase-complex.owl` compared to the new `reasoned.owl` file to see what inferences have been asserted. `diff` takes a left ("original") and a right ("new") input to compare.
 
 ```
-robot diff --left ubiq-ligase-complex.owl --right reasoned.owl --format html --output diff.html
+robot diff --left ubiq-ligase-complex.owl \
+  --right reasoned.owl \
+  --format html \
+  --output diff.html
 ```
 
 Open `diff.html` in your browser side-by-side with `reasoned.owl` and you can see how the changes look in both.

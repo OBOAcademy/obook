@@ -4,6 +4,8 @@ Browsing and Searching Mondo
 Open the Mondo in Protégé
 -------------------------
 
+_Note: Windows users should open Protege using run.bat_
+
 1.  Navigate to where you downloaded the repository and open the mondo-edit.obo file (src/ontology/mondo-edit.obo)
 2.  When you open Protege, you will be on the Active Ontology tab
 3.  Note the Ontology IRI field. The IRI is used to identify the ontology on the Web.
