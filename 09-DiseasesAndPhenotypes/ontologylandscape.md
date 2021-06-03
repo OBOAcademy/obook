@@ -19,6 +19,20 @@
 **OBO Foundry webpage:**  http://obofoundry.org/ontology/cido.html  
 **Open:** Yes  
 
+#### Experimental Factor Ontology (EFO)
+**Description:**   
+**Disease area:**  
+**Use Cases:**       
+**Website:** https://www.ebi.ac.uk/efo/  
+**Open:** Yes  
+
+#### Genetic and Rare Diseases Information Center (GARD)
+**Description:**   
+**Disease area:**    
+**Use Cases:**   
+**Website:** https://rarediseases.info.nih.gov/
+**Open:** Yes  
+
 #### Human Disease Ontology (DO)
 **Description:**  An ontology for describing the classification of human diseases organized by etiology.  
 **Disease area:**  Human disease terms, phenotype characteristics and related medical vocabulary disease concepts.  
@@ -51,6 +65,27 @@
 **Website:** https://www.who.int/standards/classifications/other-classifications/international-classification-of-diseases-for-oncology  
 **Open:**  Yes
 
+#### Medical Dictionary for Regulatory Activities (MeDRA)
+**Description:**   
+**Disease area:**    
+**Use Cases:**   
+**Website:** https://www.meddra.org/
+**Open:**  Yes 
+
+#### Medical Subject Headings (MeSH)
+**Description:**   
+**Disease area:**    
+**Use Cases:** 
+**Website:** https://id.nlm.nih.gov/mesh/
+**Open:**  Yes 
+
+#### MedGen
+**Description:**   
+**Disease area:**    
+**Use Cases:** 
+**Website:** https://www.ncbi.nlm.nih.gov/medgen/  
+**Open:**  Yes  
+
 #### Mental Disease Ontology (MDO) 
 **Description:**  An ontology to describe and classify mental diseases such as schizophrenia, annotated with DSM-IV and ICD codes where applicable.   
 **Disease area:**  Mental functioning, including mental processes such as cognition and traits such as intelligence.   
@@ -73,7 +108,7 @@
 **Disease area:**  Cancer and neoplasms  
 **Use Cases:** NCI Thesaurus (NCIt) provides reference terminology for many National Cancer Institute and other systems. It is used by the Clinical Data Interchange Standards Consortium Terminology (CDISC), the U.S. Food and Drug Administration (FDA), the Federal Medication Terminologies (FMT), and the National Council for Prescription Drug Programs (NCPDP). It provides extensive coverage of neoplasms and cancers.   
 **GitHub repo:**  https://github.com/NCI-Thesaurus/thesaurus-obo-edition/issues  
-**Website:**  https://ncithesaurus.nci.nih.gov/ncitbrowser/pages/home.jsf?version=20.11e   
+**Website:**  https://ncithesaurus.nci.nih.gov/ncitbrowser/pages/home.jsf?version=20.11e  
 **OBO Foundry webpage:** http://obofoundry.org/ontology/ncit.html   
 **Open:**  Yes  
 
@@ -98,6 +133,13 @@
 **OBO Foundry webpage:** http://obofoundry.org/ontology/ogsf.html      
 **Open:** Yes   
 
+#### Orphanet
+**Description:**   
+**Disease area:**      
+**Use Cases:**  
+**Website:** https://www.orpha.net/consor/cgi-bin/index.php
+**Open:** Yes   
+
 #### SNOMED Clinical Terminology (SNOMED CT)
 **Description:**  A comprehensive clinical terminology/ontology used in healthcare settings.  
 **Disease area:**  Broad disease representation for human diseases.   
@@ -111,6 +153,13 @@
 **Use Cases:** Developed by the [Disease Ontology (DO)](http://www.disease-ontology.org/) team and used for describing symptoms of human diseases in the DO.    
 **Website:**  http://symptomontologywiki.igs.umaryland.edu/mediawiki/index.php/Main_Page  
 **OBO Foundry webpage:** http://obofoundry.org/ontology/symp.html   
+**Open:** Yes    
+
+#### Unified Medical Language System
+**Description:**   
+**Disease area:**      
+**Use Cases:**  
+**Website:** https://www.nlm.nih.gov/research/umls/index.html  
 **Open:** Yes    
 
 -----
