@@ -106,7 +106,8 @@
 **Open:** No, requires a license for usage.   
 
 #### Symptom Ontology
-**Description:**  An ontology of disease symptoms, with symptoms encompasing perceived changes in function, sensations or appearance reported by a patient indicative of a disease.    
+**Description:**  An ontology of disease symptoms, with symptoms encompasing perceived changes in function, sensations or appearance reported by a patient indicative of a disease.  
+**Disease area:**  Human diseases    
 **Use Cases:** Developed by the [Disease Ontology (DO)](http://www.disease-ontology.org/) team and used for describing symptoms of human diseases in the DO.    
 **Website:**  http://symptomontologywiki.igs.umaryland.edu/mediawiki/index.php/Main_Page  
 **OBO Foundry webpage:** http://obofoundry.org/ontology/symp.html   
