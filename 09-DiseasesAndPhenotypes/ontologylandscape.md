@@ -9,7 +9,14 @@
 **Website:**  https://github.com/OpenLHS/CVDO  
 **OBO Foundry webpage:**  http://obofoundry.org/ontology/cvdo.html  
 **Open:** Yes   
- 
+
+#### Coronavirus Infectious Disease Ontology (CIDO)
+**Description:** Aims to ontologically represent and standardize various aspects of coronavirus infectious diseases, including their etiology, transmission, epidemiology, pathogenesis, diagnosis, prevention, and treatment.  
+**Use Cases:**  
+**GitHub repo:**  https://github.com/cido-ontology/cido  
+**OBO Foundry webpage:**  http://obofoundry.org/ontology/cido.html  
+**Open:** Yes  
+
 #### Human Disease Ontology (DO)
 **Description:**  An ontology for describing the classification of human diseases organized by etiology.  
 **Use Cases:**  
