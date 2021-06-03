@@ -36,7 +36,7 @@
 #### Human Disease Ontology (DO)
 **Description:**  An ontology for describing the classification of human diseases organized by etiology.  
 **Disease area:**  Human disease terms, phenotype characteristics and related medical vocabulary disease concepts.  
-**Use Cases:**  Used by Model Organism Databases (MOD), such as Mouse Genome Informatics disease model for diseae annotations, and Alliance for Genome Resources. In 2018, DO tracked over 300 DO project citations suggesting wide adoption and usage for disease annotations.  
+**Use Cases:**  Used by Model Organism Databases (MOD), such as Mouse Genome Informatics disease model for diseae annotations, and Alliance for Genome Resources for disease annotations. In 2018, DO tracked over 300 DO project citations suggesting wide adoption and usage for disease annotations.  
 **GitHub repo:**  https://github.com/DiseaseOntology/HumanDiseaseOntology/  
 **Website:**  http://www.disease-ontology.org/  
 **OBO Foundry webpage:**  http://obofoundry.org/ontology/doid.html  
@@ -49,6 +49,13 @@
 **GitHub repo:**  https://github.com/infectious-disease-ontology/infectious-disease-ontology/  
 **Website:**  http://www.bioontology.org/wiki/index.php/Infectious_Disease_Ontology  
 **OBO Foundry webpage:**  http://obofoundry.org/ontology/ido.html  
+**Open:** Yes  
+
+#### International Classification of Functioning, Disability and Health (ICF)
+**Description:**  Represents diseases and provides a conceptual basis for the definition and measurement of health and disability as organized by patient-oriented outcomes of function and disability. ICF considers environmental factors as well as the relevance of associated health conditions in recognizing major models of disability.   
+**Disease area:**  Cross-discipline, focuses on health and disability
+**Use Cases:**  ICF is the World Health Organization (WHO) framework for measuring health and disability at both individual and population levels. ICF was officially endorsed by the WHO as the international standard to describe and measure health and disability.    
+**Website:**  https://www.who.int/standards/classifications/international-classification-of-functioning-disability-and-health  
 **Open:** Yes  
 
 #### International Statistical Classification of Diseases and Related Health Problems (ICD-11)
@@ -65,6 +72,13 @@
 **Website:** https://www.who.int/standards/classifications/other-classifications/international-classification-of-diseases-for-oncology  
 **Open:**  Yes
 
+#### Logical Observation Identifier Names and Codes (LOINC)
+**Description:**   Identifies medical laboratory observations.  
+**Disease area:**  Broad coverage     
+**Use Cases:**  The Regenstrief Institute first developed LOINC in 1994 in response to the demand for an electronic database for clinical care and management. LOINC is publicly available at no cost and is endorsed by the American Clinical Laboratory Association and the College of American Pathologists. Since its inception, LOINC has expanded to include not just medical laboratory code names but also nursing diagnoses, nursing interventions, outcome classifications, and patient care data sets.   
+**Website:** https://loinc.org/   
+**Open:**  Yes, registration is required.   
+
 #### Medical Subject Headings (MeSH)
 **Description:**   Medical Subject Headings (MeSH) thesaurus is a controlled and hierarchically-organized vocabulary produced by the National Library of Medicine.  
 **Disease area:**  Broad coverage     
@@ -73,11 +87,18 @@
 **Open:**  Yes 
 
 #### MedGen
-**Description:**   Organizes information related to human medical genetics, such as attributes of conditions with a genetic contribution.  
+**Description:**  Organizes information related to human medical genetics, such as attributes of conditions and phenotypes of genetic contributions.    
 **Disease area:** Human medical genetics     
 **Use Cases:**  MedGen is NCBI's portal to information about conditions and phenotypes related to Medical Genetics. Terms from the NIH Genetic Testing Registry (GTR), UMLS,  HPO, Orphanet, ClinVar and other sources are aggregated into concepts, each of which is assigned a unique identifier and a preferred name and symbol. The core content of the record may include names, identifiers used by other databases, mode of inheritance, clinical features, and map location of the loci affecting the disorder. The concept identifier (CUI) is used to aggregate information about that concept, similar to the way NCBI Gene serves as a gateway to gene-related information.  
 **Website:** https://www.ncbi.nlm.nih.gov/medgen/  
 **Open:**  Yes  
+
+#### Medical Dictionary for Regulatory Activities (MedDRA)
+**Description:**  Provides a standardized international medical terminology to be used for regulatory communication and evaluation of data about medicinal products for human use.  
+**Disease area:** Broad coverage
+**Use Cases:**  Mainly targeted towards industry and regulatory users.
+**Website:** https://www.meddra.org/
+**Open:**  Yes  	  
 
 #### Mental Disease Ontology (MDO) 
 **Description:**  An ontology to describe and classify mental diseases such as schizophrenia, annotated with DSM-IV and ICD codes where applicable.   
@@ -127,7 +148,7 @@
 **Open:** Yes   
 
 #### Orphanet
-**Description:** The portal for rare diseases and orphan drugs.  
+**Description:** The portal for rare diseases and orphan drugs. Contains a structured vocabulary for rare diseases capturing relationships between diseases, genes, and other relevant features, jointly developed by Orphanet and the EBI. It contains information on nearly 10,000 cancers and related diseases, 8,000 single agents and combination therapies, and a wide range of other topics related to cancer and biomedical research.   
 **Disease area:** Rare diseases       
 **Use Cases:**  Used by rare disease research and clinical community. Integrated into the Mondo disease ontology, aligned with OMIM.  
 **Website:** https://www.orpha.net/consor/cgi-bin/index.php   
