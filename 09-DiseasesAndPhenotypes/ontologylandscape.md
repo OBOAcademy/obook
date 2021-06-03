@@ -98,11 +98,12 @@
 **OBO Foundry webpage:** http://obofoundry.org/ontology/ogsf.html      
 **Open:** Yes   
 
-#### SNOMED (SNOMED) 
-**Description:**  A comprehensive clinical terminology/ontology used in healthcare settings, such as Electronic Health Records (EHRs).  
-**Use Cases:**  
+#### SNOMED Clinical Terminology (SNOMED CT)
+**Description:**  A comprehensive clinical terminology/ontology used in healthcare settings.  
+**Disease area:**  Broad disease representation for human diseases.   
+**Use Cases:**  Main coding system used in Electronic Health Records (EHRs).  
 **Website:**  https://browser.ihtsdotools.org/?   
-**Open:** No   
+**Open:** No, requires a license for usage.   
 
 #### Symptom Ontology
 **Description:**  An ontology of disease symptoms, with symptoms encompasing perceived changes in function, sensations or appearance reported by a patient indicative of a disease.    
