@@ -4,7 +4,7 @@
 -----
 #### Cardiovascular Disease Ontology (CVDO)  
 **Description:**  An ontology to describe entities related to cardiovascular diseases.  
-**Use Cases:**  
+**Use Cases:**  Describes entities related to cardiovascular diseases including the diseases themselves, the underlying disorders, and the related pathological processes.
 **GitHub repo:**  https://github.com/OpenLHS/CVDO/  
 **Website:**  https://github.com/OpenLHS/CVDO  
 **OBO Foundry webpage:**  http://obofoundry.org/ontology/cvdo.html  
@@ -70,7 +70,7 @@
 
 #### Ontology for General Medical Science (OGMS)
 **Description:**  An ontology of entities involved in a clinical encounter.  
-**Use Cases:** Provides a formal theory of disease that can be further elaborated by specific disease ontologies. It is intended to be used as a upper level ontology for other disease ontologies.  
+**Use Cases:** Provides a formal theory of disease that can be further elaborated by specific disease ontologies. It is intended to be used as a upper level ontology for other disease ontologies.  Used by [Cardiovascular Disease Ontology](https://github.com/OpenLHS/CVDO).
 **GitHub repo:**  https://github.com/OGMS/ogms   
 **OBO Foundry webpage:** http://obofoundry.org/ontology/ogms.html  
 **Open:**  Yes  
