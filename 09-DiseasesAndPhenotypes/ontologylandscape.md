@@ -13,7 +13,7 @@
 
 #### Coronavirus Infectious Disease Ontology (CIDO)
 **Description:** Aims to ontologically represent and standardize various aspects of coronavirus infectious diseases, including their etiology, transmission, epidemiology, pathogenesis, diagnosis, prevention, and treatment.  
-**Disease area:**  Coronavirus infectious diseases, including COVID-19, SARS, MERS
+**Disease area:**  Coronavirus infectious diseases, including COVID-19, SARS, MERS; covers etiology, transmission, epidemiology, pathogenesis, diagnosis, prevention, and treatment.
 **Use Cases:**  Used for disease annotations related to coronavirus infections.  
 **GitHub repo:**  https://github.com/cido-ontology/cido  
 **OBO Foundry webpage:**  http://obofoundry.org/ontology/cido.html  
@@ -21,7 +21,8 @@
 
 #### Human Disease Ontology (DO)
 **Description:**  An ontology for describing the classification of human diseases organized by etiology.  
-**Use Cases:**  
+**Disease area:**  Human disease terms, phenotype characteristics and related medical vocabulary disease concepts.  
+**Use Cases:**  Used by Model Organism Databases (MOD), such as Mouse Genome Informatics disease model for diseae annotations, and Alliance for Genome Resources. In 2018, DO tracked over 300 DO project citations suggesting wide adoption and usage for disease annotations.  
 **GitHub repo:**  https://github.com/DiseaseOntology/HumanDiseaseOntology/  
 **Website:**  http://www.disease-ontology.org/  
 **OBO Foundry webpage:**  http://obofoundry.org/ontology/doid.html  
