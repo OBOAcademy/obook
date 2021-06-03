@@ -154,6 +154,13 @@
 **Website:** https://www.orpha.net/consor/cgi-bin/index.php   
 **Open:** Yes   
 
+#### Rat Disease Ontology (RDO)
+**Description:** Provides the foundation for ten comprehensive disease area–related data sets at the Rat Genome Database Disease Portals. 
+**Disease area:** Broad coverage including animal diseases, infectious diseases, chemically-induced disorders, occupational diseases, wounds and injuries and more.
+**Use Cases:** Developed for use with the [Rat Genome Database](https://rgd.mcw.edu/rgdweb/homepage/) Disease Portals.  
+**Website:** https://rgd.mcw.edu/rgdweb/ontology/view.html?acc_id=DOID:4  		
+**Open:** Yes  
+
 #### SNOMED Clinical Terminology (SNOMED CT)
 **Description:**  A comprehensive clinical terminology/ontology used in healthcare settings.  
 **Disease area:**  Broad disease representation for human diseases.   
