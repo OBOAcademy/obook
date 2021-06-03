@@ -14,7 +14,7 @@ Brucellosis Ontology (IDOBRU)
 Cardiovascular Disease Ontology (CVDO) | Cardiovascular  
 Chronic Kidney Disease Ontology (CKDO) | Chronic kidney disease
 Chronic Obstructive Pulmonary Disease Ontology (COPDO) | Chronic obstructive pulmonary disease (COPD)
-Coronavirus Infectious Disease Ontology (CIDO) | Coronavirus infectious diseases, including COVID-19, SARS, MERS; covers etiology, transmission, epidemiology, pathogenesis, diagnosis, prevention, and treatment.  
+Coronavirus Infectious Disease Ontology (CIDO) | Coronavirus infectious diseases
 Diagnostic and Statistical Manual of Mental Disorders (DSM) | Mental disorders 
 Dispedia Core Ontology (DCO)
 Experimental Factor Ontology (EFO) | Broad disease coverage, integrates the Mondo disease ontology.  
