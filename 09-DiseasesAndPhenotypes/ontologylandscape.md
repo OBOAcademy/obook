@@ -4,7 +4,7 @@
 -----
 #### Cardiovascular Disease Ontology (CVDO)  
 **Description:**  An ontology to describe entities related to cardiovascular diseases.  
-**Use Cases:**  Describes entities related to cardiovascular diseases including the diseases themselves, the underlying disorders, and the related pathological processes.
+**Use Cases:**  Describes entities related to cardiovascular diseases including the diseases themselves, the underlying disorders, and the related pathological processes. Imports upper level terms from OGMS and imports some terms from Disease Ontology (DO).  
 **GitHub repo:**  https://github.com/OpenLHS/CVDO/  
 **Website:**  https://github.com/OpenLHS/CVDO  
 **OBO Foundry webpage:**  http://obofoundry.org/ontology/cvdo.html  
