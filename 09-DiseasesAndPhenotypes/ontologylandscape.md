@@ -30,8 +30,8 @@
 
 #### Infectious Disease Ontology (IDO)  
 **Description:**  A set of interoperable ontologies that will together provide coverage of the infectious disease domain. IDO core is the upper-level ontology that hosts terms of general relevance across the domain, while extension ontologies host terms to specific to a particular part of the domain.   
-**Disease area:**  Infectious disease features, such as acute, primary, secondary infection, and chronic, hospital acquired and local infection.   
-**Use Cases:**  Does not seem active, has not been released since 2017.  
+**Disease area:**  Infectious disease features, such as acute, primary, secondary infection, and chronic, hospital acquired and local infection.     
+**Use Cases:**  Does not seem active, has not been released since 2017.    
 **GitHub repo:**  https://github.com/infectious-disease-ontology/infectious-disease-ontology/  
 **Website:**  http://www.bioontology.org/wiki/index.php/Infectious_Disease_Ontology  
 **OBO Foundry webpage:**  http://obofoundry.org/ontology/ido.html  
