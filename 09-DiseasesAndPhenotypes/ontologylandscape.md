@@ -53,13 +53,15 @@
 
 #### Mental Disease Ontology (MDO) 
 **Description:**  An ontology to describe and classify mental diseases such as schizophrenia, annotated with DSM-IV and ICD codes where applicable.   
-**Use Cases:**
+**Disease area:**  Mental functioning, including mental processes such as cognition and traits such as intelligence.   
+**Use Cases:** The ontology has been partially aligned with the related projects [Cognitive Atlas](http://www.cognitiveatlas.org/), knowledge base on cognitive science and the [Cognitive Paradigm Ontology](http://www.cogpo.org/), which is used in the [Brainmap](http://brainmap.org/), a database of neuroimaging experiments.
 **GitHub repo:** https://github.com/jannahastings/mental-functioning-ontology   
 **OBO Foundry webpage:** http://obofoundry.org/ontology/mfomd.html  
 **Open:** yes
 
 #### Mondo Disease Ontology (Mondo) 
 **Description:**  An integrated disease ontology that provides precise mappings between source ontologies that comprehensively covers cross-species diseases, from common to rare diseases.  
+**Disease area:**  Cross species, intended to cover all areas of diseases, integrating source ontologies that cover Mendelian diseases (OMIM), rare diseases (Orphanet), neoplasms (NCIt), human diseases (DO), and others. See all sources [here](https://mondo.monarchinitiative.org/pages/sources/).
 **Use Cases:**  Mondo was developed for usage in the [Monarch Initiative](https://monarchinitiative.org/), a discovery system that allows navigation of similarities between phenotypes, organisms, and human diseases across many data sources and organisms. Mondo is also used by [ClinGen](https://www.clinicalgenome.org/) for disease curations, the [Kids First Data Resource Portal](https://portal.kidsfirstdrc.org/) for disease annotations and others, see an extensive list [here](https://mondo.monarchinitiative.org/pages/users/).  
 **GitHub repo:** https://github.com/monarch-initiative/mondo   
 **Website:**  https://mondo.monarchinitiative.org/   
@@ -68,6 +70,7 @@
 
 #### National Cancer Institute Thesaurus (NCIT) 
 **Description:**  NCI Thesaurus (NCIt)is a reference terminology that includes broad coverage of the cancer domain, including cancer related diseases, findings and abnormalities. The NCIt OBO Edition aims to increase integration of the NCIt with OBO Library ontologies. NCIt OBO Edition releases should be considered experimental.  
+**Disease area:**  Cancer and neoplasms
 **Use Cases:** NCI Thesaurus (NCIt) provides reference terminology for many National Cancer Institute and other systems. It is used by the Clinical Data Interchange Standards Consortium Terminology (CDISC), the U.S. Food and Drug Administration (FDA), the Federal Medication Terminologies (FMT), and the National Council for Prescription Drug Programs (NCPDP). It provides extensive coverage of neoplasms and cancers.   
 **GitHub repo:**  https://github.com/NCI-Thesaurus/thesaurus-obo-edition/issues  
 **Website:**  https://ncithesaurus.nci.nih.gov/ncitbrowser/pages/home.jsf?version=20.11e  
