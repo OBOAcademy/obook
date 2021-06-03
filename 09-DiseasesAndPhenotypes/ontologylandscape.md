@@ -4,6 +4,7 @@
 -----
 #### Cardiovascular Disease Ontology (CVDO)  
 **Description:**  An ontology to describe entities related to cardiovascular diseases.  
+**Disease area:** Cardiovascular  
 **Use Cases:**  Describes entities related to cardiovascular diseases including the diseases themselves, the underlying disorders, and the related pathological processes. Imports upper level terms from OGMS and imports some terms from Disease Ontology (DO).  
 **GitHub repo:**  https://github.com/OpenLHS/CVDO/  
 **Website:**  https://github.com/OpenLHS/CVDO  
@@ -12,7 +13,8 @@
 
 #### Coronavirus Infectious Disease Ontology (CIDO)
 **Description:** Aims to ontologically represent and standardize various aspects of coronavirus infectious diseases, including their etiology, transmission, epidemiology, pathogenesis, diagnosis, prevention, and treatment.  
-**Use Cases:**  
+**Disease area:**  Coronavirus infectious diseases, including COVID-19, SARS, MERS
+**Use Cases:**  Used for disease annotations related to coronavirus infections.  
 **GitHub repo:**  https://github.com/cido-ontology/cido  
 **OBO Foundry webpage:**  http://obofoundry.org/ontology/cido.html  
 **Open:** Yes  
