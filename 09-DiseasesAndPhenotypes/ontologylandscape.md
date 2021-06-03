@@ -2,6 +2,27 @@
 
 ### Disease ontologies
 -----
+
+### Summary Table
+
+Name | Diease Area 
+--- | ---
+Artificial Intelligence Rheumatology Consultant System Ontology (AI-RHEUM) | Rheumatic diseases
+Autism DSM-ADI-R Ontology (ADAR) | 
+Autism Spectrum Disorder Phenotype Ontology (ASDPTO) |
+Brucellosis Ontology (IDOBRU)
+Cardiovascular Disease Ontology (CVDO) | Cardiovascular  
+Chronic Kidney Disease Ontology (CKDO) | Chronic kidney disease
+Chronic Obstructive Pulmonary Disease Ontology (COPDO) | Chronic obstructive pulmonary disease (COPD)
+Coronavirus Infectious Disease Ontology (CIDO) | Coronavirus infectious diseases, including COVID-19, SARS, MERS; covers etiology, transmission, epidemiology, pathogenesis, diagnosis, prevention, and treatment.  
+Diagnostic and Statistical Manual of Mental Disorders (DSM) | Mental disorders 
+Dispedia Core Ontology (DCO)
+Experimental Factor Ontology (EFO) | Broad disease coverage, integrates the Mondo disease ontology.  
+Fibrotic Interstitial Lung Disease Ontology (FILDO)
+Genetic and Rare Diseases Information Center (GARD) | Rare diseases    
+Holistic Ontology of Rare Diseases | Rare disease 
+
+
 #### Artificial Intelligence Rheumatology Consultant System Ontology (AI-RHEUM)
 **Description:**  Contains findings, such as clinical signs, symptoms, laboratory test results, radiologic observations, tissue biopsy results, and intermediate diagnosis hypotheses, for the diagnosis of rheumatic diseases.  
 **Disease area:**  Rheumatic diseases
