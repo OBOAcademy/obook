@@ -47,7 +47,7 @@
 #### International Classification of Diseases for Oncology (ICD-O) 
 **Description:**  A domain-specific extension of the International Statistical Classification of Diseases and Related Health Problems for tumor diseases.  
 **Disease area:**  A multi-axial classification of the site, morphology, behaviour, and grading of neoplasms.  
-**Use Cases:** Used principally in tumour or cancer registries for coding the site (topography) and the histology (morphology) of neoplasms, usually obtained from a pathology report. 
+**Use Cases:** Used principally in tumour or cancer registries for coding the site (topography) and the histology (morphology) of neoplasms, usually obtained from a pathology report.  
 **Website:** https://www.who.int/standards/classifications/other-classifications/international-classification-of-diseases-for-oncology  
 **Open:**  Yes
 
