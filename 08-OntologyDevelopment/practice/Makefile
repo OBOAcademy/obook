@@ -33,9 +33,9 @@ test: build/report.html
 
 
 # 3. Annotate the file with an ontology IRI, a version IRI, and the following annotations (final output: my_ontology.owl):
-#    - terms:title
-#    - terms:description
-#    - dc11:license
+#    - dc11:title
+#    - dc11:description
+#    - dc:license
 
 
 # 4. Create 'build/report.html' by running ROBOT report over the finalized file

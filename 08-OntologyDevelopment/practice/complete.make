@@ -31,21 +31,21 @@ build/my_ontology.owl: $(MODULES)
 
 
 # 3. Annotate the file with an ontology IRI, a version IRI, and the following annotations (final output: my_ontology.owl):
-#    - terms:title
-#    - terms:description
-#    - dc11:license
+#    - dc11:title
+#    - dc11:description
+#    - dc:license
 
-my_ontology.owl: build/reasoned.owl
+my_ontology.owl: build/my_ontology.owl
 	robot annotate --input $< \
 	  --ontology-iri http://example.com/my_ontology.owl \
 	  --version-iri http://example.com/my_ontology/2021-06-03/my_ontology.owl \
-	  --annotation terms:title "My Ontology" \
-	  --annotation terms:description "An example ontology generated using Make" \
-	  --link-annotation dc11:license https://creativecommons.org/licenses/by/4.0/ \
+	  --annotation dc11:title "My Ontology" \
+	  --annotation dc11:description "An example ontology generated using Make" \
+	  --link-annotation dc:license https://creativecommons.org/licenses/by/4.0/ \
 	  --output $@
 
 
 # 5. Create 'build/report.html' by running ROBOT report over the finalized file
 #    This is our test to make sure everything looks good before we release
 build/report.html: my_ontology.owl
-	robot report --input $< --output $@
+	robot report --input $< --labels true --output $@
