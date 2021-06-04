@@ -357,7 +357,7 @@ Unified Medical Language System | Broad coverage
 #### Resource of Asian Primary Immunodeficiency Diseases (RPO)  
 **Description:**  Represents observed phenotypic terms, sequence variations, and messenger RNA and protein expression levels of all genes involved in primary immunodeficiency diseases.   
 **Disease area:**  Primary immunodeficiency diseases   
-**Use Cases:** This terminology is used in a freely accessible, dynamic and integrated database for primary immunodeficiency diseases (PID) called Resource of Asian Primary Immunodeficiency Diseases (RAPID), which is available [here](http://rapid.rcai.riken.jp/)      
+**Use Cases:** This terminology is used in a freely accessible, dynamic and integrated database for primary immunodeficiency diseases (PID) called Resource of Asian Primary Immunodeficiency Diseases (RAPID), which is available [here](http://rapid.rcai.riken.jp/).        
 **Open:** Yes  
 
 #### Sickle Cell Disease Ontology (SCDO)  
