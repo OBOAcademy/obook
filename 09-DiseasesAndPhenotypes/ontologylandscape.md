@@ -8,25 +8,25 @@
 Name | Diease Area 
 --- | ---
 Artificial Intelligence Rheumatology Consultant System Ontology (AI-RHEUM) | Rheumatic diseases
-Autism DSM-ADI-R Ontology (ADAR) | 
-Autism Spectrum Disorder Phenotype Ontology (ASDPTO) |
-Brucellosis Ontology (IDOBRU)
+Autism DSM-ADI-R Ontology (ADAR) |  Autism  
+Autism Spectrum Disorder Phenotype Ontology (ASDPTO) | Autism  
+Brucellosis Ontology (IDOBRU) | brucellosis  
 Cardiovascular Disease Ontology (CVDO) | Cardiovascular  
 Chronic Kidney Disease Ontology (CKDO) | Chronic kidney disease
 Chronic Obstructive Pulmonary Disease Ontology (COPDO) | Chronic obstructive pulmonary disease (COPD)
 Coronavirus Infectious Disease Ontology (CIDO) | Coronavirus infectious diseases
 Diagnostic and Statistical Manual of Mental Disorders (DSM) | Mental disorders 
-Dispedia Core Ontology (DCO)
-Experimental Factor Ontology (EFO) | Broad disease coverage, integrates the Mondo disease ontology.  
-Fibrotic Interstitial Lung Disease Ontology (FILDO)
+Dispedia Core Ontology (DCO) | Rare diseases
+Experimental Factor Ontology (EFO) | Broad disease coverage  
+Fibrotic Interstitial Lung Disease Ontology (FILDO) | Fibrotic interstitial lung disease
 Genetic and Rare Diseases Information Center (GARD) | Rare diseases    
 Holistic Ontology of Rare Diseases | Rare disease 
 Human Dermatological Disease Ontology (DERMO) | Dermatology (skin)  
 Human Disease Ontology (DO) |  Human disease  
 Infectious Disease Ontology (IDO) | Infectious disease
-International Classification of Functioning, Disability and Health (ICF) | Cross-discipline, focuses on health and disability
-International Statistical Classification of Diseases and Related Health Problems (ICD-11) | Broad coverage of human disease features 
-International Classification of Diseases for Oncology (ICD-O) 
+International Classification of Functioning, Disability and Health (ICF) | Cross-discipline, focuses disabilities
+International Statistical Classification of Diseases and Related Health Problems (ICD-11) | Broad coverage 
+International Classification of Diseases for Oncology (ICD-O) | Cancer
 Logical Observation Identifier Names and Codes (LOINC) | Broad coverage     
 Medical Subject Headings (MeSH) | Broad coverage     
 MedGen | Human medical genetics     
@@ -36,59 +36,51 @@ Mondo Disease Ontology (Mondo) | Broad coverage, Cross species
 National Cancer Institute Thesaurus (NCIT) | Humam cancer and neoplasms  
 Neurological Disease Ontology (ND) | Neurology 
 Online Mendelian Inheritance in Man (OMIM) | Mendelian, genetic diseases.   
-Ontology of Cardiovascular Drug Adverse Events	(OCVDAE)
-Ontology for General Medical Science (OGMS)
-Ontology for Genetic Susceptibility Factor (OGSF)  
-Ontology of Glucose Metabolism Disorder  
+Ontology of Cardiovascular Drug Adverse Events	(OCVDAE) | Cardiovascular
+Ontology for General Medical Science (OGMS) | Broad coverage
+Ontology for Genetic Susceptibility Factor (OGSF)  | Genetic disease
+Ontology of Glucose Metabolism Disorder  | Metabolic disorders
 Ontology of Language Disorder in Autism (LDA) | Austism
 The Oral Health and Disease Ontology (OHD)| Oral health and disease
 Orphanet | Rare diseases       
-Parkinson Disease Ontology (PDO)
-Pathogenic Disease Ontology (PDO)
-PolyCystic Ovary Syndrome Knowledgebase (PCOSKB)
+Parkinson Disease Ontology (PDO) | Parkinson disease
+Pathogenic Disease Ontology (PDO) | Pathogenic diseases
+PolyCystic Ovary Syndrome Knowledgebase (PCOSKB) | Polycystic ovary syndrome
 Rat Disease Ontology (RDO) | Broad coverage
-Removable Partial Denture Ontology (RPDO)
-Resource of Asian Primary Immunodeficiency Diseases (RPO)
-Sickle Cell Disease Ontology (SCDO)
+Removable Partial Denture Ontology (RPDO) | Oral health
+Resource of Asian Primary Immunodeficiency Diseases (RPO) | Immunodeficiencies
+Sickle Cell Disease Ontology (SCDO) | Sickle Cell Disease
 SNOMED Clinical Terminology (SNOMED CT) | Broad disease representation for human diseases.   
 Symptom Ontology | Human diseases    
 Unified Medical Language System | Broad coverage  
 
-#### Artificial Intelligence Rheumatology Consultant System Ontology (AI-RHEUM)
-**Description:**  Contains findings, such as clinical signs, symptoms, laboratory test results, radiologic observations, tissue biopsy results, and intermediate diagnosis hypotheses, for the diagnosis of rheumatic diseases.  
-**Disease area:**  Rheumatic diseases
-**Use Cases:** Used by clinicians and informatics researchers,
-**GitHub repo:**  
-**Website:**  
-**OBO Foundry webpage:**   
-**Open:** 
+#### Artificial Intelligence Rheumatology Consultant System ontology (AI-RHEUM)  
+**Description:**  Contains findings, such as clinical signs, symptoms, laboratory test results, radiologic observations, tissue biopsy results, and intermediate diagnosis hypotheses, for the diagnosis of rheumatic diseases.   
+**Disease area:**  Rheumatic diseases  
+**Use Cases:** Used by clinicians and informatics researchers.  
+**Website:**  https://bioportal.bioontology.org/ontologies/AI-RHEUM  
+**Open:** Yes  
 
 #### Autism DSM-ADI-R Ontology (ADAR)
-**Description:**  An ontology of autism spectrum disorder (ASD) and related neurodevelopmental disorders that extends an existing autism ontology to allow automatic inference of ASD phenotypes and Diagnostic and Statistical Manual of Mental Disorders (DSM) criteria based on subjects’ Autism Diagnostic Interview–Revised (ADI-R) assessment data.  
-**Disease area:**  
-**Use Cases:** 
-**GitHub repo:**  
-**Website:**  
-**OBO Foundry webpage:**   
-**Open:** 
+**Description:**  An ontology of autism spectrum disorder (ASD) and related neurodevelopmental disorders.
+**Disease area:**  Autism  
+**Use Cases:**   It extends an existing autism ontology to allow automatic inference of ASD phenotypes and Diagnostic and Statistical Manual of Mental Disorders (DSM) criteria based on subjects’ Autism Diagnostic Interview–Revised (ADI-R) assessment data.  
+**Website:**  https://bioportal.bioontology.org/ontologies/ADAR  
+**Open:** Yes  
 
 #### Autism Spectrum Disorder Phenotype Ontology (ASDPTO)
 **Description:**  Encapsulates the ASD behavioral phenotype, informed by the standard ASD assessment instruments and the currently known characteristics of this disorder.   	
-**Disease area:**  
-**Use Cases:** 
-**GitHub repo:**  
-**Website:**  
-**OBO Foundry webpage:**   
-**Open:** 
+**Disease area:**  Autism  
+**Use Cases:** Intended for use in research settings where extensive phenotypic data have been collected, allowing a concept-based approach to identifying behavioral features of importance and for correlating these with genotypic data.  
+**Website:**  https://bioportal.bioontology.org/ontologies/ASDPTO  
+**Open:** Yes  
 
 #### Brucellosis Ontology (IDOBRU)
 **Description:**  Describes the most common zoonotic disease, brucellosis, which is caused by Brucella, a type of facultative intracellular bacteria.   
-**Disease area:**  
-**Use Cases:** 
-**GitHub repo:**  
-**Website:**  
-**OBO Foundry webpage:**   
-**Open:** 
+**Disease area:**  brucellosis bacteria   
+**Use Cases:** An extension ontology of the core Infectious Disease Ontology (IDO-core). This project appears to be inactive.   
+**Website:**  http://sourceforge.net/projects/idobru   
+**Open:** Yes  	
 
 #### Cardiovascular Disease Ontology (CVDO)  
 **Description:**  An ontology to describe entities related to cardiovascular diseases.  
@@ -100,21 +92,18 @@ Unified Medical Language System | Broad coverage
 **Open:** Yes   
 
 #### Chronic Kidney Disease Ontology (CKDO)
-**Description:**  Assists routine data studies and case identification of chronic kidney disease in primary care.   
+**Description:**  An ontology oof chronic kidney disease in primary care.   
 **Disease area:**  Chronic kidney disease
-**Use Cases:** 
-**GitHub repo:**  
-**Website:**  http://purl.bioontology.org/ ontology/CKDO   
-**Open:** 
+**Use Cases:** CKDDO was developed to assist routine data studies and case identification of CKD in primary care.  
+**Website:**  http://purl.bioontology.org/ontology/CKDO   
+**Open:** Yes  
 
 #### Chronic Obstructive Pulmonary Disease Ontology (COPDO)
 **Description:**  Models concepts associated with chronic obstructive pulmonary disease in routine clinical databases.  
 **Disease area:**  Chronic obstructive pulmonary disease (COPD)
-**Use Cases:** 
-**GitHub repo:**  
-**Website:**  
-**OBO Foundry webpage:**   
-**Open:**
+**Use Cases:** 	Clinical use.
+**Website:**  https://bioportal.bioontology.org/ontologies/COPDO  
+**Open:** Yes  
 
 #### Coronavirus Infectious Disease Ontology (CIDO)
 **Description:** Aims to ontologically represent and standardize various aspects of coronavirus infectious diseases, including their etiology, transmission, epidemiology, pathogenesis, diagnosis, prevention, and treatment.  
@@ -132,13 +121,11 @@ Unified Medical Language System | Broad coverage
 **Open:** No, must be purchased   
 
 #### Dispedia Core Ontology (DCO)
-**Description:**  A schema for information brokering and knowledge management in the complex field of rare diseases. DCO describes patients affected by rare diseases and records expertise about diseases in machine-readable form. DCO was initially created with amyotrophic lateral sclerosis as a use case.   
-**Disease area:**  
-**Use Cases:** 
-**GitHub repo:**  
+**Description:**  A schema for information brokering and knowledge management in the complex field of rare diseases. DCO describes patients affected by rare diseases and records expertise about diseases in machine-readable form. 
+**Disease area:**  Rare disease  
+**Use Cases:**  DCO was initially created with amyotrophic lateral sclerosis as a use case.   
 **Website:**  http://purl.bioontology.org/ontology/DCO  
-**OBO Foundry webpage:**   
-**Open:** 
+**Open:** Yes  
 
 #### Experimental Factor Ontology (EFO)
 **Description:**  Provides a systematic description of many experimental variables available in EBI databases, and for projects such as the GWAS catalog.  
@@ -149,12 +136,10 @@ Unified Medical Language System | Broad coverage
 
 #### Fibrotic Interstitial Lung Disease Ontology (FILDO)
 **Description:**  An in-progress, four-tiered ontology proposed to standardize the diagnostic classification of patients with fibrotic interstitial lung disease.   
-**Disease area:**  
-**Use Cases:** 
-**GitHub repo:**  
-**Website:**  
-**OBO Foundry webpage:**   
-**Open:** 
+**Disease area:**  Fibrotic interstitial lung disease
+**Use Cases:** Goal is to standardize the diagnostic classification of patients with fibrotic ILD. A paper was published in 2017 and an ontology is not publicly available.
+**Publication:**  https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5803648/
+**Open:** No  
 
 #### Genetic and Rare Diseases Information Center (GARD)
 **Description:**   NIH resource that provides the public with access to current, reliable, and easy-to-understand information about rare or genetic diseases in English or Spanish.  
@@ -163,14 +148,12 @@ Unified Medical Language System | Broad coverage
 **Website:** https://rarediseases.info.nih.gov/  
 **Open:** Yes  
 
-#### Holistic Ontology of Rare Diseases  
+#### Holistic Ontology of Rare Diseases (HORD)
 **Description:** Describes the biopsychosocial state (i.e., disease, psychological, social, and environmental state) of persons with rare diseases in a holistic way.   
 **Disease area:**  Rare disease  
-**Use Cases:** 
-**GitHub repo:**  
+**Use Cases:** [Rehabilita, Disruptive Technologies for the Rehabilitation of the Future](http://www.gbt.tfo.upm.es/item325), a project that aims to enhance rehabilitation transforming it to a more personalized, ubiquitous and evidence-based rehabilitation.
 **Website:**  http://purl.bioontology.org/ ontology/HORD  
-**OBO Foundry webpage:**   
-**Open:** 
+**Open:** Yes  
 
 #### Human Dermatological Disease Ontology (DERMO)
 **Description:**  The most comprehensive dermatological disease ontology available, with over 3,500 classes available. There are 20 upper-level disease entities, with features such as anatomical location, heritability, and affected cell or tissue type.
