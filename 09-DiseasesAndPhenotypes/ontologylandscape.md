@@ -56,15 +56,15 @@ Unified Medical Language System | Broad coverage
 
 #### Artificial Intelligence Rheumatology Consultant System ontology (AI-RHEUM)  
 **Description:**  Contains findings, such as clinical signs, symptoms, laboratory test results, radiologic observations, tissue biopsy results, and intermediate diagnosis hypotheses, for the diagnosis of rheumatic diseases.   
-**Disease area:**  Rheumatic diseases  
+**Disease area:**  Rheumatic diseases   
 **Use Cases:** Used by clinicians and informatics researchers.  
 **Website:**  https://bioportal.bioontology.org/ontologies/AI-RHEUM  
 **Open:** Yes  
 
 #### Autism DSM-ADI-R Ontology (ADAR)
-**Description:**  An ontology of autism spectrum disorder (ASD) and related neurodevelopmental disorders.
-**Disease area:**  Autism  
-**Use Cases:**   It extends an existing autism ontology to allow automatic inference of ASD phenotypes and Diagnostic and Statistical Manual of Mental Disorders (DSM) criteria based on subjects’ Autism Diagnostic Interview–Revised (ADI-R) assessment data.  
+**Description:**  An ontology of autism spectrum disorder (ASD) and related neurodevelopmental disorders.  
+**Disease area:**  Autism   
+**Use Cases:**   It extends an existing autism ontology to allow automatic inference of ASD phenotypes and Diagnostic and Statistical Manual of Mental Disorders (DSM) criteria based on subjects’ Autism Diagnostic Interview–Revised (ADI-R) assessment data.   
 **Website:**  https://bioportal.bioontology.org/ontologies/ADAR  
 **Open:** Yes  
 
@@ -79,31 +79,31 @@ Unified Medical Language System | Broad coverage
 **Description:**  Describes the most common zoonotic disease, brucellosis, which is caused by Brucella, a type of facultative intracellular bacteria.   
 **Disease area:**  brucellosis bacteria   
 **Use Cases:** An extension ontology of the core Infectious Disease Ontology (IDO-core). This project appears to be inactive.   
-**Website:**  http://sourceforge.net/projects/idobru   
+**Website:**  http://sourceforge.net/projects/idobru    
 **Open:** Yes  	
 
 #### Cardiovascular Disease Ontology (CVDO)  
 **Description:**  An ontology to describe entities related to cardiovascular diseases.  
-**Disease area:** Cardiovascular  
-**Use Cases:**  Describes entities related to cardiovascular diseases including the diseases themselves, the underlying disorders, and the related pathological processes. Imports upper level terms from OGMS and imports some terms from Disease Ontology (DO).  
-**GitHub repo:**  https://github.com/OpenLHS/CVDO/  
-**Website:**  https://github.com/OpenLHS/CVDO  
-**OBO Foundry webpage:**  http://obofoundry.org/ontology/cvdo.html  
+**Disease area:** Cardiovascular   
+**Use Cases:**  Describes entities related to cardiovascular diseases including the diseases themselves, the underlying disorders, and the related pathological processes. Imports upper level terms from OGMS and imports some terms from Disease Ontology (DO).   
+**GitHub repo:**  https://github.com/OpenLHS/CVDO/   
+**Website:**  https://github.com/OpenLHS/CVDO   
+**OBO Foundry webpage:**  http://obofoundry.org/ontology/cvdo.html   
 **Open:** Yes   
 
-#### Chronic Kidney Disease Ontology (CKDO)
-**Description:**  An ontology oof chronic kidney disease in primary care.   
-**Disease area:**  Chronic kidney disease
+#### Chronic Kidney Disease Ontology (CKDO)  
+**Description:**  An ontology oof chronic kidney disease in primary care.    
+**Disease area:**  Chronic kidney disease  
 **Use Cases:** CKDDO was developed to assist routine data studies and case identification of CKD in primary care.  
 **Website:**  http://purl.bioontology.org/ontology/CKDO   
 **Open:** Yes  
 
-#### Chronic Obstructive Pulmonary Disease Ontology (COPDO)
-**Description:**  Models concepts associated with chronic obstructive pulmonary disease in routine clinical databases.  
-**Disease area:**  Chronic obstructive pulmonary disease (COPD)
-**Use Cases:** 	Clinical use.
+#### Chronic Obstructive Pulmonary Disease Ontology (COPDO)  
+**Description:**  Models concepts associated with chronic obstructive pulmonary disease in routine clinical databases.   
+**Disease area:**  Chronic obstructive pulmonary disease (COPD)  
+**Use Cases:** 	Clinical use.  
 **Website:**  https://bioportal.bioontology.org/ontologies/COPDO  
-**Open:** Yes  
+**Open:** Yes   
 
 #### Coronavirus Infectious Disease Ontology (CIDO)
 **Description:** Aims to ontologically represent and standardize various aspects of coronavirus infectious diseases, including their etiology, transmission, epidemiology, pathogenesis, diagnosis, prevention, and treatment.  
@@ -115,23 +115,23 @@ Unified Medical Language System | Broad coverage
 
 #### Diagnostic and Statistical Manual of Mental Disorders (DSM)
 **Description:**  Authoritative source to define and classify mental disorders to improve diagnoses, treatment, and research.  
-**Disease area:**  Mental disorders 
+**Disease area:**  Mental disorders  
 **Use Cases:**  Used in clinical healthcare and research by pyschiatrists and psychologists.     
-**Website:** https://www.psychiatry.org/psychiatrists/practice/dsm
+**Website:** https://www.psychiatry.org/psychiatrists/practice/dsm  
 **Open:** No, must be purchased   
 
-#### Dispedia Core Ontology (DCO)
-**Description:**  A schema for information brokering and knowledge management in the complex field of rare diseases. DCO describes patients affected by rare diseases and records expertise about diseases in machine-readable form. 
+#### Dispedia Core Ontology (DCO)  
+**Description:**  A schema for information brokering and knowledge management in the complex field of rare diseases. DCO describes patients affected by rare diseases and records expertise about diseases in machine-readable form.  
 **Disease area:**  Rare disease  
 **Use Cases:**  DCO was initially created with amyotrophic lateral sclerosis as a use case.   
 **Website:**  http://purl.bioontology.org/ontology/DCO  
-**Open:** Yes  
+**Open:** Yes   
 
 #### Experimental Factor Ontology (EFO)
 **Description:**  Provides a systematic description of many experimental variables available in EBI databases, and for projects such as the GWAS catalog.  
 **Disease area:**  Broad disease coverage, integrates the Mondo disease ontology.  
 **Use Cases:**  Application ontology build for [European Bioinformatics (EBI)](https://www.ebi.ac.uk/) tools and databases and [Open Targets Genetics Portal](https://www.opentargets.org/).      
-**Website:** https://www.ebi.ac.uk/efo/  
+**Website:** https://www.ebi.ac.uk/efo/   
 **Open:** Yes  
 
 #### Fibrotic Interstitial Lung Disease Ontology (FILDO)
