@@ -270,15 +270,15 @@ Unified Medical Language System | Broad coverage
 **Open:** yes  
 
 #### Ontology of Cardiovascular Drug Adverse Events	(OCVDAE)  
-**Description:**  A biomedical ontology of cardiovascular drug–associated adverse events.  
-**Disease area:**  Cardiovascular  
-**Use Cases:** One novel study of the OCVDAE project is the development of the PCR method. Specifically, an AE-specific drug class effect is defined to exist when all the drugs (drug chemical ingredients or drug products) in a drug class are associated with an AE, which is formulated as a proportional class level ratio (“PCR”) = 1. See more information in the paper: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5653862/. This project may be inactive, the last GitHub commit was in 2019.  
-**GitHub repo:** https://github.com/OCVDAE/OCVDAE  
-**Website:**  https://bioportal.bioontology.org/ontologies/OCVDAE   
-**OBO Foundry webpage:**   	
+**Description:**  A biomedical ontology of cardiovascular drug–associated adverse events.   
+**Disease area:**  Cardiovascular   
+**Use Cases:** One novel study of the OCVDAE project is the development of the PCR method. Specifically, an AE-specific drug class effect is defined to exist when all the drugs (drug chemical ingredients or drug products) in a drug class are associated with an AE, which is formulated as a proportional class level ratio (“PCR”) = 1. See more information in the paper: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5653862/. This project may be inactive, the last GitHub commit was in 2019.   
+**GitHub repo:** https://github.com/OCVDAE/OCVDAE   
+**Website:**  https://bioportal.bioontology.org/ontologies/OCVDAE    
+**Open:** yes  
 
-#### Ontology for General Medical Science (OGMS)
-**Description:**  An ontology of entities involved in a clinical encounter.   
+#### Ontology for General Medical Science (OGMS)  
+**Description:**  An ontology of entities involved in a clinical encounter.    
 **Use Cases:** Provides a formal theory of disease that can be further elaborated by specific disease ontologies. It is intended to be used as a upper level ontology for other disease ontologies.  Used by [Cardiovascular Disease Ontology](https://github.com/OpenLHS/CVDO).  
 **GitHub repo:**  https://github.com/OGMS/ogms    
 **OBO Foundry webpage:** http://obofoundry.org/ontology/ogms.html   
@@ -293,10 +293,10 @@ Unified Medical Language System | Broad coverage
 
 #### Ontology of Glucose Metabolism Disorder (OGMD)   
 **Description:**  Represents glucose metabolism disorder and diabetes disease names, phenotypes, and their classifications.    
-**Disease area:**  Metabolic disorders  
-**Use Cases:** Still under development (last verssion released in BioPortal was in 2021) but there is little information about its usage online.   
+**Disease area:**  Metabolic disorders   
+**Use Cases:** Still under development (last verssion released in BioPortal was in 2021) but there is little information about its usage online.    
 **Website:**  https://bioportal.bioontology.org/ontologies/OGMD   
-**Open:** Yes  
+**Open:** Yes   
 
 #### Ontology of Language Disorder in Autism (LDA)
 **Description:**  An ontology assembled from a set of language terms mined from the autism literature.
