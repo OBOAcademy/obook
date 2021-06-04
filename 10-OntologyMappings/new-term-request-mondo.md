@@ -12,3 +12,7 @@
 1. Please email Nicole or comment on the ticket (Nicole will be emailed) if you have any additional questions or need the ticket is high priority
 
 See [video](https://drive.google.com/file/d/14g9y1nmCmRTkPB1fa6y_jIW3lHyFV4-g/view?resourcekey)
+
+# Practice
+
+1. Using these guidelines above, make a new term request on the Mondo tracker for 'restrictive pulmonary disease'.
