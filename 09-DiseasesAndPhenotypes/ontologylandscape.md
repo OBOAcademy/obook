@@ -301,19 +301,16 @@ Unified Medical Language System | Broad coverage
 #### Ontology of Language Disorder in Autism (LDA)  
 **Description:**  An ontology assembled from a set of language terms mined from the autism literature.  
 **Disease area:**  Austism  
-**Use Cases:**   
-**GitHub repo:**    
-**Website:**  http://purl.bioontology.org/ ontology/LDA  
-**OBO Foundry webpage:**    
-**Open:**   
+**Use Cases:**   This has not been released since 2008 and looks like it is inactive.  
+**Website:**  https://bioportal.bioontology.org/ontologies/LDA    
+**Open:** Yes    
 
 #### The Oral Health and Disease Ontology (OHD)  
 **Description:**  Represents the content of dental practice health records and is intended to be further developed for use in translational medicine. OHD is structured using BFO (Basic Formal Ontology) and uses terms from many ontologies, NCBITaxon, and a subset of terms from the CDT (Current Dental Terminology).  
 **Disease area:**  Oral health and disease  
-**Use Cases:**  
-**GitHub repo:**    
-**Website:**    
-**Open:**   
+**Use Cases:**  Used to represent the content of dental practice health records and is intended to be further developed for use in translation medicine. Appears to be inactive.   
+**OBO Foundry webpage:** http://www.obofoundry.org/ontology/ohd.html     
+**Open:**  Yes   
 
 #### Orphanet  
 **Description:** The portal for rare diseases and orphan drugs. Contains a structured vocabulary for rare diseases capturing relationships between diseases, genes, and other relevant features, jointly developed by Orphanet and the EBI. It contains information on nearly 10,000 cancers and related diseases, 8,000 single agents and combination therapies, and a wide range of other topics related to cancer and biomedical research.   
@@ -322,14 +319,12 @@ Unified Medical Language System | Broad coverage
 **Website:** https://www.orpha.net/consor/cgi-bin/index.php   
 **Open:** Yes   
 
-#### Parkinson Disease Ontology (PDO)  
-**Description:**  A comprehensive semantic framework with a subclass-based taxonomic hierarchy, covering the whole breadth of the Parkinson disease knowledge domain from major biomedical concepts to different views on disease features held by molecular biologists, clinicians, and drug developers.   
-**Disease area:**  
-**Use Cases:** 
-**GitHub repo:**  
-**Website:**  
-**OBO Foundry webpage:**   
-**Open:** 
+#### Parkinson Disease ontology (PDO)  
+**Description:**  A comprehensive semantic framework with a subclass-based taxonomic hierarchy, covering the whole breadth of the Parkinson disease knowledge domain from major biomedical concepts to different views on disease features held by molecular biologists, clinicians, and drug developers.    
+**Disease area:**  Parkinson disease  
+**Use Cases:** This resource has been created for use in the IMI-funded [AETIONOMY project](www.aetionomy.org). Last release was in 2015, may be inactive.
+**Website:**  https://bioportal.bioontology.org/ontologies/PDON   
+**Open:** Yes  
 
 #### Pathogenic Disease Ontology (PDO)  
 **Description:**  Provides information on infectious diseases, disease synonyms, transmission pathways, disease agents, affected populations, and disease properties. Diseases are grouped into syndromic disease categories, organisms are structured hierarchically, and both disease transmission and relevant disease properties are searchable.   
