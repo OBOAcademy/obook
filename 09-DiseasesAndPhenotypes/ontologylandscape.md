@@ -152,7 +152,7 @@ Unified Medical Language System | Broad coverage
 **Description:** Describes the biopsychosocial state (i.e., disease, psychological, social, and environmental state) of persons with rare diseases in a holistic way.   
 **Disease area:**  Rare disease  
 **Use Cases:** [Rehabilita, Disruptive Technologies for the Rehabilitation of the Future](http://www.gbt.tfo.upm.es/item325), a project that aims to enhance rehabilitation transforming it to a more personalized, ubiquitous and evidence-based rehabilitation.  
-**Website:**  http://purl.bioontology.org/ ontology/HORD   
+**Website:**  http://purl.bioontology.org/ontology/HORD   
 **Open:** Yes  
 
 #### Human Dermatological Disease Ontology (DERMO)
