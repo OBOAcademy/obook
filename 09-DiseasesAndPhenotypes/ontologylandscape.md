@@ -352,7 +352,7 @@ Unified Medical Language System | Broad coverage
 **Disease area:**  Oral health and dentures  
 **Use Cases:** A paper was published on this in 2016 but it does not appear any other information is available about this ontology on the website, presumably it is an inactive project.  
 **Publication:** https://www.nature.com/articles/srep27855    
-**Open:** No. 
+**Open:** No   
 
 #### Resource of Asian Primary Immunodeficiency Diseases (RPO)  
 **Description:**  Represents observed phenotypic terms, sequence variations, and messenger RNA and protein expression levels of all genes involved in primary immunodeficiency diseases.   
