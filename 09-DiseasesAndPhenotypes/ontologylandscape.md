@@ -1,6 +1,6 @@
 ## Ontology Landscape
 
-_Compiled by Nicole Vasilevsky, last updated 2021-06-04. Feel free to make pull requests to suggest edits._
+_Compiled by Nicole Vasilevsky. Feel free to make pull requests to suggest edits._
 
 ### Disease Ontologies & Terminologies
 -----
