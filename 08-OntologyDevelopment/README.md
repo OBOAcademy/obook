@@ -17,7 +17,7 @@ By the end of this session, you should be able to:
 ## Preparation
 
 Please complete the following and then read the section below:
-- ROBOT Mini-Tutorial, part 2 (*TODO*)
+- [ROBOT Mini-Tutorial, part 2](https://github.com/jamesaoverton/obook/blob/master/08-OntologyDevelopment/ROBOT_tutorial_2.md)
 - Software Carpentry: [Automation and Make](http://swcarpentry.github.io/make-novice/)
 
 #### What is an ontology release?
@@ -47,12 +47,14 @@ Since we can turn these steps into a series of commands, we can create a `Makefi
   - Week 5: [`report`](http://robot.obolibrary.org/report) and [`query`](http://robot.obolibrary.org/query)
   - Week 6: [`convert`](http://robot.obolibrary.org/convert), [`extract`](http://robot.obolibrary.org/extract), and [`template`](http://robot.obolibrary.org/template)
   - New: [`merge`](http://robot.obolibrary.org/merge), [`reason`](http://robot.obolibrary.org/reason), and [`annotate`](http://robot.obolibrary.org/annotate)
+  - Chaining ROBOT commands
+  - Specifying custom prefixes
 - Introduction to Makefiles & workflows (Becky; review; 30 minutes)
   - Review Software Carpentry course content
   - How can the ROBOT commands be combined to create an ontology release?
   - Practice writing recipes using ROBOT commands
-- Introduction to the [OBO Foundry Registry](http://obofoundry.org/) (Nico; 15 minutes)
 - Using the ODK to bootstrap a new ontology (Nico; 45 minutes)
+- Introduction to the [OBO Foundry Registry](http://obofoundry.org/) (if time)
 
 ## Semantic Engineer Toolbox
 
