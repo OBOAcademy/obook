@@ -159,7 +159,7 @@ Unified Medical Language System | Broad coverage
 **Description:**  The most comprehensive dermatological disease ontology available, with over 3,500 classes available. There are 20 upper-level disease entities, with features such as anatomical location, heritability, and affected cell or tissue type.  
 **Disease area:**  Dermatology (skin)  
 **Use Cases:** DermO can be used to extract data from patient electronic health records using text mining, or to translate existing variable-granularity coding such as ICD-10 to allow capture and standardization of patient/disease annotations.   
-**Website:**  https://bioportal.bioontology.org/ontologies/DERMO  	
+**Website:**  https://bioportal.bioontology.org/ontologies/DERMO    	
 **Open:**  Yes  
 
 #### Human Disease Ontology (DO)
