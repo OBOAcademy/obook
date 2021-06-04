@@ -158,11 +158,9 @@ Unified Medical Language System | Broad coverage
 #### Human Dermatological Disease Ontology (DERMO)
 **Description:**  The most comprehensive dermatological disease ontology available, with over 3,500 classes available. There are 20 upper-level disease entities, with features such as anatomical location, heritability, and affected cell or tissue type.
 **Disease area:**  Dermatology (skin)  
-**Use Cases:** 
-**GitHub repo:**  
-**Website:**  
-**OBO Foundry webpage:**   
-**Open:** 
+**Use Cases:** DermO can be used to extract data from patient electronic health records using text mining, or to translate existing variable-granularity coding such as ICD-10 to allow capture and standardization of patient/disease annotations.   
+**Website:**  https://bioportal.bioontology.org/ontologies/DERMO  
+**Open:**  Yes  
 
 #### Human Disease Ontology (DO)
 **Description:**  An ontology for describing the classification of human diseases organized by etiology.  
@@ -258,12 +256,11 @@ Unified Medical Language System | Broad coverage
 **Open:**  Yes  
 
 #### Neurological Disease Ontology (ND)
-**Description:**  A representational tool that addresses the need for unambiguous annotation, storage, and retrieval of data associated with the treatment and study of neurological diseases.  
+**Description:**  A framework for the representation of key aspects of neurological disease.  
 **Disease area:**  Neurology 
-**Use Cases:** 
-**Website:**  
-**OBO Foundry webpage:** 
-**Open:**  
+**Use Cases:** Goal is to provide a framework to enable representation of aspects of neurological diseases that are relevant to their treatment and study. This project may be inactive, the last commit to GitHub was in 2016.
+**GitHub repo:** https://github.com/addiehl/neurological-disease-ontology  
+**Open:**  Yes  
 
 #### Online Mendelian Inheritance in Man (OMIM)
 **Description:**  a comprehensive, authoritative compendium of human genes and genetic phenotypes that is freely available and updated daily.  
@@ -274,12 +271,11 @@ Unified Medical Language System | Broad coverage
 
 #### Ontology of Cardiovascular Drug Adverse Events	(OCVDAE)
 **Description:**  A biomedical ontology of cardiovascular drug–associated adverse events.  
-**Disease area:**  
-**Use Cases:** 
-**GitHub repo:**  
-**Website:**  
+**Disease area:**  Cardiovasculaar
+**Use Cases:** One novel study of the OCVDAE project is the development of the PCR method. Specifically, an AE-specific drug class effect is defined to exist when all the drugs (drug chemical ingredients or drug products) in a drug class are associated with an AE, which is formulated as a proportional class level ratio (“PCR”) = 1. See more information in the paper: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5653862/. This project may be inactive, the last GitHub commit was in 2019.
+**GitHub repo:** https://github.com/OCVDAE/OCVDAE
+**Website:**  https://bioportal.bioontology.org/ontologies/OCVDAE  
 **OBO Foundry webpage:**   
-**Open:** 
 
 #### Ontology for General Medical Science (OGMS)
 **Description:**  An ontology of entities involved in a clinical encounter.   
