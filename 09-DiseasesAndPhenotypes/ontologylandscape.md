@@ -3,7 +3,7 @@
 ### Disease ontologies
 -----
 
-### Summary Table
+### Disease Summary Table
 
 Name | Diease Area 
 --- | ---
@@ -416,7 +416,7 @@ Unified Medical Language System | Broad coverage
 ### Phenotype ontologies
 -----
 
-### Summary Table
+### Phenotype Summary Table
 
 Name | Species Area 
 --- | ---
