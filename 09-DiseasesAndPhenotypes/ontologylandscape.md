@@ -156,10 +156,10 @@ Unified Medical Language System | Broad coverage
 **Open:** Yes  
 
 #### Human Dermatological Disease Ontology (DERMO)
-**Description:**  The most comprehensive dermatological disease ontology available, with over 3,500 classes available. There are 20 upper-level disease entities, with features such as anatomical location, heritability, and affected cell or tissue type.
+**Description:**  The most comprehensive dermatological disease ontology available, with over 3,500 classes available. There are 20 upper-level disease entities, with features such as anatomical location, heritability, and affected cell or tissue type.  
 **Disease area:**  Dermatology (skin)  
 **Use Cases:** DermO can be used to extract data from patient electronic health records using text mining, or to translate existing variable-granularity coding such as ICD-10 to allow capture and standardization of patient/disease annotations.   
-**Website:**  https://bioportal.bioontology.org/ontologies/DERMO  
+**Website:**  https://bioportal.bioontology.org/ontologies/DERMO  	
 **Open:**  Yes  
 
 #### Human Disease Ontology (DO)
@@ -182,7 +182,7 @@ Unified Medical Language System | Broad coverage
 
 #### International Classification of Functioning, Disability and Health (ICF)
 **Description:**  Represents diseases and provides a conceptual basis for the definition and measurement of health and disability as organized by patient-oriented outcomes of function and disability. ICF considers environmental factors as well as the relevance of associated health conditions in recognizing major models of disability.   
-**Disease area:**  Cross-discipline, focuses on health and disability
+**Disease area:**  Cross-discipline, focuses on health and disability  
 **Use Cases:**  ICF is the World Health Organization (WHO) framework for measuring health and disability at both individual and population levels. ICF was officially endorsed by the WHO as the international standard to describe and measure health and disability.    
 **Website:**  https://www.who.int/standards/classifications/international-classification-of-functioning-disability-and-health  
 **Open:** Yes  
@@ -222,12 +222,12 @@ Unified Medical Language System | Broad coverage
 **Website:** https://www.ncbi.nlm.nih.gov/medgen/  
 **Open:**  Yes  
 
-#### Medical Dictionary for Regulatory Activities (MedDRA)
+#### Medical Dictionary for Regulatory Activities (MedDRA)  
 **Description:**  Provides a standardized international medical terminology to be used for regulatory communication and evaluation of data about medicinal products for human use.  
-**Disease area:** Broad coverage
-**Use Cases:**  Mainly targeted towards industry and regulatory users.
-**Website:** https://www.meddra.org/
-**Open:**  Yes  	  
+**Disease area:** Broad coverage  
+**Use Cases:**  Mainly targeted towards industry and regulatory users.  
+**Website:** https://www.meddra.org/  
+**Open:**  Yes  	  	
 
 #### Mental Disease Ontology (MDO) 
 **Description:**  An ontology to describe and classify mental diseases such as schizophrenia, annotated with DSM-IV and ICD codes where applicable.   
@@ -255,12 +255,12 @@ Unified Medical Language System | Broad coverage
 **OBO Foundry webpage:** http://obofoundry.org/ontology/ncit.html   
 **Open:**  Yes  
 
-#### Neurological Disease Ontology (ND)
+#### Neurological Disease Ontology (ND)  
 **Description:**  A framework for the representation of key aspects of neurological disease.  
-**Disease area:**  Neurology 
-**Use Cases:** Goal is to provide a framework to enable representation of aspects of neurological diseases that are relevant to their treatment and study. This project may be inactive, the last commit to GitHub was in 2016.
-**GitHub repo:** https://github.com/addiehl/neurological-disease-ontology  
-**Open:**  Yes  
+**Disease area:**  Neurology  
+**Use Cases:** Goal is to provide a framework to enable representation of aspects of neurological diseases that are relevant to their treatment and study. This project may be inactive, the last commit to GitHub was in 2016.  
+**GitHub repo:** https://github.com/addiehl/neurological-disease-ontology   
+**Open:**  Yes   
 
 #### Online Mendelian Inheritance in Man (OMIM)
 **Description:**  a comprehensive, authoritative compendium of human genes and genetic phenotypes that is freely available and updated daily.  
@@ -269,13 +269,13 @@ Unified Medical Language System | Broad coverage
 **Website:**  https://omim.org/  
 **Open:** yes  
 
-#### Ontology of Cardiovascular Drug Adverse Events	(OCVDAE)
+#### Ontology of Cardiovascular Drug Adverse Events	(OCVDAE)  
 **Description:**  A biomedical ontology of cardiovascular drug–associated adverse events.  
-**Disease area:**  Cardiovasculaar
-**Use Cases:** One novel study of the OCVDAE project is the development of the PCR method. Specifically, an AE-specific drug class effect is defined to exist when all the drugs (drug chemical ingredients or drug products) in a drug class are associated with an AE, which is formulated as a proportional class level ratio (“PCR”) = 1. See more information in the paper: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5653862/. This project may be inactive, the last GitHub commit was in 2019.
-**GitHub repo:** https://github.com/OCVDAE/OCVDAE
-**Website:**  https://bioportal.bioontology.org/ontologies/OCVDAE  
-**OBO Foundry webpage:**   
+**Disease area:**  Cardiovascular  
+**Use Cases:** One novel study of the OCVDAE project is the development of the PCR method. Specifically, an AE-specific drug class effect is defined to exist when all the drugs (drug chemical ingredients or drug products) in a drug class are associated with an AE, which is formulated as a proportional class level ratio (“PCR”) = 1. See more information in the paper: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5653862/. This project may be inactive, the last GitHub commit was in 2019.  
+**GitHub repo:** https://github.com/OCVDAE/OCVDAE  
+**Website:**  https://bioportal.bioontology.org/ontologies/OCVDAE   
+**OBO Foundry webpage:**   	
 
 #### Ontology for General Medical Science (OGMS)
 **Description:**  An ontology of entities involved in a clinical encounter.   
@@ -291,11 +291,11 @@ Unified Medical Language System | Broad coverage
 **OBO Foundry webpage:** http://obofoundry.org/ontology/ogsf.html      
 **Open:** Yes  
 
-#### Ontology of Glucose Metabolism Disorder (OGMD)  
-**Description:**  Represents glucose metabolism disorder and diabetes disease names, phenotypes, and their classifications.   
-**Disease area:**  Metabolic disorders
-**Use Cases:** Still under development (last verssion released in BioPortal was in 2021) but there is little information about its usage online.  
-**Website:**  https://bioportal.bioontology.org/ontologies/OGMD  
+#### Ontology of Glucose Metabolism Disorder (OGMD)   
+**Description:**  Represents glucose metabolism disorder and diabetes disease names, phenotypes, and their classifications.    
+**Disease area:**  Metabolic disorders  
+**Use Cases:** Still under development (last verssion released in BioPortal was in 2021) but there is little information about its usage online.   
+**Website:**  https://bioportal.bioontology.org/ontologies/OGMD   
 **Open:** Yes  
 
 #### Ontology of Language Disorder in Autism (LDA)
