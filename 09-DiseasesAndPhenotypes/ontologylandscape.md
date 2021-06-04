@@ -20,7 +20,7 @@ Dispedia Core Ontology (DCO) | Rare diseases
 Experimental Factor Ontology (EFO) | Broad disease coverage  
 Fibrotic Interstitial Lung Disease Ontology (FILDO) | Fibrotic interstitial lung disease
 Genetic and Rare Diseases Information Center (GARD) | Rare diseases    
-Holistic Ontology of Rare Diseases | Rare disease 
+Holistic Ontology of Rare Diseases (HORD) | Rare disease 
 Human Dermatological Disease Ontology (DERMO) | Dermatology (skin)  
 Human Disease Ontology (DO) |  Human disease  
 Infectious Disease Ontology (IDO) | Infectious disease
@@ -39,7 +39,7 @@ Online Mendelian Inheritance in Man (OMIM) | Mendelian, genetic diseases.
 Ontology of Cardiovascular Drug Adverse Events	(OCVDAE) | Cardiovascular
 Ontology for General Medical Science (OGMS) | Broad coverage
 Ontology for Genetic Susceptibility Factor (OGSF)  | Genetic disease
-Ontology of Glucose Metabolism Disorder  | Metabolic disorders
+Ontology of Glucose Metabolism Disorder (OGMD) | Metabolic disorders
 Ontology of Language Disorder in Autism (LDA) | Austism
 The Oral Health and Disease Ontology (OHD)| Oral health and disease
 Orphanet | Rare diseases       
@@ -291,14 +291,12 @@ Unified Medical Language System | Broad coverage
 **OBO Foundry webpage:** http://obofoundry.org/ontology/ogsf.html      
 **Open:** Yes  
 
-#### Ontology of Glucose Metabolism Disorder  
+#### Ontology of Glucose Metabolism Disorder (OGMD)  
 **Description:**  Represents glucose metabolism disorder and diabetes disease names, phenotypes, and their classifications.   
-**Disease area:**  
-**Use Cases:** 
-**GitHub repo:**  
-**Website:**  
-**OBO Foundry webpage:**   
-**Open:** 
+**Disease area:**  Metabolic disorders
+**Use Cases:** Still under development (last verssion released in BioPortal was in 2021) but there is little information about its usage online.  
+**Website:**  https://bioportal.bioontology.org/ontologies/OGMD  
+**Open:** Yes  
 
 #### Ontology of Language Disorder in Autism (LDA)
 **Description:**  An ontology assembled from a set of language terms mined from the autism literature.
