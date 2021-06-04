@@ -1,6 +1,6 @@
 # Making a new term request to Mondo
 
-1. Go to Mondo [GitHub tracker](https://github.com/monarch-initiative/mondo/issues): New issue
+1. Go to Mondo [GitHub tracker](https://github.com/monarch-initiative/mondo/issues): Select New issue
 1. Pick appropriate template
 1. Fill in the information that is requested on the template below each header
 1. Please include:
