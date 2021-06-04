@@ -573,3 +573,7 @@ Zebrafish Phenotype Ontology (ZP) | Zebrafish
 **OBO Foundry webpage:** http://obofoundry.org/ontology/zp.html  
 **Open:**  Yes  
 
+### Reference
+[A Census of Disease Ontologies](https://www.annualreviews.org/doi/abs/10.1146/annurev-biodatasci-080917-013459?journalCode=biodatasci) Melissa A. Haendel, Julie A. McMurry, Rose Relevo, Christopher J. Mungall, Peter N. Robinson, Christopher G. Chute
+Annual Review of Biomedical Data Science 2018 1:1, 305-331
+
