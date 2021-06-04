@@ -447,8 +447,6 @@ Zebrafish Phenotype Ontology (ZP) | Zebrafish
 **OBO Foundry webpage:**  http://obofoundry.org/ontology/wbphenotype.html  
 **Open:**  Yes  
 
---
-
 #### C. elegans phenotype (wbphenotype) 
 **Description:**   A structured controlled vocabulary of Caenorhabditis elegans phenotypes.  
 **Species:** C elegans  
