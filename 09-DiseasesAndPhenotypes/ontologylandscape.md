@@ -92,7 +92,7 @@ Unified Medical Language System | Broad coverage
 **Open:** Yes   
 
 #### Chronic Kidney Disease Ontology (CKDO)  
-**Description:**  An ontology oof chronic kidney disease in primary care.    
+**Description:**  An ontology of chronic kidney disease in primary care.    
 **Disease area:**  Chronic kidney disease  
 **Use Cases:** CKDDO was developed to assist routine data studies and case identification of CKD in primary care.  
 **Website:**  http://purl.bioontology.org/ontology/CKDO   
