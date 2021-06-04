@@ -1,6 +1,6 @@
 ## Ontology Landscape
 
-### Disease ontologies
+### Disease ontologies & Terminologies
 -----
 
 ### Disease Summary Table
