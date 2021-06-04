@@ -361,13 +361,13 @@ Unified Medical Language System | Broad coverage
 **Open:** Yes  
 
 #### Sickle Cell Disease Ontology (SCDO)  
-**Description:**  SCDO establishes (a) community-standardized sickle cell disease terms and descriptions, (b) canonical and hierarchical representation of knowledge on sickle cell disease, and (c) links to other ontologies and bodies of work.
-**Disease area:**  Sickle Cell Disease (SCD)
-**Use Cases:** SCDO is intended to be a comprehensive collection of knowledge on SCD, facilitate exploration of new scientific questions and ideas, facilitate seamless data sharing and collaborations including meta-analysis within the SCD community, support the building of databasing and clinical informatics in SCD.
-**GitHub repo:**  https://github.com/scdodev/scdo-ontology/issues  
-**Website:**  https://scdontology.h3abionet.org/. 
+**Description:**  SCDO establishes (a) community-standardized sickle cell disease terms and descriptions, (b) canonical and hierarchical representation of knowledge on sickle cell disease, and (c) links to other ontologies and bodies of work.  
+**Disease area:**  Sickle Cell Disease (SCD). 
+**Use Cases:** SCDO is intended to be a comprehensive collection of knowledge on SCD, facilitate exploration of new scientific questions and ideas, facilitate seamless data sharing and collaborations including meta-analysis within the SCD community, support the building of databasing and clinical informatics in SCD.  
+**GitHub repo:**  https://github.com/scdodev/scdo-ontology/issues   
+**Website:**  https://scdontology.h3abionet.org/    
 **OBO Foundry webpage:**  http://obofoundry.org/ontology/scdo.html   
-**Open:** Yes
+**Open:** Yes   
 
 #### SNOMED Clinical Terminology (SNOMED CT)  
 **Description:**  A comprehensive clinical terminology/ontology used in healthcare settings.   
