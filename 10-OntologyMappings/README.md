@@ -13,7 +13,7 @@ TBD
 - [Phenotype and Disease Mappings](mappings.md)
 
 Making new requests
-  - [New term request to Mondo]()
+  - [New term request to Mondo](new-term-request-mondo.md)
   - [New term request to OBI]()
 
 Types of mappings 
