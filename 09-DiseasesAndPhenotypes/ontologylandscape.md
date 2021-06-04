@@ -135,11 +135,11 @@ Unified Medical Language System | Broad coverage
 **Open:** Yes  
 
 #### Fibrotic Interstitial Lung Disease Ontology (FILDO)
-**Description:**  An in-progress, four-tiered ontology proposed to standardize the diagnostic classification of patients with fibrotic interstitial lung disease.   
-**Disease area:**  Fibrotic interstitial lung disease
-**Use Cases:** Goal is to standardize the diagnostic classification of patients with fibrotic ILD. A paper was published in 2017 and an ontology is not publicly available.
-**Publication:**  https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5803648/
-**Open:** No  
+**Description:**  An in-progress, four-tiered ontology proposed to standardize the diagnostic classification of patients with fibrotic interstitial lung disease.    
+**Disease area:**  Fibrotic interstitial lung disease  
+**Use Cases:** Goal is to standardize the diagnostic classification of patients with fibrotic ILD. A paper was published in 2017 and an ontology is not publicly available.  
+**Publication:**  https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5803648/  
+**Open:** No   
 
 #### Genetic and Rare Diseases Information Center (GARD)
 **Description:**   NIH resource that provides the public with access to current, reliable, and easy-to-understand information about rare or genetic diseases in English or Spanish.  
@@ -151,8 +151,8 @@ Unified Medical Language System | Broad coverage
 #### Holistic Ontology of Rare Diseases (HORD)
 **Description:** Describes the biopsychosocial state (i.e., disease, psychological, social, and environmental state) of persons with rare diseases in a holistic way.   
 **Disease area:**  Rare disease  
-**Use Cases:** [Rehabilita, Disruptive Technologies for the Rehabilitation of the Future](http://www.gbt.tfo.upm.es/item325), a project that aims to enhance rehabilitation transforming it to a more personalized, ubiquitous and evidence-based rehabilitation.
-**Website:**  http://purl.bioontology.org/ ontology/HORD  
+**Use Cases:** [Rehabilita, Disruptive Technologies for the Rehabilitation of the Future](http://www.gbt.tfo.upm.es/item325), a project that aims to enhance rehabilitation transforming it to a more personalized, ubiquitous and evidence-based rehabilitation.  
+**Website:**  http://purl.bioontology.org/ ontology/HORD   
 **Open:** Yes  
 
 #### Human Dermatological Disease Ontology (DERMO)
