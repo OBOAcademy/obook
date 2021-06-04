@@ -328,21 +328,17 @@ Unified Medical Language System | Broad coverage
 
 #### Pathogenic Disease Ontology (PDO)  
 **Description:**  Provides information on infectious diseases, disease synonyms, transmission pathways, disease agents, affected populations, and disease properties. Diseases are grouped into syndromic disease categories, organisms are structured hierarchically, and both disease transmission and relevant disease properties are searchable.   
-**Disease area:**  
-**Use Cases:** 
-**GitHub repo:**  
-**Website:**  
-**OBO Foundry webpage:**   
-**Open:** 
+**Disease area:** human infectious diseases caused by microbes and the diseases that is related to microbial infection.  
+**Use Cases:** Has not been released since 2016 and may be inactive.  
+**Website:**  https://bioportal.bioontology.org/ontologies/PDO    
+**Open:** Yes. 
 
 #### PolyCystic Ovary Syndrome Knowledgebase (PCOSKB)  
 **Description:**  Comprises genes, single nucleotide polymorphisms, diseases, gene ontology terms, and biochemical pathways associated with polycystic ovary syndrome, a major cause of female subfertility worldwide.   
-**Disease area:**  
-**Use Cases:** 
-**GitHub repo:**  
-**Website:**  
-**OBO Foundry webpage:**   
-**Open:** 
+**Disease area:**  polycystic ovary syndrome
+**Use Cases:** Ontology underlying the [Polycystic Ovary Syndrome Knowledgebase](http://pcoskb.bicnirrh.res.in/index.php), a manually curated knowledgebase on PCOS.   
+**Website:** http://pcoskb.bicnirrh.res.in/go_d.php  
+**Open:** Yes  
 
 #### Rat Disease Ontology (RDO)  
 **Description:** Provides the foundation for ten comprehensive disease area–related data sets at the Rat Genome Database Disease Portals.  
@@ -353,28 +349,23 @@ Unified Medical Language System | Broad coverage
 
 #### Removable Partial Denture Ontology (RPDO)  
 **Description:**  Represents knowledge of a patient’s oral conditions and denture component parts, originally developed to create a clinician decision support model.    
-**Disease area:**  
-**Use Cases:** 
-**GitHub repo:**  
-**Website:**  
-**OBO Foundry webpage:**   
-**Open:** 
+**Disease area:**  Oral health and dentures  
+**Use Cases:** A paper was published on this in 2016 but it does not appear any other information is available about this ontology on the website, presumably it is an inactive project.  
+**Publication:** https://www.nature.com/articles/srep27855    
+**Open:** No. 
 
 #### Resource of Asian Primary Immunodeficiency Diseases (RPO)  
 **Description:**  Represents observed phenotypic terms, sequence variations, and messenger RNA and protein expression levels of all genes involved in primary immunodeficiency diseases.   
-**Disease area:**  
-**Use Cases:** 
-**GitHub repo:**  
-**Website:**  
-**OBO Foundry webpage:**   
-**Open:** 
+**Disease area:**  Primary immunodeficiency diseases
+**Use Cases:** This terminology is used in a freely accessible, dynamic and integrated database for primary immunodeficiency diseases (PID) called Resource of Asian Primary Immunodeficiency Diseases (RAPID), which is available [here](http://rapid.rcai.riken.jp/).  
+**Open:** Yes  
 
 #### Sickle Cell Disease Ontology (SCDO)  
 **Description:**  SCDO establishes (a) community-standardized sickle cell disease terms and descriptions, (b) canonical and hierarchical representation of knowledge on sickle cell disease, and (c) links to other ontologies and bodies of work.
-**Disease area:**  
-**Use Cases:** 
-**GitHub repo:**  
-**Website:**  
+**Disease area:**  Sickle Cell Disease (SCD)
+**Use Cases:** SCDO is intended to be a comprehensive collection of knowledge on SCD, facilitate exploration of new scientific questions and ideas, facilitate seamless data sharing and collaborations including meta-analysis within the SCD community, support the building of databasing and clinical informatics in SCD.
+**GitHub repo:**  https://github.com/scdodev/scdo-ontology/issues  
+**Website:**  https://scdontology.h3abionet.org/. 
 **OBO Foundry webpage:**  http://obofoundry.org/ontology/scdo.html   
 **Open:** Yes
 
