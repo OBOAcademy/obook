@@ -14,7 +14,7 @@ TBD
 
 Making new requests
   - [New term request to Mondo](new-term-request-mondo.md)
-  - [New term request to OBI]()
+  - [New term request to OBI](new-term-request-obi.md)
 
 Types of mappings 
   - string-term
