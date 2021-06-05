@@ -13,6 +13,24 @@
 
 See [video](https://drive.google.com/file/d/14g9y1nmCmRTkPB1fa6y_jIW3lHyFV4-g/view?resourcekey)
 
+# Best practices guidelines
+
+**Note**: We appreciate your contributions to extending and improving Mondo. Following best guidelines is appreciated by the curators and developers, and assists them in addressing your issue more quickly. However, we understand if you are not always able to follow these best practices.
+
+### General Recommendations:
+1. New term requests should not match existing terms or synonyms
+1. Write a concise definition in the definition field. More info about writing definitions is [here](https://douroucouli.wordpress.com/2019/07/08/ontotip-write-simple-concise-clear-operational-textual-definitions/)
+1. Synonyms - please provide a source/cross-reference
+1. Check OMIM for children classes
+
+### Formatting:
+1. Preferred term labels should be lowercase (unless it is a proper name or abbreviation)
+1. Write the request below the prompts on the template so the Markdown formatting displays properly
+1. Synonyms should be lowercase (with exceptions above)
+1. Definition source - if from PubMed, please use the format PMID:XXXXXX (no space)
+1. Include the Mondo ID and label for the parent term
+1. List the children terms with Mondo ID and label in a bulleted list
+
 # Exmples
 
 ## Tickets that followed best practices:
@@ -29,3 +47,9 @@ Note: while this ticket generally follows best practices, one thing that can be 
 # Practice
 
 1. Using these guidelines above, make a new term request on the Mondo tracker for 'restrictive pulmonary disease'.
+
+# Submitting other issues to Mondo
+
+- Users may want to request other types of changes to Mondo (or any other ontology) beyond just adding a new term.
+- The Mondo curation team created many [issue templates]() for users, for specific types of requests.
+- If none of the issue templates fit your issue, you can scroll to the bottom and click []()
