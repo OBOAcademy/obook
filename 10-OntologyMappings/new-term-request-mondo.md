@@ -20,8 +20,14 @@ See [video](https://drive.google.com/file/d/14g9y1nmCmRTkPB1fa6y_jIW3lHyFV4-g/vi
 ### General Recommendations:
 1. New term requests should not match existing terms or synonyms
 1. Write a concise definition in the definition field. More info about writing definitions is [here](https://douroucouli.wordpress.com/2019/07/08/ontotip-write-simple-concise-clear-operational-textual-definitions/)
-1. Synonyms - please provide a source/cross-reference
+1. Synonyms - please provide a synonym scope and source/cross-reference
 1. Check OMIM for children classes
+
+#### Synonym scopes:
+- Exact - an exact match
+- Narrow - more specific term
+- Broad - more general term
+- Related - a word of phrase has been used synonymously with the primary term name in the literature, but the usage is not strictly correct 
 
 ### Formatting:
 1. Preferred term labels should be lowercase (unless it is a proper name or abbreviation)
