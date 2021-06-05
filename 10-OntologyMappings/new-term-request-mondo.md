@@ -19,11 +19,12 @@ See [video](https://drive.google.com/file/d/14g9y1nmCmRTkPB1fa6y_jIW3lHyFV4-g/vi
 - https://github.com/monarch-initiative/mondo/issues/2541
 - https://github.com/monarch-initiative/mondo/issues/1719
 Note: while this ticket generally follows best practices, one thing that can be improved is defining the synonym scope. Generally, when the synonym scope is not explicity mentioned, it is assumed it is an _exact synonym_.
+- https://github.com/monarch-initiative/mondo/issues/1188
+- https://github.com/monarch-initiative/mondo/issues/2945
 
-## A ticket that did not follow best practices:
-https://github.com/monarch-initiative/mondo/issues/1837
-
-
+## Tickets that did not follow best practices:
+- https://github.com/monarch-initiative/mondo/issues/1837
+- https://github.com/monarch-initiative/mondo/issues/276
 
 # Practice
 
