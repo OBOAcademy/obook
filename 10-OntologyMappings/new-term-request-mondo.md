@@ -57,5 +57,5 @@ Note: while this ticket generally follows best practices, one thing that can be 
 # Submitting other issues to Mondo
 
 - Users may want to request other types of changes to Mondo (or any other ontology) beyond just adding a new term.
-- The Mondo curation team created many [issue templates]() for users, for specific types of requests.
-- If none of the issue templates fit your issue, you can scroll to the bottom and click []()
+- The Mondo curation team created many [issue templates](https://github.com/monarch-initiative/mondo/issues/new/choose) for users, for specific types of requests.
+- If none of the issue templates fit your issue, you can scroll to the bottom and click [Open a blank issue](https://github.com/monarch-initiative/mondo/issues/new)
