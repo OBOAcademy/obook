@@ -19,6 +19,7 @@ Chronic Obstructive Pulmonary Disease Ontology (COPDO) | Chronic obstructive pul
 Coronavirus Infectious Disease Ontology (CIDO) | Coronavirus infectious diseases
 Diagnostic and Statistical Manual of Mental Disorders (DSM) | Mental disorders 
 Dispedia Core Ontology (DCO) | Rare diseases
+Epilepsy Ontology (EPSO) | Epilepsy
 Experimental Factor Ontology (EFO) | Broad disease coverage  
 Fibrotic Interstitial Lung Disease Ontology (FILDO) | Fibrotic interstitial lung disease
 Genetic and Rare Diseases Information Center (GARD) | Rare diseases    
@@ -127,7 +128,14 @@ Unified Medical Language System | Broad coverage
 **Disease area:**  Rare disease  
 **Use Cases:**  DCO was initially created with amyotrophic lateral sclerosis as a use case.   
 **Website:**  http://purl.bioontology.org/ontology/DCO  
-**Open:** Yes   
+**Open:** Yes 
+
+#### Epilepsy Ontology (EPSO) 
+**Description:** An ontology representing terminology related to epilepsy.
+**Disease area:**  Epilepsy
+**Use Cases:** Intended for use for text mining.
+**GitHub repo**: https://github.com/OBOFoundry/OBOFoundry.github.io/issues/1514
+**Open:** Yes
 
 #### Experimental Factor Ontology (EFO)
 **Description:**  Provides a systematic description of many experimental variables available in EBI databases, and for projects such as the GWAS catalog.  
