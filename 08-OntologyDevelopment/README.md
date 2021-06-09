@@ -53,7 +53,7 @@ Since we can turn these steps into a series of commands, we can create a `Makefi
   - Review Software Carpentry course content
   - How can the ROBOT commands be combined to create an ontology release?
   - Practice writing recipes using ROBOT commands
-- Using the ODK to bootstrap a new ontology (Nico; 45 minutes)
+- Using the ODK to [bootstrap a new ontology](https://github.com/INCATools/ontology-development-kit/blob/master/docs/CreatingRepo.md) (Nico; 45 minutes)
 - Introduction to the [OBO Foundry Registry](http://obofoundry.org/) (if time)
 
 ## Semantic Engineer Toolbox
