@@ -1,6 +1,8 @@
 ## Ontology Landscape
 
-### Disease ontologies
+_Compiled by Nicole Vasilevsky. Feel free to make pull requests to suggest edits._
+
+### Disease Ontologies & Terminologies
 -----
 
 ### Disease Summary Table
@@ -17,6 +19,7 @@ Chronic Obstructive Pulmonary Disease Ontology (COPDO) | Chronic obstructive pul
 Coronavirus Infectious Disease Ontology (CIDO) | Coronavirus infectious diseases
 Diagnostic and Statistical Manual of Mental Disorders (DSM) | Mental disorders 
 Dispedia Core Ontology (DCO) | Rare diseases
+Epilepsy Ontology (EPSO) | Epilepsy
 Experimental Factor Ontology (EFO) | Broad disease coverage  
 Fibrotic Interstitial Lung Disease Ontology (FILDO) | Fibrotic interstitial lung disease
 Genetic and Rare Diseases Information Center (GARD) | Rare diseases    
@@ -92,7 +95,7 @@ Unified Medical Language System | Broad coverage
 **Open:** Yes   
 
 #### Chronic Kidney Disease Ontology (CKDO)  
-**Description:**  An ontology oof chronic kidney disease in primary care.    
+**Description:**  An ontology of chronic kidney disease in primary care.    
 **Disease area:**  Chronic kidney disease  
 **Use Cases:** CKDDO was developed to assist routine data studies and case identification of CKD in primary care.  
 **Website:**  http://purl.bioontology.org/ontology/CKDO   
@@ -125,7 +128,14 @@ Unified Medical Language System | Broad coverage
 **Disease area:**  Rare disease  
 **Use Cases:**  DCO was initially created with amyotrophic lateral sclerosis as a use case.   
 **Website:**  http://purl.bioontology.org/ontology/DCO  
-**Open:** Yes   
+**Open:** Yes 
+
+#### Epilepsy Ontology (EPSO) 
+**Description:** An ontology representing terminology related to epilepsy.
+**Disease area:**  Epilepsy
+**Use Cases:** Intended for use for text mining.
+**GitHub repo**: https://github.com/OBOFoundry/OBOFoundry.github.io/issues/1514
+**Open:** Yes
 
 #### Experimental Factor Ontology (EFO)
 **Description:**  Provides a systematic description of many experimental variables available in EBI databases, and for projects such as the GWAS catalog.  
@@ -152,15 +162,15 @@ Unified Medical Language System | Broad coverage
 **Description:** Describes the biopsychosocial state (i.e., disease, psychological, social, and environmental state) of persons with rare diseases in a holistic way.   
 **Disease area:**  Rare disease  
 **Use Cases:** [Rehabilita, Disruptive Technologies for the Rehabilitation of the Future](http://www.gbt.tfo.upm.es/item325), a project that aims to enhance rehabilitation transforming it to a more personalized, ubiquitous and evidence-based rehabilitation.  
-**Website:**  http://purl.bioontology.org/ ontology/HORD   
+**Website:**  http://purl.bioontology.org/ontology/HORD   
 **Open:** Yes  
 
 #### Human Dermatological Disease Ontology (DERMO)
-**Description:**  The most comprehensive dermatological disease ontology available, with over 3,500 classes available. There are 20 upper-level disease entities, with features such as anatomical location, heritability, and affected cell or tissue type.
+**Description:**  The most comprehensive dermatological disease ontology available, with over 3,500 classes available. There are 20 upper-level disease entities, with features such as anatomical location, heritability, and affected cell or tissue type.  
 **Disease area:**  Dermatology (skin)  
 **Use Cases:** DermO can be used to extract data from patient electronic health records using text mining, or to translate existing variable-granularity coding such as ICD-10 to allow capture and standardization of patient/disease annotations.   
-**Website:**  https://bioportal.bioontology.org/ontologies/DERMO  
-**Open:**  Yes  
+**Website:**  https://bioportal.bioontology.org/ontologies/DERMO   	
+**Open:** Yes  
 
 #### Human Disease Ontology (DO)
 **Description:**  An ontology for describing the classification of human diseases organized by etiology.  
@@ -182,7 +192,7 @@ Unified Medical Language System | Broad coverage
 
 #### International Classification of Functioning, Disability and Health (ICF)
 **Description:**  Represents diseases and provides a conceptual basis for the definition and measurement of health and disability as organized by patient-oriented outcomes of function and disability. ICF considers environmental factors as well as the relevance of associated health conditions in recognizing major models of disability.   
-**Disease area:**  Cross-discipline, focuses on health and disability
+**Disease area:**  Cross-discipline, focuses on health and disability  
 **Use Cases:**  ICF is the World Health Organization (WHO) framework for measuring health and disability at both individual and population levels. ICF was officially endorsed by the WHO as the international standard to describe and measure health and disability.    
 **Website:**  https://www.who.int/standards/classifications/international-classification-of-functioning-disability-and-health  
 **Open:** Yes  
@@ -222,12 +232,12 @@ Unified Medical Language System | Broad coverage
 **Website:** https://www.ncbi.nlm.nih.gov/medgen/  
 **Open:**  Yes  
 
-#### Medical Dictionary for Regulatory Activities (MedDRA)
+#### Medical Dictionary for Regulatory Activities (MedDRA)  
 **Description:**  Provides a standardized international medical terminology to be used for regulatory communication and evaluation of data about medicinal products for human use.  
-**Disease area:** Broad coverage
-**Use Cases:**  Mainly targeted towards industry and regulatory users.
-**Website:** https://www.meddra.org/
-**Open:**  Yes  	  
+**Disease area:** Broad coverage  
+**Use Cases:**  Mainly targeted towards industry and regulatory users.  
+**Website:** https://www.meddra.org/  
+**Open:**  Yes  	  	
 
 #### Mental Disease Ontology (MDO) 
 **Description:**  An ontology to describe and classify mental diseases such as schizophrenia, annotated with DSM-IV and ICD codes where applicable.   
@@ -255,12 +265,12 @@ Unified Medical Language System | Broad coverage
 **OBO Foundry webpage:** http://obofoundry.org/ontology/ncit.html   
 **Open:**  Yes  
 
-#### Neurological Disease Ontology (ND)
+#### Neurological Disease Ontology (ND)  
 **Description:**  A framework for the representation of key aspects of neurological disease.  
-**Disease area:**  Neurology 
-**Use Cases:** Goal is to provide a framework to enable representation of aspects of neurological diseases that are relevant to their treatment and study. This project may be inactive, the last commit to GitHub was in 2016.
-**GitHub repo:** https://github.com/addiehl/neurological-disease-ontology  
-**Open:**  Yes  
+**Disease area:**  Neurology  
+**Use Cases:** Goal is to provide a framework to enable representation of aspects of neurological diseases that are relevant to their treatment and study. This project may be inactive, the last commit to GitHub was in 2016.  
+**GitHub repo:** https://github.com/addiehl/neurological-disease-ontology   
+**Open:**  Yes   
 
 #### Online Mendelian Inheritance in Man (OMIM)
 **Description:**  a comprehensive, authoritative compendium of human genes and genetic phenotypes that is freely available and updated daily.  
@@ -269,16 +279,16 @@ Unified Medical Language System | Broad coverage
 **Website:**  https://omim.org/  
 **Open:** yes  
 
-#### Ontology of Cardiovascular Drug Adverse Events	(OCVDAE)
-**Description:**  A biomedical ontology of cardiovascular drug–associated adverse events.  
-**Disease area:**  Cardiovasculaar
-**Use Cases:** One novel study of the OCVDAE project is the development of the PCR method. Specifically, an AE-specific drug class effect is defined to exist when all the drugs (drug chemical ingredients or drug products) in a drug class are associated with an AE, which is formulated as a proportional class level ratio (“PCR”) = 1. See more information in the paper: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5653862/. This project may be inactive, the last GitHub commit was in 2019.
-**GitHub repo:** https://github.com/OCVDAE/OCVDAE
-**Website:**  https://bioportal.bioontology.org/ontologies/OCVDAE  
-**OBO Foundry webpage:**   
+#### Ontology of Cardiovascular Drug Adverse Events	(OCVDAE)  
+**Description:**  A biomedical ontology of cardiovascular drug–associated adverse events.   
+**Disease area:**  Cardiovascular   
+**Use Cases:** One novel study of the OCVDAE project is the development of the PCR method. Specifically, an AE-specific drug class effect is defined to exist when all the drugs (drug chemical ingredients or drug products) in a drug class are associated with an AE, which is formulated as a proportional class level ratio (“PCR”) = 1. See more information in the paper: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5653862/. This project may be inactive, the last GitHub commit was in 2019.   
+**GitHub repo:** https://github.com/OCVDAE/OCVDAE   
+**Website:**  https://bioportal.bioontology.org/ontologies/OCVDAE    
+**Open:** yes  
 
-#### Ontology for General Medical Science (OGMS)
-**Description:**  An ontology of entities involved in a clinical encounter.   
+#### Ontology for General Medical Science (OGMS)  
+**Description:**  An ontology of entities involved in a clinical encounter.    
 **Use Cases:** Provides a formal theory of disease that can be further elaborated by specific disease ontologies. It is intended to be used as a upper level ontology for other disease ontologies.  Used by [Cardiovascular Disease Ontology](https://github.com/OpenLHS/CVDO).  
 **GitHub repo:**  https://github.com/OGMS/ogms    
 **OBO Foundry webpage:** http://obofoundry.org/ontology/ogms.html   
@@ -291,116 +301,101 @@ Unified Medical Language System | Broad coverage
 **OBO Foundry webpage:** http://obofoundry.org/ontology/ogsf.html      
 **Open:** Yes  
 
-#### Ontology of Glucose Metabolism Disorder (OGMD)  
-**Description:**  Represents glucose metabolism disorder and diabetes disease names, phenotypes, and their classifications.   
-**Disease area:**  Metabolic disorders
-**Use Cases:** Still under development (last verssion released in BioPortal was in 2021) but there is little information about its usage online.  
-**Website:**  https://bioportal.bioontology.org/ontologies/OGMD  
-**Open:** Yes  
+#### Ontology of Glucose Metabolism Disorder (OGMD)   
+**Description:**  Represents glucose metabolism disorder and diabetes disease names, phenotypes, and their classifications.    
+**Disease area:**  Metabolic disorders   
+**Use Cases:** Still under development (last verssion released in BioPortal was in 2021) but there is little information about its usage online.    
+**Website:**  https://bioportal.bioontology.org/ontologies/OGMD   
+**Open:** Yes   
 
-#### Ontology of Language Disorder in Autism (LDA)
-**Description:**  An ontology assembled from a set of language terms mined from the autism literature.
-**Disease area:**  Austism
-**Use Cases:** 
-**GitHub repo:**  
-**Website:**  http://purl.bioontology.org/ ontology/LDA
-**OBO Foundry webpage:**   
-**Open:** 
+#### Ontology of Language Disorder in Autism (LDA)  
+**Description:**  An ontology assembled from a set of language terms mined from the autism literature.  
+**Disease area:**  Austism  
+**Use Cases:**   This has not been released since 2008 and looks like it is inactive.  
+**Website:**  https://bioportal.bioontology.org/ontologies/LDA    
+**Open:** Yes    
 
-#### The Oral Health and Disease Ontology (OHD)
+#### The Oral Health and Disease Ontology (OHD)  
 **Description:**  Represents the content of dental practice health records and is intended to be further developed for use in translational medicine. OHD is structured using BFO (Basic Formal Ontology) and uses terms from many ontologies, NCBITaxon, and a subset of terms from the CDT (Current Dental Terminology).  
-**Disease area:**  Oral health and disease
-**Use Cases:** 
-**GitHub repo:**  
-**Website:**  
-**OBO Foundry webpage:**   
-**Open:**  
+**Disease area:**  Oral health and disease  
+**Use Cases:**  Used to represent the content of dental practice health records and is intended to be further developed for use in translation medicine. Appears to be inactive.   
+**OBO Foundry webpage:** http://www.obofoundry.org/ontology/ohd.html     
+**Open:**  Yes   
 
-#### Orphanet
+#### Orphanet  
 **Description:** The portal for rare diseases and orphan drugs. Contains a structured vocabulary for rare diseases capturing relationships between diseases, genes, and other relevant features, jointly developed by Orphanet and the EBI. It contains information on nearly 10,000 cancers and related diseases, 8,000 single agents and combination therapies, and a wide range of other topics related to cancer and biomedical research.   
 **Disease area:** Rare diseases       
 **Use Cases:**  Used by rare disease research and clinical community. Integrated into the Mondo disease ontology, aligned with OMIM.  
 **Website:** https://www.orpha.net/consor/cgi-bin/index.php   
 **Open:** Yes   
 
-#### Parkinson Disease Ontology (PDO)
-**Description:**  A comprehensive semantic framework with a subclass-based taxonomic hierarchy, covering the whole breadth of the Parkinson disease knowledge domain from major biomedical concepts to different views on disease features held by molecular biologists, clinicians, and drug developers.  
-**Disease area:**  
-**Use Cases:** 
-**GitHub repo:**  
-**Website:**  
-**OBO Foundry webpage:**   
-**Open:** 
-
-#### Pathogenic Disease Ontology (PDO)
-**Description:**  Provides information on infectious diseases, disease synonyms, transmission pathways, disease agents, affected populations, and disease properties. Diseases are grouped into syndromic disease categories, organisms are structured hierarchically, and both disease transmission and relevant disease properties are searchable.  
-**Disease area:**  
-**Use Cases:** 
-**GitHub repo:**  
-**Website:**  
-**OBO Foundry webpage:**   
-**Open:** 
-
-#### PolyCystic Ovary Syndrome Knowledgebase (PCOSKB)
-**Description:**  Comprises genes, single nucleotide polymorphisms, diseases, gene ontology terms, and biochemical pathways associated with polycystic ovary syndrome, a major cause of female subfertility worldwide.  
-**Disease area:**  
-**Use Cases:** 
-**GitHub repo:**  
-**Website:**  
-**OBO Foundry webpage:**   
-**Open:** 
-
-#### Rat Disease Ontology (RDO)
-**Description:** Provides the foundation for ten comprehensive disease area–related data sets at the Rat Genome Database Disease Portals. 
-**Disease area:** Broad coverage including animal diseases, infectious diseases, chemically-induced disorders, occupational diseases, wounds and injuries and more.
-**Use Cases:** Developed for use with the [Rat Genome Database](https://rgd.mcw.edu/rgdweb/homepage/) Disease Portals.  
-**Website:** https://rgd.mcw.edu/rgdweb/ontology/view.html?acc_id=DOID:4  		
+#### Parkinson Disease ontology (PDO)  
+**Description:**  A comprehensive semantic framework with a subclass-based taxonomic hierarchy, covering the whole breadth of the Parkinson disease knowledge domain from major biomedical concepts to different views on disease features held by molecular biologists, clinicians, and drug developers.    
+**Disease area:**  Parkinson disease  
+**Use Cases:** This resource has been created for use in the IMI-funded [AETIONOMY project](www.aetionomy.org). Last release was in 2015, may be inactive.
+**Website:**  https://bioportal.bioontology.org/ontologies/PDON   
 **Open:** Yes  
 
-#### Removable Partial Denture Ontology (RPDO)
-**Description:**  Represents knowledge of a patient’s oral conditions and denture component parts, originally developed to create a clinician decision support model.   
-**Disease area:**  
-**Use Cases:** 
-**GitHub repo:**  
-**Website:**  
-**OBO Foundry webpage:**   
-**Open:** 
+#### Pathogenic Disease Ontology (PDO)  
+**Description:**  Provides information on infectious diseases, disease synonyms, transmission pathways, disease agents, affected populations, and disease properties. Diseases are grouped into syndromic disease categories, organisms are structured hierarchically, and both disease transmission and relevant disease properties are searchable.   
+**Disease area:** human infectious diseases caused by microbes and the diseases that is related to microbial infection.  
+**Use Cases:** Has not been released since 2016 and may be inactive.  
+**Website:**  https://bioportal.bioontology.org/ontologies/PDO    
+**Open:** Yes. 
 
-#### Resource of Asian Primary Immunodeficiency Diseases (RPO)
-**Description:**  Represents observed phenotypic terms, sequence variations, and messenger RNA and protein expression levels of all genes involved in primary immunodeficiency diseases.  
-**Disease area:**  
-**Use Cases:** 
-**GitHub repo:**  
-**Website:**  
-**OBO Foundry webpage:**   
-**Open:** 
+#### PolyCystic Ovary Syndrome Knowledgebase (PCOSKB)  
+**Description:**  Comprises genes, single nucleotide polymorphisms, diseases, gene ontology terms, and biochemical pathways associated with polycystic ovary syndrome, a major cause of female subfertility worldwide.   
+**Disease area:**  polycystic ovary syndrome
+**Use Cases:** Ontology underlying the [Polycystic Ovary Syndrome Knowledgebase](http://pcoskb.bicnirrh.res.in/index.php), a manually curated knowledgebase on PCOS.   
+**Website:** http://pcoskb.bicnirrh.res.in/go_d.php  
+**Open:** Yes  
 
-#### Sickle Cell Disease Ontology (SCDO)
-**Description:**  SCDO establishes (a) community-standardized sickle cell disease terms and descriptions, (b) canonical and hierarchical representation of knowledge on sickle cell disease, and (c) links to other ontologies and bodies of work.
-**Disease area:**  
-**Use Cases:** 
-**GitHub repo:**  
-**Website:**  
+#### Rat Disease Ontology (RDO)  
+**Description:** Provides the foundation for ten comprehensive disease area–related data sets at the Rat Genome Database Disease Portals.  
+**Disease area:** Broad coverage including animal diseases, infectious diseases, chemically-induced disorders, occupational diseases, wounds and injuries and more.  
+**Use Cases:** Developed for use with the [Rat Genome Database](https://rgd.mcw.edu/rgdweb/homepage/) Disease Portals.  
+**Website:** https://rgd.mcw.edu/rgdweb/ontology/view.html?acc_id=DOID:4    		
+**Open:** Yes  
+
+#### Removable Partial Denture Ontology (RPDO)  
+**Description:**  Represents knowledge of a patient’s oral conditions and denture component parts, originally developed to create a clinician decision support model.    
+**Disease area:**  Oral health and dentures  
+**Use Cases:** A paper was published on this in 2016 but it does not appear any other information is available about this ontology on the website, presumably it is an inactive project.  
+**Publication:** https://www.nature.com/articles/srep27855    
+**Open:** No   
+
+#### Resource of Asian Primary Immunodeficiency Diseases (RPO)  
+**Description:**  Represents observed phenotypic terms, sequence variations, and messenger RNA and protein expression levels of all genes involved in primary immunodeficiency diseases.   
+**Disease area:**  Primary immunodeficiency diseases   
+**Use Cases:** This terminology is used in a freely accessible, dynamic and integrated database for primary immunodeficiency diseases (PID) called Resource of Asian Primary Immunodeficiency Diseases (RAPID), which is available [here](http://rapid.rcai.riken.jp/).        
+**Open:** Yes  
+
+#### Sickle Cell Disease Ontology (SCDO)  
+**Description:**  SCDO establishes (a) community-standardized sickle cell disease terms and descriptions, (b) canonical and hierarchical representation of knowledge on sickle cell disease, and (c) links to other ontologies and bodies of work.  
+**Disease area:**  Sickle Cell Disease (SCD). 
+**Use Cases:** SCDO is intended to be a comprehensive collection of knowledge on SCD, facilitate exploration of new scientific questions and ideas, facilitate seamless data sharing and collaborations including meta-analysis within the SCD community, support the building of databasing and clinical informatics in SCD.  
+**GitHub repo:**  https://github.com/scdodev/scdo-ontology/issues   
+**Website:**  https://scdontology.h3abionet.org/    
 **OBO Foundry webpage:**  http://obofoundry.org/ontology/scdo.html   
-**Open:** Yes
+**Open:** Yes   
 
-#### SNOMED Clinical Terminology (SNOMED CT)
-**Description:**  A comprehensive clinical terminology/ontology used in healthcare settings.  
-**Disease area:**  Broad disease representation for human diseases.   
-**Use Cases:**  Main coding system used in Electronic Health Records (EHRs).  
+#### SNOMED Clinical Terminology (SNOMED CT)  
+**Description:**  A comprehensive clinical terminology/ontology used in healthcare settings.   
+**Disease area:**  Broad disease representation for human diseases.    
+**Use Cases:**  Main coding system used in Electronic Health Records (EHRs).   
 **Website:**  https://browser.ihtsdotools.org/?   
 **Open:** No, requires a license for usage.   
 
-#### Symptom Ontology
+#### Symptom Ontology  
 **Description:**  An ontology of disease symptoms, with symptoms encompasing perceived changes in function, sensations or appearance reported by a patient indicative of a disease.  
-**Disease area:**  Human diseases    
+**Disease area:**  Human diseases     
 **Use Cases:** Developed by the [Disease Ontology (DO)](http://www.disease-ontology.org/) team and used for describing symptoms of human diseases in the DO.    
 **Website:**  http://symptomontologywiki.igs.umaryland.edu/mediawiki/index.php/Main_Page  
 **OBO Foundry webpage:** http://obofoundry.org/ontology/symp.html   
 **Open:** Yes    
 
-#### Unified Medical Language System
-**Description:**   The UMLS integrates and distributes key terminology, classification and coding standards, and associated resources to promote creation of more effective and interoperable biomedical information systems and services.    
+#### Unified Medical Language System  
+**Description:**   The UMLS integrates and distributes key terminology, classification and coding standards, and associated resources to promote creation of more effective and interoperable biomedical information systems and services.     
 **Disease area:**  Broad coverage      
 **Use Cases:**  Healthcare settings including electronic health records and HL7.   
 **Website:** https://www.nlm.nih.gov/research/umls/index.html  
