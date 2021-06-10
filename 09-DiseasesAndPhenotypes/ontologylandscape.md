@@ -7,7 +7,7 @@ _Compiled by Nicole Vasilevsky. Feel free to make pull requests to suggest edits
 
 ### Disease Summary Table
 
-Name | Diease Area 
+Name | Disease Area 
 --- | ---
 Artificial Intelligence Rheumatology Consultant System Ontology (AI-RHEUM) | Rheumatic diseases
 Autism DSM-ADI-R Ontology (ADAR) |  Autism  
