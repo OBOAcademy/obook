@@ -44,7 +44,7 @@ Ontology for Genetic Susceptibility Factor (OGSF)  | Genetic disease
 Ontology of Glucose Metabolism Disorder (OGMD) | Metabolic disorders
 Ontology of Language Disorder in Autism (LDA) | Austism
 The Oral Health and Disease Ontology (OHD)| Oral health and disease
-Orphanet | Rare diseases       
+Orphanet (ORDO) | Rare diseases       
 Parkinson Disease Ontology (PDO) | Parkinson disease
 Pathogenic Disease Ontology (PDO) | Pathogenic diseases
 PolyCystic Ovary Syndrome Knowledgebase (PCOSKB) | Polycystic ovary syndrome
@@ -314,7 +314,7 @@ Unified Medical Language System | Broad coverage
 **OBO Foundry webpage:** http://www.obofoundry.org/ontology/ohd.html     
 **Open:**  Yes   
 
-#### Orphanet  
+#### Orphanet (ORDO)
 **Description:** The portal for rare diseases and orphan drugs. Contains a structured vocabulary for rare diseases capturing relationships between diseases, genes, and other relevant features, jointly developed by Orphanet and the EBI. It contains information on nearly 10,000 cancers and related diseases, 8,000 single agents and combination therapies, and a wide range of other topics related to cancer and biomedical research.   
 **Disease area:** Rare diseases       
 **Use Cases:**  Used by rare disease research and clinical community. Integrated into the Mondo disease ontology, aligned with OMIM.  
