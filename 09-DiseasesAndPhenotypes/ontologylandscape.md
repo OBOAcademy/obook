@@ -64,15 +64,15 @@ Unified Medical Language System | Broad coverage
 **Open:** Yes  
 
 #### Autism DSM-ADI-R Ontology (ADAR)
-**Description:**  An ontology of autism spectrum disorder (ASD) and related neurodevelopmental disorders.  
+**Description:**  An ontology of autism spectrum disorder (ASD) and related neurodevelopmental disorders.   
 **Disease area:**  Autism   
 **Use Cases:**   It extends an existing autism ontology to allow automatic inference of ASD phenotypes and Diagnostic and Statistical Manual of Mental Disorders (DSM) criteria based on subjects’ Autism Diagnostic Interview–Revised (ADI-R) assessment data.   
 **Website:**  https://bioportal.bioontology.org/ontologies/ADAR  
 **Open:** Yes  
 
 #### Autism Spectrum Disorder Phenotype Ontology (ASDPTO)
-**Description:**  Encapsulates the ASD behavioral phenotype, informed by the standard ASD assessment instruments and the currently known characteristics of this disorder.     	
-**Disease area:**  Autism   
+**Description:**  Encapsulates the ASD behavioral phenotype, informed by the standard ASD assessment instruments and the currently known characteristics of this disorder.  
+**Disease area:** Autism   
 **Use Cases:** Intended for use in research settings where extensive phenotypic data have been collected, allowing a concept-based approach to identifying behavioral features of importance and for correlating these with genotypic data.  
 **Website:**  https://bioportal.bioontology.org/ontologies/ASDPTO  
 **Open:** Yes  
