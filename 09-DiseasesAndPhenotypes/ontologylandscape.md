@@ -71,7 +71,7 @@ Unified Medical Language System | Broad coverage
 **Open:** Yes  
 
 #### Autism Spectrum Disorder Phenotype Ontology (ASDPTO)
-**Description:**  Encapsulates the ASD behavioral phenotype, informed by the standard ASD assessment instruments and the currently known characteristics of this disorder.   	
+**Description:**  Encapsulates the ASD behavioral phenotype, informed by the standard ASD assessment instruments and the currently known characteristics of this disorder.     	
 **Disease area:**  Autism   
 **Use Cases:** Intended for use in research settings where extensive phenotypic data have been collected, allowing a concept-based approach to identifying behavioral features of importance and for correlating these with genotypic data.  
 **Website:**  https://bioportal.bioontology.org/ontologies/ASDPTO  
