@@ -81,7 +81,7 @@ Unified Medical Language System | Broad coverage
 **Description:**  Describes the most common zoonotic disease, brucellosis, which is caused by Brucella, a type of facultative intracellular bacteria.   
 **Disease area:**  brucellosis bacteria   
 **Use Cases:** An extension ontology of the core Infectious Disease Ontology (IDO-core). This project appears to be inactive.   
-**Website:**  http://sourceforge.net/projects/idobru    
+**Website:**  https://github.com/biomedontology/idobru
 **Open:** Yes  	
 
 #### Cardiovascular Disease Ontology (CVDO)  
