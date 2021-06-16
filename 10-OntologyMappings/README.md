@@ -4,36 +4,31 @@
 **Second Instructor:** Nicole Vasilevsky    
 
 ## Description
-Using ontologies in scientific databases.
+Last week, we got an initial idea on _why_ we would want to map our data to ontologies.
+One approach to map our data to do it manually - in fact, this is often the preferable
+approach. This week, we will take a closer look at automated approaches for ontology 
+mapping, and hopefully enable you to make informed choices which techniques are suitable
+in which situation.
 
 ## Topics
-TBD
+- A rough typology of ontology mapping approaches
+- The case for open science - and the importance of contributing
+- Review: what to do when you need a term
 
 ## New Material
-- [Phenotype and Disease Mappings](mappings.md)
-
-Making new requests
+- [Introduction to mappings](mappings.md)
+- [Open science and the importance of contributing](contributing.md)
+- Making new term requests
   - [New term request to Mondo](new-term-request-mondo.md)
   - [New term request to OBI](new-term-request-obi.md)
 
-Types of mappings 
-  - string-term
-  - term-term
-  - profile-profile
+## Preparation
+- [The case for open science: rare diseases](https://pubmed.ncbi.nlm.nih.gov/33426479/)
+- Exam?
 
-Overview of automated approaches
-  - Simple matches (string, string pre-pro, fuzzy string)
-  - Graph-based matches (incl. semantic similarity)
-  - NLP/Machine Learning
-
-Important features of mappings:
-  - Confidence
-  - Precision
-
-Practical:
-  - Try to get the same mappings as before using techniques
-  - Exact
-  - Simple preprocessing
-  - Levenshtein
-  - Jaccard similarity
-  - Embedding similarity (?)  
+## Semantic Engineer Toolbox
+- Tools
+  - [OxO](https://www.ebi.ac.uk/spot/oxo/)
+  - [Zooma](https://www.ebi.ac.uk/spot/zooma/)
+- [Natural Language Toolkit (NLTK)](https://www.nltk.org/)
+- [Ontology Development Kit](https://github.com/INCATools/ontology-development-kit)
