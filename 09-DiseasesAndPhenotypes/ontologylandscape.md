@@ -1,4 +1,4 @@
-## Ontology Landscape
+## The Landscape of Disease and Phenotype Ontologies
 
 _Compiled by Nicole Vasilevsky. Feel free to make pull requests to suggest edits._
 
