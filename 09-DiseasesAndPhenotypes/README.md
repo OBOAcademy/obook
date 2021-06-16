@@ -25,11 +25,11 @@ We are introducing the landscape of disease and phenotype ontologies, and sketch
 1. Spend some time reading through the notebook to get a cursory understanding of what is happening - we will discuss this in more depth in the next course.
   
 ## Topics
-- [Overview of phenotype and disease ontologies](diseaseontologies.md)
+- [Overview of phenotype and disease ontologies](ontologylandscape.md)
 - [Practical example](example.md)
 
 ## New Material
-- [Landscape of ontologies](diseaseontologies.md) - Nicole
+- [Landscape of ontologies](ontologylandscape.md) - Nicole
 - What is the difference between phenotype and disease ontologies? - Nicole and Nico
 - Map internal disease codes to ontology terms - Nico
 - Grouping disease data with the ontology hierarchy - Nico
