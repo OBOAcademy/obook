@@ -21,7 +21,7 @@ See [video](https://drive.google.com/file/d/14g9y1nmCmRTkPB1fa6y_jIW3lHyFV4-g/vi
 1. New term requests should not match existing terms or synonyms
 1. Write a concise definition in the definition field. More info about writing definitions is [here](https://douroucouli.wordpress.com/2019/07/08/ontotip-write-simple-concise-clear-operational-textual-definitions/)
 1. Synonyms - please provide a synonym scope and source/cross-reference
-1. Check OMIM for children classes
+1. Check OMIM for children classes (specific to new gene-related terms)
 
 #### Synonym scopes:
 - Exact - an exact match
