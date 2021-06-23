@@ -6,8 +6,7 @@
 ## Description
 Last week, we got an initial idea on _why_ we would want to map our data to ontologies.
 One approach to map our data to do it manually - in fact, this is often the preferable
-approach. This week, we will take a closer look at automated approaches for ontology 
-mapping, and hopefully enable you to make informed choices which techniques are suitable
+approach. This week, we will take a closer look at  approaches of __how__ to map your data to ontologies, and hopefully enable you to make informed choices which techniques are suitable
 in which situation.
 
 ## Topics
@@ -16,15 +15,16 @@ in which situation.
 - Review: what to do when you need a term
 
 ## New Material
+- [Background: Semantic ETL](semantic_etl.md)
 - [Introduction to mappings](mappings.md)
-- [Open science and the importance of contributing](contributing.md)
+- [Practical example](cancermapping.md)
 - Making new term requests
   - [New term request to Mondo](new-term-request-mondo.md)
   - [New term request to OBI](new-term-request-obi.md)
 
 ## Preparation
 - [The case for open science: rare diseases](https://pubmed.ncbi.nlm.nih.gov/33426479/)
-- Exam?
+- Exam
 
 ## Semantic Engineer Toolbox
 - Tools
