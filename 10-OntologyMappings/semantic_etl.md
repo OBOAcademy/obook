@@ -64,6 +64,7 @@ _Interesting sources for further reading:_
 
 - [Using Uberon for text mining](https://github.com/obophenotype/uberon/wiki/Using-uberon-for-text-mining)
 - [Named Entity Recognition with NLTK and SpaCy](https://towardsdatascience.com/named-entity-recognition-with-nltk-and-spacy-8c4a7d88e7da)
+- [NLP Sandbox](https://sagebionetworks.org/in-the-news/introducing-nlpsandbox-io/)
 
 #### [Relationship extraction](http://nlpprogress.com/english/relationship_extraction.html)
 

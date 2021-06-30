@@ -70,3 +70,33 @@ Mapping phenotypes across species holds great promise for leveraging the knowled
 Medical terminology and ontology mapping is a huge deal in medical informatics ([example](https://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/mapping_projects/index.html)). [Mondo](https://github.com/monarch-initiative/mondo) is a particularly rich source of well provenanced disease ontology mappings.
 
 ## How should you map your data to ontologies?
+
+There are no one size fits all strategies for mapping your data to ontologies. There
+are many research areas that have something to give in this process. Here, we outline some ideas 
+on how to think about the problem.
+
+### Case 1: Mapping internal controlled vocabularies
+
+### Case 2: Mappings from free text
+
+Examples: 
+- [Monarch Text Annotator](https://monarchinitiative.org/tools/text-annotate)
+
+### Case 3: Mappings between public controlled vocabularies and ontologies
+
+## How to solve the problem of mapping hairballs
+  
+String-term mappings
+
+Overview of automated approaches
+  - Simple matches (string, string pre-pro, fuzzy string)
+  - Graph-based matches (incl. semantic similarity)
+  - NLP/Machine Learning
+
+Practical:
+  - Try to get the same mappings as before using techniques
+  - Exact
+  - Simple preprocessing
+  - Levenshtein
+  - Jaccard similarity
+  - Embedding similarity (?)  
