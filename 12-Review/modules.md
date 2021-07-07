@@ -1,0 +1,78 @@
+- Ontology Term Use
+  - context: using ontolgoy terms in a document or spreadsheet
+  - skills
+    - know what ontologies are good for
+    - find good ontologies: ontology repositories, OBO
+    - find good terms: ontology browsers
+    - assess for use: license, quality
+    - map local terms to ontology terms
+    - identify missing terms
+    - use IRIs, prefixes, CURIEs, labels
+    - use Protege?
+- Ontology Contribution
+  - context: contribut terms to existing ontologies
+  - builds on: Ontology Term Use
+  - skills
+    - use GitHub: issues, Pull Requests
+    - understand basic Open Source etiquette
+      - reading READMEs
+    - understand basics of ontology development workflows
+    - understand ontology design patterns
+    - use templates: ROBOT, DOS-DP
+    - basics of OWL
+- Ontology Theory
+  - context: learning more about SemWeb and OWL
+  - builds on: Ontology Term Use
+  - skills
+    - RDF
+    - RDFS
+    - OWL
+    - Reasoners
+    - basic SPARQL
+    - Turtle, JSON-LD
+- Linked Data Analysis
+  - context: advanced queries with ontologies
+  - builds on: Ontology Theory
+  - skills
+    - advanced SPARQL
+    - term enrichment
+    - semantic similarity?
+    - Named Entity Recognition
+    - more...
+- Application Ontology Development
+  - context: combining ontology subsets for use in a project
+  - builds on: Ontology Theory, Ontology Contribution
+  - skills
+    - manage GitHub
+    - manage ontology imports
+    - use ROBOT extract: MIREOT, SLME
+    - use ROBOT report
+    - pruning trees
+- Semantic Databases
+  - context: using ontology terms in a database
+  - builds on: Application Ontology Development
+  - skills
+    - advanced term mapping
+    - ontology terms in SQL
+    - terminology table JOINs, constraints
+    - convert tables to triples
+    - triplestores
+    - knowledge graphs
+- Ontology Development Automation
+  - context: more technical side of ontology development
+  - builds on: Application Ontology Development
+  - skills
+    - Unix shell
+    - Make
+    - advanced git, GitHub
+    - ROBOT
+    - ODK
+- OBO Reference Ontology Development
+  - context: leading a new or existing OBO project; maybe reference ontology develoment?
+  - builds on: Ontology Development Automation
+  - skills
+    - detailed knowledge of OBO principles and best practises
+    - use OBO Dashboard
+    - use OBO Registry
+    - use PURL system
+
