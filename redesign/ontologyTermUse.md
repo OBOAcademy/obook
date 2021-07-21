@@ -25,3 +25,6 @@
 
 ## Additional materials and resources
 - [How select and request terms from ontologies](https://douroucouli.wordpress.com/2021/07/03/how-select-and-request-terms-from-ontologies/) - Blog post by Chris Mungall
+
+## Contributors
+- [Nicole Vasilevsky](https://orcid.org/0000-0001-5208-3432)

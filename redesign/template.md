@@ -18,3 +18,6 @@
 
 ## Additional materials and resources
 - TBD
+
+## Contributors
+- Add contributors with ORCID here
