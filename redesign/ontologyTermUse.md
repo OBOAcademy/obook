@@ -24,4 +24,4 @@
 - in person or video (link videos here as they become available)
 
 ## Additional materials and resources
-- TBD
+- [How select and request terms from ontologies](https://douroucouli.wordpress.com/2021/07/03/how-select-and-request-terms-from-ontologies/) - Blog post by Chris Mungall
