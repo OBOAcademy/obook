@@ -8,7 +8,7 @@
 
 ## What is delivered as part of the course
 
-**Description:** Using ontology terms for annotations.
+**Description:** Using ontology terms for annotations and structuring data.
 
 ### Learning objectives
 - Explain why ontologies are useful
@@ -25,6 +25,8 @@
 
 ## Additional materials and resources
 - [How select and request terms from ontologies](https://douroucouli.wordpress.com/2021/07/03/how-select-and-request-terms-from-ontologies/) - Blog post by Chris Mungall
+- [Guidelines for writing definitions in Ontologies (paper)](https://philpapers.org/archive/SEPGFW.pdf)
+
 
 ## Contributors
 - [Nicole Vasilevsky](https://orcid.org/0000-0001-5208-3432)
