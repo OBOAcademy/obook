@@ -1,7 +1,7 @@
 # OBO Reference Ontology Development
 
 ## Prerequisites
-- Review tutorial on Ontology Development Automation
+- Review tutorial on [Ontology Development Automation](r/redesign/07_ontologyDevelopmentAutomation.md)
 
 ## Preparation
 - TBD

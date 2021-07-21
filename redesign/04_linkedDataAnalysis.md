@@ -1,7 +1,7 @@
 # Linked Data Analysis
 
 ## Prerequisites
-- Review tutorial on Ontology Theory
+- Review tutorial on [Ontology Theory](/redesign/03_ontologyTheory.md)
 
 ## Preparation
 - TBD

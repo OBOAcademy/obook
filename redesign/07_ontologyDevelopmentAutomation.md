@@ -1,7 +1,7 @@
 # Ontology Development Automation
 
 ## Prerequisites
-- Review tutorial on Application Ontology Development
+- Review tutorial on [Application Ontology Development](/redesign/05_applicationOntologyDevelopment.md)
 
 ## Preparation
 - TBD

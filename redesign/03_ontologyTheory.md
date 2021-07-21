@@ -1,7 +1,7 @@
 # Ontology Theory
 
 ## Prerequisites
-- Review tutorial on Ontology Term Use
+- Review tutorial on [Ontology Term Use](/redesign/01_ontologyTermUse.md)
 
 ## Preparation
 - TBD

@@ -1,7 +1,7 @@
 # Application Ontology Development
 
 ## Prerequisites
-- Review tutorials on Ontology Theory and Ontology Contribution
+- Review tutorials on [Ontology Theory](/redesign/03_ontologyTheory.md) and [Ontology Contribution](/redesign/02_ontologyContribution.md)
 
 ## Preparation
 - TBD
