@@ -1,21 +1,22 @@
 # Semantic Databases
 
 ## Prerequisites
-- Review tutorial on Ontology Theory
+- Review tutorial on Application Ontology Development
 
 ## Preparation
 - TBD
 
 ## What is delivered as part of the course
 
-**Description:**  Advanced queries with ontologies
+**Description:**  Using ontology terms in a database.
 
 ### Learning objectives
-- advanced SPARQL
-- term enrichment
-- semantic similarity
-- Named Entity Recognition
-- more…
+- advanced term mapping
+- ontology terms in SQL
+- terminology table JOINs, constraints
+- convert tables to triples
+- triplestores
+- knowledge graphs
 
 ## Tutorials
 - in person or video (link videos here as they become available)
@@ -23,4 +24,4 @@
 ## Additional materials and resources
 
 ## Contributors
-- add name/ORCID here
+- [Nico Matentzoglu](https://orcid.org/0000-0002-7356-1779)

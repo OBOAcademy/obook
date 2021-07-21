@@ -1,21 +1,20 @@
 # OBO Reference Ontology Development
 
 ## Prerequisites
-- Review tutorial on Ontology Theory
+- Review tutorial on Ontology Development Automation
 
 ## Preparation
 - TBD
 
 ## What is delivered as part of the course
 
-**Description:**  Advanced queries with ontologies
+**Description:** Leading a new or existing OBO project; maybe reference ontology develoment?
 
 ### Learning objectives
-- advanced SPARQL
-- term enrichment
-- semantic similarity
-- Named Entity Recognition
-- more…
+- detailed knowledge of OBO principles and best practises
+- use OBO Dashboard
+- use OBO Registry
+- use PURL system
 
 ## Tutorials
 - in person or video (link videos here as they become available)

@@ -1,21 +1,21 @@
 # Application Ontology Development
 
 ## Prerequisites
-- Review tutorial on Ontology Theory
+- Review tutorials on Ontology Theory and Ontology Contribution
 
 ## Preparation
 - TBD
 
 ## What is delivered as part of the course
 
-**Description:**  Advanced queries with ontologies
+**Description:**  Combining ontology subsets for use in a project.
 
 ### Learning objectives
-- advanced SPARQL
-- term enrichment
-- semantic similarity
-- Named Entity Recognition
-- more…
+- manage GitHub
+- manage ontology imports
+- use ROBOT extract: MIREOT, SLME
+- use ROBOT report
+- pruning trees
 
 ## Tutorials
 - in person or video (link videos here as they become available)

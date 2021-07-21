@@ -1,21 +1,21 @@
 # Ontology Development Automation
 
 ## Prerequisites
-- Review tutorial on Ontology Theory
+- Review tutorial on Application Ontology Development
 
 ## Preparation
 - TBD
 
 ## What is delivered as part of the course
 
-**Description:**  Advanced queries with ontologies
+**Description:**  More technical side of ontology development
 
 ### Learning objectives
-- advanced SPARQL
-- term enrichment
-- semantic similarity
-- Named Entity Recognition
-- more…
+- Unix shell
+- Make
+- Advanced Git, GitHub
+- ROBOT
+- ODK
 
 ## Tutorials
 - in person or video (link videos here as they become available)
