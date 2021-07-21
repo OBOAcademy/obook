@@ -1,12 +1,16 @@
 # Ontology Term use
 
-## 1. Explain why ontologies are useful
+## 1. Why ontologies are useful
 
 ## 2. Find good ontologies
 
 ### 3. Ontology repositories
 
 ### 4. OBO Foundry
+
+The [OBO Foundry](http://obofoundry.org/) is a community of ontology developers that are committed to developing a library of ontologies that are open, interoperable ontologies, logically well-formed and scientifically accurate. OBO Foundry participants follow and contribute to the development of an evolving set of [principles](http://obofoundry.org/principles/fp-000-summary.html) including open use, collaborative development, non-overlapping and strictly-scoped content, and common syntax and relations, based on ontology models that work well, such as the [Gene Ontology (GO)](http://geneontology.org/).
+
+The OBO Foundry is overseen by an [Operations Committee](http://obofoundry.org/docs/OperationsCommittee.html) with Editorial, Technical and Outreach working groups.
 
 ## 5. Find terms using ontology browsers
 
