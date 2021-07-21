@@ -4,11 +4,11 @@
 - Need a web browser
 
 ## Preparation
-- TBD
+- None
 
 ## What is delivered as part of the course
 
-**Description:** Using ontology terms in a document or spreadsheet
+**Description:** Using ontology terms for annotations.
 
 ### Learning objectives
 - Explain why ontologies are useful

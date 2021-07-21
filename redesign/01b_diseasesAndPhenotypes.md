@@ -4,7 +4,7 @@
 - Need a web browser
 
 ## Preparation
-- None
+- Review tutorial on [Ontology Term Use](/redesign/01_ontologyTermUse.md)
 
 ## What is delivered as part of the course
 
