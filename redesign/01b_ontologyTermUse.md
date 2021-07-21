@@ -4,9 +4,9 @@
 
 ## 2. Find good ontologies
 
-### 3. Ontology repositories
+## 3. Ontology repositories
 
-### 4. OBO Foundry
+## 4. OBO Foundry
 
 The [OBO Foundry](http://obofoundry.org/) is a community of ontology developers that are committed to developing a library of ontologies that are open, interoperable ontologies, logically well-formed and scientifically accurate. OBO Foundry participants follow and contribute to the development of an evolving set of [principles](http://obofoundry.org/principles/fp-000-summary.html) including open use, collaborative development, non-overlapping and strictly-scoped content, and common syntax and relations, based on ontology models that work well, such as the [Gene Ontology (GO)](http://geneontology.org/).
 
@@ -20,6 +20,14 @@ The OBO Foundry is overseen by an [Operations Committee](http://obofoundry.org/d
   - [Ontobee](http://www.ontobee.org/)
 
 ## 6. Assess ontologies for use: license, quality
+
+Some considerations for determining which ontologies to use include the license and quality of the ontology.
+
+### License
+
+Licenses define how an ontology can legally be used or reused. 
+
+### Quality
 
 ## 7. Map local terminology to ontology terms
 
