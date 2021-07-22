@@ -12,13 +12,13 @@
 
 ### Learning objectives
 - 1. [Explain why ontologies are useful](#explain)
-- 2. Find good ontologies: ontology repositories, OBO
-- 3. Find terms using ontology browsers
-- 4. Assess ontologies for use: license, quality
-- 5. Map local terminology to ontology terms
-- 6. Identify missing terms
-- 7. Make term requests to existing ontologies
-- 8. Understand the differences between IRIs, CURIEs, and labels
+- 2. [Find good ontologies: ontology repositories, OBO](#find)
+- 3. [Find terms using ontology browsers](#repo)
+- 4. [Assess ontologies for use: license, quality](#access)
+- 5. [Map local terminology to ontology terms](#map)
+- 6. [Identify missing terms](#identify)
+- 7. [Make term requests to existing ontologies](#term)
+- 8. [Understand the differences between IRIs, CURIEs, and labels](#iri)
 
 ## Tutorials
 - in person or video (link videos here as they become available)
@@ -34,8 +34,10 @@
 <a name="explain"></a> 
 ## 1. Explain why ontologies are useful
 
+<a name="find"></a> 
 ## 2. Find good ontologies
 
+<a name="repo"></a> 
 ## 3. Ontology repositories
 
 ### OBO Foundry
@@ -51,6 +53,7 @@ The OBO Foundry is overseen by an [Operations Committee](http://obofoundry.org/d
   - [BioPortal](https://bioportal.bioontology.org/)
   - [Ontobee](http://www.ontobee.org/)
 
+<a name="assess"></a> 
 ## 4. Assess ontologies for use: license, quality
 
 Some considerations for determining which ontologies to use include the license and quality of the ontology.
@@ -61,10 +64,13 @@ Licenses define how an ontology can legally be used or reused.
 
 ### Quality
 
+<a name="map"></a> 
 ## 5. Map local terminology to ontology terms
 
+<a name="missing"></a> 
 ## 6. Identify missing terms
 
+<a name="request"></a> 
 ## 7. Make term requests to existing ontologies
 
 ### Making a new term request to Mondo
@@ -125,4 +131,5 @@ Note: while this ticket generally follows best practices, one thing that can be 
 - The Mondo curation team created many [issue templates](https://github.com/monarch-initiative/mondo/issues/new/choose) for users, for specific types of requests.
 - If none of the issue templates fit your issue, you can scroll to the bottom and click [Open a blank issue](https://github.com/monarch-initiative/mondo/issues/new)
 
+<a name="iri"></a> 
 ## 8. Understand the differences between IRIs, CURIEs, and labels
