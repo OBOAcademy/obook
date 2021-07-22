@@ -11,14 +11,14 @@
 **Description:** Using ontology terms for annotations and structuring data.
 
 ### Learning objectives
-- 1. [Explain why ontologies are useful](#explain)
-- 2. [Find good ontologies: ontology repositories, OBO](#find)
-- 3. [Find terms using ontology browsers](#repo)
-- 4. [Assess ontologies for use: license, quality](#access)
-- 5. [Map local terminology to ontology terms](#map)
-- 6. [Identify missing terms](#identify)
-- 7. [Make term requests to existing ontologies](#term)
-- 8. [Understand the differences between IRIs, CURIEs, and labels](#iri)
+1. [Explain why ontologies are useful](#explain)
+2. [Find good ontologies: ontology repositories, OBO](#find)
+3. [Find terms using ontology browsers](#repo)
+4. [Assess ontologies for use: license, quality](#access)
+5. [Map local terminology to ontology terms](#map)
+6. [Identify missing terms](#identify)
+7. [Make term requests to existing ontologies](#term)
+8. [Understand the differences between IRIs, CURIEs, and labels](#iri)
 
 ## Tutorials
 - in person or video (link videos here as they become available)
