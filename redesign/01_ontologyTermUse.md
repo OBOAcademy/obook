@@ -1,5 +1,5 @@
 # Ontology Term Use
-[test](#additional-materials-and-resources)
+
 ## Prerequisites
 - Need a web browser
 
@@ -11,7 +11,7 @@
 **Description:** Using ontology terms for annotations and structuring data.
 
 ### Learning objectives
-- Explain why ontologies are useful
+- [Explain why ontologies are useful](#explain)
 - Find good ontologies: ontology repositories, OBO
 - Find terms using ontology browsers
 - Assess ontologies for use: license, quality
@@ -31,3 +31,5 @@
 ## Contributors
 - [Nicole Vasilevsky](https://orcid.org/0000-0001-5208-3432)
 
+<a name="explain"></a> 
+## Explain why ontologies are useful
