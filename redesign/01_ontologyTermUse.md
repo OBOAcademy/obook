@@ -14,7 +14,7 @@
 1. [Explain why ontologies are useful](#explain)
 2. [Find good ontologies: ontology repositories, OBO](#find)
 3. [Find terms using ontology browsers](#repo)
-4. [Assess ontologies for use: license, quality](#access)
+4. [Assess ontologies for use: license, quality](#assess)
 5. [Map local terminology to ontology terms](#map)
 6. [Identify missing terms](#identify)
 7. [Make term requests to existing ontologies](#term)
