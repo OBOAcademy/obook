@@ -1,5 +1,5 @@
 # Ontology Term Use
-
+[test](#additional-materials-and-resources)
 ## Prerequisites
 - Need a web browser
 
@@ -30,3 +30,4 @@
 
 ## Contributors
 - [Nicole Vasilevsky](https://orcid.org/0000-0001-5208-3432)
+
