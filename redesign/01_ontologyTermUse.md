@@ -16,7 +16,7 @@
 3. [Find terms using ontology browsers](#repo)
 4. [Assess ontologies for use: license, quality](#assess)
 5. [Map local terminology to ontology terms](#map)
-6. [Identify missing terms](#identify)
+6. [Identify missing terms](#missing)
 7. [Make term requests to existing ontologies](#term)
 8. [Understand the differences between IRIs, CURIEs, and labels](#iri)
 
