@@ -35,6 +35,19 @@ Participants will need to have access to the following resources and tools prior
 <a name="issues"></a> 
 ## Use GitHub: create issues
 
+1. Go to GitHub tracker for the ontology where you'd like to create an issue
+1. Select New issue
+1. Pick appropriate template (if applicable)
+1. Fill in the information that is requested on the template below each header
+1. For a new term request, please include:
+	1. A definition in the proper format
+	1. Sources/cross references for synonyms
+	1. Your ORCID
+	1. Add any additional comments at the end
+1. If you use a template, an ontology curator may automatically be assigned.
+
+See [this example video, creating a new term request to the Mondo Disease Ontology](https://drive.google.com/file/d/14g9y1nmCmRTkPB1fa6y_jIW3lHyFV4-g/view?resourcekey)
+
 <a name="pr"></a> 
 ## Use GitHub: make pull requests
 
