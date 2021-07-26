@@ -73,6 +73,12 @@ Some criteria that can be applied to determine the quality of an ontology includ
 - **Commmunity involvement** On the issue tracker, is there evidence of community involvement, such as issues and comments from outside community members?
 - **Scientifically sound** Does the ontology accurately represent the domain in a scientifically sound way?
 
+### How to determine which is the right ontology to use?
+
+- There are multiple ontologies that exist, start by selecting the appropriate ontology, then search and restrict your search to that ontology.
+- Recommend using ontologies that are open and interoperable. Focusing on OBO foundry ontologies are a good place to start
+- Make informed decision about which ontology to use
+- Maybe the ontology you want to use does not have the term you want, so make a term request to that ontology(#request)
 
 <a name="map"></a> 
 ## 5. Map local terminology to ontology terms
