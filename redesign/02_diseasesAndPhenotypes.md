@@ -8,7 +8,7 @@
 
 ## What is delivered as part of the course
 
-**Description:** An introduction to the landscape of disease and phenotype ontologies, and how they can be used to add value to your analysis.
+**Description:** An introduction to the landscape of disease and phenotype terminologies and ontologies, and how they can be used to add value to your analysis.
 
 ### Learning objectives
 - [Become aware of the major disease and phenotype ontologies that are available](#major)
