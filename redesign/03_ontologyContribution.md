@@ -15,14 +15,14 @@ Participants will need to have access to the following resources and tools prior
 **Description:** How to contribute terms to existing ontologies.
 
 ### Learning objectives
-- Use GitHub: create issues
-- Use GitHub: make pull requests
-- Understand basic Open Source etiquette
-- Reading READMEs
-- Understand basics of ontology development workflows
-- Understand ontology design patterns
-- Use templates: ROBOT, DOSDP
-- Basics of OWL
+- [Use GitHub: create issues](#issues)
+- [Use GitHub: make pull requests](#pr)
+- [Understand basic Open Source etiquette](#etiquette)
+- [Reading READMEs](readme)
+- [Understand basics of ontology development workflows](workflow)
+- [Understand ontology design patterns](pattern)
+- [Use templates: ROBOT, DOSDP](template)
+- [Basics of OWL](owl)
 
 ## Tutorials
 - in person or video (link videos here as they become available)
@@ -31,3 +31,27 @@ Participants will need to have access to the following resources and tools prior
 
 ## Contributors
 - [Nicole Vasilevsky](https://orcid.org/0000-0001-5208-3432)
+
+<a name="issues"></a> 
+## Use GitHub: create issues
+
+<a name="pr"></a> 
+## Use GitHub: make pull requests
+
+<a name="etiquette"></a> 
+## Understand basic Open Source etiquette
+
+<a name="readme"></a> 
+## Reading READMEs
+
+<a name="workflow"></a> 
+## Understand basics of ontology development workflows
+
+<a name="pattern"></a> 
+## Understand ontology design patterns
+
+<a name="template"></a> 
+## Use templates: ROBOT, DOSDP
+
+<a name="owl"></a> 
+## Basics of OWL
