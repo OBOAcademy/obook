@@ -39,9 +39,9 @@ The unified phenotype ontology (uPheno) aggregates species-specific phenotype on
 
 Similarly to the phenotype ontologies, there are many disease ontologies that exist that are specific to certain areas of diseases, such as infectious diseases (e.g. [Infectious Disease Ontology](http://www.bioontology.org/wiki/index.php/Infectious_Disease_Ontology)), cancer (e.g. [National Cancer Institute Thesaurus](https://ncithesaurus.nci.nih.gov/ncitbrowser/pages/home.jsf?version=20.11e)), rare diseases (e.g. [Orphanet](https://www.orpha.net/consor/cgi-bin/index.php)), etc.
 
-In addition, there are several more general disease ontologies, such as the [Mondo disease ontology](https://mondo.monarchinitiative.org/), the [Human Disease Ontology (DO)](http://www.disease-ontology.org/), [SNOMED](https://browser.ihtsdotools.org/?), etc. 
+In addition, there are several more general disease ontologies, such as the [Mondo Disease Ontology](https://mondo.monarchinitiative.org/), the [Human Disease Ontology (DO)](http://www.disease-ontology.org/), [SNOMED](https://browser.ihtsdotools.org/?), etc. 
 
-Different disease ontologies may be built for different purposes; for example, ontologies like Mondo and DO are intended to be used for classifying data and downstream computational analyses.  
+Different disease ontologies may be built for different purposes; for example, ontologies like Mondo and DO are intended to be used for classifying data, and downstream computational analyses. Some terminologies are used for indexing purposes, such as International classification of Diseases (ICD). ICD-11 is intended for indexing medical encounters for the purposes of billing and coding. Some of the disease ontologies listed on the [landscape](https://github.com/jamesaoverton/obook/blob/master/09-DiseasesAndPhenotypes/ontologylandscape.md) contain terms that define diseases, such as [Ontology for General Medical Sciences (OGMS)](http://obofoundry.org/ontology/ogms.html) are upper level ontologies and are intended for integration with other ontologies. 
 
 When deciding on which phenotype or disease ontology to use, some things to consider:
 
