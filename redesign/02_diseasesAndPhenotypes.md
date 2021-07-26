@@ -28,10 +28,23 @@
 <a name="major"></a> 
 ## Major disease and phenotype ontologies that are available
 
-A landscape analysis of major disease and phenotype ontologies that are currently available is [here](https://github.com/jamesaoverton/obook/blob/master/09-DiseasesAndPhenotypes/ontologylandscape.md)
+A landscape analysis of major disease and phenotype ontologies that are currently available is [here](https://github.com/jamesaoverton/obook/blob/master/09-DiseasesAndPhenotypes/ontologylandscape.md).
 
 <a name="decision"></a> 
 ## Decide which phenotype or disease ontology to use for different use cases
+
+The unified phenotype ontology (uPheno) aggregates species-specific phenotype ontologies into a unified resource. Several species-specific phenotype ontologies exist, such as the [Human Phenotype Ontology](https://hpo.jax.org/app/), Mammalian Phenotype Ontology(http://www.informatics.jax.org/searches/MP_form.shtml) and many more.
+
+Similarly to the phenotype ontologies, there are many disease ontologies that exist that are specific to certain areas of diseases, such as infectious diseases (e.g. [Infectious Disease Ontology](http://www.bioontology.org/wiki/index.php/Infectious_Disease_Ontology)), cancer (e.g. [National Cancer Institute Thesaurus](https://ncithesaurus.nci.nih.gov/ncitbrowser/pages/home.jsf?version=20.11e)), rare diseases (e.g. [Orphanet](https://www.orpha.net/consor/cgi-bin/index.php)), etc.
+
+In addition, there are several more general disease ontologies, such as the [Mondo disease ontology](https://mondo.monarchinitiative.org/), the [Human Disease Ontology](http://www.disease-ontology.org/), [SNOMED](https://browser.ihtsdotools.org/?), etc. 
+
+When deciding on which phenotype or disease ontology to use, some things to consider:
+
+- Do you need a more specific ontology, such as a species-specific ontology, or do you need a more general ontology that is cross-species or covers more aspects of diseases?
+- Is the ontology open and free to use?
+- Is the ontology actively maintained?
+- Does the ontology contain the terms you need? If not, is there a mechanism to request changes and new terms and are the ontology developers responsive to change requests on their tracker?
 
 <a name="analytics"></a> 
 ## Understand how to leverage disease and phenotype ontologies for advanced data analytics
