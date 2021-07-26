@@ -1,7 +1,7 @@
 # Ontology Term Use
 
 ## Prerequisites
-- None
+- Sign up for a free [GitHub](www.github.com) account
 
 ## Preparation
 - None
