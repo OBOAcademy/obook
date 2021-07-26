@@ -35,6 +35,14 @@
 
 Ontologies provide a logical classification of information in a particular domain or subject area. Ontologies can be used for data annotations, for structuring disparate data types, classifying information, for inferencing and reasoning across data and computational analyses.
 
+### Difference between a terminology and an ontology
+
+#### Terminology
+A terminology is a list of terms, can have definitions and synonyms.
+
+#### Ontology
+An ontology contains a formal classification of terminology in a domain that provides textual and machine readable definitions, and defines the relationships between terms. An ontology is a terminology, but a terminology is not an ontology.
+
 <a name="find"></a> 
 ## 2. Finding good ontologies
 
