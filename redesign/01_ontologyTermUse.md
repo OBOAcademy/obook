@@ -34,8 +34,12 @@
 <a name="explain"></a> 
 ## 1. Explain why ontologies are useful
 
+Ontologies provide a logical classification of information in a particular domain or subject area. Ontologies can be used for data annotations, for structuring disparate data types, classifying information, for inferencing and reasoning across data and computational analyses.
+
 <a name="find"></a> 
 ## 2. Find good ontologies
+
+
 
 <a name="repo"></a> 
 ## 3. Ontology repositories
