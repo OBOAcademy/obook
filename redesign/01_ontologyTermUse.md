@@ -41,6 +41,9 @@ Ontologies provide a logical classification of information in a particular domai
 Numerous ontologies exist. Some recommended sources to find good ontologies are listed below.
 
 - [OBO Foundry](http://obofoundry.org/). Read more [below](#repo) 
+- [The Ontology Lookup Service (OLS)](https://www.ebi.ac.uk/ols/ontologies). The OLS contains over 200 ontologies.
+- [BioPortal](https://bioportal.bioontology.org/). BioPortal aggreates almost 900 biomedical ontologies, and provides a search interface to look up terms.
+- [Ontobee](http://www.ontobee.org/). Ontobee contains over 200 biomedical ontologies.
 
 <a name="repo"></a> 
 ## 3. Ontology repositories
