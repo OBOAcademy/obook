@@ -17,7 +17,7 @@
 - [Have a basic understanding of how to integrate other data](integrate)
 
 ## Tutorials
-- [Video from c-path lesson 2021-06-16](https://www.dropbox.com/sh/c32zcq1iroh6km1/AACR5_se8epI1Qacy5aYmN08a?dl=0&preview=GMT20210616-170346_Recording_1920x1080.mp4)
+- [Video from Disease and Phenotypes c-path lesson 2021-06-16](https://www.dropbox.com/sh/c32zcq1iroh6km1/AACR5_se8epI1Qacy5aYmN08a?dl=0&preview=GMT20210616-170346_Recording_1920x1080.mp4)
 
 ## Additional materials and resources
 
