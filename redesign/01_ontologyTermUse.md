@@ -80,6 +80,8 @@ Some criteria that can be applied to determine the quality of an ontology includ
 <a name="missing"></a> 
 ## 6. Identify missing terms
 
+
+
 <a name="request"></a> 
 ## 7. Make term requests to existing ontologies
 
@@ -145,12 +147,41 @@ Note: while this ticket generally follows best practices, one thing that can be 
 ## 8. Understand the differences between IRIs, CURIEs, and labels
 
 #### URI 
-A uniform resource identifier (URI) is a string of characters used to identify a name or a resource
+A uniform resource identifier (URI) is a string of characters used to identify a name or a resource. 
+
+#### URL
+A URL is a URI that, in addition to identifying a network-homed resource, specifies the means of acting upon or obtaining the representation.
+
+A URL such as this one: 
+
+https://github.com/obophenotype/uberon/blob/master/uberon_edit.obo
+
+has three main parts:
+1. Protocol, e.g. https
+2. Host, e.g. github.com
+3. Path, e.g. /obophenotype/uberon/blob/master/uberon_edit.obo
+
+The protocol tells you how to get the resource. Common protocols for web pages are http (HyperText Transfer Protocol) and https (HTTP Secure). 
+The host is the name of the server to contact (the where), which can be a numeric IP address, but is more often a domain name. 
+The path is the name of the resource on that server (the what), here the Uberon anatomy ontology file.
+
 
 #### IRI
-A Internationalized Resource Identifiers (IRI) is an internet protocol standard that allows permitted characters from a wide range of scripts. More information is available [here](https://www.w3.org/International/articles/idn-and-iri/).
+A Internationalized Resource Identifiers (IRI) is an internet protocol standard that allows permitted characters from a wide range of scripts. While URIs are limited to a subset of the ASCII character set, IRIs may contain characters from the Universal Character Set (Unicode/ISO 10646), including Chinese or Japanese kanji, Korean, Cyrillic characters, and so forth. It is defined by [RFC 3987](https://datatracker.ietf.org/doc/html/rfc3987).
+
+More information is available [here](https://www.w3.org/International/articles/idn-and-iri/).
 
 #### CURIEs
-A Compact IRI (CURIE) 
+A Compact URI (CURIE) consists of a prefix and a suffix, where the prefix stands in place of a longer base IRI. 
+
+By converting the prefix and appending the suffix we get back to full IRI. For example, if we define the obo prefix to stand in place of the IRI as:
+http://purl.obolibrary.org/obo/, then the CURIE 
+obo:UBERON_0002280 
+can be expanded to 
+http://purl.obolibrary.org/obo/UBERON_0002280, which is the UBERON Anatomy term for ‘otolith’. 
+Any file that contains CURIEs need to 
+define the prefixes in the file header.
 
 #### Label
+
+A label is the textual, human readable name that is given to a term, class property or instance in an ontology.  
