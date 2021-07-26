@@ -31,14 +31,14 @@
 - [Nicole Vasilevsky](https://orcid.org/0000-0001-5208-3432)
 
 <a name="explain"></a> 
-## 1. Explain why ontologies are useful
+## 1. Why ontologies are useful
 
 Ontologies provide a logical classification of information in a particular domain or subject area. Ontologies can be used for data annotations, for structuring disparate data types, classifying information, for inferencing and reasoning across data and computational analyses.
 
 <a name="find"></a> 
-## 2. Find good ontologies
+## 2. Finding good ontologies
 
-Numerous ontologies exist. Some recommended sources to find good ontologies are listed below.
+Numerous ontologies exist. Some recommended sources to find community developed, high quality and frequently used ontologies are listed below.
 
 - [OBO Foundry](http://obofoundry.org/). Read more [below](#repo) 
 - [The Ontology Lookup Service (OLS)](https://www.ebi.ac.uk/ols/ontologies). The OLS contains over 200 ontologies.
@@ -63,7 +63,7 @@ Various ontology browsers are available, we recommend using one of the ontology 
   - [Ontobee](http://www.ontobee.org/)
 
 <a name="assess"></a> 
-## 4. Assess ontologies for use: license, quality
+## 4. Assessing ontologies for use
 
 Some considerations for determining which ontologies to use include the license and quality of the ontology.
 
@@ -88,7 +88,7 @@ Some criteria that can be applied to determine the quality of an ontology includ
 - Maybe the ontology you want to use does not have the term you want, so [make a term request to that ontology](#request)
 
 <a name="map"></a> 
-## 5. Map local terminology to ontology terms
+## 5. Mapping local terminology to ontology terms
 
 Data can mapped to ontology terms manually, using spreadsheets, or via curation tools such as:
 
@@ -100,7 +100,7 @@ Data can mapped to ontology terms manually, using spreadsheets, or via curation 
 - [OntoBrowser](https://opensource.nibr.com/projects/ontobrowser) - an online collaborative curation tool
 
 <a name="missing"></a> 
-## 6. Identify missing terms
+## 6. Identifying missing terms
 
 The figure below by [Chris Mungall](https://bids.berkeley.edu/people/chris-mungall) on his blog post on [How to select and request terms from ontologies
 ](https://douroucouli.wordpress.com/2021/07/03/how-select-and-request-terms-from-ontologies/) describes a workflow on searching for identifying missing terms from an ontology. 
@@ -108,7 +108,7 @@ The figure below by [Chris Mungall](https://bids.berkeley.edu/people/chris-munga
 ![term search and request workflow](https://lh5.googleusercontent.com/gpGaVX6N85gdQkBP5aZORh3G_oA1B71Hf9P2Pobl0InlAY2P7U7XWkH1iv8rsQpJtOuW2bazkhYsSOxfFGod15TvMg21gOYLAv1mcVHxkAqQHPucBm6Su-tl2IWgJXFKwd9L2xbd)
 
 <a name="request"></a> 
-## 7. Make term requests to existing ontologies
+## 7. Making term requests to existing ontologies
 
 ### Making a new term request to Mondo
 
@@ -169,7 +169,7 @@ Note: while this ticket generally follows best practices, one thing that can be 
 - If none of the issue templates fit your issue, you can scroll to the bottom and click [Open a blank issue](https://github.com/monarch-initiative/mondo/issues/new)
 
 <a name="iri"></a> 
-## 8. Understand the differences between IRIs, CURIEs, and labels
+## 8.Differences between IRIs, CURIEs, and labels
 
 #### URI 
 A uniform resource identifier (URI) is a string of characters used to identify a name or a resource. 
