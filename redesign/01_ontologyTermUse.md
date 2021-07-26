@@ -78,7 +78,7 @@ Some criteria that can be applied to determine the quality of an ontology includ
 - There are multiple ontologies that exist, start by selecting the appropriate ontology, then search and restrict your search to that ontology.
 - Recommend using ontologies that are open and interoperable. Focusing on OBO foundry ontologies are a good place to start
 - Make informed decision about which ontology to use
-- Maybe the ontology you want to use does not have the term you want, so make a term request to that ontology(#request)
+- Maybe the ontology you want to use does not have the term you want, so [make a term request to that ontology](#request)
 
 <a name="map"></a> 
 ## 5. Map local terminology to ontology terms
@@ -86,7 +86,10 @@ Some criteria that can be applied to determine the quality of an ontology includ
 <a name="missing"></a> 
 ## 6. Identify missing terms
 
+The figure below by [Chris Mungall](https://bids.berkeley.edu/people/chris-mungall) on his blog post on [How to select and request terms from ontologies
+](https://douroucouli.wordpress.com/2021/07/03/how-select-and-request-terms-from-ontologies/) describes a workflow on searching for identifying missing terms from an ontology. 
 
+![term search and request workflow](https://lh5.googleusercontent.com/gpGaVX6N85gdQkBP5aZORh3G_oA1B71Hf9P2Pobl0InlAY2P7U7XWkH1iv8rsQpJtOuW2bazkhYsSOxfFGod15TvMg21gOYLAv1mcVHxkAqQHPucBm6Su-tl2IWgJXFKwd9L2xbd)
 
 <a name="request"></a> 
 ## 7. Make term requests to existing ontologies
