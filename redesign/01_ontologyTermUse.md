@@ -1,7 +1,7 @@
 # Ontology Term Use
 
 ## Prerequisites
-- Need a web browser
+- None
 
 ## Preparation
 - None
@@ -21,12 +21,11 @@
 8. [Understand the differences between IRIs, CURIEs, and labels](#iri)
 
 ## Tutorials
-- in person or video (link videos here as they become available)
+- None
 
 ## Additional materials and resources
 - [How select and request terms from ontologies](https://douroucouli.wordpress.com/2021/07/03/how-select-and-request-terms-from-ontologies/) - Blog post by Chris Mungall
 - [Guidelines for writing definitions in Ontologies (paper)](https://philpapers.org/archive/SEPGFW.pdf)
-
 
 ## Contributors
 - [Nicole Vasilevsky](https://orcid.org/0000-0001-5208-3432)
@@ -38,8 +37,6 @@ Ontologies provide a logical classification of information in a particular domai
 
 <a name="find"></a> 
 ## 2. Find good ontologies
-
-
 
 <a name="repo"></a> 
 ## 3. Ontology repositories
