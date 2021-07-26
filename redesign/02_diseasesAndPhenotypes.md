@@ -17,7 +17,7 @@
 - [Have a basic understanding of how to integrate other data](integrate)
 
 ## Tutorials
-- in person or video (link videos here as they become available)
+- [Video from c-path lesson 2021-06-16](https://www.dropbox.com/sh/c32zcq1iroh6km1/AACR5_se8epI1Qacy5aYmN08a?dl=0&preview=GMT20210616-170346_Recording_1920x1080.mp4)
 
 ## Additional materials and resources
 
@@ -26,13 +26,15 @@
 - [Nico Matentzoglu](https://orcid.org/0000-0002-7356-1779)
 
 <a name="major"></a> 
-# Major disease and phenotype ontologies that are available
+## Major disease and phenotype ontologies that are available
+
+A landscape analysis of major disease and phenotype ontologies that are currently available is [here](https://github.com/jamesaoverton/obook/blob/master/09-DiseasesAndPhenotypes/ontologylandscape.md)
 
 <a name="decision"></a> 
-# Decide which phenotype or disease ontology to use for different use cases
+## Decide which phenotype or disease ontology to use for different use cases
 
 <a name="analytics"></a> 
-# Understand how to leverage disease and phenotype ontologies for advanced data analytics
+## Understand how to leverage disease and phenotype ontologies for advanced data analytics
 
 <a name="integrate"></a> 
-# How to integrate other data
+## How to integrate other data
