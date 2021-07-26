@@ -68,8 +68,10 @@ Licenses define how an ontology can legally be used or reused. One requirement f
 Some criteria that can be applied to determine the quality of an ontology include:
 
 - **Is there an ontology tracker to report issues?** All open ontologies should have some form of an issue tracker to report bugs, make new term requests or request other changes to the ontology. Many ontologies use GitHub to track their issues. 
-- **Is it currently active?** Are there a large number of open tickets on the ontology tracker that have not been commented on or addressed? Are the tickets very old, have been sitting for years?
-- 
+- **Is it currently active?** Are there a large number of open tickets on the ontology tracker that have not been commented on or otherwise addressed? Are the tickets very old, have been sitting for years?
+- **Commmunity involvement** On the issue tracker, is there evidence of community involvement, such as issues and comments from outside community members?
+- **Scientifically sound** Does the ontology accurately represent the domain in a scientifically sound way?
+
 
 <a name="map"></a> 
 ## 5. Map local terminology to ontology terms
