@@ -143,3 +143,14 @@ Note: while this ticket generally follows best practices, one thing that can be 
 
 <a name="iri"></a> 
 ## 8. Understand the differences between IRIs, CURIEs, and labels
+
+#### URI 
+A uniform resource identifier (URI) is a string of characters used to identify a name or a resource
+
+#### IRI
+A Internationalized Resource Identifiers (IRI) is an internet protocol standard that allows permitted characters from a wide range of scripts. More information is available [here](https://www.w3.org/International/articles/idn-and-iri/).
+
+#### CURIEs
+A Compact IRI (CURIE) 
+
+#### Label
