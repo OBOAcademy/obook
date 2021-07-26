@@ -90,6 +90,15 @@ Some criteria that can be applied to determine the quality of an ontology includ
 <a name="map"></a> 
 ## 5. Map local terminology to ontology terms
 
+Data can mapped to ontology terms manually, using spreadsheets, or via curation tools such as:
+
+- [Zooma](https://bio.tools/zooma)
+- [Noctua](http://noctua.geneontology.org/workbench/noctua-landing-page/) (designed for Gene Ontology curation)
+- [BioPortal Annotator](https://bioportal.bioontology.org/annotator)
+- [Canto](http://gmod.org/wiki/Canto) - a web-based literature curation tools
+- [Textpresso](http://www.textpresso.org/celegans/) - designed for C. elegans curation
+- [OntoBrowser](https://opensource.nibr.com/projects/ontobrowser) - an online collaborative curation tool
+
 <a name="missing"></a> 
 ## 6. Identify missing terms
 
