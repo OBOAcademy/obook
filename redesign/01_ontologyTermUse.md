@@ -38,6 +38,10 @@ Ontologies provide a logical classification of information in a particular domai
 <a name="find"></a> 
 ## 2. Find good ontologies
 
+Numerous ontologies exist. Some recommended sources to find good ontologies are listed below.
+
+- [OBO Foundry](http://obofoundry.org/). Read more [below](#repo) 
+
 <a name="repo"></a> 
 ## 3. Ontology repositories
 
