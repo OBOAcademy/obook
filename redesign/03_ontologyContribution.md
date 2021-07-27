@@ -28,7 +28,7 @@ Participants will need to have access to the following resources and tools prior
       - [Protege editing](#editing)
       - [The Class description view](#class-description)
 - [Use GitHub: make pull requests](#pr)
-- [Understand ontology design patterns](pattern)
+- [Understand ontology design patterns](#pattern)
 - [Use templates: ROBOT, DOSDP](template) (_under development_)
 - [Basics of OWL](owl)
   - [Logic and debugging](#logic)
