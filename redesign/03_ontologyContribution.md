@@ -449,5 +449,107 @@ Below are exercises to demonstrate how to:
 #### Practice adding logic and debugging
 
 These instructions will use the [Mondo disease ontology](https://github.com/monarch-initiative/mondo) as an example.
-1. **Practice (Part 1)**: See instructions [here](https://github.com/jamesaoverton/obook/blob/master/07-Review/add-logical-axiom.md)
-1. **Practice (Part 2)**: See instructions [here](https://github.com/jamesaoverton/obook/blob/master/07-Review/add-logical-axiom_part2.md)
+
+### Practice (Part 1)
+
+#### Add New Terms with an Equivalance Axiom to Mondo: 
+
+##### Creating a new class
+
+New classes are created in the Class hierarchy panel on the left.
+
+There are three buttons at the top of the class hierarchy view. These allow you to add a subclass (L-shaped icon), add a sibling class (c-shaped icon), or delete a selected class (x'd circle).
+
+![image](https://user-images.githubusercontent.com/6722114/118696258-f791d480-b7c2-11eb-836a-a594227c6da9.png)
+
+
+#### Practice adding a new term:
+
+##### Add the new term 'mycotoxin allergy'
+
+1. Navigate to the Mondo repo in GitHub Desktop, create a branch, and open mondo-edit.obo in Protege.
+1. Search for the parent term 'allergic disease' (see [search guide](https://github.com/jamesaoverton/obook/blob/master/04-OntologyTheory/SearchingMondo.md) if you are unsure how to do this).
+1. When you are clicked on the term in the Class hierarchy pane, click the add subclass button to add a child class to 'allergic disease'
+1. A dialog will popup. Name this new subclass: mycotoxin allergy. Click "OK" to add the class.
+
+##### Add annotations and a logical axiom 
+
+Equivalence axioms in Mondo are added according to Dead Simple Ontology Design Patterns (DOSDPs). You can view all of the design patterns in Mondo by going to [code/src/patterns/dosdp-patterns/](https://github.com/monarch-initiative/mondo/tree/master/src/patterns/dosdp-patterns)
+
+For this class, we want to follow the design pattern for [allergy](https://github.com/monarch-initiative/mondo/blob/master/src/patterns/dosdp-patterns/allergy.yaml).
+
+1. Review this pattern before proceeding.
+1. Based on the pattern specifications, add a text definition to this term.
+1. Add the database cross reference to this term: MONDO:patterns/allergy
+1. Add a synonym that is consistent with this pattern.
+
+![image](https://user-images.githubusercontent.com/6722114/118697325-07f67f00-b7c4-11eb-8d6d-7f2dd9cdcd62.png)
+
+1. Add the equivalence axiom according to the pattern specifications.
+
+![image](https://user-images.githubusercontent.com/6722114/118697461-28263e00-b7c4-11eb-8821-f4ac77f99c81.png)
+
+![image](https://user-images.githubusercontent.com/6722114/118697511-37a58700-b7c4-11eb-82d1-9850c6e05811.png)
+
+1. Run the reasoner
+1. View the inferred hierarchy. You should see a child of owl:Nothing (and you should see this in the Description pane as well.)
+
+![image](https://user-images.githubusercontent.com/6722114/118697828-92d77980-b7c4-11eb-917b-0dca0e296013.png)
+
+![image](https://user-images.githubusercontent.com/6722114/118697862-9cf97800-b7c4-11eb-99e5-8b303ef9b37d.png)
+
+1. Click on the ? button next to the owl:Nothing in the Description view
+2. The explanation tells you the reason why this is unsatisfiable
+
+![image](https://user-images.githubusercontent.com/6722114/118697993-c3b7ae80-b7c4-11eb-8f6e-3f74fdd4b3da.png)
+
+3. Mycotoxin is a child of a 'specifically dependent continuant' and and 'independent continuant' is disjoint with 'specifically dependent continuant'.
+4. This logical axiom uses the relation 'realized in response to stimulus'
+5. Click on this relation in Protege (you can click on the relation name in the equivalence axiom, or you can click on the Object properties tab and search for this relation.
+6. There are domain and range restrictions on this property, where the range has to be a material enity. Chebi mycotoxin is actually a role, so it is not a material entity. 
+
+![image](https://user-images.githubusercontent.com/6722114/118698760-a33c2400-b7c5-11eb-8c8c-85c91c9a7dab.png)
+
+7. Go back to the Classes or Entities pane and remove the equivalence axiom and run the reasoner again. You should now see no unsatisfiable classes.
+
+### Practice (Part 2)
+
+## Add a New Term with an Equivalance Axiom to Mondo: 
+
+### Add annotations and logical definition (equivalence axiom) to MONDO:0004549 'cork-handlers' disease'
+
+1. Create a new branch (named cork-handler) and open mondo-edit.obo in Protege.
+1. Search for the term `cork-handlers' disease`
+
+For this class, we want to follow the design pattern for [specific_infectious_disease_by_agent](https://github.com/monarch-initiative/mondo/blob/master/src/patterns/dosdp-patterns/specific_infectious_disease_by_agent.yaml) with a slight modification, this will be modeled after `MONDO:0002266 'malt worker's lung'`.
+
+1. Add the synonym: `cork worker's lung`
+1. Add the equivalence axiom according to the pattern specifications.
+
+`'extrinsic allergic alveolitis'
+ and 'infectious disease'
+ and ('disease has infectious agent' some Penicillium glabrum)`
+
+1. Run the reasoner
+1. View the inferred hierarchy.
+1. Confirm that there are no unsatisifiable classes and everything looks okay.
+1. Save your work and create a pull request and reference issue #1639.
+
+### Add annotations and logical definition (equivalence axiom) to 
+
+1. Create a new branch (named farmer-lung) and open mondo-edit.obo in Protege.
+1. Search for the term `'farmer's lung disease'`
+1. Similar to above, we want to add a logical axiom. In this case though, Farmer's lung can be caused by more than one infectious agent, so we'll add this as a subclassOf axiom:
+ `'disease has infectious agent' some Penicillium glabrum`
+![image](https://user-images.githubusercontent.com/6722114/118717601-1f8d3200-b7db-11eb-9517-320a2e21445f.png)
+
+1. Run the reasoner
+1. View the inferred hierarchy.
+1. Confirm that there are no unsatisifiable classes and everything looks okay. _Does the new inferred class make sense?_
+
+![image](https://user-images.githubusercontent.com/6722114/118717934-8874aa00-b7db-11eb-86df-01a5823f7f7b.png)
+
+3. Save your work and create a pull request and reference issue [#1639](https://github.com/monarch-initiative/mondo/issues/1639).
+
+
+
