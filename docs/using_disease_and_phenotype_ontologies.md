@@ -1,4 +1,4 @@
-# Diseases and Phenotypes
+# Finding and using Disease and Phenotype Ontologies
 
 ## Prerequisites
 - None

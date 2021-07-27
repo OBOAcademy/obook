@@ -1,4 +1,4 @@
-# Application Ontology Development
+# Developing an Application Ontology
 
 ## Prerequisites
 - Review tutorials on [Ontology Theory](/redesign/03_ontologyTheory.md) and [Ontology Contribution](/redesign/02_ontologyContribution.md)
