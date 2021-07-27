@@ -1,4 +1,4 @@
-# Semantic Databases
+# Semantic Databases: Fundamentals
 
 ## Prerequisites
 - Review tutorial on [Application Ontology Development](/redesign/05_applicationOntologyDevelopment.md)

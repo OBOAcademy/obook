@@ -1,7 +1,7 @@
-# Ontology Term Use
+# Using Ontologies and Ontology Terms
 
 ## Prerequisites
-- Sign up for a free [GitHub](www.github.com) account
+- Sign up for a free [GitHub](https://github.com/join) account
 
 ## Preparation
 - None
@@ -26,6 +26,7 @@
 ## Additional materials and resources
 - [How select and request terms from ontologies](https://douroucouli.wordpress.com/2021/07/03/how-select-and-request-terms-from-ontologies/) - Blog post by Chris Mungall
 - [Guidelines for writing definitions in Ontologies (paper)](https://philpapers.org/archive/SEPGFW.pdf)
+- [OntoTips](https://douroucouli.wordpress.com/category/tutorials/) - A guide by Chris Mungall covering various aspects of ontology engineering.
 
 ## Contributors
 - [Nicole Vasilevsky](https://orcid.org/0000-0001-5208-3432)
@@ -38,10 +39,10 @@ Ontologies provide a logical classification of information in a particular domai
 ### Difference between a terminology and an ontology
 
 #### Terminology
-A terminology is a list of terms, can have definitions and synonyms.
+A terminology is a collection of terms; a term can have a definition and synonyms.
 
 #### Ontology
-An ontology contains a formal classification of terminology in a domain that provides textual and machine readable definitions, and defines the relationships between terms. An ontology is a terminology, but a terminology is not an ontology.
+An ontology contains a formal classification of terminology in a domain that provides textual and machine readable definitions, and defines the relationships between terms. An ontology is a terminology, but a terminology is not (necessarily) an ontology.
 
 <a name="find"></a> 
 ## 2. Finding good ontologies
@@ -50,8 +51,8 @@ Numerous ontologies exist. Some recommended sources to find community developed,
 
 - [OBO Foundry](http://obofoundry.org/). Read more [below](#repo) 
 - [The Ontology Lookup Service (OLS)](https://www.ebi.ac.uk/ols/ontologies). The OLS contains over 200 ontologies.
-- [BioPortal](https://bioportal.bioontology.org/). BioPortal aggreates almost 900 biomedical ontologies, and provides a search interface to look up terms.
-- [Ontobee](http://www.ontobee.org/). Ontobee contains over 200 biomedical ontologies.
+- [BioPortal](https://bioportal.bioontology.org/). BioPortal aggregates almost 900 biomedical ontologies, and provides a search interface to look up terms. It is a popular repository for ontologies, but as only a fraction of the ontologies are reviewed by the OBO Foundry, you should carefully review any ontologies found on BioPortal before committing to use them.
+- [Ontobee](http://www.ontobee.org/). Ontobee indexes all 200+ OBO Foundry ontologies and is the default browser for OBO: For example, when you click http://purl.obolibrary.org/obo/IAO_0000112, you will be redirected to the a page in the Ontobee browser that describes the annotation property `example of usage`.
 
 <a name="repo"></a> 
 ## 3. Ontology repositories

@@ -1,4 +1,4 @@
-# OBO Reference Ontology Development
+# Developing an OBO Reference Ontology
 
 ## Prerequisites
 - Review tutorial on [Ontology Development Automation](r/redesign/07_ontologyDevelopmentAutomation.md)

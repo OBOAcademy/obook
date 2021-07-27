@@ -1,4 +1,4 @@
-# Linked Data Analysis
+# Analysing Linked Data (Fundamentals)
 
 ## Prerequisites
 - Review tutorial on [Ontology Theory](/redesign/03_ontologyTheory.md)
