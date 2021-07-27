@@ -40,6 +40,12 @@ Participants will need to have access to the following resources and tools prior
 ## Contributors
 - [Nicole Vasilevsky](https://orcid.org/0000-0001-5208-3432)
 - [Rebecca Jackson](https://orcid.org/0000-0003-4871-5569)
+- [Melissa Haendel](https://orcid.org/0000-0001-9114-8737)
+- [Chris Mungall](https://orcid.org/0000-0002-6601-2165)
+- [David Osumi-Sutherland](https://orcid.org/0000-0002-7073-9172)
+- Matt Yoder
+- [Carlo Torniai](https://orcid.org/0000-0002-3734-1859)
+- [Simon Jupp](https://orcid.org/0000-0002-0643-3144)
 
 ## Use GitHub
 
