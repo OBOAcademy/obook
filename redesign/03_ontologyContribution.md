@@ -116,7 +116,8 @@ The steps below describe how to make changes to an ontology.
 4. Click New Branch
 5. Give your branch a name: training-initials (ie `training-NV`)
 
-![image](https://user-images.githubusercontent.com/6722114/115821352-7ad42c00-a3b7-11eb-97e0-b02611eb77e6.png)
+![createbranch](https://user-images.githubusercontent.com/6722114/127195758-3ade012a-5788-49b5-850f-32edfe4c9b92.png)
+![name-branch](https://user-images.githubusercontent.com/6722114/127195892-b099bbfe-2a1e-4ff3-b4f8-b1487417d738.png)
 
 #### Open the Ontology edit file in Protege
 
