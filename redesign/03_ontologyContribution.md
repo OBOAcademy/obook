@@ -22,8 +22,10 @@ Participants will need to have access to the following resources and tools prior
 - [Understand basic Open Source etiquette](#etiquette)
 - [Reading READMEs](readme)
 - [Understand basics of ontology development workflows](workflow)
-  - [Browsing and Searching an ontology in Protege](#browsing)
+  - [Browsing and Searching in Protege](#browsing)
   - [Add new terms to an ontology](#add)
+      - [Initial Protege setup](#setup)
+      - [Protege editing](#editing)
 - [Use GitHub: make pull requests](#pr)
 - [Understand ontology design patterns](pattern)
 - [Use templates: ROBOT, DOSDP](template)
@@ -128,7 +130,7 @@ The steps below describe how to make changes to an ontology.
 4. _Note: all ontologies that use the [Ontology Development Kit (ODK)](https://github.com/INCATools/ontology-development-kit) will have the 'edit' files stored in the same folder path: src/ontology/[ontology-name]-edit.owl (or [ontology-name]-edit.obo)_
 
 <a name="browsing"></a> 
-### Browsing and Searching an ontology in Protege
+### Browsing and Searching in Protege
 
 The instructions below are using the Mondo Disease Ontology as an example, but this can be applied to any ontology.
 
@@ -230,13 +232,12 @@ NOTE: You can use the word 'fixes' or 'closes' in the description of the commit 
 
 2.  Push: To incorporate the changes into the remote repository, click Publish branch.
 
-
-
 <a name="add"></a> 
 ## Add New Terms to an Ontology:
 
 The instructions below are using the Mondo Disease Ontology as an example, but this can be applied to any ontology. 
 
+<a name="setup"></a> 
 ### Setup
 
 #### Setting Preferences for New entities
@@ -275,7 +276,8 @@ If you do not have an ORCID, register for for free here: <https://orcid.org/> 
 
 ![](https://lh3.googleusercontent.com/L8OnTKLNmYsTLZn6fHVdONVFe_cA-OhRLr5iO-MHld_zePvnA0ECImFKDXoqOeP0vKSHKRE8-LQYoqz5lbk9st8paCbmA74UPMb1LHmrpMuXsXbY_ZmYAsN6L8zNRCfbBHPKvv5A)
 
-### EDITING
+<a name="editing"></a> 
+### Protege editing
 
 #### Creating a new class
 
