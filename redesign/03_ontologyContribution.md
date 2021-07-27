@@ -34,7 +34,7 @@ Participants will need to have access to the following resources and tools prior
   - [Logic and debugging](#logic)
 
 ## Tutorials
-- in person or video (link videos here as they become available)
+- N/A
 
 ## Additional materials and resources
 
