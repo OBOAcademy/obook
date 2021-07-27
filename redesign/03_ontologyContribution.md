@@ -50,7 +50,7 @@ A Git repo consists of a set of branches each with a complete history of all cha
 A Git repo typically has a master or main branch that is not directly editing.  Changes are made by creating a branch from Master (complete copy of the Master + its history).  
 
 <a name="branch"></a> 
-#### Branch vs Fork
+### Branch vs Fork
 
 You can copy (fork) any GitHub repo to some other location on GitHub without having to ask permission from the owners.  If you modify some files in that repo, e.g. to fix a bug in some code, or a typo in a document, you can then suggest to the owners (via a Pull Request) that they adopt (merge) you your changes back into their repo.
 
