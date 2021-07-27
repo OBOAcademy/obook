@@ -140,7 +140,7 @@ The steps below describe how to make changes to an ontology.
 ![image](https://user-images.githubusercontent.com/6722114/115820985-c3d7b080-a3b6-11eb-8131-7b9c33cc294d.png)
 
 4. You will be given an option as to where to save the repository. I have a folder called 'git' where I save all of my local repos.
-5. This will open GitHub Desktop and the repo should start downloading. This could take some time (maybe 15 minutes?)
+5. This will open GitHub Desktop and the repo should start downloading. This could take some time depending on how big the file is and how much memory your computer has.
 
 #### Create a branch using GitHub Desktop
 3. Click the little arrow in Current Branch
@@ -149,12 +149,12 @@ The steps below describe how to make changes to an ontology.
 
 ![image](https://user-images.githubusercontent.com/6722114/115821352-7ad42c00-a3b7-11eb-97e0-b02611eb77e6.png)
 
-#### Open the Mondo Ontology in Protege
+#### Open the Ontology edit file in Protege
 
 1. Open Protege
 2. Go to: File -> Open
-3. Navigate to mondo/src/ontology/mondo-edit.obo and open this file in Protege.  
-_Note: all ontologies that use the [Ontology Development Kit (ODK)](https://github.com/INCATools/ontology-development-kit) will have the 'edit' files stored in the same folder path: src/ontology/[ontology-name]-edit.owl (or [ontology-name]-edit.obo)_
+3. Navigate to [ontology-name]/src/ontology/[ontology-name]-edit.obo and open this file in Protege. For example: mondo/src/ontology/mondo-edit.obo 
+4. _Note: all ontologies that use the [Ontology Development Kit (ODK)](https://github.com/INCATools/ontology-development-kit) will have the 'edit' files stored in the same folder path: src/ontology/[ontology-name]-edit.owl (or [ontology-name]-edit.obo)_
 
 <a name="pattern"></a> 
 ## Ontology design patterns
