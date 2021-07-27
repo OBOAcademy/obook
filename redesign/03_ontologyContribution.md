@@ -90,6 +90,8 @@ NOTE: You can use the word 'fixes' or 'closes' in the description of the commit 
 <a name="etiquette"></a> 
 ## Basic Open Source etiquette
 
+Keep in mind that open source ontology repositories on GitHub are public and open to all.
+
 <a name="readme"></a> 
 ## Reading READMEs
 
