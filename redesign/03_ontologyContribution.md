@@ -29,8 +29,9 @@ Participants will need to have access to the following resources and tools prior
       - [The Class description view](#class-description)
 - [Use GitHub: make pull requests](#pr)
 - [Understand ontology design patterns](pattern)
-- [Use templates: ROBOT, DOSDP](template)
+- [Use templates: ROBOT, DOSDP](template) (_under development_)
 - [Basics of OWL](owl)
+  - [Logic and debugging](#logic)
 
 ## Tutorials
 - in person or video (link videos here as they become available)
@@ -415,9 +416,6 @@ Save your work.
 <a name="pattern"></a> 
 ## Ontology design patterns
 
-
-
-
 <a name="template"></a> 
 ## Use templates: ROBOT, DOSDP
 
@@ -439,3 +437,17 @@ Save your work.
     - [Basic Classification](https://ontology101tutorial.readthedocs.io/en/latest/EXERCISE_BasicClassification.html)
 - Read [(I can't get no) satisfiability](http://ontogenesis.knowledgeblog.org/1329/) (~10 minutes)
   - **Optional**: Open a new ontology in Protégé. Try creating an *inconsistent* ontology using the classes and instances in the first Pets example (hint: you'll also need to create the "eats" object property)... what happens when you run the reasoner? 
+  
+<a name="logic"></a>   
+## Logic and debugging
+
+Below are exercises to demonstrate how to:
+  - Add equivalent axioms (logical definitions) to ontology terms
+  - Run the reasoner and view the inferred hierarchy
+  - Debugging and viewing explanations
+
+#### Practice adding logic and debugging
+
+These instructions will use the [Mondo disease ontology](https://github.com/monarch-initiative/mondo) as an example.
+1. **Practice (Part 1)**: See instructions [here](https://github.com/jamesaoverton/obook/blob/master/07-Review/add-logical-axiom.md)
+1. **Practice (Part 2)**: See instructions [here](https://github.com/jamesaoverton/obook/blob/master/07-Review/add-logical-axiom_part2.md)
