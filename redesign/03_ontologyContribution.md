@@ -421,17 +421,18 @@ Dead Simple Ontology Design Patterns (DOSDPs) are specifications, written in yam
 - generate new terms
 - retrofit existing ontology terms 
 
-Examples of design patterns are available here:
-- [uPheno pattern library](https://github.com/obophenotype/upheno/tree/master/src/patterns/dosdp-dev)
-- [Mondo Disease Ontology pattern library](https://github.com/monarch-initiative/mondo/tree/master/src/patterns/dosdp-patterns)
-
 DOSDPs have some key features:
 - **Description**: that describes the purpose of the patterns
 - **Examples**: Provides examples of terms that use the Patterns
 - **Declared classes**: these are the classes that are used in the pattern. Any subclass of the declared class can be used in this pattern.
 - **Declared relationships**: the relationships used in the logical axioms
 - **vars**: the variable classes that are used in the pattern. Any subclass of the 'var' can be used in this pattern.
-- **pattern for class name, synonym, text definition and logical definiton**: Ontology classes are used as 'fillers' to create new classes that conform to the specific patterns.
+- **Pattern for class name, annotations, text definition and equivalentTo (logical definition)**: Ontology classes are used as 'fillers' to create new classes that conform to the specific patterns.
+
+Examples of design patterns are available here:
+- [uPheno pattern library](https://github.com/obophenotype/upheno/tree/master/src/patterns/dosdp-dev)
+- [Mondo Disease Ontology pattern library](https://github.com/monarch-initiative/mondo/tree/master/src/patterns/dosdp-patterns)
+
 
 <a name="template"></a> 
 ## Use templates: ROBOT, DOSDP
