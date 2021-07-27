@@ -436,6 +436,7 @@ Examples of design patterns are available here:
 
 <a name="template"></a> 
 ## Use templates: ROBOT, DOSDP
+_under development_
 
 <a name="owl"></a> 
 ## Basics of OWL
