@@ -1,4 +1,4 @@
-# Ontology Contribution
+# Contributing to OBO ontologies
 
 ## Prerequisites
 Participants will need to have access to the following resources and tools prior to the training:
