@@ -8,7 +8,7 @@ Participants will need to have access to the following resources and tools prior
 - **Install GitHub Desktop** Please make sure you have some kind of git client installed on your machine. If you are new to Git, please install [GitHub Desktop](https://desktop.github.com/)
 
 ## Preparation
-- Review tutorial on [Ontology Term Use](/docs/ontology_term_use.md)
+- Review tutorial on [Ontology Term Use](ontology_term_use.md)
 
 ## What is delivered as part of the course
 
