@@ -4,6 +4,7 @@
 
 - When downloaded, unzip and copy puli and elk jars (two .jar files) in the unpacked directory.
 -  Paste these files in your Protege plugin directory.
+-  Remove old org.semanticweb.elk.jar
 
 - **Install ELK plugin on Mac:**
 
@@ -14,8 +15,9 @@ This can be done via one of two ways:
 1. Paste these files in your Protege plugin directory. This is in one of two locations:
     - ~/.Protege/plugins (note this is usually hidden from finder, but you can see it in the terminal) or
     - Go to Protege in Applications (Finder), right click, 'Show package contents' -> Java -> plugins
-1. Copy and paste the two files into the plugins directory
-1. Restart Protege. You should see ELK 0.5 installed in your Reasoner menu. 
+2. Copy and paste the two files into the plugins directory
+3. Remove old elk.jar (Ex. org.semanticweb.elk.jar)
+4. Restart Protege. You should see ELK 0.5 installed in your Reasoner menu. 
 
 For a video showing how to install Elk on a Mac, click [here](https://www.dropbox.com/s/n3td2n48xmwd3mj/Install_ELK_0.5.mov?dl=0)   
 
@@ -25,6 +27,7 @@ For a video showing how to install Elk on a Mac, click [here](https://www.dropbo
     `open ~/.Protege, then click on plugins`
 2. Click on plugins
 3. Copy and paste the two files into the plugins directory
-4. Restart Protege. You should see ELK 0.5 installed in your Reasoner menu. 
+4. Remove old elk.jar (Ex. org.semanticweb.elk.jar)
+5. Restart Protege. You should see ELK 0.5 installed in your Reasoner menu. 
     
 Important: it seems Elk 0.5. Does not work with all versions of Protege, in particular, 5.2 and below. These instructions were only tested with Protege 5.5.
