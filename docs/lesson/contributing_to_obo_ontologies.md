@@ -274,7 +274,7 @@ Find and edit mondo-idranges.owl by adding the following:
 	        allocatedto: "Your Name" #change to your name
 	    
 	    EquivalentTo: 
-        xsd:integer[>= 0X00000 , <= 0X99999]. #add a range that follows the previous changing X to something that follows before! follow the amount as before
+        xsd:integer[>= 0806000 , <= 0806999]. #add a range of 999 above the previous integer
 	
 create a pull request and add matentzn or nicolevasilevsky as a reviewer
 
