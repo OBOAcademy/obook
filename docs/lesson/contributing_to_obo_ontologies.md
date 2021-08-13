@@ -258,6 +258,29 @@ Set your new entity preferences precisely as in the following screenshot of the 
 
 **Note** -  you have been assigned an ID range in the Mondo [idranges file](https://github.com/monarch-initiative/mondo/blob/master/src/ontology/mondo-idranges.owl)  - you should be able to find your own range assigned there.
 
+***DIY (only if you know what you are doing!)***
+
+To add your own ID ranges:
+
+Go into src/ontology 
+
+create a branch
+
+Find and edit mondo-idranges.owl by adding the following: 
+
+	Datatype: idrange:10 #update this to next following integer from previous
+	
+	    Annotations: 
+	        allocatedto: "Your Name" #change to your name
+	    
+	    EquivalentTo: 
+        xsd:integer[>= 0806000 , <= 0806999]. #add a range of 999 above the previous integer
+	
+create a pull request and add matentzn or nicolevasilevsky as a reviewer
+
+proceed to settting up as below:
+
+
 ![image](https://user-images.githubusercontent.com/6722114/115964257-6a67a280-a4d8-11eb-8dcd-768b51d75720.png)
 
 Specified IRI: http://purl.obolibrary.org/obo/
