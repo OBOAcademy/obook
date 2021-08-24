@@ -78,7 +78,7 @@ Some considerations for determining which ontologies to use include the license 
 
 ### License
 
-Licenses define how an ontology can legally be used or reused. One requirement for OBO Foundry Ontologies is that they are open, meaning that the ontologies are openly and freely available for use with acknowledgement and without alteration. OBO ontologies are required to be released under a Creative Commons [CC-BY license version 3.0 or later](https://creativecommons.org/licenses/by/3.0/), OR released into the public domain under [CC0](https://creativecommons.org/publicdomain/zero/1.0/). The licsense should be clearly stated in the ontology file.
+Licenses define how an ontology can legally be used or reused. One requirement for OBO Foundry Ontologies is that they are open, meaning that the ontologies are openly and freely available for use with acknowledgement and without alteration. OBO ontologies are required to be released under a Creative Commons [CC-BY license version 3.0 or later](https://creativecommons.org/licenses/by/3.0/), OR released into the public domain under [CC0](https://creativecommons.org/publicdomain/zero/1.0/). The license should be clearly stated in the ontology file.
 
 ### Quality
 

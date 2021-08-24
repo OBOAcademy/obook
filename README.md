@@ -26,3 +26,14 @@ Since there isn't much here yet, it's best to start here: [Other resources](othe
 ## License
 
 This content is available under the [Creative Commons CC0 Public Domain Dedication](LICENSE).
+
+## Developer notes:
+
+To deploy the the tutorial pages, use:
+
+```
+make deploy_site
+```
+
+Note that you need to be set up with `mkdocs` and its GitHub integration, if you are not:
+https://suedbroecker.net/2021/01/25/how-to-install-mkdocs-on-mac-and-setup-the-integration-to-github-pages/

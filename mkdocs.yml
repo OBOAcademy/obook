@@ -1,0 +1,16 @@
+site_name: OBO Semantic Engineering Training
+theme: readthedocs
+markdown_extensions:
+  - toc:
+      permalink: true
+nav:
+  - About the course: index.md
+  - Getting started with learning: getting_started.md
+  - Contribe to the course: contributing.md
+  - Table of contents: cite.md
+  - Lessons:
+      - Contributing to OBO ontologies: lesson/contributing_to_obo_ontologies.md
+      - Ontology Workflows with ROBOT: lesson/automating_ontology_workflows.md
+  - How-to guides:
+      - Installing ELK in Protege: howto/installing_elk_in_protege.md
+      - Setting up the ODK: howto/odk_setup.md
