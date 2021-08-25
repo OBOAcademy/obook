@@ -592,3 +592,7 @@ For this class, we want to follow the design pattern for [specific_infectious_di
 ![image](https://user-images.githubusercontent.com/6722114/118717934-8874aa00-b7db-11eb-86df-01a5823f7f7b.png)
 
 3. Save your work and create a pull request and reference issue [#1639](https://github.com/monarch-initiative/mondo/issues/1639).
+
+
+## Great further reading
+- [Chris Mungall on how to write great textual definitions](https://douroucouli.wordpress.com/2019/07/08/ontotip-write-simple-concise-clear-operational-textual-definitions/)
