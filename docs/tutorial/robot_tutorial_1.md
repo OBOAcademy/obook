@@ -9,7 +9,7 @@ Before starting this tutorial, either:
 * make sure Docker is running and you are in the container
 * [download and install ROBOT](http://robot.obolibrary.org/) for your operating system
 
-We will be using the files from the Ontologies 101 Tutorial that we started last week.
+We will be using the files from the [Ontologies 101 Tutorial](https://github.com/OHSUBD2K/BDK14-Ontologies-101) that we started last week.
 In your terminal, navigate to the repository that you cloned and then into the `BDK14_exercises` folder.
 
 ## Convert
