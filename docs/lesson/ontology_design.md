@@ -70,6 +70,8 @@ Below we'll review an example of one class and how to fix it. Next you should re
 ![image](https://user-images.githubusercontent.com/6722114/131928141-6706b3b7-f9e2-4726-84ee-7021922f9688.png)
 
 1. Based on the text definition, there does not seem to be any suggestion that this disease is a type of Guillain-Barre syndrome.
-1. Assuming that this disease is not a type of Guillain-Barre syndrome, we should exclude the superclass `regional variant of Guillain-Barre syndrome` (see this [paper](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7524576/ and this [paper](https://jnnp.bmj.com/content/70/1/50). It seems a bit unclear what the relationship of BBE is to Guillain-Barre syndrome.)
+1. Assuming that this disease is not a type of Guillain-Barre syndrome, we should exclude the superclass `regional variant of Guillain-Barre syndrome` (see this [paper](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7524576/) and this [paper](https://jnnp.bmj.com/content/70/1/50). It seems a bit unclear what the relationship of BBE is to Guillain-Barre syndrome. This also brings into the question if a disease can be syndromic and an infectious disease - maybe this disjoint axiom is wrong, but let's not worry about this for the teaching purposes.)
+1. To exclude a superclass, follow the instructions [here]().
+
 
 
