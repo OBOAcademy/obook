@@ -71,7 +71,7 @@ Below we'll review an example of one class and how to fix it. Next you should re
 
 1. Based on the text definition, there does not seem to be any suggestion that this disease is a type of Guillain-Barre syndrome.
 1. Assuming that this disease is not a type of Guillain-Barre syndrome, we should exclude the superclass `regional variant of Guillain-Barre syndrome` (see this [paper](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7524576/) and this [paper](https://jnnp.bmj.com/content/70/1/50). It seems a bit unclear what the relationship of BBE is to Guillain-Barre syndrome. This also brings into the question if a disease can be syndromic and an infectious disease - maybe this disjoint axiom is wrong, but let's not worry about this for the teaching purposes.)
-1. To exclude a superclass, follow the instructions [here]().
+1. To exclude a superclass, follow the instructions [here](https://mondo.readthedocs.io/en/latest/editors-guide/revise-terms-in-mondo/#exclude-a-superclass).
 
 
 
