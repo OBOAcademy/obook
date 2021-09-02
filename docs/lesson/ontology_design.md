@@ -61,6 +61,15 @@ Below we'll review an example of one class and how to fix it. Next you should re
 
 1. Review `Bickerstaff brainstem encephalitis`: To understand why this class appeared under owl:Nothing, first click the ? next to owl:Nothing in the Description box. (Note, this can take a few minutes).
 
+![image](https://user-images.githubusercontent.com/6722114/131927956-de79cfd5-404d-49ec-8bd9-198719ab6bd5.png)
 
+1. The explanation is displayed above - it is because this class is a descedent of `Guillain-Barre syndrome`, which is a child of `syndromic disease`. 
+1. Next, we have to ask if `Bickerstaff brainstem encephalitis` is an appropriate child of `regional variant of Guillain-Barre syndrome`. Note, Mondo integrates several disease terminologies and ontologies, and brought in all the subclass hierarchies from these source ontologies. To see the source of this superclass assertion, click the @ next to the assertion.
+1. This source came from Orphanet, see below.
+
+![image](https://user-images.githubusercontent.com/6722114/131928141-6706b3b7-f9e2-4726-84ee-7021922f9688.png)
+
+1. Based on the text definition, there does not seem to be any suggestion that this disease is a type of Guillain-Barre syndrome.
+1. Assuming that this disease is not a type of Guillain-Barre syndrome, we should exclude the superclass `regional variant of Guillain-Barre syndrome` (see this [paper](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7524576/ and this [paper](https://jnnp.bmj.com/content/70/1/50). It seems a bit unclear what the relationship of BBE is to Guillain-Barre syndrome.)
 
 
