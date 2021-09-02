@@ -62,23 +62,13 @@ In this tutorial, we will deal exclusively with the existential (some) quantifie
 
 _Strictly speaking in OWL, you don't make relationships between classes_, however, using OWL restrictions we essentially achieve the same thing.
 
-We want to capture the knowledge that the named class ' **organelle part**' is part of an **organelle**. In OWL speak, we want to say that every instance of an ' **organelle part**' is also an instance of the class of things that have at least one 'part of' relationship to an ' **organelle'**. In OWL, we do this by creating an existential restriction on the ' **organelle part**' class.
+We wanted to capture the knowledge that the named class ' **idiopathic achalasia** is an **idiopathic disease**. In OWL speak, we want to say that every instance of an ' **idiopathic achalasia**' is also an instance of the class of things that have at least one 'has modifier' relationship to an **idiopathic disease**. In OWL, we do this by creating an existential restriction on the **idiopathic achalasia** class.
 
-In the Entities tab, select '**organelle part**' in the class hierarchy and look at its current class description in the bottom right box. At the top of this view there are two slots for defining **equivalent classes** and superclasses (as denoted by the SubClass Of list). '**organelle part**' already has one superclass named **cellular\_component**.
+1. In the Entities tab, select '**idiopathic achalasia**' in the class hierarchy and look at its current class description in the bottom right box. 
+1. Note that there are two superclasses (as denoted by the SubClass Of list). '**'gastroesophageal disease'**' and **'has modifier' some idiopathic**.
+1. Run the reasoner.
+1. You should see that this class is now inferred to be an **idiopathic disease** because of this SubClassOf (superclass) restriction.
 
-![](./media/Figure51.png)
-
-We will create a restriction on '**organelle part**' stating '**organelle part**' has a _'part of'_ relationship to some '**organelle**'. Select the (+) icon next to the SubClass Of slot. Select the Class expression editor pane.  We will define this _anonymous superclass_ in Manchester OWL syntax as 'part\_of some organelle'.
-
-![](./media/Figure52.png)
-
-The class restriction will be shown in the SubClass of slot as follows.
-
-![](./media/Figure53.png)
-
-Using ProtÃ©gÃ© create your own part\_of restrictions for the '**cell part**', '**intracellular part**' and '**chromosomal part**' classes. _Note: you must use single quotes around text strings that are separated by a space, e.g. 'intracellular organelle part'._
-
-NOTE: After each edit to the ontology you might want to synchronize the reasoner to make sure you didn't introduce any inconsistencies into your ontology. The edit, reason, edit, reason iteration becomes particularly important as your ontologies grow more complex.
 
 ## Disjointness
 
