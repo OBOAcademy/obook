@@ -43,6 +43,24 @@ Participants will need to have access to the following resources and tools prior
 - [Nicole Vasilevsky](https://orcid.org/0000-0001-5208-3432)
 - [Nico Matentzoglu](https://orcid.org/0000-0002-7356-1779)
 
-## 
+## Disjointness
+
+By default, OWL assumes that these classes can overlap, i.e. there are individuals who can be instances of more than one of these classes. We want to create a restriction on our ontology that states these classes are different and that no individual can be a member of more than one of these classes. We can say this in OWL by creating a _disjoint classes_ axiom.
+
+1. Create a branch in the Mondo repo (name it: disjoint-[your initials]. For example: disjoint-nv)
+1. Open the mondo-edit.obo file
+1. Per this [ticket](https://github.com/monarch-initiative/mondo/issues/1221), we want to assert that **infectious disease** and **'syndromic disease'** are disjoint. 
+1. To do this first search for and select the **infectious disease** class. 
+1. In the class 'Description' view, scroll down and select the (+) button next to Disjoint With. You are presented with the now familiar window allowing you to select, or type, to choose a class. In the Expression editor, add 'syndromic disease' as disjoint with 'infectious disease'.
+1. Run the ELK reasoner.
+1. Scroll to the top of your hierarchy and note that owl:Nothing has turned red. This is because there are unsatisfiable classes.
+
+### Review and fix one unsatisfiable classes
+
+Below we'll review an example of one class and how to fix it. Next you should review and fix another one on your own and create a pull request for Nicole or Nico to review. Note, fixing these may require a bit of review and subjective decision making and the fix described below may not necessarily apply to each case.
+
+1. Review `Bickerstaff brainstem encephalitis`: To understand why this class appeared under owl:Nothing, first click the ? next to owl:Nothing in the Description box. (Note, this can take a few minutes).
+
+
 
 
