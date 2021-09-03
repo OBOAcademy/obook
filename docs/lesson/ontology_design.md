@@ -18,9 +18,12 @@ Participants will need to have access to the following resources and tools prior
 **Description**: This course will cover reasoning with OWL.
 
 ### Learning objectives
+
+At the end of this lesson, you should know how to do:
+
 1. Add existential restrictions
 1. Add defined classes
-1. Run the reasoner
+1. Add disjoint axioms
 1. Debug unsatisfiable classes
 
 ## Tutorials
