@@ -98,8 +98,8 @@ Constructs:
 For teaching purposes, let's say we need a new class that is 'flower allergy'.
 
 1. Create a branch and re-open mondo-edit.obo
-1. Add a new term under 'disease or disorder' named 'flower allergy'. 
-1. Following the design pattern [allergy.yaml](https://github.com/monarch-initiative/mondo/blob/master/src/patterns/dosdp-patterns/allergy.yaml), add the text definition, synonym and equivalentTo axiom, using the substance FOODON_03420237 ``'floret or flower'`.
+1. Add a new term under owl:Thing named 'fungal allergy'. 
+1. Following the design pattern [allergy.yaml](https://github.com/monarch-initiative/mondo/blob/master/src/patterns/dosdp-patterns/allergy.yaml), add the text definition, synonym and equivalentTo axiom, using the substance ECTO_0000524 'exposure to mycotoxin'.
 1. Run the reasoner and note where the class is automatically classified.
 1. Create a pull request and note in the PR what the parent class is.
 
