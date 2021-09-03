@@ -106,6 +106,14 @@ For teaching purposes, let's say we need a new class that is 'fungal allergy'.
 1. Run the reasoner and note where the class is automatically classified.
 1. Create a pull request and note in the PR what the parent class is.
 
+### Debugging automatic classifications
+1. On the same branch, add a new term under owl:Thing named 'oral cavity neoplasm'.
+1. Following the design pattern [neoplasm_by_origin](https://github.com/monarch-initiative/mondo/blob/master/src/patterns/dosdp-patterns/neoplasm_by_origin.yaml), add the term label and the equivalence axiom.
+1. Run the reasoner and note where the term in automatically classified. You should see it is under owl:Nothing.
+1. Click the ? next to owl:Nothing in the Description box to see the explanation.
+1. Can you determine why this is an unsatisfiable class? 
+1. Create a pull request and add a comment explaining why this is unsatisfiable.
+
 ## Disjointness
 
 By default, OWL assumes that these classes can overlap, i.e. there are individuals who can be instances of more than one of these classes. We want to create a restriction on our ontology that states these classes are different and that no individual can be a member of more than one of these classes. We can say this in OWL by creating a _disjoint classes_ axiom.
