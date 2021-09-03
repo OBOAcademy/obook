@@ -98,7 +98,7 @@ Constructs:
 1. Undo the last change and save your work and commmit and create a pull request.
 
 ### Adding classes and automatically classifying them
-For teaching purposes, let's say we need a new class that is 'flower allergy'.
+For teaching purposes, let's say we need a new class that is 'fungal allergy'.
 
 1. Create a branch and re-open mondo-edit.obo
 1. Add a new term under owl:Thing named 'fungal allergy'. 
