@@ -69,6 +69,39 @@ We wanted to capture the knowledge that the named class ' **idiopathic achalasia
 1. Run the reasoner.
 1. You should see that this class is now inferred to be an **idiopathic disease** because of this SubClassOf (superclass) restriction.
 
+## Equivalence Axioms and Automatic classification
+
+This example introduces **equivalence axioms** or **defined classes** (also called **logical definitions) and automatic classification.
+
+The example involves classification of Mendelian diseases that have a monogenic (single gene) varation. These equivalence axioms are based off the Mondo Deisgn Pattern [disease_series_by_gene](https://github.com/monarch-initiative/mondo/blob/master/src/patterns/dosdp-patterns/disease_series_by_gene.yaml). 
+
+Constructs:
+- and (intersection)
+- equivalence (logical definitions)
+- existential restrictions (e.g. 'disease has basis in dysfunction of')
+
+### Add an equivalence axiom to an existing Mondo term
+1. Create a new branch and open (or re-open) mondo-edit.obo
+1. Navigate to the class `'cardioacrofacial dysplasia 1'`
+1. According to [OMIM](https://omim.org/entry/619142), this disease is caused by a variation in the gene PRKACA.
+1. We want to add an equivalence axiom that says every instance of this class is a type of `'cardioacrofacial dysplasia'` that has dysfunction in the PRKACA gene.
+1. To do this, click the + next to Equivalent To in the lower right Description box.
+1. Add the following equivalence axiom:
+`'cardioacrofacial dysplasia'
+ and ('disease has basis in dysfunction of' some PRKACA)`
+1. Run the reasoner.
+1. You shouldn't see any change, but try deleting the superclass assertion to 'cardioacrofacial dysplasia' and re-running the reasoner.
+1. You should see that 'cardioacrofacial dysplasia' is an inferred superclass.
+1. Undo the last change and save your work and commmit and create a pull request.
+
+### Adding classes and automatically classifying them
+For teaching purposes, let's say we need a new class that is 'flower allergy'.
+
+1. Create a branch and re-open mondo-edit.obo
+1. Add a new term under 'disease or disorder' named 'flower allergy'. 
+1. Following the design pattern [allergy.yaml](https://github.com/monarch-initiative/mondo/blob/master/src/patterns/dosdp-patterns/allergy.yaml), add the text definition, synonym and equivalentTo axiom, using the substance FOODON_03420237 ``'floret or flower'`.
+1. Run the reasoner and note where the class is automatically classified.
+1. Create a pull request and note in the PR what the parent class is.
 
 ## Disjointness
 
