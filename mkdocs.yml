@@ -8,10 +8,12 @@ nav:
   - Getting started with learning: getting_started.md
   - Overview of lessons and tutorials: overview.md
   - Contribe to the course: contributing.md
-  - Table of contents: cite.md
   - Lessons:
       - Contributing to OBO ontologies: lesson/contributing_to_obo_ontologies.md
       - Ontology Pipelines with ROBOT: lesson/ontology_pipelines.md
   - How-to guides:
       - Installing ELK in Protege: howto/installing_elk_in_protege.md
       - Setting up the ODK: howto/odk_setup.md
+      - Clone the Mondo ontology repository: howto/clone_mondo_repo.md
+      - Creating an GitHub Fork: howto/github_create_fork.md
+      - Creating an GitHub Pull Request: howto/github_create_pull_request.md
