@@ -21,7 +21,7 @@ Participants will need to have access to the following resources and tools prior
   - [How to create GitHub Issues](#issues)
 - [Understand basic Open Source etiquette](#etiquette)
 - [Reading READMEs](readme)
-- [Understand basics of ontology development workflows](workflow)
+- [Understand basics of ontology development workflows](#workflow)
   - [Browsing and Searching in Protege](#browsing)
   - [Add new terms to an ontology](#add)
       - [Initial Protege setup](#setup)
