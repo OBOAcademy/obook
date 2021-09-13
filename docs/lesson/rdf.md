@@ -1,7 +1,10 @@
-# Week 3: RDF
+# Introduction to RDF
 
 **First Instructor:** James Overton  
 **Second Instructor:** Becky Jackson  
+
+### Warning
+These materials are under construction and incomplete.
 	
 ## Description
 Modelling and querying data with RDF triples, and working with RDF using tables

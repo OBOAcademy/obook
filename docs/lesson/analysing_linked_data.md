@@ -1,7 +1,10 @@
 # Analysing Linked Data (Fundamentals)
 
+### Warning
+These materials are under construction and incomplete.
+
 ## Prerequisites
-- Review tutorial on [Ontology Theory](/redesign/03_ontologyTheory.md)
+- Review tutorial on [Ontology Theory](ontology_fundamentals.md)
 
 ## Preparation
 - Essential
@@ -41,6 +44,8 @@ While these Semantic Web flagship projects are doubtlessly useful, it is sometim
 The [OBO format](http://owlcollab.github.io/oboformat/doc/obo-syntax.html#5.1) is a very popular syntax for representing biomedical ontologies. A lot of tools have been built over the years to hack OBO ontologies on the basis of that format - I still work with it on a daily basis. Although it has semantically been proven to be a subset of OWL (i.e. there is a lossless mapping of OBO into OWL) and can be viewed as just another syntax, it is in many ways ideosyncratic. For starters, you wont find many, if any, IRIs in OBO ontologies. The format itself uses CURIEs which are mapped to the general OBO PURL namespace during transformation to OWL. For example, if you see MONDO:0003847 in an OBO file, and were to translate it to OWL, you will see this term being translated to http://purl.obolibrary.org/obo/MONDO_0003847. Secondly, you have a bunch of built-in properties like BROAD or ABBREVIATION that mapped to a vocabulary called oboInOwl (oio). These are pretty non-standard on the general Semantic Web, and  often have to be manually mapped to the more popular counterparts in the Dublin Core or SKOS namespaces.
 
 Having URIs as identifiers is not generally popular in the life sciences. As discussed elsewhere, it is much more likely to encounter CURIEs such as MONDO:0003847 than URIs such as http://purl.obolibrary.org/obo/MONDO_0003847 in biomedical databases.
+
+<a name="tools-biomedical-research"></a> 
 
 #### Useful tools for biomedical research
 
@@ -270,7 +275,7 @@ Here are a few key research areas, which are, by no means (!), exhaustive.
 It is useful to get a picture of the typical tasks a Semantic Data Engineer faces when building ontologies are Knowledge Graphs. In my experience, it is unlikely that any particular set of tools will work in all cases - most likely you will have to try and assemble the right toolchain for your use case and refine it over the lifetime of your project. The following are just a few points for consideration of tasks I regularly encountered - which may or may not overlap with the specific problems you will face.
 
 ##### Finding the right ontologies
-There are no simple answers here and it very heavily depends on your use cases. We are discussing some places to look for ontologies [here](linked-data-landscape.md), but it may also be useful to simply upload the terms you are interested in to a service like [Zooma](https://www.ebi.ac.uk/spot/zooma/) and see what the terms map to at a major database provider like EBI.
+There are no simple answers here and it very heavily depends on your use cases. We are discussing some places to look for ontologies [here](#tools-biomedical-research), but it may also be useful to simply upload the terms you are interested in to a service like [Zooma](https://www.ebi.ac.uk/spot/zooma/) and see what the terms map to at a major database provider like EBI.
 
 ##### Finding the right data sources
 This is much harder still than it should have to be. Scientific databases are scattered across institutions that often do not talk to each other. Prepare for some significant work in researching the appropriate databases that could benefit your work, using Google and the scientific literature.

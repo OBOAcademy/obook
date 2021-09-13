@@ -1,5 +1,8 @@
 # Automating Ontology Development Workflows: Make, Shell and Automation Thinking
 
+### Warning
+These materials are under construction and incomplete.
+
 ## Prerequisites
 - Ontology Pipelines
 
@@ -727,8 +730,7 @@ but are particularly important to scientists:
 - communication
 
 It should be no surprise that
-[automation](automation.md)
-can help with all of these.
+automation can help with all of these.
 When working properly, computers make fewer mistakes than people,
 and the mistakes they do make are more predictable.
 If we're careful, our software systems can be easily reproduced,

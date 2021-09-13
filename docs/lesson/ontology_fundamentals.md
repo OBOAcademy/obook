@@ -1,8 +1,10 @@
 # Ontologies: Fundamentals
 
+### Warning
+These materials are under construction and incomplete.
+
 ## Prerequisites
-- Install Protege
-- 
+- Install Protege 
 
 ## Preparation
 - Complete OpenHPI [Week 5: Ontology Engineering](https://open.hpi.de/courses/semanticweb2015/items/1iXXFr86raHqrB5bRBJZeM) videos 5.1, 5.2, and 5.4 - 5.6 (~2.5 hours)

@@ -1,5 +1,8 @@
 # Developing an Application Ontology
 
+### Warning
+These materials are under construction and incomplete.
+
 ## Prerequisites
 - Review tutorials on [Ontology Theory](/redesign/03_ontologyTheory.md) and [Ontology Contribution](/redesign/02_ontologyContribution.md)
 

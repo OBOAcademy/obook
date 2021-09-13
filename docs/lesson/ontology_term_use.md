@@ -1,5 +1,8 @@
 # Using Ontologies and Ontology Terms
 
+### Warning
+These materials are under construction and may be incomplete.
+
 ## Prerequisites
 - Sign up for a free [GitHub](https://github.com/join) account
 

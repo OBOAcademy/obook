@@ -15,3 +15,6 @@ SHELL := bash
 .PHONY: deploy_site
 deploy_site:
 	mkdocs gh-deploy --config-file mkdocs.yml
+
+build_site:
+	mkdocs build --config-file mkdocs.yml

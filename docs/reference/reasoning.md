@@ -14,7 +14,7 @@ Nico type: Human
 Semantics allow as to deduce that `Nico:Mammal`. What are semantics *practically*? Show me your semantics? Look at something like the [OWL semantics](https://www.w3.org/TR/owl2-direct-semantics/). In there, you will find language statements (syntax) like `X SubClassOf: Y` and a bunch of formulae from model theory that describe how to interpret it - no easy read, and not really important for you now.
 - *OWL has a number of profiles*, basically sub-languages where you can say less things. Why would we want to restrict our "expressivity"? Because their is a trade-off. An important slide I remember from when I learned about ontology languages was the triangle of complexity (here only paraphrased from memory):
 
-![What is this](tradeoff.png) 
+![What is this](../images/tradeoff.png) 
 
 1. When expressivity goes up, cognitive complexity and computational complexity go up.
 2. When we want to decrease cognitive complexity (make it easier to build ontologies), expressivity goes down.

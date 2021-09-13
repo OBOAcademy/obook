@@ -1,5 +1,8 @@
 # Ontology Design
 
+### Warning
+These materials are under construction and incomplete.
+
 ## Prerequisites
 
 Participants will need to have access to the following resources and tools prior to the training:
@@ -11,7 +14,7 @@ Participants will need to have access to the following resources and tools prior
 ## Preparation
 - Review tutorial on [Ontology Term Use](ontology_term_use.md)
 - Review tutorial on [Contributing to OBO Ontologies](https://github.com/jamesaoverton/obook/blob/master/docs/lesson/contributing_to_obo_ontologies.md)
-- Clone Mondo repo: Follow these instructions to [clone the Mondo repo](clone-mond-repo.md)
+- Clone Mondo repo: Follow these instructions to [clone the Mondo repo](../howto/clone_mondo_repo.md)
 
 ## What is delivered as part of this course
 
