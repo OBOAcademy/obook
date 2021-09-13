@@ -32,4 +32,4 @@ The goal of this course is to provide ongoing training for the OBO community. As
 | 2021/08/17 | [Contributing to OBO ontologies](../lesson/contributing_to_obo_ontologies.md) | |
 
 ## Notes
-Most of materials used by this course where developed by James Overton, Becky Jackson, Nicole Vasilevsky and Nico Matentzoglu as part of a project with the Critical Path Institute (see [here](../index.md)). The materials are improved as part of an internal training program (onboarding and CPD) for the Phenomics First project (NIH / NHGRI #1RM1HG010860-01).
+Most of materials used by this course were developed by James Overton, Becky Jackson, Nicole Vasilevsky and Nico Matentzoglu as part of a project with the Critical Path Institute (see [here](../index.md)). The materials are improved as part of an internal training program (onboarding and CPD) for the Phenomics First project (NIH / NHGRI #1RM1HG010860-01).
