@@ -31,8 +31,8 @@ At the end of this lesson, you should know how to do:
 
 ## Tutorials
 **OpenHPI Course Content**
- - [Ontologies and Logic](https://open.hpi.de/courses/semanticweb2015/items/2oYC9PkLYvxv4InZuBMBVl) Videos 3.0-3.10 | **Duration:** ~3.5 hrs  
- - [OWL, Rules, and Reasoning](https://open.hpi.de/courses/semanticweb2015/items/2oCcvFX4bzhBbNWE6EVpoV) Videos 4.0-4.8 | **Duration:** ~2.7 hrs  
+1. [Ontologies and Logic](https://open.hpi.de/courses/semanticweb2015/items/2oYC9PkLYvxv4InZuBMBVl) Videos 3.0-3.10 | **Duration:** ~3.5 hrs  
+1. [OWL, Rules, and Reasoning](https://open.hpi.de/courses/semanticweb2015/items/2oCcvFX4bzhBbNWE6EVpoV) Videos 4.0-4.8 | **Duration:** ~2.7 hrs  
 
 ## Additional Materials and Resources
 - [Ontology tutorials and Resources](https://tislab.org/ontologyResources.html)
