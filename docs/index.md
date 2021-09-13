@@ -6,7 +6,7 @@ Welcome to our OBO Semantic Engineering Training!
 
 - *James Overton*, Knocean Inc. James has been a developer of software to support ontology development in and around the OBO sphere for more than a decade and delivers services to the OBO community through his company, Knocean Inc.
 - *Becky Jackson*, Bend Informatics. Becky has been a Semantic Software developer and Ontology Pipeline specialist since 2016, now working as an independent consultant. 
-- *Nicole Vasilevsky*, Monarch Initiative. Nicole is an associate professor at Oregon Health & Science University (OHSU) and has been an Ontology Curator for ontologies such as Mondo, the Human Phenotype Ontology, Uberon and Cell Ontology.
+- *Nicole Vasilevsky*, Monarch Initiative. Nicole is a Visiting Associate Research Professor at University of Colorado Anschutz Medical Campus and is an Ontology Curator for ontologies such as Mondo Disease Ontology, the Human Phenotype Ontology, Uberon Anatomy Ontology, and Cell Ontology.
 - *Nicolas Matentzoglu*, Semanticly Ltd. Nico is an Ontology Engineer and Ontology Pipeline Specialist, being the Principal Ontology Pipeline Developer for the Monarch Initiative.
 
 If you would like to contribute to this training, please [find out more here](contributing.md).
