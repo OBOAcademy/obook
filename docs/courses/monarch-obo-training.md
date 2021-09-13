@@ -24,7 +24,7 @@ The goal of this course is to provide ongoing training for the OBO community. As
 | Date | Lesson | Notes |
 | --- | --- | --- |
 | 2021/10/21 | TBD | |
-| 2021/10/05 | Cancelled due to overlap with ISB conference. | |
+| 2021/10/05 | Cancelled due to overlap with [ISB conference](https://www.biocuration.org/14th-annual-biocuration-conference-virtual/) | |
 | 2021/09/21 | [Ontology Pipelines with ROBOT 2](../lesson/ontology_pipelines.md) | |
 | 2021/09/08 | [Migrating legacy ontology systems to ODK](../tutorial/migrating-ontology-to-odk.md) | |
 | 2021/09/07 | [Ontology Pipelines with ROBOT](../lesson/ontology_pipelines.md) | |
