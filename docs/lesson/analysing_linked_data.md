@@ -13,7 +13,7 @@ These materials are under construction and incomplete.
   - [Programming Historian Linked Data tutorial](https://programminghistorian.org/en/lessons/intro-to-linked-data)
   - [Original Whitepaper (Tim Berners Lee et al)](https://www-sop.inria.fr/acacia/cours/essi2006/Scientific%20American_%20Feature%20Article_%20The%20Semantic%20Web_%20May%202001.pdf)
   - [Educational curriculum for Linked Data](https://euclid-project.eu/)
-- Tools: Browse through the tools and standards listed in the [Semantic Engineer Toolbox](#semantic-engineer-toolbox) below
+- Tools: Browse through the tools and standards listed in the [Semantic Engineer Toolbox](../reference/semantic_engineering_toolbox).
 
 ### Learning objectives
 - Advanced SPARQL
