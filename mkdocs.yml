@@ -7,7 +7,7 @@ nav:
   - About the course: index.md
   - Getting started with learning: getting_started.md
   - Overview of lessons and tutorials: overview.md
-  - Contribe to the course: contributing.md
+  - Contribute to the course: contributing.md
   - Courses:
       - ICBO 2021 Tutorial: tutorial/icbo2021.md
       - Monarch Ontology Training: courses/monarch-obo-training.md
