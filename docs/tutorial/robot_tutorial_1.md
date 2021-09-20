@@ -141,7 +141,7 @@ Note that in this command, we don't use the `--input` parameter. That parameter 
 
 Open `animals.owl` in Protege, and you'll be able to see the class hierarchy we defined in the template as an actual structure.
 
-Now let's make another small ontology that reuses some terms from our `animals.owl` file. Download (or copy/paste) [`animals2.tsv`]() into the same folder.
+Now let's make another small ontology that reuses some terms from our `animals.owl` file. Download (or copy/paste) [`animals2.tsv`](https://github.com/OBOAcademy/obook/blob/master/06-OntologyDesign/animals2.tsv) into the same folder.
 This contains the following:
 
 | CURIE       | Label | Parent | Comment        |
