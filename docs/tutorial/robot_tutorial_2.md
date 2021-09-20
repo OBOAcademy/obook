@@ -39,7 +39,7 @@ Let's fix our import statement now. Open `animals2.owl` in Protégé and go to t
 
 ### Version IRIs
 
-When we release our ontologies, we want to make sure to include a version IRI. Like the onology IRI, this should always resolve to the version of the ontology at the time of the release. For clarity, we usually use dates in our version IRIs in the OBO Foundry. That way, you know when you navigate to a specific version IRI, that's what the ontology looked like on that date. (Note: edit files don't usually have version IRIs as they are always changing, and we don't expect to be able to point to a stable version)
+When we release our ontologies, we want to make sure to include a version IRI. Like the ontology IRI, this should always resolve to the version of the ontology at the time of the release. For clarity, we usually use dates in our version IRIs in the OBO Foundry. That way, you know when you navigate to a specific version IRI, that's what the ontology looked like on that date. (Note: edit files don't usually have version IRIs as they are always changing, and we don't expect to be able to point to a stable version)
 
 While you can add a version IRI in Protégé, if you're trying to create an automated release workflow, this is a manual step you don't want to have to include. Keeping it in your release workflow also makes sure that the verion IRIs are consistent (we'll see how to do this with `make` later). For now, let's add a version IRI to `animals.owl` (feel free to replace the `2021-05-20` with today's date):
 
@@ -62,7 +62,7 @@ In addition to ontology and version IRIs, you may also want to add some other me
 
 These three annotation properties all come from the [Dublin Core](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/), but they have slightly different namespaces. This is because DC is split into two parts: the `/terms/` and `/elements/1.1/` namespaces. Just remember to double check that you're using the correct namespace. If you click on the DC link, you can find the complete list of DC terms in their respective namespaces.
 
-ROBOT contains some built-in prefixes, which can be found [here](https://github.com/ontodev/robot/blob/master/robot-core/src/main/resources/obo_context.jsonld). the prefix `dc:` corresponds to the `/terms/` namespace and `dc11:` to `/elements/1.1/`. You may see different prefixes used (for example, `/terms/` is sometimes `dcterms:` or just `terms:`), but the full namespace is what really matters as long as the prefix is defined somewhere.
+ROBOT contains some built-in prefixes, which can be found [here](https://github.com/ontodev/robot/blob/master/robot-core/src/main/resources/obo_context.jsonld). The prefix `dc:` corresponds to the `/terms/` namespace and `dc11:` to `/elements/1.1/`. You may see different prefixes used (for example, `/terms/` is sometimes `dcterms:` or just `terms:`), but the full namespace is what really matters as long as the prefix is defined somewhere.
 
 Let's go ahead and add a title and description to our `animals.owl` file. We'll do this using the `--annotation` option, which expects two arguments: (1) the CURIE of the annotation property, (2) the value of the annotation. The value of the annotation must be enclosed in double quotes if there are spaces. You can use any annotation property you want here, and include as many as you want! For now, we'll start with two:
 
