@@ -12,7 +12,7 @@ Before starting this tutorial, either:
 * make sure Docker is running and you are in the container
 * [download and install ROBOT](http://robot.obolibrary.org/) for your operating system
 
-To start, we will be working in the same folder as the first ROBOT Mini-Tutorial (this may be the `06-Ontology-Development` folder). Navigate to this folder in your terminal and list the contents of the current directory by running `ls`. You should see `catalog-v001.xml` listed as one of these files. We want to delete this so that we can fix the ontology IRI problem we ran into last week! Before going any further with this tutorial, do this by running either `del catalog-v001.xml` for Windows or `rm catalog-v001.xml` if you're using Docker, MacOS, or other Linux system.
+To start, we will be working in the same folder as the first [ROBOT Mini-Tutorial](robot_tutorial_1.md). Navigate to this folder in your terminal and list the contents of the current directory by running `ls`. You should see `catalog-v001.xml` listed as one of these files. We want to delete this so that we can fix the ontology IRI problem we ran into last week! Before going any further with this tutorial, do this by running either `del catalog-v001.xml` for Windows or `rm catalog-v001.xml` if you're using Docker, MacOS, or other Linux system.
 
 ---
 
@@ -22,7 +22,7 @@ The `annotate` command allows you to attach metadata to your ontology in the for
 
 ### Ontology IRIs
 
-As we discussed during week 6, ontology IRIs are very important! We saw how importing an ontology without an IRI into another ontology without an IRI can cause some problems in the `catalog-v001.xml` file. We're going to fix that problem by giving IRIs to both our `animals.owl` and `animals2.owl` files.
+As we discussed during previous parts of the course, ontology IRIs are very important! We saw how importing an ontology without an IRI into another ontology without an IRI can cause some problems in the `catalog-v001.xml` file. We're going to fix that problem by giving IRIs to both our `animals.owl` and `animals2.owl` files.
 
 Let's start with `animals.owl`:
 ```

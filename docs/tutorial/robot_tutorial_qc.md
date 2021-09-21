@@ -5,9 +5,9 @@
   - OWL axioms (restrictions, equivalent & disjoint class axioms)
   - Reasoning: classification and debugging
 - [ROBOT report](http://robot.obolibrary.org/report) (~45 minutes)
-  - Download [`example.owl`](https://raw.githubusercontent.com/jamesaoverton/obook/master/05-OntologyPractise/example.owl), or get it via the command line:
+  - Download [`example.owl`](robot_tutorial_qc/example.owl), or get it via the command line:
     ```
-    curl https://raw.githubusercontent.com/jamesaoverton/obook/master/05-OntologyPractise/example.owl > example.owl
+    curl https://raw.githubusercontent.com/jamesaoverton/obook/master/docs/tutorial/robot_tutorial_qc/example.owl > example.owl
     ```
   - [What `report` checks for](http://robot.obolibrary.org/report_queries/)
   - Let's try it out!
