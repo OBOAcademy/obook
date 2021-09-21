@@ -9,7 +9,7 @@ Before starting this tutorial, either:
 * make sure Docker is running and you are in the container
 * [download and install ROBOT](http://robot.obolibrary.org/) for your operating system
 
-We will be using the files from the [Ontologies 101 Tutorial](https://github.com/OHSUBD2K/BDK14-Ontologies-101) that we started last week.
+We will be using the files from the [Ontologies 101 Tutorial](https://github.com/OHSUBD2K/BDK14-Ontologies-101).
 In your terminal, navigate to the repository that you cloned and then into the `BDK14_exercises` folder.
 
 ## Convert
@@ -23,7 +23,7 @@ We will discuss each of these serializations in more detail during the class ses
 * obo - OBO Format
 * ofn - OWL Functional
 * omn - OWL Manchester
-* json
+* json - obographs JSON
 
 ### Let's Try It!
 
@@ -113,7 +113,7 @@ For now, we're going to create a new, small ontology with new terms using a temp
 
 ### Let's Try It!
 
-Download (or copy/paste) the [animals.tsv](https://github.com/jamesaoverton/obook/blob/master/06-OntologyDesign/animals.tsv) file and move it to the `basic-subclass/` folder (or whatever folder you would like to work in; we will not be using any of the Ontology 101 files anymore).
+Download (or copy/paste) the [animals.tsv](robot_tutorial_1/animals.tsv) file and move it to the `basic-subclass/` folder (or whatever folder you would like to work in; we will not be using any of the Ontology 101 files anymore).
 This contains the following data:
 
 | CURIE       | Label  | Parent | Comment        |
@@ -141,7 +141,7 @@ Note that in this command, we don't use the `--input` parameter. That parameter 
 
 Open `animals.owl` in Protege, and you'll be able to see the class hierarchy we defined in the template as an actual structure.
 
-Now let's make another small ontology that reuses some terms from our `animals.owl` file. Download (or copy/paste) [`animals2.tsv`]() into the same folder.
+Now let's make another small ontology that reuses some terms from our `animals.owl` file. Download (or copy/paste) [animals2.tsv](robot_tutorial_1/animals2.tsv) into the same folder.
 This contains the following:
 
 | CURIE       | Label | Parent | Comment        |
