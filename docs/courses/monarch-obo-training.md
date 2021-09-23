@@ -23,7 +23,7 @@ The goal of this course is to provide ongoing training for the OBO community. As
 
 | Date | Lesson | Notes |
 | --- | --- | --- |
-| 2021/11/02 | TBD | |
+| 2021/11/02 | Templating: DOSDPs and ROBOT | _Content coming soon_ |
 | 2021/10/19 | [Ontology Design](https://oboacademy.github.io/obook/lesson/ontology_design/) | |
 | 2021/10/05 | Cancelled due to overlap with [ISB conference](https://www.biocuration.org/14th-annual-biocuration-conference-virtual/) | |
 | 2021/09/21 | [Ontology Pipelines with ROBOT 2](../lesson/ontology_pipelines.md) | |
