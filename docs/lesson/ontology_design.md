@@ -77,7 +77,7 @@ We wanted to capture the knowledge that the named class ' **idiopathic achalasia
 
 ## Equivalence Axioms and Automatic classification
 
-This example introduces **equivalence axioms** or **defined classes** (also called **logical definitions) and automatic classification.
+This example introduces **equivalence axioms** or **defined classes** (also called **logical definitions**) and automatic classification.
 
 The example involves classification of Mendelian diseases that have a monogenic (single gene) varation. These equivalence axioms are based off the Mondo Deisgn Pattern [disease_series_by_gene](https://github.com/monarch-initiative/mondo/blob/master/src/patterns/dosdp-patterns/disease_series_by_gene.yaml). 
 
