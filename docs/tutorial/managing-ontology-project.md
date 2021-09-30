@@ -7,10 +7,10 @@ This tutorial is not about editing ontologies and managing the evolution of its 
 
 ## Roles in OBO Ontology project management activities
 
-1. *Ontology Curators*: manage the content of ontologies and interact with users
-1. *Principal Ontology Curators*: coordinate the curation activities and have _always_ fixed hours assigned to the project.
-1. *Ontology Pipeline Developers*: Manage the technical workflows around ontologies, such as release workflows, continuous integration and QC, and setting up data pipelines. Also helps with bulk editing activities.
-1. *Principal Investigators*: Manage the projects that fund ontology curation activities.
+1. *Ontology Editor* (OE): manage the content of ontologies and interact with users
+1. *Principal Ontology Editor* (POE): coordinate the curation activities and have _always_ fixed hours assigned to the project.
+1. *Ontology Pipeline Developer* (OPD): Manage the technical workflows around ontologies, such as release workflows, continuous integration and QC, and setting up data pipelines. Also helps with bulk editing activities.
+1. *Principal Investigators* (PI): Manage the projects that fund ontology curation activities.
 
 
 For an effective management of an ontology, the following criteria are recommended:
@@ -25,7 +25,7 @@ Without the above minimum criteria, the following recommendations will be very h
 
 Every ontology or group of related ontologies (sometimes it is easier to manage multiple ontologies at once, because their scope or technical workflows are quite uniform or they are heavily interrelated) should have:
 
-1. *at least two teams*, Curation Team and Technical Team, with clearly defined members. We recommend to create two teams on GitHub and keep its members always up to date (i.e. remove members that are not actively participating). Many of our projects furthermore have a third "core team", which is a more liberal team containing everyone from stakeholders, principal investigators, curators and users.
+1. *at least two teams*, Curation Team and Technical Team, with clearly defined members. We recommend to create two teams on GitHub and keep their members always up to date (i.e. remove members that are not actively participating). Many of our projects furthermore have a third "core team", which is a more liberal team containing everyone from stakeholders, principal investigators, curators and users (for managing write permissions see later in the "Best practice" section). However, in many cases, just having nominal teams listed on the Team page in the documentation is ok.
 2. *two distinct project boards*: One for the Curation Team, and one for the Technical Team. The details on how to design the boards is up to the respective teams, but we found a simple 4 stage board with sections for `To Do` (issues that are important but not urgent), `Priority` (issues that are important and urgent), `In Progress` (issues that are being worked on), `Under review` (issues that need review) and `Done` (finished issues) the most useful. The least useful column on a project board is `Backlog`, as it clutters the board and creates a massive overhead in the rare times the team meets to discuss the next steps.
 3. *A documentation system* (often realised using `mkdocs` in OBO projects) with a page listing the members of the team. This page should provide links to all related team pages from Github and their project boards, as well as a table listing all current team members with the following information:
     - Name
@@ -57,3 +57,6 @@ Every ontology or group of related ontologies (sometimes it is easier to manage 
 - The single most important point of failure is the absence of an Principal Ontology Curator with a *strong sense of ownership*. This should be the projects priority to determine first.
 - All new members of the project should undergo an onboarding. It is a good idea to prepare walkthroughs of the project (as video or pages in the documentation system) covering everything from Curation to Technical and Project Management.
 - The Principal Ontology Curator responsible for dealing with external issues should be named explicitly on the team page.
+- We recommend the following practices for write permissions:
+    - The `main` (formerly `master`) branch should be write protected with suitable rules. For example, requiring QC to pass and 1 approving review as a minimum.
+    - The curation and technical teams are mainly for social organisation, they do not have to physically exist. However, having a small team with "admin rights" and a team (e.g. the core team mentioned above) with "write" rights greatly helps with organising the permissions in a transparent manner.
