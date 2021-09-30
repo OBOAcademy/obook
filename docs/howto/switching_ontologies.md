@@ -19,6 +19,6 @@ not remember the last prefix or ID range that you used when you switch between o
 1. I work on many ontologies, so I keep a note in OneNote (or Evernote) that keeps track of all my ID ranges for quick reference.
 2. You don't need to track the last ID that was used, Protege will know to pick the next ID in your range. For example, if your ID range is 8000000 to 8999999, you can enter that as your range, even if you have already added 10 terms within your range. Protege will know to assign the next ID as 8000011.
 
-## Video
+## Video Explanation
 
 Available [here](https://drive.google.com/file/d/1Qigeo32P_mfGOn4Y1Gyh3vAwPDUeLpR5/view?usp=sharing).
