@@ -40,11 +40,15 @@ Every ontology or group of related ontologies (sometimes it is easier to manage 
 
 1. Effective Ontology Pipeline Developers (OPDs) are extremely rare and are typically active across many different projects. Therefore *their attention is scattered*. Understanding and accepting this is key for the following points.
 1. Principal Investigators *explicitly assign target weekly hours* for Ontology Curators and Ontology Pipeline Developers to the project. These should be captured on the documentation systems team page (see above).
-2. The Ontology Curators are responsible for the entire Curation Team Board and the `To Do` and `Priority` columns of the Technical Team. The later is important: it is the job of the curation team to _prioritise the technical issues_. The Technical Team can add tickets to the `To Do` and `Priority` columns, but this usually happens only in response to a request from the Curation Team.
-3. When the technical team meets, the Principal Ontology Curator(s) (POC) are present, i.e. *the POCs are members of the technical team as well*. They will help clarifying the `Priority` tickets. The Technical Team is responsible to 
-   - assign issues and reviewers among themselves (ideally, the reviewer should be decided at the same time the issue is assigned)
-   - move issues from the `Priority` to the `In Progress` and later to the `Done` section.
-   - communicate through the POC to the PIs when resources are insufficient to address `Priority` issues.
+1. The Ontology Curators are responsible for the entire Curation Team Board and the `To Do` and `Priority` columns of the Technical Team. The later is important: it is the job of the curation team to _prioritise the technical issues_. The Technical Team can add tickets to the `To Do` and `Priority` columns, but this usually happens only in response to a request from the Curation Team.
+1. When the technical team meets, the Principal Ontology Curator(s) (POC) are present, i.e. *the POCs are members of the technical team as well*. They will help clarifying the `Priority` tickets. The Technical Team is responsible to 
+    - assign issues and reviewers among themselves (ideally, the reviewer should be decided at the same time the issue is assigned)
+    - move issues from the `Priority` to the `In Progress` and later to the `Done` section.
+    - communicate through the POC to the PIs when resources are insufficient to address `Priority` issues.
+1. The Principal Ontology Curator is responsible for ensuring that new issues on the issue tracker are dealt with. Usually this happens in the following ways:
+    - They ensure that each _external_ issue (i.e. an issue from anyone outside the core team) is (a) responded to in a polite manner and (b) assigned to someone appropriate or politely rejected due to lack of resources.
+    - They ensure that each _internal_ issue is assigned to the person that made them. No issue should appear unassigned.
+    - The ensure that pull requests are (a) assigned to someone to handle and (b) merged in a timely manner. Too many open PRs cause problems with conflicts.
 
 ## Best Practices
 
@@ -52,3 +56,4 @@ Every ontology or group of related ontologies (sometimes it is easier to manage 
 - Even if Google Docs are used to manage team meetings, at the end of each meetings *all open issues must be captured as GitHub tickets* and placed in the appropriate box on the board. We recommend that `Backlog` items are not added at all to the board - if they ever become important, they tend to resurface all by themselves.
 - The single most important point of failure is the absence of an Principal Ontology Curator with a *strong sense of ownership*. This should be the projects priority to determine first.
 - All new members of the project should undergo an onboarding. It is a good idea to prepare walkthroughs of the project (as video or pages in the documentation system) covering everything from Curation to Technical and Project Management.
+- The Principal Ontology Curator responsible for dealing with external issues should be named explicitly on the team page.
