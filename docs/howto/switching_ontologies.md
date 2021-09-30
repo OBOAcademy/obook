@@ -3,7 +3,7 @@ By: [Nicole Vasilevsky](https://orcid.org/0000-0001-5208-3432)
 
 ## Description
 When you edit an ontology, you need to make sure you are using the correct prefix and your assigned ID range for that on ontology. Protege (unfortunately) does
-not remember the last prefix or ID range that you used when you switch between ontologies. Below, we describe how to manage this.
+not remember the last prefix or ID range that you used when you switch between ontologies. Therefore we need to manually update this each time we switch ontologies.
 
 ## Instructions
 1. When you switch to a new ontology file, open your preferences in Protege (File -> Preferences).
