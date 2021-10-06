@@ -32,6 +32,7 @@ nav:
       - ROBOT Mini-Tutorial QC - Quality Control with report and query: tutorial/robot_tutorial_qc.md
       - GitHub Fundamentals for OBO Engineers: tutorial/github_fundamentals.md
       - GitHub Issue for OBO Engineers: tutorial/github_issues.md
+      - Managing OBO ontology projects: tutorial/managing-ontology-project.md
       - Linked Data Tutorial: tutorial/linking-data.md
       - ODK - Managing imports: tutorial/managing-dynamic-imports-odk.md
       - ODK - Managing ontology releases: tutorial/managing-ontology-releases-odk.md
