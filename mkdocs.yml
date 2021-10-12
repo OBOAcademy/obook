@@ -39,6 +39,7 @@ nav:
       - ODK - Migrating to ODK: tutorial/migrating-ontology-to-odk.md
   - How-to guides:
       - Installing ELK in Protege: howto/installing_elk_in_protege.md
+      - Get set up for ODK-based ontology development: howto/setup_ontology_development_odk.md
       - Setting up the ODK: howto/odk_setup.md
       - Clone the Mondo ontology repository: howto/clone_mondo_repo.md
       - Creating an GitHub Fork: howto/github_create_fork.md
