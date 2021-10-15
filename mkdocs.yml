@@ -53,6 +53,7 @@ nav:
       - Tables and Triples: reference/tables-and-triples.md
       - Reasoning: reference/reasoning.md
       - A day in the life of an ontology curator: reference/ontology-curator.md
+      - Git FAQ: reference/git_faq.md
   - OBOOK Editors:
       - How to add images: images/index.md
       - New lesson template: config/template.md
