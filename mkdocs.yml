@@ -46,6 +46,7 @@ nav:
       - Creating an GitHub Pull Request: howto/github_create_pull_request.md
       - Browsing and Searching Mondo: howto/protege_browse_search.md
       - Deploy a custom OBO-Dashboard: howto/deploy_custom_obo_dashboard.md
+      - Change a pull request: howto/change_files_pull_request.md
   - Reference:
       - GitHub Desktop: reference/github_desktop.md
       - Semantic Engineering Toolbox: reference/semantic_engineering_toolbox.md
