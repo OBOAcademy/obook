@@ -1,4 +1,4 @@
-# GitHub FAQs
+# Git FAQs
 
 This page aims to consolidate some tips and tricks that ontology editors have found useful in using GitHub. It is not meant to be a tutorial of GitHub, but rather as a page with tips that could help in certain specialised situations.
 
