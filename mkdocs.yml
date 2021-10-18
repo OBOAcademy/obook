@@ -32,23 +32,28 @@ nav:
       - ROBOT Mini-Tutorial QC - Quality Control with report and query: tutorial/robot_tutorial_qc.md
       - GitHub Fundamentals for OBO Engineers: tutorial/github_fundamentals.md
       - GitHub Issue for OBO Engineers: tutorial/github_issues.md
+      - Managing OBO ontology projects: tutorial/managing-ontology-project.md
       - Linked Data Tutorial: tutorial/linking-data.md
       - ODK - Managing imports: tutorial/managing-dynamic-imports-odk.md
       - ODK - Managing ontology releases: tutorial/managing-ontology-releases-odk.md
       - ODK - Migrating to ODK: tutorial/migrating-ontology-to-odk.md
   - How-to guides:
       - Installing ELK in Protege: howto/installing_elk_in_protege.md
+      - Get set up for ODK-based ontology development: howto/setup_ontology_development_odk.md
       - Setting up the ODK: howto/odk_setup.md
       - Clone the Mondo ontology repository: howto/clone_mondo_repo.md
       - Creating an GitHub Fork: howto/github_create_fork.md
       - Creating an GitHub Pull Request: howto/github_create_pull_request.md
       - Browsing and Searching Mondo: howto/protege_browse_search.md
+      - Deploy a custom OBO-Dashboard: howto/deploy_custom_obo_dashboard.md
+      - Change a pull request: howto/change_files_pull_request.md
   - Reference:
       - GitHub Desktop: reference/github_desktop.md
       - Semantic Engineering Toolbox: reference/semantic_engineering_toolbox.md
       - Tables and Triples: reference/tables-and-triples.md
       - Reasoning: reference/reasoning.md
       - A day in the life of an ontology curator: reference/ontology-curator.md
+      - Git FAQ: reference/git_faq.md
   - OBOOK Editors:
       - How to add images: images/index.md
       - New lesson template: config/template.md
