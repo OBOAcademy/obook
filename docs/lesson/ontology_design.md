@@ -81,10 +81,10 @@ This example introduces **equivalence axioms** or **defined classes** (also call
 
 The example involves classification of Mendelian diseases that have a monogenic (single gene) varation. These equivalence axioms are based off the Mondo Deisgn Pattern [disease_series_by_gene](https://github.com/monarch-initiative/mondo/blob/master/src/patterns/dosdp-patterns/disease_series_by_gene.yaml). 
 
-Constructs:
-- and (intersection)
-- equivalence (logical definitions)
-- existential restrictions (e.g. 'disease has basis in dysfunction of')
+Constructs:  
+- and (intersection)  
+- equivalence (logical definitions)  
+- existential restrictions (e.g. 'disease has basis in dysfunction of')  
 
 ### Add an equivalence axiom to an existing Mondo term
 1. Create a new branch and open (or re-open) mondo-edit.obo
