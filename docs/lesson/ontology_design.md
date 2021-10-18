@@ -68,7 +68,7 @@ In this tutorial, we will deal exclusively with the existential (some) quantifie
 
 _Strictly speaking in OWL, you don't make relationships between classes_, however, using OWL restrictions we essentially achieve the same thing.
 
-We wanted to capture the knowledge that the named class ' **idiopathic achalasia** is an **idiopathic disease**. In OWL speak, we want to say that every instance of an ' **idiopathic achalasia**' is also an instance of the class of things that have at least one 'has modifier' relationship to an **idiopathic disease**. In OWL, we do this by creating an existential restriction on the **idiopathic achalasia** class.
+We wanted to capture the knowledge that the named class '**idiopathic achalasia**' is an **idiopathic disease**. In OWL speak, we want to say that every instance of an ' **idiopathic achalasia**' is also an instance of the class of things that have at least one 'has modifier' relationship to an **idiopathic disease**. In OWL, we do this by creating an existential restriction on the **idiopathic achalasia** class.
 
 1. In the Entities tab, select '**idiopathic achalasia**' in the class hierarchy and look at its current class description in the bottom right box. 
 1. Note that there are two superclasses (as denoted by the SubClass Of list). '**'gastroesophageal disease'**' and **'has modifier' some idiopathic**.
