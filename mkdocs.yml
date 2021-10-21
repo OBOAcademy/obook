@@ -48,12 +48,14 @@ nav:
       - Deploy a custom OBO-Dashboard: howto/deploy_custom_obo_dashboard.md
       - Change a pull request: howto/change_files_pull_request.md
   - Reference:
+      - Glossary: reference/glossary.md
       - GitHub Desktop: reference/github_desktop.md
       - Semantic Engineering Toolbox: reference/semantic_engineering_toolbox.md
       - Tables and Triples: reference/tables-and-triples.md
       - Reasoning: reference/reasoning.md
       - A day in the life of an ontology curator: reference/ontology-curator.md
       - Git FAQ: reference/git_faq.md
+      - OWL, OBO, JSON? Base, simple, full, basic? What should you use, and why?: reference/owl_formats_variants.md
   - OBOOK Editors:
       - How to add images: images/index.md
       - New lesson template: config/template.md
