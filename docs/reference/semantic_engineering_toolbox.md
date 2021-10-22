@@ -3,7 +3,7 @@
 **Essentials**
 
 - [Protégé](https://protege.stanford.edu/)
-  - [DL Query Tab](https://protegewiki.stanford.edu/wiki/DLQueryTab)
+    - [DL Query Tab](https://protegewiki.stanford.edu/wiki/DLQueryTab)
 - [ROBOT](http://robot.obolibrary.org)
 - [OBO Dashboard](http://dashboard.obofoundry.org/): OBO-wide quality control monitor for OBO ontologies.
 
@@ -34,7 +34,6 @@
 
 - [SSSOM and sssom-py](https://mapping-commons.github.io/sssom-py/index.html#): Toolkit and framework for managing mappings across and beyond ontologies.
 
-
 **Where to find terms: Term browsers**
 
 - [OLS](https://www.ebi.ac.uk/ols/index): The boss of the current term browsers out there. While the code base is a bit dated, it still gives access to a wide range of relevant open biomedical ontology terms. Note, while being a bit painful, it is possible to [set up your own OLS](https://github.com/EBISPOT/ontotools-docker-config) (for your organisation) which only contains those terms/ontologies that are relevant for your work.
@@ -46,7 +45,7 @@
 
 - [OBO Foundry Ontology Library](http://obofoundry.org/)
 - [BioPortal](https://bioportal.bioontology.org/)
-   - [CPT Story](https://www.bioontology.org/why-bioportal-no-longer-offers-the-current-procedural-terminology-cpt/). The Current Procedural Terminology was the by far most highly accessed Terminology on Bioportal - for many years. Due to license concerns, it had to be withdrawn from the repository. This story serves a cautionary tale of using terminologies with non-open or non-transparent licensing schemes.
+    - [CPT Story](https://www.bioontology.org/why-bioportal-no-longer-offers-the-current-procedural-terminology-cpt/). The Current Procedural Terminology was the by far most highly accessed Terminology on Bioportal - for many years. Due to license concerns, it had to be withdrawn from the repository. This story serves a cautionary tale of using terminologies with non-open or non-transparent licensing schemes.
 - [AgroPortal](http://agroportal.lirmm.fr/): Like BioPortal, but focussed on the Agronomy domain.
 - [Linked Open Data Vocabularies (LOV)](https://lov.linkeddata.es/dataset/lov/): Lists the most important vocabularies in the Linked Data space, such as [Dublin Core](https://dublincore.org/), [SKOS](https://www.w3.org/TR/skos-reference/) and [Friend-of-a-Friend](http://xmlns.com/foaf/spec/) (FOAF). 
 
@@ -68,8 +67,8 @@
 
 These are a bit less essential than the above, but I consider them still tremendously useful.
 
-- [Cogs](https://github.com/ontodev/cogs) (experimental) for automatically syncronising your spreadsheets with Google Sheets.
-- Basic [Dockerfile development](https://docs.docker.com/get-started/02_our_app/): This can help you automate processes that go beyond usual ODK day-to-day businesss, such as automated mapping tools, graph machine learning, NLP etc.
+- [Cogs](https://github.com/ontodev/cogs) (experimental) for automatically synchronising your spreadsheets with Google Sheets.
+- Basic [Dockerfile development](https://docs.docker.com/get-started/02_our_app/): This can help you automate processes that go beyond usual ODK day-to-day business, such as automated mapping tools, graph machine learning, NLP etc.
 - [GitHub](https://github.com/) community management and git version control: Learn how to effectively manage your contributors, issue requests and code reviews. Also get your git commands straight - these can be life savers!
 - [Basics in python scripting](https://docs.python.org/3/tutorial/): This is always useful, and python is our go-to language for most of automation nowadays - this used to be Java. Most of the Java heavy lifting is done in ROBOT now!
 - [SSSOM and sssom-py](https://mapping-commons.github.io/sssom-py/index.html#): Toolkit and framework for managing mappings between ontologies.
