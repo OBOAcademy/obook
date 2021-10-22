@@ -12,8 +12,8 @@ Ontology templating systems, such as [DOSDP templates](../reference/glossary.md)
 
 In OBO we are currently mostly concerned with ROBOT templates and DOSDP templates. Before moving on, we recommend to complete a basic tutorial in both:
 
-- [ROBOT template tutorial](../tutorial/dosdp_template.md)
-- [DOSDP template tutorial](../tutorial/robot_tutorial_1.md)
+- [ROBOT template tutorial](../tutorial/robot_tutorial_1.md)
+- [DOSDP template tutorial](../tutorial/dosdp_template.md)
 
 ## ROBOT template vs DOSDP template
 
@@ -25,7 +25,7 @@ Ontologies, especially in the biomedical domain, are complex and, while growing 
 
 DOSDP separates data and templates into two files: a yaml file which defines the template, and a TSV file which holds the data. Lets look at s example.
 
-##### The template: abnormalAnatomicalEntity
+**The template: abnormalAnatomicalEntity**
 
 ```
 pattern_name: abnormalAnatomicalEntity
@@ -76,7 +76,7 @@ equivalentTo:
     - anatomical_entity
 ```
 
-##### The data: abnormalAnatomicalEntity.tsv
+**The data: abnormalAnatomicalEntity.tsv**
 
 | defined_class                             | defined_class_label              | anatomical_entity                             | anatomical_entity_label |
 |-------------------------------------------|----------------------------------|-----------------------------------------------|-------------------------|
