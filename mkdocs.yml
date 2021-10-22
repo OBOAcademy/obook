@@ -20,6 +20,7 @@ nav:
       - Developing an OBO Ontology: lesson/developing_an_obo_ontology.md
       - Developing an Application Ontology: lesson/developing_application_ontologies.md
       - Ontology Design: lesson/ontology_design.md
+      - Templates for OBO ontologies: lesson/templates_for_obo.md
       - Ontology Development: lesson/ontology_development.md
       - Ontology Fundamentals: lesson/ontology_fundamentals.md
       - Ontology term use: lesson/ontology_term_use.md
@@ -30,6 +31,7 @@ nav:
       - ROBOT Mini-Tutorial 1 - Convert, Extract and Template: tutorial/robot_tutorial_1.md
       - ROBOT Mini-Tutorial 2 - Annotate, Merge, Reason and Diff: tutorial/robot_tutorial_2.md
       - ROBOT Mini-Tutorial QC - Quality Control with report and query: tutorial/robot_tutorial_qc.md
+      - DOSDP Templates: tutorial/dosdp_template.md
       - GitHub Fundamentals for OBO Engineers: tutorial/github_fundamentals.md
       - GitHub Issue for OBO Engineers: tutorial/github_issues.md
       - Managing OBO ontology projects: tutorial/managing-ontology-project.md
@@ -38,15 +40,21 @@ nav:
       - ODK - Managing ontology releases: tutorial/managing-ontology-releases-odk.md
       - ODK - Migrating to ODK: tutorial/migrating-ontology-to-odk.md
   - How-to guides:
-      - Installing ELK in Protege: howto/installing_elk_in_protege.md
-      - Get set up for ODK-based ontology development: howto/setup_ontology_development_odk.md
-      - Setting up the ODK: howto/odk_setup.md
-      - Clone the Mondo ontology repository: howto/clone_mondo_repo.md
-      - Creating an GitHub Fork: howto/github_create_fork.md
-      - Creating an GitHub Pull Request: howto/github_create_pull_request.md
-      - Browsing and Searching Mondo: howto/protege_browse_search.md
-      - Deploy a custom OBO-Dashboard: howto/deploy_custom_obo_dashboard.md
-      - Change a pull request: howto/change_files_pull_request.md
+      - Protege:
+          - Installing ELK in Protege: howto/installing_elk_in_protege.md
+          - Switching Ontologies in Protege: howto/switching_ontologies.md
+          - Browsing and Searching: howto/protege_browse_search.md
+      - ODK:
+          - Get set up for ODK-based ontology development: howto/setup_ontology_development_odk.md
+          - Setting up the ODK: howto/odk_setup.md
+      - Git and Github:
+          - Clone a repository: howto/clone_mondo_repo.md
+          - Creating an GitHub Fork: howto/github_create_fork.md
+          - Creating an GitHub Pull Request: howto/github_create_pull_request.md
+          - Change a pull request: howto/change_files_pull_request.md
+          - Fixing conflicts: howto/fixing-conflicts.md
+      - Quality control:
+          - Deploy a custom OBO-Dashboard: howto/deploy_custom_obo_dashboard.md
   - Reference:
       - Glossary: reference/glossary.md
       - GitHub Desktop: reference/github_desktop.md
