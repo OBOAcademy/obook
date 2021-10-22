@@ -34,16 +34,13 @@
 
 - [SSSOM and sssom-py](https://mapping-commons.github.io/sssom-py/index.html#): Toolkit and framework for managing mappings across and beyond ontologies.
 
-**Where to find terms: Term browsers**
+**Where to find ontologies and terms: Term browsers and ontology repositories**
 
 - [OLS](https://www.ebi.ac.uk/ols/index): The boss of the current term browsers out there. While the code base is a bit dated, it still gives access to a wide range of relevant open biomedical ontology terms. Note, while being a bit painful, it is possible to [set up your own OLS](https://github.com/EBISPOT/ontotools-docker-config) (for your organisation) which only contains those terms/ontologies that are relevant for your work.
 - [Ontobee](http://www.ontobee.org/): The default term browser for OBO term purls. For example, click on http://purl.obolibrary.org/obo/OBI_0000070. This will redirect you directly to Ontobee, to show you the terms location in the hierarchy. In practice, there is no particular reason why you would favour Ontobee over OLS for example - I just sometimes prefer the way Ontobee presents annotations and "uses" by other ontologies, so I use both.
 - [AberOWL](http://aber-owl.net/#/): Another ontology repository and semantic search engine. Some ontologies such as [PhenomeNet](http://aber-owl.net/ontology/PhenomeNET/) can only be found on AberOWL, however, I personally prefer OLS.
 - [identifiers.org](https://identifiers.org/): A centralised registry for identifiers used in the life sciences. This is one of the tools that bridge the gap between CURIEs and URLs, but it does not cover (OBO) ontologies very well, and if so, is not aware of the proper URI prefixes (see for example [here](https://identifiers.org/resolve?query=HP:0000001), and HP term resolution that does not list the proper persistent URL of the HP identifier (http://purl.obolibrary.org/obo/HP_0000001)). Identifiers.org has mainly good coverage for databases/resources that use CURIE type identifiers. But: you can enter any ID you find in your data and it will tell you what it is associated with.
-
-**Where to find ontologies: Ontology repositories**
-
-- [OBO Foundry Ontology Library](http://obofoundry.org/)
+- [OBO Foundry Ontology Library](http://obofoundry.org/). The OBO Foundry works with other repositories and term browsers such as OLS, Ontobee and BioPortal. For example, OLS directly reads the OBO Foundry registry metadata, and automatically loads new ontologies added to the OBO Foundry Ontology Library.
 - [BioPortal](https://bioportal.bioontology.org/)
     - [CPT Story](https://www.bioontology.org/why-bioportal-no-longer-offers-the-current-procedural-terminology-cpt/). The Current Procedural Terminology was the by far most highly accessed Terminology on Bioportal - for many years. Due to license concerns, it had to be withdrawn from the repository. This story serves a cautionary tale of using terminologies with non-open or non-transparent licensing schemes.
 - [AgroPortal](http://agroportal.lirmm.fr/): Like BioPortal, but focussed on the Agronomy domain.
