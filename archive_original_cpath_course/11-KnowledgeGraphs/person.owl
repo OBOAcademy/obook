@@ -1,0 +1,53 @@
+Prefix(:=<http://www.semanticweb.org/matentzn/ontologies/2021/5/untitled-ontology-325#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.semanticweb.org/matentzn/ontologies/2021/5/untitled-ontology-325>
+
+Declaration(Class(<http://w3id.org/obook/Country>))
+Declaration(Class(<http://w3id.org/obook/Person>))
+Declaration(ObjectProperty(<http://w3id.org/obook/born_in>))
+Declaration(ObjectProperty(<http://w3id.org/obook/has_mother>))
+Declaration(ObjectProperty(<http://w3id.org/obook/loves>))
+
+############################
+#   Object Properties
+############################
+
+# Object Property: <http://w3id.org/obook/born_in> (<http://w3id.org/obook/born_in>)
+
+ObjectPropertyRange(<http://w3id.org/obook/born_in> <http://w3id.org/obook/Country>)
+
+# Object Property: <http://w3id.org/obook/has_mother> (has Mother)
+
+AnnotationAssertion(rdfs:label <http://w3id.org/obook/has_mother> "has Mother")
+FunctionalObjectProperty(<http://w3id.org/obook/has_mother>)
+ObjectPropertyDomain(<http://w3id.org/obook/has_mother> <http://w3id.org/obook/Person>)
+
+# Object Property: <http://w3id.org/obook/loves> (<http://w3id.org/obook/loves>)
+
+SymmetricObjectProperty(<http://w3id.org/obook/loves>)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://w3id.org/obook/Country> (Country)
+
+AnnotationAssertion(rdfs:label <http://w3id.org/obook/Country> "Country")
+DisjointClasses(<http://w3id.org/obook/Country> <http://w3id.org/obook/Person>)
+
+# Class: <http://w3id.org/obook/Person> (Person)
+
+AnnotationAssertion(rdfs:label <http://w3id.org/obook/Person> "Person")
+SubClassOf(<http://w3id.org/obook/Person> ObjectSomeValuesFrom(<http://w3id.org/obook/born_in> <http://w3id.org/obook/Country>))
+SubClassOf(<http://w3id.org/obook/Person> ObjectSomeValuesFrom(<http://w3id.org/obook/has_mother> <http://w3id.org/obook/Person>))
+
+
+)

@@ -1,0 +1,35 @@
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+
+Ontology: <http://www.semanticweb.org/matentzn/ontologies/2021/5/untitled-ontology-325>
+
+
+AnnotationProperty: rdfs:label
+
+    
+Datatype: rdf:PlainLiteral
+
+    
+ObjectProperty: <http://purl.obolibrary.org/obo/CL_0017611>
+
+    Annotations: 
+        rdfs:label "has Mother"
+    
+    Characteristics: 
+        Functional
+    
+    
+Class: <http://purl.obolibrary.org/obo/CL_0017610>
+
+    Annotations: 
+        rdfs:label "Person"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/CL_0017611> some <http://purl.obolibrary.org/obo/CL_0017610>
+    
+    
