@@ -1,4 +1,4 @@
-# Linking Data
+# Tutorial: From Tables to Linked Data
 
 These are the kinds of things that I do
 when I need to work with a new dataset.
