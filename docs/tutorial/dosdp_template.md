@@ -134,7 +134,7 @@ Here we are specifying how to expand our `EXPOSO` prefix (used in our spreadshee
 Now we're all set to run `dosdp-tools`! If you've downloaded or created all the necessary files, run this command to generate your ontology of exposures (assuming you've added the `dosdp-tools` to your Unix PATH):
 
 ```bash
-dosdp-tools generate --obo-prefixes --prefixes=prefixes.yaml --infile=exposure_with_input.tsv --template=exposure_with_input.yaml --ontology=chebi.owl --outfile=exposure_with_input.owl
+dosdp-tools generate --obo-prefixes=true --prefixes=prefixes.yaml --infile=exposure_with_input.tsv --template=exposure_with_input.yaml --ontology=chebi.owl --outfile=exposure_with_input.owl
 ```
 
 This will apply the pattern to each line in your spreadsheet, and save the result in an ontology saved at `exposure_with_input.owl` (it should look something [like this](https://raw.githubusercontent.com/INCATools/dosdp-tools/master/src/test/resources/tutorial/exposure_with_input.owl)). If you take a look at this ontology in a text editor or in Protégé, you'll see that it contains three classes, each with a generated label, text definition, and equivalent class definition. You're done!
