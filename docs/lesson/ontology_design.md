@@ -49,6 +49,9 @@ At the end of this lesson, you should know how to do:
 - [Nicole Vasilevsky](https://orcid.org/0000-0001-5208-3432)
 - [Nico Matentzoglu](https://orcid.org/0000-0002-7356-1779)
 
+## Acknowledgement
+- Content was adapted from [Ontology 101 Tutorial](https://ontology101tutorial.readthedocs.io/en/latest/)
+
 ## OWL class restrictions
 
 In OWL, we use object properties to describe binary relationships between two individuals (or instances). We can also use the properties to describe new classes (or sets of individuals) using _restrictions_. A restriction describes a class of individuals based on the relationships that members of the class participate in. In other words, a restriction is a kind of class, in the same way that a named class is a kind of class.
