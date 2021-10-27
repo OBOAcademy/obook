@@ -9,10 +9,6 @@ The OBOOK is the main resource for OBOAcademy training materials for Semantic OB
 
 This content is available under the [Creative Commons CC0 Public Domain Dedication](LICENSE).
 
-## Developer notes:
-
-To deploy the the tutorial pages, go to https://github.com/OBOAcademy/obook/actions/workflows/docs.yml and click "Run Workflow" on the `master` branch.
-
 ## Acknowledgements
 
 ### Critical Path Institute
