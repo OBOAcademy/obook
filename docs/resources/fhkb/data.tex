@@ -1,0 +1,14 @@
+\chapter{Exercise \arabic{excounter}}
+\label{ex:date}
+\addtocounter{excounter}{1}
+\herebedragons
+\steps{Adding birth years}{
+\item Add a data property \con{hasBirthYear} with a domain \person and range \con{integer}.
+\item Add the birth years from the data table.
+\item Run the reasoner.
+\item Ask DL queries for people born after 1930, before 1970 and during the 1960s.
+\item Ask the DL query \con{isParentOf min 3 Person}; note the answer.
+\item Make \con{hasBirthYear} functional; run the reasoner and ask the query again. Ask the DL query \con{hasFather value peter\_william\_bright\_1940}---why doesn't he have three children?
+\item Make all individuals different, run the reasoner and ask the DL query \con{isParentOf min 3 Person} again; note the answer.
+\item You should also make \con{hasFather} and \con{hasMother} functional; we want individuals of type \person to have only one mother and father. Try giving a person more than one father, run the reasoner and ask for an explanation of what happens. 
+}

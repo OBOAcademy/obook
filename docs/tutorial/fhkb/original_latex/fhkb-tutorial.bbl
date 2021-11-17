@@ -1,0 +1,21 @@
+\begin{thebibliography}{1}
+
+\bibitem{owlapi}
+M.~Horridge and S.~Bechhofer.
+\newblock The owl api: a java api for working with owl 2 ontologies.
+\newblock {\em Proc. of OWL Experiences and Directions}, 2009, 2009.
+
+\bibitem{oppl}
+Luigi Iannone, Alan Rector, and Robert Stevens.
+\newblock Embedding knowledge patterns into owl.
+\newblock In {\em European Semantic Web Conference (ESWC09)}, pages 218--232,
+  2009.
+
+\bibitem{manMan09}
+Dmitry Tsarkov, Uli sattler, Margaret Stevens, and Robert Stevens.
+\newblock {A Solution for the Man-Man Problem in the Family History Knowledge
+  Base}.
+\newblock In {\em Sixth International Workshop on OWL: Experiences and
+  Directions 2009}, 2009.
+
+\end{thebibliography}

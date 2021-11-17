@@ -1,0 +1,13 @@
+1. Add some individuals and add the hasFather and hasMother facts. ask some queries, including the inverses.
+2. add a hasParent super-property; ask some queries, including inverse
+3. add a hasAncestor super-property to hasParent, make it transitive; ask queries etc.
+4. Add birth years to all individuals; ask some queries, including 1960s children, people with more than 3 children; make hasBirthYear functional, get different answers, except my uncle peter - he has twins; make all individuals different and ask for people with more than 3 children again.
+5. Add some TBox; what class do all these individuals belong; what's true of all people; model person and sex; define man and woman
+6.ask if it's possible to be a sex that is both male and female; introduce disjointness; ask if there are any other ways of being a sex than male and female; do covering axioms; then ask about Man and Woman - should be nothing; then ask  Person and not (man or woman) shold vbe nothing - do lots of explanations
+6a do domain and ranges; ask who's a person and get nothing; add domains and ranges ad get individuals back; look at types of the individuals man and woman - who do we know enough about?; look at how domain and range are propergated through the hierarchy.
+7. back to the property hierarchy.  do grandparents with a role chain
+7a what is a blood relation? decsendants of my ancestors - do a role chain and make hasBloodrelation a super-property of hasAncestor; do the symmmetric characteristic
+8. do siblings
+9. do aunts and uncles
+10 do marriage
+11 pile in defined classes

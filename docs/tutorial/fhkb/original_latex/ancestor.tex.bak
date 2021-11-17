@@ -1,0 +1,178 @@
+\chapter{Ancesters and Descendants}
+\label{cha:ancestor}
+\taskstart
+In this Chapter you will:
+\begin{enumerate}
+\item Use sub-properties and the transitive property characteristic to infer ancestors of people;
+\item Add properties to the \fhkb property hierarchy that will infer ancestors and descendants of an \person without adding any more facts to the \fhkb;
+\item Explore the use of sub-property chains for grandparents and great grandparents;
+\item Place all of these new object properties in the property hierarchy.
+\end{enumerate}
+
+\section{Ancestors and Descendants}
+
+the \fhkb has parents established between individuals and, we know that all \indiv of The class \person have a parent. A parent is an ancestor of its children; a person's parents parents are its ancestors; and so on. So, in our \fhkb, Robert's ancesters are David, Margaret, William, Iris, Charles, Vilet, James, another Violet, another William, Sarah and so on. If my parents parents are my ancestors, then what we need is a ttransitive version of the \con{hasParent} property. Obviously we do not want \con{hasParent} to be transtive, as Robert's grandparents (and so on) would become his parents (and that would be wrong).
+
+We can easily achieve what is necessary. We need a \con{hasAncestor} property that has a transitive characteristic. The trick is to make this a super-property  of the \con{hasParent} property. In OWL, a sub-property implies its super-property. So, if \indiv \emph{x} holds a \con{hasParent} property with an \indiv \emph{y}, then it also holds an instance of its super-property \con{hasAncestor} with the \indiv \emph{y}. If \indiv \emph{y} then holds a \con{hasParent} property with another \indiv \emph{z}, then there is also, by implicaiton, a \con{hasAncesteror} property between \emph{y} and \emph{z}. As \con{hasAncestor} is transitive, \emph{x} and \emph{z} also hold a \con{hasAncestor} relationship between them.
+
+the inverse of \con{hasAncestor} can either be \con{isAncestorOf} or \con{hasDescendant}. we choose the \con{isAncestorOf} option. the inverse works in the same way as \con{hasAncestor}.
+
+\begin{tasks}
+\item Make a  new object property \con{hasAncestor}.
+\item Make it a sub-properrty of \con{hasRelation} and a super-property of \con{hasParent}.
+\item give it the domain of \con{Person} and the range of \person---the objects at each end will be inferred to be \person.
+\item Make \con{hasAncestor} transitive.
+\item Create the inverse \con{isAncestorOf}. Do not `stitch' it into the property heirarchy; the reasoner will sort it all out for you.
+\item Issue the DL-query \con{hasAnceswtor value Wiliam\_George\_bright}.
+\item Issue the query \con{isAncestorOf value \rds}.
+\end{tasks}
+\taskcont
+
+The \con{hasAncestor} object property will look like this:
+
+\begin{owlcode}
+ObjectProperty: hasAncestor
+
+    SubPropertyOf: [in fhkb]
+        isBloodRelationOf
+
+    SuperPropertyOf: [in fhkb]
+        hasParent,
+
+    Characteristics: [in fhkb]
+        Transitive
+
+    Domain: [in fhkb]
+        * DomainEntity,
+        * Thing,
+        Person
+
+    Range: [in fhkb]
+        Person
+
+    InverseOf: [in fhkb]
+        isAncestorOf
+\end{owlcode}
+As usual, it is best to think of the objects or individuals involved in the relationships. We have three indivudals---Robert, David and William. Each has a \con{hasFather} property  linking Robert to David and then David to William. As \con{hasFather} implies its super-property \con{hasParent}, robert also has a \con{hasParent} property with David, and David has a \con{hasParent} property to William. Similarly, as \con{hasParent} implies \con{hasAnchester}, the robert object has a \con{hasAnchester} property to the David object and the David object has one to the william object. As \con{hasAnchester} is transitive, Robert not only holds this property to the David object, but also to the William object (and so on back through Robert's ancestors).
+
+\section{Grandparents and Great Grandparents}
+
+We also want to use a sort of restricted transitivity in order to infer grandparents, grat grandparents and so on. My grandparents are my parents; my grandfathers  are my  parents fathers.  My great grandp;arents are my parents parents parents. My great grandmothers are my parents parents mothers. this is sort of like transitivity, but we want to make the paths only a certain length and, in the case of grandfathers, we want to move along two rlationships--- \con{hasParent} and then \con{hasFather}.
+
+We can do this with \owlii's sub-property chains. The way to think about sub-property chains is: If we see property \emph{x} followed by property \emph{y} linking three objects, then it implies that property \emph{z} is held between the first and third objects. Figure~\ref{fig:chain_triangle} shows this diagrammatically for the hasGrandfather property.
+
+\begin{figure}
+\caption{\label{fig:chain_triangle}Three blobs representing objects of the class \person. the three objects are linked by a \con{hasParent} property and this implies a \con{hasGrandparent} property.}
+\end{figure}
+
+For varaious grandparent object properties we need the following sets of implications:
+\begin{itemize}
+\item My parents parents are my grandparents;
+\item My parents fathers are my grandfathers;
+\item My parents mothers are my grandmothers;
+\item My parents parents parents are my great grandparents or my grandparents parents are my great grandparents.
+\item  My parents parents fathers are my great grandfathers or my parents grandfathers are my great grandfathers;
+\item My parents parents mothers are my great grandmothers (and so on).
+\end{itemize}
+
+Notice  that we can trace the paths in several ways, some have more steps than others, though the shorter paths themselves employ paths. tracing these paths is what \owlii's sub-property chains achieve. for the new object property \con{hasgrandparent} we write:
+
+\begin{owlcode}
+SubPropetyChain:
+hasParent O hasParent
+\end{owlcode}
+we read this as `\con{hasParent} followed by \con{hasParent} implies \con{hasgrandparent}'.
+
+we also need to think where the \con{hasgrandparent} property fits in our growing hierarchy of object proeprties. Think about the implications: Does holding a \con{has/grandparent} property between two objects imply that they also hold   a \con{hasgrandparent} property? the answer is no. So, this new property is not a super-property of \con{hasParent}. Does the holding of a \con{hasgrandParent} property between two objects imply that they also hold  an \con{hasAncestor} property? the answer is yes; so that should be a super-property of \con{hasgrandparent}. we need to ask such questions of our existing properties to work out where we put it in the object hierarchy. At the moment, our \con{hasGrandparent} property will look like this:
+
+\begin{owlcode}
+ObjectProperty: hasGrandParent
+
+    SubPropertyOf: [in fhkb]
+        hasAncestor
+
+    SuperPropertyOf: [in fhkb]
+        hasGrandmother,
+        hasGrandfather
+
+    Domain: [in fhkb]
+        * DomainEntity,
+        * Thing,
+        Person
+
+    Range: [in fhkb]
+        Person
+
+    InverseOf: [in fhkb]
+        isGrandParentOf
+\end{owlcode}
+
+Do the following tasks:
+\begin{tasks}
+\item Make a property \con{hasgrandparent};
+\end{tasks}
+\taskcont
+
+Again, think of the objects involved. We can take the same three objects as before: Robert, David and William. think about the properties that exist, both by assertion and implicaiton, between these objects. we have asserted only either \con{isFatherOf} or \con{hasFather} between these objects. Irrespective of which one it is, the inverse can be inferred betweeen the actual individuals (remembe that this is not the case for class level restrictions---that all instances of a class hold a proeprty does not mean that the filler objects at the other end hold the inverse; the quanificaiton on the restriction tells us this). Remember that:
+\begin{enumerate}
+\item robert holds an \con{hasFather} property with David;
+\item David holds a \con{hasFather} property with William;
+\item by iplication through the \con{hasParent} super-property of \con{hasFather}, Robert holds a \con{hasFther} property with David, and the latter holds one with William;
+\item the sub-property chain on \con{hasGrandfather} then implies that Robert holds a \con{hasGrandfather} property to William. Use the diagram in figure~\ref{fig:triangle} to trace the path; there is a \con{hasParent} path from robert to Wiliam via David and this implies the \con{hasGranfather} property between Robert and William.
+\end{enumerate}
+
+It is also useful to point out that the  the inverse of \con{hasGrandfather} also has the implication of the sub-property choain of the inverses of \con{hasParent}. that is, three objects linked by a path of two \con{isParentOf} implies that an \con{isGrandfatherOf} property is established between the first and third object, in this case william and Robert. As the inverses of \con{hasFather} are established by the reasoner, all the inverse implications also hold.
+
+\section{Adding Some Defined Classes}
+\label{sec:ancest-defined}
+
+\begin{tasks}
+\item Add a defined class for \con{Ancestor}, \con{MaleAncestor}, \con{FemaleAncestor};
+\item Add a defined Class for \con{Descendant}, \con{MaleDescendant} and \con{FemaleDescendant};
+\item run the reasoner and view  the resulting hierarchy.
+\end{tasks}
+\taskcont
+
+The code for the two classes looks like:
+
+\begin{owlcode}
+Class: Ancestor
+	EquivalentTo: Person
+		and isAncestorOf some Person
+
+Class: FemaleAncestor
+	EquivalentTo: Woman
+	and isAncestorOf some Person
+
+Class: Descendant
+	EquivalentTo: Person
+		and hasAncestor some Person
+
+Class: MaleDescendant
+	EquivlaentTo: Man
+		and hasAncestor some Person
+\end{owlcode} TBox after reasoning can be seen in Figure~\ref{fig:equiv}. Notice that the reasoner has inferred that several of the classes are equivalent or `the same'. These are:
+\begin{itemize}
+\item Ancestor and parent; Father and Male Ancestor;
+\item Descendant and Person; Male descendant and Man, Female Descendant and Woman.
+\end{itemize}
+
+The reasoner has used the axioms within the ontology to infer that all the instances of \con{Person} are also instances of the class \con{Descendant} and that all the instances of \con{woman} are also the same instances as the class \con{Female Descendant}. This is intuitively true; all people are descenandts---they all have parents that have parents etc and thus everyone is a descendant. All women are female people that have parents etc etc. As usual we should think about the objects within the clases and what we know about them. this time it is useful to think about the statements we have made  about \person in Chapter~\ref{cha:person}---that all instances of \person have a father  and a mother; add to this the information from the peroperty hierarchy and we know that all instances of \person have parents and ancestors. We have repeated all of this in our new defined classes for \con{Ancestor} and \con{Descendant} and the reasoner has highlighted this information.
+
+\begin{figure}
+\centering
+\caption{\label{fig:equiv}The defined classes from Section~\ref{sec:ancest-defined} in the \fhkb's growing class hierarchy. Notice the equivalence between some of the classes.}
+\end{figure}
+
+\section{Summary}
+
+It is important when dealing with property hierarchies to think in terms of propeties between objects and  of the implications `up the hierarchy'. A sub-property implies its super-property. So, in our \fhkb, two \person objects holding a \con{hasParent} property between them, by implication also hold an \con{hasAncestor} property between them. In turn, \con{hasAncestor} has a super-property of \con{hasBloodRelation}
+ and the two objects in question also hold, by impliation, this property between them as well.
+
+We make \con{hasAncestor} transitive. this means that my ancestors ancestors are also my ancestors. that a sub-propety is transitive does not mplie that its super-property is transitive. We have seen that by manipluating the property hierarchy that we can make a lot of inferences without addign any more facts to the classes or indivudals in the \fhkb. This will be a feature of the whole process---keep the work to the minimum (well, almost).
+
+In \owlii, we can also trace 	`paths' around objects. again, we think of the objects involved. Again, think of the objects involved in the path of properties that link objects together. We have done simple paths so far---Robert linked to David via \con{hasParent} and David linked to Wiliam via \con{hasFather} implies the link between Robert and William of \con{hasGrandfather}. If this is true for all cases \(for which you have to use your domain knowledge), one can  capture this implication in the property hierarchy. Againb, we are making work easy by adding no new explicit facts, but working through implication that the reasoner works out for us.
+
+Finally, we looked at some defined classes. We inferred equivalence between some classes where the extents of the classes were inferred to be the same---in this case the extents of \con{Person} and \con{Descendant} are the same. That is, all the ojbects that can appear in \person{ will also be members of \con{Descendant}. We can check this implicaiton intuitiavely----all people are descendants of someone. Perhaps not  the most profound  inference of all time, but we did no real work to place this observation in the \\fhkb.
+
+This last point is a good general observation. We can make the reasoner do work for us. The less maintenance we have to do in the \fhkb the better. this will be a principle that works throughout the tutorial. 

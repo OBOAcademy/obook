@@ -1,0 +1,14 @@
+\chapter{Exercise \arabic{excounter}}
+\addtocounter{excounter}{1}
+\herebedragons
+\steps{Finding parents with only sons}{
+\item Ask the DL query \con{isParentOf some Man}; note the answer.
+\item The query finds someone that has at least one son; we want a query that asks for  people that are parents of only sons.
+\item Ask the DL query \con{isParentOf only Man}; note the answer. Are there any unusual answers?
+\item We need to `close off' what people individuals are parents of. For \ds we do this with an axiom such as \con{isParentOf only \{\irjs, \irds\}}. Add such axioms to your \fhkb's individuals (\ds, for instance, should have such an axiom.)   and ask the questions again, noting the answers.  (note how fast the reasoner runs.)
+\item Now write a defined class \con{ParentOfOnlySons}. this will be something like:
+
+\con{EquivalentTo:  Person and isParentOf some Man and isParentOf only Man}.
+
+\item Run the reasoner; where is the class placed in the TBox; which individuals are members of this class? 
+}

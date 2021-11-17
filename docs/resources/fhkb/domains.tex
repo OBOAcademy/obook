@@ -1,0 +1,20 @@
+\chapter{Exercise \arabic{excounter}}
+\addtocounter{excounter}{1}
+
+\steps{Domains and ranges}{
+\item Run the reasoner and ask DL queries about who is a \man,  \woman and \person; note the answers.
+\item  Add the domain \person and range \man to \con{hasFather} and add the domain \person and range \woman to \con{hasMother}.
+\item Run the reasoner and inspect the object hierarchy to see what the reasoner has done with the domains and ranges of the other properties; make any changes that are necessary.
+\item Ask DL queries about who is a \man,  \woman and \person; note for whom we don't have a specific sex.
+\item Write the following defined classes (using the \con{equivalentTo:} construct):
+\begin{enumerate}
+\item  Parent---All the individuals that are parents.
+\item A \con{Grandparent} class that uses the \con{isGrandparentOf} property and \con{Grandparent2} that uses \con{EquivalentTo: Person and (isParentOf some (Person and isParentOf some Person))}. 
+\end{enumerate}
+Run the reasoner, look to see where the classes are placed in the
+hierarchy and work out why.  
+
+\item Add the restrictions \con{hasFather some Man} and \con{hasMother some Woman} to \person. Run the reasoner and ask which individuals have a mother. Also ask the DL query for which individuals have a grandmother. Ask for explanations.
+\item Test the \con{hasBloodRelation} property again. This time you should see it working. this is because we've now said everyone has a mother and everyone has a father, therefore everyone has a parent and thus an ancester. If everyone can have an ancestor,  then everyone is someone's descendent. 
+
+}

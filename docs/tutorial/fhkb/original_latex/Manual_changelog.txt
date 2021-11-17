@@ -1,0 +1,62 @@
+Normalisation:
+
+knowledgebase => knowledge base
+OWL-DL => OWL DL
+camel case and Camel case => CamelCase (Wikipedia)
+Stevens to Bright
+
+Various
+-- Macros all the way through, remove xspace from templates!
+-- Pizza tutorial layout
+-- Most important richard, Robert, Margret, David, William George, Iris Ellen
+-- Check references to pictures and tables, often wrong, also in 7.1 the refs to dmitrys papers.
+-- create a caption for every picture
+-- Add Margaret to list of contributors
+-- Check in chapter 3.1 assumptions about 'which individuals have a father' for a2.
+-- in 4.1, maybe add a comment that range and domain of course are inherited down the line
+-- check literature references in 4.2
+-- 5.1, 5.2: Superproperty of still in Manchester Syntax code.. 
+-- 5.3: Class equality: we never created the Parent or Father classes! I removed it.
+-- 7.4: Adding greatuncle of would simply be a pain. Do you want to leave it anyways?
+-- 7.4 Turn something on in Protege: show all inferred facts for individuals.
+
+Concentions
+-- All OWL is written in Manchester Syntax;
+-- When we use \fhkb entities within text, we use a \con{sans serif typeface};
+-- We use CamelCase for classes and property names;
+-- Class names start with upper case;
+-- Individual names start with a lower case letter and internal underscores to break words;
+-- Property names usually start with `is' or `has' and are CamelCase with a lower case initial letter.
+
+
+
+--- to SPACE--SPACE
+
+- What about names? Always correct, or leave it like is?
+- sub-properties, subproperties, subclasses, super-properties?
+- nothing maybe should be spelled Nothing
+- DL query or DL-Query
+- sub-property chains should be property chains?
+- Normalize the code display (whitepace!, lower case o for chains, SubProperty instead of PropertyChain?).
+- cha: to chap:
+- Labels of tables out of the caption!
+- ref to tab:parentage to tab:parents in chapter "individuals"
+
+Suggestions:
+
+Introduction
+- Reference to Pizza Tutorial (1.2)
+- What is a "yers"(1.2)?
+- is Chapter capital everywhere?
+- such as that in Figure 10.1" WRONG, 1.1!
+- "such as that" to "such as the one"?
+- quotes: ' or the other single thing? (apostrophe)
+
+Modelling Person
+- Do every modelling step once.
+- Check manchester syntax
+- Entities like \person or \man should be formatted without the trailing whitespace
+
+Instances
+- tab:parentage non existent.
+- Name normalization: All Upper Case?

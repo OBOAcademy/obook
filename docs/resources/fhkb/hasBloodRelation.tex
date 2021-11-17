@@ -1,0 +1,12 @@
+\chapter{Exercise \arabic{excounter}}
+\addtocounter{excounter}{1}
+
+\steps{Finding all blood relations}{
+\item Add the object property \con{hasBloodRelation} to the object property hierarchy.
+\item Is this property transitive?
+\item What is this property's inverse? It is its own inverse, so make it symmetric.
+\item What is the sub-property chain that determines one's blood relations? Add this sub-property chain to \con{hasBloodRelation}.
+\item Run the reasoner and test your answer.
+\item One good test is to find the blood relations of the person furthest back in the hierarchy; do we get his or her blood relations? How do we fix it? Ask a human being---we don't yet know, in the ontology, that everyone has an ancestor; once we do know this, this sub-property chain will work. We know as humans that everyone has parents; the `computer' doesn't know this yet---see Exercise~\ref{ex_classes}.
+\item Look at the object property hierarchy. 
+}

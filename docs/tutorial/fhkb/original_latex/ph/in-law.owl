@@ -1,0 +1,198 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.cs.man.ac.uk/~stevensr/ontology/in-law.owl#"
+     xml:base="http://www.cs.man.ac.uk/~stevensr/ontology/in-law.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:in-law="http://www.cs.man.ac.uk/~stevensr/ontology/in-law.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/in-law.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/in-law.owl#hasAuntInLaw -->
+
+    <owl:ObjectProperty rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/in-law.owl#hasAuntInLaw">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/in-law.owl#in-law"/>
+        <owl:inverseOf rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/in-law.owl#isAuntInLawOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/in-law.owl#hasBrotherInLaw -->
+
+    <owl:ObjectProperty rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/in-law.owl#hasBrotherInLaw"/>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/in-law.owl#hasFatherInLaw -->
+
+    <owl:ObjectProperty rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/in-law.owl#hasFatherInLaw"/>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/in-law.owl#hasFemalePartner -->
+
+    <owl:ObjectProperty rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/in-law.owl#hasFemalePartner"/>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/in-law.owl#hasHusband -->
+
+    <owl:ObjectProperty rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/in-law.owl#hasHusband"/>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/in-law.owl#hasMalePartner -->
+
+    <owl:ObjectProperty rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/in-law.owl#hasMalePartner"/>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/in-law.owl#hasParentInLaw -->
+
+    <owl:ObjectProperty rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/in-law.owl#hasParentInLaw"/>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/in-law.owl#hasPartner -->
+
+    <owl:ObjectProperty rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/in-law.owl#hasPartner"/>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/in-law.owl#hasSiblingInLaw -->
+
+    <owl:ObjectProperty rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/in-law.owl#hasSiblingInLaw"/>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/in-law.owl#hasSisterInLaw -->
+
+    <owl:ObjectProperty rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/in-law.owl#hasSisterInLaw"/>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/in-law.owl#hasSpouse -->
+
+    <owl:ObjectProperty rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/in-law.owl#hasSpouse"/>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/in-law.owl#hasUncleInLaw -->
+
+    <owl:ObjectProperty rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/in-law.owl#hasUncleInLaw"/>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/in-law.owl#hasWife -->
+
+    <owl:ObjectProperty rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/in-law.owl#hasWife"/>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/in-law.owl#in-law -->
+
+    <owl:ObjectProperty rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/in-law.owl#in-law"/>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/in-law.owl#isAuntInLawOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/in-law.owl#isAuntInLawOf"/>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/in-law.owl#isBrotherInLawOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/in-law.owl#isBrotherInLawOf"/>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/in-law.owl#isFatherInLawOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/in-law.owl#isFatherInLawOf"/>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/in-law.owl#isFemalePartnerIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/in-law.owl#isFemalePartnerIn"/>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/in-law.owl#isHusbandOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/in-law.owl#isHusbandOf"/>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/in-law.owl#isMalePartnerIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/in-law.owl#isMalePartnerIn"/>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/in-law.owl#isMotherInLawOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/in-law.owl#isMotherInLawOf"/>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/in-law.owl#isParentInLawOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/in-law.owl#isParentInLawOf"/>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/in-law.owl#isPartnerIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/in-law.owl#isPartnerIn"/>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/in-law.owl#isSiblingInLawOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/in-law.owl#isSiblingInLawOf"/>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/in-law.owl#isSisterInLawOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/in-law.owl#isSisterInLawOf"/>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/in-law.owl#isSpouseOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/in-law.owl#isSpouseOf"/>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/in-law.owl#isUncleInLawOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/in-law.owl#isUncleInLawOf"/>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/in-law.owl#isWifeOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/in-law.owl#isWifeOf"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1787) http://owlapi.sourceforge.net -->
+

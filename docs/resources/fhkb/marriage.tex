@@ -1,0 +1,13 @@
+\chapter{Exercise \arabic{excounter}}
+\addtocounter{excounter}{1}
+
+\steps{In-laws: Modelling partnerships}{
+\item Add the class \con{Partnership} to the \fhkb as a sibling of \person and make it disjoint with its primitive siblings.
+\item Create the object properties \con{hasParticipant}, \con{hasMaleParticipant} and \con{hasFemaleParticipant} in the obvious object hierarchy, along with their inverses. \con{Partnership} is their common domain and add the obvious ranges to these properties.
+\item Add a restriction of \con{hasParticipant min 2 Person} to the \con{Marriage} class.
+\item Create the object properties \con{hasSpouse}, \con{hasWife} and \con{hasHusband} and inverses where appropriate (or use property characteristics when they are not). Use sub-property chains to infer when two individuals are husband and wife. \ds and \mgs were married in 1958; create an individual for this marriage (you can add a \con{hasMarriageYear} data property if you wish). John Bright and Joyce Gosport were married in 1954. Add another individual for this marriage.
+\item Run the reasoner and ask DL queries to test what you have done.
+\item Create new object properties for in-laws-brother-in-law, sister-in-law (hint: these last two have possible sub-property chains)  and sibling-in-law. You can also now add properties to find uncles- and aunts-in-law.
+\item Run the reasoner, and ask DL queries to confirm that it all works.
+\item Add these  two property hierarchies to the main object property hierarchy, reason and look at it.
+}

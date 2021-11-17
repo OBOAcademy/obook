@@ -1,0 +1,604 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/ontologies/2012/4/untitled-ontology-15#"
+     xml:base="http://www.semanticweb.org/ontologies/2012/4/untitled-ontology-15"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/4/untitled-ontology-15#hasFather -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2012/4/untitled-ontology-15#hasFather">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2012/4/untitled-ontology-15#Man"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/4/untitled-ontology-15#Person"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/2012/4/untitled-ontology-15#hasParent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/4/untitled-ontology-15#hasMother -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2012/4/untitled-ontology-15#hasMother">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/4/untitled-ontology-15#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2012/4/untitled-ontology-15#Woman"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/2012/4/untitled-ontology-15#hasParent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/4/untitled-ontology-15#hasParent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2012/4/untitled-ontology-15#hasParent">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/4/untitled-ontology-15#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2012/4/untitled-ontology-15#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/4/untitled-ontology-15#hasSex -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2012/4/untitled-ontology-15#hasSex">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/4/untitled-ontology-15#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2012/4/untitled-ontology-15#Sex"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/4/untitled-ontology-15#isFatherOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2012/4/untitled-ontology-15#isFatherOf">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2012/4/untitled-ontology-15#hasFather"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/4/untitled-ontology-15#isMotherOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2012/4/untitled-ontology-15#isMotherOf">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2012/4/untitled-ontology-15#hasMother"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/4/untitled-ontology-15#isParentOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2012/4/untitled-ontology-15#isParentOf">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2012/4/untitled-ontology-15#hasParent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/4/untitled-ontology-15#DomainEntity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/4/untitled-ontology-15#DomainEntity"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/4/untitled-ontology-15#Female -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/4/untitled-ontology-15#Female">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/4/untitled-ontology-15#Sex"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/2012/4/untitled-ontology-15#Male"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/4/untitled-ontology-15#Male -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/4/untitled-ontology-15#Male">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/4/untitled-ontology-15#Sex"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/4/untitled-ontology-15#Man -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/4/untitled-ontology-15#Man">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/4/untitled-ontology-15#Person"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/4/untitled-ontology-15#hasSex"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2012/4/untitled-ontology-15#Male"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/4/untitled-ontology-15#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/4/untitled-ontology-15#Person">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/4/untitled-ontology-15#Man"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/4/untitled-ontology-15#Woman"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/4/untitled-ontology-15#DomainEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/4/untitled-ontology-15#hasFather"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2012/4/untitled-ontology-15#Man"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/4/untitled-ontology-15#hasMother"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2012/4/untitled-ontology-15#Woman"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/4/untitled-ontology-15#hasSex"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2012/4/untitled-ontology-15#Sex"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/2012/4/untitled-ontology-15#Sex"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/4/untitled-ontology-15#Sex -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/4/untitled-ontology-15#Sex">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/4/untitled-ontology-15#Female"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/4/untitled-ontology-15#Male"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/4/untitled-ontology-15#DomainEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/4/untitled-ontology-15#Woman -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/4/untitled-ontology-15#Woman">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/4/untitled-ontology-15#Person"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/4/untitled-ontology-15#hasSex"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2012/4/untitled-ontology-15#Female"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Alec_John_Archer_1927 -->
+
+    <owl:NamedIndividual rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Alec_John_Archer_1927">
+        <hasFather rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#James_Alexander_Archer_1882"/>
+        <hasMother rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Violet_Heath_1887"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Charles_Herbert_Rever_1895 -->
+
+    <owl:NamedIndividual rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Charles_Herbert_Rever_1895">
+        <hasMother rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Elizabeth_Frances_Jessop_1869"/>
+        <hasFather rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#William_Rever_1870"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Charlotte_Caroline_Jane_Bright -->
+
+    <owl:NamedIndividual rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Charlotte_Caroline_Jane_Bright">
+        <hasMother rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Charlotte_Hewett_1863"/>
+        <hasFather rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Henry_Edmund_Bright_1862"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Charlotte_Hewett_1863 -->
+
+    <owl:NamedIndividual rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Charlotte_Hewett_1863"/>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Clare_Bright_1966 -->
+
+    <owl:NamedIndividual rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Clare_Bright_1966">
+        <hasFather rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Peter_William_Bright_1941"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#David_Bright_1934 -->
+
+    <owl:NamedIndividual rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#David_Bright_1934">
+        <hasMother rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Iris_Ellen_Archer_1906"/>
+        <hasFather rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#William_George_Bright_1901"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Eileen_Mary_Rever_1929 -->
+
+    <owl:NamedIndividual rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Eileen_Mary_Rever_1929">
+        <hasFather rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Charles_Herbert_Rever_1895"/>
+        <hasMother rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Violet_Sylvia_Steward_1894"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Elizabeth_Frances_Jessop_1869 -->
+
+    <owl:NamedIndividual rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Elizabeth_Frances_Jessop_1869"/>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Ethel_Archer_1912 -->
+
+    <owl:NamedIndividual rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Ethel_Archer_1912">
+        <hasFather rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#James_Alexander_Archer_1882"/>
+        <hasMother rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Violet_Heath_1887"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Frederick_Herbert_Bright_1889 -->
+
+    <owl:NamedIndividual rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Frederick_Herbert_Bright_1889">
+        <hasMother rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Charlotte_Hewett_1863"/>
+        <hasFather rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Henry_Edmund_Bright_1862"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Henry_Edmund_Bright_1862 -->
+
+    <owl:NamedIndividual rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Henry_Edmund_Bright_1862"/>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Henry_Edmund_Bright_1887 -->
+
+    <owl:NamedIndividual rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Henry_Edmund_Bright_1887">
+        <hasMother rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Charlotte_Hewett_1863"/>
+        <hasFather rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Henry_Edmund_Bright_1862"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Ian_Bright_1959 -->
+
+    <owl:NamedIndividual rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Ian_Bright_1959">
+        <hasFather rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#John_Bright_1930"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Iris_Ellen_Archer_1906 -->
+
+    <owl:NamedIndividual rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Iris_Ellen_Archer_1906">
+        <hasFather rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#James_Alexander_Archer_1882"/>
+        <hasMother rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Violet_Heath_1887"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#James_Alexander_Archer_1882 -->
+
+    <owl:NamedIndividual rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#James_Alexander_Archer_1882"/>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#James_Bright_1964 -->
+
+    <owl:NamedIndividual rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#James_Bright_1964">
+        <hasFather rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Peter_William_Bright_1941"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#James_Frank_Hayden_Bright -->
+
+    <owl:NamedIndividual rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#James_Frank_Hayden_Bright">
+        <hasMother rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Charlotte_Hewett_1863"/>
+        <hasFather rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Henry_Edmund_Bright_1862"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Janet_Bright_1964 -->
+
+    <owl:NamedIndividual rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Janet_Bright_1964">
+        <hasFather rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#John_Bright_1930"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#John_Bright_1930 -->
+
+    <owl:NamedIndividual rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#John_Bright_1930">
+        <hasMother rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Iris_Ellen_Archer_1906"/>
+        <hasFather rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#William_George_Bright_1901"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#John_Tacey_Steward_1873 -->
+
+    <owl:NamedIndividual rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#John_Tacey_Steward_1873"/>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Joyce_Archer_1921 -->
+
+    <owl:NamedIndividual rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Joyce_Archer_1921">
+        <hasFather rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#James_Alexander_Archer_1882"/>
+        <hasMother rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Violet_Heath_1887"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Julie_Bright_1966 -->
+
+    <owl:NamedIndividual rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Julie_Bright_1966">
+        <hasFather rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Peter_William_Bright_1941"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Kathleen_Minnie_Bright_1904 -->
+
+    <owl:NamedIndividual rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Kathleen_Minnie_Bright_1904">
+        <hasMother rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Charlotte_Hewett_1863"/>
+        <hasFather rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Henry_Edmund_Bright_1862"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Leonard_John_Bright_1890 -->
+
+    <owl:NamedIndividual rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Leonard_John_Bright_1890">
+        <hasMother rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Charlotte_Hewett_1863"/>
+        <hasFather rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Henry_Edmund_Bright_1862"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Lois_Green_1871 -->
+
+    <owl:NamedIndividual rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Lois_Green_1871"/>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Margaret_Grace_Rever_1934 -->
+
+    <owl:NamedIndividual rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Margaret_Grace_Rever_1934">
+        <hasFather rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Charles_Herbert_Rever_1895"/>
+        <hasMother rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Violet_Sylvia_Steward_1894"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Mark_Anthony_Heath_1960 -->
+
+    <owl:NamedIndividual rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Mark_Anthony_Heath_1960">
+        <hasMother rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Eileen_Mary_Rever_1929"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Mark_Bright_1956 -->
+
+    <owl:NamedIndividual rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Mark_Bright_1956">
+        <hasFather rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#John_Bright_1930"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Nicholas_Charles_Heath_1964 -->
+
+    <owl:NamedIndividual rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Nicholas_Charles_Heath_1964">
+        <hasMother rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Eileen_Mary_Rever_1929"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Nora_Ada_Bright_1899 -->
+
+    <owl:NamedIndividual rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Nora_Ada_Bright_1899">
+        <hasMother rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Charlotte_Hewett_1863"/>
+        <hasFather rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Henry_Edmund_Bright_1862"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Norman_James_Archer_1909 -->
+
+    <owl:NamedIndividual rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Norman_James_Archer_1909">
+        <hasFather rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#James_Alexander_Archer_1882"/>
+        <hasMother rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Violet_Heath_1887"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Peter_William_Bright_1941 -->
+
+    <owl:NamedIndividual rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Peter_William_Bright_1941">
+        <hasMother rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Iris_Ellen_Archer_1906"/>
+        <hasFather rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#William_George_Bright_1901"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Richard_John_Bright_1962 -->
+
+    <owl:NamedIndividual rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Richard_John_Bright_1962">
+        <hasFather rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#David_Bright_1934"/>
+        <hasMother rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Margaret_Grace_Rever_1934"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Robert_David_Bright_1965 -->
+
+    <owl:NamedIndividual rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Robert_David_Bright_1965">
+        <hasFather rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#David_Bright_1934"/>
+        <hasMother rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Margaret_Grace_Rever_1934"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Violet_Heath_1887 -->
+
+    <owl:NamedIndividual rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Violet_Heath_1887"/>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Violet_Sylvia_Steward_1894 -->
+
+    <owl:NamedIndividual rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Violet_Sylvia_Steward_1894">
+        <hasFather rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#John_Tacey_Steward_1873"/>
+        <hasMother rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Lois_Green_1871"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#William_Bright_1970 -->
+
+    <owl:NamedIndividual rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#William_Bright_1970">
+        <hasFather rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#John_Bright_1930"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#William_George_Bright_1901 -->
+
+    <owl:NamedIndividual rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#William_George_Bright_1901">
+        <hasMother rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Charlotte_Hewett_1863"/>
+        <hasFather rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Henry_Edmund_Bright_1862"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#William_Rever_1870 -->
+
+    <owl:NamedIndividual rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#William_Rever_1870"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Alec_John_Archer_1927"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Charles_Herbert_Rever_1895"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Charlotte_Caroline_Jane_Bright"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Charlotte_Hewett_1863"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Clare_Bright_1966"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#David_Bright_1934"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Eileen_Mary_Rever_1929"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Elizabeth_Frances_Jessop_1869"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Ethel_Archer_1912"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Frederick_Herbert_Bright_1889"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Henry_Edmund_Bright_1862"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Henry_Edmund_Bright_1887"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Ian_Bright_1959"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Iris_Ellen_Archer_1906"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#James_Alexander_Archer_1882"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#James_Bright_1964"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#James_Frank_Hayden_Bright"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Janet_Bright_1964"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#John_Bright_1930"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#John_Tacey_Steward_1873"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Joyce_Archer_1921"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Julie_Bright_1966"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Kathleen_Minnie_Bright_1904"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Leonard_John_Bright_1890"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Lois_Green_1871"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Margaret_Grace_Rever_1934"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Mark_Anthony_Heath_1960"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Mark_Bright_1956"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Nicholas_Charles_Heath_1964"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Nora_Ada_Bright_1899"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Norman_James_Archer_1909"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Peter_William_Bright_1941"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Richard_John_Bright_1962"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Robert_David_Bright_1965"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Violet_Heath_1887"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#Violet_Sylvia_Steward_1894"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#William_Bright_1970"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#William_George_Bright_1901"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/fhkb.owl#William_Rever_1870"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.5.1928) http://owlapi.sourceforge.net -->
+

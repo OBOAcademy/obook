@@ -1,0 +1,10 @@
+\chapter{Exercise \arabic{excounter}}
+\addtocounter{excounter}{1}
+
+\steps{Create \con{hasParent}}{
+\item Add another object property \con{hasParent} and its obvious inverse. Make \con{hasParent} a super-property of \con{hasMother} and \con{hasFather}.
+\item Run the reasoner.
+\item Ask the DL queries: \con{hasParent value \ids} and \con{hasParent value \imgs}. Ask similar queries using the \con{isParentOf} property.
+\item Look at the object hierarchy and see the reasoner maintaining the `is' side of the hierarchy.
+\item Write a DL query to find the grandparents of \rds. Specialise that query to find \rds's grandfathers. 
+}
