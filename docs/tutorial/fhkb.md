@@ -332,7 +332,7 @@ Facts: hasFather mr_plinth, hasMother mrs_plinth
     using the Firstname_Secondname_Familyname_Birthyear pattern, as for example in
     Robert_David_Bright_1965.
 
-
+![camera](https://github.com/shawntanzk/obook/blob/FHKB-formatting/docs/images/FHKB%20figures/images/black_camera.png)
 ```
 While asserting facts about all individuals in the FHKB will be a bit tedious at
 times, it might be useful to at least do the task for a subset of the family members.
@@ -340,6 +340,7 @@ For the impatient reader, there is a convenience snapshot of the ontology includ
 the raw individuals available athttp://owl.cs.manchester.ac.uk/tutorials/
 fhkbtutorial.
 ```
+![note](https://github.com/shawntanzk/obook/blob/FHKB-formatting/docs/images/FHKB%20figures/images/NoteIconSmall.png)
 ```
 If you are working with Protégé, you may want to look at the Matrix plugin for
 Protégé at this point. The plugin allows you to add individuals quickly in the
