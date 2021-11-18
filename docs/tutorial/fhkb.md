@@ -306,14 +306,12 @@ Biologically, everyone has parents; a mother and a father<sup>3</sup>. The start
 
 | Task 1: Creating object properties for parentage |
 |---|
-|1. Create a new ontology; <br>2. Create an object propertyhasMother; <br>3. Create a propertyisMotherOfand givehasMothertheInverseOf:isMotherOf; <br>4. Do the same for the propertyhasFather; <br>5. Create a propertyhasParent; give it the obvious inverse; <br>6. MakehasMotherandhasFathersub-properties ofhasParent. <br>7. Run the reasoner and look at the property hierarchy.|
+|1. Create a new ontology; <br>2. Create an object propertyhasMother; <br>3. Create a property `isMotherOf` and give `hasMother` the `InverseOf: isMotherOf`; <br>4. Do the same for the property `hasFather`; <br>5. Create a property `hasParent`; give it the obvious inverse; <br>6. Make `hasMother` and `hasFather` sub-properties of `hasParent`. <br>7. Run the reasoner and look at the property hierarchy.|
 
 
-Note how the reasoner has automatically completed the sub-hierarchy forisParentOf: isMotherOfand
-isFatherOfare inferred to be sub-properties ofisParentOf.
+Note how the reasoner has automatically completed the sub-hierarchy for `isParentOf:` `isMotherOf` and `isFatherOf` are inferred to be sub-properties of `isParentOf`.
 
-The OWL snippet below shows some parentage fact assertions on an individual. Note that rather than be-
-ing assertions to an anonymous individual via some class, we are giving an assertion to a named individual.
+The OWL snippet below shows some parentage fact assertions on an individual. Note that rather than being assertions to an anonymous individual via some class, we are giving an assertion to a named individual.
 
 ```
 Individual: grant_plinth
@@ -324,7 +322,7 @@ Facts: hasFather mr_plinth, hasMother mrs_plinth
 
 | Task 2: Create the ABox|
 |---|
-|1. Using the information in Table A.1 (see appendix) about parentage (so the columns about fathers and mothers), enter the fact assertions for the people which appear in rows shaded in grey. We will only use thehasMotherandhasFatherproperties in our fact assertions. You do not need to assert names and birth years yet. This exercise will require you to create an individual for every person we want to talk about, using the Firstname_Secondname_Familyname_Birthyear pattern, as for example in Robert_David_Bright_1965.|
+|1. Using the information in Table A.1 (see appendix) about parentage (so the columns about fathers and mothers), enter the fact assertions for the people which appear in rows shaded in grey. We will only use the `hasMother` and `hasFather` properties in our fact assertions. You do not need to assert names and birth years yet. This exercise will require you to create an individual for every person we want to talk about, using the `Firstname_Secondname_Familyname_Birthyear` pattern, as for example in `Robert_David_Bright_1965`.|
 
 ![camera](https://github.com/shawntanzk/obook/blob/FHKB-formatting/docs/images/FHKB%20figures/images/black_camera.png)
 ```
@@ -352,29 +350,26 @@ Now do the following:
 
 |Task 3: DL queries|
 |---|
-|1. Classify the FHKB. <br>2. Issue the DL queryhasFather value David_Bright_1934 and look at the answers (remember to check the respective checkbox in Protégé to include individuals in your query results). <br>3. Issue the DL queryisFatherOf value Robert_David_Bright_1965. Look at the answers. <br>4. Look at the entailed facts onRobert_David_Bright_1965.|
+|1. Classify the FHKB. <br>2. Issue the DL query `hasFather` value `David_Bright_1934` and look at the answers (remember to check the respective checkbox in Protégé to include individuals in your query results). <br>3. Issue the DL query `isFatherOf` value `Robert_David_Bright_1965`. Look at the answers. <br>4. Look at the entailed facts on `Robert_David_Bright_1965`.|
 
 You should find the following:
 
 - David Bright (1934) is the father of Robert David Bright (1965) and Richard John Bright (1962).
 - Robert David Bright (1965) has David Bright 1934 as a parent.
 
-Since we have said thatisFatherOfhas an inverse ofhasFather, and we have asserted thatRobert_David_Bright_ hasFather David_Bright_1934, we have a simple entailment thatDavid_Bright_1934 isFatherOf Robert_David_Bright_. So, without asserting theisFatherOffacts, we have been able to ask and get answers for that DL query.
+Since we have said that `isFatherOf` has an inverse of `hasFather`, and we have asserted that `Robert_David_Bright_1965 hasFather David_Bright_1934`, we have a simple entailment that `David_Bright_1934 isFatherOf Robert_David_Bright_1965`. So, without asserting theisFatherOffacts, we have been able to ask and get answers for that DL query.
 
-As we asserted thatRobert_David_Bright_1965 hasFather David_Bright_1934, we also infer that he hasParent David_Bright_1934; this is becausehasParentis the super-property ofhasFatherand the sub-property implies the super-property. This works all the way up the property tree untiltopObjectProperty, so all individuals are related bytopObjectProperty—this is always true. This implication ‘upwards’ is the way to interpret how the property hierarchies work.
+As we asserted that `Robert_David_Bright_1965 hasFather David_Bright_1934`, we also infer that he `hasParent` `David_Bright_1934`; this is because `hasParent` is the super-property of `hasFather` and the sub-property implies the super-property. This works all the way up the property tree until `topObjectProperty`, so all individuals are related by `topObjectProperty`—this is always true. This implication ‘upwards’ is the way to interpret how the property hierarchies work.
 
 
 ### 2.3 Summary
 
-We have now covered the basics of dealing with individuals in OWL ontologies. We have set up some
-properties, but without domains, ranges, appropriate characteristics and then arranged them in a hier-
-archy. From only a few assertions in our FHKB, we can already infer many facts about an individual:
-Simple exploitation of inverses of properties and super-properties of the asserted properties.
+We have now covered the basics of dealing with individuals in OWL ontologies. We have set up some properties, but without domains, ranges, appropriate characteristics and then arranged them in a hierarchy. From only a few assertions in our FHKB, we can already infer many facts about an individual: Simple exploitation of inverses of properties and super-properties of the asserted properties.
 
 We have also encountered some important principles:
 
 - We get inverses for free.
-- The sub-property implies the super-property. So,hasFatherimplies thehasParentfact between individuals. This entailment of the super-property is very important and will drive much of the inference we do with the FHKB.
+- The sub-property implies the super-property. So, `hasFather` implies the `hasParent` fact between individuals. This entailment of the super-property is very important and will drive much of the inference we do with the FHKB.
 - Upon reasoning we get the inverses of properties between named individuals for free.
 - Lots is still open. For example, we do not know the sex of individuals and what other children, other than those described, people in the FHKB may have.
 
@@ -406,43 +401,23 @@ In this Chapter you will:
 4. Place all of these new object properties in the property hierarchy and in that way learn more about
     the implications of the property hierarchy.
 
+![camera](https://github.com/shawntanzk/obook/blob/FHKB-formatting/docs/images/FHKB%20figures/images/black_camera.png)
 ```
 Find a snapshot of the ontology at this stage athttp://owl.cs.manchester.ac.
 uk/tutorials/fhkbtutorial.
 ```
+
 ## 3.1 Ancestors and Descendants
 
-The FHKB has parents established between individuals and we know that all people have two parents.
-A parent is an ancestor of its children; a person’s parent’s parents are its ancestors; and so on. So, in our
-FHKB, Robert’s ancestors are David, Margaret, William, Iris, Charles, Violet, James, another Violet,
-another William, Sarah and so on. If my parent’s parents are my ancestors, then what we need is a
-transitive version of thehasParentproperty. Obviously we do not wanthasParentto be transitive, as
-Robert’s grandparents (and so on) would become his parents (and that would be wrong).
+The FHKB has parents established between individuals and we know that all people have two parents. A parent is an ancestor of its children; a person’s parent’s parents are its ancestors; and so on. So, in our FHKB, Robert’s ancestors are David, Margaret, William, Iris, Charles, Violet, James, another Violet, another William, Sarah and so on. If my parent’s parents are my ancestors, then what we need is a transitive version of the `hasParent` property. Obviously we do not want `hasParent` to be transitive, as Robert’s grandparents (and so on) would become his parents (and that would be wrong).
 
-We can easily achieve what is necessary. We need ahasAncestorproperty that has a transitive charac-
-teristic. The trick is to make this a super-property of thehasParentproperty. As explained before, a
-sub-property implies its super-property. So, if individual _x_ holds ahasParentproperty with an individual
-_y_ , then it also holds an instance of its super-propertyhasAncestorwith the individual _y_. If individual _y_
-then holds ahasParentproperty with another individual _z_ , then there is also, by implication, ahasAnces-
-torproperty between _y_ and _z_. AshasAncestoris transitive, _x_ and _z_ also hold ahasAncestorrelationship
-between them.
+We can easily achieve what is necessary. We need a `hasAncestor` property that has a transitive characteristic. The trick is to make this a super-property of the `hasParent` property. As explained before, a sub-property implies its super-property. So, if individual _x_ holds ahasParentproperty with an individual _y_ , then it also holds an instance of its super-property `hasAncestor` with the individual _y_. If individual _y_ then holds a `hasParent` property with another individual _z_ , then there is also, by implication, a `hasAncestor` property between _y_ and _z_. As `hasAncestor` is transitive, _x_ and _z_ also hold a `hasAncestor` relationship between them.
 
+The inverse of `hasAncestor` can either be `isAncestorOf` or `hasDescendant`. We choose the `isAncestorOf` option.
 
-The inverse ofhasAncestorcan either beisAncestorOforhasDescendant. We choose theisAncestorOf
-option.
-
-```
-Task 4: Object properties: exploiting the semantics
-```
-1. Make a new object propertyhasRelation, make it symmetric.
-2. Make a new object propertyhasAncestor.
-3. Make it a sub-property ofhasRelationand a super-property ofhasParent.
-4. MakehasAncestortransitive.
-5. Create the inverseisAncestorOf. Do not ‘stitch’ it into the property hierarchy; the
-    reasoner will sort it all out for you.
-6. Run the reasoner and issue the DL query hasAncestor value
-    William_George_Bright_1901.
-7. Issue the queryisAncestorOf value Robert_David_Bright_1965.
+|Task 4: Object properties: exploiting the semantics|
+|---|
+|1. Make a new object property `hasRelation`, make it symmetric. <br>2. Make a new object property `hasAncestor`. <br>3. Make it a sub-property of `hasRelation` and a super-property of `hasParent`. <br>4. Make `hasAncestor` transitive. <br>5. Create the inverse `isAncestorOf`. Do not ‘stitch’ it into the property hierarchy; the reasoner will sort it all out for you. <br>6. Run the reasoner and issue the DL query `hasAncestor value William_George_Bright_1901`. <br>7. Issue the query `isAncestorOf value Robert_David_Bright_1965`.
 
 ThehasAncestorobject property will look like this:
 
@@ -453,13 +428,7 @@ SuperPropertyOf: hasParent,
 Characteristics: Transitive
 InverseOf: isAncestorOf
 ```
-As usual, it is best to think of the objects or individuals involved in the relationships. Consider the
-three individuals – Robert, David and William. Each has ahasFatherproperty, linking Robert to David
-and then David to William. AshasFatherimplies its super-propertyhasParent, Robert also has ahasPar-
-entproperty with David, and David has ahasParentrelation to William. Similarly, ashasParentimplies
-hasAncestor, the Robert object has ahasAncestorrelation to the David object and the David object has
-one to the William object. AshasAncestoris transitive, Robert not only holds this property to the David
-object, but also to the William object (and so on back through Robert’s ancestors).
+As usual, it is best to think of the objects or individuals involved in the relationships. Consider the three individuals – Robert, David and William. Each has a `hasFatherproperty`, linking Robert to David and then David to William. As `hasFatherimplies` its super-property `hasParent`, Robert also has a `hasParent` property with David, and David has a `hasParent` relation to William. Similarly, as `hasParent` implies `hasAncestor`, the Robert object has a `hasAncestor` relation to the David object and the David object has one to the William object. As `hasAncestor` is transitive, Robert not only holds this property to the David object, but also to the William object (and so on back through Robert’s ancestors).
 
 ### 3.2 Grandparents and Great Grandparents
 
@@ -467,7 +436,7 @@ We also want to use a sort of restricted transitivity in order to infer grandpar
 and so on. My grandparents are my parent’s parents; my grandfathers are my parent’s fathers. My great
 grandparents are my parent’s parent’s parents. My great grandmothers are my parent’s parent’s mothers.
 This is sort of like transitivity, but we want to make the paths only a certain length and, in the case of
-grandfathers, we want to move along two relationships –hasParentand thenhasFather.
+grandfathers, we want to move along two relationships – `hasParent` and then `hasFather`.
 
 We can do this with OWL 2’s sub-property chains. The way to think about sub-property chains is: If we
 see property _x_ followed by property _y_ linking three objects, then it implies that property _z_ is held between
