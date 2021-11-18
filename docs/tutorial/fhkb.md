@@ -35,10 +35,8 @@ robert.stevens@manchester.ac.uk
 ```
 The University of Manchester
 Copyright© The University of Manchester
+November 25, 2015
 ```
-
-#### November 25, 2015
-
 
 ### Acknowledgements
 
@@ -52,116 +50,96 @@ the Open University.
 The Stevens family—all my ancestors were necessary for this to happen. Also, for my Mum who gathered
 all the information.
 
-```
-i
-```
-
 # Contents
 
-```
-0.1 Licencing............................................. v
-```
-```
-0.2 Reporting Errors......................................... v
-```
-```
-0.3 Acknowledgements........................................ v
-```
-**Preamble 1**
+[**Preamble**](#preamble)
 
-**1 Introduction 1**
+- 0.1 Licencing
+- 0.2 Reporting Errors
+- 0.3 Acknowledgements
 
-```
-1.1 Learning Outcomes........................................ 1
-```
-```
-1.2 Why Family History?...................................... 2
-```
-```
-1.3 How to use this Tutorial..................................... 4
-```
-```
-1.4 FHKB Resources......................................... 4
-```
-```
-1.5 Conventions used in this Tutorial................................ 4
-```
-**2 Adding some Individuals to the FHKB 6**
+[**Introduction**](#introduction)
 
-```
-2.1 A World of Objects........................................ 6
-```
-```
-2.2 Asserting Parentage Facts.................................... 7
-```
-```
-2.3 Summary............................................. 10
-```
-**3 Ancestors and Descendants 11**
+- 1.1 Learning Outcomes
+- 1.2 Why Family History?
+- 1.3 How to use this Tutorial
+- 1.4 FHKB Resources
+- 1.5 Conventions used in this Tutorial
 
-```
-3.1 Ancestors and Descendants................................... 11
-```
-```
-3.2 Grandparents and Great Grandparents............................. 12
-```
-```
-3.3 Summary............................................. 14
-```
-```
-ii
-```
+[**Adding some Individuals to the FHKB**](#adding-some-individuals-to-the-fhkb)
 
-## iii
+- 2.1 A World of Objects
+- 2.2 Asserting Parentage Facts
+- 2.3 Summary
 
+[**Ancestors and Descendants**](#ancestors-and-descendants)
 
-- 4 Modelling the Person Class
-   - 4.1 The Class of Person
-   - 4.2 Describing Sex in the FHKB
-   - 4.3 Defining Man and Woman
-   - 4.4 Describing Parentage in the FHKB
-   - 4.5 Who has a father?
-   - 4.6 Filling in Domains and Ranges for the FHKB Properties
-   - 4.7 Inconsistencies
-   - 4.8 Adding Some Defined Classes for Ancestors and so on
-   - 4.9 Summary
-- 5 Siblings in the FHKB
-   - 5.1 Blood relations
-   - 5.2 Siblings: Option One
-      - 5.2.1 Brothers and Sisters
-   - 5.3 Siblings: Option two
-      - 5.3.1 Which Modelling Option to Choose for Siblings?
-   - 5.4 Half-Siblings
-   - 5.5 Aunts and Uncles
-   - 5.6 Summary
-- 6 Individuals in Class Expressions
-   - 6.1 Richard and Robert’s Parents and Ancestors
-   - 6.2 Closing Down What we Know About Parents and Siblings
-   - 6.3 Summary
-- 7 Data Properties in the FHKB
-   - 7.1 Adding Some Data Properties for Event Years
+- 3.1 Ancestors and Descendants
+- 3.2 Grandparents and Great Grandparents
+- 3.3 Summary
+
+[**Modelling the Person Class**](#modelling-the-person-class)
+
+- 4.1 The Class of Person
+- 4.2 Describing Sex in the FHKB
+- 4.3 Defining Man and Woman
+- 4.4 Describing Parentage in the FHKB
+- 4.5 Who has a father?
+- 4.6 Filling in Domains and Ranges for the FHKB Properties
+- 4.7 Inconsistencies
+- 4.8 Adding Some Defined Classes for Ancestors and so on
+- 4.9 Summary
+
+[**Siblings in the FHKB**](#siblings-in-the-fhkb)
+
+- 5.1 Blood relations
+- 5.2 Siblings: Option One   
+     - 5.2.1 Brothers and Sisters
+- 5.3 Siblings: Option two   
+     - 5.3.1 Which Modelling Option to Choose for Siblings?
+- 5.4 Half-Siblings
+- 5.5 Aunts and Uncles 
+- 5.6 Summary
+
+[**Individuals in Class Expressions**](#individuals-in-class-expressions)
+
+- 6.1 Richard and Robert’s Parents and Ancestors
+- 6.2 Closing Down What we Know About Parents and Siblings
+- 6.3 Summary
+
+[**Data Properties in the FHKB**](#data-properties-in-the-fhkb)
+   
+- 7.1 Adding Some Data Properties for Event Years
       - 7.1.1 Counting Numbers of Children
-   - 7.2 The Open World Assumption
-   - 7.3 Adding Given and Family Names
-   - 7.4 Summary
-- 8 Cousins in the FHKB
-   - 8.1 Introducing Cousins
-   - 8.2 First Cousins
-   - 8.3 Other Degrees and Removes of Cousin
-   - 8.4 Doing First Cousins Properly
-   - 8.5 Summary
-- 9 Marriage in the FHKB
-   - 9.1 Marriage
+- 7.2 The Open World Assumption
+- 7.3 Adding Given and Family Names
+- 7.4 Summary
+
+[**Cousins in the FHKB**](#cousins-in-the-fhkb)
+   
+- 8.1 Introducing Cousins
+- 8.2 First Cousins
+- 8.3 Other Degrees and Removes of Cousin
+- 8.4 Doing First Cousins Properly
+- 8.5 Summary
+
+[**9 Marriage in the FHKB**](#marriage-in-the-fhkb)
+  
+- 9.1 Marriage
       - 9.1.1 Spouses
-   - 9.2 In-Laws
-   - 9.3 Brothers and Sisters In-Law
-   - 9.4 Aunts and Uncles in-Law
-   - 9.5 Summary
-- 10 Extending the TBox
-   - 10.1 Adding Defined Classes
-   - 10.2 Summary
-- 11 Final remarks
-- A FHKB Family Data
+- 9.2 In-Laws
+- 9.3 Brothers and Sisters In-Law
+- 9.4 Aunts and Uncles in-Law
+- 9.5 Summary
+
+[**10 Extending the TBox**](#extending-the-tbox)
+  
+- 10.1 Adding Defined Classes
+- 10.2 Summary
+
+[**11 Final remarks**](#final-remarks)
+
+[**A FHKB Family Data**](#fhkb-family-data)
 
 
 # Preamble
@@ -341,9 +319,7 @@ The following resources are available athttp://owl.cs.manchester.ac.uk/tutorials
 
 ## Chapter 2
 
-# Adding some Individuals to the
-
-# FHKB
+# Adding some Individuals to the FHKB
 
 In this chapter we will start by creating a fresh OWL ontology and adding some individuals that will be
 surrogates for people in the FHKB. In particular you will:
