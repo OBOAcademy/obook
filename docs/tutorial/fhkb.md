@@ -286,7 +286,7 @@ surrogates for people in the FHKB. In particular you will:
 
 ### 2.1 A World of Objects
 
-The ‘world’<sup>1</sup> or field of interest we model in an ontology is made up of objects or individuals. Such objects include, but are not limited to:
+The ‘world’<sup>2</sup> or field of interest we model in an ontology is made up of objects or individuals. Such objects include, but are not limited to:
 
 - People, their pets, the pizzas they eat;
 - The processes of cooking pizzas, living, running, jumping, undertaking a journey;
@@ -432,11 +432,7 @@ As usual, it is best to think of the objects or individuals involved in the rela
 
 ### 3.2 Grandparents and Great Grandparents
 
-We also want to use a sort of restricted transitivity in order to infer grandparents, great grandparents
-and so on. My grandparents are my parent’s parents; my grandfathers are my parent’s fathers. My great
-grandparents are my parent’s parent’s parents. My great grandmothers are my parent’s parent’s mothers.
-This is sort of like transitivity, but we want to make the paths only a certain length and, in the case of
-grandfathers, we want to move along two relationships – `hasParent` and then `hasFather`.
+We also want to use a sort of restricted transitivity in order to infer grandparents, great grandparents and so on. My grandparents are my parent’s parents; my grandfathers are my parent’s fathers. My great grandparents are my parent’s parent’s parents. My great grandmothers are my parent’s parent’s mothers. This is sort of like transitivity, but we want to make the paths only a certain length and, in the case of grandfathers, we want to move along two relationships – `hasParent` and then `hasFather`.
 
 We can do this with OWL 2’s sub-property chains. The way to think about sub-property chains is: If we
 see property _x_ followed by property _y_ linking three objects, then it implies that property _z_ is held between
@@ -608,13 +604,7 @@ DisjointWith: Sex
 ```
 ### 4.3 Defining Man and Woman
 
-We now have some of the foundations for the FHKB. We have the concept of `Person`, but we also need
-to have the concepts of `Man` and `Woman`. Now we have `Person`, together with `Maleness` and `Femaleness`,
-we have the necessary components to define `Man` and `Woman`. These two classes can be defined as: Any
-`Person` object that has a male sex can be recognised to be a man; anyPersonobject that has a female sex
-can be recognised as a member of the class woman. Again, think about what conditions are _sufficient_
-for an object to be _recognised_ to be a member of a class; this is how we create defined classes through
-the use of OWL equivalence axioms.
+We now have some of the foundations for the FHKB. We have the concept of `Person`, but we also need to have the concepts of `Man` and `Woman`. Now we have `Person`, together with `Maleness` and `Femaleness`, we have the necessary components to define `Man` and `Woman`. These two classes can be defined as: Any `Person` object that has a male sex can be recognised to be a man; anyPersonobject that has a female sex can be recognised as a member of the class woman. Again, think about what conditions are _sufficient_ for an object to be _recognised_ to be a member of a class; this is how we create defined classes through the use of OWL equivalence axioms.
 
 To make the `Man` and `Woman` classes do the following:
 
@@ -640,10 +630,7 @@ EquivalentTo: Person and (hasSex some Femaleness)
 ```
 ### 4.4 Describing Parentage in the FHKB
 
-To finish off the foundations of the FHKB we need to describe a person object’s parentage. We know that
-each and every person has one mother and each and every person has one father. Here we are talking
-about biological mothers and fathers. The complexities of adoption and step parents are outside the
-scope of this FHKB tutorial.
+To finish off the foundations of the FHKB we need to describe a person object’s parentage. We know that each and every person has one mother and each and every person has one father. Here we are talking about biological mothers and fathers. The complexities of adoption and step parents are outside the scope of this FHKB tutorial.
 
 |Task 9: Describing Parentage|
 |---|
@@ -706,9 +693,7 @@ In order to remove as many assertions as possible, we may therefore choose to as
 
 ### 4.7 Inconsistencies
 
-From the Pizza Tutorial and other work with OWL you should have seen some _unsatisfiabilities_. In
-Protégé this is highlighted by classes going ‘red’ and being subclasses ofNothing; that is, they can have
-no instances in that model.
+From the Pizza Tutorial and other work with OWL you should have seen some _unsatisfiabilities_. In Protégé this is highlighted by classes going ‘red’ and being subclasses ofNothing; that is, they can have no instances in that model.
 
 |Task 13: Inconsistencies|
 |--|
@@ -783,9 +768,9 @@ machine by HermiT 1.3.8 is approximately 0.884 sec (0.00047 % of final), by Pell
 sec (0.000 % of final). 0 sec indicates failure or timeout.
 ```
 
-## Chapter 5
+# Chapter 5
 
-# Siblings in the FHKB
+## Siblings in the FHKB
 
 In this chapter you will:
 
@@ -795,6 +780,8 @@ In this chapter you will:
 4. Add facts for siblings;
 5. Use sub-property chains to find aunts and uncles;
 
+![camera](../images/FHKB%20figures/images/black_camera.png)
+
 ```
 There is a snapshot of the ontology as required at this point in the tutorial available
 athttp://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial.
@@ -803,30 +790,15 @@ athttp://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial.
 
 Do the following first:
 
-```
-Task 16: The bloodrelation object property
-```
-1. Create anhasBloodrelationobject property, making it a sub-property of hasRelation.
-2. Add appropriate property characteristics.
-3. Make the already existinghasAncestorproperty a sub-property ofhasBloodrelation.
+|Task 16: The bloodrelation object property|
+|---|
+|1. Create an `hasBloodrelation` object property, making it a sub-property of `hasRelation`. <br>2. Add appropriate property characteristics. <br>3. Make the already existing `hasAncestor` property a sub-property of `hasBloodrelation`.|
 
-Does a blood relation of Robert have the same relationship to Robert (symmetry)? Is a blood relation
-of Robert’s blood relation a blood relation of Robert (transitivity)? Think of an aunt by marriage; her
-
-
-**Figure 5.1:** Showing the symmetry and transitivity of thehasSibling(siblingof) property by looking at the
-brothers David, John and Peter
-
-children are my cousins and blood relations via my uncle, but my aunt is not my blood relation. My
-siblings share parents; male siblings are brothers and female siblings are sisters. So far we have asserted
-parentage facts for thePersonin our ABox. Remember that our parentage properties have inverses, so
-if we have added anhasFatherproperty between aPersonand aMan, we infer theisFatherOfproperty
-between thatManand thatPerson.
+Does a blood relation of Robert have the same relationship to Robert (symmetry)? Is a blood relation of Robert’s blood relation a blood relation of Robert (transitivity)? Think of an aunt by marriage; her children are my cousins and blood relations via my uncle, but my aunt is not my blood relation. My siblings share parents; male siblings are brothers and female siblings are sisters. So far we have asserted parentage facts for the `Person` in our ABox. Remember that our parentage properties have inverses, so if we have added an `hasFather` property between a `Person` and a `Man`, we infer the `isFatherOf` property between that `Man` and that `Person`.
 
 ### 5.2 Siblings: Option One
 
-We should have enough information within the FHKB to infer siblings. We could use a sub-property
-chain such as:
+We should have enough information within the FHKB to infer siblings. We could use a sub-property chain such as:
 
 ```
 ObjectProperty: hasSibling
@@ -834,89 +806,59 @@ SubPropertyOf: hasBloodrelation
 Characteristics: Symmetric, transitive
 SubPropertyChain: hasParent o isParentOf
 ```
-We make a property ofhasSiblingand make it a sub-property ofhasBloodrelation. Remember, think
-of the objects involved and the implications we want to follow; being a sibling implies being a blood
-relation, it does not imply any of the other relationships we have in the FHKB.
+We make a property of `hasSibling` and make it a sub-property of `hasBloodrelation`. Remember, think of the objects involved and the implications we want to follow; being a sibling implies being a blood relation, it does not imply any of the other relationships we have in the FHKB.
 
-Note that we have madehasSiblingsymmetric; if Robert is sibling of Richard, then Richard is sibling
-of Robert. We should also think about transitivity; if David is sibling of Peter and Peter is sibling of
-John, then David is sibling of John. So, we makehasSiblingsymmetric and transitive (see Figure 5.1).
-However, we must take care of half-siblings: child 1 and child 2 share a mother, but not a father; child 2
-and child 3 share the father, but not the mother – child 1 and child 3 are not even half-siblings. However,
-at least for the moment, we will simply ignore this inconvenience, largely so that we can explore what
-happens with different modelling options.
+Note that we have made `hasSibling` symmetric; if Robert is sibling of Richard, then Richard is sibling of Robert. We should also think about transitivity; if David is sibling of Peter and Peter is sibling of John, then David is sibling of John. So, we make `hasSibling` symmetric and transitive (see Figure 5.1). However, we must take care of half-siblings: child 1 and child 2 share a mother, but not a father; child 2 and child 3 share the father, but not the mother – child 1 and child 3 are not even half-siblings. However, at least for the moment, we will simply ignore this inconvenience, largely so that we can explore what happens with different modelling options.
+
+![dragon](../images/FHKB%20figures/dragon.png)
+
+![Figure 5.1](../images/FHKB%20figures/siblings.png)
+
+**Figure 5.1:** Showing the symmetry and transitivity of the `hasSibling` (siblingof) property by looking at the brothers David, John and Peter
 
 We also have the implication using three objects (see Figure 5.2):
 
-1. Robert holds ahasParentproperty with David;
+1. Robert holds a `hasParent` property with David;
+2. David holds an `isFatherOf` property with Richard;
+3. This implies that Robert holds a `hasSibling` property with Richard;
+4. As `hasSibling` is symmetric, Richard holds an `hasSibling` property with Robert.
 
+![Figure 5.2](../images/FHKB%20figures/sibling_path.png)
 
 **Figure 5.2:** Tracing out the sub-property chain forhasSibling; note that Robert is a sibling of himself by this
 path
 
-2. David holds anisFatherOfproperty with Richard;
-3. This implies that Robert holds ahasSiblingproperty with Richard;
-4. AshasSiblingis symmetric, Richard holds anhasSiblingproperty with Robert.
-
 Do the following tasks:
 
-```
-Task 17: Siblings
-```
-1. Add thehasSiblingproperty as above;
-2. Run the reasoner;
-3. Ask the DL queryhasSibling value Robert_David_Bright_1965.
+|Task 17: Siblings|
+|---|
+|1. Add the `hasSibling` property as above; <br>2. Run the reasoner; <br>3. Ask the DL query `hasSibling` value `Robert_David_Bright_1965`.|
 
-From this last DL query you should get the answer that both Robert and Richard are siblings of
-Robert.Think about the objects involved in the sub-property chain: we go from Robert to David via
-thehasParentand from David to Richard via theisParentOfproperty; so this is OK. However, we also go
-from Robert to David and then we can go from David back to Robert again – so Robert is a sibling of
-Robert. We do not want this to be true.
+From this last DL query you should get the answer that both Robert and Richard are siblings of Robert. Think about the objects involved in the sub-property chain: we go from Robert to David via the `hasParent` and from David to Richard via the `isParentOf` property; so this is OK. However, we also go from Robert to David and then we can go from David back to Robert again – so Robert is a sibling of Robert. We do not want this to be true.
 
-We can add another characteristic to thehasSiblingproperty, the one of beingirreflexive. This means
-that an object cannot hold the property with itself.
+![dragon](../images/FHKB%20figures/dragon.png)
 
-```
-Task 18: More siblings
-```
-1. Add the irreflexive characteristic to thehasSiblingproperty;
-2. Run the reasoner;
+We can add another characteristic to the `hasSibling` property, the one of being `irreflexive`. This means that an object cannot hold the property with itself.
 
-Note that the reasoner claims you have an _inconsistent_ ontology (or in some cases, you might get a
-message box saying "Reasoner died"). Looking at thehasSiblingproperty again, the reason might not be
-immediately obvious. The reason for the inconsistency lies in the fact that we create a logical contra-
+|Task 18: More siblings|
+|---|
+|1. Add the irreflexive characteristic to the `hasSibling` property; <br>2. Run the reasoner;|
 
+Note that the reasoner claims you have an _inconsistent_ ontology (or in some cases, you might get a message box saying "Reasoner died"). Looking at the `hasSibling` property again, the reason might not be immediately obvious. The reason for the inconsistency lies in the fact that we create a logical contradiction: through the property chain, we say that every `Person` is a sibling of him or herself, and again disallowing just that by adding the irreflexive characteristic. A different explanation lies within the OWL specification itself: In order to maintain decidability irreflexive properties must be simple - for example, they may not be property chains<sup>6</sup>.
 
-diction: through the property chain, we say that everyPersonis a sibling of him or herself, and again
-disallowing just that by adding the irreflexive characteristic. A different explanation lies within the OWL
-specification itself: In order to maintain decidability irreflexive properties must be simple - for example,
-they may not be property chains^1.
+![dragon](../images/FHKB%20figures/dragon.png)
+
+<sup>6</sup> [http://www.w3.org/TR/owl2-syntax/#The_Restrictions_on_the_Axiom_Closure](http://www.w3.org/TR/owl2-syntax/#The_Restrictions_on_the_Axiom_Closure)
 
 #### 5.2.1 Brothers and Sisters
 
-We have only done siblings, but we obviously need to account for brothers and sisters. In an analogous
-way to motherhood, fatherhood and parenthood, we can talk about sex specific sibling relationships
-implying the sex neutralhasSibling; holding either anhasBrotheror anisSisterOfbetween two objects
-would imply that ahasSiblingproperty is also held between those two objects. This means that we can
-place these two sex specific sibling properties belowhasSiblingwith ease. Note, however, that unlike the
-hasSiblingproperty, the brother and sister properties are not symmetric. RoberthasBrotherRichard and
-_vice versa_ , but if DaisyhasBrotherWilliam, we do not want William to hold anhasBrotherproperty with
-Daisy. Instead, we create an inverse ofhasBrother,isBrotherOf, and the do the same forisSisterOf.
+We have only done siblings, but we obviously need to account for brothers and sisters. In an analogous way to motherhood, fatherhood and parenthood, we can talk about sex specific sibling relationships implying the sex neutral `hasSibling`; holding either anhasBrotheror an `isSisterOf` between two objects would imply that a `hasSibling` property is also held between those two objects. This means that we can place these two sex specific sibling properties below `hasSibling` with ease. Note, however, that unlike the `hasSibling` property, the brother and sister properties are not symmetric. Robert `hasBrother` Richard and _vice versa_ , but if Daisy `hasBrother` William, we do not want William to hold an `hasBrother` property with Daisy. Instead, we create an inverse of `hasBrother`, `isBrotherOf`, and the do the same for `isSisterOf`.
 
-We use similar, object based, thought processes to choose whether to have transitivity as a characteristic
-ofhasBrother. Think of some sibling objects or individuals and placehasBrotherproperties between
-them. Make it transitive and see if you get the right answers. Put in a sister to and see if it stil works.
-If DavidhasBrotherPeter and PeterhasBrotherJohn, then DavidhasBrotherJohn; so, transitivity works
-in this case. Think of another example. DaisyhasBrotherFrederick, and FrederickhasBrotherWilliam,
-thus DaisyhasBrotherWilliam. The inverses work in the same way; WilliamisBrotherOfFrederick and
-FrederickisBrotherOfDaisy; thus WilliamisBrotherOfDaisy. All this seems reasonable.
+We use similar, object based, thought processes to choose whether to have transitivity as a characteristic of `hasBrother`. Think of some sibling objects or individuals and place `hasBrother` properties between them. Make it transitive and see if you get the right answers. Put in a sister to and see if it stil works. If David `hasBrother` Peter and Peter `hasBrother` John, then David `hasBrother` John; so, transitivity works in this case. Think of another example. Daisy `hasBrother` Frederick, and Frederick `hasBrother` William, thus Daisy `hasBrother` William. The inverses work in the same way; William `isBrotherOf` Frederick and Frederick `isBrotherOf` Daisy; thus William `isBrotherOf` Daisy. All this seems reasonable.
 
-```
-Task 19: Brothers and sisters
-```
-1. Create thehasBrotherobject property as shown below;
-2. AddhasSisterin a similar manner;
-3. Add appropriate inverses, domains and ranges.
+|Task 19: Brothers and sisters|
+|---|
+|1. Create the `hasBrother` object property as shown below; <br>2. Add `hasSister` in a similar manner; <br>3. Add appropriate inverses, domains and ranges.|
 
 ```
 ObjectProperty: hasBrother
@@ -925,33 +867,21 @@ Characteristics: Transitive
 InverseOf: isBrotherOf
 Range: Man
 ```
-We have somehasSiblingproperties (even if they are wrong). We also know the sex of many of the
-people in the FHKB through the domains and ranges of properties such ashasFather,hasMotherand
-their inverses..
+We have some `hasSibling` properties (even if they are wrong). We also know the sex of many of the people in the FHKB through the domains and ranges of properties such as `hasFather`, `hasMother` and their inverses..
 
-Can we use sub-property chains in the same way as we have used them in thehasSiblingproperty? The
-issue is that of sex; the propertyisFatherOfis sex neutral at the child end, as is the inversehasFather(the
-same obviously goes for the mother properties). We could use a sub-property chain of the form:
+Can we use sub-property chains in the same way as we have used them in the `hasSibling` property? The issue is that of sex; the property `isFatherOf` is sex neutral at the child end, as is the inverse `hasFather` (the same obviously goes for the mother properties). We could use a sub-property chain of the form:
 
-(^1) [http://www.w3.org/TR/owl2-syntax/#The_Restrictions_on_the_Axiom_Closure](http://www.w3.org/TR/owl2-syntax/#The_Restrictions_on_the_Axiom_Closure)
-
-
-```
-Figure 5.3: The property hierarchy forisChildOfand associated son/daughter properties
-```
 ```
 ObjectProperty: hasBrother
 SubPropertyChain: hasParent o hasSon
 ```
-A son is a male child and thus that object is a brother of his siblings. At the moment we do not
-have son or daughter properties. We can construct a property hierarchy as shown in Figure 5.3. This is
-made up from the following properties:
+A son is a male child and thus that object is a brother of his siblings. At the moment we do not have son or daughter properties. We can construct a property hierarchy as shown in Figure 5.3. This is made up from the following properties:
 
-- hasChildand isChildOf
-- hasSon(rangeManand domainPerson) and isSonOf;
-- hasDaughter(rangeWomandomainPerson) and isDaughterOf
+- `hasChild` and `isChildOf`
+- `hasSon`(range `Man` and domain `Person`) and `isSonOf`;
+- `hasDaughter`(range `Woman` domain `Person`) and `isDaughterOf`
 
-Note thathasChildis the equivalent of the existing propertyisParentOf; if I have a child, then I am its
+Note that `hasChild` is the equivalent of the existing property `isParentOf`; if I have a child, then I am its
 parent. OWL 2 can accommodate this fact. We can add an equivalent property axiom in the following
 way:
 
@@ -959,43 +889,39 @@ way:
 ObjectProperty: isChildOf
 EquivalentTo: hasParent
 ```
-We have no way of inferring theisSonOfandisDaughterOffrom what already exists. What we want
-to happen is the implication of ‘ManandhasParent PersonimpliesisSonOf’. OWL 2 and its reasoners
-cannot do this implication. It has been called the ‘man man problem’^2. Solutions for this have been
+We have no way of inferring the `isSonOf` and `isDaughterOf` from what already exists. What we want
+to happen is the implication of ‘`Man` and `hasParent` `Person` implies `isSonOf`’. OWL 2 and its reasoners
+cannot do this implication. It has been called the ‘man man problem’<sup>7</sup>. Solutions for this have been
 developed [3], but are not part of OWL 2 and its reasoners.
 
-(^2) [http://lists.w3.org/Archives/Public/public-owl-dev/2007JulSep/0177.html](http://lists.w3.org/Archives/Public/public-owl-dev/2007JulSep/0177.html)
+![Figure 5.3](../images/FHKB%20figures/new/childof_property.PNG)
 
+**Figure 5.3:** The property hierarchy forisChildOfand associated son/daughter properties
 
-```
-Table 5.1: Child property assertions for the FHKB
-```
-```
-Child property Parent
-Robert David Bright 1965 isSonOf David Bright 1934, Margaret Grace Rever 1934
-Richard John Bright 1962 isSonOf David Bright 1934, Margaret Grace Rever 1934
-Mark Bright 1956 isSonOf John Bright 1930, Joyce Gosport
-Ian Bright 1959 isSonOf John Bright 1930, Joyce Gosport
-Janet Bright 1964 isDaughterOf John Bright 1930, Joyce Gosport
-William Bright 1970 isSonOf John Bright 1930, Joyce Gosport
-```
+<sup>7</sup> [http://lists.w3.org/Archives/Public/public-owl-dev/2007JulSep/0177.html](http://lists.w3.org/Archives/Public/public-owl-dev/2007JulSep/0177.html)
+
+|Child|property|Parent|
+|---|---|---|
+|Robert David Bright 1965|isSonOf|David Bright 1934, Margaret Grace Rever 1934|
+|Richard John Bright 1962|isSonOf|David Bright 1934, Margaret Grace Rever 1934|
+|Mark Bright 1956|isSonOf|John Bright 1930, Joyce Gosport|
+|Ian Bright 1959|isSonOf|John Bright 1930, Joyce Gosport|
+|Janet Bright 1964|isDaughterOf|John Bright 1930, Joyce Gosport|
+|William Bright 1970|isSonOf|John Bright 1930, Joyce Gosport|
+
+**Table 5.1:** Child property assertions for the FHKB
+
 Thus we must resort to hand assertions of properties to test out our new path:
 
-```
-Task 20: Sons and daughters
-```
-1. Add the property hierarchy shown in Figure 5.3, together with the equivalent property
-    axiom and the obvious inverses.
-2. As a test (after running the reasoner), ask the DL query isChildOf value
-    David_Bright_1934 and you should have the answer of Richard and Robert;
-3. Add the sub-property paths as described in the text;
-4. Add the assertions shown in Table 5.1;
-5. Run the reasoner;
-6. Ask the DL query for the brother of Robert David Bright and the sister of Janet.
+|Task 20: Sons and daughters|
+|---|
+|1. Add the property hierarchy shown in Figure 5.3, together with the equivalent property axiom and the obvious inverses. <br>2. As a test (after running the reasoner), ask the DL query `isChildOf` value `David_Bright_1934` and you should have the answer of Richard and Robert; <br>3. Add the sub-property paths as described in the text; <br>4. Add the assertions shown in Table 5.1; <br>5. Run the reasoner; <br>6. Ask the DL query for the brother of Robert David Bright and the sister of Janet.|
 
 Of course, it works, but we see the same problem as above. As usual, think of the objects involved.
-RobertisSonOfDavid and DavidisParentOfRobert, so Robert is his own brother. Irreflexivity again
-causes problems as it does above (see page 30).
+Robert `isSonOf` David and David `isParentOf` Robert, so Robert is his own brother. Irreflexivity again
+causes problems as it does above (Task 18).
+
+![dragon](../images/FHKB%20figures/dragon.png)
 
 ### 5.3 Siblings: Option two
 
@@ -1006,77 +932,49 @@ more assertion while still trying to infer as much as possible. We will take the
 - We will take off the sub-property chains of the sibling properties as they do not work;
 - We will assert the leaf properties of the sibling sub-hierarchy sparsely and attempt to infer as much
     as possible.
+    
+|Person|Property|Person|
+|---|---|---|
+|Robert David Bright 1965|isBrotherOf|Richard John Bright 1962|
+|David Bright 1934|isBrotherOf|John Bright 1930|
+|David Bright 1934|isBrotherOf|Peter William Bright 1941|
+|Janet Bright 1964|isSisterOf|Mark Bright 1956|
+|Janet Bright 1964|isSisterOf|Ian Bright 1959|
+|Janet Bright 1964|isSisterOf|William Bright 1970|
+|Mark Bright 1956|isBrotherOf|Ian Bright 1959|
+|Mark Bright 1956|isBrotherOf|Janet Bright 1964|
+|Mark Bright 1956|isBrotherOf|William Bright 1970|
 
+**Table 5.2:** The sibling relationships to add to the FHKB.
 
-```
-Table 5.2: The sibling relationships to add to the FHKB.
-```
-```
-Person Property Person
-Robert David Bright 1965 isBrotherOf Richard John Bright 1962
-David Bright 1934 isBrotherOf John Bright 1930
-David Bright 1934 isBrotherOf Peter William Bright 1941
-Janet Bright 1964 isSisterOf Mark Bright 1956
-Janet Bright 1964 isSisterOf Ian Bright 1959
-Janet Bright 1964 isSisterOf William Bright 1970
-Mark Bright 1956 isBrotherOf Ian Bright 1959
-Mark Bright 1956 isBrotherOf Janet Bright 1964
-Mark Bright 1956 isBrotherOf William Bright 1970
-```
 Do the following:
 
-```
-Task 21: Add sibling assertions
-```
-1. Remove the sub-property chains of the sibling properties and theisChildOfassertions
-    as explained above.
-2. Add the Sibling assertions shown in table 5.2;
-3. Run the reasoner;
-4. AskisBrotherOf value Robert_David_Bright_1965;
-5. AskisBrotherOf value Richard_John_Bright_1962;
-6. AskhasBrother value Robert_David_Bright_1965;
-7. AskhasBrother value Richard_John_Bright_1962;
-8. AskisSisterOf value William_Bright_1970;
-9. Ask the queryMan and hasSibling value Robert_David_Bright_1965.
+|Task 21: Add sibling assertions|
+|---|
+|1. Remove the sub-property chains of the sibling properties and the `isChildOf` assertions as explained above. <br>2. Add the Sibling assertions shown in table 5.2; <br>3. Run the reasoner; <br>4. Ask `isBrotherOf` value `Robert_David_Bright_1965`; <br>5. Ask `isBrotherOf` value `Richard_John_Bright_1962`; <br>6. Ask `hasBrother` value `Robert_David_Bright_1965`; <br>7. Ask `hasBrother` value `Richard_John_Bright_1962`; <br>8. Ask `isSisterOf` value `William_Bright_1970`; <br>9. Ask the query `Man and hasSibling value Robert_David_Bright_1965`.|
 
 We can see some problems with this option as well:
 
-- With these properties asserted, Richard only has ahasBrotherproperty to Robert. We would really
-    like anisBrotherOfto Robert to hold.
-- The queryMan and hasSibling value Robertonly retrieves Robert himself. Because we only asserted
-    that Robert is a brother of Richard, and the domain ofisBrotherOfisManwe know that Robert is
-    aMan, but we do not know anything about theSexof Richard.
+- With these properties asserted, Richard only has a `hasBrother` property to Robert. We would really like an `isBrotherOf` to Robert to hold.
+- The query `Man` and `hasSibling value Robert` only retrieves Robert himself. Because we only asserted that Robert is a brother of Richard, and the domain of `isBrotherOf` is `Man` we know that Robert is a `Man`, but we do not know anything about the `Sex` of Richard.
 
 #### 5.3.1 Which Modelling Option to Choose for Siblings?
 
-Which of the two options gives the worse answers and which is the least effort? Option one is obviously
-the least effort; we only have to assert the same parentage facts as we already have; then the sub-property
-chains do the rest. It works OK forhasSibling, but we cannot do brothers and sisters adequately; we
+Which of the two options gives the worse answers and which is the least effort? Option one is obviously the least effort; we only have to assert the same parentage facts as we already have; then the sub-property chains do the rest. It works OK for `hasSibling`, but we cannot do brothers and sisters adequately; we need `Man` and `hasSibling` ⊐ `isBrotherOf` and we cannot do that implication. This means we cannot ask the questions we need to ask.
 
+![dragon](../images/FHKB%20figures/dragon.png)
 
-needManand hasSiblingAisBrotherOfand we cannot do that implication. This means we cannot ask the
-questions we need to ask.
+So, we do option two, even though it is hard work and is still not perfect for query answering, even though we have gone for a sparse assertion mode. Doing full sibling assertion would work, but is a lot of effort.
 
-So, we do option two, even though it is hard work and is still not perfect for query answering, even though
-we have gone for a sparse assertion mode. Doing full sibling assertion would work, but is a lot of effort.
-
-We could start again and use theisSonOfandisDaughterOfoption, with the sub-property chains described
-above. This still has the problem of everyone being their own sibling. It can get the sex specific sibling
-relationships, but requires a wholesale re-assertion of parentage facts. We will continue with option two,
-largely because it highlights some nice problems later on.
+We could start again and use theisSonOfandisDaughterOfoption, with the sub-property chains described above. This still has the problem of everyone being their own sibling. It can get the sex specific sibling relationships, but requires a wholesale re-assertion of parentage facts. We will continue with option two, largely because it highlights some nice problems later on.
 
 ### 5.4 Half-Siblings
 
-In Section 5.2 we briefly talked about half-siblings. So far, we have assumed full-siblings (or, rather,
-just talked about siblings and made no distinction). Ideally, we would like to accommodate distinctions
-between full- and half-siblings; here we use half-siblings, where only one parent is in common between
-two individuals, as the example. The short-answer is, unfortunately, that OWL 2 cannot deal with half-
-siblings in the way that we want - that is, such that we can infer properties between named individuals
-indicating full- or half-sibling relationships.
+In Section 5.2 we briefly talked about half-siblings. So far, we have assumed full-siblings (or, rather, just talked about siblings and made no distinction). Ideally, we would like to accommodate distinctions between full- and half-siblings; here we use half-siblings, where only one parent is in common between two individuals, as the example. The short-answer is, unfortunately, that OWL 2 cannot deal with half-siblings in the way that we want - that is, such that we can infer properties between named individualsindicating full- or half-sibling relationships.
 
-It is possible to find sets of half-brothers in the FHKB by writing a defined class or DL-query for a
-particular individual.} The following fragment of OWL defines a class that looks for the half-brothers of
-an individual called ‘Percival’:
+It is possible to find sets of half-brothers in the FHKB by writing a defined class or DL-query for a particular individual.} The following fragment of OWL defines a class that looks for the half-brothers of an individual called ‘Percival’:
+
+![dragon](../images/FHKB%20figures/dragon.png)
 
 ```
 Class: HalfBrotherOfPercival
@@ -1084,30 +982,16 @@ EquivalentTo: Man and (((hasFather some (not (isFatherOf value Percival))) and
 (hasMother some (isMotherOf value Percival))) or ((hasFather some (isFatherOf
 value Percival)) and (hasMother some (not (isMotherOf value Percival)))))
 ```
-Here we are asking for any man that either has Percival’s father but not his mother, or his mother, but
-not his father. This works fine, but is obviously not a general solution. The OWL description is quite
-complex and the writing will not scale as the number of options (hypothetically, as the number of parents
-increases... ) increases; it is fine for man/woman, but go any higher and it will become very tedious to
-write all the combinations.
+Here we are asking for any man that either has Percival’s father but not his mother, or his mother, but not his father. This works fine, but is obviously not a general solution. The OWL description is quite complex and the writing will not scale as the number of options (hypothetically, as the number of parents increases... ) increases; it is fine for man/woman, but go any higher and it will become very tedious to write all the combinations.
 
-Another way of doing this half-brother class to find the set of half-brothers of a individual is to use
-cardinality constraints:
+Another way of doing this half-brother class to find the set of half-brothers of a individual is to use cardinality constraints:
 
 ```
 Class: HalfBrotherOfPercival
 EquivalentTo: Man and (hasParent exactly 1 (isParentOf value Percival))
 ```
-This is more succinct. We are asking for a man that has exactly one parent from the class of individuals
-that are the class of Percival’s parents. This works, but one more constraint has to be present in the
-FHKB. We need to make sure that there can be only two parents (or indeed, just a specified number of
-parents for a person). If we leave it open as to the number of parents a person has, the reasoner cannot
-work out that there is a man that shares exactly one parent, as there may be other parents. We added
-this constraint to the FHKB in Section 6.2; try out the classes to check that they work.
+This is more succinct. We are asking for a man that has exactly one parent from the class of individuals that are the class of Percival’s parents. This works, but one more constraint has to be present in the FHKB. We need to make sure that there can be only two parents (or indeed, just a specified number of parents for a person). If we leave it open as to the number of parents a person has, the reasoner cannot work out that there is a man that shares exactly one parent, as there may be other parents. We added this constraint to the FHKB in Section 6.2; try out the classes to check that they work.
 
-
-```
-Figure 5.4: Tracing out the path between objects to get thehasUnclesub-property chain.
-```
 These two solutions have been about finding sets of half-brothers for an individual. What we really want
 in the FHKB is to find half-brothers between any given pair of individuals.
 
@@ -1116,11 +1000,7 @@ count the number of routes taken between siblings via different distinct interme
 
 ### 5.5 Aunts and Uncles
 
-An uncle is a brother of either my mother or father. An aunt is a sister of either my mother or father.
-In common practice, wives and husbands of aunts and uncles are usually uncles and aunts respectively.
-Formally, these aunts and uncles are aunts-in-law and uncles-in-law. Whatever approach we take, we
-cannot fully account for aunts and uncles until we have information about marriages, which will not have
-until Chapter 9. We will, however, do the first part now.
+An uncle is a brother of either my mother or father. An aunt is a sister of either my mother or father. In common practice, wives and husbands of aunts and uncles are usually uncles and aunts respectively. Formally, these aunts and uncles are aunts-in-law and uncles-in-law. Whatever approach we take, we cannot fully account for aunts and uncles until we have information about marriages, which will not have until Chapter 9. We will, however, do the first part now.
 
 Look at the objects and properties between them for the following facts:
 
@@ -1129,8 +1009,7 @@ Look at the objects and properties between them for the following facts:
 - Margaret has a sister Eileen;
 - Robert thus has the uncles John and Peter and an aunt Eileen.
 
-As we are tracing paths or ‘chains’ of objects and properties we should use sub-property chains as a
-solution for the aunts and uncles. We can make anhasUncleproperty as follows (see Figure 5.4):
+As we are tracing paths or ‘chains’ of objects and properties we should use sub-property chains as a solution for the aunts and uncles. We can make an `hasUncle` property as follows (see Figure 5.4):
 
 ```
 ObjectProperty: hasUncle
@@ -1140,53 +1019,34 @@ Range: Person
 SubPropertyChain: hasParent o hasBrother
 InverseOf: isUncleOf
 ```
-Notice we have the domain ofManand range ofPerson. We also have an inverse. As usual, we can read
-this as ‘an object that holds anhasParentproperty, followed by an object holding ahasBrotherproperty,
-implies that the first object holds anhasUncleproperty with the last object’.
+![Figure 5.4](../images/FHKB%20figures/uncle.png)
 
+**Figure 5.4:** Tracing out the path between objects to get thehasUnclesub-property chain.
+
+Notice we have the domain of `Man` and range of `Person`. We also have an inverse. As usual, we can read this as ‘an object that holds an `hasParent` property, followed by an object holding a `hasBrother` property, implies that the first object holds an `hasUncle` property with the last object’.
+
+Note also where the properties (include the ones for aunt) go in the object property hierarchy. Aunts and uncles are not ancestors that are in the direct blood line of a person, but they are blood relations (in the narrower definition that we are using). Thus the aunt and uncle properties go under the `hasBloodrelation` property (see Figure 5.5). Again, think of the implications between objects holding a property between them; that two objects linked by a property implies that those two objects also hold all the property’s super-properties as well. As long as all the super-properties are true, the place in the object property hierarchy is correct (think about the implications going up, rather than down).
+
+![Figure 5.5](../images/FHKB%20figures/new/prop_uncle.PNG)
 
 **Figure 5.5:** The object property hierarchy with the aunt and uncle properties included. On the right side, we
 can see the hasUncle property as shown by Protégé.
 
-Note also where the properties (include the ones for aunt) go in the object property hierarchy. Aunts and
-uncles are not ancestors that are in the direct blood line of a person, but they are blood relations (in the
-narrower definition that we are using). Thus the aunt and uncle properties go under thehasBloodrelation
-property (see Figure 5.5). Again, think of the implications between objects holding a property between
-them; that two objects linked by a property implies that those two objects also hold all the property’s
-super-properties as well. As long as all the super-properties are true, the place in the object property
-hierarchy is correct (think about the implications going up, rather than down).
-
 Do the following tasks:
 
-```
-Task 22: Uncles and Aunts
-```
-1. Add thehasUncleproperty as above;
-2. Add thehasAuntproperty as well;
-3. Ask for the uncles ofJulie_Bright_1966and forMark_Bright_1956;
-4. Add similar properties forhasGreatUncleandhasGreatAuntand place them in the
-    property hierarchy.
+|Task 22: Uncles and Aunts|
+|---|
+|1. Add thehasUncleproperty as above; <br>2. Add thehasAuntproperty as well; <br>3. Ask for the uncles of `Julie_Bright_1966` and for `Mark_Bright_1956`; <br>4. Add similar properties for `hasGreatUncle` and `hasGreatAunt` and place them in the property hierarchy.|
 
-We can see this works – unless we have any gaps in the sibling relationships (you may have to fix these).
-Great aunts and uncles are simply a matter of adding another ‘parent’ leg into the sub-property chain.
-We are not really learning anything new with aunts and uncles, except that we keep gaining a lot for
+We can see this works – unless we have any gaps in the sibling relationships (you may have to fix these). Great aunts and uncles are simply a matter of adding another ‘parent’ leg into the sub-property chain. We are not really learning anything new with aunts and uncles, except that we keep gaining a lot for
 
+free through sub-property chains. We just add a new property with its sub-property chain and we get a whole lot more inferences on individuals. To see what we now know about Robert David Bright, do the following:
 
-free through sub-property chains. We just add a new property with its sub-property chain and we get a
-whole lot more inferences on individuals. To see what we now know about Robert David Bright, do the
-following:
+|Task 23: What do we know?|
+|---|
+|1. Save the ontology and run the reasoner; <br>2. Look at inferences related to the individual Robert David Bright (see warning in thebeginning of this chapter). <br>3. If you chose to use DL queries in Protégé, do not forget to tick the appropriate check-boxes.|
 
-```
-Task 23: What do we know?
-```
-1. Save the ontology and run the reasoner;
-2. Look at inferences related to the individual Robert David Bright (see warning in the
-    beginning of this chapter).
-3. If you chose to use DL queries in Protégé, do not forget to tick the appropriate check-
-    boxes.
-
-You can now see lots of facts about Robert David Bright, with only a very few actual assertions directly
-on Robert David Bright.
+You can now see lots of facts about Robert David Bright, with only a very few actual assertions directly on Robert David Bright.
 
 ### 5.6 Summary
 
@@ -1194,16 +1054,19 @@ Siblings have revealed several things for us:
 
 - We can use just the parentage facts to find siblings, but everyone ends up being their own sibling;
 - We cannot make the properties irreflexive, as the knowledge base becomes inconsistent;
-- We would like an implication ofManandhasSibling⊃isBrotherOf, but OWL 2 doesn’t do this
-    implication;
+- We would like an implication of `Man` and `hasSibling` ⊃ `isBrotherOf`, but OWL 2 doesn’t do this implication;
 - Whatever way we model siblings, we end up with a bit of a mess;
 - OWL 2 cannot do half-siblings;
-- However, we can get close enough and we can start inferring lots of facts via sub-property chains
-    using the sibling relationships.
+- However, we can get close enough and we can start inferring lots of facts via sub-property chains using the sibling relationships.
+
+<img src="../images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
 
 ```
 The FHKB ontology at this stage of the tutorial has an expressivity ofSRIF.
 ```
+
+<img src="../images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
+
 ```
 The time to reason with the FHKB at this point (in Protégé) on a typical desktop
 machine by HermiT 1.3.8 is approximately 1355.614 sec (0.71682 % of final), by
@@ -1211,9 +1074,9 @@ Pellet 2.2.0 0.206 sec (0.00167 % of final) and by FaCT++ 1.6.4 is approximately
 0.039 sec (0.001 % of final). 0 sec indicates failure or timeout.
 ```
 
-## Chapter 6
+# Chapter 6
 
-# Individuals in Class Expressions
+## Individuals in Class Expressions
 
 In this chapter you will:
 
@@ -1222,104 +1085,53 @@ In this chapter you will:
 3. Explore equivalence of such classes;
 4. Re-visit the closed world.
 
+![camera](../images/FHKB%20figures/images/black_camera.png)
+
 ```
 There is a snapshot of the ontology as required at this point in the tutorial available
 athttp://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial.
 ```
 ### 6.1 Richard and Robert’s Parents and Ancestors
 
-So far we have only used object properties between unspecified objects. We can, however, specify a
-specific individual to act at the right-hand-side of a class restriction or type assertion on an individual.
-The basic syntax for so-called _nominals_ is:
+So far we have only used object properties between unspecified objects. We can, however, specify a specific individual to act at the right-hand-side of a class restriction or type assertion on an individual. The basic syntax for so-called _nominals_ is:
 
 ```
 Class: ParentOfRobert
 EquivalentTo: Person and isParentOf valueRobert_David_Bright_1965
 ```
-This is an equivalence axiom that recognises any individual that is aPersonand a parent of Robert
+This is an equivalence axiom that recognises any individual that is aPersonand a parent of Robert David Bright.
 
+|Task 24: Robert and Richards parents|
+|---|
+|1. Create the class `ParentOfRobert` as described above; <br> 2. Classify – inspect where the class is placed in the FHKB TBox and look at which individuals classify as members of the class; <br>3. Do the same for a class with the value of `Richard_John_Bright_1962` and classify; <br>4. Finally create a class `ParentOfRichardAndRobert`, defining it as `Person and isParentOf some {Robert_David_Bright_1965 ,Richard_John_Bright_1962 }`; again see what happens on classification. Note that the expressions `isMotherOf value Robert_David_Bright_1965` and `isMotherOf some {Robert_David_Bright_1965 }` are practically identical. The only difference is that using `value`, you can only specify one individual, while `some` relates to a class (a set of individuals).|
 
-David Bright.
-
-```
-Task 24: Robert and Richards parents
-```
-1. Create the classParentOfRobertas described above;
-2. Classify – inspect where the class is placed in the FHKB TBox and look at which
-    individuals classify as members of the class;
-3. Do the same for a class with the value ofRichard_John_Bright_1962 and classify;
-4. Finally create a class ParentOfRichardAndRobert, defining it as Person and is-
-    ParentOf some {Robert_David_Bright_1965 ,Richard_John_Bright_1962 }; again see
-    what happens on classification. Note that the expressions isMotherOf value
-    Robert_David_Bright_1965 andisMotherOf some {Robert_David_Bright_1965 }
-    are practically identical. The only difference is that usingvalue, you can only specify
-    one individual, whilesomerelates to a class (a set of individuals).
-
-We see that these queries work and that we can create more complex nominal based class expressions.
-The disjunction above is
-
+We see that these queries work and that we can create more complex nominal based class expressions. The disjunction above is
 ```
 isParentOf some {Robert_David_Bright_1965, Richard_John_Bright_1965}
 ```
 The ‘{’ and ‘}’ are a bit of syntax that says ‘here’s a class of individual’.
 
-We also see that the classes for the parents of Robert David Bright and Richard John Bright have the
-same members according to the FHKB, but that the two classes are not inferred to be equivalent. Our
-domain knowledge indicates the two classes have the same extents (members) and thus the classes are
-equivalent, but the automated reasoner does not make this inference. As usual, this is because the FHKB
-has not given the automated reasoner enough information to make such an inference.
+We also see that the classes for the parents of Robert David Bright and Richard John Bright have the same members according to the FHKB, but that the two classes are not inferred to be equivalent. Our domain knowledge indicates the two classes have the same extents (members) and thus the classes are equivalent, but the automated reasoner does not make this inference. As usual, this is because the FHKB has not given the automated reasoner enough information to make such an inference.
 
 ### 6.2 Closing Down What we Know About Parents and Siblings
 
-The classes describing the parents of Richard and Robert are not equivalent, even though, as humans,
-we know their classes of parent are the same. We need more constraints so that it is known that the four
-parents are the only ones that exist. We can try this by closing down what we know about the immediate
-family of Robert David Bright.
+The classes describing the parents of Richard and Robert are not equivalent, even though, as humans, we know their classes of parent are the same. We need more constraints so that it is known that the four parents are the only ones that exist. We can try this by closing down what we know about the immediate family of Robert David Bright.
 
-In Chapter 4 we described that aPersonhas exactly oneWomanand exactly oneManas mother and
-father (by saying that thehasMotherandhasFatherproperties are functional and thus only one of each
-may be held by any one individual to distinct individuals). The parent properties are defined in terms
-ofhasParent,hasMotherandhasFather. The latter two implyhasParent. The two sub-properties are
-functional, but there are no constraints onhasParent, so an individual can hold many instances of this
-property. So, there is no information in the FHKB to say aPersonhas only two parents (we say there is
-one mother and one father, but not that there are only two parents). Thus Robert and Richard could have
-other parents and other grandparents than those in the FHKB; we have to close down our descriptions
-
-
-so that only two parents are possible. There are two ways of doing this:
+In Chapter 4 we described that a `Person` has exactly one `Woman` and exactly one `Man` as mother and father (by saying that the `hasMother` and `hasFather` properties are functional and thus only one of each may be held by any one individual to distinct individuals). The parent properties are defined in terms of `hasParent`, `hasMother` and `hasFather`. The latter two imply `hasParent`. The two sub-properties are functional, but there are no constraints on `hasParent`, so an individual can hold many instances of this property. So, there is no information in the FHKB to say a `Person` has only two parents (we say there is one mother and one father, but not that there are only two parents). Thus Robert and Richard could have other parents and other grandparents than those in the FHKB; we have to close down our descriptions so that only two parents are possible. There are two ways of doing this:
 
 1. Using qualified cardinality constraints in a class restriction;
-2. Putting a covering axiom onhasParentin the same way as we did forSexin Chapter 4.
+2. Putting a covering axiom on `hasParent` in the same way as we did for `Sex` in Chapter 4.
 
-```
-Task 25: Closing the Person class
-```
-1. Add the restrictionhasParent exactly 2 Personto the classPerson;
-2. Run the reasoner;
-3. Inspect the hierarchy to see whereParentOfRobertandParentOfRichardare placed and
-    whether or not they are found to be equivalent;
-4. Now add the restrictionhasParent max 2 Personto the classPerson;
-5. Run the reasoner (taking note of how long the reasoning takes) and take another look.
+|Task 25: Closing the Person class|
+|---|
+|1. Add the restriction `hasParent` exactly 2 Personto the classPerson; <br>2. Run the reasoner; <br>3. Inspect the hierarchy to see where `ParentOfRobert` and `ParentOfRichard` are placed and whether or not they are found to be equivalent; <br>4. Now add the restriction `hasParent max 2 Person` to the class `Person`; <br>5. Run the reasoner (taking note of how long the reasoning takes) and take another look.|
 
-We find that these two classes are equivalent; we have supplied enough information to infer that these
-two classes are equivalent. So, we know that option one above works, but what about option two? This
-takes a bit of care to think through, but the basic thing is to think about how many ways there are to
-have ahasParentrelationship between two individuals. We know that we can have either ahasFather
-or ahasMotherproperty between two individuals; we also know that we can have only one of each of
-these properties between an individual and a distinct individual. However, the open world assumption
-tells us that there may be other ways of having ahasParentproperty between two individuals; we’ve not
-closed the possibilities. By putting on thehasParent exactly 2 Personrestriction on thePersonclass, we
-are effectively closing down the options for ways that a person can have parents; we know because of the
-functional characteristic onhasMotherandhasFatherthat we can have only one of each of these and the
-two restrictions say that one of each must exist. So, we know we have two ways of having a parent on
-eachPersonindividual. So, when we say that there are exactly two parents (no more and no less) we
-have closed down the world of having parents—thus these two classes can be inferred to be equivalent.
-It is also worth noting that this extra axiom on thePersonclass will make the reasoner run much more
-slowly.
+![dragon](../images/FHKB%20figures/dragon.png)
+
+We find that these two classes are equivalent; we have supplied enough information to infer that these two classes are equivalent. So, we know that option one above works, but what about option two? This takes a bit of care to think through, but the basic thing is to think about how many ways there are to have a `hasParent` relationship between two individuals. We know that we can have either a `hasFather` or a `hasMother` property between two individuals; we also know that we can have only one of each of these properties between an individual and a distinct individual. However, the open world assumption tells us that there may be other ways of having ahasParentproperty between two individuals; we’ve not closed the possibilities. By putting on the `hasParent exactly 2 Person` restriction on the `Person` class, we are effectively closing down the options for ways that a person can have parents; we know because of the functional characteristic on `hasMother` and `hasFather` that we can have only one of each of these and the two restrictions say that one of each must exist. So, we know we have two ways of having a parent on each `Person` individual. So, when we say that there are exactly two parents (no more and no less) we have closed down the world of having parents—thus these two classes can be inferred to be equivalent. It is also worth noting that this extra axiom on the `Person` class will make the reasoner run much more slowly.
 
 Finally, for option 2, we have no way of placing a covering axiom on a property. What we’d like to be
 able to state is something like:
-
 ```
 ObjectProperty: hasParent
 EquivalentTo: hasFather or hasMother
@@ -1331,32 +1143,31 @@ but we can’t.
 
 For practice, do the following:
 
-```
-Task 26: Additional Practice
-```
-1. Add lots more classes using members of the ABox as nominals;
-2. Make complex expressions using nominals;
-3. After each addition of a nominal, classify and see what has been inferred within the
-    FHKB.
-4. See if you can make classes forGrandparentOfRobertandGrandparentOfRichardand
-    make them inferred to be equivalent.
+|Task 26: Additional Practice|
+|---|
+|1. Add lots more classes using members of the ABox as nominals; <br>2. Make complex expressions using nominals; <br>3. After each addition of a nominal, classify and see what has been inferred within the FHKB. <br>4. See if you can make classes for `GrandparentOfRobert` and `GrandparentOfRichard` and make them inferred to be equivalent.|
 
-In this chapter we have seen the use of individuals within class expressions. It allows us to make useful
-queries and class definitions. The main things to note is that it can be done and that there is some syntax
-involved. More importantly, some inferences may not be as expected due to the open world assumption
-in OWL.
+In this chapter we have seen the use of individuals within class expressions. It allows us to make useful queries and class definitions. The main things to note is that it can be done and that there is some syntax involved. More importantly, some inferences may not be as expected due to the open world assumption in OWL.
+
+![dragon](../images/FHKB%20figures/dragon.png)
 
 ```
 By now you might have noticed a significant increase in the time the reasoner needs
 to classify. Closing down what we know about family relationships takes its toll on
-the reasoner performance, especially the usage ofhasParent exactly 2 Person. At
-this point we recommend rewriting this axiom tohasParent max 2 Person. It gives
+the reasoner performance, especially the usage of 'hasParent exactly 2 Person'. At
+this point we recommend rewriting this axiom to 'hasParent max 2 Person'. It gives
 us most of what we need, but has a little less negative impact on the reasoning
 time.
 ```
+
+<img src="../images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
+
 ```
-The FHKB ontology at this stage of the tutorial has an expressivity ofSROIQ.
+The FHKB ontology at this stage of the tutorial has an expressivity of SROIQ.
 ```
+
+<img src="../images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
+
 ```
 The time to reason with the FHKB at this point (in Protégé) on a typical desktop
 machine by HermiT 1.3.8 is approximately 2067.273 sec (1.09313 % of final), by
@@ -1364,9 +1175,9 @@ Pellet 2.2.0 0.529 sec (0.00428 % of final) and by FaCT++ 1.6.4 is approximately
 0.147 sec (0.004 % of final). 0 sec indicates failure or timeout.
 ```
 
-## Chapter 7
+# Chapter 7
 
-# Data Properties in the FHKB
+## Data Properties in the FHKB
 
 We now have some individuals with some basic object properties between individuals. OWL 2, however,
 also has data properties that can relate an object or individual to some item of data. There are data
