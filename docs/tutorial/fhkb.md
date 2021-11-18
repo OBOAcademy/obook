@@ -517,15 +517,15 @@ machine by HermiT 1.3.8 is approximately 0.262 sec (0.00014 % of final), by Pell
 sec (0.000 % of final). 0 sec indicates failure or timeout.
 ```
 
-## Chapter 4
+# Chapter 4
 
-# Modelling the Person Class
+## Modelling the Person Class
 
 In this Chapter you will:
 
-1. Create aPersonclass;
-2. DescribeSexclasses;
-3. DefineManandWoman;
+1. Create a `Person` class;
+2. Describe `Sex` classes;
+3. Define `Man` and `Woman`;
 4. Ask which of the people in the FHKB has a father.
 5. Add domains and ranges to the properties in the FHKB.
 6. Make the FHKB inconsistent.
@@ -545,23 +545,17 @@ For the FHKB, we start by thinking about the objects involved
 5. And many more...
 
 
-There is a class ofPersonthat we will use to represent all these people objects.
+There is a class of `Person` that we will use to represent all these people objects.
 
-```
-Task 6: Create the Person class
-```
-1. Create a class calledDomainEntity;
-2. Create a subclass ofDomainEntitycalledPerson.
+|Task 6: Create the `Person` class|
+|---|
+|1. Create a class called `DomainEntity`; <br>2. Create a subclass of `DomainEntity` called `Person`.|
 
-We useDomainEntityas a house-keeping measure. All of our ontology goes underneath this class. We
-can put other classes ‘outside’ the ontology, as siblings ofDomainEntity, such as ‘probe’ classes we wish
-to use to test our ontology.
+We use `DomainEntity` as a house-keeping measure. All of our ontology goes underneath this class. We can put other classes ‘outside’ the ontology, as siblings of `DomainEntity`, such as ‘probe’ classes we wish to use to test our ontology.
 
-The main thing to remember about thePersonclass is that we are using it to represent all ‘people’
-individuals. When we make statements about thePersonclass, we are making statements about all
-‘people’ individuals.
+The main thing to remember about the `Person` class is that we are using it to represent all ‘people’ individuals. When we make statements about the `Person` class, we are making statements about all ‘people’ individuals.
 
-What do we know about people? All members of thePersonclass have:
+What do we know about people? All members of the `Person` class have:
 
 - Sex – they are either male or female;
 - Everyone has a birth year;
@@ -571,51 +565,37 @@ There’s a lot more we know about people, but we will not mention it here.
 
 ### 4.2 Describing Sex in the FHKB
 
-Each and every person object has a sex. In the FHKB we will take a simple view on sex – a person is
-either male or female, with no intersex or administrative sex and so on. Each person only has one sex.
+Each and every person object has a sex. In the FHKB we will take a simple view on sex – a person is either male or female, with no intersex or administrative sex and so on. Each person only has one sex.
 
 We have two straight-forward options for modelling sex:
 
-1. Each person object has their own sex object, which is either male or female. Thus Robert’s maleness
-    is different from David’s maleness.
-2. There is only one Maleness object and one Femaleness object and each person object has a rela-
-    tionship to either one of these sex objects, but not both.
+1. Each person object has their own sex object, which is either male or female. Thus Robert’s maleness is different from David’s maleness.
+2. There is only one Maleness object and one Femaleness object and each person object has a relationship to either one of these sex objects, but not both.
 
-We will take the approach of having a class of Maleness objects and a class of Femaleness objects. These
-are qualities or attributes of self-standing objects such as a person. These two classes are disjoint, and
-each is a subclass of a class calledSex. The disjointness means that any one instance ofSexcannot be
-both an instance ofMalenessand an instance ofFemalenessat once. We also want to put in a covering
-axiom on the classSex, which means that any instance ofSexmust be eitherMalenessorFemaleness;
-there is no other kind ofSex.
+We will take the approach of having a class of Maleness objects and a class of Femaleness objects. These are qualities or attributes of self-standing objects such as a person. These two classes are disjoint, and each is a subclass of a class called `Sex`. The disjointness means that any one instance of `Sex` cannot be both an instance of `Maleness` and an instance of `Femaleness` at once. We also want to put in a covering axiom on the class `Sex`, which means that any instance of `Sex` must be either `Maleness` or `Femaleness`; there is no other kind of `Sex`.
+
+![dragon](https://github.com/shawntanzk/obook/blob/FHKB-formatting/docs/images/FHKB%20figures/dragon.png)
 
 
-Again, notice that we have been thinking at the level of objects. We do the same when thinking about
-Personand theirSex. Each and every person is related to an instance ofSex. EachPersonholds one
-relationship to aSexobject. To do this we create an object property calledhasSex. We make this property
-functional, which means that any object can hold that property to only one distinct filler object.
+Again, notice that we have been thinking at the level of objects. We do the same when thinking about `Person` and their `Sex`. Each and every person is related to an instance of `Sex`. Each `Person` holds one relationship to a `Sex` object. To do this we create an object property called `hasSex`. We make this property functional, which means that any object can hold that property to only one distinct filler object.
 
-We make the domain ofhasSexto bePersonand the range to beSex. The domain ofPersonmeans that
-any object holding that property will be inferred to be a member of the classPerson. Putting the range
-ofSexon thehasSexproperty means that any object at the right-hand end of thehasSexproperty will
-be inferred to be of the classSex. Again, think at the level of individuals or objects.
+We make the domain of `hasSex` to be `Person` and the range to be `Sex`. The domain of `Person` means that any object holding that property will be inferred to be a member of the class `Person`. Putting the range of `Sex` on the `hasSex` property means that any object at the right-hand end of the `hasSex` property will be inferred to be of the class `Sex`. Again, think at the level of individuals or objects.
 
-We now put a restriction on thePersonclass to state that each and every instance of the classPerson
-holds ahasSexproperty with an instance of theSexclass. It has an existential operator ‘some’ in the
-axiom, but the functional characteristic means that eachPersonobject will hold only onehasSexproperty
-to a distinct instance of aSexobject^1.
+We now put a restriction on the `Person` class to state that each and every instance of the class `Person` holds a `hasSex` property with an instance of the `Sex` class. It has an existential operator ‘some’ in the axiom, but the functional characteristic means that each `Person` object will hold only one `hasSex` property to a distinct instance of a `Sex` object<sup>4</sup>.
 
-```
-Task 7: Modelling sex
-```
-1. Create a class calledSex;
-2. Make it a subclass ofDomainEntity;
-3. MakePersonandSexdisjoint;
-4. Create two subclasses ofSex,MalenessandFemaleness;
-5. MakeMalenessandFemalenessdisjoint;
-6. Put a covering axiom onSexsuch that it is equivalent toMaleness or Femaleness.
-7. Create an object property,hasSex, with the domainPerson, the rangeSexand give it
-    the characteristic of ‘Functional’;
-8. Add a restrictionhasSex some Sexto the classPerson.
+<sup>4</sup> An individual could hold two `hasSex` properties, as long as the sex objects at the right-hand end of the property are not
+different.
+
+|Task 7: Modelling sex|
+|---|
+|1. Create a class called `Sex`;
+2. Make it a subclass of `DomainEntity`;
+3. Make `Person` and `Sex` disjoint;
+4. Create two subclasses of `Sex`, `Maleness` and `Femaleness`;
+5. Make `Maleness` and `Femaleness` disjoint;
+6. Put a covering axiom on `Sex` such that it is equivalent to `Maleness` or `Femaleness`.
+7. Create an object property, `hasSex` , with the domain `Person`, the range `Sex` and give it the characteristic of ‘Functional’;
+8. Add a restriction `hasSex some Sex` to the class `Person`.
 
 ThehasSexproperty looks like:
 
@@ -626,9 +606,6 @@ Domain: Person
 Range: Sex
 ```
 ThePersonclass looks like:
-
-(^1) An individual could hold twohasSexproperties, as long as the sex objects at the right-hand end of the property are not
-different.
 
 
 ```
