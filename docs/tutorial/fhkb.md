@@ -142,19 +142,19 @@ all the information.
 [**A FHKB Family Data**](#fhkb-family-data)
 
 
-# Preamble
+## Preamble
 
-## 0.1 Licencing
+### 0.1 Licencing
 
 The ‘Manchester Family History Advanced OWL Tutorial’ by Robert Stevens, Margaret Stevens, Nicolas
 Matentzoglu, Simon Jupp is licensed under a Creative Commons Attribution-ShareAlike 3.0 Unported
 License.
 
-## 0.2 Reporting Errors
+### 0.2 Reporting Errors
 
 This manual will almost certainly contain errors, defects and infelicities. Do report them to robert.stevens@manchester.ac.uk supplying chapter, section and some actual context in the form of words will help in fixing any of these issues.
 
-## 0.3 Acknowledgements
+### 0.3 Acknowledgements
 
 As well as the author list, many people have contributed to this work. Any contribution, such as reporting bugs etc., is rewarded by an acknowledgement of contribution (in alphabetical order) when the authors get around to adding them:
 
@@ -173,15 +173,15 @@ As well as the author list, many people have contributed to this work. Any contr
 - Danielle Welter.
 
 
-## Chapter 1
+# Chapter 1
 
-# Introduction
+## Introduction
 
 This tutorial introduces the tutee to many of the more advanced features of the Web Ontology Language (OWL). The topic of family history is used to take the tutee through various modelling issues and, in doing so, using many features of OWL 2 to build a Family History Knowledge Base (FHKB). The exercises are designed to maximise inference about family history through the use of an automated reasoner on an OWL knowledge base (KB) containing many members of the Stevens family.
 
 The aim, therefore, is to enable people to learn advanced features of OWL 2 in a setting that involves both classes and individuals, while attempting to maximise the use of inference within the FHKB.
 
-## 1.1 Learning Outcomes
+### 1.1 Learning Outcomes
 
 By doing this tutorial, a tutee should be able to:
 
@@ -227,6 +227,7 @@ We make some simplifying assumptions in this tutorial:
 
 At the end of the tutorial, you should be able to produce a property hierarchy and a TBox or class hierarchy such as shown in Figure 1.1; all supported by use of the automated reasoner and a lot of OWL 2’s features.
 
+![Figure 1.1](https://github.com/shawntanzk/obook/blob/FHKB-formatting/docs/images/FHKB%20figures/class_prop_hierachy_final.png)
 
 **Figure 1.1:** A part of the class and property hierarchy of the final FHKB.
 
@@ -259,30 +260,19 @@ The following resources are available at http://owl.cs.manchester.ac.uk/tutorial
 - Class names start with upper case.
 - Individual names start with a lower case letter and internal underscores to break words.
 - Property names usually start with ‘is’ or ‘has’ and are CamelCase with a lower case initial letter.
-- Many classes and individuals in the FHKB have annotation properties, usually human readable
-    labels. They show up in some of the examples in Manchester syntax, but are not made explicit as
-    part of the tasks in this tutorial.
-- Every object property is necessarily a sub-property of topObjectProperty. It does not have to be
-    asserted as such. Nevertheless, there might be situations where this relationship is made explicit in
-    this tutorial for illustrative reasons.
-- The individuals we are dealing with represent distinct persons. Throughout the tutorial, once the
-    respective axiom is introduced (chapter 7.1.1), the reader should make sure that all his or her
-    individuals are always made distinct, especially when he or she adds a new one.
-
-
-- At the end of each chapter, we note the Description Logic Language (expressivity) needed to
-    represent the ontology and the reasoning times for a number of state of the art reasoning systems.
-    This should get the reader a sense how difficult the FHKB becomes for reasoners to deal with over
-    time.
+- Many classes and individuals in the FHKB have annotation properties, usually human readable labels. They show up in some of the examples in Manchester syntax, but are not made explicit as part of the tasks in this tutorial.
+- Every object property is necessarily a sub-property of topObjectProperty. It does not have to be asserted as such. Nevertheless, there might be situations where this relationship is made explicit in this tutorial for illustrative reasons.
+- The individuals we are dealing with represent distinct persons. Throughout the tutorial, once the respective axiom is introduced (chapter 7.1.1), the reader should make sure that all his or her individuals are always made distinct, especially when he or she adds a new one.
+- At the end of each chapter, we note the Description Logic Language (expressivity) needed to represent the ontology and the reasoning times for a number of state of the art reasoning systems. This should get the reader a sense how difficult the FHKB becomes for reasoners to deal with over time.
 - When there is some scary OWL or the reasoner may find the FHKB hard work, you will see a ‘here
-    be dragons’ image.^2
+    be dragons’ image.<sup>1</sup> ![dragon](https://github.com/shawntanzk/obook/blob/FHKB-formatting/docs/images/FHKB%20figures/dragon.png)
 
-(^2) The image comes fromhttp://ancienthomeofdragon.homestead.com/May 2012.
+<sup>1</sup> The image comes fromhttp://ancienthomeofdragon.homestead.com/May 2012.
 
 
-## Chapter 2
+# Chapter 2
 
-# Adding some Individuals to the FHKB
+## Adding some Individuals to the FHKB
 
 In this chapter we will start by creating a fresh OWL ontology and adding some individuals that will be
 surrogates for people in the FHKB. In particular you will:
@@ -294,10 +284,9 @@ surrogates for people in the FHKB. In particular you will:
 5. See the reasoner doing some work.
 6. At the moment we will ignore sex; sex will not happen until Chapter 4.
 
-## 2.1 A World of Objects
+### 2.1 A World of Objects
 
-The ‘world’^1 or field of interest we model in an ontology is made up of objects or individuals. Such objects
-include, but are not limited to:
+The ‘world’<sup>1</sup> or field of interest we model in an ontology is made up of objects or individuals. Such objects include, but are not limited to:
 
 - People, their pets, the pizzas they eat;
 - The processes of cooking pizzas, living, running, jumping, undertaking a journey;
@@ -305,34 +294,20 @@ include, but are not limited to:
 - The attributes of things such as colour, dimensions, speed, shape of various objects;
 - Boundaries, love, ideas, plans, hypotheses.
 
-(^1) we use ‘world’ as a synonym of ‘field of interest’ or ‘domain’. ‘World’ does not restrict us to modelling the physical
-world outside our consciousness.
+<sup>2</sup> we use ‘world’ as a synonym of ‘field of interest’ or ‘domain’. ‘World’ does not restrict us to modelling the physical world outside our consciousness.
 
 
-We observe these objects, either outside lying around in the world or in our heads. OWL is all about
-modelling such individuals. Whenever we make a statement in OWL, when we write down an axiom, we
-are making statements about individuals. When thinking about the axioms in an ontology it is best to
-think about the individuals involved, even if OWL individuals do not actually appear in the ontology.
-All through this tutorial we will always be returning to the individuals being described in order to help
-us understand what we are doing and to help us make decisions about how to do it.
+We observe these objects, either outside lying around in the world or in our heads. OWL is all about modelling such individuals. Whenever we make a statement in OWL, when we write down an axiom, we are making statements about individuals. When thinking about the axioms in an ontology it is best to think about the individuals involved, even if OWL individuals do not actually appear in the ontology. All through this tutorial we will always be returning to the individuals being described in order to help us understand what we are doing and to help us make decisions about how to do it.
 
 ### 2.2 Asserting Parentage Facts
 
-Biologically, everyone has parents; a mother and a father^2. The starting point for family history is
-parentage; we need to relate the family member objects by object properties. An object property relates
-two objects, in this case a child object with his or her mother or father object. To do this we need to
-create three object properties:
+Biologically, everyone has parents; a mother and a father<sup>3</sup>. The starting point for family history is parentage; we need to relate the family member objects by object properties. An object property relates two objects, in this case a child object with his or her mother or father object. To do this we need to create three object properties:
 
-```
-Task 1: Creating object properties for parentage
-```
-1. Create a new ontology;
-2. Create an object propertyhasMother;
-3. Create a propertyisMotherOfand givehasMothertheInverseOf:isMotherOf;
-4. Do the same for the propertyhasFather;
-5. Create a propertyhasParent; give it the obvious inverse;
-6. MakehasMotherandhasFathersub-properties ofhasParent.
-7. Run the reasoner and look at the property hierarchy.
+
+| Task 1: Creating object properties for parentage |
+|---|
+|1. Create a new ontology; <br>2. Create an object propertyhasMother; <br>3. Create a propertyisMotherOfand givehasMothertheInverseOf:isMotherOf; <br>4. Do the same for the propertyhasFather; <br>5. Create a propertyhasParent; give it the obvious inverse; <br>6. MakehasMotherandhasFathersub-properties ofhasParent. <br>7. Run the reasoner and look at the property hierarchy.|
+
 
 Note how the reasoner has automatically completed the sub-hierarchy forisParentOf: isMotherOfand
 isFatherOfare inferred to be sub-properties ofisParentOf.
@@ -340,14 +315,14 @@ isFatherOfare inferred to be sub-properties ofisParentOf.
 The OWL snippet below shows some parentage fact assertions on an individual. Note that rather than be-
 ing assertions to an anonymous individual via some class, we are giving an assertion to a named individual.
 
-(^2) Don’t quibble; it’s true enough here.
-
-
 ```
 Individual: grant_plinth
 Facts: hasFather mr_plinth, hasMother mrs_plinth
 ```
-**Task 2: Create the ABox**
+
+<sup>3</sup> Don’t quibble; it’s true enough here.
+
+| Task 2: Create the ABox|
 
 1. Using the information in Table A.1 (see appendix) about parentage (so the columns
     about fathers and mothers), enter the fact assertions for the people which appear
