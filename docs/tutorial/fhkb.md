@@ -588,16 +588,9 @@ different.
 
 |Task 7: Modelling sex|
 |---|
-|1. Create a class called `Sex`;
-2. Make it a subclass of `DomainEntity`;
-3. Make `Person` and `Sex` disjoint;
-4. Create two subclasses of `Sex`, `Maleness` and `Femaleness`;
-5. Make `Maleness` and `Femaleness` disjoint;
-6. Put a covering axiom on `Sex` such that it is equivalent to `Maleness` or `Femaleness`.
-7. Create an object property, `hasSex` , with the domain `Person`, the range `Sex` and give it the characteristic of ‘Functional’;
-8. Add a restriction `hasSex some Sex` to the class `Person`.
+|1. Create a class called `Sex`; <br>2. Make it a subclass of `DomainEntity`; <br>3. Make `Person` and `Sex` disjoint; <br>4. Create two subclasses of `Sex`, `Maleness` and `Femaleness`; <br>5. Make `Maleness` and `Femaleness` disjoint; <br>6. Put a covering axiom on `Sex` such that it is equivalent to `Maleness` or `Femaleness`. <br>7. Create an object property, `hasSex` , with the domain `Person`, the range `Sex` and give it the characteristic of ‘Functional’; <br>8. Add a restriction `hasSex some Sex` to the class `Person`.|
 
-ThehasSexproperty looks like:
+The `hasSex` property looks like:
 
 ```
 ObjectProperty: hasSex
@@ -605,7 +598,7 @@ Characteristics: Functional
 Domain: Person
 Range: Sex
 ```
-ThePersonclass looks like:
+The `Person` class looks like:
 
 
 ```
