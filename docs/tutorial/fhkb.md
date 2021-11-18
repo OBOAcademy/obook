@@ -441,11 +441,11 @@ grandfathers, we want to move along two relationships – `hasParent` and then `
 We can do this with OWL 2’s sub-property chains. The way to think about sub-property chains is: If we
 see property _x_ followed by property _y_ linking three objects, then it implies that property _z_ is held between
 
-
+![Figure 3.1](https://github.com/shawntanzk/obook/blob/FHKB-formatting/docs/images/FHKB%20figures/grandparent.png)
 **Figure 3.1:** Three blobs representing objects of the classPerson. The three objects are linked by ahasParent
 property and this implies ahasGrandparentproperty.
 
-the first and third objects. Figure 3.1 shows this diagrammatically for the hasGrandfather property.
+the first and third objects. Figure 3.1 shows this diagrammatically for the `hasGrandfather` property.
 
 For various grandparent object properties we need the following sets of implications:
 
@@ -460,19 +460,13 @@ For various grandparent object properties we need the following sets of implicat
 
 Notice that we can trace the paths in several ways, some have more steps than others, though the shorter
 paths themselves employ paths. Tracing these paths is what OWL 2’s sub-property chains achieve. For
-the new object propertyhasGrandparentwe write:
+the new object property `hasGrandparent` we write:
 
 ```
 ObjectProperty: hasGrandparent SubPropertyChain: hasParent o hasParent
 ```
-We read this as ‘hasParentfollowed byhasParentimplieshasGrandparent’. We also need to think where
-thehasGrandparentproperty fits in our growing hierarchy of object properties. Think about the implica-
-tions: Does holding ahasParentproperty between two objects imply that they also hold ahasGrandparent
-property? Of course the answer is ‘no’. So, this new property is not a super-property ofhasParent. Does
-the holding of ahasGrandparentproperty between two objects imply that they also hold anhasAncestor
-property? The answer is ‘yes’; so that should be a super-property ofhasGrandparent. We need to ask
-such questions of our existing properties to work out where we put it in the object property hierarchy.
-At the moment, ourhasGrandparentproperty will look like this:
+
+We read this as ‘`hasParent` followed by `hasParent` implies `hasGrandparent`’. We also need to think where the `hasGrandparent` property fits in our growing hierarchy of object properties. Think about the implications: Does holding a `hasParent` property between two objects imply that they also hold a `hasGrandparent` property? Of course the answer is ‘no’. So, this new property is not a super-property of `hasParent`. Does the holding of a `hasGrandparent` property between two objects imply that they also hold an `hasAncestor` property? The answer is ‘yes’; so that should be a super-property of `hasGrandparent`. We need to ask such questions of our existing properties to work out where we put it in the object property hierarchy. At the moment, our `hasGrandparent` property will look like this:
 
 ```
 ObjectProperty: hasGrandParent
@@ -484,60 +478,38 @@ InverseOf: isGrandParentOf
 
 Do the following task:
 
-```
-Task 5: Grandparents object properties
-```
-1. Make thehasGrandparent,hasGrandmotherandhasGrandfatherobject properties and
-    the obvious inverses (see OWL code above);
-2. Go to the individuals tabs and inspects the inferred object property assertions for
-    Robert_David_Bright_1965 and his parents.
+|Task 5: Grandparents object properties|
+|---|
+|1. Make the `hasGrandparent`, `hasGrandmother` and `hasGrandfather` object properties and the obvious inverses (see OWL code above); <br> 2. Go to the individuals tabs and inspects the inferred object property assertions for `Robert_David_Bright_1965` and his parents.|
 
-Again, think of the objects involved. We can take the same three objects as before: Robert, David and
-William. Think about the properties that exist, both by assertion and implication, between these objects.
-We have asserted onlyhasFatherbetween these objects. The inverse can be inferred between the actual
-individuals (remember that this is not the case for class level restrictions – that all instances of a class
-hold a property does not mean that the filler objects at the other end hold the inverse; the quantification
-on the restriction tells us this). Remember that:
+Again, think of the objects involved. We can take the same three objects as before: Robert, David and William. Think about the properties that exist, both by assertion and implication, between these objects. We have asserted only `hasFather` between these objects. The inverse can be inferred between the actual individuals (remember that this is not the case for class level restrictions – that all instances of a class hold a property does not mean that the filler objects at the other end hold the inverse; the quantification on the restriction tells us this). Remember that:
 
-1. Robert holds ahasFatherproperty with David;
-2. David holds ahasFatherproperty with William;
-3. By implication through thehasParentsuper-property ofhasFather, Robert holds ahasParentprop-
-    erty with David, and the latter holds one with William;
-4. The sub-property chain onhasGrandfatherthen implies that Robert holds ahasGrandfatherproperty
-    to William. Use the diagram in figure 3.1 to trace the path; there is ahasParentpath from Robert
-    to William via David and this implies thehasGrandfatherproperty between Robert and William.
+1. Robert holds a `hasFather` property with David;
+2. David holds a `hasFather` property with William;
+3. By implication through the `hasParent` super-property of `hasFather`, Robert holds a `hasParent` property with David, and the latter holds one with William;
+4. The sub-property chain on `hasGrandfather` then implies that Robert holds a `hasGrandfather` property to William. Use the diagram in figure 3.1 to trace the path; there is a `hasParent` path from Robert to William via David and this implies the `hasGrandfather` property between Robert and William.
 
-It is also useful to point out that the inverse ofhasGrandfatheralso has the implication of the sub-
-property chain of the inverses ofhasParent. That is, three objects linked by a path of twoisParentOf
-properties implies that anisGrandfatherOfproperty is established between the first and third object, in
-this case William and Robert. As the inverses ofhasFatherare established by the reasoner, all the inverse
-implications also hold.
+It is also useful to point out that the inverse of `hasGrandfather` also has the implication of the sub-property chain of the inverses of `hasParent`. That is, three objects linked by a path of two `isParentOf` properties implies that an `isGrandfatherOf` property is established between the first and third object, in
+this case William and Robert. As the inverses of `hasFather` are established by the reasoner, all the inverse implications also hold.
 
 ### 3.3 Summary
 
-It is important when dealing with property hierarchies to think in terms of properties between objects
-and of the implications ‘up the hierarchy’. A sub-property implies its super-property. So, in our FHKB,
-two person objects holding ahasParentproperty between them, by implication also hold anhasAncestor
-property between them. In turn,hasAncestorhas a super-propertyhasRelationand the two objects in
+It is important when dealing with property hierarchies to think in terms of properties between objects and of the implications ‘up the hierarchy’. A sub-property implies its super-property. So, in our FHKB, two person objects holding a `hasParent` property between them, by implication also hold an `hasAncestor`
+property between them. In turn, `hasAncestor` has a super-property `hasRelation` and the two objects in
 question also hold, by implication, this property between them as well.
 
-We madehasAncestortransitive. This means that my ancestor’s ancestors are also my ancestors. That
-a sub-property is transitive does not imply that its super-property is transitive. We have seen that by
-manipulating the property hierarchy we can generate a lot of inferences without adding any more facts to
-the individuals in the FHKB. This will be a feature of the whole process – keep the work to the minimum
-(well, almost).
+We made `hasAncestor` transitive. This means that my ancestor’s ancestors are also my ancestors. That a sub-property is transitive does not imply that its super-property is transitive. We have seen that by manipulating the property hierarchy we can generate a lot of inferences without adding any more facts to the individuals in the FHKB. This will be a feature of the whole process – keep the work to the minimum (well, almost).
 
+In OWL 2, we can also trace ‘paths’ around objects. Again, think of the objects involved in the path of properties that link objects together. We have done simple paths so far – Robert linked to David via `hasParent` and David linked to William via `hasFather` implies the link between Robert and William of `hasGrandfather`. If this is true for all cases (for which you have to use your domain knowledge), one can capture this implication in the property hierarchy. Again, we are making our work easier by adding no new explicit facts, but making use of the implication that the reasoner works out for us.
 
-In OWL 2, we can also trace ‘paths’ around objects. Again, think of the objects involved in the path
-of properties that link objects together. We have done simple paths so far – Robert linked to David via
-hasParentand David linked to William viahasFatherimplies the link between Robert and William of
-hasGrandfather. If this is true for all cases (for which you have to use your domain knowledge), one can
-capture this implication in the property hierarchy. Again, we are making our work easier by adding no
-new explicit facts, but making use of the implication that the reasoner works out for us.
+<img src="https://github.com/shawntanzk/obook/blob/FHKB-formatting/docs/images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
 
 ```
 The FHKB ontology at this stage of the tutorial has an expressivity ofALRI+.
 ```
+
+<img src="https://github.com/shawntanzk/obook/blob/FHKB-formatting/docs/images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
+
 ```
 The time to reason with the FHKB at this point (in Protégé) on a typical desktop
 machine by HermiT 1.3.8 is approximately 0.262 sec (0.00014 % of final), by Pellet
