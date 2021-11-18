@@ -645,64 +645,47 @@ each and every person has one mother and each and every person has one father. H
 about biological mothers and fathers. The complexities of adoption and step parents are outside the
 scope of this FHKB tutorial.
 
-```
-Task 9: Describing Parentage
-```
-1. Add the domainPersonand the rangeWomanto the propertyhasMother.
-2. Do the same for the propertyhasFather, but give it the rangeMan;
-3. Give the propertyhasParentdomain and range ofPerson;
-4. Run the reasoner.
+|Task 9: Describing Parentage|
+|---|
+|1. Add the domain `Person` and the range `Woman` to the property `hasMother`.<br> 2. Do the same for the property `hasFather`, but give it the range `Man`;<br> 3. Give the property `hasParent` domain and range of `Person`;<br> 4. Run the reasoner.|
 
-The (inferred) property hierarchy in the FHKB should look like that shown in Figure 4.1. Notice that
-we have asserted the sub-property axioms on one side of the property hierarchy. Having done so, the
-reasoner uses those axioms, together with the inverses, to work out the property hierarchy for the ‘other
-side’.
+The (inferred) property hierarchy in the FHKB should look like that shown in Figure 4.1. Notice that we have asserted the sub-property axioms on one side of the property hierarchy. Having done so, the reasoner uses those axioms, together with the inverses, to work out the property hierarchy for the ‘other side’.
 
-We makehasMotherfunctional, as any one person object can hold only onehasMotherproperty to a
-distinctWomanobject. The range ofhasMotherisWoman, as a mother has to be a woman. ThePerson
-object holding thehasMotherproperty can be either a man or a woman, so we have the domain constraint
-asPerson; this means any object holding ahasMotherproperty will be inferred to be aPerson. Similarly,
-any object at the right-hand end of ahasMotherproperty will be inferred to be aWoman, which is the
-result we need. The same reasoning goes forhasFatherandhasParent, with the sex constraints on the
-latter being onlyPerson. The inverses of the two functional sub-properties ofhasParentare not themselves
-functional. After all, aWomancan be the mother of manyPersonobjects, but eachPersonobject can
+We make `hasMother` functional, as any one person object can hold only one `hasMother` property to a
+distinct `Woman` object. The range of `hasMother` is `Woman`, as a mother has to be a woman. The `Person`
+object holding the `hasMother` property can be either a man or a woman, so we have the domain constraint
+as `Person`; this means any object holding a `hasMother` property will be inferred to be a `Person`. Similarly,
+any object at the right-hand end of a `hasMother` property will be inferred to be a `Woman`, which is the
+result we need. The same reasoning goes for `hasFather` and `hasParent`, with the sex constraints on the
+latter being only `Person`. The inverses of the two functional sub-properties of `hasParent` are not themselves
+functional. After all, a `Woman` can be the mother of many `Person` objects, but each `Person` object can
 have only one mother.
 
-```
-Task 10: Restrict Person class
-```
-1. As each and every person has a mother and each and every person has a father, place
-    restrictions on thePersonclass as shown below.
+![Figure 4.1](https://github.com/shawntanzk/obook/blob/FHKB-formatting/docs/images/FHKB%20figures/new/prophierparentage.PNG)
+
+**Figure 4.1:** The property hierarchy with the `hasSex` and the parentage properties
+
+![Figure 4.2](https://github.com/shawntanzk/obook/blob/FHKB-formatting/docs/images/FHKB%20figures/sex.png)
+
+**Figure 4.2:** the core TBox for the FHKB with the `Person` and `Sex` classes.
 
 
-```
-Figure 4.1: The property hierarchy with thehasSexand the parentage properties
-```
-```
-Figure 4.2: the core TBox for the FHKB with thePersonandSexclasses.
-```
+|Task 10: Restrict Person class|
+|---|
+|1. As each and every person has a mother and each and every person has a father, place restrictions on the `Person` class as shown below.|
+
 ```
 Class: Person
 SubClassOf: DomainEntity, (hasFather some Man), (hasMother some Woman),
 (hasSex some Sex)
 DisjointWith: Sex
 ```
-```
-Task 11: DL queries for people and sex
-```
-1. Issue the DL queries forPerson,ManandWoman; look at the answers and count the
-    numbers in each class; which individuals have no sex and why?
-2. You should find that many people have been inferred to be eitherManorWoman, but
-    some are, as we will see below, only inferred to bePerson.
 
-The domain and range constraints on our properties have also driven some entailments. We have not
-asserted thatDavid_Bright_1934 is a member ofMan, but the range constraint onhasFather(or the
-inferred domain constraint on theisFatherOfrelation) has enabled this inference to be made. This goes
-for any individual that is the right-hand-side (either inferred or asserted) of eitherhasFatherorhasMother
-(where the range is that ofWoman). For Robert David Bright, however, he is only the left-hand-side of
+|Task 11: DL queries for people and sex|
+|---|
+|1. Issue the DL queries for `Person`, `Man` and `Woman`; look at the answers and count the numbers in each class; which individuals have no sex and why? <br> 2. You should find that many people have been inferred to be either `Man` or `Woman`, but some are, as we will see below, only inferred to be `Person`.|
 
-
-anhasFatheror anhasMotherproperty, so we’ve only entailed that this individual is a member ofPerson.
+The domain and range constraints on our properties have also driven some entailments. We have not asserted that `David_Bright_1934` is a member of `Man`, but the range constraint on `hasFather` (or the inferred domain constraint on the `isFatherOf` relation) has enabled this inference to be made. This goes for any individual that is the right-hand-side (either inferred or asserted) of either `hasFather` or `hasMother` (where the range is that of `Woman`). For Robert David Bright, however, he is only the left-hand-side of an `hasFather` or an `hasMother` property, so we’ve only entailed that this individual is a member of `Person`.
 
 ### 4.5 Who has a father?
 
