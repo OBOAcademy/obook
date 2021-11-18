@@ -227,7 +227,7 @@ We make some simplifying assumptions in this tutorial:
 
 At the end of the tutorial, you should be able to produce a property hierarchy and a TBox or class hierarchy such as shown in Figure 1.1; all supported by use of the automated reasoner and a lot of OWL 2’s features.
 
-![Figure 1.1](https://github.com/shawntanzk/obook/blob/FHKB-formatting/docs/images/FHKB%20figures/class_prop_hierachy_final.png)
+![Figure 1.1](../images/FHKB%20figures/class_prop_hierachy_final.png)
 
 **Figure 1.1:** A part of the class and property hierarchy of the final FHKB.
 
@@ -265,7 +265,7 @@ The following resources are available at http://owl.cs.manchester.ac.uk/tutorial
 - The individuals we are dealing with represent distinct persons. Throughout the tutorial, once the respective axiom is introduced (chapter 7.1.1), the reader should make sure that all his or her individuals are always made distinct, especially when he or she adds a new one.
 - At the end of each chapter, we note the Description Logic Language (expressivity) needed to represent the ontology and the reasoning times for a number of state of the art reasoning systems. This should get the reader a sense how difficult the FHKB becomes for reasoners to deal with over time.
 - When there is some scary OWL or the reasoner may find the FHKB hard work, you will see a ‘here
-    be dragons’ image.<sup>1</sup> ![dragon](https://github.com/shawntanzk/obook/blob/FHKB-formatting/docs/images/FHKB%20figures/dragon.png)
+    be dragons’ image.<sup>1</sup> ![dragon](../images/FHKB%20figures/dragon.png)
 
 <sup>1</sup> The image comes fromhttp://ancienthomeofdragon.homestead.com/May 2012.
 
@@ -324,7 +324,7 @@ Facts: hasFather mr_plinth, hasMother mrs_plinth
 |---|
 |1. Using the information in Table A.1 (see appendix) about parentage (so the columns about fathers and mothers), enter the fact assertions for the people which appear in rows shaded in grey. We will only use the `hasMother` and `hasFather` properties in our fact assertions. You do not need to assert names and birth years yet. This exercise will require you to create an individual for every person we want to talk about, using the `Firstname_Secondname_Familyname_Birthyear` pattern, as for example in `Robert_David_Bright_1965`.|
 
-![camera](https://github.com/shawntanzk/obook/blob/FHKB-formatting/docs/images/FHKB%20figures/images/black_camera.png)
+![camera](../images/FHKB%20figures/images/black_camera.png)
 ```
 While asserting facts about all individuals in the FHKB will be a bit tedious at
 times, it might be useful to at least do the task for a subset of the family members.
@@ -333,7 +333,7 @@ the raw individuals available athttp://owl.cs.manchester.ac.uk/tutorials/
 fhkbtutorial.
 ```
 
-<img src="https://github.com/shawntanzk/obook/blob/FHKB-formatting/docs/images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
+<img src="../images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
 
 ```
 If you are working with Protégé, you may want to look at the Matrix plugin for
@@ -373,13 +373,13 @@ We have also encountered some important principles:
 - Upon reasoning we get the inverses of properties between named individuals for free.
 - Lots is still open. For example, we do not know the sex of individuals and what other children, other than those described, people in the FHKB may have.
 
-<img src="https://github.com/shawntanzk/obook/blob/FHKB-formatting/docs/images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
+<img src="../images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
 
 ```
 The FHKB ontology at this stage of the tutorial has an expressivity ofALHI.
 ```
 
-<img src="https://github.com/shawntanzk/obook/blob/FHKB-formatting/docs/images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
+<img src="../images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
 
 ```
 The time to reason with the FHKB at this point (in Protégé) on a typical desktop
@@ -401,7 +401,7 @@ In this Chapter you will:
 4. Place all of these new object properties in the property hierarchy and in that way learn more about
     the implications of the property hierarchy.
 
-![camera](https://github.com/shawntanzk/obook/blob/FHKB-formatting/docs/images/FHKB%20figures/images/black_camera.png)
+![camera](../images/FHKB%20figures/images/black_camera.png)
 ```
 Find a snapshot of the ontology at this stage athttp://owl.cs.manchester.ac.
 uk/tutorials/fhkbtutorial.
@@ -441,7 +441,7 @@ grandfathers, we want to move along two relationships – `hasParent` and then `
 We can do this with OWL 2’s sub-property chains. The way to think about sub-property chains is: If we
 see property _x_ followed by property _y_ linking three objects, then it implies that property _z_ is held between
 
-![Figure 3.1](https://github.com/shawntanzk/obook/blob/FHKB-formatting/docs/images/FHKB%20figures/grandparent.png)
+![Figure 3.1](../images/FHKB%20figures/grandparent.png)
 **Figure 3.1:** Three blobs representing objects of the classPerson. The three objects are linked by ahasParent
 property and this implies ahasGrandparentproperty.
 
@@ -502,13 +502,13 @@ We made `hasAncestor` transitive. This means that my ancestor’s ancestors are 
 
 In OWL 2, we can also trace ‘paths’ around objects. Again, think of the objects involved in the path of properties that link objects together. We have done simple paths so far – Robert linked to David via `hasParent` and David linked to William via `hasFather` implies the link between Robert and William of `hasGrandfather`. If this is true for all cases (for which you have to use your domain knowledge), one can capture this implication in the property hierarchy. Again, we are making our work easier by adding no new explicit facts, but making use of the implication that the reasoner works out for us.
 
-<img src="https://github.com/shawntanzk/obook/blob/FHKB-formatting/docs/images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
+<img src="../images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
 
 ```
 The FHKB ontology at this stage of the tutorial has an expressivity ofALRI+.
 ```
 
-<img src="https://github.com/shawntanzk/obook/blob/FHKB-formatting/docs/images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
+<img src="../images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
 
 ```
 The time to reason with the FHKB at this point (in Protégé) on a typical desktop
@@ -574,7 +574,7 @@ We have two straight-forward options for modelling sex:
 
 We will take the approach of having a class of Maleness objects and a class of Femaleness objects. These are qualities or attributes of self-standing objects such as a person. These two classes are disjoint, and each is a subclass of a class called `Sex`. The disjointness means that any one instance of `Sex` cannot be both an instance of `Maleness` and an instance of `Femaleness` at once. We also want to put in a covering axiom on the class `Sex`, which means that any instance of `Sex` must be either `Maleness` or `Femaleness`; there is no other kind of `Sex`.
 
-![dragon](https://github.com/shawntanzk/obook/blob/FHKB-formatting/docs/images/FHKB%20figures/dragon.png)
+![dragon](../images/FHKB%20figures/dragon.png)
 
 
 Again, notice that we have been thinking at the level of objects. We do the same when thinking about `Person` and their `Sex`. Each and every person is related to an instance of `Sex`. Each `Person` holds one relationship to a `Sex` object. To do this we create an object property called `hasSex`. We make this property functional, which means that any object can hold that property to only one distinct filler object.
@@ -651,21 +651,13 @@ scope of this FHKB tutorial.
 
 The (inferred) property hierarchy in the FHKB should look like that shown in Figure 4.1. Notice that we have asserted the sub-property axioms on one side of the property hierarchy. Having done so, the reasoner uses those axioms, together with the inverses, to work out the property hierarchy for the ‘other side’.
 
-We make `hasMother` functional, as any one person object can hold only one `hasMother` property to a
-distinct `Woman` object. The range of `hasMother` is `Woman`, as a mother has to be a woman. The `Person`
-object holding the `hasMother` property can be either a man or a woman, so we have the domain constraint
-as `Person`; this means any object holding a `hasMother` property will be inferred to be a `Person`. Similarly,
-any object at the right-hand end of a `hasMother` property will be inferred to be a `Woman`, which is the
-result we need. The same reasoning goes for `hasFather` and `hasParent`, with the sex constraints on the
-latter being only `Person`. The inverses of the two functional sub-properties of `hasParent` are not themselves
-functional. After all, a `Woman` can be the mother of many `Person` objects, but each `Person` object can
-have only one mother.
+We make `hasMother` functional, as any one person object can hold only one `hasMother` property to a distinct `Woman` object. The range of `hasMother` is `Woman`, as a mother has to be a woman. The `Person` object holding the `hasMother` property can be either a man or a woman, so we have the domain constraint as `Person`; this means any object holding a `hasMother` property will be inferred to be a `Person`. Similarly, any object at the right-hand end of a `hasMother` property will be inferred to be a `Woman`, which is the result we need. The same reasoning goes for `hasFather` and `hasParent`, with the sex constraints on the latter being only `Person`. The inverses of the two functional sub-properties of `hasParent` are not themselves functional. After all, a `Woman` can be the mother of many `Person` objects, but each `Person` object can have only one mother.
 
-![Figure 4.1](https://github.com/shawntanzk/obook/blob/FHKB-formatting/docs/images/FHKB%20figures/new/prophierparentage.PNG)
+![Figure 4.1](../images/FHKB%20figures/new/prophierparentage.PNG)
 
 **Figure 4.1:** The property hierarchy with the `hasSex` and the parentage properties
 
-![Figure 4.2](https://github.com/shawntanzk/obook/blob/FHKB-formatting/docs/images/FHKB%20figures/sex.png)
+![Figure 4.2](../images/FHKB%20figures/sex.png)
 
 **Figure 4.2:** the core TBox for the FHKB with the `Person` and `Sex` classes.
 
@@ -689,59 +681,28 @@ The domain and range constraints on our properties have also driven some entailm
 
 ### 4.5 Who has a father?
 
-In our description of thePersonclass we have said that each and every instance of the classPersonhas a
-father (the same goes for mothers). So, when we ask the query ‘which individuals have a father’, we get
-all the instances ofPersonback, even though we have said nothing about the specific parentage of each
-Person. We do not know who their mothers and fathers are, but we know that they have one of each.
-We know all the individuals so far entered are members of thePersonclass; when asserting the type to
-be eitherManorWoman(each of which is a subclass ofPerson), we infer that each is a person. When
-asserting the type of each individual via thehasSexproperty, we know each is aPerson, as the domain
-ofhasSexis thePersonclass. As we have also given the right-hand side ofhasSexas eitherMalenessor
-Femaleness, we have given sufficient information to recognise each of thesePersoninstances to be members
-of eitherManorWoman.
+In our description of the `Person` class we have said that each and every instance of the class `Person` has a father (the same goes for mothers). So, when we ask the query ‘which individuals have a father’, we get all the instances of `Person` back, even though we have said nothing about the specific parentage of each `Person`. We do not know who their mothers and fathers are, but we know that they have one of each. We know all the individuals so far entered are members of the `Person` class; when asserting the type to be either `Man` or `Woman` (each of which is a subclass of `Person`), we infer that each is a person. When asserting the type of each individual via the `hasSex` property, we know each is a `Person`, as the domain of `hasSex` is the `Person` class. As we have also given the right-hand side of `hasSex` as either `Maleness` or `Femaleness`, we have given sufficient information to recognise each of these `Person` instances to be members of either `Man` or `Woman`.
 
 ### 4.6 Filling in Domains and Ranges for the FHKB Properties
 
-So far we have not systematically added domains and ranges to the properties in the FHKB. As a
-reminder, when a property has a domain ofXany object holding that property will be inferred to be a
-member of classX. A domain doesn’t add a constraint that only members of classXhold that property; it
-is a strong implication of class membership. Similarly, a property holding a range implies that an object
-acting as right-hand-side to a property will be inferred to be of that class. We have already seen above
-that we can use domains and ranges to imply the sex of people within the FHKB.
+So far we have not systematically added domains and ranges to the properties in the FHKB. As a reminder, when a property has a domain of `X` any object holding that property will be inferred to be a member of class `X`. A domain doesn’t add a constraint that only members of class `X` hold that property; it is a strong implication of class membership. Similarly, a property holding a range implies that an object acting as right-hand-side to a property will be inferred to be of that class. We have already seen above that we can use domains and ranges to imply the sex of people within the FHKB.
 
 Do the following:
 
-```
-Task 12: Domains and Ranges
-```
-1. Make sure the appropriatePerson,ManandWomanare domains and ranges forhas-
-    Father,hasMotherandhasParent.
-2. Run the reasoner and look at the property hierarchy.
-3. Also look at the propertieshasAncestor,hasGrandparent,hasUncleand so on; look to
-    see what domains and ranges are found. Add any domains and ranges explicitly as
-    necessary.
+|Task 12: Domains and Ranges|
+|---|
+|1. Make sure the appropriate `Person`, `Man` and `Woman` are domains and ranges for `hasFather`, `hasMother` and `hasParent`. <br>2. Run the reasoner and look at the property hierarchy. <br> 3. Also look at the properties `hasAncestor`, `hasGrandparent`, `hasUncle` and so on; look to see what domains and ranges are found. Add any domains and ranges explicitly as necessary.|
+
+<img src="../images/FHKB%20figures/images/WarningIcon.png" alt="note" width="50"/>
 
 ```
 Protégé for example in its current version (November 2015) does not visualise
 inherited domains and ranges in the same way as it shows inferred inverse relations.
 ```
-We typically assert more domains and ranges than strictly necessary. For example, if we say thathasParent
-has the domainPerson, this means that every objectxthat is connected to another objectyvia the
 
+We typically assert more domains and ranges than strictly necessary. For example, if we say that `hasParent` has the domain `Person`, this means that every object `x` that is connected to another object `y` via the `hasParent` relation must be a `Person`. Let us assume the only thing we said about `x` and `y` is that they are connected by a `hasMother` relation. Since this implies that `x` and `y` are also connected by a `hasParent` relation (`hasMother` is a sub-property of `hasParent`) we do _not_ have to assert that `hasFather` has the domain of `Person`; it is implied by what we know about the domain and range of `hasParent`.
 
-hasParentrelation must be aPerson. Let us assume the only thing we said aboutxandyis that they
-are connected by ahasMotherrelation. Since this implies thatxandyare also connected by ahasParent
-relation (hasMotheris a sub-property ofhasParent) we do _not_ have to assert thathasFatherhas the domain
-ofPerson; it is implied by what we know about the domain and range ofhasParent.
-
-In order to remove as many assertions as possible, we may therefore choose to assert as much as we know
-starting from the top of the hierarchy, and only ever adding a domain if we want to constrain the already
-inferred domain even further (or range respectively). For example, in our case, we could have chosen to
-assertPersonto be the domain ofhasRelation. SincehasRelationis symmetric, it will also inferPerson
-to be the range. We do not need to say anything forhasAncestororhasParent, and only if we want to
-constrain the domain or range further (like in the case ofhasFatherby making the rangeMan) do we need
-to actually assert something. It is worth noting that because we have built the object property hierarchy
-from the bottom (hasMotheretc.) we have ended up asserting more than necessary.
+In order to remove as many assertions as possible, we may therefore choose to assert as much as we know starting from the top of the hierarchy, and only ever adding a domain if we want to constrain the already inferred domain even further (or range respectively). For example, in our case, we could have chosen to assert `Person` to be the domain of `hasRelation`. Since `hasRelation` is symmetric, it will also infer `Person` to be the range. We do not need to say anything for `hasAncestor` or `hasParent`, and only if we want to constrain the domain or range further (like in the case of `hasFather` by making the range `Man`) do we need to actually assert something. It is worth noting that because we have built the object property hierarchy from the bottom (`hasMother` etc.) we have ended up asserting more than necessary.
 
 ### 4.7 Inconsistencies
 
@@ -749,39 +710,21 @@ From the Pizza Tutorial and other work with OWL you should have seen some _unsat
 Protégé this is highlighted by classes going ‘red’ and being subclasses ofNothing; that is, they can have
 no instances in that model.
 
-```
-Task 13: Inconsistencies
-```
-1. Add the factRobert_David_Bright_1965 hasMother David_Bright_1934.
-2. Run the classifier and see what happens.
-3. Remove that fact and run the classifier again.
-4. Now add the fact thatRobert_David_Bright_1965 hasMother Iris_Ellen_Archer_1907
-   .
-5. Run the classifier and see what happens.
-6. Add and remove the functional characteristic to these properties and see what happens.
+|Task 13: Inconsistencies|
+|--|
+|1. Add the fact `Robert_David_Bright_1965 hasMother David_Bright_1934`. <br>2. Run the classifier and see what happens. <br>3. Remove that fact and run the classifier again. <br>4. Now add the fact that `Robert_David_Bright_1965 hasMother Iris_Ellen_Archer_1907` <br>5. Run the classifier and see what happens. <br>6. Add and remove the functional characteristic to these properties and see what happens.|
 
-After asserting the first fact it should be reported by the reasoner that the ontology is _inconsistent_. This
-means, in lay terms, that the model you’ve provided in the ontology cannot accommodate the facts you’ve
-provided in the fact assertions in your ABox—that is, there is an inconsistency between the facts and the
-ontology... The ontology is inconsistent becauseDavid_Bright_1934 is being inferred to be aManand a
-Womanat the same time which is inconsistent with what we have said in the FHKB.
+After asserting the first fact it should be reported by the reasoner that the ontology is _inconsistent_. This means, in lay terms, that the model you’ve provided in the ontology cannot accommodate the facts you’ve provided in the fact assertions in your ABox—that is, there is an inconsistency between the facts and the ontology... The ontology is inconsistent because `David_Bright_1934` is being inferred to be a `Man` and a `Woman` at the same time which is inconsistent with what we have said in the FHKB.
 
-When we, however, say that Robert David Bright has two different mothers, nothing bad happens! Our
-domain knowledge says that the two women are different, but the reasoner does not know this as yet... ;
-Iris Ellen Archer and Margaret Grace Rever may be the same person; we have to tell the reasoner that
-they are different. For the same reason the functional characteristic also has no effect until the reasoner
-‘knows’ that the individuals are different. We will do this in Section 7.1.1 and live with this ‘fault’ for
-the moment.
+When we, however, say that `Robert David Bright` has two different mothers, nothing bad happens! Our domain knowledge says that the two women are different, but the reasoner does not know this as yet... ; Iris Ellen Archer and Margaret Grace Rever may be the same person; we have to tell the reasoner that they are different. For the same reason the functional characteristic also has no effect until the reasoner ‘knows’ that the individuals are different. We will do this in [Section 7.1.1](#data-properties-in-the-fhkb) and live with this ‘fault’ for the moment. 
 
+![dragon](../images/FHKB%20figures/dragon.png)
 
 ### 4.8 Adding Some Defined Classes for Ancestors and so on
 
-```
-Task 14: Adding defined classes
-```
-1. Add a defined class forAncestor,MaleAncestor,FemaleAncestor;
-2. Add a defined class forDescendant,MaleDescendantandFemaleDescendant;
-3. Run the reasoner and view the resulting hierarchy.
+|Task 14: Adding defined classes|
+|---|
+|1. Add a defined class for `Ancestor`, `MaleAncestor`, `FemaleAncestor`; <br>2. Add a defined class for `Descendant`, `MaleDescendant` and `FemaleDescendant`; <br>3. Run the reasoner and view the resulting hierarchy.|
 
 The code for the classes looks like:
 
@@ -791,38 +734,18 @@ Class: FemaleAncestor EquivalentTo: Woman and isAncestorOf some Person
 Class: Descendant EquivalentTo: Person and hasAncestor some Person
 Class: MaleDescendant EquivalentTo: Man and hasAncestor some Person
 ```
-The TBox after reasoning can be seen in Figure 4.3. Notice that the reasoner has inferred that sev-
-eral of the classes are equivalent or ‘the same’. These are: Descendant and Person; MaleDescendant and
-Man, FemaleDescendant and Woman.
+The TBox after reasoning can be seen in Figure 4.3. Notice that the reasoner has inferred that several of the classes are equivalent or ‘the same’. These are: `Descendant` and `Person`; `MaleDescendant` and `Man`, `FemaleDescendant` and `Woman`.
 
-The reasoner has used the axioms within the ontology to infer that all the instances ofPersonare also
-instances of the classDescendantand that all the instances ofWomanare also the same instances as the
-classFemale Descendant. This is intuitively true; all people are descendants – they all have parents that
-have parents etc. and thus everyone is a descendant. All women are female people that have parents etc.
-As usual we should think about the objects within the classes and what we know about them. This time
-it is useful to think about the statements we have made aboutPersonin this Chapter – that all instances
-ofPersonhave a father and a mother; add to this the information from the property hierarchy and we
-know that all instances ofPersonhave parents and ancestors. We have repeated all of this in our new
-defined classes forAncestorandDescendantand the reasoner has highlighted this information.
+The reasoner has used the axioms within the ontology to infer that all the instances of `Person` are also instances of the class `Descendant` and that all the instances of `Woman` are also the same instances as the class `Female Descendant`. This is intuitively true; all people are descendants – they all have parents that have parents etc. and thus everyone is a descendant. All women are female people that have parents etc. As usual we should think about the objects within the classes and what we know about them. This time it is useful to think about the statements we have made about `Person` in this Chapter – that all instances of `Person` have a father and a mother; add to this the information from the property hierarchy and we know that all instances of `Person` have parents and ancestors. We have repeated all of this in our new defined classes for `Ancestor` and `Descendant` and the reasoner has highlighted this information.
 
-```
-Task 15: More Ancestors
-```
-1. Query forMaleDescendant. You should getManback - they are equivalent (and this
-    makes sense).
-2. As an additional exercise, also add in properties for forefathers and foremothers. You
-    will follow the same pattern as forhasAncestor, but adding in, for instance,hasFather
-    as the sub-property of the transitive super-property ofhasForefatherand setting the
-    domains and ranges appropriately (or working out if they’ll be inferred appropriately).
-    Here we interpret a forefather as one’s father’s father etc. This isn’t quite right, as
-    a forefather is any male ancestor, but we’ll do it that way anyway. You might want
-    to play around with DL queries. Because of the blowup in inferred relationships, we
-    decided to not include this pattern in the tutorial version of the FHKB.
+![Figure 4.3](../images/FHKB%20figures/new/descendent_ancestor_defined_classes.PNG)
 
+**Figure 4.3:** The defined classes from Section 4.8 in the FHKB’s growing class hierarchy
 
-```
-Figure 4.3: The defined classes from Section 4.8 in the FHKB’s growing class hierarchy
-```
+|Task 15: More Ancestors|
+|---|
+|1. Query for `MaleDescendant`. You should get `Man` back - they are equivalent (and this makes sense). <br>2. As an additional exercise, also add in properties for forefathers and foremothers. You will follow the same pattern as for `hasAncestor`, but adding in, for instance, `hasFather` as the sub-property of the transitive super-property of `hasForefather` and setting the domains and ranges appropriately (or working out if they’ll be inferred appropriately). Here we interpret a forefather as one’s father’s father etc. This isn’t quite right, as a forefather is any male ancestor, but we’ll do it that way anyway. You might want to play around with DL queries. Because of the blowup in inferred relationships, we decided to not include this pattern in the tutorial version of the FHKB.
+
 ### 4.9 Summary
 
 Most of what we have done in this chapter is straight-forward OWL, all of which would have been met in
@@ -833,34 +756,32 @@ however, the approach we have taken: We have always thought in terms of the obje
 
 Here are some things that should now be understood upon completing this chapter:
 
-1. Restrictions on a class in our TBox mean we know stuff about individuals that are members of that
-    class, even though we have asserted no facts on those individuals. We have said, for instance, that
-    all members of the classPersonhave a mother, so any individual asserted to be aPersonmust have
-    a mother. We do not necessarily know who they are, but we know they have one.
-2. Some precision is missing – we only know Robert David Bright is aPerson, not that he is aMan.
-    This is because, so far, he only has the domain constraint ofhasMotherandhasFatherto help out.
-3. We can cause the ontology to be inconsistent, for example by providing facts that cannot be accom-
-    modated by the model of our ontology. In the example, David Bright was inferred to be a member
-    of two disjoint classes.
+1. Restrictions on a class in our TBox mean we know stuff about individuals that are members of that class, even though we have asserted no facts on those individuals. We have said, for instance, that all members of the class `Person` have a mother, so any individual asserted to be a `Person` must have a mother. We do not necessarily know who they are, but we know they have one.
+2. Some precision is missing – we only know Robert David Bright is a `Person`, not that he is a `Man`. This is because, so far, he only has the domain constraint of `hasMother` and `hasFather` to help out.
+3. We can cause the ontology to be inconsistent, for example by providing facts that cannot be accommodated by the model of our ontology. In the example, David Bright was inferred to be a member of two disjoint classes.
 
-Finally, we looked at some defined classes. We inferred equivalence between some classes where the
-extents of the classes were inferred to be the same – in this case the extents ofPersonandDescendant
-are the same. That is, all the objects that can appear inPersonwill also be members ofDescendant.
-We can check this implication intuitively – all people are descendants of someone. Perhaps not the most
-profound inference of all time, but we did no real work to place this observation in the FHKB.
+Finally, we looked at some defined classes. We inferred equivalence between some classes where the extents of the classes were inferred to be the same – in this case the extents of `Person` and `Descendant` are the same. That is, all the objects that can appear in `Person` will also be members of `Descendant`. We can check this implication intuitively – all people are descendants of someone. Perhaps not the most profound inference of all time, but we did no real work to place this observation in the FHKB.
 
+<img src="../images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
 
+```
 This last point is a good general observation. We can make the reasoner do work
 for us. The less maintenance we have to do in the FHKB the better. This will be
 a principle that works throughout the tutorial.
+```
+<img src="../images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
 
+```
 The FHKB ontology at this stage of the tutorial has an expressivity ofSRIF.
+```
+<img src="../images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
 
+```
 The time to reason with the FHKB at this point (in Protégé) on a typical desktop
 machine by HermiT 1.3.8 is approximately 0.884 sec (0.00047 % of final), by Pellet
 2.2.0 0.256 sec (0.00207 % of final) and by FaCT++ 1.6.4 is approximately 0.013
 sec (0.000 % of final). 0 sec indicates failure or timeout.
-
+```
 
 ## Chapter 5
 
