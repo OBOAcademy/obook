@@ -323,14 +323,8 @@ Facts: hasFather mr_plinth, hasMother mrs_plinth
 <sup>3</sup> Don’t quibble; it’s true enough here.
 
 | Task 2: Create the ABox|
-
-1. Using the information in Table A.1 (see appendix) about parentage (so the columns
-    about fathers and mothers), enter the fact assertions for the people which appear
-    in rows shaded in grey. We will only use thehasMotherandhasFatherproperties
-    in our fact assertions. You do not need to assert names and birth years yet. This
-    exercise will require you to create an individual for every person we want to talk about,
-    using the Firstname_Secondname_Familyname_Birthyear pattern, as for example in
-    Robert_David_Bright_1965.
+|---|
+|1. Using the information in Table A.1 (see appendix) about parentage (so the columns about fathers and mothers), enter the fact assertions for the people which appear in rows shaded in grey. We will only use thehasMotherandhasFatherproperties in our fact assertions. You do not need to assert names and birth years yet. This exercise will require you to create an individual for every person we want to talk about, using the Firstname_Secondname_Familyname_Birthyear pattern, as for example in Robert_David_Bright_1965.|
 
 ![camera](https://github.com/shawntanzk/obook/blob/FHKB-formatting/docs/images/FHKB%20figures/images/black_camera.png)
 ```
@@ -340,7 +334,9 @@ For the impatient reader, there is a convenience snapshot of the ontology includ
 the raw individuals available athttp://owl.cs.manchester.ac.uk/tutorials/
 fhkbtutorial.
 ```
-![note](https://github.com/shawntanzk/obook/blob/FHKB-formatting/docs/images/FHKB%20figures/images/NoteIconSmall.png)
+
+<img src="https://github.com/shawntanzk/obook/blob/FHKB-formatting/docs/images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
+
 ```
 If you are working with Protégé, you may want to look at the Matrix plugin for
 Protégé at this point. The plugin allows you to add individuals quickly in the
@@ -350,33 +346,22 @@ go to File » Check for plugins. Select the ‘Matrix Views’ plugin. Click ins
 wait until the the installation is confirmed, close and re-open Protégé; go to the
 ‘Window’ menu item, select ‘Tabs’ and add the ‘Individuals matrix’.
 ```
+
 Now do the following:
 
-```
-Task 3: DL queries
-```
-1. Classify the FHKB.
-2. Issue the DL queryhasFather value David_Bright_1934 and look at the answers (re-
-    member to check the respective checkbox in Protégé to include individuals in your
-    query results).
-3. Issue the DL queryisFatherOf value Robert_David_Bright_1965. Look at the answers.
-4. Look at the entailed facts onRobert_David_Bright_1965.
+
+|Task 3: DL queries|
+|---|
+|1. Classify the FHKB. <br>2. Issue the DL queryhasFather value David_Bright_1934 and look at the answers (remember to check the respective checkbox in Protégé to include individuals in your query results). <br>3. Issue the DL queryisFatherOf value Robert_David_Bright_1965. Look at the answers. <br>4. Look at the entailed facts onRobert_David_Bright_1965.|
 
 You should find the following:
 
 - David Bright (1934) is the father of Robert David Bright (1965) and Richard John Bright (1962).
 - Robert David Bright (1965) has David Bright 1934 as a parent.
 
-Since we have said thatisFatherOfhas an inverse ofhasFather, and we have asserted thatRobert_David_Bright_
-hasFather David_Bright_1934, we have a simple entailment thatDavid_Bright_1934 isFatherOf Robert_David_Bright_
+Since we have said thatisFatherOfhas an inverse ofhasFather, and we have asserted thatRobert_David_Bright_ hasFather David_Bright_1934, we have a simple entailment thatDavid_Bright_1934 isFatherOf Robert_David_Bright_. So, without asserting theisFatherOffacts, we have been able to ask and get answers for that DL query.
 
-. So, without asserting theisFatherOffacts, we have been able to ask and get answers for that DL query.
-
-As we asserted thatRobert_David_Bright_1965 hasFather David_Bright_1934, we also infer that he
-hasParent David_Bright_1934; this is becausehasParentis the super-property ofhasFatherand the sub-
-property implies the super-property. This works all the way up the property tree untiltopObjectProperty,
-so all individuals are related bytopObjectProperty—this is always true. This implication ‘upwards’ is the
-way to interpret how the property hierarchies work.
+As we asserted thatRobert_David_Bright_1965 hasFather David_Bright_1934, we also infer that he hasParent David_Bright_1934; this is becausehasParentis the super-property ofhasFatherand the sub-property implies the super-property. This works all the way up the property tree untiltopObjectProperty, so all individuals are related bytopObjectProperty—this is always true. This implication ‘upwards’ is the way to interpret how the property hierarchies work.
 
 
 ### 2.3 Summary
@@ -389,16 +374,18 @@ Simple exploitation of inverses of properties and super-properties of the assert
 We have also encountered some important principles:
 
 - We get inverses for free.
-- The sub-property implies the super-property. So,hasFatherimplies thehasParentfact between
-    individuals. This entailment of the super-property is very important and will drive much of the
-    inference we do with the FHKB.
+- The sub-property implies the super-property. So,hasFatherimplies thehasParentfact between individuals. This entailment of the super-property is very important and will drive much of the inference we do with the FHKB.
 - Upon reasoning we get the inverses of properties between named individuals for free.
-- Lots is still open. For example, we do not know the sex of individuals and what other children,
-    other than those described, people in the FHKB may have.
+- Lots is still open. For example, we do not know the sex of individuals and what other children, other than those described, people in the FHKB may have.
+
+<img src="https://github.com/shawntanzk/obook/blob/FHKB-formatting/docs/images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
 
 ```
 The FHKB ontology at this stage of the tutorial has an expressivity ofALHI.
 ```
+
+<img src="https://github.com/shawntanzk/obook/blob/FHKB-formatting/docs/images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
+
 ```
 The time to reason with the FHKB at this point (in Protégé) on a typical desktop
 machine by HermiT 1.3.8 is approximately 0.026 sec (0.00001 % of final), by Pellet
@@ -406,9 +393,9 @@ machine by HermiT 1.3.8 is approximately 0.026 sec (0.00001 % of final), by Pell
 sec (0.000 % of final). 0 sec indicates failure or timeout.
 ```
 
-## Chapter 3
+# Chapter 3
 
-# Ancestors and Descendants
+## Ancestors and Descendants
 
 In this Chapter you will:
 
