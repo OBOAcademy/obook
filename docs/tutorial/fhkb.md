@@ -58,7 +58,7 @@ all the information.
 - 0.2 Reporting Errors
 - 0.3 Acknowledgements
 
-[**Introduction**](#introduction)
+[**1. Introduction**](#introduction)
 
 - 1.1 Learning Outcomes
 - 1.2 Why Family History?
@@ -66,19 +66,19 @@ all the information.
 - 1.4 FHKB Resources
 - 1.5 Conventions used in this Tutorial
 
-[**Adding some Individuals to the FHKB**](#adding-some-individuals-to-the-fhkb)
+[**2. Adding some Individuals to the FHKB**](#adding-some-individuals-to-the-fhkb)
 
 - 2.1 A World of Objects
 - 2.2 Asserting Parentage Facts
 - 2.3 Summary
 
-[**Ancestors and Descendants**](#ancestors-and-descendants)
+[**3. Ancestors and Descendants**](#ancestors-and-descendants)
 
 - 3.1 Ancestors and Descendants
 - 3.2 Grandparents and Great Grandparents
 - 3.3 Summary
 
-[**Modelling the Person Class**](#modelling-the-person-class)
+[**4. Modelling the Person Class**](#modelling-the-person-class)
 
 - 4.1 The Class of Person
 - 4.2 Describing Sex in the FHKB
@@ -90,7 +90,7 @@ all the information.
 - 4.8 Adding Some Defined Classes for Ancestors and so on
 - 4.9 Summary
 
-[**Siblings in the FHKB**](#siblings-in-the-fhkb)
+[**5. Siblings in the FHKB**](#siblings-in-the-fhkb)
 
 - 5.1 Blood relations
 - 5.2 Siblings: Option One   
@@ -101,13 +101,13 @@ all the information.
 - 5.5 Aunts and Uncles 
 - 5.6 Summary
 
-[**Individuals in Class Expressions**](#individuals-in-class-expressions)
+[**6. Individuals in Class Expressions**](#individuals-in-class-expressions)
 
 - 6.1 Richard and Robert’s Parents and Ancestors
 - 6.2 Closing Down What we Know About Parents and Siblings
 - 6.3 Summary
 
-[**Data Properties in the FHKB**](#data-properties-in-the-fhkb)
+[**7. Data Properties in the FHKB**](#data-properties-in-the-fhkb)
    
 - 7.1 Adding Some Data Properties for Event Years
       - 7.1.1 Counting Numbers of Children
@@ -115,7 +115,7 @@ all the information.
 - 7.3 Adding Given and Family Names
 - 7.4 Summary
 
-[**Cousins in the FHKB**](#cousins-in-the-fhkb)
+[**8. Cousins in the FHKB**](#cousins-in-the-fhkb)
    
 - 8.1 Introducing Cousins
 - 8.2 First Cousins
@@ -123,7 +123,7 @@ all the information.
 - 8.4 Doing First Cousins Properly
 - 8.5 Summary
 
-[**9 Marriage in the FHKB**](#marriage-in-the-fhkb)
+[**9. Marriage in the FHKB**](#marriage-in-the-fhkb)
   
 - 9.1 Marriage
       - 9.1.1 Spouses
@@ -132,12 +132,12 @@ all the information.
 - 9.4 Aunts and Uncles in-Law
 - 9.5 Summary
 
-[**10 Extending the TBox**](#extending-the-tbox)
+[**10. Extending the TBox**](#extending-the-tbox)
   
 - 10.1 Adding Defined Classes
 - 10.2 Summary
 
-[**11 Final remarks**](#final-remarks)
+[**11. Final remarks**](#final-remarks)
 
 [**A FHKB Family Data**](#fhkb-family-data)
 
@@ -152,15 +152,11 @@ License.
 
 ## 0.2 Reporting Errors
 
-This manual will almost certainly contain errors, defects and infelicities. Do report them torobert.
-stevens@manchester.ac.uk. Supplying chapter, section and some actual context in the form of words
-will help in fixing any of these issues.
+This manual will almost certainly contain errors, defects and infelicities. Do report them to robert.stevens@manchester.ac.uk supplying chapter, section and some actual context in the form of words will help in fixing any of these issues.
 
 ## 0.3 Acknowledgements
 
-As well as the author list, many people have contributed to this work. Any contribution, such as reporting
-bugs etc., is rewarded by an acknowledgement of contribution (in alphabetical order) when the authors
-get around to adding them:
+As well as the author list, many people have contributed to this work. Any contribution, such as reporting bugs etc., is rewarded by an acknowledgement of contribution (in alphabetical order) when the authors get around to adding them:
 
 - Graham Goff;
 - Matthew Horridge;
@@ -172,31 +168,18 @@ get around to adding them:
 - George Moulton;
 - Bijan Parsia;
 - Alan Rector;
-
-```
-v
-```
-
 - Uli Sattler;
 - Dmitry Tsarkov;
 - Danielle Welter.
 
-```
-vi
-```
 
 ## Chapter 1
 
 # Introduction
 
-This tutorial introduces the tutee to many of the more advanced features of the Web Ontology Language
-(OWL). The topic of family history is used to take the tutee through various modelling issues and, in
-doing so, using many features of OWL 2 to build a Family History Knowledge Base (FHKB). The exercises
-are designed to maximise inference about family history through the use of an automated reasoner on an
-OWL knowledge base (KB) containing many members of the Stevens family.
+This tutorial introduces the tutee to many of the more advanced features of the Web Ontology Language (OWL). The topic of family history is used to take the tutee through various modelling issues and, in doing so, using many features of OWL 2 to build a Family History Knowledge Base (FHKB). The exercises are designed to maximise inference about family history through the use of an automated reasoner on an OWL knowledge base (KB) containing many members of the Stevens family.
 
-The aim, therefore, is to enable people to learn advanced features of OWL 2 in a setting that involves
-both classes and individuals, while attempting to maximise the use of inference within the FHKB.
+The aim, therefore, is to enable people to learn advanced features of OWL 2 in a setting that involves both classes and individuals, while attempting to maximise the use of inference within the FHKB.
 
 ## 1.1 Learning Outcomes
 
@@ -216,31 +199,15 @@ By doing this tutorial, a tutee should be able to:
 
 ### 1.2 Why Family History?
 
-Building an FHKB enables us to meet our learning outcomes through a topic that is accessible to virtually
-everyone. Family history or genealogy is a good topic for a general tutorial on OWL 2 as it enables us
-to touch many features of the language and, importantly, it is a field that everyone knows. All people
-have a family and therefore a family history – even if they do not know their particular family history.
-A small caveat was put on the topic being accessible to everyone as some cultures differ, for instance, in
-the description of cousins and labels given to different siblings. Nevertheless, family history remains a
-topic that everyone can talk about.
+Building an FHKB enables us to meet our learning outcomes through a topic that is accessible to virtually everyone. Family history or genealogy is a good topic for a general tutorial on OWL 2 as it enables us to touch many features of the language and, importantly, it is a field that everyone knows. All people have a family and therefore a family history – even if they do not know their particular family history. A small caveat was put on the topic being accessible to everyone as some cultures differ, for instance, in the description of cousins and labels given to different siblings. Nevertheless, family history remains a topic that everyone can talk about.
 
-Family history is a good topic for an OWL ontology as it obviously involves both individuals – the people
-involved – and classes of individuals – people, men and women, cousins, etc. Also, it is an area rich
-in inference; from only knowing parentage and sex of an individual, it is possible to work out all family
-relationships – for example, sharing parents implies a sibling relationship; one’s parent’s brothers are one’s
-uncles; one’s parent’s parents are one’s grandparents. So, we should be able to construct an ontology
-that allows us to both express family history, but also to infer family relationships between people from
-knowing relatively little about them.
+Family history is a good topic for an OWL ontology as it obviously involves both individuals – the people involved – and classes of individuals – people, men and women, cousins, etc. Also, it is an area rich in inference; from only knowing parentage and sex of an individual, it is possible to work out all family relationships – for example, sharing parents implies a sibling relationship; one’s parent’s brothers are one’s uncles; one’s parent’s parents are one’s grandparents. So, we should be able to construct an ontology that allows us to both express family history, but also to infer family relationships between people from knowing relatively little about them.
 
-As we will learn through the tutorial, OWL 2 cannot actually do all that is needed to create a FHKB.
-This is unfortunate, but we use it to our advantage to illustrate some of the limitations of OWL 2. We
-know that rule based systems can do family history with ease, but that is not the point here; we are not
-advocating OWL DL as an appropriate mechanism for doing family history, but we do use it as a good
-educational example.
+As we will learn through the tutorial, OWL 2 cannot actually do all that is needed to create a FHKB. This is unfortunate, but we use it to our advantage to illustrate some of the limitations of OWL 2. We know that rule based systems can do family history with ease, but that is not the point here; we are not advocating OWL DL as an appropriate mechanism for doing family history, but we do use it as a good educational example.
 
 We make the following assumptions about what people know:
 
-- We assume that people know OWL to the level that is known at the end of the Pizza tutorial^1.
+- We assume that people know OWL to the level that is known at the end of the [Pizza tutorial](http://owl.cs.manchester.ac.uk/publications/talks-and-tutorials/protg-owl-tutorial/).
     Some ground will be covered again, but a lot of basic OWL is assumed.
 - We assume people know how to use Protégé or their OWL environment of choice. We do not give
     ‘click by click’ instructions. At some places, some guidance is given, but this is not to be relied
@@ -258,11 +225,7 @@ We make some simplifying assumptions in this tutorial:
     get back to a primordial soup and one’s ancestors are not humans (members of the classPerson),
     but we don’t bother with such niceties.
 
-At the end of the tutorial, you should be able to produce a property hierarchy and a TBox or class
-hierarchy such as shown in Figure 1.1; all supported by use of the automated reasoner and a lot of
-OWL 2’s features.
-
-(^1) [http://owl.cs.manchester.ac.uk/publications/talks-and-tutorials/protg-owl-tutorial/](http://owl.cs.manchester.ac.uk/publications/talks-and-tutorials/protg-owl-tutorial/)
+At the end of the tutorial, you should be able to produce a property hierarchy and a TBox or class hierarchy such as shown in Figure 1.1; all supported by use of the automated reasoner and a lot of OWL 2’s features.
 
 
 **Figure 1.1:** A part of the class and property hierarchy of the final FHKB.
@@ -280,7 +243,7 @@ Here are some tips on using this manual to the best advantage:
 
 ### 1.4 FHKB Resources
 
-The following resources are available athttp://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial:
+The following resources are available at http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial:
 
 - A full version of the Stevens FHKB.
 - Some links to papers about the FHKB.
