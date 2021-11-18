@@ -608,38 +608,27 @@ DisjointWith: Sex
 ```
 ### 4.3 Defining Man and Woman
 
-We now have some of the foundations for the FHKB. We have the concept ofPerson, but we also need
-to have the concepts ofManandWoman. Now we havePerson, together withMalenessandFemaleness,
-we have the necessary components to defineManandWoman. These two classes can be defined as: Any
-Personobject that has a male sex can be recognised to be a man; anyPersonobject that has a female sex
+We now have some of the foundations for the FHKB. We have the concept of `Person`, but we also need
+to have the concepts of `Man` and `Woman`. Now we have `Person`, together with `Maleness` and `Femaleness`,
+we have the necessary components to define `Man` and `Woman`. These two classes can be defined as: Any
+`Person` object that has a male sex can be recognised to be a man; anyPersonobject that has a female sex
 can be recognised as a member of the class woman. Again, think about what conditions are _sufficient_
 for an object to be _recognised_ to be a member of a class; this is how we create defined classes through
 the use of OWL equivalence axioms.
 
-To make theManandWomanclasses do the following:
+To make the `Man` and `Woman` classes do the following:
 
-```
-Task 8: Describe men and women
-```
-1. Create a classMan;
-2. Make it equivalent to aPerson that hasSex some Maleness;
-3. Do the same, but withFemaleness, to create theWomanclass;
-4. A covering axiom can be put on thePersonclass to indicate that man and woman are
-    the only kinds of person that can exist. (This is not strictly true due to the waySex
-    has been described.)
-5. Run the reasoner and take a look.
+|Task 8: Describe men and women|
+|---|
+|1. Create a class `Man`; <br>2. Make it equivalent to a `Person that hasSex some Maleness`; <br>3. Do the same, but with `Femaleness`, to create the `Woman` class; <br>4. A covering axiom can be put on the `Person` class to indicate that man and woman are the only kinds of person that can exist. (This is not strictly true due to the way `Sex` has been described.) <br>5. Run the reasoner and take a look.|
 
-Having run the reasoner, theManandWomanclasses should appear underneathPerson^2.
+Having run the reasoner, the `Man` and `Woman` classes should appear underneath `Person`<sup>5</sup>.
 
-TheManandWomanclasses will be important for use as domain and range constraints on many of the
-properties used in the FHKB. To achieve our aim of maximising inference, we should be able to infer
-that individuals are members ofMan,WomanorPersonby the properties held by an object. We should
-not have to state the type of an individual in the FHKB.
+<sup>5</sup>Actually in Protégé, this might happen without the need to run the reasoner.
 
-The classes forManandWomanshould look like:
+The `Man` and `Woman` classes will be important for use as domain and range constraints on many of the properties used in the FHKB. To achieve our aim of maximising inference, we should be able to infer that individuals are members of `Man`, `Woman` or `Person` by the properties held by an object. We should not have to state the type of an individual in the FHKB.
 
-(^2) Actually in Protégé, this might happen without the need to run the reasoner.
-
+The classes for `Man` and `Woman` should look like:
 
 ```
 Class: Man
