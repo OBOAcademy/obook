@@ -1668,6 +1668,8 @@ In this chapter you will:
 1. Just add lots of defined classes for all the aspects we have covered in this FHKB tutorial;
 2. You will learn that the properties used in these defined classes must be chosen with care.
 
+![camera](../images/FHKB%20figures/images/black_camera.png)
+     
 ```
 There is a snapshot of the ontology as required at this point in the tutorial available
 athttp://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial.
@@ -1677,137 +1679,86 @@ athttp://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial.
 
 Add the following defined classes:
 
-```
-Task 42: Adding defined classes
-```
-1. Relation and blood relation;
-2. Forefather and Foremother;
-3. Grandparent, Grandfather and Grandmother;
-4. GreatGrandparent, GreatGrandfather and GreatGrandmother;
-5. GreatGrandparentOfRobert, GreatGrandfatherOfRobert and GreatGrandMoth-
-    erOfRobert
-6. Daughter, Son, Brother, Sister, Child;
-7. Aunt, Uncle, AuntInLaw, UncleInLaw, GreatAunt and GreatUncle;
-8. FirstCousin and SecondCousin;
-9. First cousin once removed;
-10. InLaw, MotherInLaw, FatherInLaw, ParentInLaw, SiblingInLaw, SisterInLaw, Broth-
-erInLaw;
-11. Any defined class for any property in the hierarchy and any nominal variant of these
-classes.
+|Task 42: Adding defined classes|
+|---|
+|<ol><li> Relation and blood relation; </li><li> Forefather and Foremother; </li><li> Grandparent, Grandfather and Grandmother; </li><li> GreatGrandparent, GreatGrandfather and GreatGrandmother; </li><li> GreatGrandparentOfRobert, GreatGrandfatherOfRobert and GreatGrandMotherOfRobert </li><li> Daughter, Son, Brother, Sister, Child; </li><li> Aunt, Uncle, AuntInLaw, UncleInLaw, GreatAunt and GreatUncle; </li><li> FirstCousin and SecondCousin; </li><li> First cousin once removed; </li><li> InLaw, MotherInLaw, FatherInLaw, ParentInLaw, SiblingInLaw, SisterInLaw, BrotherInLaw; </li><li> Any defined class for any property in the hierarchy and any nominal variant of these classes.</li></ol>|
 
-The three classes ofChild,SonandDaughterare of note. They are coded in the following way:
+The three classes of `Child`, `Son` and `Daughter` are of note. They are coded in the following way:
 
 ```
 Class: Child EquivalentTo: Person that hasParent Some Person
 Class: Son EquivalentTo: Man that hasParent Some Person
 Class: Daughter EquivalentTo: Woman that hasParent Some Person
 ```
-After running the reasoner, you will find thatPersonis found to be equivalent toChild;Daughteris
-equivalent toWomanand thatSonis equivalent toMan. This does, of course, make sense – each and
-every person is someone’s child, each and every woman is someone’s daughter. We will forget evolutionary
-time-scales where this might be thought to break down at some point – allPersonindividuals are also
-Descendantindividuals, but do we expect some molecule in some prebiotic soup to be a member of this
-class?
+After running the reasoner, you will find that `Person` is found to be equivalent to `Child`; `Daughter` is equivalent to `Woman` and that `Son` is equivalent to `Man`. This does, of course, make sense – each and every person is someone’s child, each and every woman is someone’s daughter. We will forget evolutionary time-scales where this might be thought to break down at some point – all `Person` individuals are also `Descendant` individuals, but do we expect some molecule in some prebiotic soup to be a member of this class?
 
 Nevertheless, within the scope of the FHKB, such inferred equivalences are not unreasonable. They are
 also instructive; it is possible to have different intentional descriptions of a class and for them to have the
 same logical extents. You can see another example of this happening in the amino acids ontology, but
 for different reasons.
 
-TakingGrandparentas an example class, there are two ways of writing the defined class:
-
+Taking `Grandparent` as an example class, there are two ways of writing the defined class:
 
 ```
 Class: Grandparent EquivalentTo: Person and isGrandparentOf some Person
 Class: Grandparent EquivalentTo: Person and (isParentOf some (Person and (is-
 ParentOf some Person))
 ```
-Each comes out at a different place in the class hierarchy. They both capture the right individuals as
-members (that is, those individuals in the ABox that are holding aisGrandparentOfproperty), but the
-class hierarchy is not correct. By definition, all grandparents are also parents, but the way the object
-property hierarchy works means that the first way of writing the defined class (with theisGrandparentOf
-property) is not subsumed by the classParent. We want this to happen in any sensible class hierarchy,
-so we have to use the second pattern for all the classes, spelling out the sub-property path that implies
-the property such asisGrandparentOfwithin the equivalence axiom.
 
-The reason for this need for the ‘long-form’ is that theisGrandparentOfdoes not imply theisParentOf
-property. As described in Chapter 3 if this implication were the case, being a grandparent of Robert
-David Bright, for instance, would also imply that the samePersonwere a parent of Robert David Bright;
-an implication we do not want. As these two properties (isParentOfandisGrandparentOf) do not subsume
-each other means that the defined classes written according to pattern one above will not subsume each
-other in the class hierarchy. Thus we use the second pattern. If we look at the class for grandparents of
-Robert:
+Each comes out at a different place in the class hierarchy. They both capture the right individuals as members (that is, those individuals in the ABox that are holding a `isGrandparentOf` property), but the class hierarchy is not correct. By definition, all grandparents are also parents, but the way the object property hierarchy works means that the first way of writing the defined class (with the `isGrandparentOf` property) is not subsumed by the class `Parent`. We want this to happen in any sensible class hierarchy, so we have to use the second pattern for all the classes, spelling out the sub-property path that implies the property such as `isGrandparentOf` within the equivalence axiom.
+
+The reason for this need for the ‘long-form’ is that the `isGrandparentOf` does not imply the `isParentOf` property. As described in Chapter 3 if this implication were the case, being a grandparent of Robert David Bright, for instance, would also imply that the same `Person` were a parent of Robert David Bright; an implication we do not want. As these two properties (`isParentOf` and `isGrandparentOf`) do not subsume each other means that the defined classes written according to pattern one above will not subsume each other in the class hierarchy. Thus we use the second pattern. If we look at the class for grandparents of Robert:
 
 ```
 Class: GrandparentOfRobert
 EquivalentTo: Person that isParentOf some (Person that isParentOf value Robert
 David Bright)
 ```
-If we make the equivalent class for Richard John Bright, apply the reasoner and look at the hierarchy, we
-see that the two classes are not logically equivalent, even though they have the same extents of William
-George Bright, Iris Ellen Archer, Charles Herbert Rever and Violet Sylvia Steward. We looked at this
-example in Section 6.2, where there is an explanation and solutions.
+
+If we make the equivalent class for Richard John Bright, apply the reasoner and look at the hierarchy, we see that the two classes are not logically equivalent, even though they have the same extents of William George Bright, Iris Ellen Archer, Charles Herbert Rever and Violet Sylvia Steward. We looked at this example in Section 6.2, where there is an explanation and solutions.
 
 ### 10.2 Summary
 
-We can add defined classes based on each property we have put into the object property hierarchy. We
-see the expected hierarchy; as can be seen from Figure 10.1 it has an obvious symmetry based on sex.
-We also see a lot of equivalences inferred – all women are daughters, as well as women descendants.
-Perhaps not the greatest insight ever gained, but it at least makes sense; all women must be daughters.
-It is instructive to use the explanation feature in Protégé to look at why the reasoner has made these
-inferences. For example, take a look at the classhasGrandmother some Woman– it is instructive to see
-how many there are.
+We can add defined classes based on each property we have put into the object property hierarchy. We see the expected hierarchy; as can be seen from Figure 10.1 it has an obvious symmetry based on sex. We also see a lot of equivalences inferred – all women are daughters, as well as women descendants. Perhaps not the greatest insight ever gained, but it at least makes sense; all women must be daughters. It is instructive to use the explanation feature in Protégé to look at why the reasoner has made these inferences. For example, take a look at the class `hasGrandmother some Woman` – it is instructive to see how many there are.
 
-Like the Chapter on marriage and in-law (Chapter 9), this chapter has largely been revision. One thing
-of note is, however, that we must not use the object properties that are inferred through sub-property
-chains as definitions in the TBox; we must spell out the sub-property chain in the definition, otherwise
-the implications do not work properly.
+Like the Chapter on marriage and in-law (Chapter 9), this chapter has largely been revision. One thing of note is, however, that we must not use the object properties that are inferred through sub-property chains as definitions in the TBox; we must spell out the sub-property chain in the definition, otherwise the implications do not work properly.
 
-One thing is almost certain; the resulting TBox is rather complex and would be almost impossible to
-maintain by hand.
+One thing is almost certain; the resulting TBox is rather complex and would be almost impossible to maintain by hand.
 
-
+![Figure 10.1](../images/FHKB%20figures/class_hierachy_final_1.PNG)
+     
 **Figure 10.1:** The full TBox hierarchy of the FHKB
 
-
+<img src="../images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
+     
+```
 The FHKB ontology at this stage of the tutorial has an expressivity ofSROIQ(D).
-
+```
+ 
+<img src="../images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
+     
+```
 The time to reason with the FHKB at this point (in Protégé) on a typical desktop
 machine by HermiT 1.3.8 is approximately 0.000 sec (0.00000 % of final), by Pellet
 2.2.0 0.000 sec (0.00000 % of final) and by FaCT++ 1.6.4 is approximately 35.438
 sec (1.000 % of final). 0 sec indicates failure or timeout.
+````
 
+# Chapter 11
 
-## Chapter 11
+## Final remarks
 
-# Final remarks
+![dragon](../images/FHKB%20figures/dragon.png)  
+     
+If you have done all the tasks within this tutorial, then you will have touched most parts of OWL 2. Unusually for most uses of OWL we have concentrated on individuals, rather than just on the TBox. One note of warning – the full FHKB has some 450 members of the Bright family and takes a reasonably long time to classify, even on a sensible machine. The FHKB is not scalable in its current form.
 
-If you have done all the tasks within this tutorial, then you will have touched most parts of OWL 2.
-Unusually for most uses of OWL we have concentrated on individuals, rather than just on the TBox.
-One note of warning – the full FHKB has some 450 members of the Bright family and takes a reasonably
-long time to classify, even on a sensible machine. The FHKB is not scalable in its current form.
+One reason for this is that we have deliberately maximised inference. We have attempted not to explicitly type the individuals, but drive that through domain and range constraints. We are making the property hierarchy do lots of work. For the individual Robert David Bright, we only have a couple of assertions, but we infer some 1 500 facts between Robert David Bright and other named individuals in the FHKB–displaying this in Protégé causes problems. We have various complex classes in the TBox and so on.
 
-One reason for this is that we have deliberately maximised inference. We have attempted not to explicitly
-type the individuals, but drive that through domain and range constraints. We are making the property
-hierarchy do lots of work. For the individual Robert David Bright, we only have a couple of assertions,
-but we infer some 1 500 facts between Robert David Bright and other named individuals in the FHKB–
-displaying this in Protégé causes problems. We have various complex classes in the TBox and so on.
+![dragon](../images/FHKB%20figures/dragon.png)  
+     
+We probably do not wish to drive a genealogical application using an FHKB in this form. Its purpose is educational. It touches most of OWL 2 and shows a lot of what it can do, but also a considerable amount of what it cannot do. As inference is maximised, the FHKB breaks most of the OWL 2 reasoners at the time of writing.However, it serves its role to teach about OWL 2.
 
-We probably do not wish to drive a genealogical application using an FHKB in this form. Its purpose is
-educational. It touches most of OWL 2 and shows a lot of what it can do, but also a considerable amount
-of what it cannot do. As inference is maximised, the FHKB breaks most of the OWL 2 reasoners at the
-time of writing.However, it serves its role to teach about OWL 2.
-
-OWL 2 on its own and using it in this style, really does not work for family history. We have seen that
-siblings and cousins cause problems. rules in varius forms can do this kind of thing easily—it is one of
-the primary examples for learning about Prolog. Nevertheless, the FHKB does show how much inference
-between named individuals can be driven from a few fact assertions and a property hierarchy. Assuming
-a powerful enough reasoner and the ability to deal with many individuals, it would be possible to make
-a family history application using the FHKB; as long as one hid the long and sometimes complex queries
-and manipulations that would be necessary to ‘prune’ some of the ‘extra’ facts found about individuals.
-However, the FHKB does usefully show the power of OWL 2, touch a great deal of the language and
-demonstrate some of its limitations.
-
+OWL 2 on its own and using it in this style, really does not work for family history. We have seen that siblings and cousins cause problems. rules in varius forms can do this kind of thing easily—it is one of the primary examples for learning about Prolog. Nevertheless, the FHKB does show how much inference between named individuals can be driven from a few fact assertions and a property hierarchy. Assuming a powerful enough reasoner and the ability to deal with many individuals, it would be possible to make a family history application using the FHKB; as long as one hid the long and sometimes complex queries and manipulations that would be necessary to ‘prune’ some of the ‘extra’ facts found about individuals. However, the FHKB does usefully show the power of OWL 2, touch a great deal of the language and demonstrate some of its limitations.
 
 # Appendix A
 
