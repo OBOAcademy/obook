@@ -1504,10 +1504,14 @@ In this chapter you will:
 3. Re-visit aunts and uncles to do them properly;
 4. Use more than one sub-property chain on a given property.
 
+![camera](../images/FHKB%20figures/images/black_camera.png)
+     
 ```
 There is a snapshot of the ontology as required at this point in the tutorial available
 athttp://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial.
 ```
+<img src="../images/FHKB%20figures/images/WarningIcon.png" alt="note" width="50"/>
+ 
 ```
 Much of what is in this chapter is really revision; it is more of the same - making
 lots of properties and using lots of sub-property chains. However, it is worth it as
@@ -1517,83 +1521,35 @@ marriages.
 ```
 ### 9.1 Marriage
 
-Marriage is a culturally complex situation to model. The FHKB started with a conservative model of
-a marriage involving only one man and one woman.^1 Later versions are more permissive; a marriage
-simply has a minimum of two partners. This leaves it open to numbers and sex of the people involved.
-In fact, ‘marriage’ is probably not the right name for it. UsingBreedingRelationshipas a label (the one
-favoured by the main author’s mother) may be a little too stark and might be a little exclusive.... In
-
-(^1) There being no funny stuff in the Stevens family.
-
-
-any case, some more generic name is probably better and various subclasses of the FHKB’sMarriageclass
-are probably necessary.
+Marriage is a culturally complex situation to model. The FHKB started with a conservative model of a marriage involving only one man and one woman.<sup>10</sup> Later versions are more permissive; a marriage simply has a minimum of two partners. This leaves it open to numbers and sex of the people involved. In fact, ‘marriage’ is probably not the right name for it. Using `BreedingRelationship` as a label (the one favoured by the main author’s mother) may be a little too stark and might be a little exclusive.... In any case, some more generic name is probably better and various subclasses of the FHKB’s `Marriage` class are probably necessary.
+     
+<sup>10</sup> There being no funny stuff in the Stevens family.
 
 To model marriage do the following:
 
-```
-Task 36: Marriage
-```
-1. Create a classMarriage, subclass ofDomainEntity;
-2. Create the properties:
-    hasPartner(domainMarriageand rangePerson) andisPartnerIn
-    hasFemalePartner(domainMarriageand rangeWoman, sub-property ofhasPartner)
-and its inverseisFemalePartnerIn;
-a sub-property ofhasPartner hasMalePartner(domainMarriageand rangeMan)
-and its inverseisMalePartnerIn;
-3. Create the data propertyhasMarriageYear, making us a sub-property ofhasEventYear,
-    make it functional;
-4. Create an individualm001with the labelMarriage of David and Margaretand add the
-    facts:
-       hasMalePartnerDavid_Bright_1934;
-       hasFemalePartnerMargaret_Grace_Rever_1934
-       hasMarriageYear 1958;
-5. Create an individualm002with the labelMarriage of John and Joyceand add the facts:
-    hasMalePartnerJohn_Bright_1930;
-    hasFemalePartnerJoyce_Gosport(you may have to add Joyce if you did not al-
-    ready did that);
-       hasMarriageYear 1955;
-6. Create an individualm003with the labelMarriage of Peter and Dianaand add the
-    facts:
-       hasMalePartnerPeter_William_Bright_1941;
-       hasFemalePartnerDiana_Pool(you may have to add Diana if you did not already
-    did that);
-       hasMarriageYear 1964;
+|Task 36: Marriage|
+|---|
+|<ol><li> Create a class `Marriage`, subclass of `DomainEntity`;</li><li> Create the properties:<ul><li>`hasPartner`(domain `Marriage` and range `Person`) and `isPartnerIn`</li><li>`hasFemalePartner`(domain `Marriage` and range `Woman`, sub-property of `hasPartner`) and its inverse `isFemalePartnerIn`;</li><li> a sub-property of `hasPartner` has `MalePartner` (domain `Marriage` and range `Man`)and its inverse `isMalePartnerIn`;</li></ul> </li><li> Create the data property `hasMarriageYear`, making us a sub-property of `hasEventYear`,make it functional;</li><li>Create an individual `m001` with the label `Marriage of David and Margaret` and add the facts: <ul><li>`hasMalePartner David_Bright_1934`;</li><li>`hasFemalePartner Margaret_Grace_Rever_1934`</li><li>`hasMarriageYear 1958`;</li></ul> </li><li>Create an individual `m002` with the label `Marriage of John and Joyce` and add the facts:<ul><li>`hasMalePartner` `John_Bright_1930`;</li><li>`hasFemalePartner` `Joyce_Gosport`(you may have to add Joyce if you did not already did that);</li><li>`hasMarriageYear` `1955`;</li></ul><li>Create an individual `m003` with the label `Marriage of Peter and Dianaand` add the facts: <ul><li>`hasMalePartner` `Peter_William_Bright_1941`;</li><li>`hasFemalePartner` `Diana_Pool`(you may have to add Diana if you did not already did that);</li><li>`hasMarriageYear` `1964`;</li></ul> </li></ol>|
 
 We have the basic infrastructure for marriages. We can ask the usual kinds of questions; try the following:
 
 
-```
-Task 37: DL queries
-```
-1. Ask the following DL queries:
-    - The Women partners in marriages;
-    - Marriages that happened before 1960 (see example below);
-    - Marriages that happened after 1960;
-    - Marriages that involved a man with the family name ‘Bright’.
+|Task 37: DL queries|
+|---|
+|<ol><li> Ask the following DL queries: <ul><li>The Women partners in marriages; </li><li>Marriages that happened before 1960 (see example below); </li><li>Marriages that happened after 1960; </li><li>Marriages that involved a man with the family name ‘Bright’.</li></ol>|
 
 ```
 DL query: Marriage and hasMarriageYear some int[<= 1960]
 ```
 #### 9.1.1 Spouses
 
-This marriage infrastructure can be used to infer some slightly more interesting things for actual people.
-While we want marriage objects so that we can talk about marriage years and even locations, should we
-want to, we also want to be able to have the straight-forward spouse relationships one would expect. We
-can use sub-property chains in the usual manner; do the following:
+This marriage infrastructure can be used to infer some slightly more interesting things for actual people. While we want marriage objects so that we can talk about marriage years and even locations, should we want to, we also want to be able to have the straight-forward spouse relationships one would expect. We can use sub-property chains in the usual manner; do the following:
 
-```
-Task 38: Wifes and Husbands
-```
-1. Create a propertyhasSpousewith two sub-propertieshasHusbandandhasWife.
-2. Create the inversesisSpouseOf,isWifeOfandisHusbandOf.
-3. To thehasWifeproperty, add the sub-property chainisMalePartnerIn o hasFemalePart-
-    ner.
-4. Follow the same pattern for thehasHusbandproperty.
+|Task 38: Wifes and Husbands|
+|---|
+|<ol><li> Create a propertyhasSpousewith two sub-properties `hasHusband` and `hasWife`. </li><li>Create the inverses `isSpouseOf`, `isWifeOf` and `isHusbandOf`. </li><li>To the `hasWife` property, add the sub-property chain `isMalePartnerIn o hasFemalePartner`. </li><li>Follow the same pattern for the `hasHusband` property.|
 
-Figure 9.1 shows what is happening with the sub-property chains. Note that the domains and ranges of
-the spouse properties come from the elements of the sub-property chains. Note also that thehasSpouse
-relationship will be implied from its sub-property chains.
+Figure 9.1 shows what is happening with the sub-property chains. Note that the domains and ranges of the spouse properties come from the elements of the sub-property chains. Note also that the `hasSpouse` relationship will be implied from its sub-property chains.
 
 The following questions can now be asked:
 
@@ -1601,22 +1557,17 @@ The following questions can now be asked:
 - Has a husband born before 1940;
 - The wife of an uncle of William Bright 1970.
 
+![Figure 9.1](../images/FHKB%20figures/spouse.png)
 
-```
-Figure 9.1: The sub-property chain path used to infer the spouse relationships via the marriage partnerships.
-```
-```
-Figure 9.2: Tracing out the path between objects to make the sub-property chain for mother-inlaws
-```
+**Figure 9.1:** The sub-property chain path used to infer the spouse relationships via the marriage partnerships.
+
 and many more. This is really a chance to explore your querying abilities and make some complex
 nested queries that involve going up and down the hierarchy and tracing routes through the graph of
 relationships between the individuals you’ve inferred.
 
 ### 9.2 In-Laws
 
-Now we have spouses, we can also have in-laws. The path is simple: isSpouseOf o hasMotherimplies
-hasMotherInLaw. The path involved in mother-in-laws can be seen in Figure 9.2. The following OWL
-code establishes the sub-property chains forhasMotherInLaw:
+Now we have spouses, we can also have in-laws. The path is simple: `isSpouseOf o hasMother` implies `hasMotherInLaw`. The path involved in mother-in-laws can be seen in Figure 9.2. The following OWL code establishes the sub-property chains for `hasMotherInLaw`:
 
 ```
 ObjectProperty: hasMotherInLaw
@@ -1627,23 +1578,19 @@ Range: Woman
 InverseOf: isMotherInLawOf
 ```
 
+![Figure 9.2](../images/FHKB%20figures/mother_in_law.png)
+     
+**Figure 9.2:** Tracing out the path between objects to make the sub-property chain for mother-in-laws
+     
 Do the following to make the parent in-law properties:
 
-```
-Task 39: Parents in-law
-```
-1. CreatehasParentInLawwith two sub-properties ofhasMotherInLawandhasFatherInLaw;
-2. Create the inverses, but remember to let the reasoner infer the hierarchy on that side
-    of the hierarchy;
-3. Add the sub-property chains as described in the pattern forhasMotherInLawabove;
-4. Run the reasoner and check that the mother-in-law of Margaret Grace Rever is Iris
-    Ellen Archer.
+|Task 39: Parents in-law|
+|---|
+|<ol><li> Create `hasParentInLaw` with two sub-properties of `hasMotherInLaw` and `hasFatherInLaw`; </li><li> Create the inverses, but remember to let the reasoner infer the hierarchy on that side of the hierarchy; </li><li> Add the sub-property chains as described in the pattern for `hasMotherInLaw` above; </li><li> Run the reasoner and check that the mother-in-law of Margaret Grace Rever is Iris Ellen Archer.</li></ol>|
 
 ### 9.3 Brothers and Sisters In-Law
 
-Brothers and sisters in law have the interesting addition of having more than one path between objects
-to establish a sister or brother in law relationship. The OWL code below establishes the relationships for
-‘is sister in law of’:
+Brothers and sisters in law have the interesting addition of having more than one path between objects to establish a sister or brother in law relationship. The OWL code below establishes the relationships for ‘is sister in law of’:
 
 ```
 ObjectProperty: hasSisterInLaw
@@ -1651,69 +1598,60 @@ SubPropertyOf: hasSiblingInLaw
 SubPropertyChain: hasSpouse o hasSister
 SubPropertyChain: hasSibling o isWifeOf
 ```
-A wife’s husband’s sister is a sister in law of the wife. Figure 9.3 shows the two routes to being a sister-in-
-law. In addition, the wife is a sister in law of the husband’s siblings. One can add as many sub-property
-chains to a property as one needs. You should add the properties forhasSiblingInLawOfand its obvious
-sub-properties following the inverse of the pattern above.
+A wife’s husband’s sister is a sister in law of the wife. Figure 9.3 shows the two routes to being a sister-in-law. In addition, the wife is a sister in law of the husband’s siblings. One can add as many sub-property chains to a property as one needs. You should add the properties for `hasSiblingInLawOf` and its obvious sub-properties following the inverse of the pattern above.
 
-```
-Task 40: Siblings in-law
-```
-1. Create the relationships for siblings-in-law as indicated in the owl code above.
+|Task 40: Siblings in-law|
+|---|
+|<ol><li> Create the relationships for siblings-in-law as indicated in the owl code above.</li></ol>|
 
+![dragon](../images/FHKB%20figures/dragon.png)      
+     
 ```
 By now, chances are high that the realisation takes a long time. We recommend to
 remove the very computationally expensive restrictionhasParent exactly 2 Person
 on thePersonclass, if you have not done it so far.
 ```
 
-```
-Figure 9.3: The two routes to being a sister-in-law.
-```
+![Figure 9.3](../images/FHKB%20figures/sister_in_law.png)
+     
+**Figure 9.3:** The two routes to being a sister-in-law.
+
 ### 9.4 Aunts and Uncles in-Law
 
-The uncle of Robert David Bright has a wife, but she is not the aunt of Robert David Bright, she is the
-aunt-in-law. This is another kith relationship, not a kin relationship. The pattern has a familiar feel:
+The uncle of Robert David Bright has a wife, but she is not the aunt of Robert David Bright, she is the aunt-in-law. This is another kith relationship, not a kin relationship. The pattern has a familiar feel:
 
 ```
 ObjectProperty: isAuntInLawOf
 SubPropertyOf: isInLawOf
 SubPropertyChain: isWifeOf o isBrotherOf o isParentOf
 ```
-```
-Task 41: Uncles and aunts in-law
-```
-1. CreatehasAuntInLawandhasUncleInLawin the usual way;
-2. Test in the usual way;
-3. Tidy up the top of the property hierarchy so that it looks like Figure 9.4. We have a
-    top property ofhasRelationand two sub-properties ofisBloodRelationOfandisInLawOf
-    to establish the kith and kin relationships respectively;
-4. All the properties created in this chapter (except for spouses) should be underneath
-    isInLawOf.
 
+|Task 41: Uncles and aunts in-law|
+|---|
+|<ol><li> Create `hasAuntInLaw` and `hasUncleInLaw` in the usual way; </li><li> Test in the usual way; </li><li> Tidy up the top of the property hierarchy so that it looks like Figure 9.4. We have a top property of `hasRelation` and two sub-properties of `isBloodRelationOf` and `isInLawOf` to establish the kith and kin relationships respectively; </li><li> All the properties created in this chapter (except for spouses) should be underneath `isInLawOf`.</li></ol>|
+
+![Figure 9.4](../images/FHKB%20figures/new/prophierarchyinlaw.PNG)
+     
+**Figure 9.4:** The object property hierarchy after adding the various in-law properties.
+
+  
 ### 9.5 Summary
 
-This has really been a revision chapter; nothing new has really been introduced. We have added a lot of
-new object properties and one new data property. The latest object property hierarchy with the ‘in-law’
-branch can be seen in Figure 9.4. Highlights have been:
+This has really been a revision chapter; nothing new has really been introduced. We have added a lot of new object properties and one new data property. The latest object property hierarchy with the ‘in-law’ branch can be seen in Figure 9.4. Highlights have been:
 
-- Having an explicit marriage object so that we can say things about the marriage itself, not just the
-
-
-```
-Figure 9.4: The object property hierarchy after adding the various in-law properties.
-```
-```
-people in the marriage;
-```
+- Having an explicit marriage object so that we can say things about the marriage itself, not just the people in the marriage;
 - We have seen that more than one property chain can be added to a property;
 - We have added a lot of kith relationships to join the kin or blood relationships;
-- As usual, the reasoner can establish the hierarchy for the inverses and put a lot of the domain and
-    ranges in for free.
+- As usual, the reasoner can establish the hierarchy for the inverses and put a lot of the domain and ranges in for free.
 
+<img src="../images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
+     
 ```
 The FHKB ontology at this stage of the tutorial has an expressivity ofSROIQ(D).
 ```
+
+<img src="../images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
+     
 ```
 The time to reason with the FHKB at this point (in Protégé) on a typical desktop
 machine by HermiT 1.3.8 is approximately 0.000 sec (0.00000 % of final), by Pellet
@@ -1721,9 +1659,9 @@ machine by HermiT 1.3.8 is approximately 0.000 sec (0.00000 % of final), by Pell
 sec (0.046 % of final). 0 sec indicates failure or timeout.
 ```
 
-## Chapter 10
+# Chapter 10
 
-# Extending the TBox
+## Extending the TBox
 
 In this chapter you will:
 
