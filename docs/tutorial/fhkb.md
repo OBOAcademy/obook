@@ -788,7 +788,7 @@ Do the following first:
 
 |Task 16: The bloodrelation object property|
 |---|
-|1. Create an `hasBloodrelation` object property, making it a sub-property of `hasRelation`. <br>2. Add appropriate property characteristics. <br>3. Make the already existing `hasAncestor` property a sub-property of `hasBloodrelation`.|
+|<ol><li> Create an `hasBloodrelation` object property, making it a sub-property of `hasRelation`. </li><li> Add appropriate property characteristics. </li><li> Make the already existing `hasAncestor` property a sub-property of `hasBloodrelation`.</li></ol>|
 
 Does a blood relation of Robert have the same relationship to Robert (symmetry)? Is a blood relation of Robert’s blood relation a blood relation of Robert (transitivity)? Think of an aunt by marriage; her children are my cousins and blood relations via my uncle, but my aunt is not my blood relation. My siblings share parents; male siblings are brothers and female siblings are sisters. So far we have asserted parentage facts for the `Person` in our ABox. Remember that our parentage properties have inverses, so if we have added an `hasFather` property between a `Person` and a `Man`, we infer the `isFatherOf` property between that `Man` and that `Person`.
 
@@ -828,7 +828,7 @@ Do the following tasks:
 
 |Task 17: Siblings|
 |---|
-|1. Add the `hasSibling` property as above; <br>2. Run the reasoner; <br>3. Ask the DL query `hasSibling` value `Robert_David_Bright_1965`.|
+|<ol><li>Add the `hasSibling` property as above; </li><li> Run the reasoner; </li><li> Ask the DL query `hasSibling` value `Robert_David_Bright_1965`.</li></ol>|
 
 From this last DL query you should get the answer that both Robert and Richard are siblings of Robert. Think about the objects involved in the sub-property chain: we go from Robert to David via the `hasParent` and from David to Richard via the `isParentOf` property; so this is OK. However, we also go from Robert to David and then we can go from David back to Robert again – so Robert is a sibling of Robert. We do not want this to be true.
 
@@ -838,7 +838,7 @@ We can add another characteristic to the `hasSibling` property, the one of being
 
 |Task 18: More siblings|
 |---|
-|1. Add the irreflexive characteristic to the `hasSibling` property; <br>2. Run the reasoner;|
+|<ol><li> Add the irreflexive characteristic to the `hasSibling` property; </li><li> Run the reasoner;</li></ol>|
 
 Note that the reasoner claims you have an _inconsistent_ ontology (or in some cases, you might get a message box saying "Reasoner died"). Looking at the `hasSibling` property again, the reason might not be immediately obvious. The reason for the inconsistency lies in the fact that we create a logical contradiction: through the property chain, we say that every `Person` is a sibling of him or herself, and again disallowing just that by adding the irreflexive characteristic. A different explanation lies within the OWL specification itself: In order to maintain decidability irreflexive properties must be simple - for example, they may not be property chains<sup>6</sup>.
 
@@ -854,7 +854,7 @@ We use similar, object based, thought processes to choose whether to have transi
 
 |Task 19: Brothers and sisters|
 |---|
-|1. Create the `hasBrother` object property as shown below; <br>2. Add `hasSister` in a similar manner; <br>3. Add appropriate inverses, domains and ranges.|
+|<ol><li> Create the `hasBrother` object property as shown below; </li><li> Add `hasSister` in a similar manner; <br>3. Add appropriate inverses, domains and ranges.</li></ol>|
 
 ```
 ObjectProperty: hasBrother
@@ -911,7 +911,7 @@ Thus we must resort to hand assertions of properties to test out our new path:
 
 |Task 20: Sons and daughters|
 |---|
-|1. Add the property hierarchy shown in Figure 5.3, together with the equivalent property axiom and the obvious inverses. <br>2. As a test (after running the reasoner), ask the DL query `isChildOf` value `David_Bright_1934` and you should have the answer of Richard and Robert; <br>3. Add the sub-property paths as described in the text; <br>4. Add the assertions shown in Table 5.1; <br>5. Run the reasoner; <br>6. Ask the DL query for the brother of Robert David Bright and the sister of Janet.|
+|<ol><li> Add the property hierarchy shown in Figure 5.3, together with the equivalent property axiom and the obvious inverses. </li><li> As a test (after running the reasoner), ask the DL query `isChildOf` value `David_Bright_1934` and you should have the answer of Richard and Robert; </li><li> Add the sub-property paths as described in the text; </li><li> Add the assertions shown in Table 5.1; </li><li> Run the reasoner; </li><li> Ask the DL query for the brother of Robert David Bright and the sister of Janet.</li></ol>|
 
 Of course, it works, but we see the same problem as above. As usual, think of the objects involved.
 Robert `isSonOf` David and David `isParentOf` Robert, so Robert is his own brother. Irreflexivity again
@@ -947,7 +947,7 @@ Do the following:
 
 |Task 21: Add sibling assertions|
 |---|
-|1. Remove the sub-property chains of the sibling properties and the `isChildOf` assertions as explained above. <br>2. Add the Sibling assertions shown in table 5.2; <br>3. Run the reasoner; <br>4. Ask `isBrotherOf` value `Robert_David_Bright_1965`; <br>5. Ask `isBrotherOf` value `Richard_John_Bright_1962`; <br>6. Ask `hasBrother` value `Robert_David_Bright_1965`; <br>7. Ask `hasBrother` value `Richard_John_Bright_1962`; <br>8. Ask `isSisterOf` value `William_Bright_1970`; <br>9. Ask the query `Man and hasSibling value Robert_David_Bright_1965`.|
+|<ol><li> Remove the sub-property chains of the sibling properties and the `isChildOf` assertions as explained above. </li><li> Add the Sibling assertions shown in table 5.2; </li><li> Run the reasoner; </li><li> Ask `isBrotherOf` value `Robert_David_Bright_1965`; </li><li> Ask `isBrotherOf` value `Richard_John_Bright_1962`; </li><li> Ask `hasBrother` value `Robert_David_Bright_1965`; </li><li> Ask `hasBrother` value `Richard_John_Bright_1962`;</li><li> Ask `isSisterOf` value `William_Bright_1970`; </li><li> Ask the query `Man and hasSibling value Robert_David_Bright_1965`.</li></ol>|
 
 We can see some problems with this option as well:
 
@@ -1032,7 +1032,7 @@ Do the following tasks:
 
 |Task 22: Uncles and Aunts|
 |---|
-|1. Add thehasUncleproperty as above; <br>2. Add thehasAuntproperty as well; <br>3. Ask for the uncles of `Julie_Bright_1966` and for `Mark_Bright_1956`; <br>4. Add similar properties for `hasGreatUncle` and `hasGreatAunt` and place them in the property hierarchy.|
+|<ol><li>Add thehasUncleproperty as above; </li><li> Add thehasAuntproperty as well; </li><li> Ask for the uncles of `Julie_Bright_1966` and for `Mark_Bright_1956`; </li><li> Add similar properties for `hasGreatUncle` and `hasGreatAunt` and place them in the property hierarchy.</li></ol>|
 
 We can see this works – unless we have any gaps in the sibling relationships (you may have to fix these). Great aunts and uncles are simply a matter of adding another ‘parent’ leg into the sub-property chain. We are not really learning anything new with aunts and uncles, except that we keep gaining a lot for
 
@@ -1040,7 +1040,7 @@ free through sub-property chains. We just add a new property with its sub-proper
 
 |Task 23: What do we know?|
 |---|
-|1. Save the ontology and run the reasoner; <br>2. Look at inferences related to the individual Robert David Bright (see warning in thebeginning of this chapter). <br>3. If you chose to use DL queries in Protégé, do not forget to tick the appropriate check-boxes.|
+|<ol><li> Save the ontology and run the reasoner; </li><li> Look at inferences related to the individual Robert David Bright (see warning in thebeginning of this chapter). </li><li> If you chose to use DL queries in Protégé, do not forget to tick the appropriate check-boxes.</li></ol>|
 
 You can now see lots of facts about Robert David Bright, with only a very few actual assertions directly on Robert David Bright.
 
@@ -1099,7 +1099,7 @@ This is an equivalence axiom that recognises any individual that is aPersonand a
 
 |Task 24: Robert and Richards parents|
 |---|
-|1. Create the class `ParentOfRobert` as described above; <br> 2. Classify – inspect where the class is placed in the FHKB TBox and look at which individuals classify as members of the class; <br>3. Do the same for a class with the value of `Richard_John_Bright_1962` and classify; <br>4. Finally create a class `ParentOfRichardAndRobert`, defining it as `Person and isParentOf some {Robert_David_Bright_1965 ,Richard_John_Bright_1962 }`; again see what happens on classification. Note that the expressions `isMotherOf value Robert_David_Bright_1965` and `isMotherOf some {Robert_David_Bright_1965 }` are practically identical. The only difference is that using `value`, you can only specify one individual, while `some` relates to a class (a set of individuals).|
+|<ol><li> Create the class `ParentOfRobert` as described above; </li><li> Classify – inspect where the class is placed in the FHKB TBox and look at which individuals classify as members of the class; </li><li> Do the same for a class with the value of `Richard_John_Bright_1962` and classify; </li><li> Finally create a class `ParentOfRichardAndRobert`, defining it as `Person and isParentOf some {Robert_David_Bright_1965 ,Richard_John_Bright_1962 }`; again see what happens on classification. Note that the expressions `isMotherOf value Robert_David_Bright_1965` and `isMotherOf some {Robert_David_Bright_1965 }` are practically identical. The only difference is that using `value`, you can only specify one individual, while `some` relates to a class (a set of individuals).</li></ol>|
 
 We see that these queries work and that we can create more complex nominal based class expressions. The disjunction above is
 ```
@@ -1120,7 +1120,7 @@ In Chapter 4 we described that a `Person` has exactly one `Woman` and exactly on
 
 |Task 25: Closing the Person class|
 |---|
-|1. Add the restriction `hasParent` exactly 2 Personto the classPerson; <br>2. Run the reasoner; <br>3. Inspect the hierarchy to see where `ParentOfRobert` and `ParentOfRichard` are placed and whether or not they are found to be equivalent; <br>4. Now add the restriction `hasParent max 2 Person` to the class `Person`; <br>5. Run the reasoner (taking note of how long the reasoning takes) and take another look.|
+|<ol><li> Add the restriction `hasParent` exactly 2 Personto the classPerson; </li><li> Run the reasoner; </li><li> Inspect the hierarchy to see where `ParentOfRobert` and `ParentOfRichard` are placed and whether or not they are found to be equivalent; </li><li> Now add the restriction `hasParent max 2 Person` to the class `Person`; </li><li> Run the reasoner (taking note of how long the reasoning takes) and take another look.</li></ol>|
 
 ![dragon](../images/FHKB%20figures/dragon.png)
 
@@ -1141,7 +1141,7 @@ For practice, do the following:
 
 |Task 26: Additional Practice|
 |---|
-|1. Add lots more classes using members of the ABox as nominals; <br>2. Make complex expressions using nominals; <br>3. After each addition of a nominal, classify and see what has been inferred within the FHKB. <br>4. See if you can make classes for `GrandparentOfRobert` and `GrandparentOfRichard` and make them inferred to be equivalent.|
+|<ol><li> Add lots more classes using members of the ABox as nominals; </li><li> Make complex expressions using nominals; </li><li> After each addition of a nominal, classify and see what has been inferred within the FHKB. </li><li> See if you can make classes for `GrandparentOfRobert` and `GrandparentOfRichard` and make them inferred to be equivalent.</li></ol>|
 
 In this chapter we have seen the use of individuals within class expressions. It allows us to make useful queries and class definitions. The main things to note is that it can be done and that there is some syntax involved. More importantly, some inferences may not be as expected due to the open world assumption in OWL.
 
@@ -1199,7 +1199,7 @@ We can have dates for birth, death and (eventually) marriage (see Chapter 9) and
 
 |Task 27: Create a data property hierarchy|
 |---|
-|1. Create the data property `hasEventYear` with range integer and domain `Person`; <br>2. Create the data property `hasBirthYear` and make it a sub-property of `hasEventYear` (that way, the domain and range of `hasEventYear` are inherited); <br>3. Create the data property `hasDeathYear` and make it a sub-property of `hasEventYear`; <br>4. For each individual add the birth years shown in Table A.1 (see appendix). You do not actually have to go back to the table—it is easier to read the birth years simply off the individual names.|
+|<ol><li> Create the data property `hasEventYear` with range integer and domain `Person`; </li><li> Create the data property `hasBirthYear` and make it a sub-property of `hasEventYear` (that way, the domain and range of `hasEventYear` are inherited); </li><li> Create the data property `hasDeathYear` and make it a sub-property of `hasEventYear`; </li><li> For each individual add the birth years shown in Table A.1 (see appendix). You do not actually have to go back to the table—it is easier to read the birth years simply off the individual names.</li></ol>|
 
 ![camera](../images/FHKB%20figures/images/black_camera.png)
 
@@ -1231,7 +1231,7 @@ The last two queries in the list do not work as expected. We have asked, for ins
 
 |Task 29: Make a functional object property|
 |---|
-|1. Make the property `hasBirthYear` functional. <br>2. Ask the query for `Person` that has more than three children again.|
+|<ol><li> Make the property `hasBirthYear` functional. </li><li> Ask the query for `Person` that has more than three children again.</li></ol>|
 
 This time the query should work. All the other event year properties should be made functional, expect `hasEventYear`, as one individual can have many event years. As the children have different birth year and an individual can only hold one `hasBirthYear` property, then these people must be distinct entities.
 
@@ -1239,7 +1239,7 @@ Of course, making birth year functional is not a reliable way of ensuring that t
  
 |Task 30: Make all individuals different|
 |---|
-|1. Make all individuals different; <br>2. Ask the above queries again.|
+|<ol><li> Make all individuals different; </li><li> Ask the above queries again. </li></ol>|
 
 From now on, every time you add individuals, make sure the different individuals axiom is updated.
 
@@ -1272,7 +1272,7 @@ This has the same meaning as the closure axioms that you should be familiar with
 
 |Task 31: Make a closure axiom|
 |---|
-|1. Add the closure assertion above to David Bright; <br>2. Issue the DL query `isParentOf exactly 2 Person`.|
+|<ol><li> Add the closure assertion above to David Bright; </li><li> Issue the DL query `isParentOf exactly 2 Person`.</li></ol>|
 
 The last query should return the answer of David Bright. Closing down the whole FHKB ABox is a chore and would really have to be done programmatically. OWL scripting languages such as the Ontology Preprocessing Language<sup>8</sup> (OPPL) [2] can help here. Also going directly to the OWL API [1]<sup>9</sup>, if you know what you are doing, is another route.
 
@@ -1309,7 +1309,7 @@ Do the following:
 
 |Task 32: Data properties|
 |---|
-|1. Create the data properties as described in Figure 7.1; <br>2. Give the `hasName` property the domain of `Person` and the range of `String`; <br>3. Make the leaf properties of given names functional; <br>4. Add the names shown in Table A.1 (appendix); Again, it may be easier to read the names of the individual names. <br>5. Ask the questions:<ul><li>all the people with the first given name ‘James’;</li><li>all the people with the first given name ‘William’;</li></ul> 6. All the people with the given name ‘William’; <br>7. All the people with the given name ‘William’ and the family name ‘Bright’.|
+|<ol><li> Create the data properties as described in Figure 7.1; </li><li> Give the `hasName` property the domain of `Person` and the range of `String`; </li><li> Make the leaf properties of given names functional; </li><li> Add the names shown in Table A.1 (appendix); Again, it may be easier to read the names of the individual names. </li><li> Ask the questions:<ul><li>all the people with the first given name ‘James’;</li><li>all the people with the first given name ‘William’;</li></ul> </li><li> All the people with the given name ‘William’; </li><li> All the people with the given name ‘William’ and the family name ‘Bright’.</li></ol>|
 
 The name data property hierarchy and the queries using those properties displays what now should be familiar. Sub-properties that imply the super-property. So, when we ask `hasFirstGivenName` value `"William"` and then the query `hasGivenName value value "William"` we can expect different answers. There are people with ‘William’ as either first or second given name and asking the question with the super-property for given names will collect both first and second given names.
 
@@ -1415,16 +1415,15 @@ are first cousins of Robert David Bright and this is not correct. As David Brigh
 his children are his own nieces and nephews and thus the cousins of his own children. Our inability to
 infer siblings correctly in the FHKB haunts us still and will continue to do so.
 
+![dragon](../images/FHKB%20figures/dragon.png)     
+     
 ```
 Although the last query for the cousins of Robert David Bright should return the
 same results for every reasoner, we have had experiences where the results differ.
 ```
 ### 8.3 Other Degrees and Removes of Cousin
 
-Other degrees of cousins follow the same pattern as for first cousins; we go up, along and down. For
-second cousins we go up from a given individual to children of a great grandparent, along to their siblings
-and down to their grandchildren. The following object property declaration is for second cousins (note
-it uses theisGrandparentOfand its inverse properties, though the parent properties could be used) :
+Other degrees of cousins follow the same pattern as for first cousins; we go up, along and down. For second cousins we go up from a given individual to children of a great grandparent, along to their siblings and down to their grandchildren. The following object property declaration is for second cousins (note it uses the `isGrandparentOf` and its inverse properties, though the parent properties could be used) :
 
 ```
 ObjectProperty: hasSecondCousin
@@ -1432,13 +1431,7 @@ SubPropertyOf: hasCousin
 SubPropertyChain: hasGrandParent o hasSibling o isGrandParentOf
 Characteristics: Symmetric
 ```
-‘ _Removes_ ’ simply add in another ‘leg’ of either ‘up’ or ‘down’ either side of the ‘along’—that is, think of
-the actual individuals involved and draw a little picture of blobs and lines—then trace your finger up,
-along and down to work out the sub-property chain. The following object property declaration does it
-for first cousins once removed (note that this has been done by putting this extra ‘leg’ on to thehasFirst-
-Cousinproperty; the symmetry of the property makes it work either way around so that a given person
-is the first cousin once removed of his/her first cousins once removed):
-
+‘ _Removes_ ’ simply add in another ‘leg’ of either ‘up’ or ‘down’ either side of the ‘along’—that is, think of the actual individuals involved and draw a little picture of blobs and lines—then trace your finger up, along and down to work out the sub-property chain. The following object property declaration does it for first cousins once removed (note that this has been done by putting this extra ‘leg’ on to the `hasFirstCousin` property; the symmetry of the property makes it work either way around so that a given person is the first cousin once removed of his/her first cousins once removed):
 
 ```
 ObjectProperty: hasFirstCousinOnceRemoved
@@ -1448,70 +1441,51 @@ Characteristics: Symmetric
 ```
 To exercise the cousin properties do the following:
 
-```
-Task 34: Cousin properties
-```
-1. Add properties for second degree cousins;
-2. Add removes for first and second degree cousins;
-3. Run the reasoner and check what we know about Robert David Bright’ other types of
-    cousin.
+|Task 34: Cousin properties|
+|---|
+|<ol><li>Add properties for second degree cousins; </li><li> Add removes for first and second degree cousins; </li><li> Run the reasoner and check what we know about Robert David Bright’ other types of cousin.</li></ol>|
 
-You should see that we see some peculiar inferences about Robert David Bright’ cousins – not only are
-his brother and himself his own cousins, but so are his father, mother, uncles and so on. This makes sense
-if we look at the general sibling problem, but also it helps to just trace the paths around. If we go up
-from one of Robert David Bright’ true first cousins to a grandparent and down one parent relationship,
-we follow the first cousin once removed path and get to one of Robert David Bright’ parents or uncles.
-This is not to be expected and we need a tighter definition that goes beyond sub-property chains so that
-we can exclude some implications from the FHKB.
+You should see that we see some peculiar inferences about Robert David Bright’ cousins – not only are his brother and himself his own cousins, but so are his father, mother, uncles and so on. This makes sense if we look at the general sibling problem, but also it helps to just trace the paths around. If we go up from one of Robert David Bright’ true first cousins to a grandparent and down one parent relationship, we follow the first cousin once removed path and get to one of Robert David Bright’ parents or uncles. This is not to be expected and we need a tighter definition that goes beyond sub-property chains so that we can exclude some implications from the FHKB.
 
 ### 8.4 Doing First Cousins Properly
 
-As far as inferring first cousin facts for Robert David Bright, we have failed. More precisely, we have
-recalled all Robert David Bright’s cousins, but the precision is not what we would desire. What we can
-do is ask for Robert David Bright’ cousins, but then remove the children of Robert David Bright’ parents.
-The following DL query achieves this:
+As far as inferring first cousin facts for Robert David Bright, we have failed. More precisely, we have recalled all Robert David Bright’s cousins, but the precision is not what we would desire. What we can do is ask for Robert David Bright’ cousins, but then remove the children of Robert David Bright’ parents. The following DL query achieves this:
 
 ```
 Person that hasFirstCousin valueRobert_David_Bright_1965
 and (not (hasFather valueDavid_Bright_1934) or not (hasMother valueMar-
 garet_Grace_Rever_1934)
 ```
-This works, but only for a named individual. We could make a defined class for this query; we could also
-make a defined classFirstCousin, but it is not of much utility. We would have to make sure that people
-whose parents are not known to have siblings with children are excluded. That is, people are not ‘first
-cousins’ whose only first cousins are themselves and their siblings. The following class does this:
+This works, but only for a named individual. We could make a defined class for this query; we could also make a defined class `FirstCousin`, but it is not of much utility. We would have to make sure that people whose parents are not known to have siblings with children are excluded. That is, people are not ‘first cousins’ whose only first cousins are themselves and their siblings. The following class does this:
 
 
 ```
 Class: FirstCousin
 EquivalentTo: Person that hasFirstCousin some Person
 ```
-```
-Task 35: Roberts first cousins
-```
-1. Make a defined classFirstCousinas shown above;
-2. Make a defined classFirstCousinOfRobert;
-3. Create a DL query that looks atRobert_David_Bright_1965 first cousins and takes
-    away the children ofRobert_David_Bright_1965’ parents as shown above.
 
-This gives some practice with negation. One is making a class and then ‘taking’ some of it away – ‘these,
-but not those’.
+|Task 35: Roberts first cousins|
+|---|
+|<ol><li>Make a defined class `FirstCousin` as shown above;</li><li>Make a defined class `FirstCousinOfRobert`;</li><li>Create a DL query that looks at `Robert_David_Bright_1965` first cousins and takes away the children of `Robert_David_Bright_1965`’ parents as shown above.</li></ol>|
+
+![dragon](../images/FHKB%20figures/dragon.png)  
+    
+This gives some practice with negation. One is making a class and then ‘taking’ some of it away – ‘these, but not those’.
 
 ### 8.5 Summary
 
-We have now expanded the FHKB to include most blood relationships. We have also found that cousins
-are hard to capture just using object properties and sub-property chains. Our broken sibling inferences
-mean that we have too many cousins inferred at the instance level. We can get cousins right at the class
-level by using our inference based cousins, then excluding some using negation. Perhaps not neat, but it
-works.
+We have now expanded the FHKB to include most blood relationships. We have also found that cousins are hard to capture just using object properties and sub-property chains. Our broken sibling inferences mean that we have too many cousins inferred at the instance level. We can get cousins right at the class level by using our inference based cousins, then excluding some using negation. Perhaps not neat, but it works.
 
-We have reinforced that we can just add more and more relationships to individuals by just adding more
-properties to our FHKB object property hierarchy and adding more sub-property chains that use the
-object properties we have built up upon parentage and sibling properties; this is as it should be.
+We have reinforced that we can just add more and more relationships to individuals by just adding more properties to our FHKB object property hierarchy and adding more sub-property chains that use the object properties we have built up upon parentage and sibling properties; this is as it should be.
 
+<img src="../images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
+    
 ```
 The FHKB ontology at this stage of the tutorial has an expressivity ofSROIQ(D).
 ```
+    
+<img src="../images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
+    
 ```
 The time to reason with the FHKB at this point (in Protégé) on a typical desktop
 machine by HermiT 1.3.8 is approximately 0.000 sec (0.00000 % of final), by Pellet
@@ -1519,9 +1493,9 @@ machine by HermiT 1.3.8 is approximately 0.000 sec (0.00000 % of final), by Pell
 sec (0.024 % of final). 0 sec indicates failure or timeout.
 ```
 
-## Chapter 9
+# Chapter 9
 
-# Marriage in the FHKB
+## Marriage in the FHKB
 
 In this chapter you will:
 
