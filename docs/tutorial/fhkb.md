@@ -306,7 +306,7 @@ Biologically, everyone has parents; a mother and a father<sup>3</sup>. The start
 
 | Task 1: Creating object properties for parentage |
 |---|
-|1. Create a new ontology; <br>2. Create an object propertyhasMother; <br>3. Create a property `isMotherOf` and give `hasMother` the `InverseOf: isMotherOf`; <br>4. Do the same for the property `hasFather`; <br>5. Create a property `hasParent`; give it the obvious inverse; <br>6. Make `hasMother` and `hasFather` sub-properties of `hasParent`. <br>7. Run the reasoner and look at the property hierarchy.|
+|<ol><li>Create a new ontology; </li><li> Create an object propertyhasMother; </li><li> Create a property `isMotherOf` and give `hasMother` the `InverseOf: isMotherOf`; </li><li> Do the same for the property `hasFather`; </li><li> Create a property `hasParent`; give it the obvious inverse; </li><li> Make `hasMother` and `hasFather` sub-properties of `hasParent`. </li><li> Run the reasoner and look at the property hierarchy.</li></ol>|
 
 
 Note how the reasoner has automatically completed the sub-hierarchy for `isParentOf:` `isMotherOf` and `isFatherOf` are inferred to be sub-properties of `isParentOf`.
@@ -322,7 +322,7 @@ Facts: hasFather mr_plinth, hasMother mrs_plinth
 
 | Task 2: Create the ABox|
 |---|
-|1. Using the information in Table A.1 (see appendix) about parentage (so the columns about fathers and mothers), enter the fact assertions for the people which appear in rows shaded in grey. We will only use the `hasMother` and `hasFather` properties in our fact assertions. You do not need to assert names and birth years yet. This exercise will require you to create an individual for every person we want to talk about, using the `Firstname_Secondname_Familyname_Birthyear` pattern, as for example in `Robert_David_Bright_1965`.|
+|<ol><li>Using the information in Table A.1 (see appendix) about parentage (so the columns about fathers and mothers), enter the fact assertions for the people which appear in rows shaded in grey. We will only use the `hasMother` and `hasFather` properties in our fact assertions. You do not need to assert names and birth years yet. This exercise will require you to create an individual for every person we want to talk about, using the `Firstname_Secondname_Familyname_Birthyear` pattern, as for example in `Robert_David_Bright_1965`.</li></ol>|
 
 ![camera](../images/FHKB%20figures/images/black_camera.png)
 ```
@@ -350,7 +350,7 @@ Now do the following:
 
 |Task 3: DL queries|
 |---|
-|1. Classify the FHKB. <br>2. Issue the DL query `hasFather` value `David_Bright_1934` and look at the answers (remember to check the respective checkbox in Protégé to include individuals in your query results). <br>3. Issue the DL query `isFatherOf` value `Robert_David_Bright_1965`. Look at the answers. <br>4. Look at the entailed facts on `Robert_David_Bright_1965`.|
+|<ol><li> Classify the FHKB. </li><li> Issue the DL query `hasFather` value `David_Bright_1934` and look at the answers (remember to check the respective checkbox in Protégé to include individuals in your query results). </li><li> Issue the DL query `isFatherOf` value `Robert_David_Bright_1965`. Look at the answers. <br>4. Look at the entailed facts on `Robert_David_Bright_1965`.</li></ol>|
 
 You should find the following:
 
@@ -417,9 +417,9 @@ The inverse of `hasAncestor` can either be `isAncestorOf` or `hasDescendant`. We
 
 |Task 4: Object properties: exploiting the semantics|
 |---|
-|1. Make a new object property `hasRelation`, make it symmetric. <br>2. Make a new object property `hasAncestor`. <br>3. Make it a sub-property of `hasRelation` and a super-property of `hasParent`. <br>4. Make `hasAncestor` transitive. <br>5. Create the inverse `isAncestorOf`. Do not ‘stitch’ it into the property hierarchy; the reasoner will sort it all out for you. <br>6. Run the reasoner and issue the DL query `hasAncestor value William_George_Bright_1901`. <br>7. Issue the query `isAncestorOf value Robert_David_Bright_1965`.
+|<ol><li>Make a new object property `hasRelation`, make it symmetric. </li><li> Make a new object property `hasAncestor`. </li><li> Make it a sub-property of `hasRelation` and a super-property of `hasParent`. </li><li> Make `hasAncestor` transitive. </li><li> Create the inverse `isAncestorOf`. Do not ‘stitch’ it into the property hierarchy; the reasoner will sort it all out for you. </li><li> Run the reasoner and issue the DL query `hasAncestor value William_George_Bright_1901`. </li><li> Issue the query `isAncestorOf value Robert_David_Bright_1965`.</li></ol>|
 
-ThehasAncestorobject property will look like this:
+The `hasAncestor` object property will look like this:
 
 ```
 ObjectProperty: hasAncestor
@@ -476,7 +476,7 @@ Do the following task:
 
 |Task 5: Grandparents object properties|
 |---|
-|1. Make the `hasGrandparent`, `hasGrandmother` and `hasGrandfather` object properties and the obvious inverses (see OWL code above); <br> 2. Go to the individuals tabs and inspects the inferred object property assertions for `Robert_David_Bright_1965` and his parents.|
+|<ol><li>Make the `hasGrandparent`, `hasGrandmother` and `hasGrandfather` object properties and the obvious inverses (see OWL code above); </li><li> Go to the individuals tabs and inspects the inferred object property assertions for `Robert_David_Bright_1965` and his parents.</li></ol>|
 
 Again, think of the objects involved. We can take the same three objects as before: Robert, David and William. Think about the properties that exist, both by assertion and implication, between these objects. We have asserted only `hasFather` between these objects. The inverse can be inferred between the actual individuals (remember that this is not the case for class level restrictions – that all instances of a class hold a property does not mean that the filler objects at the other end hold the inverse; the quantification on the restriction tells us this). Remember that:
 
@@ -545,7 +545,7 @@ There is a class of `Person` that we will use to represent all these people obje
 
 |Task 6: Create the `Person` class|
 |---|
-|1. Create a class called `DomainEntity`; <br>2. Create a subclass of `DomainEntity` called `Person`.|
+|<ol><li>Create a class called `DomainEntity`; </li><li>Create a subclass of `DomainEntity` called `Person`.</li></ol>|
 
 We use `DomainEntity` as a house-keeping measure. All of our ontology goes underneath this class. We can put other classes ‘outside’ the ontology, as siblings of `DomainEntity`, such as ‘probe’ classes we wish to use to test our ontology.
 
@@ -584,7 +584,7 @@ different.
 
 |Task 7: Modelling sex|
 |---|
-|1. Create a class called `Sex`; <br>2. Make it a subclass of `DomainEntity`; <br>3. Make `Person` and `Sex` disjoint; <br>4. Create two subclasses of `Sex`, `Maleness` and `Femaleness`; <br>5. Make `Maleness` and `Femaleness` disjoint; <br>6. Put a covering axiom on `Sex` such that it is equivalent to `Maleness` or `Femaleness`. <br>7. Create an object property, `hasSex` , with the domain `Person`, the range `Sex` and give it the characteristic of ‘Functional’; <br>8. Add a restriction `hasSex some Sex` to the class `Person`.|
+|<ol><li>Create a class called `Sex`; </li><li> Make it a subclass of `DomainEntity`; </li><li> Make `Person` and `Sex` disjoint; </li><li> Create two subclasses of `Sex`, `Maleness` and `Femaleness`; </li><li> Make `Maleness` and `Femaleness` disjoint; </li><li> Put a covering axiom on `Sex` such that it is equivalent to `Maleness` or `Femaleness`. </li><li> Create an object property, `hasSex` , with the domain `Person`, the range `Sex` and give it the characteristic of ‘Functional’; </li><li> Add a restriction `hasSex some Sex` to the class `Person`.</li></ol>|
 
 The `hasSex` property looks like:
 
@@ -610,7 +610,7 @@ To make the `Man` and `Woman` classes do the following:
 
 |Task 8: Describe men and women|
 |---|
-|1. Create a class `Man`; <br>2. Make it equivalent to a `Person that hasSex some Maleness`; <br>3. Do the same, but with `Femaleness`, to create the `Woman` class; <br>4. A covering axiom can be put on the `Person` class to indicate that man and woman are the only kinds of person that can exist. (This is not strictly true due to the way `Sex` has been described.) <br>5. Run the reasoner and take a look.|
+|<ol><li>Create a class `Man`; </li><li> Make it equivalent to a `Person that hasSex some Maleness`; </li><li> Do the same, but with `Femaleness`, to create the `Woman` class; </li><li> A covering axiom can be put on the `Person` class to indicate that man and woman are the only kinds of person that can exist. (This is not strictly true due to the way `Sex` has been described.) </li><li> Run the reasoner and take a look.</li></ol>|
 
 Having run the reasoner, the `Man` and `Woman` classes should appear underneath `Person`<sup>5</sup>.
 
@@ -634,7 +634,7 @@ To finish off the foundations of the FHKB we need to describe a person object’
 
 |Task 9: Describing Parentage|
 |---|
-|1. Add the domain `Person` and the range `Woman` to the property `hasMother`.<br> 2. Do the same for the property `hasFather`, but give it the range `Man`;<br> 3. Give the property `hasParent` domain and range of `Person`;<br> 4. Run the reasoner.|
+|<ol><li> Add the domain `Person` and the range `Woman` to the property `hasMother`.</li><li> Do the same for the property `hasFather`, but give it the range `Man`;</li><li> Give the property `hasParent` domain and range of `Person`;</li><li> Run the reasoner.</li></ol>|
 
 The (inferred) property hierarchy in the FHKB should look like that shown in Figure 4.1. Notice that we have asserted the sub-property axioms on one side of the property hierarchy. Having done so, the reasoner uses those axioms, together with the inverses, to work out the property hierarchy for the ‘other side’.
 
@@ -651,7 +651,7 @@ We make `hasMother` functional, as any one person object can hold only one `hasM
 
 |Task 10: Restrict Person class|
 |---|
-|1. As each and every person has a mother and each and every person has a father, place restrictions on the `Person` class as shown below.|
+|<ol><li>As each and every person has a mother and each and every person has a father, place restrictions on the `Person` class as shown below.</li></ol>|
 
 ```
 Class: Person
@@ -662,7 +662,7 @@ DisjointWith: Sex
 
 |Task 11: DL queries for people and sex|
 |---|
-|1. Issue the DL queries for `Person`, `Man` and `Woman`; look at the answers and count the numbers in each class; which individuals have no sex and why? <br> 2. You should find that many people have been inferred to be either `Man` or `Woman`, but some are, as we will see below, only inferred to be `Person`.|
+|<ol><li>Issue the DL queries for `Person`, `Man` and `Woman`; look at the answers and count the numbers in each class; which individuals have no sex and why? </li><li> You should find that many people have been inferred to be either `Man` or `Woman`, but some are, as we will see below, only inferred to be `Person`.</li></ol>|
 
 The domain and range constraints on our properties have also driven some entailments. We have not asserted that `David_Bright_1934` is a member of `Man`, but the range constraint on `hasFather` (or the inferred domain constraint on the `isFatherOf` relation) has enabled this inference to be made. This goes for any individual that is the right-hand-side (either inferred or asserted) of either `hasFather` or `hasMother` (where the range is that of `Woman`). For Robert David Bright, however, he is only the left-hand-side of an `hasFather` or an `hasMother` property, so we’ve only entailed that this individual is a member of `Person`.
 
@@ -678,7 +678,7 @@ Do the following:
 
 |Task 12: Domains and Ranges|
 |---|
-|1. Make sure the appropriate `Person`, `Man` and `Woman` are domains and ranges for `hasFather`, `hasMother` and `hasParent`. <br>2. Run the reasoner and look at the property hierarchy. <br> 3. Also look at the properties `hasAncestor`, `hasGrandparent`, `hasUncle` and so on; look to see what domains and ranges are found. Add any domains and ranges explicitly as necessary.|
+|<ol><li> Make sure the appropriate `Person`, `Man` and `Woman` are domains and ranges for `hasFather`, `hasMother` and `hasParent`. </li><li> Run the reasoner and look at the property hierarchy. </li><li> Also look at the properties `hasAncestor`, `hasGrandparent`, `hasUncle` and so on; look to see what domains and ranges are found. Add any domains and ranges explicitly as necessary.</li></ol>|
 
 <img src="../images/FHKB%20figures/images/WarningIcon.png" alt="note" width="50"/>
 
@@ -697,7 +697,7 @@ From the Pizza Tutorial and other work with OWL you should have seen some _unsat
 
 |Task 13: Inconsistencies|
 |--|
-|1. Add the fact `Robert_David_Bright_1965 hasMother David_Bright_1934`. <br>2. Run the classifier and see what happens. <br>3. Remove that fact and run the classifier again. <br>4. Now add the fact that `Robert_David_Bright_1965 hasMother Iris_Ellen_Archer_1907` <br>5. Run the classifier and see what happens. <br>6. Add and remove the functional characteristic to these properties and see what happens.|
+|<ol><li> Add the fact `Robert_David_Bright_1965 hasMother David_Bright_1934`. </li><li> Run the classifier and see what happens. </li><li> Remove that fact and run the classifier again. </li><li> Now add the fact that `Robert_David_Bright_1965 hasMother Iris_Ellen_Archer_1907` </li><li> Run the classifier and see what happens. </li><li> Add and remove the functional characteristic to these properties and see what happens.</li></ol>|
 
 After asserting the first fact it should be reported by the reasoner that the ontology is _inconsistent_. This means, in lay terms, that the model you’ve provided in the ontology cannot accommodate the facts you’ve provided in the fact assertions in your ABox—that is, there is an inconsistency between the facts and the ontology... The ontology is inconsistent because `David_Bright_1934` is being inferred to be a `Man` and a `Woman` at the same time which is inconsistent with what we have said in the FHKB.
 
@@ -709,7 +709,7 @@ When we, however, say that `Robert David Bright` has two different mothers, noth
 
 |Task 14: Adding defined classes|
 |---|
-|1. Add a defined class for `Ancestor`, `MaleAncestor`, `FemaleAncestor`; <br>2. Add a defined class for `Descendant`, `MaleDescendant` and `FemaleDescendant`; <br>3. Run the reasoner and view the resulting hierarchy.|
+|<ol><li> Add a defined class for `Ancestor`, `MaleAncestor`, `FemaleAncestor`; </li><li> Add a defined class for `Descendant`, `MaleDescendant` and `FemaleDescendant`; </li><li> Run the reasoner and view the resulting hierarchy.</li></ol>|
 
 The code for the classes looks like:
 
@@ -729,15 +729,11 @@ The reasoner has used the axioms within the ontology to infer that all the insta
 
 |Task 15: More Ancestors|
 |---|
-|1. Query for `MaleDescendant`. You should get `Man` back - they are equivalent (and this makes sense). <br>2. As an additional exercise, also add in properties for forefathers and foremothers. You will follow the same pattern as for `hasAncestor`, but adding in, for instance, `hasFather` as the sub-property of the transitive super-property of `hasForefather` and setting the domains and ranges appropriately (or working out if they’ll be inferred appropriately). Here we interpret a forefather as one’s father’s father etc. This isn’t quite right, as a forefather is any male ancestor, but we’ll do it that way anyway. You might want to play around with DL queries. Because of the blowup in inferred relationships, we decided to not include this pattern in the tutorial version of the FHKB.
+|<ol><li>Query for `MaleDescendant`. You should get `Man` back - they are equivalent (and this makes sense). </li><li> As an additional exercise, also add in properties for forefathers and foremothers. You will follow the same pattern as for `hasAncestor`, but adding in, for instance, `hasFather` as the sub-property of the transitive super-property of `hasForefather` and setting the domains and ranges appropriately (or working out if they’ll be inferred appropriately). Here we interpret a forefather as one’s father’s father etc. This isn’t quite right, as a forefather is any male ancestor, but we’ll do it that way anyway. You might want to play around with DL queries. Because of the blowup in inferred relationships, we decided to not include this pattern in the tutorial version of the FHKB.</li></ol>|
 
 ### 4.9 Summary
 
-Most of what we have done in this chapter is straight-forward OWL, all of which would have been met in
-the pizza tutorial. It is, however, a useful revision and it sets the stage for refining the FHKB. Figure 4.2
-shows the basic set-up we have in the FHKB in terms of classes; we have a class to represent person,
-man and woman, all set-up with a description of sex, maleness and femaleness. It is important to note,
-however, the approach we have taken: We have always thought in terms of the objects we are modelling.
+Most of what we have done in this chapter is straight-forward OWL, all of which would have been met in the pizza tutorial. It is, however, a useful revision and it sets the stage for refining the FHKB. Figure 4.2 shows the basic set-up we have in the FHKB in terms of classes; we have a class to represent person, man and woman, all set-up with a description of sex, maleness and femaleness. It is important to note, however, the approach we have taken: We have always thought in terms of the objects we are modelling.
 
 Here are some things that should now be understood upon completing this chapter:
 
@@ -1313,7 +1309,7 @@ Do the following:
 
 |Task 32: Data properties|
 |---|
-|1. Create the data properties as described in Figure 7.1; <br>2. Give the `hasName` property the domain of `Person` and the range of `String`; <br>3. Make the leaf properties of given names functional; <br>4. Add the names shown in Table A.1 (appendix); Again, it may be easier to read the names of the individual names. <br>5. Ask the questions:<ul><li>all the people with the first given name ‘James’;</li><li>all the people with the first given name ‘William’;</li></ul> <br>6. All the people with the given name ‘William’; <br>7. All the people with the given name ‘William’ and the family name ‘Bright’.|
+|1. Create the data properties as described in Figure 7.1; <br>2. Give the `hasName` property the domain of `Person` and the range of `String`; <br>3. Make the leaf properties of given names functional; <br>4. Add the names shown in Table A.1 (appendix); Again, it may be easier to read the names of the individual names. <br>5. Ask the questions:<ul><li>all the people with the first given name ‘James’;</li><li>all the people with the first given name ‘William’;</li></ul> 6. All the people with the given name ‘William’; <br>7. All the people with the given name ‘William’ and the family name ‘Bright’.|
 
 The name data property hierarchy and the queries using those properties displays what now should be familiar. Sub-properties that imply the super-property. So, when we ask `hasFirstGivenName` value `"William"` and then the query `hasGivenName value value "William"` we can expect different answers. There are people with ‘William’ as either first or second given name and asking the question with the super-property for given names will collect both first and second given names.
 
@@ -1348,9 +1344,9 @@ least is impossibly slow by now. This may be because HermiT does more work
 than the others. For now, we recommend to use either Pellet or FaCT++.
 ```
 
-## Chapter 8
+# Chapter 8
 
-# Cousins in the FHKB
+## Cousins in the FHKB
 
 In this Chapter you will
 
@@ -1360,10 +1356,15 @@ In this Chapter you will
 4. Find out that the siblings debacle haunts us still;
 5. Add a defined class that does first cousins properly.
 
+![camera](../images/FHKB%20figures/images/black_camera.png)
+     
 ```
 There is a snapshot of the ontology as required at this point in the tutorial available
 athttp://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial.
 ```
+
+![dragon](../images/FHKB%20figures/dragon.png)
+     
 ```
 Be warned; from here on the reasoner can start running slowly! Please see warning
 at the beginning of the last chapter for more information.
@@ -1375,22 +1376,18 @@ Cousins can be confusing, but here is a brief summary:
 - First cousins share a grandparent, but are not siblings;
 - Second cousins share a great grandparent, but are not first cousins or siblings;
 - Degrees such as first and second cousin give the distance to the nearest common ancestor;
+- Removes give differences in generation. So, my Dad’s first cousins (his generation) are my (Robert David Bright’s) first cousins once removed.
 
-
-**Figure 8.1:** Tracing out the sub-property chain for cousins going from a child to a parent, to its sibling, and
-down to its child, a cousin
-
-- Removes give differences in generation. So, my Dad’s first cousins (his generation) are my (Robert
-    David Bright’s) first cousins once removed.
-
-Simply, my first cousins are my parent’s sibling’s children. As usual, we can think about the objects and
-put in place some sub-property chains.
+Simply, my first cousins are my parent’s sibling’s children. As usual, we can think about the objects and put in place some sub-property chains.
 
 ### 8.2 First Cousins
 
-Figure 8.1 shows the sub-property chain for first cousins. As usual, think at the object level; to get to
-the first cousins of Robert David Bright, we go to the parents of Robert David Bright, to their siblings
-and then to their children. We go up, along and down. The OWL for this could be:
+![Figure 8.1](../images/FHKB%20figures/cousin.png)
+     
+**Figure 8.1:** Tracing out the sub-property chain for cousins going from a child to a parent, to its sibling, and
+down to its child, a cousin
+     
+Figure 8.1 shows the sub-property chain for first cousins. As usual, think at the object level; to get to the first cousins of Robert David Bright, we go to the parents of Robert David Bright, to their siblings and then to their children. We go up, along and down. The OWL for this could be:
 
 ```
 ObjectProperty: hasFirstCousin
@@ -1398,29 +1395,18 @@ SubPropertyOf: hasCousin
 SubPropertyChain: hasParent o hasSibling o hasChild
 Characteristics: Symmetric
 ```
-Note that we follow the definitions in Section 8.1 of first cousins sharing a grandparent, but not a parent.
-The sub-property chain goes up to children of a grandparent (a given person’s parents), along to siblings
-and down to their children. We do not want this property to be transitive. One’s cousins are not
-necessarily my cousins. The blood uncles of Robert David Bright have children that are his cousins.
-These first cousins, however, also have a mother that is not a blood relation of Robert David Bright and
-the mother’s sibling’s children are not cousins of Robert David Bright.
+Note that we follow the definitions in Section 8.1 of first cousins sharing a grandparent, but not a parent. The sub-property chain goes up to children of a grandparent (a given person’s parents), along to siblings and down to their children. We do not want this property to be transitive. One’s cousins are not necessarily my cousins. The blood uncles of Robert David Bright have children that are his cousins. These first cousins, however, also have a mother that is not a blood relation of Robert David Bright and the mother’s sibling’s children are not cousins of Robert David Bright.
 
 We do, however, want the property to be symmetric. One’s cousins have one’s-self as a cousin.
 
-We need to place the cousin properties in the growing object property hierarchy. Cousins are obviously
-blood relations, but not ancestors, so they go off to one side, underneathhasBloodrelation. We should
-group the different removes and degree of cousin underneath onehasCousinproperty and this we will do.
+We need to place the cousin properties in the growing object property hierarchy. Cousins are obviously blood relations, but not ancestors, so they go off to one side, underneath `hasBloodrelation`. We should group the different removes and degree of cousin underneath onehasCousinproperty and this we will do.
 
 
 Do the following:
 
-```
-Task 33: First cousins
-```
-1. Add the property ofhasCousinto the hierarchy underneathhasBloodrelation;
-2. AddhasFirstCousinunderneath this property;
-3. Add the sub-property chain as described above;
-4. Run the reasoner and look at the first cousins of Robert David Bright.
+|Task 33: First cousins|
+|---|
+|<ol><li>Add the property of `hasCousin` to the hierarchy underneath `hasBloodrelation`;</li><li>Add `hasFirstCousin` underneath this property;</li><li>Add the sub-property chain as described above;</li><li>Run the reasoner and look at the first cousins of Robert David Bright.</li><ol>|
 
 You should see the following people as first cousins of Robert David Bright: Mark Anthony Heath,
 Nicholas Charles Heath, Mark Bright, Ian Bright, Janet Bright, William Bright, James Bright, Julie
