@@ -1179,9 +1179,7 @@ Pellet 2.2.0 0.529 sec (0.00428 % of final) and by FaCT++ 1.6.4 is approximately
 
 ## Data Properties in the FHKB
 
-We now have some individuals with some basic object properties between individuals. OWL 2, however,
-also has data properties that can relate an object or individual to some item of data. There are data
-about aPerson, such as years of events and names etc. So, in this Chapter you will:
+We now have some individuals with some basic object properties between individuals. OWL 2, however, also has data properties that can relate an object or individual to some item of data. There are data about a `Person`, such as years of events and names etc. So, in this Chapter you will:
 
 1. Make some data properties to describe event years to people;
 2. Create some simple defined classes that group people by when they were born;
@@ -1189,61 +1187,39 @@ about aPerson, such as years of events and names etc. So, in this Chapter you wi
 4. Deal with the open world assumption;
 5. Add given and family names to individuals in the FHKB.
 
+![camera](../images/FHKB%20figures/images/black_camera.png)
+
 ```
 There is a snapshot of the ontology as required at this point in the tutorial available
-athttp://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial.
+at http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial.
 ```
 ### 7.1 Adding Some Data Properties for Event Years
 
-Everyone has a birth year; death year; and some have a marriage year and so on. We can model these
-simply with data properties and an integer as a filler. OWL 2 has a DateTime datatype, where it is
-possible to specify a precise time and date down to a second.^1 This proves cumbersome (seehttp://
-robertdavidstevens.wordpress.com/2011/05/05/using-the-datetime-data-type-to-describe-birthdays/
-for details); all we need is a simple indication of the year in which a person was born. Of course, the
-integer type has a zero, which the Gregorian calendar for which we use integer as a proxy does not, but
-integer is sufficient to our needs. Also, there are various ontological treatments of time and information
-about people (this extends to names etc. as well), but we gloss over that here—that’s another tutorial.
+Everyone has a birth year; death year; and some have a marriage year and so on. We can model these simply with data properties and an integer as a filler. OWL 2 has a DateTime datatype, where it is possible to specify a precise time and date down to a second. <sup>7</sup> This proves cumbersome (see http://robertdavidstevens.wordpress.com/2011/05/05/using-the-datetime-data-type-to-describe-birthdays/ for details); all we need is a simple indication of the year in which a person was born. Of course, the integer type has a zero, which the Gregorian calendar for which we use integer as a proxy does not, but integer is sufficient to our needs. Also, there are various ontological treatments of time and information about people (this extends to names etc. as well), but we gloss over that here—that’s another tutorial.
 
-(^1) [http://www.w3.org/TR/2008/WD-owl2-quick-reference-20081202/#Built-in_Datatypes_and_Facets](http://www.w3.org/TR/2008/WD-owl2-quick-reference-20081202/#Built-in_Datatypes_and_Facets)
+<sup>7</sup> [http://www.w3.org/TR/2008/WD-owl2-quick-reference-20081202/#Built-in_Datatypes_and_Facets](http://www.w3.org/TR/2008/WD-owl2-quick-reference-20081202/#Built-in_Datatypes_and_Facets)
 
+We can have dates for birth, death and (eventually) marriage (see Chapter 9) and we can just think of these as event years. We can make a little hierarchy of event years as shown in Figure 7.1).
 
-We can have dates for birth, death and (eventually) marriage (see Chapter 9) and we can just think of
-these as event years. We can make a little hierarchy of event years as shown in Figure 7.1).
+|Task 27: Create a data property hierarchy|
+|---|
+|1. Create the data property `hasEventYear` with range integer and domain `Person`; <br>2. Create the data property `hasBirthYear` and make it a sub-property of `hasEventYear` (that way, the domain and range of `hasEventYear` are inherited); <br>3. Create the data property `hasDeathYear` and make it a sub-property of `hasEventYear`; <br>4. For each individual add the birth years shown in Table A.1 (see appendix). You do not actually have to go back to the table—it is easier to read the birth years simply off the individual names.|
 
-```
-Task 27: Create a data property hierarchy
-```
-1. Create the data propertyhasEventYearwith range integer and domainPerson;
-2. Create the data propertyhasBirthYearand make it a sub-property ofhasEventYear
-    (that way, the domain and range ofhasEventYearare inherited);
-3. Create the data propertyhasDeathYearand make it a sub-property ofhasEventYear;
-4. For each individual add the birth years shown in Table A.1 (see appendix). You do
-    not actually have to go back to the table—it is easier to read the birth years simply
-    off the individual names.
+![camera](../images/FHKB%20figures/images/black_camera.png)
 
 ```
 Again, asserting birth years for all individuals can be a bit tedious. The reader
 can find a convenience snapshot of the ontology at this stage athttp://owl.cs.
 manchester.ac.uk/tutorials/fhkbtutorial.
 ```
-We now have an ABox with individuals with fact assertions to data indicating a birth year. We can, if
-we wish, also add a class restriction to thePersonclass saying that each and every instance of the class
-Personholds a data property to an integer and that this property is called ‘hasBirthYear’. As usual when
-deciding whether to place such a restriction upon a class, ask whether it is true that each and every
-instance of the class holds that property; this is exactly the same as we did for the object properties in
-Chapter 4. Everyone does have a birth year, even if it is not known.
+
+We now have an ABox with individuals with fact assertions to data indicating a birth year. We can, if we wish, also add a class restriction to thePersonclass saying that each and every instance of the class `Person` holds a data property to an integer and that this property is called ‘hasBirthYear’. As usual when deciding whether to place such a restriction upon a class, ask whether it is true that each and every instance of the class holds that property; this is exactly the same as we did for the object properties in Chapter 4. Everyone does have a birth year, even if it is not known.
 
 Once birth years have been added to our individuals, we can start asking some questions.
 
-```
-Task 28: DL queries
-```
-1. Use a DL query to ask:
-    - Personborn after 1960;
-    - Personborn in the 1960s;
-    - Personborn in the 1800s;
-    - Personthat has fewer than three children;
-    - Personthat has more than three children.
+|Task 28: DL queries|
+|---|
+|1. Use a DL query to ask:<br><ul><li>`Person` born after 1960;</li><li>`Person` born in the 1960s;</li><li>`Person` born in the 1800s;</li><li>`Person` that has fewer than three children;</li><li>`Person` that has more than three children.</li><ul>|
 
 The DL query for people born in the 1960s is:
 
@@ -1255,47 +1231,26 @@ This kind of interval is known as a facet.
 
 #### 7.1.1 Counting Numbers of Children
 
-The last two queries in the list do not work as expected. We have asked, for instance, forPersonthat
-have more than three children, but we get no members ofPersonin the answer, though we know that
-there are some in the FHKB (e.g.,John_Bright_1930). This is because there is not enough information
-in the FHKB to tell that this person has more than three **different** people as children. As humans we
-can look at the four children of John Bright and know that they are different – for instance, they all have
-different birth years. The automated reasoner, however, does not know that aPersoncan only have one
-birth year.
+The last two queries in the list do not work as expected. We have asked, for instance, for `Person` that have more than three children, but we get no members of `Person` in the answer, though we know that there are some in the FHKB (e.g., `John_Bright_1930`). This is because there is not enough information in the FHKB to tell that this person has more than three **different** people as children. As humans we can look at the four children of John Bright and know that they are different – for instance, they all have different birth years. The automated reasoner, however, does not know that a `Person` can only have one birth year.
 
-```
-Task 29: Make a functional object property
-```
-1. Make the propertyhasBirthYearfunctional.
-2. Ask the query forPersonthat has more than three children again.
+|Task 29: Make a functional object property|
+|---|
+|1. Make the property `hasBirthYear` functional. <br>2. Ask the query for `Person` that has more than three children again.|
 
-This time the query should work. All the other event year properties should be made functional, expect
-hasEventYear, as one individual can have many event years. As the children have different birth years
-and an individual can only hold onehasBirthYearproperty, then these people must be distinct entities.
+This time the query should work. All the other event year properties should be made functional, expect `hasEventYear`, as one individual can have many event years. As the children have different birth year and an individual can only hold one `hasBirthYear` property, then these people must be distinct entities.
 
-Of course, making birth year functional is not a reliable way of ensuring that the automated reasoner
-knows that the individual are different. It is possible for twoPersonto have the same birth year within
-the same family – twins and so on. Peter_William_Bright_1941 has three children, two of which are
-twins, so will not be a member of the class of people with at least three children. So, we use the **different
-individuals** axiom. Most tools, including Protégé, have a feature that allows all individuals to be made
-different.
-
-```
-Task 30: Make all individuals different
-```
-1. Make all individuals different;
-2. Ask the above queries again.
+Of course, making birth year functional is not a reliable way of ensuring that the automated reasoner knows that the individual are different. It is possible for two `Person` to have the same birth year within the same family – twins and so on. `Peter_William_Bright_1941` has three children, two of which are twins, so will not be a member of the class of people with at least three children. So, we use the **different individuals** axiom. Most tools, including Protégé, have a feature that allows all individuals to be made different.
+ 
+|Task 30: Make all individuals different|
+|---|
+|1. Make all individuals different; <br>2. Ask the above queries again.|
 
 From now on, every time you add individuals, make sure the different individuals axiom is updated.
 
 
 ### 7.2 The Open World Assumption
 
-We have met again the open world assumption and its importance in the FHKB. In the use of the
-functional characteristic on thehasBirthYearproperty, we saw one way of constraining the interpretation
-of numbers of children. We also introduced the ‘different individuals’ axiom as a way of making all
-individuals in a knowledge base distinct. There are more questions, however, for which we need more
-ways of closing down the openness of OWL 2.
+We have met again the open world assumption and its importance in the FHKB. In the use of the functional characteristic on the `hasBirthYear` property, we saw one way of constraining the interpretation of numbers of children. We also introduced the ‘different individuals’ axiom as a way of making all individuals in a knowledge base distinct. There are more questions, however, for which we need more ways of closing down the openness of OWL 2.
 
 Take the questions:
 
@@ -1303,60 +1258,43 @@ Take the questions:
 - People that have only brothers;
 - People that have only female children.
 
-We can only answer these questions if we locally close the world.We have said that David and Margaret
-have two children, Richard and Robert, but we have not said that there are not any others. As usual,
-try not to apply your domain knowledge too much; ask yourself what the automated reasoner actually
-knows. As we have the open world assumption, the reasoner will assume, unless otherwise said, that
-there could be more children; it simply doesn’t know.
+![dragon](../images/FHKB%20figures/dragon.png)
+     
+We can only answer these questions if we locally close the world.We have said that David and Margaret have two children, Richard and Robert, but we have not said that there are not any others. As usual, try not to apply your domain knowledge too much; ask yourself what the automated reasoner actually knows. As we have the open world assumption, the reasoner will assume, unless otherwise said, that there could be more children; it simply doesn’t know.
 
-Think of a railway journey enquiry system. If I ask a standard closed world system about the possible
-routes by rail, between Manchester and Buenos Aires, the answer will be ’none’, as there are none
-described in the system. With the open world assumption, if there is no information in the system then
-the answer to the same question will simply be ‘I don’t know’. We have to explicitly say that there is no
-railway route from Manchester to Buenos Aires for the right answer to come back.
+Think of a railway journey enquiry system. If I ask a standard closed world system about the possible routes by rail, between Manchester and Buenos Aires, the answer will be ’none’, as there are none described in the system. With the open world assumption, if there is no information in the system then the answer to the same question will simply be ‘I don’t know’. We have to explicitly say that there is no railway route from Manchester to Buenos Aires for the right answer to come back.
 
-We have to do the same thing in OWL. We have to say that David and Margaret have only two children.
-We do this with a **type assertion** on individuals. So far we have only used fact assertions. A type
-assertion to close down David Bright’ parentage looks like this:
+We have to do the same thing in OWL. We have to say that David and Margaret have only two children. We do this with a **type assertion** on individuals. So far we have only used fact assertions. A type assertion to close down David Bright’ parentage looks like this:
 
 ```
 isParentOf only {Robert_David_Bright_1965,Richard_John_Bright_1962 }
 ```
-This has the same meaning as the closure axioms that you should be familiar with on classes. We are
-saying that the only fillers that can appear on the right-hand-side of theisParentOfproperty on this
-individual are the two individuals for Richard and Robert. We use the braces to represent the set of
-these two individuals.
 
-```
-Task 31: Make a closure axiom
-```
-1. Add the closure assertion above to David Bright;
-2. Issue the DL queryisParentOf exactly 2 Person.
+![dragon](../images/FHKB%20figures/dragon.png)
 
-The last query should return the answer of David Bright. Closing down the whole FHKB ABox is a
-chore and would really have to be done programmatically. OWL scripting languages such as the Ontol-
+This has the same meaning as the closure axioms that you should be familiar with on classes. We are saying that the only fillers that can appear on the right-hand-side of the `isParentOf` property on this individual are the two individuals for Richard and Robert. We use the braces to represent the set of these two individuals.
 
+|Task 31: Make a closure axiom|
+|---|
+|1. Add the closure assertion above to David Bright; <br>2. Issue the DL query `isParentOf exactly 2 Person`.|
 
-ogy Preprocessing Language^2 (OPPL) [2] can help here. Also going directly to the OWL API [1]^3 , if you
-know what you are doing, is another route.
+The last query should return the answer of David Bright. Closing down the whole FHKB ABox is a chore and would really have to be done programmatically. OWL scripting languages such as the Ontology Preprocessing Language<sup>8</sup> (OPPL) [2] can help here. Also going directly to the OWL API [1]<sup>9</sup>, if you know what you are doing, is another route.
 
+![dragon](../images/FHKB%20figures/dragon.png)
+     
 ```
 Adding all these closure type assertions can slow down the reasoner; so think about
 the needs of your system – just adding it ‘because it is right’ is not necessarily the
 right route.
 ```
+
+<sup>8</sup> [http://oppl2.sourceforge.net](http://oppl2.sourceforge.net)
+     
+<sup>9</sup> [http://owlapi.sourceforge.net/](http://owlapi.sourceforge.net/)
+     
 ### 7.3 Adding Given and Family Names
 
-We also want to add some other useful data facts to people – their names. We have been putting names
-as part of labels on individuals, but data fact assertions make sense to separate out family and given
-names so that we can ask questions such as ‘give me all people with the family name Bright and the first
-given name of either James or William’. A person’s name is a fact about that person and is more, in this
-case, than just a label of the representation of that person. So, we want family names and given names.
-A person may have more than one given name – ‘Robert David’, for instance – and an arbitrary number
-of given names can be held. For the FHKB, we have simply created two data properties ofhasFirst-
-GivenNameandhasSecondGivenName). Ideally, it would be good to have some index on the property to
-given name position, but OWL has no n-ary relationships. Otherwise, we could reify thehasGivenName
-property into a class of objects, such as the following:
+We also want to add some other useful data facts to people – their names. We have been putting names as part of labels on individuals, but data fact assertions make sense to separate out family and given names so that we can ask questions such as ‘give me all people with the family name Bright and the first given name of either James or William’. A person’s name is a fact about that person and is more, in this case, than just a label of the representation of that person. So, we want family names and given names. A person may have more than one given name – ‘Robert David’, for instance – and an arbitrary number of given names can be held. For the FHKB, we have simply created two data properties of `hasFirstGivenName` and `hasSecondGivenName`). Ideally, it would be good to have some index on the property to given name position, but OWL has no n-ary relationships. Otherwise, we could reify the `hasGivenName` property into a class of objects, such as the following:
 
 ```
 Class: GivenName
@@ -1365,65 +1303,45 @@ hasPosition some Integer
 ```
 but it is really rather too much trouble for the resulting query potential.
 
-As already shown, we will use data properties relating instances ofPersonto strings. We want to
-distinguish family and given names, and then different positions of given names through simple conflating
-of position into the property name. Figure 7.1 shows the intended data property hierarchy.
+As already shown, we will use data properties relating instances of `Person` to strings. We want to distinguish family and given names, and then different positions of given names through simple conflating of position into the property name. Figure 7.1 shows the intended data property hierarchy.
 
-(^2) [http://oppl2.sourceforge.net](http://oppl2.sourceforge.net)
-(^3) [http://owlapi.sourceforge.net/](http://owlapi.sourceforge.net/)
+![Figure 7.1](../images/FHKB%20figures/new/event_name_hierarchy.PNG)
 
+**Figure 7.1:** The event year and name data property hierarchies in the FHKB.
 
-```
-Figure 7.1: The event year and name data property hierarchies in the FHKB.
-```
 Do the following:
 
-```
-Task 32: Data properties
-```
-1. Create the data properties as described in Figure 7.1;
-2. Give thehasNameproperty the domain ofPersonand the range ofString;
-3. Make the leaf properties of given names functional;
-4. Add the names shown in Table A.1 (appendix); Again, it may be easier to read the
-    names of the individual names.
-5. Ask the questions:
-    all the people with the first given name ‘James’;
-    all the people with the first given name ‘William’;
-6. All the people with the given name ‘William’;
-7. All the people with the given name ‘William’ and the family name ‘Bright’.
+|Task 32: Data properties|
+|---|
+|1. Create the data properties as described in Figure 7.1; <br>2. Give the `hasName` property the domain of `Person` and the range of `String`; <br>3. Make the leaf properties of given names functional; <br>4. Add the names shown in Table A.1 (appendix); Again, it may be easier to read the names of the individual names. <br>5. Ask the questions:<ul><li>all the people with the first given name ‘James’;</li><li>all the people with the first given name ‘William’;</li></ul> <br>6. All the people with the given name ‘William’; <br>7. All the people with the given name ‘William’ and the family name ‘Bright’.|
 
-The name data property hierarchy and the queries using those properties displays what now should
-be familiar. Sub-properties that imply the super-property. So, when we askhasFirstGivenName value
-"William"and then the queryhasGivenName value value "William"we can expect different answers. There
-are people with ‘William’ as either first or second given name and asking the question with the super-
-property for given names will collect both first and second given names.
+The name data property hierarchy and the queries using those properties displays what now should be familiar. Sub-properties that imply the super-property. So, when we ask `hasFirstGivenName` value `"William"` and then the query `hasGivenName value value "William"` we can expect different answers. There are people with ‘William’ as either first or second given name and asking the question with the super-property for given names will collect both first and second given names.
 
 ### 7.4 Summary
 
-We have used data properties that link objects to data such as string, integer, floats and Booleans etc.
-OWL uses the XML data types. We have seen a simple use of data properties to simulate birth years.
+We have used data properties that link objects to data such as string, integer, floats and Booleans etc. OWL uses the XML data types. We have seen a simple use of data properties to simulate birth years. The full FHKB also uses them to place names (given and family) on individuals as strings. This means one can ask for thePersonwith the given name "James", of which there are many in the FHKB.
 
+Most importantly we have re-visited the open world assumption and its implications for querying an OWL ABox. We have looked at ways in which the ABox can be closed down – unreliably via the functional characteristic (in this particular case) and more generally via type assertions.
 
-The full FHKB also uses them to place names (given and family) on individuals as strings. This means
-one can ask for thePersonwith the given name "James", of which there are many in the FHKB.
+All the DL queries used in this chapter can also serve as defined classes in the TBox. It is a useful exercise to progressively add more defined classes to the FHKB TBox. Make more complex queries, make them into defined classes and inspect where they appear in the class hierarchy.
 
-Most importantly we have re-visited the open world assumption and its implications for querying an OWL
-ABox. We have looked at ways in which the ABox can be closed down – unreliably via the functional
-characteristic (in this particular case) and more generally via type assertions.
-
-All the DL queries used in this chapter can also serve as defined classes in the TBox. It is a useful exercise
-to progressively add more defined classes to the FHKB TBox. Make more complex queries, make them
-into defined classes and inspect where they appear in the class hierarchy.
-
+<img src="../images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
+     
 ```
 The FHKB ontology at this stage of the tutorial has an expressivity ofSROIQ(D).
 ```
+     
+<img src="../images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
+     
 ```
 The time to reason with the FHKB at this point (in Protégé) on a typical desktop
 machine by HermiT 1.3.8 is approximately 1891.157 sec (1.00000 % of final), by
 Pellet 2.2.0 1.134 sec (0.00917 % of final) and by FaCT++ 1.6.4 is approximately
 0.201 sec (0.006 % of final). 0 sec indicates failure or timeout.
 ```
+     
+<img src="../images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
+     
 ```
 Note that we now cover the whole range of expressivity of OWL 2. HermiT at
 least is impossibly slow by now. This may be because HermiT does more work
