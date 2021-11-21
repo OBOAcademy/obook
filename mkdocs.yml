@@ -23,6 +23,7 @@ nav:
       - Templates for OBO ontologies: lesson/templates_for_obo.md
       - Ontology Development: lesson/ontology_development.md
       - Ontology Fundamentals: lesson/ontology_fundamentals.md
+      - Modelling with Object Properties: lesson/modelling_with_object_properties.md
       - Ontology Term Use: lesson/ontology_term_use.md
       - RDF Fundamentals: lesson/rdf.md
       - Semantic Database Fundamentals: lesson/semantic_database_fundamentals.md
@@ -69,6 +70,7 @@ nav:
       - A day in the life of an ontology curator: reference/ontology-curator.md
       - Git FAQ: reference/git_faq.md
       - OWL, OBO, JSON? Base, simple, full, basic? What should you use, and why?: reference/owl_formats_variants.md
+      - Monkeying around with OWL: reference/mungall_blog_radar.md
   - OBOOK Editors:
       - How to add images: images/index.md
       - New lesson template: config/template.md
