@@ -82,6 +82,7 @@ GRAPH ?graph_uri
 }
 ```
 On the [OntoBee SPARQL endpoint](http://www.ontobee.org/sparql) still reveals a number of ontologies using non-standard part-of relations. In our experience, most of these are accidental due to past format conversions, but not all. This problem was _much worse_ before RO came along, and our goal is to unify the representation of key properties like "part of" across all OBO ontologies. The [OBO Dashboard](http://dashboard.obofoundry.org/) checks for object properties that are not aligned with RO.
+
 2. As a place to encode and negotiate object property semantics. Object properties (OP) can have domains and ranges, can have characteristics such as functionality and transitivity, see [above](#semantics). Arguing the exact semantics of an OP can be a difficult and lengthy collaborative process, esp. since OP semantics can have a huge impact on ontology reasoning. Detailed RO documentation (modelling patterns and practices) can be found in [here](https://oborel.github.io/obo-relations/). The process of how relationships are added to RO is discussed in the next section.
 
 ### Adding relationships to RO
