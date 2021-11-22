@@ -25,6 +25,11 @@
 - [Yasgui](https://yasgui.triply.cc/#) 
 - [ROBOT query](http://robot.obolibrary.org/query)
 
+**SPARQL endpoints**
+
+- [Ontobee SPARQL endpoint](http://www.ontobee.org/sparql): Useful to run queries across all OBO Foundry ontologies
+- [Ubergraph SPARQL endpoint](https://stars-app.renci.org/ubergraph/sparql): Many key OBO ontologies are loaded here with lots of materialised inferences ([docs](https://github.com/INCATools/ubergraph/)).
+
 **Templating systems**
 
 - [DOSDP](https://incatools.github.io/dead_simple_owl_design_patterns/)
@@ -45,6 +50,10 @@
     - [CPT Story](https://www.bioontology.org/why-bioportal-no-longer-offers-the-current-procedural-terminology-cpt/). The Current Procedural Terminology was the by far most highly accessed Terminology on Bioportal - for many years. Due to license concerns, it had to be withdrawn from the repository. This story serves a cautionary tale of using terminologies with non-open or non-transparent licensing schemes.
 - [AgroPortal](http://agroportal.lirmm.fr/): Like BioPortal, but focussed on the Agronomy domain.
 - [Linked Open Data Vocabularies (LOV)](https://lov.linkeddata.es/dataset/lov/): Lists the most important vocabularies in the Linked Data space, such as [Dublin Core](https://dublincore.org/), [SKOS](https://www.w3.org/TR/skos-reference/) and [Friend-of-a-Friend](http://xmlns.com/foaf/spec/) (FOAF). 
+
+**Ontology visualisation**
+
+- [OBO Graphviz](https://github.com/cmungall/obographviz): Library to visualise ontologies in beautifully readable graphics based on `Dot`.
 
 ### Nico's top 10 tools for the Semantic OBO Engineer's Toolbox
 

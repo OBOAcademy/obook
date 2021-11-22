@@ -24,10 +24,10 @@ The goal of this course is to provide ongoing training for the OBO community. As
 | Date | Lesson | Notes |
 | --- | --- | --- |
 | 2021/12/14 | TBD - your suggestions are welcome | |
-| 2021/11/30 | Semantics of object properties (including Relations Ontology) | _Content coming soon_ |
-| 2021/11/16 | SPARQL queries | [Watch the Week 4 video here](https://open.hpi.de/courses/semanticweb2016/items/4HiNFQlE5zfD5nsU4MGArW) and [read this article](https://medium.com/virtuoso-blog/dbpedia-basic-queries-bc1ac172cc09). We'll do live training during the session this week.|
-| 2021/11/02 | [Templating: DOSDPs and ROBOT](https://oboacademy.github.io/obook/lesson/templates_for_obo/) | |
-| 2021/10/19 | [Ontology Design](https://oboacademy.github.io/obook/lesson/ontology_design/) | |
+| 2021/11/30 | [Semantics of object properties](../lesson/modelling_with_object_properties.md) (including Relations Ontology) | |
+| 2021/11/16 | [SPARQL for OBO ontology development](../tutorial/sparql.md) | |
+| 2021/11/02 | [Templating: DOSDPs and ROBOT](../lesson/templates_for_obo.md) | |
+| 2021/10/19 | [Ontology Design](../lesson/ontology_design.md) | |
 | 2021/10/05 | Cancelled due to overlap with [ISB conference](https://www.biocuration.org/14th-annual-biocuration-conference-virtual/) | |
 | 2021/09/21 | [Ontology Pipelines with ROBOT 2](../lesson/ontology_pipelines.md) | |
 | 2021/09/08 | [Migrating legacy ontology systems to ODK](../tutorial/migrating-ontology-to-odk.md) | |
