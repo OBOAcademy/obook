@@ -31,6 +31,7 @@ robert.stevens@manchester.ac.uk
 
 - v 1.0 Robert Stevens, Margaret Stevens, Nicolas Matentzoglu and Simon Jupp
 - v 1.1 Robert Stevens, Nicolas Matentzoglu
+- v 2.0 (Web version) Robert Stevens, Nicolas Matentzoglu, Shawn Tan
 
 ```
 The University of Manchester
@@ -325,6 +326,7 @@ Facts: hasFather mr_plinth, hasMother mrs_plinth
 |<ol><li>Using the information in Table A.1 (see appendix) about parentage (so the columns about fathers and mothers), enter the fact assertions for the people which appear in rows shaded in grey. We will only use the `hasMother` and `hasFather` properties in our fact assertions. You do not need to assert names and birth years yet. This exercise will require you to create an individual for every person we want to talk about, using the `Firstname_Secondname_Familyname_Birthyear` pattern, as for example in `Robert_David_Bright_1965`.</li></ol>|
 
 ![camera](../images/FHKB%20figures/images/black_camera.png)
+
 ```
 While asserting facts about all individuals in the FHKB will be a bit tedious at
 times, it might be useful to at least do the task for a subset of the family members.
@@ -333,8 +335,7 @@ the raw individuals available athttp://owl.cs.manchester.ac.uk/tutorials/
 fhkbtutorial.
 ```
 
-![noteiconsmall](../images/FHKB%20figures/images/NoteIconSmall.png)
-
+<img src="../images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
 
 ```
 If you are working with Protégé, you may want to look at the Matrix plugin for
@@ -374,15 +375,13 @@ We have also encountered some important principles:
 - Upon reasoning we get the inverses of properties between named individuals for free.
 - Lots is still open. For example, we do not know the sex of individuals and what other children, other than those described, people in the FHKB may have.
 
-![noteiconsmall](../images/FHKB%20figures/images/NoteIconSmall.png)
-
+<img src="../images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
 
 ```
 The FHKB ontology at this stage of the tutorial has an expressivity ofALHI.
 ```
 
-![noteiconsmall](../images/FHKB%20figures/images/NoteIconSmall.png)
-
+<img src="../images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
 
 ```
 The time to reason with the FHKB at this point (in Protégé) on a typical desktop
@@ -405,6 +404,7 @@ In this Chapter you will:
     the implications of the property hierarchy.
 
 ![camera](../images/FHKB%20figures/images/black_camera.png)
+
 ```
 Find a snapshot of the ontology at this stage athttp://owl.cs.manchester.ac.
 uk/tutorials/fhkbtutorial.
@@ -441,6 +441,7 @@ We can do this with OWL 2’s sub-property chains. The way to think about sub-pr
 see property _x_ followed by property _y_ linking three objects, then it implies that property _z_ is held between
 
 ![Figure 3.1](../images/FHKB%20figures/grandparent.png)
+
 **Figure 3.1:** Three blobs representing objects of the classPerson. The three objects are linked by ahasParent
 property and this implies ahasGrandparentproperty.
 
@@ -501,15 +502,13 @@ We made `hasAncestor` transitive. This means that my ancestor’s ancestors are 
 
 In OWL 2, we can also trace ‘paths’ around objects. Again, think of the objects involved in the path of properties that link objects together. We have done simple paths so far – Robert linked to David via `hasParent` and David linked to William via `hasFather` implies the link between Robert and William of `hasGrandfather`. If this is true for all cases (for which you have to use your domain knowledge), one can capture this implication in the property hierarchy. Again, we are making our work easier by adding no new explicit facts, but making use of the implication that the reasoner works out for us.
 
-![noteiconsmall](../images/FHKB%20figures/images/NoteIconSmall.png)
-
+<img src="../images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
 
 ```
 The FHKB ontology at this stage of the tutorial has an expressivity ofALRI+.
 ```
 
-![noteiconsmall](../images/FHKB%20figures/images/NoteIconSmall.png)
-
+<img src="../images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
 
 ```
 The time to reason with the FHKB at this point (in Protégé) on a typical desktop
@@ -685,8 +684,7 @@ Do the following:
 |---|
 |<ol><li> Make sure the appropriate `Person`, `Man` and `Woman` are domains and ranges for `hasFather`, `hasMother` and `hasParent`. </li><li> Run the reasoner and look at the property hierarchy. </li><li> Also look at the properties `hasAncestor`, `hasGrandparent`, `hasUncle` and so on; look to see what domains and ranges are found. Add any domains and ranges explicitly as necessary.</li></ol>|
 
-![warnicon](../images/FHKB%20figures/images/WarningIcon.png)
-
+<img src="../images/FHKB%20figures/images/WarningIcon.png" alt="note" width="50"/>
 
 ```
 Protégé for example in its current version (November 2015) does not visualise
@@ -749,22 +747,28 @@ Here are some things that should now be understood upon completing this chapter:
 
 Finally, we looked at some defined classes. We inferred equivalence between some classes where the extents of the classes were inferred to be the same – in this case the extents of `Person` and `Descendant` are the same. That is, all the objects that can appear in `Person` will also be members of `Descendant`. We can check this implication intuitively – all people are descendants of someone. Perhaps not the most profound inference of all time, but we did no real work to place this observation in the FHKB.
 
-![noteiconsmall](../images/FHKB%20figures/images/NoteIconSmall.png)
-
+<img src="../images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
 
 ```
 This last point is a good general observation. We can make the reasoner do work
 for us. The less maintenance we have to do in the FHKB the better. This will be
 a principle that works throughout the tutorial.
 ```
-![noteiconsmall](../images/FHKB%20figures/images/NoteIconSmall.png)
+<<<<<<< Updated upstream
+<img src="../images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
+=======
 
+![noteiconsmall](../images/FHKB%20figures/images/NoteIconSmall.png)
+>>>>>>> Stashed changes
 
 ```
 The FHKB ontology at this stage of the tutorial has an expressivity ofSRIF.
 ```
+<<<<<<< Updated upstream
+<img src="../images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
+=======
 ![noteiconsmall](../images/FHKB%20figures/images/NoteIconSmall.png)
-
+>>>>>>> Stashed changes
 
 ```
 The time to reason with the FHKB at this point (in Protégé) on a typical desktop
@@ -1024,6 +1028,7 @@ Range: Person
 SubPropertyChain: hasParent o hasBrother
 InverseOf: isUncleOf
 ```
+
 ![Figure 5.4](../images/FHKB%20figures/uncle.png)
 
 **Figure 5.4:** Tracing out the path between objects to get thehasUnclesub-property chain.
@@ -1064,15 +1069,13 @@ Siblings have revealed several things for us:
 - OWL 2 cannot do half-siblings;
 - However, we can get close enough and we can start inferring lots of facts via sub-property chains using the sibling relationships.
 
-![noteiconsmall](../images/FHKB%20figures/images/NoteIconSmall.png)
-
+<img src="../images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
 
 ```
 The FHKB ontology at this stage of the tutorial has an expressivity ofSRIF.
 ```
 
-![noteiconsmall](../images/FHKB%20figures/images/NoteIconSmall.png)
-
+<img src="../images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
 
 ```
 The time to reason with the FHKB at this point (in Protégé) on a typical desktop
@@ -1167,15 +1170,13 @@ us most of what we need, but has a little less negative impact on the reasoning
 time.
 ```
 
-![noteiconsmall](../images/FHKB%20figures/images/NoteIconSmall.png)
-
+<img src="../images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
 
 ```
 The FHKB ontology at this stage of the tutorial has an expressivity of SROIQ.
 ```
 
-![noteiconsmall](../images/FHKB%20figures/images/NoteIconSmall.png)
-
+<img src="../images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
 
 ```
 The time to reason with the FHKB at this point (in Protégé) on a typical desktop
@@ -1268,7 +1269,7 @@ Take the questions:
 - People that have only female children.
 
 ![dragon](../images/FHKB%20figures/dragon.png)
-     
+
 We can only answer these questions if we locally close the world.We have said that David and Margaret have two children, Richard and Robert, but we have not said that there are not any others. As usual, try not to apply your domain knowledge too much; ask yourself what the automated reasoner actually knows. As we have the open world assumption, the reasoner will assume, unless otherwise said, that there could be more children; it simply doesn’t know.
 
 Think of a railway journey enquiry system. If I ask a standard closed world system about the possible routes by rail, between Manchester and Buenos Aires, the answer will be ’none’, as there are none described in the system. With the open world assumption, if there is no information in the system then the answer to the same question will simply be ‘I don’t know’. We have to explicitly say that there is no railway route from Manchester to Buenos Aires for the right answer to come back.
@@ -1290,7 +1291,7 @@ This has the same meaning as the closure axioms that you should be familiar with
 The last query should return the answer of David Bright. Closing down the whole FHKB ABox is a chore and would really have to be done programmatically. OWL scripting languages such as the Ontology Preprocessing Language<sup>8</sup> (OPPL) [2] can help here. Also going directly to the OWL API [1]<sup>9</sup>, if you know what you are doing, is another route.
 
 ![dragon](../images/FHKB%20figures/dragon.png)
-     
+
 ```
 Adding all these closure type assertions can slow down the reasoner; so think about
 the needs of your system – just adding it ‘because it is right’ is not necessarily the
@@ -1334,15 +1335,25 @@ Most importantly we have re-visited the open world assumption and its implicatio
 
 All the DL queries used in this chapter can also serve as defined classes in the TBox. It is a useful exercise to progressively add more defined classes to the FHKB TBox. Make more complex queries, make them into defined classes and inspect where they appear in the class hierarchy.
 
-![noteiconsmall](../images/FHKB%20figures/images/NoteIconSmall.png)
-
+<<<<<<< Updated upstream
+<img src="../images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
      
 ```
 The FHKB ontology at this stage of the tutorial has an expressivity ofSROIQ(D).
 ```
      
+<img src="../images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
+=======
 ![noteiconsmall](../images/FHKB%20figures/images/NoteIconSmall.png)
 
+
+```
+The FHKB ontology at this stage of the tutorial has an expressivity ofSROIQ(D).
+```
+
+![noteiconsmall](../images/FHKB%20figures/images/NoteIconSmall.png)
+
+>>>>>>> Stashed changes
      
 ```
 The time to reason with the FHKB at this point (in Protégé) on a typical desktop
@@ -1350,10 +1361,16 @@ machine by HermiT 1.3.8 is approximately 1891.157 sec (1.00000 % of final), by
 Pellet 2.2.0 1.134 sec (0.00917 % of final) and by FaCT++ 1.6.4 is approximately
 0.201 sec (0.006 % of final). 0 sec indicates failure or timeout.
 ```
+<<<<<<< Updated upstream
      
+<img src="../images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
+     
+=======
+
 ![noteiconsmall](../images/FHKB%20figures/images/NoteIconSmall.png)
 
-     
+
+>>>>>>> Stashed changes
 ```
 Note that we now cover the whole range of expressivity of OWL 2. HermiT at
 least is impossibly slow by now. This may be because HermiT does more work
@@ -1373,14 +1390,14 @@ In this Chapter you will
 5. Add a defined class that does first cousins properly.
 
 ![camera](../images/FHKB%20figures/images/black_camera.png)
-     
+
 ```
 There is a snapshot of the ontology as required at this point in the tutorial available
 athttp://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial.
 ```
 
 ![dragon](../images/FHKB%20figures/dragon.png)
-     
+
 ```
 Be warned; from here on the reasoner can start running slowly! Please see warning
 at the beginning of the last chapter for more information.
@@ -1399,7 +1416,7 @@ Simply, my first cousins are my parent’s sibling’s children. As usual, we ca
 ### 8.2 First Cousins
 
 ![Figure 8.1](../images/FHKB%20figures/cousin.png)
-     
+
 **Figure 8.1:** Tracing out the sub-property chain for cousins going from a child to a parent, to its sibling, and
 down to its child, a cousin
      
@@ -1432,7 +1449,7 @@ his children are his own nieces and nephews and thus the cousins of his own chil
 infer siblings correctly in the FHKB haunts us still and will continue to do so.
 
 ![dragon](../images/FHKB%20figures/dragon.png)     
-     
+
 ```
 Although the last query for the cousins of Robert David Bright should return the
 same results for every reasoner, we have had experiences where the results differ.
@@ -1485,7 +1502,7 @@ EquivalentTo: Person that hasFirstCousin some Person
 |<ol><li>Make a defined class `FirstCousin` as shown above;</li><li>Make a defined class `FirstCousinOfRobert`;</li><li>Create a DL query that looks at `Robert_David_Bright_1965` first cousins and takes away the children of `Robert_David_Bright_1965`’ parents as shown above.</li></ol>|
 
 ![dragon](../images/FHKB%20figures/dragon.png)  
-    
+
 This gives some practice with negation. One is making a class and then ‘taking’ some of it away – ‘these, but not those’.
 
 ### 8.5 Summary
@@ -1494,15 +1511,25 @@ We have now expanded the FHKB to include most blood relationships. We have also 
 
 We have reinforced that we can just add more and more relationships to individuals by just adding more properties to our FHKB object property hierarchy and adding more sub-property chains that use the object properties we have built up upon parentage and sibling properties; this is as it should be.
 
-![noteiconsmall](../images/FHKB%20figures/images/NoteIconSmall.png)
-
+<<<<<<< Updated upstream
+<img src="../images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
     
 ```
 The FHKB ontology at this stage of the tutorial has an expressivity ofSROIQ(D).
 ```
     
+<img src="../images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
+=======
 ![noteiconsmall](../images/FHKB%20figures/images/NoteIconSmall.png)
 
+
+```
+The FHKB ontology at this stage of the tutorial has an expressivity ofSROIQ(D).
+```
+
+![noteiconsmall](../images/FHKB%20figures/images/NoteIconSmall.png)
+
+>>>>>>> Stashed changes
     
 ```
 The time to reason with the FHKB at this point (in Protégé) on a typical desktop
@@ -1523,14 +1550,19 @@ In this chapter you will:
 4. Use more than one sub-property chain on a given property.
 
 ![camera](../images/FHKB%20figures/images/black_camera.png)
-     
+
 ```
 There is a snapshot of the ontology as required at this point in the tutorial available
 athttp://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial.
 ```
+<<<<<<< Updated upstream
+<img src="../images/FHKB%20figures/images/WarningIcon.png" alt="note" width="50"/>
+ 
+=======
 ![warnicon](../images/FHKB%20figures/images/WarningIcon.png)
 
- 
+
+>>>>>>> Stashed changes
 ```
 Much of what is in this chapter is really revision; it is more of the same - making
 lots of properties and using lots of sub-property chains. However, it is worth it as
@@ -1598,7 +1630,7 @@ InverseOf: isMotherInLawOf
 ```
 
 ![Figure 9.2](../images/FHKB%20figures/mother_in_law.png)
-     
+
 **Figure 9.2:** Tracing out the path between objects to make the sub-property chain for mother-in-laws
      
 Do the following to make the parent in-law properties:
@@ -1624,7 +1656,7 @@ A wife’s husband’s sister is a sister in law of the wife. Figure 9.3 shows t
 |<ol><li> Create the relationships for siblings-in-law as indicated in the owl code above.</li></ol>|
 
 ![dragon](../images/FHKB%20figures/dragon.png)      
-     
+
 ```
 By now, chances are high that the realisation takes a long time. We recommend to
 remove the very computationally expensive restrictionhasParent exactly 2 Person
@@ -1632,7 +1664,7 @@ on thePersonclass, if you have not done it so far.
 ```
 
 ![Figure 9.3](../images/FHKB%20figures/sister_in_law.png)
-     
+
 **Figure 9.3:** The two routes to being a sister-in-law.
 
 ### 9.4 Aunts and Uncles in-Law
@@ -1650,7 +1682,7 @@ SubPropertyChain: isWifeOf o isBrotherOf o isParentOf
 |<ol><li> Create `hasAuntInLaw` and `hasUncleInLaw` in the usual way; </li><li> Test in the usual way; </li><li> Tidy up the top of the property hierarchy so that it looks like Figure 9.4. We have a top property of `hasRelation` and two sub-properties of `isBloodRelationOf` and `isInLawOf` to establish the kith and kin relationships respectively; </li><li> All the properties created in this chapter (except for spouses) should be underneath `isInLawOf`.</li></ol>|
 
 ![Figure 9.4](../images/FHKB%20figures/new/prophierarchyinlaw.PNG)
-     
+
 **Figure 9.4:** The object property hierarchy after adding the various in-law properties.
 
   
@@ -1663,16 +1695,26 @@ This has really been a revision chapter; nothing new has really been introduced.
 - We have added a lot of kith relationships to join the kin or blood relationships;
 - As usual, the reasoner can establish the hierarchy for the inverses and put a lot of the domain and ranges in for free.
 
+<<<<<<< Updated upstream
+<img src="../images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
+     
+=======
 ![noteiconsmall](../images/FHKB%20figures/images/NoteIconSmall.png)
 
-     
+
+>>>>>>> Stashed changes
 ```
 The FHKB ontology at this stage of the tutorial has an expressivity ofSROIQ(D).
 ```
 
+<<<<<<< Updated upstream
+<img src="../images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
+     
+=======
 ![noteiconsmall](../images/FHKB%20figures/images/NoteIconSmall.png)
 
-     
+
+>>>>>>> Stashed changes
 ```
 The time to reason with the FHKB at this point (in Protégé) on a typical desktop
 machine by HermiT 1.3.8 is approximately 0.000 sec (0.00000 % of final), by Pellet
@@ -1690,7 +1732,7 @@ In this chapter you will:
 2. You will learn that the properties used in these defined classes must be chosen with care.
 
 ![camera](../images/FHKB%20figures/images/black_camera.png)
-     
+
 ```
 There is a snapshot of the ontology as required at this point in the tutorial available
 athttp://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial.
@@ -1747,18 +1789,21 @@ Like the Chapter on marriage and in-law (Chapter 9), this chapter has largely be
 One thing is almost certain; the resulting TBox is rather complex and would be almost impossible to maintain by hand.
 
 ![Figure 10.1](../images/FHKB%20figures/class_hierachy_final_1.PNG)
-     
+
 **Figure 10.1:** The full TBox hierarchy of the FHKB
 
+<<<<<<< Updated upstream
+<img src="../images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
+     
+=======
 ![noteiconsmall](../images/FHKB%20figures/images/NoteIconSmall.png)
 
-     
+>>>>>>> Stashed changes
 ```
 The FHKB ontology at this stage of the tutorial has an expressivity ofSROIQ(D).
 ```
  
-![noteiconsmall](../images/FHKB%20figures/images/NoteIconSmall.png)
-
+<img src="../images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
      
 ```
 The time to reason with the FHKB at this point (in Protégé) on a typical desktop
@@ -1772,13 +1817,13 @@ sec (1.000 % of final). 0 sec indicates failure or timeout.
 ## Final remarks
 
 ![dragon](../images/FHKB%20figures/dragon.png)  
-     
+
 If you have done all the tasks within this tutorial, then you will have touched most parts of OWL 2. Unusually for most uses of OWL we have concentrated on individuals, rather than just on the TBox. One note of warning – the full FHKB has some 450 members of the Bright family and takes a reasonably long time to classify, even on a sensible machine. The FHKB is not scalable in its current form.
 
 One reason for this is that we have deliberately maximised inference. We have attempted not to explicitly type the individuals, but drive that through domain and range constraints. We are making the property hierarchy do lots of work. For the individual Robert David Bright, we only have a couple of assertions, but we infer some 1 500 facts between Robert David Bright and other named individuals in the FHKB–displaying this in Protégé causes problems. We have various complex classes in the TBox and so on.
 
 ![dragon](../images/FHKB%20figures/dragon.png)  
-     
+
 We probably do not wish to drive a genealogical application using an FHKB in this form. Its purpose is educational. It touches most of OWL 2 and shows a lot of what it can do, but also a considerable amount of what it cannot do. As inference is maximised, the FHKB breaks most of the OWL 2 reasoners at the time of writing.However, it serves its role to teach about OWL 2.
 
 OWL 2 on its own and using it in this style, really does not work for family history. We have seen that siblings and cousins cause problems. rules in varius forms can do this kind of thing easily—it is one of the primary examples for learning about Prolog. Nevertheless, the FHKB does show how much inference between named individuals can be driven from a few fact assertions and a property hierarchy. Assuming a powerful enough reasoner and the ability to deal with many individuals, it would be possible to make a family history application using the FHKB; as long as one hid the long and sometimes complex queries and manipulations that would be necessary to ‘prune’ some of the ‘extra’ facts found about individuals. However, the FHKB does usefully show the power of OWL 2, touch a great deal of the language and demonstrate some of its limitations.
