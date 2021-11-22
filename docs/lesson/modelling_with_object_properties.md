@@ -10,11 +10,9 @@ We will cover, in particular, the following subjects:
 <a name="preparation"></a> 
 ## Preparation
 
-We are working with the University of Manchester to incorporate the Family History Knowledge Base Tutorial fully into OBO Academy. While this is happening, we recommend you to do the old version of the tutorial:
+We have worked with the University of Manchester to incorporate the [Family History Knowledge Base Tutorial](http://owl.cs.manchester.ac.uk/publications/talks-and-tutorials/fhkbtutorial/) fully into OBO Academy. 
 
-http://owl.cs.manchester.ac.uk/publications/talks-and-tutorials/fhkbtutorial/
-
-PDF can be downloaded [here](http://mowl-power.cs.man.ac.uk/fhkbtutorial/resources/FHKB-tutorial_v1_1.pdf).
+This is it: [OBOAcademy: Family History - Modelling with Object Properties](../tutorial/fhkb.md).
 
 In contrast to the Pizza tutorial, the Family history tutorial focuses on modelling with individuals. Chapters 4, 5, 8 and 9 are full of object property modelling, and are not only great to get a basic understanding of using them in your ontology, but also give good hints at where OWL and object properties fall short. We refer to the FHKB in the following and expect you to have completed at least chapter 5 before reading on.
 

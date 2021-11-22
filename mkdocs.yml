@@ -45,6 +45,8 @@ nav:
       - Dealing with Semantic Data: 
           - From Tables to Linked Data: tutorial/linking-data.md
           - Basic SPARQL for OBO Engineers: tutorial/sparql.md
+      - General Ontology Modelling:
+          - Family History Knowledge Base (FHKB) tutorial: tutorial/fhkb.md
   - How-to guides:
       - Protege:
           - Installing ELK in Protege: howto/installing_elk_in_protege.md
