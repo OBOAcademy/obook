@@ -754,21 +754,15 @@ This last point is a good general observation. We can make the reasoner do work
 for us. The less maintenance we have to do in the FHKB the better. This will be
 a principle that works throughout the tutorial.
 ```
-<<<<<<< Updated upstream
-<img src="../images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
-=======
 
 ![noteiconsmall](../images/FHKB%20figures/images/NoteIconSmall.png)
->>>>>>> Stashed changes
 
 ```
 The FHKB ontology at this stage of the tutorial has an expressivity ofSRIF.
 ```
-<<<<<<< Updated upstream
-<img src="../images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
-=======
+
 ![noteiconsmall](../images/FHKB%20figures/images/NoteIconSmall.png)
->>>>>>> Stashed changes
+
 
 ```
 The time to reason with the FHKB at this point (in Protégé) on a typical desktop
@@ -1335,25 +1329,14 @@ Most importantly we have re-visited the open world assumption and its implicatio
 
 All the DL queries used in this chapter can also serve as defined classes in the TBox. It is a useful exercise to progressively add more defined classes to the FHKB TBox. Make more complex queries, make them into defined classes and inspect where they appear in the class hierarchy.
 
-<<<<<<< Updated upstream
-<img src="../images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
-     
-```
-The FHKB ontology at this stage of the tutorial has an expressivity ofSROIQ(D).
-```
-     
-<img src="../images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
-=======
 ![noteiconsmall](../images/FHKB%20figures/images/NoteIconSmall.png)
 
-
 ```
-The FHKB ontology at this stage of the tutorial has an expressivity ofSROIQ(D).
+The FHKB ontology at this stage of the tutorial has an expressivity of SROIQ(D).
 ```
 
 ![noteiconsmall](../images/FHKB%20figures/images/NoteIconSmall.png)
 
->>>>>>> Stashed changes
      
 ```
 The time to reason with the FHKB at this point (in Protégé) on a typical desktop
@@ -1361,16 +1344,9 @@ machine by HermiT 1.3.8 is approximately 1891.157 sec (1.00000 % of final), by
 Pellet 2.2.0 1.134 sec (0.00917 % of final) and by FaCT++ 1.6.4 is approximately
 0.201 sec (0.006 % of final). 0 sec indicates failure or timeout.
 ```
-<<<<<<< Updated upstream
-     
-<img src="../images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
-     
-=======
 
 ![noteiconsmall](../images/FHKB%20figures/images/NoteIconSmall.png)
 
-
->>>>>>> Stashed changes
 ```
 Note that we now cover the whole range of expressivity of OWL 2. HermiT at
 least is impossibly slow by now. This may be because HermiT does more work
@@ -1511,26 +1487,14 @@ We have now expanded the FHKB to include most blood relationships. We have also 
 
 We have reinforced that we can just add more and more relationships to individuals by just adding more properties to our FHKB object property hierarchy and adding more sub-property chains that use the object properties we have built up upon parentage and sibling properties; this is as it should be.
 
-<<<<<<< Updated upstream
-<img src="../images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
-    
-```
-The FHKB ontology at this stage of the tutorial has an expressivity ofSROIQ(D).
-```
-    
-<img src="../images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
-=======
 ![noteiconsmall](../images/FHKB%20figures/images/NoteIconSmall.png)
 
-
 ```
-The FHKB ontology at this stage of the tutorial has an expressivity ofSROIQ(D).
+The FHKB ontology at this stage of the tutorial has an expressivity of SROIQ(D).
 ```
 
 ![noteiconsmall](../images/FHKB%20figures/images/NoteIconSmall.png)
 
->>>>>>> Stashed changes
-    
 ```
 The time to reason with the FHKB at this point (in Protégé) on a typical desktop
 machine by HermiT 1.3.8 is approximately 0.000 sec (0.00000 % of final), by Pellet
@@ -1555,14 +1519,9 @@ In this chapter you will:
 There is a snapshot of the ontology as required at this point in the tutorial available
 athttp://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial.
 ```
-<<<<<<< Updated upstream
-<img src="../images/FHKB%20figures/images/WarningIcon.png" alt="note" width="50"/>
- 
-=======
+
 ![warnicon](../images/FHKB%20figures/images/WarningIcon.png)
 
-
->>>>>>> Stashed changes
 ```
 Much of what is in this chapter is really revision; it is more of the same - making
 lots of properties and using lots of sub-property chains. However, it is worth it as
@@ -1570,6 +1529,7 @@ it will test your growing skills and it also makes the reasoners and yourself wo
 hard. There are also some good questions to ask of the FHKB as a result of adding
 marriages.
 ```
+
 ### 9.1 Marriage
 
 Marriage is a culturally complex situation to model. The FHKB started with a conservative model of a marriage involving only one man and one woman.<sup>10</sup> Later versions are more permissive; a marriage simply has a minimum of two partners. This leaves it open to numbers and sex of the people involved. In fact, ‘marriage’ is probably not the right name for it. Using `BreedingRelationship` as a label (the one favoured by the main author’s mother) may be a little too stark and might be a little exclusive.... In any case, some more generic name is probably better and various subclasses of the FHKB’s `Marriage` class are probably necessary.
@@ -1695,26 +1655,14 @@ This has really been a revision chapter; nothing new has really been introduced.
 - We have added a lot of kith relationships to join the kin or blood relationships;
 - As usual, the reasoner can establish the hierarchy for the inverses and put a lot of the domain and ranges in for free.
 
-<<<<<<< Updated upstream
-<img src="../images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
-     
-=======
 ![noteiconsmall](../images/FHKB%20figures/images/NoteIconSmall.png)
 
-
->>>>>>> Stashed changes
 ```
 The FHKB ontology at this stage of the tutorial has an expressivity ofSROIQ(D).
 ```
 
-<<<<<<< Updated upstream
-<img src="../images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
-     
-=======
 ![noteiconsmall](../images/FHKB%20figures/images/NoteIconSmall.png)
 
-
->>>>>>> Stashed changes
 ```
 The time to reason with the FHKB at this point (in Protégé) on a typical desktop
 machine by HermiT 1.3.8 is approximately 0.000 sec (0.00000 % of final), by Pellet
@@ -1792,19 +1740,14 @@ One thing is almost certain; the resulting TBox is rather complex and would be a
 
 **Figure 10.1:** The full TBox hierarchy of the FHKB
 
-<<<<<<< Updated upstream
-<img src="../images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
-     
-=======
 ![noteiconsmall](../images/FHKB%20figures/images/NoteIconSmall.png)
 
->>>>>>> Stashed changes
 ```
-The FHKB ontology at this stage of the tutorial has an expressivity ofSROIQ(D).
+The FHKB ontology at this stage of the tutorial has an expressivity of SROIQ(D).
 ```
- 
-<img src="../images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
-     
+
+![noteiconsmall](../images/FHKB%20figures/images/NoteIconSmall.png)
+
 ```
 The time to reason with the FHKB at this point (in Protégé) on a typical desktop
 machine by HermiT 1.3.8 is approximately 0.000 sec (0.00000 % of final), by Pellet
