@@ -13,6 +13,9 @@ These materials are under construction and incomplete.
 ## Lessons learned
 - 
 
+## Open questions
+- How do we create a new ontology from scratch using ROBOT?
+
 ## Contributors
 - Sabrina Toro ([ORCID](https://orcid.org/0000-0002-4142-7153))
 - Nicole Vasilevsky ([ORCID](https://orcid.org/0000-0001-5208-3432))
