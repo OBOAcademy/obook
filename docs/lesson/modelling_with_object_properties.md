@@ -1,4 +1,4 @@
-# Modelling with Object Properties
+# Modeling with Object Properties
 
 In this lesson, we will give an intuition of how to work with `object properties` in OBO ontologies, also referred to as "relations".
 
