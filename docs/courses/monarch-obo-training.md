@@ -23,7 +23,7 @@ The goal of this course is to provide ongoing training for the OBO community. As
 
 | Date | Lesson | Notes |
 | --- | --- | --- |
-| 2021/12/14 | [Lessons learned from troubleshooting ROBOT](../lesson/troublehooting-robot.md) | _Content coming soon_ |
+| 2021/12/14 | Lessons learned from troubleshooting ROBOT | _Open discussion, no advance preparation is needed_ |
 | 2021/11/30 | [Semantics of object properties](../lesson/modelling_with_object_properties.md) (including Relations Ontology) | |
 | 2021/11/16 | [SPARQL for OBO ontology development](../tutorial/sparql.md) | |
 | 2021/11/02 | [Templating: DOSDPs and ROBOT](../lesson/templates_for_obo.md) | |
