@@ -68,7 +68,7 @@ Other characteristics like functionality and symmetry are used across OBO ontolo
 
 The Relation Ontology serves two main purposes in the OBO world:
 
-1. As a place to standardise object properties. The idea is this: many ontologies are modelling _mereological_ relations, such as partonomies, which requires relation ships such as "part of" and "has part". To ensure that ontologies are interoperable, we need to make sure that all ontologies use the _same_ "part of" relationship. Historically this is not always been true, and still is not. At the time of this writing, running:
+1. As a place to standardise object properties. The idea is this: many ontologies are modelling _mereological_ relations, such as partonomies, which requires relationships such as "part of" and "has part". To ensure that ontologies are interoperable, we need to make sure that all ontologies use the _same_ "part of" relationship. Historically this is not always been true, and still is not. At the time of this writing, running:
 ```
 prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
 prefix owl: <http://www.w3.org/2002/07/owl#> 
