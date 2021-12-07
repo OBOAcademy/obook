@@ -33,6 +33,7 @@ nav:
           - ROBOT Mini-Tutorial 1 - Convert, Extract and Template: tutorial/robot_tutorial_1.md
           - ROBOT Mini-Tutorial 2 - Annotate, Merge, Reason and Diff: tutorial/robot_tutorial_2.md
           - ROBOT Mini-Tutorial QC - Quality Control with report and query: tutorial/robot_tutorial_qc.md
+          - ODK - Getting started with your own repo: tutorial/setting-up-project-odk.md
           - ODK - Managing imports: tutorial/managing-dynamic-imports-odk.md
           - ODK - Managing ontology releases: tutorial/managing-ontology-releases-odk.md
           - ODK - Migrating to ODK: tutorial/migrating-ontology-to-odk.md
@@ -74,6 +75,7 @@ nav:
       - Git FAQ: reference/git_faq.md
       - OWL, OBO, JSON? Base, simple, full, basic? What should you use, and why?: reference/owl_formats_variants.md
       - Monkeying around with OWL: reference/mungall_blog_radar.md
+      - Ontology Development Kit (ODK): reference/odk.md
   - OBOOK Editors:
       - How to add images: images/index.md
       - New lesson template: config/template.md
