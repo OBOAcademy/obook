@@ -11,6 +11,8 @@ These are not _all_ articles, but I selection we found useful during our every w
 
 - [OntoTip: Don’t over-specify OWL definitions](https://douroucouli.wordpress.com/2019/07/29/ontotip-dont-over-specify-owl-definitions/). From the above OntoTip series.
 
+- [How to deal with unintentional equivalent classes](https://douroucouli.wordpress.com/2018/09/04/debugging-ontologies-using-owl-reasoning-part-2-unintentional-entailed-equivalence/)
+
 ## Ontology curation
 
 - [OntoTip: Write simple, concise, clear, operational textual definitions](https://douroucouli.wordpress.com/2019/07/08/ontotip-write-simple-concise-clear-operational-textual-definitions/). One of our favourite blog posts of Chris. Must read!
