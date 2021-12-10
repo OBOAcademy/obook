@@ -14,6 +14,10 @@ You have:
 - A Github account
 - Completed the "Preparation" steps above
 
+## Video
+
+A recording of a demo of creating a ODK-repo is available [here](https://www.youtube.com/watch?v=cd7750JVDaw)
+
 
 ## Your first repository
 
