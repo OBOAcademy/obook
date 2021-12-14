@@ -42,6 +42,10 @@ Learn common mistakes when using ROBOT and how to troubleshoot and fix them.
   - Resolution: the ontology Makefile should be updated to include the prefix in the merge_template. 
   - Note: If you run ROBOT and get an error, it may create a blank file. You need to discard the changes and/or open a new branch. 
 
+## Example templates
+
+- Example templates from Mondo are available [here](https://github.com/monarch-initiative/mondo/tree/master/src/templates)
+- Example templates from OBI are available [here](https://github.com/obi-ontology/obi/tree/master/src/ontology/templates)
 
 ## Contributors
 - Sabrina Toro ([ORCID](https://orcid.org/0000-0002-4142-7153))
