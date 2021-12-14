@@ -40,9 +40,6 @@ These materials are under construction and incomplete.
   - Note: If you run ROBOT and get an error, it may create a blank file. You need to discard the changes and/or open a new branch. 
 
 
-## Open questions
-- How do we create a new ontology from scratch using ROBOT?
-
 ## Contributors
 - Sabrina Toro ([ORCID](https://orcid.org/0000-0002-4142-7153))
 - Nicole Vasilevsky ([ORCID](https://orcid.org/0000-0001-5208-3432))
