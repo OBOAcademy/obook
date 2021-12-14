@@ -5,7 +5,7 @@
 - Review tutorial on [Ontology Pipelines with ROBOT 2](https://oboacademy.github.io/obook/lesson/ontology_pipelines/)
 
 ### Learning objectives
-- Learn common mistakes when using ROBOT and how to troubleshoot and fix them
+Learn common mistakes when using ROBOT and how to troubleshoot and fix them.
 
 ## Lessons learned
 - Copying-pasting (especially in google docs) can introduce **unexpected format changes** in row 2 of the template: 
