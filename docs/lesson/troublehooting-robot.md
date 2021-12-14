@@ -19,12 +19,12 @@ Learn common mistakes when using ROBOT and how to troubleshoot and fix them.
   - In the same column, it is OK to have a header string (row #1) with no template string (row #2).
     - the information in the column is useful to curators (e.g. term labels) but will be ignored by ROBOT. 
     
-<img src="https://user-images.githubusercontent.com/6722114/146070142-783046bb-bf39-49fb-8df8-a6ba1ae58889.png" width=25% height=25%>
+<img src="https://user-images.githubusercontent.com/6722114/146070142-783046bb-bf39-49fb-8df8-a6ba1ae58889.png" width=40% height=40%>
 
   - In the same column, if there is a template string (row #2), there MUST be a header string (row #1) 
     - if the row #1 is missing, the error will be reported as: COLUMN MISMATCH ERROR the template string in column 1 must have a corresponding header in table "tmp/merge_template.tsv” 
     
-<img src="https://user-images.githubusercontent.com/6722114/146069799-3beb5e51-28d0-41d1-88c4-f5953fe5c2b2.png" width=25% height=25%>
+<img src="https://user-images.githubusercontent.com/6722114/146069799-3beb5e51-28d0-41d1-88c4-f5953fe5c2b2.png" width=40% height=40%>
 
 #### The content of the template break some **OBO or Protege rules**
   - for example, Protege only allows one comment on a class. If you are adding new comments to terms via ROBOT, you will get an error if a comment already exists on a term.
