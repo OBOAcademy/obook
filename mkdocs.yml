@@ -66,7 +66,6 @@ nav:
           - Deploy a custom OBO-Dashboard: howto/deploy_custom_obo_dashboard.md
   - Reference:
       - Glossary: reference/glossary.md
-      - Other useful resources: reference/other_resources.md
       - GitHub Desktop: reference/github_desktop.md
       - Semantic Engineering Toolbox: reference/semantic_engineering_toolbox.md
       - Tables and Triples: reference/tables-and-triples.md
@@ -76,6 +75,8 @@ nav:
       - OWL, OBO, JSON? Base, simple, full, basic? What should you use, and why?: reference/owl_formats_variants.md
       - Monkeying around with OWL: reference/mungall_blog_radar.md
       - Ontology Development Kit (ODK): reference/odk.md
+      - Troubleshooting ROBOT: reference/troublehooting-robot.md
+      - Other useful resources: reference/other_resources.md
   - OBOOK Editors:
       - How to add images: images/index.md
       - New lesson template: config/template.md
