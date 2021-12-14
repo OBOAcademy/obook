@@ -23,6 +23,8 @@ The goal of this course is to provide ongoing training for the OBO community. As
 
 | Date | Lesson | Notes |
 | --- | --- | --- |
+| 2022/01/25 | [Contributing to OBO ontologies](../lesson/contributing_to_obo_ontologies.md) | This is not new content but we'll start at the beginning again with our previous lessons. |
+| 2022/01/11 | Office hours with Nicole and Sabrina - no formal lesson | Bring any open questions |
 | 2021/12/14 | [Lessons learned from troubleshooting ROBOT](../lesson/troublehooting-robot.md) | _Open discussion, no advance preparation is needed_ |
 | 2021/11/30 | [Semantics of object properties](../lesson/modelling_with_object_properties.md) (including Relations Ontology) | |
 | 2021/11/16 | [SPARQL for OBO ontology development](../tutorial/sparql.md) | |
