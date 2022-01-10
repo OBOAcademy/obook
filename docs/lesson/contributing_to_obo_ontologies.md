@@ -554,28 +554,5 @@ For this class, we want to follow the design pattern for [allergy](https://githu
 
 7. Go back to the Classes or Entities pane and remove the equivalence axiom and run the reasoner again. You should now see no unsatisfiable classes.
 
-### Practice (Part 2)
-
-## Add a New Term with an Equivalance Axiom to Mondo: 
-
-### Add annotations and logical definition (equivalence axiom) to MONDO:0004549 'cork-handlers' disease'
-
-1. Create a new branch (named cork-handler) and open mondo-edit.obo in Protege.
-1. Search for the term `cork-handlers' disease`
-
-For this class, we want to follow the design pattern for [specific_infectious_disease_by_agent](https://github.com/monarch-initiative/mondo/blob/master/src/patterns/dosdp-patterns/specific_infectious_disease_by_agent.yaml) with a slight modification, this will be modeled after `MONDO:0002266 'malt worker's lung'`.
-
-1. Add the synonym: `cork worker's lung`
-1. Add the equivalence axiom according to the pattern specifications.
-
-`'extrinsic allergic alveolitis'
- and 'infectious disease'
- and ('disease has infectious agent' some Penicillium glabrum)`
-
-1. Run the reasoner
-1. View the inferred hierarchy.
-1. Confirm that there are no unsatisifiable classes and everything looks okay.
-1. Save your work and create a pull request and reference issue #1639.
-
-## Great further reading
+## Further reading
 - [Chris Mungall on how to write great textual definitions](https://douroucouli.wordpress.com/2019/07/08/ontotip-write-simple-concise-clear-operational-textual-definitions/)
