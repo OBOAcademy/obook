@@ -574,5 +574,8 @@ For this class, we want to follow the design pattern for [acquired](https://gith
 1. Run the reasoner
 1. View the inferred hierarchy. 
 
+![image](https://user-images.githubusercontent.com/6722114/148823091-e5d82cf2-d265-4937-9184-a636b504246d.png)
+
+
 ## Further reading
 - [Chris Mungall on how to write great textual definitions](https://douroucouli.wordpress.com/2019/07/08/ontotip-write-simple-concise-clear-operational-textual-definitions/)
