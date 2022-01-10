@@ -492,7 +492,7 @@ Below are exercises to demonstrate how to:
 
 These instructions will use the [Mondo disease ontology](https://github.com/monarch-initiative/mondo) as an example.
 
-### Practice (Part 1)
+### Practice
 
 #### Add New Terms with an Equivalance Axiom to Mondo: 
 
