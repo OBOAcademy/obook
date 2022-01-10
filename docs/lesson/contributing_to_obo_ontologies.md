@@ -492,7 +492,7 @@ Below are exercises to demonstrate how to:
 
 These instructions will use the [Mondo disease ontology](https://github.com/monarch-initiative/mondo) as an example.
 
-### Practice
+### Practice 1
 
 #### Add New Terms with an Equivalance Axiom to Mondo: 
 
@@ -503,7 +503,6 @@ New classes are created in the Class hierarchy panel on the left.
 There are three buttons at the top of the class hierarchy view. These allow you to add a subclass (L-shaped icon), add a sibling class (c-shaped icon), or delete a selected class (x'd circle).
 
 ![image](https://user-images.githubusercontent.com/6722114/118696258-f791d480-b7c2-11eb-836a-a594227c6da9.png)
-
 
 #### Practice adding a new term:
 
@@ -553,6 +552,27 @@ For this class, we want to follow the design pattern for [allergy](https://githu
 ![image](https://user-images.githubusercontent.com/6722114/118698760-a33c2400-b7c5-11eb-8c8c-85c91c9a7dab.png)
 
 7. Go back to the Classes or Entities pane and remove the equivalence axiom and run the reasoner again. You should now see no unsatisfiable classes.
+
+### Practice 2
+
+#### Practice adding a new term:
+
+##### Add the new term 'acquired alacrima'
+
+1. Add 'acquired candidiasis as a subclass of MONDO_0002026 candidiasis.
+
+##### Add annotations and a logical axiom 
+
+As noted above, equivalence axioms in Mondo are added according to Dead Simple Ontology Design Patterns (DOSDPs). You can view all of the design patterns in Mondo by going to [code/src/patterns/dosdp-patterns/](https://github.com/monarch-initiative/mondo/tree/master/src/patterns/dosdp-patterns)
+
+For this class, we want to follow the design pattern for [acquired](https://github.com/monarch-initiative/mondo/blob/master/src/patterns/dosdp-patterns/acquired.yaml).
+
+1. Review this pattern before proceeding.
+1. Based on the pattern specifications, add a text definition to this term.
+1. Add the database cross reference to the definition: MONDO:patterns/allergy
+1. Add the equivalence axiom according to the pattern specifications.
+1. Run the reasoner
+1. View the inferred hierarchy. 
 
 ## Further reading
 - [Chris Mungall on how to write great textual definitions](https://douroucouli.wordpress.com/2019/07/08/ontotip-write-simple-concise-clear-operational-textual-definitions/)
