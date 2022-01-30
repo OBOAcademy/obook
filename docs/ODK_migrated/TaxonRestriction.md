@@ -1,5 +1,3 @@
-**NOTE** This documentation is incomplete, for now you may be better consulting the [GO Editor Docs](http://wiki.geneontology.org/index.php/Ontology_Editing_Guide)
-
 # Adding taxon restrictions
 
 See [Daily Workflow](http://ontology-development-kit.readthedocs.io/en/latest/index.html#daily-workflow) for creating branches and basic Protégé instructions. 
@@ -10,6 +8,8 @@ See [Daily Workflow](http://ontology-development-kit.readthedocs.io/en/latest/in
    3.	In the pop-up window type a new relationship (e.g. ```'in taxon' some Viridiplantae```).
    4.	The taxa available are imported ontology terms and can be browsed just like any other ontology term.
 
+![intaxon](../images/howtoguides/TaxonRestriction/intaxon.png)
+
 2. ```never in taxon``` or ```present in taxon``` relations added as ```Annotations```. 
    1. Navigate to the taxon term you want to add a restriction on.  
    2. Copy the IRI (you can use command U to display this on a Mac)
@@ -19,7 +19,8 @@ See [Daily Workflow](http://ontology-development-kit.readthedocs.io/en/latest/in
    6.	In the right-hand panel, in the IRI editor panel, paste in the IRI.
    7.	Click OK to save your changes.
    8. (Note - you can achieve the same thing using the Entity IRI tab + navigating to the correct taxon but this is slow and not very practical)
-   
+
+![neverintaxon](../images/howtoguides/TaxonRestriction/neverintaxon.png)
    
 See [Daily Workflow](http://ontology-development-kit.readthedocs.io/en/latest/index.html#daily-workflow) section for commit, push and merge instructions. 
 
