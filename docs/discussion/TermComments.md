@@ -1,5 +1,3 @@
-**NOTE** This documentation is incomplete, for now you may be better consulting the [GO Editor Docs](http://wiki.geneontology.org/index.php/Ontology_Editing_Guide)
-
 # Term Comments
 
 ## Adding Comments to Terms
