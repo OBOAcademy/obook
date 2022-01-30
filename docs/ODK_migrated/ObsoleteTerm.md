@@ -1,41 +1,18 @@
-
-See also [GO Editors Guide on Obsoletion])http://wiki.geneontology.org/index.php/Obsoleting_an_Existing_Ontology_Term)
-
 # Obsoleting an Existing Ontology Term
 
 See [Daily Workflow](http://ontology-development-kit.readthedocs.io/en/latest/index.html#daily-workflow) for creating branches and basic Protégé instructions.
 
+Warning: Every ontology has their procedures on how they obsolete terms (eg notice periods, notification emails, to_be_obsolete tags, etc.), this how-to guide only serves as a guide on how obsolete a term directly on protege. 
+
+PRE OBSOLETION PROCESS (or basic obsoletion etiquette)
 1. Check if the term (or any of its children) is being used for annotation: 
-   - Go to AmiGO, search for the term, either by label or ID
-   - Use filters on the left to look at direct annotations, EXP annotation, InterPro2GO annotations
-   - Notify affected groups
+   - Go to your ontology browser of choice, search for the term, either by label or ID
+   - See which other ontologies use the to be obsolete term
+   - Notify affected groups (usually by adding an issue in their tracker)
 
 2. Check if the term is used elsewhere in the ontology
-   - In Protégé, go to the 'Usage' tab to see if that ID is used elsewhere. Search for the term name or the term IRI (ie with underscore between GO and the numerical part of the ID, for example: '''GO_0030722'''
+   - In Protégé, navigate to the term to be obsolete and go to the 'Usage' tab to see if that ID is used elsewhere.
    - If the term is a parent to other terms or is used in logical definitions, make sure that another term replaces the obsolete term
-
-3. Send a notification email. 
-Template: 
-   - SUBJECT: Proposal to obsolete [GO:ID] [GO term name]
-   - BODY: Dear all,  The proposal has been made to obsolete: [GO:ID] [GO term name]. 
-   The reason for obsoletion is [SPECIFY]. 
-   There are X experimental annotations to this term. 
-   There are X InterPro2GO mappings to this term. 
-   Any comments can be added to the issue: [link to GitHub ticket]. We are opening a comment period for this proposed obsoletion. We'd like to proceed and obsolete this term on [7 days after the message; unless it involves a lot of reannotation, in this case it can be longer] 
-   *** Unless objections are received by [DATE] , we will assume that you agree to this change. ***
-
-**Remember to list the databases affected by the obsoletion and tag people in the GH ticket**
-**Check go-slims**
-
-**Possible reasons for obsoletions:** 
-* The reason for obsoletion is that there is no evidence that this function/process/component exists. (eg: GO:0019562 L-phenylalanine catabolic process to phosphoenolpyruvate; GO:0097605 regulation of nuclear envelope permeability’; GO:0015993 molecular hydrogen transport)
-* The reason for obsoletion is that the term is not clearly defined and usage has been inconsistent (eg: GO:0030818 negative regulation of cAMP biosynthetic process)
-* The reason for obsoletion is that this term represent a GO-CAM model. (eg: GO:0072317 glucan endo-1,3-beta-D-glucosidase activity involved in ascospore release from ascus; GO:0100060 negative regulation of SREBP signaling pathway by DNA binding)
-* The reason for obsoletion is that this term represent an assay and not a real process. (eg: GO:0035826	rubidium ion transport)
-* The reason for obsoletion is that the data from the paper for which the term was requested can be accurately described using [appropriate GO term]. (eg: GO:0015032 storage protein import into fat body)
-* etc 
-
-
 
 OBSOLETION PROCESS 
 1. Navigate to the term to be obsoleted.
