@@ -28,55 +28,58 @@ nav:
       - RDF Fundamentals: lesson/rdf.md
       - Semantic Database Fundamentals: lesson/semantic_database_fundamentals.md
       - Disease and Phenotype Ontologies: lesson/using_disease_and_phenotype_ontologies.md
-  - Tutorials:
-      - Ontology Pipelines - ODK, ROBOT, etc:
-          - ROBOT Mini-Tutorial 1 - Convert, Extract and Template: tutorial/robot_tutorial_1.md
-          - ROBOT Mini-Tutorial 2 - Annotate, Merge, Reason and Diff: tutorial/robot_tutorial_2.md
-          - ROBOT Mini-Tutorial QC - Quality Control with report and query: tutorial/robot_tutorial_qc.md
-          - ODK - Getting started with your own repo: tutorial/setting-up-project-odk.md
-          - ODK - Managing imports: tutorial/managing-dynamic-imports-odk.md
-          - ODK - Managing ontology releases: tutorial/managing-ontology-releases-odk.md
-          - ODK - Migrating to ODK: tutorial/migrating-ontology-to-odk.md
-      - Templates:
-          - DOSDP Templates: tutorial/dosdp_template.md
-      - Git, GitHub and Collaborative Workflows:
-          - GitHub Fundamentals for OBO Engineers: tutorial/github_fundamentals.md
-          - GitHub Issue for OBO Engineers: tutorial/github_issues.md
-          - Managing OBO ontology projects: tutorial/managing-ontology-project.md
-      - Dealing with Semantic Data: 
-          - From Tables to Linked Data: tutorial/linking-data.md
-          - Basic SPARQL for OBO Engineers: tutorial/sparql.md
-      - General Ontology Modelling:
-          - Family History Knowledge Base (FHKB) tutorial: tutorial/fhkb.md
-  - How-to guides:
-      - Protege:
-          - Installing ELK in Protege: howto/installing_elk_in_protege.md
-          - Switching Ontologies in Protege: howto/switching_ontologies.md
-          - Browsing and Searching: howto/protege_browse_search.md
-      - ODK:
-          - Get set up for ODK-based ontology development: howto/setup_ontology_development_odk.md
-          - Setting up the ODK: howto/odk_setup.md
-      - Git and Github:
-          - Clone a repository: howto/clone_mondo_repo.md
-          - Creating an GitHub Fork: howto/github_create_fork.md
-          - Creating an GitHub Pull Request: howto/github_create_pull_request.md
-          - Change a pull request: howto/change_files_pull_request.md
-          - Fixing conflicts: howto/fixing-conflicts.md
-      - Quality control:
-          - Deploy a custom OBO-Dashboard: howto/deploy_custom_obo_dashboard.md
-  - Reference:
-      - Glossary: reference/glossary.md
-      - GitHub Desktop: reference/github_desktop.md
-      - Semantic Engineering Toolbox: reference/semantic_engineering_toolbox.md
-      - Tables and Triples: reference/tables-and-triples.md
-      - Reasoning: reference/reasoning.md
-      - A day in the life of an ontology curator: reference/ontology-curator.md
-      - Git FAQ: reference/git_faq.md
-      - OWL, OBO, JSON? Base, simple, full, basic? What should you use, and why?: reference/owl_formats_variants.md
-      - Monkeying around with OWL: reference/mungall_blog_radar.md
-      - Ontology Development Kit (ODK): reference/odk.md
-      - Troubleshooting ROBOT: reference/troublehooting-robot.md
-      - Other useful resources: reference/other_resources.md
+  - Documentation: 
+      - Into to documentation: docs/documentation.md
+      - Tutorials (Start here):
+          - Ontology Pipelines - ODK, ROBOT, etc:
+              - ROBOT Mini-Tutorial 1 - Convert, Extract and Template: tutorial/robot_tutorial_1.md
+              - ROBOT Mini-Tutorial 2 - Annotate, Merge, Reason and Diff: tutorial/robot_tutorial_2.md
+              - ROBOT Mini-Tutorial QC - Quality Control with report and query: tutorial/robot_tutorial_qc.md
+              - ODK - Getting started with your own repo: tutorial/setting-up-project-odk.md
+              - ODK - Managing imports: tutorial/managing-dynamic-imports-odk.md
+              - ODK - Managing ontology releases: tutorial/managing-ontology-releases-odk.md
+              - ODK - Migrating to ODK: tutorial/migrating-ontology-to-odk.md
+          - Templates:
+              - DOSDP Templates: tutorial/dosdp_template.md
+          - Git, GitHub and Collaborative Workflows:
+              - GitHub Fundamentals for OBO Engineers: tutorial/github_fundamentals.md
+              - GitHub Issue for OBO Engineers: tutorial/github_issues.md
+              - Managing OBO ontology projects: tutorial/managing-ontology-project.md
+          - Dealing with Semantic Data: 
+              - From Tables to Linked Data: tutorial/linking-data.md
+              - Basic SPARQL for OBO Engineers: tutorial/sparql.md
+          - General Ontology Modelling:
+              - Family History Knowledge Base (FHKB) tutorial: tutorial/fhkb.md
+      - How-to guides:
+          - Protege:
+              - Installing ELK in Protege: howto/installing_elk_in_protege.md
+              - Switching Ontologies in Protege: howto/switching_ontologies.md
+              - Browsing and Searching: howto/protege_browse_search.md
+          - ODK:
+              - Get set up for ODK-based ontology development: howto/setup_ontology_development_odk.md
+              - Setting up the ODK: howto/odk_setup.md
+          - Git and Github:
+              - Clone a repository: howto/clone_mondo_repo.md
+              - Creating an GitHub Fork: howto/github_create_fork.md
+              - Creating an GitHub Pull Request: howto/github_create_pull_request.md
+              - Change a pull request: howto/change_files_pull_request.md
+              - Fixing conflicts: howto/fixing-conflicts.md
+          - Quality control:
+              - Deploy a custom OBO-Dashboard: howto/deploy_custom_obo_dashboard.m
+      - Reference:
+          - Glossary: reference/glossary.md
+          - GitHub Desktop: reference/github_desktop.md
+          - Semantic Engineering Toolbox: reference/semantic_engineering_toolbox.md
+          - Tables and Triples: reference/tables-and-triples.md
+          - Reasoning: reference/reasoning.md
+          - A day in the life of an ontology curator: reference/ontology-curator.md
+          - Git FAQ: reference/git_faq.md
+          - OWL, OBO, JSON? Base, simple, full, basic? What should you use, and why?: reference/owl_formats_variants.md
+          - Monkeying around with OWL: reference/mungall_blog_radar.md
+          - Ontology Development Kit (ODK): reference/odk.md
+          - Troubleshooting ROBOT: reference/troublehooting-robot.md
+          - Other useful resources: reference/other_resources.md
+      - Discussion:
   - OBOOK Editors:
       - How to add images: images/index.md
       - New lesson template: config/template.md
