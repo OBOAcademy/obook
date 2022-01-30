@@ -79,6 +79,7 @@ nav:
           - Troubleshooting ROBOT: reference/troublehooting-robot.md
           - Other useful resources: reference/other_resources.md
       - Discussion:
+          - Term Comments: discussion/TermComments.md
   - OBOOK Editors:
       - How to add images: images/index.md
       - New lesson template: config/template.md
