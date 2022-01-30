@@ -80,6 +80,7 @@ nav:
           - Other useful resources: reference/other_resources.md
       - Discussion:
           - Term Comments: discussion/TermComments.md
+          - Assert or Reason (under construction): discussion/DeletingAssertedSubClasses.md
   - OBOOK Editors:
       - How to add images: images/index.md
       - New lesson template: config/template.md
