@@ -29,8 +29,7 @@ nav:
       - Semantic Database Fundamentals: lesson/semantic_database_fundamentals.md
       - Disease and Phenotype Ontologies: lesson/using_disease_and_phenotype_ontologies.md
   - Documentation: 
-      - Into to documentation: docs/documentation.md
-      - Tutorials (Start here):
+      - Tutorials:
           - Ontology Pipelines - ODK, ROBOT, etc:
               - ROBOT Mini-Tutorial 1 - Convert, Extract and Template: tutorial/robot_tutorial_1.md
               - ROBOT Mini-Tutorial 2 - Annotate, Merge, Reason and Diff: tutorial/robot_tutorial_2.md
