@@ -51,7 +51,9 @@ nav:
               - Family History Knowledge Base (FHKB) tutorial: tutorial/fhkb.md
       - How-to guides:
           - Protege:
+              - Installing Protege: howto/installprotege.md
               - Installing ELK in Protege: howto/installing_elk_in_protege.md
+              - Setting up your ID range: howto/idrange.md
               - Switching Ontologies in Protege: howto/switching_ontologies.md
               - Browsing and Searching: howto/protege_browse_search.md
               - Creating New Terms in Protege: howto/CreateNewTerm.md
@@ -62,6 +64,8 @@ nav:
           - ODK:
               - Get set up for ODK-based ontology development: howto/setup_ontology_development_odk.md
               - Setting up the ODK: howto/odk_setup.md
+              - Creating a Repo with ODK: howto/CreatingRepo.md
+              - Dealing with Large Ontologies: howto/DealWithLargeOntologies.md
           - Git and Github:
               - Clone a repository: howto/clone_mondo_repo.md
               - Creating an GitHub Fork: howto/github_create_fork.md
@@ -71,6 +75,8 @@ nav:
           - Quality control:
               - Deploy a custom OBO-Dashboard: howto/deploy_custom_obo_dashboard.m
       - Reference:
+          - Frequently used ODK commands: reference/FrequentlyUsedODKCommands.md
+          - Formatting your ontology annotations correctly: reference/License.md
           - Glossary: reference/glossary.md
           - GitHub Desktop: reference/github_desktop.md
           - Semantic Engineering Toolbox: reference/semantic_engineering_toolbox.md
@@ -78,6 +84,7 @@ nav:
           - Reasoning: reference/reasoning.md
           - A day in the life of an ontology curator: reference/ontology-curator.md
           - Git FAQ: reference/git_faq.md
+          - Release Artefacts: reference/ReleaseArtefacts.md
           - OWL, OBO, JSON? Base, simple, full, basic? What should you use, and why?: reference/owl_formats_variants.md
           - Monkeying around with OWL: reference/mungall_blog_radar.md
           - Ontology Development Kit (ODK): reference/odk.md
