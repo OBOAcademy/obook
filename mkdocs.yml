@@ -72,7 +72,7 @@ nav:
               - Change a pull request: howto/change_files_pull_request.md
               - Fixing conflicts: howto/fixing-conflicts.md
           - Quality control:
-              - Deploy a custom OBO-Dashboard: howto/deploy_custom_obo_dashboard.m
+              - Deploy a custom OBO-Dashboard: howto/deploy_custom_obo_dashboard.md
       - Reference:
           - Frequently used ODK commands: reference/FrequentlyUsedODKCommands.md
           - Formatting your ontology annotations correctly: reference/License.md
@@ -85,6 +85,7 @@ nav:
           - Git FAQ: reference/git_faq.md
           - Release Artefacts: reference/ReleaseArtefacts.md
           - OWL, OBO, JSON? Base, simple, full, basic? What should you use, and why?: reference/owl_formats_variants.md
+          - Synonyms: reference/Synonyms.md
           - Monkeying around with OWL: reference/mungall_blog_radar.md
           - Ontology Development Kit (ODK): reference/odk.md
           - Troubleshooting ROBOT: reference/troublehooting-robot.md

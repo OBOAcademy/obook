@@ -1,4 +1,4 @@
-# ID Ranges
+# Setting up your ID Ranges
 
 ## Setting ID ranges in your ontology
 
