@@ -2,7 +2,7 @@
 
 ### Adding a new Subset (Slim)
 
-See [Daily Workflow](http://ontology-development-kit.readthedocs.io/en/latest/index.html#daily-workflow) for creating branches and basic Protégé instructions. 
+See [Daily Workflow](DailyWorkflow.md) for creating branches and basic Protégé instructions. 
 
 1.	In the main Protege window, click on the Annotation Properties tab.
 
@@ -22,11 +22,11 @@ See [Daily Workflow](http://ontology-development-kit.readthedocs.io/en/latest/in
 
 9.	Click OK to save the changes. You should now see the comment field in the annotations tab.
 
-See [Daily Workflow](http://ontology-development-kit.readthedocs.io/en/latest/index.html#daily-workflow) section for commit, push and merge instructions. 
+See [Daily Workflow](DailyWorkflow.md) section for commit, push and merge instructions. 
 
 ### Adding a term to a Subset (Slim)
 
-See [Daily Workflow](http://ontology-development-kit.readthedocs.io/en/latest/index.html#daily-workflow) for creating branches and basic Protégé instructions. 
+See [Daily Workflow](DailyWorkflow.md) for creating branches and basic Protégé instructions. 
 
 1. In Protege, navigate to the term you wish to add to a subset (slim).
 

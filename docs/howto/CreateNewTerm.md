@@ -45,4 +45,4 @@ If you want to convert your SubClassOf axioms to EquivalentTo axioms, you can se
 
 9. Save the file on protege and review the changes you have made in your Github Desktop (or use ```git diff``` in your terminal if you do not use Github Desktop)
 
-10. See [Daily Workflow](http://ontology-development-kit.readthedocs.io/en/latest/index.html#daily-workflow) section for commit, push and merge instructions.
+10. See [Daily Workflow](DailyWorkflow.md) section for commit, push and merge instructions.

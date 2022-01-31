@@ -53,6 +53,7 @@ nav:
           - Protege:
               - Installing ELK in Protege: howto/installing_elk_in_protege.md
               - Setting up your ID range: howto/idrange.md
+              - Daily Workflow: howto/DailyWorkflow.md
               - Switching Ontologies in Protege: howto/switching_ontologies.md
               - Browsing and Searching: howto/protege_browse_search.md
               - Creating New Terms in Protege: howto/CreateNewTerm.md

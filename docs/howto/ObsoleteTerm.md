@@ -1,6 +1,6 @@
 # Obsoleting an Existing Ontology Term
 
-See [Daily Workflow](http://ontology-development-kit.readthedocs.io/en/latest/index.html#daily-workflow) for creating branches and basic Protégé instructions.
+See [Daily Workflow](DailyWorkflow.md) for creating branches and basic Protégé instructions.
 
 Warning: Every ontology has their procedures on how they obsolete terms (eg notice periods, notification emails, to_be_obsolete tags, etc.), this how-to guide only serves as a guide on how obsolete a term directly on protege. 
 
@@ -52,4 +52,4 @@ Consult the wiki documentation for suggestions on standard comments:
 
 9. Save changes. 
     
-See [Daily Workflow](http://ontology-development-kit.readthedocs.io/en/latest/index.html#daily-workflow) section for commit, push and merge instructions. 
+See [Daily Workflow](DailyWorkflow.md) section for commit, push and merge instructions. 
