@@ -58,7 +58,7 @@ nav:
               - Creating New Terms in Protege: howto/CreateNewTerm.md
               - Obsoleting a Term: howto/ObsoleteTerm.md
               - Merging Terms: howto/MergeTerms.md
-              - Adding Taxon Restrictions: howto/TaxonRestriction.md
+              - Adding Taxon Restrictions: howto/add_taxon_restrictions.md
               - Creating a new Slim (under construction): howto/NewSlim.md
           - ODK:
               - Get set up for ODK-based ontology development: howto/setup_ontology_development_odk.md

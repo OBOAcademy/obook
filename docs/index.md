@@ -2,7 +2,7 @@
 
 Welcome to our OBO Semantic Engineering Training!
 
-## Introduction to documentations 
+## Introduction to documentation 
 
 Documentation in the obook is organised* based on the [diataxis framework](https://diataxis.fr/) of documentations into 4 distinction sections: 
 
