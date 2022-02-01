@@ -121,7 +121,7 @@ import_group:
     - id: omo
 ```
 
-This is a central part of the ODK, and the section of the config file you will interact with the most. Please see [here](managing-dynamic-imports-odk.py) for details. What we are asking the ODK here, in essence, to set us up for dynamically importing from the Relation Ontology (RO), the Phenotype And Trait Ontology (PATO) and the OBO Metadata Ontology (OMO).
+This is a central part of the ODK, and the section of the config file you will interact with the most. Please see [here](managing-dynamic-imports-odk.md) for details. What we are asking the ODK here, in essence, to set us up for dynamically importing from the Relation Ontology (RO), the Phenotype And Trait Ontology (PATO) and the OBO Metadata Ontology (OMO).
 
 #### Memory management:
 

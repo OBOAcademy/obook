@@ -1,5 +1,7 @@
 # OWL, OBO, JSON? Base, simple, full, basic? What should you use, and why?
 
+For reference of the more technical aspects of release artefacts, please see [documentation on Release Artefacts](../reference/ReleaseArtefacts.md)
+
 Ontologies come in different serialisations, formalisms, and variants For example, their are a full 9 (!) different release files associated with an ontology released using the default settings of the [Ontology Development Kit](../reference/glossary.md), which causes a lot of confusion for current and prospective users.
 
 Note: In the OBO Foundry pages, "variant" is currently referred to as "products", i.e. the way we use "variant" here is synonymous with with notion of "product".

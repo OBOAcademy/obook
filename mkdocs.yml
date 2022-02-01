@@ -85,7 +85,6 @@ nav:
           - A day in the life of an ontology curator: reference/ontology-curator.md
           - Git FAQ: reference/git_faq.md
           - Release Artefacts: reference/ReleaseArtefacts.md
-          - OWL, OBO, JSON? Base, simple, full, basic? What should you use, and why?: reference/owl_formats_variants.md
           - Synonyms: reference/Synonyms.md
           - Monkeying around with OWL: reference/mungall_blog_radar.md
           - Ontology Development Kit (ODK): reference/odk.md
@@ -94,6 +93,7 @@ nav:
       - Discussion:
           - Term Comments: discussion/TermComments.md
           - Assert or Reason (under construction): discussion/DeletingAssertedSubClasses.md
+          - OWL, OBO, JSON? Base, simple, full, basic? What should you use, and why?: discussion/owl_formats_variants.md
   - OBOOK Editors:
       - How to add images: images/index.md
       - New lesson template: config/template.md
