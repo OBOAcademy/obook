@@ -1,9 +1,6 @@
 site_name: OBO Semantic Engineering Training
 theme:
   name: material
-  palette:
-    scheme: slate
-    primary: cyan
 markdown_extensions:
   - toc:
       permalink: true
