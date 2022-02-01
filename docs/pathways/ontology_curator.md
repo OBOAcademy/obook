@@ -21,9 +21,9 @@
 1. [Contributing to an ontology](../lessons/contributing_to_obo_ontologies.md)
 2. [Avoid asserting redundant subclasses](../discussion/DeletingAssertedSubClasses.md)
 3. [When to use term comments](../discussion/TermComments.md)(Optional)
-2. [Managing imports](../tutorials/managing-dynamic-imports-odk.md)
-3. [Managing releases](../tutorials/managing-ontology-releases-odk.md)
-4. [Templates](../lessons/templates_for_obo.md)
+4. [Managing imports](../tutorials/managing-dynamic-imports-odk.md)
+5. [Managing releases](../tutorials/managing-ontology-releases-odk.md)
+6. [Templates](../lessons/templates_for_obo.md)
 
 ## Ontology Curator How To Collection
 This section is a non-ordered collection of how to documents that a curator might needs
