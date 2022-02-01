@@ -1,4 +1,4 @@
-#Ontology Curator Pathway
+# Ontology Curator Pathway
 
 ## Getting Set-up
 
