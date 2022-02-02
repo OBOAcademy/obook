@@ -18,12 +18,18 @@
 4. [Creating pull requests](../howto/github_create_pull_request.md)
 
 ### Learning how to edit ontologies
-1. [Contributing to an ontology](../lessons/contributing_to_obo_ontologies.md)
-2. [Avoid asserting redundant subclasses](../discussion/DeletingAssertedSubClasses.md)
-3. [When to use term comments](../discussion/TermComments.md)(Optional)
-4. [Managing imports](../tutorials/managing-dynamic-imports-odk.md)
-5. [Managing releases](../tutorials/managing-ontology-releases-odk.md)
-6. [Templates](../lessons/templates_for_obo.md)
+1. Principals of Bio-ontologies (UNDER CONSTRUCTION)
+2. [Contributing to an ontology](../lessons/contributing_to_obo_ontologies.md)
+3. [Avoid asserting redundant subclasses](../discussion/DeletingAssertedSubClasses.md)
+4. [When to use term comments](../discussion/TermComments.md)(Optional)
+5. [Obsoleting terms](../howto/ObsoleteTerm.md)
+6. [Merging terms](../howto/MergeTerms.md)
+7. [Managing imports](../tutorials/managing-dynamic-imports-odk.md)
+8. [Managing releases](../tutorials/managing-ontology-releases-odk.md)
+9. [Templates](../lessons/templates_for_obo.md)
+10. [Taxon Constraints](../discussion/taxon-constraints-explainer.md)
+11. [Adding taxon restrictions](../howto/add_taxon_restrictions.md)
+12. [Switching ontologies](../howto/switching_ontologies.md)
 
 ## Ontology Curator How To Collection
 This section is a non-ordered collection of how to documents that a curator might needs
