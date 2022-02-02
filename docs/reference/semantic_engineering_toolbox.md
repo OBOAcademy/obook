@@ -28,7 +28,7 @@
 **SPARQL endpoints**
 
 - [Ontobee SPARQL endpoint](http://www.ontobee.org/sparql): Useful to run queries across all OBO Foundry ontologies
-- [Ubergraph SPARQL endpoint](https://stars-app.renci.org/ubergraph/sparql): Many key OBO ontologies are loaded here with lots of materialised inferences ([docs](https://github.com/INCATools/ubergraph/)).
+- [Ubergraph SPARQL endpoint](https://ubergraph.apps.renci.org/sparql): Many key OBO ontologies are loaded here with lots of materialised inferences ([docs](https://github.com/INCATools/ubergraph/)).
 
 **Templating systems**
 
