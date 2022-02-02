@@ -10,6 +10,8 @@
 
 ## Learning
 
+As a ontology engineer, it would be useful for you to know how curators work, as such, it would be useful to be familiar with all the concepts in the [ontology curator pathways document](../pathways/ontology_curator.md). This pathways will however be focusing on the engineering side of things.
+
 ### Learning Git and GitHub
 
 1. [Fundamentals of GitHub](../tutorial/github_fundamentals.md)
@@ -17,21 +19,20 @@
 3. [Cloning a Repo](../howto/clone_mondo_repo.md)
 4. [Creating pull requests](../howto/github_create_pull_request.md)
 
-### Learning how to edit ontologies
+### Learning ontology engineering
 1. Principals of Bio-ontologies (UNDER CONSTRUCTION)
-2. [Contributing to an ontology](../lessons/contributing_to_obo_ontologies.md)
-3. [Avoid asserting redundant subclasses](../discussion/DeletingAssertedSubClasses.md)
-4. [When to use term comments](../discussion/TermComments.md)(Optional)
-5. [Obsoleting terms](../howto/ObsoleteTerm.md)
-6. [Merging terms](../howto/MergeTerms.md)
-7. [Managing imports](../tutorials/managing-dynamic-imports-odk.md)
-8. [Managing releases](../tutorials/managing-ontology-releases-odk.md)
-9. [Taxon Constraints](../discussion/taxon-constraints-explainer.md)
-10. [Adding taxon restrictions](../howto/add_taxon_restrictions.md)
-11. [Switching ontologies](../howto/switching_ontologies.md)
+2. [Setting up a ODK repository](../tutorial/setting-up-project-odk.md)
+3. [Developing an obo ontology](../lessons/developing_an_obo_ontology.md)
+4. [Understanding product variants](../discussion/owl_formats_variants.md)
+5. [Dealing with large ontologies](../howto/DealWithLargeOntologies.md)
+6. [ROBOT tutorial pt. 1](../tutorial/robot_tutorial_1.md)
+7. [ROBOT tutorial pt. 2](../tutorial/robot_tutorial_2.md)
+8. [Templates](../lessons/templates_for_obo.md)
+9. [Basics of SPARQL](../tutorial/sparql.md)
+10. [Setting up slims](../howto/NewSlim.md)
 
-## Ontology Curator How To Collection
-This section is a non-ordered collection of how to documents that a curator might needs
+## Ontology Engineer How To Collection
+This section is a non-ordered collection of how to documents that an engineer might need (this includes everything from the curators list as they may be pertinent knowledge to an engineer).
 - [Adding taxon restrictions](../howto/add_taxon_restrictions.md)
 - [Changing files in pull requests](../howto/change_files_pull_request.md)
 - [Cloning a repo](../howto/clone_mondo_repo.md)
@@ -47,3 +48,4 @@ This section is a non-ordered collection of how to documents that a curator migh
 - [Creating slims](../howto/NewSlim.md)
 - [Setting up ODK](../howto/odk_setup.md)
 - [Switching ontologies](../howto/switching_ontologies.md)
+- [Dealing with large ontologies](../howto/DealWithLargeOntologies.md)
