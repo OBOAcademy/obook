@@ -9,7 +9,7 @@
 ## Tutorial
 
 - [Activate DOSDP in ODK](#activate)
-- [Adding a first pattern](#first-pattern)
+- [Adding a first DOSDP template](#first-pattern)
 
 ## Glossary
 
