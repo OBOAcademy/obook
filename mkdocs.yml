@@ -41,7 +41,7 @@ nav:
       - Templates:
           - Getting started with DOSDP templates: tutorial/dosdp_overview.md
           - DOSDP Templates Basic Tutorial: tutorial/dosdp_template.md
-          - Introduction to Managing DOSDP Templates in ODK: tutorial/dosdp_odk.md
+          - Introduction to Managing DOSDP Templates in ODK: tutorial/dosdp-odk.md
       - Git, GitHub and Collaborative Workflows:
           - GitHub Fundamentals for OBO Engineers: tutorial/github_fundamentals.md
           - GitHub Issue for OBO Engineers: tutorial/github_issues.md
@@ -67,6 +67,8 @@ nav:
           - Fixing conflicts: howto/fixing-conflicts.md
       - Quality control:
           - Deploy a custom OBO-Dashboard: howto/deploy_custom_obo_dashboard.md
+      - Command line tricks:
+          - Filtering text files with grep and tee: howto/cli-filter.md
   - Reference:
       - Glossary: reference/glossary.md
       - GitHub Desktop: reference/github_desktop.md

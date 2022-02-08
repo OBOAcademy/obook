@@ -162,4 +162,4 @@ TBA
 
 ### Using DOSDP templates in ODK Workflows
 
-The Ontology Development Kit (ODK) comes with a few pre-configured workflows involving DOSDP templates. For a detailed tutorial see [here](dosdp_odk.md).
+The Ontology Development Kit (ODK) comes with a few pre-configured workflows involving DOSDP templates. For a detailed tutorial see [here](dosdp-odk.md).
