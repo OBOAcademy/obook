@@ -1,10 +1,14 @@
-# DOSDP - Quick Quide
+# Getting started with DOSDP templates
 
- Dead Simple OWL Design patterns (DOSDP) is a templating system for documenting and generating new OWL classes.  The templates themselves are designed to be human readable and easy to author.  Separate tables (TSV files) are used to specify individual classes.
+Dead Simple OWL Design patterns (DOSDP) is a templating system for documenting and generating new OWL classes.  The templates themselves are designed to be human readable and easy to author.  Separate tables (TSV files) are used to specify individual classes.
 
-## Anatomy of a dosdp file:
+The complete DOSDP documentation can be found here http://incatools.github.io/dead_simple_owl_design_patterns/.
 
-### Pattern level keys:
+For another DOSDP tutorial see [here](dosdp_template.md).
+
+## Anatomy of a DOSDP file:
+
+### Pattern level keys
 
 [Reference doc](https://github.com/INCATools/dead_simple_owl_design_patterns/blob/master/docs/dosdp_schema.md#properties)
 
@@ -12,7 +16,7 @@ A set of fields that specify general information about a pattern: name, descript
 
 e.g.
 
-```YAML
+```yaml
 pattern_name: abnormalAnatomicalEntity
 pattern_iri: http://purl.obolibrary.org/obo/upheno/patterns/abnormalAnatomicalEntity.yaml
 description: "Any unspecified abnormality of an anatomical entity."
@@ -21,13 +25,13 @@ contributors:
   - https://orcid.org/0000-0002-9900-7880
 ```
 
-### Dictionaries.
+### Dictionaries
 
 [Reference doc](https://github.com/INCATools/dead_simple_owl_design_patterns/blob/master/docs/dosdp_schema.md#owl-entity-dictionaries)
 
 A major aim of the DOSDP system is to produce self-contained, human-readable templates. Templates need IDs in order to be reliably used programatically, but templates that only use IDs are not human readable. DODSPs therefore include a set of dictionaries that map labels to IDs. Strictly any readable name can be used, but by convention we use class labels.  IDs must be  OBO curie style e.g. CL:0000001).
 
-Separate dictionaries are required for classes, relations (object properties) & AnnotationProperties
+Separate dictionaries are required for classes, relations (object properties) & annotationProperties
 
 e.g.
 
@@ -64,7 +68,7 @@ There are various [types of variables](https://github.com/INCATools/dead_simple_
 
 `vars` are used to specify OWL classes (see example above). data_vars and data_list_vars are used to specify single pieces or data lists respectively.  The range of data_vars is specified using XSD types. e.g.
 
-```YAML
+```yaml
 data_vars:
   number: xsd:int
 
@@ -78,7 +82,7 @@ A table used to specify classes following this pattern could have the following 
 |--|--|
 | 1 | pubmed:123456\|DOI:10.1016/j.cell.2016.07.054|
 
-### Template fields:
+### Template fields
 
 Template fields are where the content of classes produced by the template is specified.  These mostly follow [printf format](https://en.wikipedia.org/wiki/Printf_format_string):  A `text` field has variable slots specified using %s (for strings),  %d for integers and %f for floats (decimals).  Variables slots are filled, in order of appearance in the text, with values coming from a list of variables in an associated `vars` field e.g.
 
@@ -114,21 +118,15 @@ def:
   xrefs: xrefs
 ```
 
-##### Adding synonyms:
-
-A special set of OBO fields are dedicated to specifying synonyms:
-
-generated_synonyms:
-
-#### logical Convenience fields
+#### Logical axioms convenience fields
 
 [Reference doc](https://github.com/INCATools/dead_simple_owl_design_patterns/blob/master/docs/dosdp_schema.md#logical-convenience-fields)
 
-Where a single equivalent Class, subclassof or GCI axiom is specified, you may use the keys 'EquivalentTo', 'subClassOf' or 'GCI' respectively.  If mutiple axioms of any type are needed, use the core field [logical_axioms].
+Where a single equivalent Class, subclassOf or GCI axiom is specified, you may use the keys 'EquivalentTo', 'subClassOf' or 'GCI' respectively.  If multiple axioms of any type are needed, use the core field `logical_axioms`.
 
 ### Core fields
 
-```YAML
+```yaml
 
 annotations:
   - annotationProperty: 
@@ -162,7 +160,6 @@ logical_axioms:
 
 TBA
 
-### ODK usage 
+### Using DOSDP templates in ODK Workflows
 
-_maybe split this into separate doc_
-
+The Ontology Development Kit (ODK) comes with a few pre-configured workflows involving DOSDP templates. For a detailed tutorial see [here](dosdp_odk.md).

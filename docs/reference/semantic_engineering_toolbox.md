@@ -32,7 +32,7 @@
 
 **Templating systems**
 
-- [DOSDP](https://incatools.github.io/dead_simple_owl_design_patterns/)
+- [DOSDP](https://incatools.github.io/dead_simple_owl_design_patterns/) with [DOSDP Tools](https://github.com/INCATools/dosdp-tools)
 - [ROBOT template](http://robot.obolibrary.org/template)
 
 **Ontology Mappings**
