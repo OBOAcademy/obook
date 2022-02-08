@@ -18,6 +18,33 @@
 * _Pattern_: See above, often misused to mean _Template_. In fact, a pattern provides a _general modelling solution_ to a problem. Patterns can often be encoded in templates, but this is often incomplete. For example, a template typically does not care about the semantics of the properties it refers to, while this is critical for a pattern. (Avoid using this when talking about DOSDP YAML files).
 * _DOSDP template table_: The spreadsheet (typically TSV or CSV) that contains the DOSDP variable data. The DOSDP template table is applied to the _template string_ in the _template_ to generate a set of OWL axioms and annotation assertions.
 
+### Preparation
+
+This tutorial assumes you have set up an ODK repo with this config:
+
+```
+id: cato
+title: "Cat Anatomy Ontology"
+github_org: obophenotype
+git_main_branch: main
+repo: cat_anatomy_ontology
+release_artefacts: 
+  - base
+  - full
+  - simple
+primary_release: full
+export_formats:
+  - owl
+  - obo
+  - json
+import_group:
+  products: 
+    - id: ro
+    - id: pato
+    - id: omo
+robot_java_args: '-Xmx8G'
+```
+
 <a name="activate"></a> 
 ### Activate DOSDP in ODK
 
