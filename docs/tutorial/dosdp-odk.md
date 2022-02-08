@@ -11,6 +11,12 @@
 - [Activate DOSDP in ODK](#activate)
 - [Adding a first DOSDP template](#first-pattern)
 
+## Video
+
+This is a very unprofessional video recorded as part of one of our trainings. It walks you through this tutorial here, with some additional examples being given and a bit of Q&A.
+
+<iframe src="https://drive.google.com/file/d/13YK_WabCeZrvzycoObWsWek7tGDHnNdW/preview" width="640" height="480" allow="autoplay"></iframe>
+
 ## Glossary
 
 * _Template_: A document with _template strings_ that include variables which can be instantiated my a tool. For example, a ROBOT template may contain the template string `SC 'part of' some %` which can be instantiated by `ROBOT` to be transformed into an OWL axiom: `SubClassOf(CATO:001 ObjectSomeValuesFrom(BFO:0000051 UBERON:123))`. Similarly, DOSDP YAML files are often referred to as "templates" (which is appropriate). Unfortunately, we often refer to them as "patterns" which is not strictly the right way to name them: they are templates that _encode_ patterns (and that only to a limited extend). We recommend to refer to the DOSDP YAML files as "templates".
