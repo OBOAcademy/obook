@@ -23,6 +23,7 @@ The goal of this course is to provide ongoing training for the OBO community. As
 
 | Date | Lesson | Notes |
 | --- | --- | --- |
+| 2022/02/07 | [ODK/DOSDPs](https://oboacademy.github.io/obook/tutorial/dosdp_template/)
 | 2022/01/25 | [Contributing to OBO ontologies](../lesson/contributing_to_obo_ontologies.md) | This is not new content but we'll start at the beginning again with our previous lessons. |
 | 2022/01/11 | Office hours with Nicole and Sabrina - no formal lesson | Bring any open questions. |
 | 2021/12/14 | [Lessons learned from troubleshooting ROBOT](../reference/troublehooting-robot.md) | Open discussion, no advance preparation is needed. |

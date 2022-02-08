@@ -1,5 +1,6 @@
 site_name: OBO Semantic Engineering Training
-theme: material
+theme:
+  name: material
 markdown_extensions:
   - toc:
       permalink: true
@@ -39,7 +40,9 @@ nav:
               - ODK - Managing ontology releases: tutorial/managing-ontology-releases-odk.md
               - ODK - Migrating to ODK: tutorial/migrating-ontology-to-odk.md
           - Templates:
-              - DOSDP Templates: tutorial/dosdp_template.md
+              - Getting started with DOSDP templates: tutorial/dosdp_overview.md
+              - DOSDP Templates Basic Tutorial: tutorial/dosdp_template.md
+              - Introduction to Managing DOSDP Templates in ODK: tutorial/dosdp-odk.md
           - Git, GitHub and Collaborative Workflows:
               - GitHub Fundamentals for OBO Engineers: tutorial/github_fundamentals.md
               - GitHub Issue for OBO Engineers: tutorial/github_issues.md

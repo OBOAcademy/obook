@@ -28,11 +28,11 @@
 **SPARQL endpoints**
 
 - [Ontobee SPARQL endpoint](http://www.ontobee.org/sparql): Useful to run queries across all OBO Foundry ontologies
-- [Ubergraph SPARQL endpoint](https://stars-app.renci.org/ubergraph/sparql): Many key OBO ontologies are loaded here with lots of materialised inferences ([docs](https://github.com/INCATools/ubergraph/)).
+- [Ubergraph SPARQL endpoint](https://ubergraph.apps.renci.org/sparql): Many key OBO ontologies are loaded here with lots of materialised inferences ([docs](https://github.com/INCATools/ubergraph/)).
 
 **Templating systems**
 
-- [DOSDP](https://incatools.github.io/dead_simple_owl_design_patterns/)
+- [DOSDP](https://incatools.github.io/dead_simple_owl_design_patterns/) with [DOSDP Tools](https://github.com/INCATools/dosdp-tools)
 - [ROBOT template](http://robot.obolibrary.org/template)
 
 **Ontology Mappings**
