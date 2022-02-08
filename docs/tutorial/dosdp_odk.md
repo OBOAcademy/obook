@@ -171,7 +171,7 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.ob
 
 Now, we are ready to view our ontology (the edit file, i.e. `src/ontology/cato-edit.owl`) in Protege:
 
-![DOSDP Spotted Coat in Protege](../images/FHKB%20figures/dosdp_spotted_coat.png)
+![DOSDP Spotted Coat in Protege](../images/dosdp_spotted_coat.png)
 
 Still a few things to iron out - there is an UBERON term that we still need to import, and our class is not a subclass of the CATO `root node`, but we had a good start.
 
