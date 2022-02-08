@@ -28,7 +28,9 @@
 8. [Managing releases](../tutorials/managing-ontology-releases-odk.md)
 9. [Taxon Constraints](../discussion/taxon-constraints-explainer.md)
 10. [Adding taxon restrictions](../howto/add_taxon_restrictions.md)
-11. [Switching ontologies](../howto/switching_ontologies.md)
+11. [Getting started with DOSDP templates](../tutorial/dosdp_overview.md)
+12. [DOSDP Templates Basic Tutorial](../tutorial/dosdp_template.md)
+13. [Switching ontologies](../howto/switching_ontologies.md)
 
 ## Ontology Curator How To Collection
 This section is a non-ordered collection of how to documents that a curator might needs

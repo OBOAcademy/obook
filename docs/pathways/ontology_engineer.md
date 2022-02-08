@@ -28,8 +28,11 @@ As a ontology engineer, it would be useful for you to know how curators work, as
 6. [ROBOT tutorial pt. 1](../tutorial/robot_tutorial_1.md)
 7. [ROBOT tutorial pt. 2](../tutorial/robot_tutorial_2.md)
 8. [Templates](../lessons/templates_for_obo.md)
-9. [Basics of SPARQL](../tutorial/sparql.md)
-10. [Setting up slims](../howto/NewSlim.md)
+9. [Getting started with DOSDP templates](../tutorial/dosdp_overview.md)
+10. [DOSDP Templates Basic Tutorial](../tutorial/dosdp_template.md)
+11. [Introduction to Managing DOSDP Templates in ODK](../tutorial/dosdp-odk.md)
+12. [Basics of SPARQL](../tutorial/sparql.md)
+13. [Setting up slims](../howto/NewSlim.md)
 
 ## Ontology Engineer How To Collection
 This section is a non-ordered collection of how to documents that an engineer might need (this includes everything from the curators list as they may be pertinent knowledge to an engineer).
