@@ -18,7 +18,7 @@
 4. [Creating pull requests](../howto/github_create_pull_request.md)
 
 ### Learning how to edit ontologies
-1. Principals of Bio-ontologies (UNDER CONSTRUCTION)
+1. Principles of Bio-ontologies (UNDER CONSTRUCTION)
 2. [Contributing to an ontology](../lessons/contributing_to_obo_ontologies.md)
 3. [Avoid asserting redundant subclasses](../discussion/DeletingAssertedSubClasses.md)
 4. [When to use term comments](../discussion/TermComments.md)(Optional)

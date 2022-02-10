@@ -20,7 +20,7 @@ As a ontology engineer, it would be useful for you to know how curators work, as
 4. [Creating pull requests](../howto/github_create_pull_request.md)
 
 ### Learning ontology engineering
-1. Principals of Bio-ontologies (UNDER CONSTRUCTION)
+1. Principles of Bio-ontologies (UNDER CONSTRUCTION)
 2. [Setting up a ODK repository](../tutorial/setting-up-project-odk.md)
 3. [Developing an obo ontology](../lessons/developing_an_obo_ontology.md)
 4. [Understanding product variants](../discussion/owl_formats_variants.md)
