@@ -87,6 +87,7 @@ nav:
           - Reasoning: reference/reasoning.md
           - A day in the life of an ontology curator: reference/ontology-curator.md
           - Git FAQ: reference/git_faq.md
+          - Tools for Managing Issues: reference/managing-issues.md
           - Release Artefacts: reference/ReleaseArtefacts.md
           - Synonyms: reference/Synonyms.md
           - Monkeying around with OWL: reference/mungall_blog_radar.md
@@ -95,6 +96,7 @@ nav:
           - Other useful resources: reference/other_resources.md
       - Discussion:
           - Term Comments: discussion/TermComments.md
+          - Writing good issues: discussion/writing-good-issues.md
           - Assert or Reason (under construction): discussion/DeletingAssertedSubClasses.md
           - OWL, OBO, JSON? Base, simple, full, basic? What should you use, and why?: discussion/owl_formats_variants.md
   - OBOOK Editors:
