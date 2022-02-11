@@ -224,7 +224,7 @@ It uses the first row as the column names,
 and the type of every column is `TEXT`.
 Here's the schema I end up with:
 
-```sh
+```
 $ sqlite3 build/data.db <<< ".schema data_csv"
 CREATE TABLE data_csv(
   "datetime" TEXT,
