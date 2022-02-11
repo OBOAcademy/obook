@@ -1,28 +1,23 @@
 # On becoming an OBO Semantic Engineer
 
-Welcome to our OBO Semantic Engineering Training!
+Welcome the OBOOK, the OBO Organized Knowledge portal and our OBO Semantic Engineering Training!
 
-## Introduction to documentation 
+## Introduction to the OBOOK 
 
-Documentation in the obook is organised* based on the [diataxis framework](https://diataxis.fr/) of documentations into 4 distinction sections: 
+Documentation in the OBOOK is organised based on the [Diataxis framework](https://diataxis.fr/) of documentations into 4 distinction sections: 
 
-1. Tutorials
+1. _Tutorials_: Tutorials are learning-oriented documentation in which there are exercises to help a beginner achieve basic competence in that area. 
+1. _How-to Guides_: How-to Guides are task-oriented documentation that function as directions that guide the reader through the steps to achieve a specific end.
+1. _Reference_: References are information-oriented documentation that describe, as succinctly as possible, and in an orderly way, a single topic.
+1. _Explanations_: Explanations are understanding-oriented documentation that clarifies, deepens and broadens the reader’s understanding of a subject.
 
-Tutorials are learning-oriented documentation in which there are exercises to help a beginner achieve basic competence in that area. 
+To accommodate for the various training use cases we support, we added the following categories on top:
 
-2. How-to Guides
+1. Lesson: A collection of materials (tutorials, explanations and how-to-guides) that together seek to teach a well defined concept.
+1. Course: A convenience content type that allows us to assemble materials from obook for a specific taught unit, such as the yearly ICBO tutorials.
+1. Pathway: A pathway is a kind of course pertaining to a specific role in the OBO-sphere, such as curator or software developer.
 
-How-to Guides are task-oriented documentation that function as directions that guide the reader through the steps to achieve a specific end.
-
-3. Reference
-
-References are information-oriented documentation that describe, as succinctly as possible, and in an orderly way, a 
-
-4. Discussion
-
-Discussion (or explanation) are understanding-oriented documentation that clarifies, deepens and broadens the reader’s understanding of a subject.
-
-*Note: we are in the process of transforming the documentation accordingly, please be patient if some of the documentations are still not in their correct place. Feel free to [create an issue](https://github.com/OBOAcademy/obook/issues) if you find something that you suspect isn't in place.
+*Note*: we are in the process of transforming the documentation accordingly, please be patient if some of the documentations are still not in their correct place. Feel free to [create an issue](https://github.com/OBOAcademy/obook/issues) if you find something that you suspect isn't in place.
 
 ## Editorial Team
 
@@ -30,6 +25,7 @@ Discussion (or explanation) are understanding-oriented documentation that clarif
 - *Becky Jackson*, Bend Informatics. Becky has been a Semantic Software developer and Ontology Pipeline specialist since 2016, now working as an independent consultant. 
 - *Nicole Vasilevsky*, Monarch Initiative. Nicole is a Visiting Associate Research Professor at University of Colorado Anschutz Medical Campus and is an Ontology Curator for ontologies such as Mondo Disease Ontology, the Human Phenotype Ontology, Uberon Anatomy Ontology, and Cell Ontology.
 - *Nicolas Matentzoglu*, Semanticly Ltd. Nico is an Ontology Engineer and Ontology Pipeline Specialist, being the Principal Ontology Pipeline Developer for the Monarch Initiative.
+- *Shawn Tan*, EMBL-EBI. Shawn is an Ontology Curator for The Brain Data Standards project.
 
 If you would like to contribute to this training, please [find out more here](contributing.md).
 
@@ -37,6 +33,7 @@ If you would like to contribute to this training, please [find out more here](co
 - [Course overview and lessons](overview.md)
 - [Getting started (read this first)](getting-started.md)
 - [How to contribute](contributing.md)
+- [Getting started for OBOOK documentation writers](getting-started-obook.md)
 
 ## Acknowledgements
 

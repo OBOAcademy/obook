@@ -97,7 +97,7 @@ nav:
           - Git FAQ: reference/git-faq.md
           - Tools for Managing Issues: reference/managing-issues.md
           - Release Artefacts: reference/release-artefacts.md
-          - Synonyms: reference/synonyms.md
+          - Synonyms: reference/synonyms-obo.md
           - Monkeying around with OWL: reference/mungall-blog-radar.md
           - Ontology Development Kit (ODK): reference/odk.md
           - Troubleshooting ROBOT: reference/troublehooting-robot.md

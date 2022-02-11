@@ -1,4 +1,4 @@
-# Synonyms
+# Synonyms in OBO
 
 A synonym indicates an alternative name for a term. Terms can have multiple synonyms.
 

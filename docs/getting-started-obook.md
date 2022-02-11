@@ -22,7 +22,7 @@ There are three main consequences to this:
 
 ## Beyond Diataxis: the OBOOK categories:
 
-We are about to introduce a new concept to obook called `pathways`. The idea is that we provide a linear guide for all 6 roles mentioned on the getting started page through the materials. This will help us also complete the materials and provide a good path to reviewing them regularly.
+We just introduced a new concept to OBOOK called `pathways`. The idea is that we provide a linear guide for all 6 roles mentioned on the getting started page through the materials. This will help us also complete the materials and provide a good path to reviewing them regularly.
 
 ### Tutorial
 
@@ -43,4 +43,4 @@ A pathway is a kind of course, but without the expectation that it is ever taugh
 ## Best practices:
 
 - Items in the explanation section should conceptually start with a Why or a How question.
-
+- For ordered lists, only use 1. 1. 1., ever 1. 2. 3. This makes it easier to remove and shuffle items during edits

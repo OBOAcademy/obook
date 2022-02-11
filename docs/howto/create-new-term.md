@@ -18,7 +18,7 @@
        3. Add the textual definition in the pop-up box.
        4. Click OK.
 
-![annotation](../images/howtoguides/createnewterm/annotation.png)
+![annotation](../images/howtoguides/createnewterm/annotations.png)
 
        
      2. Add Definition References
