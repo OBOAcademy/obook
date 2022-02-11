@@ -796,7 +796,7 @@ FROM triple;
 
 I can add this to the `src/build.sh`:
 
-```sh #src/build.sh
+```sh
 sqlite3 build/data.db < src/turtle.sql > build/data.ttl
 ```
 
@@ -963,7 +963,7 @@ WHERE {
 
 I can add this to the `src/build.sh`:
 
-```sh #src/build.sh
+```sh
 java -jar robot.jar query \
   --input build/data.ttl \
   --query src/model.rq build/model.ttl
