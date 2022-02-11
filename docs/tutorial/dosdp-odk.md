@@ -2,9 +2,9 @@
 
 ## Preparation
 
-- You are [set up for executing ODK workflows](../howto/odk_setup.md)
+- You are [set up for executing ODK workflows](../howto/odk-setup.md)
 - We assume you have a modern ODK-based repository (ODK version >= 1.2.32) set up. For a tutorial on creating a new ontology repo from scratch see [here](setting-up-project-odk.md).
-- We assume you have completed at least one of the general [DOSDP tutorials](dosdp_overview.md).
+- We assume you have completed at least one of the general [DOSDP tutorials](dosdp-overview.md).
 
 ## Tutorial
 
@@ -20,7 +20,7 @@ This is a very unprofessional video recorded as part of one of our trainings. It
 ## Glossary
 
 * _Template_: A document with _template strings_ that include variables which can be instantiated my a tool. For example, a ROBOT template may contain the template string `SC 'part of' some %` which can be instantiated by `ROBOT` to be transformed into an OWL axiom: `SubClassOf(CATO:001 ObjectSomeValuesFrom(BFO:0000051 UBERON:123))`. Similarly, DOSDP YAML files are often referred to as "templates" (which is appropriate). Unfortunately, we often refer to them as "patterns" which is not strictly the right way to name them: they are templates that _encode_ patterns (and that only to a limited extend). We recommend to refer to the DOSDP YAML files as "templates".
-* _Template string_: See above: a single string with one or more slots for variables that can be instantiated and transformed into something else. The most important template string in DOSDP is the `equivalentTo` or `subClassOf` [field](http://incatools.github.io/dead_simple_owl_design_patterns/dosdp_schema/#logical-convenience-fields): It tells [DOSDP tools](../reference/semantic_engineering_toolbox.md) how to generate an OWL axiom, with which variable slots (`vars`).
+* _Template string_: See above: a single string with one or more slots for variables that can be instantiated and transformed into something else. The most important template string in DOSDP is the `equivalentTo` or `subClassOf` [field](http://incatools.github.io/dead_simple_owl_design_patterns/dosdp_schema/#logical-convenience-fields): It tells [DOSDP tools](../reference/semantic-engineering-toolbox.md) how to generate an OWL axiom, with which variable slots (`vars`).
 * _Pattern_: See above, often misused to mean _Template_. In fact, a pattern provides a _general modelling solution_ to a problem. Patterns can often be encoded in templates, but this is often incomplete. For example, a template typically does not care about the semantics of the properties it refers to, while this is critical for a pattern. (Avoid using this when talking about DOSDP YAML files).
 * _DOSDP template table_: The spreadsheet (typically TSV or CSV) that contains the DOSDP variable data. The DOSDP template table is applied to the _template string_ in the _template_ to generate a set of OWL axioms and annotation assertions.
 
