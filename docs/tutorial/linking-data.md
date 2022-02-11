@@ -201,7 +201,7 @@ $ kak src/data.sql
 
 In `src/data.sql` I'll add just enough to import `build/data.csv`:
 
-```sql #src/data.sql
+```sql
 -- import build/data.csv
 .mode csv
 .import build/data.csv data_csv
@@ -224,7 +224,7 @@ It uses the first row as the column names,
 and the type of every column is `TEXT`.
 Here's the schema I end up with:
 
-```
+```sql
 $ sqlite3 build/data.db <<< ".schema data_csv"
 CREATE TABLE data_csv(
   "datetime" TEXT,
@@ -359,7 +359,7 @@ I can run that over each line of the file using `awk`.
 So I update the `src/build.sh`
 to rework the `build/data.csv` before I import:
 
-```sh #src/build.sh
+```sh
 #!/bin/sh
 
 rm -f build/*
@@ -551,7 +551,7 @@ Now I can import these tables into SQL
 and use the term table as a FOREIGN KEY constraint
 on data:
 
-```sql #src/data.sql
+```sql
 .mode tabs
 
 CREATE TABLE prefix (
@@ -623,7 +623,7 @@ of one sort or another.
 If I want to see the IDs for those links instead of the "codes"
 I can define a VIEW:
 
-```sql #src/data.sql
+```sql
 CREATE VIEW linked_data_id AS
 SELECT assay_datetime,
   investigator_term.id AS investigator,
@@ -656,7 +656,7 @@ $ sqlite3 build/data.db <<< "SELECT * FROM linked_ids LIMIT 1;"
 
 I can also define a similar view for their "official" labels:
  
-```sql #src/data.sql
+```sql
 CREATE VIEW linked_data_label AS
 SELECT assay_datetime,
   investigator_term.label AS investigator,
@@ -708,7 +708,7 @@ but note that if the literal data contained quotation marks
 then I'd have to do more work to escape those.
 First I create a triple table:
 
-```sql #src/data.sql
+```sql
 CREATE TABLE triple (
   subject TEXT,
   predicate TEXT,
@@ -778,7 +778,7 @@ JOIN term AS term ON data.qualifier = term.code;
 Then I can turn triples into Turtle
 using string concatenation:
 
-```sql #src/turtle.sql
+```sql
 SELECT '@prefix ' || prefix || ': <' || base || '> .'
 FROM prefix
 UNION ALL
@@ -900,7 +900,7 @@ select them with my WHERE clause,
 then CONSTRUCT better triples,
 and save them in `build/model.ttl`.
 
-```sparql #src/model.rq
+```sparql
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
