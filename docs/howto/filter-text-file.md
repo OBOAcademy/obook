@@ -1,5 +1,5 @@
-Command Line Trick to Filter Text Files
-=======================================================
+# Command Line Trick: Filter text files based on a list of strings
+
 Let's say you want to remove some lines from a large text file programmatically. For example, you want to remove every line that contains certain IDs, but you want to keep the rest of the lines intact.
 You can use the command line utility [`grep`](https://en.wikipedia.org/wiki/Grep) with option `-v` to find all the lines in the file that do NOT contain your search term(s). You can make a file with a list of several search terms and use that file with `grep` using the `-f` option as follows:
 

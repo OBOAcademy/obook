@@ -1,6 +1,6 @@
 # Obsoleting an Existing Ontology Term
 
-See [Daily Workflow](DailyWorkflow.md) for creating branches and basic Protégé instructions.
+See [Daily Workflow](daily-curator-workflow.md) for creating branches and basic Protégé instructions.
 
 Warning: Every ontology has their procedures on how they obsolete terms (eg notice periods, notification emails, to_be_obsolete tags, etc.), this how-to guide only serves as a guide on how obsolete a term directly on protege. 
 
@@ -51,5 +51,5 @@ Consult the wiki documentation for suggestions on standard comments:
 8. If the obsoleted term was not replaced by another term in the ontology, but there are existing terms that might be appropriate for annotation, add those term IDs in the 'consider' tag: In the 'Annotations' window, select ```+``` to add an annotation. In the resulting menu, select ```consider``` and enter the ID of the replacement term.  
 
 9. Save changes. 
-    
-See [Daily Workflow](DailyWorkflow.md) section for commit, push and merge instructions. 
+
+See [Daily Workflow](daily-curator-workflow.md) section for commit, push and merge instructions. 

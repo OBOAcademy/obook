@@ -5,12 +5,12 @@ These materials are under construction and may be incomplete.
 
 ## Prerequisites
 - [Install ROBOT](http://robot.obolibrary.org) so you can use it outside of Docker (scroll down to the end of the ROBOT page to find the Windows instructions)
-- **Optional** [Install ODK](../howto/odk_setup.md). The ODK includes ROBOT. In the more advanced parts of the course, you will need the ODK installed for some of the other dependencies it includes, and for Windows users it is often easier to follow the tutorials from inside the docker container rather than the Windows CMD.
+- **Optional** [Install ODK](../howto/odk-setup.md). The ODK includes ROBOT. In the more advanced parts of the course, you will need the ODK installed for some of the other dependencies it includes, and for Windows users it is often easier to follow the tutorials from inside the docker container rather than the Windows CMD.
 - Familiarise yourself with the [ROBOT documentation](http://robot.obolibrary.org), to the point that you are aware of the various commands that exist.
 
 ## Tutorials
-- Complete the [ROBOT Mini-Tutorial 1](../tutorial/robot_tutorial_1.md) to learn your first ROBOT commands: `convert`, `extract` and `template`
-- Complete the [ROBOT Mini-Tutorial 2](../tutorial/robot_tutorial_2.md) to learn about `annotate`, `merge`, `reason` and `diff`
+- Complete the [ROBOT Mini-Tutorial 1](../tutorial/robot-tutorial-1.md) to learn your first ROBOT commands: `convert`, `extract` and `template`
+- Complete the [ROBOT Mini-Tutorial 2](../tutorial/robot-tutorial-2.md) to learn about `annotate`, `merge`, `reason` and `diff`
 - Complete [Running Basic SPARQL Queries](https://medium.com/virtuoso-blog/dbpedia-basic-queries-bc1ac172cc09) tutorial (~45 minutes - 1 hour)
 
 ## What is delivered as part of the course

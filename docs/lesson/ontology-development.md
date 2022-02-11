@@ -5,7 +5,7 @@ These materials are under construction and incomplete.
 
 ## Prerequisites
 - You have a GitHub account
-- You have set up docker and installed the ODK ([how to](../howto/odk_setup.md))
+- You have set up docker and installed the ODK ([how to](../howto/odk-setup.md))
 
 ## Preparation
 - [You have prepared your ODK set-up](../tutorial/setting-up-project-odk.md)

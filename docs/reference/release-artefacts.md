@@ -1,6 +1,6 @@
 # Release artefacts
 
-For explanation of different release artefacts, please see discussion [documentation on owl format variants](../discussion/owl_formats_variants.md)
+For explanation of different release artefacts, please see discussion [documentation on owl format variants](../explanation/owl-format-variants.md)
 
 We made a first stab add defining release artefacts that should cover all use cases community-wide. We need to (1) agree they are all that is needed and (2) they are defined correctly in terms of ROBOT commands. This functionality replaces what was previously done using OORT.
 

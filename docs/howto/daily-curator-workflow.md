@@ -1,4 +1,4 @@
-# Daily Workflow
+# Daily Ontology Curator Workflow with GitHub
 
 ## Updating the local copy of the ontology with 'git pull'
 

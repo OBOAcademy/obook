@@ -19,7 +19,7 @@ In this course, you will learn the basics of automation in and around the OBO on
 Please complete the following tutorials.
 - [The Unix Shell](http://swcarpentry.github.io/shell-novice/) (~4.5 hours)
 - [Version Control with Git](http://swcarpentry.github.io/git-novice/) (~3 hours)
-- [Introduction to GitHub](../tutorial/github_fundamentals.md)
+- [Introduction to GitHub](../tutorial/github-fundamentals.md)
 
 ## Tutorials
 

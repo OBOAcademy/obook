@@ -12,7 +12,7 @@ Before starting this tutorial, either:
 * make sure Docker is running and you are in the container
 * [download and install ROBOT](http://robot.obolibrary.org/) for your operating system
 
-To start, we will be working in the same folder as the first [ROBOT Mini-Tutorial](robot_tutorial_1.md). Navigate to this folder in your terminal and list the contents of the current directory by running `ls`. You should see `catalog-v001.xml` listed as one of these files. We want to delete this so that we can fix the ontology IRI problem we ran into last week! Before going any further with this tutorial, do this by running either `del catalog-v001.xml` for Windows or `rm catalog-v001.xml` if you're using Docker, MacOS, or other Linux system.
+To start, we will be working in the same folder as the first [ROBOT Mini-Tutorial](robot-tutorial-1.md). Navigate to this folder in your terminal and list the contents of the current directory by running `ls`. You should see `catalog-v001.xml` listed as one of these files. We want to delete this so that we can fix the ontology IRI problem we ran into last week! Before going any further with this tutorial, do this by running either `del catalog-v001.xml` for Windows or `rm catalog-v001.xml` if you're using Docker, MacOS, or other Linux system.
 
 ---
 

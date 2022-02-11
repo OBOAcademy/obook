@@ -1,8 +1,4 @@
-Appendix
-========
-
-Create a fork from GitHub
--------------------------
+# Fork an ontology for editing
 
 Note: Creating a fork allows you to create your copy  GitHub repository. This example provides instructions on forking the Mondo GitHub reposiitory. You can't break any of the Mondo files by editing your forked copy.
 

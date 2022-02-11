@@ -2,7 +2,7 @@
 
 # Merging Ontology Terms
 
-See [Daily Workflow](DailyWorkflow.md) for creating branches and basic Protégé instructions. 
+See [Daily Workflow](daily-curator-workflow.md) for creating branches and basic Protégé instructions. 
 
 **Note** Before performing a merge, make sure that you know all of the consequences that the merge will cause. In particular, be sure to look at child terms and any other terms that refer to the ‘deprecated’ term. In many cases a simple merge of two terms is not sufficient because it will result in equivalent classes for child terms. For example if deprecated term X is going to be merged into target term Y and ‘regulation of X’ and ‘regulation of Y’ terms exist, then you will need to merge the regulation terms in addition to the primary terms. You will also need to edit any terms that refer to the deprecated term to be sure that the names and definitions are consistent.
 
@@ -42,7 +42,7 @@ See [Daily Workflow](DailyWorkflow.md) for creating branches and basic Protégé
 
 7. Save changes. 
 
-See [Daily Workflow](DailyWorkflow.md) section for commit, push and merge instructions. 
+See [Daily Workflow](daily-curator-workflow.md) section for commit, push and merge instructions. 
 
 ## Merge using owltools
 

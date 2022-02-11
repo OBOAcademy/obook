@@ -1,6 +1,6 @@
 # Adding taxon restrictions
 
-See [Daily Workflow](DailyWorkflow.md) for creating branches and basic Protégé instructions. 
+See [Daily Workflow](daily-curator-workflow.md) for creating branches and basic Protégé instructions. 
 
 1. ```in taxon``` relations are added as ```Subclasses```. 
    1.	Navigate to the term for which you want to add the only in taxon restriction.
@@ -22,5 +22,5 @@ See [Daily Workflow](DailyWorkflow.md) for creating branches and basic Protégé
 
 ![neverintaxon](../images/howtoguides/TaxonRestriction/neverintaxon.png)
    
-See [Daily Workflow](DailyWorkflow.md) section for commit, push and merge instructions. 
+See [Daily Workflow](daily-curator-workflow.md) section for commit, push and merge instructions. 
 

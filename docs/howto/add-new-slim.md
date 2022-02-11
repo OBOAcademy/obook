@@ -2,7 +2,7 @@
 
 ### Adding a new Subset (Slim)
 
-See [Daily Workflow](DailyWorkflow.md) for creating branches and basic Protégé instructions. 
+See [Daily Workflow](daily-curator-workflow.md) for creating branches and basic Protégé instructions. 
 
 1.	In the main Protege window, click on the Annotation Properties tab.
 
@@ -22,11 +22,11 @@ See [Daily Workflow](DailyWorkflow.md) for creating branches and basic Protégé
 
 9.	Click OK to save the changes. You should now see the comment field in the annotations tab.
 
-See [Daily Workflow](DailyWorkflow.md) section for commit, push and merge instructions. 
+See [Daily Curator Workflow](daily-curator-workflow.md) section for commit, push and merge instructions. 
 
 ### Adding a term to a Subset (Slim)
 
-See [Daily Workflow](DailyWorkflow.md) for creating branches and basic Protégé instructions. 
+See [Daily Curator Workflow](daily-curator-workflow.md) for creating branches and basic Protégé instructions. 
 
 1. In Protege, navigate to the term you wish to add to a subset (slim).
 

@@ -35,7 +35,7 @@ If you would like to contribute to this training, please [find out more here](co
 
 ## Content
 - [Course overview and lessons](overview.md)
-- [Getting started (read this first)](getting_started.md)
+- [Getting started (read this first)](getting-started.md)
 - [How to contribute](contributing.md)
 
 ## Acknowledgements

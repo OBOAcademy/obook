@@ -1,6 +1,6 @@
 # Tutorial: How to get started with your own ODK-style repository
 
-1. Preparation: Installing docker, installing ODK and setting memory. Follow the steps [here](../howto/odk_setup.md).
+1. Preparation: Installing docker, installing ODK and setting memory. Follow the steps [here](../howto/odk-setup.md).
 2. Creating your first ontology repository
 
 The tutorial uses example tailored for users of UNIX systems, like Mac and Linux.

@@ -2,9 +2,9 @@
 
 ## Lessons
 
-### [Using Ontologies and Ontology Terms](lesson/ontology_term_use.md)
+### [Using Ontologies and Ontology Terms](lesson/ontology-term-use.md)
 
-- Target [roles](getting_started.md#oboroles): Database Curators 
+- Target [roles](getting-started.md#oboroles): Database Curators 
 - skills
     - know what ontologies are good for
     - find good ontologies: ontology repositories, OBO
@@ -15,11 +15,11 @@
     - use IRIs, prefixes, CURIEs, labels
     - use Protege?
 
-### [Contributing to OBO ontologies 1: Protege and Github](lesson/contributing_to_obo_ontologies.md)
+### [Contributing to OBO ontologies 1: Protege and Github](lesson/contributing-to-obo-ontologies.md)
 
-- Target [roles](getting_started.md#oboroles): Database Curators, Ontology Curator, Ontology Engineer/Developer
+- Target [roles](getting-started.md#oboroles): Database Curators, Ontology Curator, Ontology Engineer/Developer
 - Builds on:
-    - [Ontology Term Use](lesson/ontology_term_use.md)
+    - [Ontology Term Use](lesson/ontology-term-use.md)
 - Skills:
     - use GitHub: issues, Pull Requests
     - understand basic Open Source etiquette
@@ -29,11 +29,11 @@
     - use templates: ROBOT, DOS-DP
     - basics of OWL
 
-### [Ontology Fundamentals](lesson/ontology_fundamentals.md)
+### [Ontology Fundamentals](lesson/ontology-fundamentals.md)
 
-- Target [roles](getting_started.md#oboroles): Ontology Curators, Ontology Engineer/Developer
+- Target [roles](getting-started.md#oboroles): Ontology Curators, Ontology Engineer/Developer
 - Builds on:
-    - [Ontology Term Use](lesson/ontology_term_use.md)
+    - [Ontology Term Use](lesson/ontology-term-use.md)
 - Skills:
     - RDF
     - RDFS
@@ -44,9 +44,9 @@
 
 ### Linked Data Analysis
 
-- Target [roles](getting_started.md#oboroles): Ontology Curators, (Semantic) Software Engineer
+- Target [roles](getting-started.md#oboroles): Ontology Curators, (Semantic) Software Engineer
 - Builds on:
-    - [Ontology Fundamentals](lesson/ontology_fundamentals.md)
+    - [Ontology Fundamentals](lesson/ontology-fundamentals.md)
 - Skills:
     - Advanced SPARQL
     - Term enrichment
@@ -57,8 +57,8 @@
 ### Ontology Development
 
 - Builds on:
-    - [Ontology Fundamentals](lesson/ontology_fundamentals.md)
-    - [Contributing to OBO ontologies](lesson/contributing_to_obo_ontologies.md)
+    - [Ontology Fundamentals](lesson/ontology-fundamentals.md)
+    - [Contributing to OBO ontologies](lesson/contributing-to-obo-ontologies.md)
 - Skills:
     - Manage GitHub
     - Manage ontology imports
@@ -78,7 +78,7 @@
     - triplestores
     - knowledge graphs
 
-### [Automating Ontology Development Workflows](lesson/automating_ontology_workflows.md)
+### [Automating Ontology Development Workflows](lesson/automating-ontology-workflows.md)
 
 - Builds on: 
     - Ontology Development
@@ -90,7 +90,7 @@
     - ROBOT
     - ODK
 
-### [Developing an OBO Reference Ontology](lesson/developing_an_obo_ontology.md)
+### [Developing an OBO Reference Ontology](lesson/developing-an-obo-ontology.md)
 
 - Builds on:
     - Ontology Development Automation
@@ -102,12 +102,12 @@
 
 ## Tutorials
 
-- [ROBOT Tutorial 1: Convert, Extract and Template](tutorial/robot_tutorial_1.md)
-- [ROBOT Tutorial 2: Annotate, Merge, Reason and Diff](tutorial/robot_tutorial_2.md)
-- [Introduction to GitHub](tutorial/github_fundamentals.md)
-- [Intro to managing and tracking issues in GitHub](tutorial/github_issues.md)
+- [ROBOT Tutorial 1: Convert, Extract and Template](tutorial/robot-tutorial-1.md)
+- [ROBOT Tutorial 2: Annotate, Merge, Reason and Diff](tutorial/robot-tutorial-2.md)
+- [Introduction to GitHub](tutorial/github-fundamentals.md)
+- [Intro to managing and tracking issues in GitHub](tutorial/github-issues.md)
 
 ## How-to guides
 
-- [Install Elk 0.5 in Protege](howto/installing_elk_in_protege.md)
-- [Getting set up with Docker and the Ontology Development Kit](howto/odk_setup.md)
+- [Install Elk 0.5 in Protege](howto/installing-elk-in-protege.md)
+- [Getting set up with Docker and the Ontology Development Kit](howto/odk-setup.md)

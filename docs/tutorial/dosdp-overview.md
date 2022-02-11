@@ -4,7 +4,7 @@ Dead Simple OWL Design patterns (DOSDP) is a templating system for documenting a
 
 The complete DOSDP documentation can be found here http://incatools.github.io/dead_simple_owl_design_patterns/.
 
-For another DOSDP tutorial see [here](dosdp_template.md).
+For another DOSDP tutorial see [here](dosdp-template.md).
 
 ## Anatomy of a DOSDP file:
 

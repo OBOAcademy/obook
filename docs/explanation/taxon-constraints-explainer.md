@@ -24,9 +24,9 @@ E.g. in Brain Data Standards, in_taxon axioms that allow faceting cell types by 
 
 ## How to add taxon restrictions: 
 
-Please see how-to guide on [adding taxon restrictions](../howto/add_taxon_restrictions.md)
+Please see how-to guide on [adding taxon restrictions](../howto/add-taxon-restrictions.md)
 
-## Why annotation for some taxon restrctions?
+## Why annotation for some taxon restrictions?
 
 Annotations for taxon restrictions are used as a shortcut. These are used to more simply represent complex description. 
 Shortcuts work as a macro that is expanded out (see [this document](http://owlcollab.github.io/oboformat/doc/obo-syntax.html#7) for technical details):

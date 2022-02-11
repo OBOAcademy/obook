@@ -8,13 +8,13 @@ These materials are under construction and incomplete.
 Participants will need to have access to the following resources and tools prior to the training:
 - **GitHub account** - register for a free GitHub account [here](https://github.com/join?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home)
 - **Protege** - Install Protege 5.5, download it [here](https://protege.stanford.edu/)
-- **[Install ELK 0.5](https://github.com/jamesaoverton/obook/blob/master/docs/howto/install_elk_0.5_protege.md)** 
+- **[Install ELK 0.5](../howto/installing-elk-in-protege.md)** 
 - **Install GitHub Desktop** Please make sure you have some kind of git client installed on your machine. If you are new to Git, please install [GitHub Desktop](https://desktop.github.com/)
 
 ## Preparation
-- Review tutorial on [Ontology Term Use](ontology_term_use.md)
-- Review tutorial on [Contributing to OBO Ontologies](https://github.com/jamesaoverton/obook/blob/master/docs/lesson/contributing_to_obo_ontologies.md)
-- Clone Mondo repo: Follow these instructions to [clone the Mondo repo](../howto/clone_mondo_repo.md)
+- Review tutorial on [Ontology Term Use](ontology-term-use.md)
+- Review tutorial on [Contributing to OBO Ontologies](contributing-to-obo-ontologies.md)
+- Clone Mondo repo: Follow these instructions to [clone the Mondo repo](../howto/clone-mondo-repo.md)
 
 ## What is delivered as part of this course
 
