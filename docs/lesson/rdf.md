@@ -25,10 +25,10 @@ Modelling and querying data with RDF triples, and working with RDF using tables
 [Using Databases and SQL](http://swcarpentry.github.io/sql-novice-survey/)
 
 ## New Material
-- [Tables and Triples](https://github.com/jamesaoverton/obook/blob/master/03-RDF/tables-and-triples.md)
+- [Tables and Triples](https://oboacademy.github.io/obook/reference/tables-and-triples/)
 
 ## Optional material
-- [Linking data](https://github.com/jamesaoverton/obook/blob/master/03-RDF/linking-data.md)
+- [Linking data](https://oboacademy.github.io/obook/tutorial/linking-data/)
 
 ## Semantic Engineer Toolbox
 
