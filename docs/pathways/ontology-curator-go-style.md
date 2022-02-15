@@ -19,20 +19,19 @@ Note: There is no one single accepted way of doing ontology curation in the OBO-
 3. [Cloning a Repo](../howto/clone-mondo-repo.md)
 4. [Creating pull requests](../howto/github-create-pull-request.md)
 
-### Learning how to edit ontologies
+### Learning protege
 
-1. [Contributing to an ontology](../lesson/contributing-to-obo-ontologies.md)
-1. [Avoid asserting redundant subclasses](../explanation/deleting-asserted-sub-classes.md)
-1. [When to use term comments](../explanation/term-comments.md)(Optional)
+1. [Active Ontology Tab](../reference/active-ontology-tab.md)
+1. [Browse and Search](../howto/protege-browse-search.md)
+1. [DL query]
+1. [Editing Terms]
+1. [Creating New Terms](../howto/create-new-term.md) 
+1. [Adding disjointness]
+1. [Logical axiomatization of classes & use of reasoning]
+1. [Ontology Relations]
+1. [OBO-style term annotation]
 1. [Obsoleting terms](../howto/obsolete-term.md)
 1. [Merging terms](../howto/merge-terms.md)
-1. [Managing imports](../tutorial/managing-dynamic-imports-odk.md)
-1. [Managing releases](../tutorial/managing-ontology-releases-odk.md)
-1. [Taxon Constraints](../explanation/taxon-constraints-explainer.md)
-1. [Adding taxon restrictions](../howto/add-taxon-restrictions.md)
-1. [Getting started with DOSDP templates](../tutorial/dosdp-overview.md)
-1. [DOSDP Templates Basic Tutorial](../tutorial/dosdp-template.md)
-1. [Switching ontologies](../howto/switching-ontologies.md)
 
 ## Ontology Curator How To Collection
 
