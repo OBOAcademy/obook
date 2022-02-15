@@ -12,6 +12,9 @@ Note: There is no one single accepted way of doing ontology curation in the OBO-
 
 ## Learning
 
+### Learning about Ontologies
+1. [Fundamentals of Ontologies]
+
 ### Learning Git and GitHub
 
 1. [Fundamentals of GitHub](../tutorial/github-fundamentals.md)
