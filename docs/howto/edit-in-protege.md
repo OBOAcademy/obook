@@ -71,14 +71,4 @@ Note the Anonymous Ancestors. These are superclasses that are inherited from the
 
 ### Make a Pull Request
 
-1.  Click: Create Pull Request in GitHub Desktop
-
-2.  This will automatically open GitHub Desktop 
-
-3.  Click the green button 'Create pull request'
-
-4.  You may now add comments to your pull request. 
-
-5.  The editors team will review your PR and either ask for changes or merge it.
-
-6.  The changes will be available in the next release.
+1.  Make a pull request as usual ([instructions here](../howto/github-create-pull-request.md))
