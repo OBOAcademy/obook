@@ -72,6 +72,8 @@ Note the Anonymous Ancestors. These are superclasses that are inherited from the
 
 ![](https://lh4.googleusercontent.com/hC3R3tw3S5eVNLc70iCN0lrtj9rD_gIPUBxberpw4gSRRR6xct1Xv5dHYSfXPchpYvpGMhIgGnQQ18dl6pWicyClpL-GGyi_JjkeSKOetm4hleSfA-kxu6ww6v-3q-NOLj3xhd7m)
 
+When you press the '+' button to add a `SubClass of` axiom, you will notice a few ways you can add a term. The easiest of this is to use the Class expression editor. This allows you to type in the expression utilizing autocomplete. As you start typing, you can press the 'TAB' or '->|' button on your keyboard, and protege will suggest terms. You will also note that the term you enter is not in the ontology, protege will not allow you add it, with the box being highlighted red, and the term underlined red.
+
 ### Make a Pull Request
 
 1.  Make a pull request as usual ([instructions here](../howto/github-create-pull-request.md))

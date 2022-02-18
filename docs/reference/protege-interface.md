@@ -2,6 +2,16 @@
 
 For this reference, we will use the cell ontology to highlight the key information on the user interface in Protege
 
+## General interface buttons
+
+![](../images/reference/protege/protege-buttons.png)
+
+'+' button (not shown above) = add
+'?' button = explain axiom
+'@' button = annotate
+'x' button = remove
+'o' button = edit
+
 ## Active Ontology tab
 
 ### Overview
@@ -9,7 +19,7 @@ For this reference, we will use the cell ontology to highlight the key informati
 When you open the ontology on protege, you should land on the Active ontology tab, alternatively, it is available on the top as one of your tabs.
 
 
-![](../images/reference/protege/protege-active-ontology-tab.md)
+![](../images/reference/protege/protege-active-ontology-tab.png)
 
 ### Ontology Level Annotations
 
@@ -22,4 +32,8 @@ This includes:
 1. references (under rdfs:comment)
 1. preferred_root (this allows certain browsers to know which root to display the ontology from)
 
-# 
+## Entities tab
+
+Entities are where your "entries" in the ontology live and where you can add terms etc. 
+
+![](../images/reference/protege/protege-entities-tab.png)
