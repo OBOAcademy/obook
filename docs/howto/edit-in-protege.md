@@ -4,6 +4,7 @@ Before you start:
 
 -   make sure you are working on a [here](https://docs.google.com/presentation/d/1M8NZQOIQVswng-so6ROxVeMJfDnzth7BYNj_5MXxEik/edit#slide=id.g9db6baf776_1_0).
 -   make sure you have the editor's file open in Protege (in ODK ontologies, located in: ./src/ontology/ONT-edit.owl) where ONT is the name of your ontology (eg mondo-edit.owl for MONDO)
+-   familiarise yourself with the user [interface of protege](../reference/protege-interface.md)
 
 ## Adding, editing, annotating and deleting axioms
 
@@ -11,14 +12,16 @@ Before you start:
 
 Using Protégé you can add annotations such as labels, definitions, synonyms, database cross references (dbxrefs) to any OWL entity. The panel on the right, named Annotations, is where these annotations are added. OBO Foundry ontologies includes a pre-declared set of annotation properties. The most commonly used annotations are below. 
 
--   rdfs:label
+-   rdfs:label 
 -   definition
 -   has_exact_synonym
 -   has_broad_synonym
 -   has_narrow_synonym
 -   has_related synonym
 -   database_cross_reference
--   rdfs:comment
+-   rdfs:comment 
+
+Note: OBO ontologies allow only one rdfs:label, definition, and comment. 
 
 Note, most of these are bold in the annotation property list:
 
@@ -43,7 +46,7 @@ To add a dbxref to the definition:
 1.   Scroll up on the left hand side until you find 'database_cross_reference', and click it
 1.   Add the PMID in the editing box (PMID:25527564). _Note: the PMID should not have any spaces)
 1.   Click OK
-1.   Add the additional dbxref (i.e., adding GARD:0013029)
+1.   Add the additional dbxref (e.g., adding GARD:0013029)
 1.   The dbxrefs should appear as below.
 
 ![](https://lh6.googleusercontent.com/l589uvv3OKKxrabrqKQdL-NF6PfKi_mSfaz-xk--59WtSD15VOy9CQVZXdE0SHl6ZA761zv9G0UULHF5EKRfMToX2F0kqrwuGbjdnzVV3JRRJbb2l40UjOLeXi-7aM_TBkCSkN3L)
