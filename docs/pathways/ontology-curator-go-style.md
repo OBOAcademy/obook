@@ -31,7 +31,7 @@ Note: There is no one single accepted way of doing ontology curation in the OBO-
 1. [Creating New Terms](../howto/create-new-term.md) 
 1. [Adding disjointness]
 1. [Logical axiomatization of classes & use of reasoning]
-1. [Ontology Relations]
+1. [Ontology Relations](../lesson/modelling-with-object-properties.md)
 1. [OBO-style term annotation]
 1. [Obsoleting terms](../howto/obsolete-term.md)
 1. [Merging terms](../howto/merge-terms.md)
