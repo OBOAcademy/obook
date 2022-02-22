@@ -1,6 +1,6 @@
 # Basic SPARQL for OBO Engineers
 
-In this tutorial we introduce SPARQL, with a particular spin on how we use it across OBO ontologies.
+In this tutorial we introduce SPARQL, with a particular spin on how we use it across OBO ontologies. Following this tutorial should give you a sense of how we use SPARQL across OBO, without going too much into technical details. You can find concrete tutorials on how to generate reports or QC checks with ROBOT and ODK towards the end of this page.
 
 ## Preparation
 
@@ -13,6 +13,7 @@ In this tutorial we introduce SPARQL, with a particular spin on how we use it ac
 - [RENCI Ubergraph Endpoint](https://api.triplydb.com/s/PHnGm2l5t): Many key OBO ontologies are loaded here with lots of materialised inferences ([docs](https://github.com/INCATools/ubergraph/)).
 - [Ontobee SPARQL endpoint](http://www.ontobee.org/sparql): Useful to run queries across all OBO Foundry ontologies.
 - [Yasgui](https://yasgui.triply.cc/): Yasgui is a simple and beautiful front-end for SPARQL endpoints which can be used not only to query, but also to share queries with others. For example [this simple SPARQL query](https://api.triplydb.com/s/r36KJ3x-D) runs across the RENCI Ubergraph Endpoint.
+- [GTF](https://sparql.gtf.fyi): A UI that allows one to run SPARQL queries on TTL files on the web, or upload them. Looks like its based on Yasgui, as it shares the same share functionality.
 - [ROBOT query](http://robot.obolibrary.org/query): ROBOT method to generate TSV reports from SPARQL queries, and applying data transformations (`--update`). ROBOT uses [Jena](https://jena.apache.org/tutorials/sparql.html) internally to execute SPARQL queries.
 - [ROBOT verify](http://robot.obolibrary.org/verify): ROBOT method to run SPARQL QC queries. If the query returns a result, the QC test fails.
 - [ROBOT report](http://robot.obolibrary.org/report): ROBOT report is a more powerful approach to running OBO QC queries. The default OBO report which ships with ROBOT can be customised by changing the error level, removing a test entirely and even extending the report to custom (SPARQL) checks. Robot report can generate beautiful HTML reports which are easy to read.
@@ -31,7 +32,7 @@ We will discuss each of these in the following and give examples. An informal di
 
 ### Quality control checking
 
-For us, ROBOT + SPARQL were a game changer for our quality control (QC) pipelines. This is how this works. First, we encode the error in the form of a SPARQL query. For example, the following check simply looks for entities that [have more than one definition](http://robot.obolibrary.org/report_queries/multiple_definitions):
+For us, ROBOT + SPARQL were a game changer for our quality control (QC) pipelines. This is how it works. First, we encode the error in the form of a SPARQL query (we sometimes call this "anti-pattern", i.e. an undesirable (anti-) representation). For example, the following check simply looks for entities that [have more than one definition](http://robot.obolibrary.org/report_queries/multiple_definitions):
 
 ```
 PREFIX obo: <http://purl.obolibrary.org/obo/>
@@ -58,8 +59,19 @@ Many times, we need to create tabular reports of our ontologies to share with st
 - create lists of ontology terms with their definitions and labels
 - create summaries of ontologies, like aggregate statistics
 
-Sometimes using Yasgui, for example in conjunction with the RENCI Ubergraph Endpoint, is enough, but often, using ROBOT query is the better choice, especially if you want to make sure the right version of the ontology is used (Ubergraph occasionally is out of date).
+Sometimes using [Yasgui](https://yasgui.triply.cc/), for example in conjunction with the RENCI Ubergraph Endpoint, is enough, but often, using ROBOT query is the better choice, especially if you want to make sure the right version of the ontology is used (Ubergraph occasionally is out of date).
+
 Using ROBOT in conjunction with a Workflows Automation system like Github actions helps with generating up-to-date reports. [Here is an example](https://github.com/monarch-initiative/mondo/blob/master/.github/workflows/diff.yaml) of a GitHub action that generates a few reports with ROBOT and pushes them back to the repository.
+
+#### A note for Data Scientists
+
+In many cases we are asked how to best "load an ontology" into a python notebook or similar. Very often the answer is that it is best to first _extract_ the content of the ontology into a table form, and then load it using a CSV reader like `pandas`. In this scenario, the workflow for interacting with ontologies is:
+
+1. Define the information you want in the form of a SPARQL query.
+1. Extract the the information as a TSV table using ROBOT query.
+1. Load the information into your notebook.
+
+If combined with for example a Makefile, you can always ensure that the report generation process is fully reproducible as well.
 
 ### Sophisticated data transformations in ontology pipelines
 
@@ -108,3 +120,11 @@ WHERE
   }
 }
 ```
+
+This can be a very useful tool for bulk editing the ontology, in particular where it is difficult or impossible to achieve the same using regular expressions or other forms of "replacement"-techniques. Here are [some example](https://github.com/monarch-initiative/mondo/tree/master/src/sparql/update) queries we collected to do such mass operations in Mondo.
+
+### Related tutorials
+
+- [QC checks with ROBOT](robot-tutorial-qc.md)
+- [Generating SPARQL table reports with ROBOT](sparql-report-robot.md)
+- [Generating SPARQL table reports with ODK](sparql-report-odk.md)

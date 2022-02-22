@@ -40,7 +40,9 @@ nav:
           - Ontology Pipelines - ODK, ROBOT, etc:
               - ROBOT Mini-Tutorial 1 - Convert, Extract and Template: tutorial/robot-tutorial-1.md
               - ROBOT Mini-Tutorial 2 - Annotate, Merge, Reason and Diff: tutorial/robot-tutorial-2.md
-              - ROBOT Mini-Tutorial QC - Quality Control with report and query: tutorial/robot-tutorial-qc.md
+              - ROBOT Mini-Tutorial QC - Quality Control with report, verify and query: tutorial/robot-tutorial-qc.md
+              - ROBOT - Generating SPARQL table reports: tutorial/sparql-report-robot.md
+              - ODK - Adding SPARQL table reports: tutorial/sparql-report-odk.md
               - ODK - Getting started with your own repo: tutorial/setting-up-project-odk.md
               - ODK - Managing imports: tutorial/managing-dynamic-imports-odk.md
               - ODK - Managing ontology releases: tutorial/managing-ontology-releases-odk.md
