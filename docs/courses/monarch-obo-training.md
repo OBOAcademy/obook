@@ -24,7 +24,7 @@ The goal of this course is to provide ongoing training for the OBO community. As
 | Date | Lesson | Notes | Recordings |
 | --- | --- | --- | --- |
 | 2022/03/08 | _To be determined_ | | |
-| 2022/02/22 | [SPARQL for OBO ontology development](../tutorial/sparql.md) | [Here](https://drive.google.com/file/d/1oKJ-1iWmTHHWf1TaOAr1xfhSjK0BKYVu/view?usp=sharing) |
+| 2022/02/22 | [SPARQL for OBO ontology development](../tutorial/sparql.md) | | [Here](https://drive.google.com/file/d/1oKJ-1iWmTHHWf1TaOAr1xfhSjK0BKYVu/view?usp=sharing) |
 | 2022/02/07 | [ODK/DOSDPs](https://oboacademy.github.io/obook/tutorial/dosdp-template/) | | [Here](https://drive.google.com/file/d/13YK_WabCeZrvzycoObWsWek7tGDHnNdW/view?usp=sharing) |
 | 2022/01/25 | [Contributing to OBO ontologies](../lesson/contributing-to-obo-ontologies.md) | This is not new content but we'll start at the beginning again with our previous lessons. | [Here](https://drive.google.com/file/d/1brhUUMXB6SIikreptVdYNRoGlPVO1WSQ/view?usp=sharing) |
 | 2022/01/11 | Office hours with Nicole and Sabrina - no formal lesson | Bring any open questions. |
