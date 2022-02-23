@@ -36,6 +36,7 @@ We can also ask for superclasses by ticking the boxes as below:
 ![](../images/tutorials/dl-query/Figure63.png)
 
 The `or` keyword is to used to create a class expression that is the union of two class expressions. For example:
+(WARNING: `or` is not supported by ELK reasoner)
 
 ![](../images/tutorials/dl-query/Figure64.png)
   
