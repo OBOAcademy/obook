@@ -37,6 +37,8 @@ nav:
       - Disease and Phenotype Ontologies: lesson/using-disease-and-phenotype-ontologies.md
   - Documentation: 
       - Tutorials:
+          - Protege:
+              - DL queries: tutorial/basic-dl-query.md
           - Ontology Pipelines - ODK, ROBOT, etc:
               - ROBOT Mini-Tutorial 1 - Convert, Extract and Template: tutorial/robot-tutorial-1.md
               - ROBOT Mini-Tutorial 2 - Annotate, Merge, Reason and Diff: tutorial/robot-tutorial-2.md
