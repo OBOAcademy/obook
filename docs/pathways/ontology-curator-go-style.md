@@ -29,7 +29,7 @@ Note: There is no one single accepted way of doing ontology curation in the OBO-
 1. [DL query]
 1. [Editing Terms](../howto/edit-in-protege.md)
 1. [Creating New Terms](../howto/create-new-term.md) 
-1. [Adding disjointness]
+1. [Adding disjointness](../tutorial/disjointness.md)
 1. [Logical axiomatization of classes & use of reasoning]
 1. [Ontology Relations](../lesson/modelling-with-object-properties.md)
 1. [OBO-style term annotation]
