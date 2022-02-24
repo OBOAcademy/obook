@@ -38,6 +38,7 @@ nav:
   - Documentation: 
       - Tutorials:
           - Protege:
+              - DL queries: tutorial/basic-dl-query.md
               - Disjointness: tutorial/disjointness.md
           - Ontology Pipelines - ODK, ROBOT, etc:
               - ROBOT Mini-Tutorial 1 - Convert, Extract and Template: tutorial/robot-tutorial-1.md
