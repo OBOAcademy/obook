@@ -24,7 +24,7 @@ Note: There is no one single accepted way of doing ontology curation in the OBO-
 
 ### Learning protege
 
-1. [Active Ontology Tab](../reference/active-ontology-tab.md)
+1. [Protege interface](../reference/protege-interface.md)
 1. [Browse and Search](../howto/protege-browse-search.md)
 1. [DL query]
 1. [Editing Terms](../howto/edit-in-protege.md)
