@@ -228,11 +228,20 @@
     <!-- http://purl.obolibrary.org/obo/OBI_0600047 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0600047">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000070"/>
+      <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TEST_0600047"/>
+      <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000070"/>
         <obo:IAO_0000112 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The use of the Sanger method of DNA sequencing to determine the order of the nucleotides in a DNA template</obo:IAO_0000112>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An assay the uses chemical or biochemical means to infer the sequence of a biomaterial</obo:IAO_0000115>
         <obo:IAO_0000119 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OBI branch derived</obo:IAO_0000119>
         <rdfs:label>sequencing assay</rdfs:label>
+    </owl:Class>
+    
+    
+    <!-- http://purl.obolibrary.org/obo/TEST_0600047 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/TEST_0600047">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0600047"/>
+        <rdfs:label>sequencing assay test</rdfs:label>
     </owl:Class>
 </rdf:RDF>
 
