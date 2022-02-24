@@ -1,10 +1,11 @@
-Browsing and Searching Mondo
+Browsing and Searching
 ============================
 
-Open the Mondo in Protégé
+Open the ontology in Protégé
 -------------------------
 
 _Note: Windows users should open Protege using run.bat_
+_Note: For the purpose of this how-to, we will be using MONDO as the ontology_
 
 1.  Navigate to where you downloaded the repository and open the mondo-edit.obo file (src/ontology/mondo-edit.obo)
 2.  When you open Protege, you will be on the Active Ontology tab
