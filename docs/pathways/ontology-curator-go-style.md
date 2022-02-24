@@ -2,6 +2,8 @@
 
 Note: There is no one single accepted way of doing ontology curation in the OBO-World, see [here](ontology-curator.md). This guide reflects the practice of the GO-style ontology curation, as it is used by GO, Uberon, CL, PATO and others.
 
+Note: Work on this document is still in progress, items that are not linked are currently being worked on.
+
 ## Getting Set-up
 
 1. Download and install [GitHub Desktop](https://desktop.github.com/)
