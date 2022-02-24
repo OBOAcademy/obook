@@ -37,6 +37,8 @@ nav:
       - Disease and Phenotype Ontologies: lesson/using-disease-and-phenotype-ontologies.md
   - Documentation: 
       - Tutorials:
+          - Protege:
+              - Disjointness: tutorial/disjointness.md
           - Ontology Pipelines - ODK, ROBOT, etc:
               - ROBOT Mini-Tutorial 1 - Convert, Extract and Template: tutorial/robot-tutorial-1.md
               - ROBOT Mini-Tutorial 2 - Annotate, Merge, Reason and Diff: tutorial/robot-tutorial-2.md
@@ -65,6 +67,7 @@ nav:
               - Installing ELK in Protege: howto/installing-elk-in-protege.md
               - Setting up your ID range: howto/idrange.md
               - Daily Workflow: howto/daily-curator-workflow.md
+              - Edit in Protege: howto/edit-in-protege.md
               - Switching Ontologies in Protege: howto/switching-ontologies.md
               - Browsing and Searching: howto/protege-browse-search.md
               - Creating New Terms in Protege: howto/create-new-term.md
@@ -96,6 +99,8 @@ nav:
           - Tables and Triples: reference/tables-and-triples.md
           - Reasoning: reference/reasoning.md
           - A day in the life of an ontology curator: reference/ontology-curator.md
+          - Protege interface: reference/protege-interface.md
+          - SPARQL basics: reference/sparql-basics.md
           - Git FAQ: reference/git-faq.md
           - Tools for Managing Issues: reference/managing-issues.md
           - Release Artefacts: reference/release-artefacts.md
