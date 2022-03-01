@@ -96,6 +96,7 @@ nav:
           - Frequently used ODK commands: reference/frequently-used-odk-commands.md
           - Protege Interface: reference/protege-interface.md)
           - Formatting your ontology annotations correctly: reference/formatting-license.md
+          - OBO-style term annotation: reference/go-style-annotation-property-practice.md
           - Glossary: reference/glossary.md
           - GitHub Desktop: reference/github-desktop.md
           - Semantic Engineering Toolbox: reference/semantic-engineering-toolbox.md
