@@ -35,7 +35,6 @@ Note: Work on this document is still in progress, items that are not linked are 
 1. [Logical axiomatization of classes & use of reasoning]
 1. [Ontology Relations](../lesson/modelling-with-object-properties.md)
 1. [OBO-style term annotation](../reference/go-style-annotation-property-practice.md)
-1. [Common DbXref](../reference/common-xref.md)
 1. [Obsoleting terms](../howto/obsolete-term.md)
 1. [Merging terms](../howto/merge-terms.md)
 
