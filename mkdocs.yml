@@ -38,6 +38,7 @@ nav:
   - Documentation: 
       - Tutorials:
           - Protege:
+              - DL queries: tutorial/basic-dl-query.md
               - Disjointness: tutorial/disjointness.md
           - Ontology Pipelines - ODK, ROBOT, etc:
               - ROBOT Mini-Tutorial 1 - Convert, Extract and Template: tutorial/robot-tutorial-1.md
@@ -66,6 +67,7 @@ nav:
           - Protege:
               - Installing ELK in Protege: howto/installing-elk-in-protege.md
               - Setting up your ID range: howto/idrange.md
+              - Editing in Protege: howto/edit-in-protege.md
               - Daily Workflow: howto/daily-curator-workflow.md
               - Edit in Protege: howto/edit-in-protege.md
               - Switching Ontologies in Protege: howto/switching-ontologies.md
@@ -92,6 +94,7 @@ nav:
               - How to filter a file based on another file: howto/filter-text-file.md
       - Reference:
           - Frequently used ODK commands: reference/frequently-used-odk-commands.md
+          - Protege Interface: reference/protege-interface.md)
           - Formatting your ontology annotations correctly: reference/formatting-license.md
           - Glossary: reference/glossary.md
           - GitHub Desktop: reference/github-desktop.md
