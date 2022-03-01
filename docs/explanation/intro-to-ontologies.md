@@ -1,6 +1,6 @@
 # Introduction to ontologies
 
-Based on [CL editors training](https://docs.google.com/presentation/d/11WeCHCeGYSPEO7hUYFTdPivptxX4ajj5pVHDm24j4JA/edit#slide=id.g9a5e4d7c09_0_221) by David Osumi-Sutherland
+Based on [CL editors training](https://docs.google.com/presentation/d/11WeCHCeGYSPEO7hUYFTdPivptxX4ajj5pVHDm24j4JA) by David Osumi-Sutherland
 
 ## Why do we need ontologies 
 
@@ -11,7 +11,7 @@ Based on [CL editors training](https://docs.google.com/presentation/d/11WeCHCeGY
     - non-standardized
 - Data at varying depth or granularity
 
-For example, trying to refere to feces, in NCBI BioSample:
+For example, trying to refer to feces, in NCBI BioSample:
 
 | Query            | Records    |
 | ---------------- | ---------- |
@@ -119,3 +119,43 @@ Ontologies allow for polyhierarchies in which a term can have multiple relations
 - Gene Ontology, Uberon, Cell Ontology, EFO, SNOMED
 
 ## non-logical parts of onotologies 
+
+Terminology can be ambiguous, so text definitions, references, synonyms and images are key to helping users understand the intended meaning of a term. 
+
+![](../images/discussions/intro-to-ontologies/definition-example.png)
+
+## Identifiers 
+
+### Using non meaningful identifiers 
+
+Identifiers that do not hold any inherent meaning are important to ontologies. If you ever need to change the names of your terms, you're going to need identifiers that stay the same when the term name changes.
+
+For example: 
+
+microgilal cells are also known as: hortega cell; microglia, microgliocyte, brain resident macrophage.
+In the cell ontology, it is however refered to by a unique identifier: `CL:0000129`
+These identifiers are short ways of referring to IRIs (e.g. CL:000129 = http://purl.obolibrary.org/obo/CL_0000129)
+This IRI is a unique, resolvable identifier on the web.
+A group of ontologies - loosely co-ordinated through the OBO Foundry, have standardised their IRIs (e.g. http://purl.obolibrary.org/obo/CL_0000129  - A term in the cell ontology; http://purl.oblibrary.org/obo/cl.owl - The cell ontology)
+
+#### IRIs? URIs? URLs? 
+- IRI: Internationalised Resource Identifier - a URI that can use characters in multiple languages
+- URI: Unique Resource Identifier - is a string of characters, following a standard specification, that unambiguously identifies a particular (web) resource.
+- URL: Uniform Resource Locator - a web-resolvable URI
+
+## Building scalable ontologies
+
+### Format
+
+OBO ontologies are done mostly in OWL2 or OBO format.
+
+For more indepth explanation of formats (OWL, OBO, RDF etc.) refer to explainer on [OWL format variants](../explanation/owl-format-variants.md)
+
+### An ontology as a classification 
+
+[NEED A GOOD WAY TO WRITE DOWN SLIDES 23-27 of https://docs.google.com/presentation/d/11WeCHCeGYSPEO7hUYFTdPivptxX4ajj5pVHDm24j4JA]
+
+These relationships store knowledge in a queryable format
+
+
+
