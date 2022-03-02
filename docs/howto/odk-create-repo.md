@@ -21,6 +21,7 @@ CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
 
  * Linux/Mac: [seed-via-docker.sh](https://raw.githubusercontent.com/INCATools/ontology-development-kit/master/seed-via-docker.sh)
  * PC: [seed-via-docker.bat](https://raw.githubusercontent.com/INCATools/ontology-development-kit/master/seed-via-docker.bat)
+ * Make sure to save the wrapper script in your working directory and that the filetype is correct.
  * You should have git installed - for the repo command to work perfectly, it requires a `.gitconfig` file in your user directory!
  * First, make sure you have Docker running (you will see the Docker whale in your toolbar on a Mac)
  * To make sure you have the latest version of the ODK installed, run in the command line 
@@ -33,7 +34,7 @@ CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
 
 ## 3. Run the wrapper script
 
-You can either pass in a configuration file in YAML format that specifies your ontology project setup, or you can pass arguments on the command line.
+You can either pass in a configuration file in YAML format that specifies your ontology project setup, or you can pass arguments on the command line. You can use `dir` in your command line on PC to ensure that your wrapper script, .gitconfig, and project.yaml (if you so choose) are all in the correct directory before running the wrapper script. 
 
 ### Unix (Max, Linux)
 
