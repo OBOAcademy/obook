@@ -26,6 +26,7 @@ To accommodate for the various training use cases we support, we added the follo
 - *Nicole Vasilevsky*, Monarch Initiative. Nicole is a Visiting Associate Research Professor at University of Colorado Anschutz Medical Campus and is an Ontology Curator for ontologies such as Mondo Disease Ontology, the Human Phenotype Ontology, Uberon Anatomy Ontology, and Cell Ontology.
 - *Nicolas Matentzoglu*, Semanticly Ltd. Nico is an Ontology Engineer and Ontology Pipeline Specialist, being the Principal Ontology Pipeline Developer for the Monarch Initiative.
 - *Shawn Tan*, EMBL-EBI. Shawn is an Ontology Curator for The Brain Data Standards project.
+- *Bradley Varner*, EMBL-EBI. Bradley is an Ontology Curator for the Cell Annotation Platform.
 
 If you would like to contribute to this training, please [find out more here](contributing.md).
 
