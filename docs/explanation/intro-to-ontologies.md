@@ -25,13 +25,13 @@ For example, trying to refer to feces, in NCBI BioSample:
 | Stool NOT faeces | 21,798     |
 | Stool NOT feces  | 18,314     | 
 
-### We don’t know what we’re talking about
+### We don't know what we're talking about
 
 Because we have no single reference glossary the result is millions of statements that are not obviously related
  
 Here is the male genitalia of a gasteruptiid wasp, and these 5 different structures here have each been labeled "paramere" - by different people, studying different hymenopteran lineages - how do we know what "paramere" means when it is referred to? 
 
-![](../images/discussions/intro-to-ontologies/figure1.png)
+![](../images/discussions/intro-to-ontologies/paramere.png)
 
 ## Controlled vocabulary (CV)
 
@@ -90,7 +90,7 @@ For example:
 ## Being precisely vague 
 
 Ontologies allow annotation at varying levels of precision:
-e.g. Maybe the entity being annotated is a subtype of glial cell, but you don’t know which, you can just annotate with ‘glial cell’
+e.g. Maybe the entity being annotated is a subtype of glial cell, but you don't know which, you can just annotate with 'glial cell'
 
 ### Polyhierarchy
 
@@ -153,9 +153,81 @@ For more indepth explanation of formats (OWL, OBO, RDF etc.) refer to explainer 
 
 ### An ontology as a classification 
 
-[NEED A GOOD WAY TO WRITE DOWN SLIDES 23-27 of https://docs.google.com/presentation/d/11WeCHCeGYSPEO7hUYFTdPivptxX4ajj5pVHDm24j4JA]
+The ontology also functions as a classification.
+Below you will see a classification of parts of the insect and how it is represented in the ontology.
 
-These relationships store knowledge in a queryable format
+![](../images/discussions/intro-to-ontologies/insect-classification.png)
 
+We use a SubClassOf (or is_a in obo format) to represent entities that are fully encapsulated by the parent class.
+For example: 
+OWL: hindwing SubClassOf wing 
+OBO: hindwing is_a wing
 
+![](../images/discussions/intro-to-ontologies/hindwing-subclass.png)
+
+We use a relation `part_of` to represent an entity that is a part of a whole entity. 
+For example: 
+English: all (insect) legs are part of a thoracic segment
+OWL: 'leg' SubClassOf part_of some thoracic segment
+OBO: 'leg'; relationship: part_of thoracic segment
+Note the existential quantifier `some` in OWL format - this means, that is interpreted as "there exists", "there is at least one", or "for some".
+
+![](../images/discussions/intro-to-ontologies/leg-wing.png)
+
+Note that there is a difference in how you order your subClassOf:
+`'wing' SubClassOf part_of some 'thoracic segment'` is correct
+`'thoracic segment' SubClassOf has_part some 'wing'` is incorrect as it implies all thoracic segment has wings on it. 
+
+Similarly:
+`'claw' SubClassOf connected_to some 'tarsal segment'` is correct
+`'tarsal segment' SubClassOf  connected_to some 'claw'` is incorrect as it implies all tarsal segments are connected to claws (for example some tarsal segments are connected to other tarsal segments)
+
+![](../images/discussions/intro-to-ontologies/tarsal-segments.png)
+
+These relationships store knowledge in a queryable format. For more information about querying, please refer to guide on [DL queries](../tutorial/basic-dl-query.md) and [SPARQL queries](../tutorial/sparql.md)
+
+### Scaling Ontologies
+
+There are many ways to classify stuff - e.g. a neuron can be classified by strucutre, electrophysiology, neurotransmitter, lineage, etc. 
+
+Manually maintaining these multiple inheriteance (that occur through multiple classifications) does not scale
+
+![](../images/discussions/intro-to-ontologies/neuron-multiple-inheritance.png)
+
+Problems with maintaining multiple inheritance classifications by hand
+- Doesn’t scale  
+    - When adding a new class how are human editors to know
+        - all of the relevant classifications to add?
+        - how to rearrange the existing class hierarchy
+- Is bad for consistency:
+    - Reasons for existing classifications often opaque
+    - Hard to check for consistency with distant superclasses
+- Doesn’t allow for querying 
+    - A formalized ontology can be queried for classes with arbitrary sets of properties.  A manual classification can not.
+
+#### Automated Classifications
+
+The knowledge an ontology contains can be used to automate classification
+For example: 
+
+English: Any sense organ that functions in the detection of smell is an olfactory sense organ
+OWL: 
+```
+'olfactory sense organ'
+ EquivalentTo ‘sense organ’ 
+that 
+capable_of some ‘detection of smell’
+```
+
+If we then have an entity `nose` that is subClassOf `sense organ` and `capable_of some detection of smell`, it will be automatically classified as an olfacotry sense organ.
+
+![](../images/discussions/intro-to-ontologies/nose-classification.png)
+
+## Acknowledgements
+- David Osumi-Sutherland (original creator of slides)
+- Nicole Vasilevsky (OSHU) Alex Diehl (Buffalo), Nico Matentzoglu 
+- Chris Mungall (LNBL),  Melissa Haendal (OSU), Jim Balhoff (RENCI), James Overton - slides, ideas & discussions
+- Terry Meehan  - who edited CL more than anyone 
+- Helen Parkinson (EBI)
+- Michael Ashburner
 
