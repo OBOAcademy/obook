@@ -27,9 +27,9 @@ For example, trying to refer to feces, in NCBI BioSample:
 
 ### We don't know what we're talking about
 
-Because we have no single reference glossary the result is millions of statements that are not obviously related
+Because we have no single reference glossary, the result is millions of statements that are not obviously related.
  
-Here is the male genitalia of a gasteruptiid wasp, and these 5 different structures here have each been labeled "paramere" - by different people, studying different hymenopteran lineages - how do we know what "paramere" means when it is referred to? 
+Here is the male genitalia of a gasteruptiid wasp, and these 5 different structures here have each been labeled "paramere" by different people, each studying different hymenopteran lineages. How do we know what "paramere" means when it is referred to?
 
 ![](../images/discussions/intro-to-ontologies/paramere.png)
 
@@ -54,7 +54,7 @@ Any closed, prescribed list of terms.
 - Bordeaux
 - Riesling
 
-## Hierarchical Controlled vocabulary 
+## Hierarchical controlled vocabulary 
 
 ### Definition
 
@@ -89,8 +89,8 @@ For example:
 
 ## Being precisely vague 
 
-Ontologies allow annotation at varying levels of precision:
-e.g. Maybe the entity being annotated is a subtype of glial cell, but you don't know which, you can just annotate with 'glial cell'
+Ontologies allow annotation at varying levels of precision. 
+For example, if the entity being annotated is a subtype of glial cell, but you don't know which type of glial cell, you can just annotate with 'glial cell'.
 
 ### Polyhierarchy
 
@@ -102,14 +102,14 @@ Ontologies allow for polyhierarchies in which a term can have multiple relations
 
 ### Definition
 
-- A queryable store of knowledge;
+- A queryable store of knowledge
 - A classification
 
 ### Key features
 
 - Terms are defined
 - Terms are richly annotated:
-    - Textual definitions; references; synonyms, links, cross-references
+    - Textual definitions, references, synonyms, links, cross-references
 - Relationships between terms are defined, allowing logical inference and sophisticated queries as well as graphs
 - Terms are arranged in a classification hierarchy
 - Expressed in a knowledge representation language such as RDFS, OBO, or OWL
@@ -118,7 +118,7 @@ Ontologies allow for polyhierarchies in which a term can have multiple relations
 
 - Gene Ontology, Uberon, Cell Ontology, EFO, SNOMED
 
-## non-logical parts of onotologies 
+## Non-logical parts of onotologies 
 
 Terminology can be ambiguous, so text definitions, references, synonyms and images are key to helping users understand the intended meaning of a term. 
 
@@ -126,30 +126,30 @@ Terminology can be ambiguous, so text definitions, references, synonyms and imag
 
 ## Identifiers 
 
-### Using non meaningful identifiers 
+### Using nonmeaningful identifiers 
 
 Identifiers that do not hold any inherent meaning are important to ontologies. If you ever need to change the names of your terms, you're going to need identifiers that stay the same when the term name changes.
 
 For example: 
 
-microgilal cells are also known as: hortega cell; microglia, microgliocyte, brain resident macrophage.
-In the cell ontology, it is however refered to by a unique identifier: `CL:0000129`
-These identifiers are short ways of referring to IRIs (e.g. CL:000129 = http://purl.obolibrary.org/obo/CL_0000129)
+A microgilal cell is also known as: hortega cell, microglia, microgliocyte and brain resident macrophage.
+In the cell ontology, it is however referred to by a unique identifier: `CL:0000129`
+These identifiers are short ways of referring to IRIs (e.g., CL:000129 = http://purl.obolibrary.org/obo/CL_0000129)
 This IRI is a unique, resolvable identifier on the web.
 A group of ontologies - loosely co-ordinated through the OBO Foundry, have standardised their IRIs (e.g. http://purl.obolibrary.org/obo/CL_0000129  - A term in the cell ontology; http://purl.oblibrary.org/obo/cl.owl - The cell ontology)
 
 #### IRIs? URIs? URLs? 
-- IRI: Internationalised Resource Identifier - a URI that can use characters in multiple languages
 - URI: Unique Resource Identifier - is a string of characters, following a standard specification, that unambiguously identifies a particular (web) resource.
+- IRI: Internationalised Resource Identifier - a URI that can use characters in multiple languages
 - URL: Uniform Resource Locator - a web-resolvable URI
 
 ## Building scalable ontologies
 
 ### Format
 
-OBO ontologies are done mostly in OWL2 or OBO format.
+OBO ontologies are mostly written in OWL2 or OBO syntax.
 
-For more indepth explanation of formats (OWL, OBO, RDF etc.) refer to explainer on [OWL format variants](../explanation/owl-format-variants.md)
+For a more in-depth explanation of formats (OWL, OBO, RDF etc.) refer to explainer on [OWL format variants](../explanation/owl-format-variants.md)
 
 ### An ontology as a classification 
 
@@ -170,11 +170,11 @@ For example:
 English: all (insect) legs are part of a thoracic segment
 OWL: 'leg' SubClassOf part_of some thoracic segment
 OBO: 'leg'; relationship: part_of thoracic segment
-Note the existential quantifier `some` in OWL format - this means, that is interpreted as "there exists", "there is at least one", or "for some".
+Note the existential quantifier `some` in OWL format -- it is interpreted as "there exists", "there is at least one", or "for some".
 
 ![](../images/discussions/intro-to-ontologies/leg-wing.png)
 
-Note that there is a difference in how you order your subClassOf:
+Note that there is a difference in how you order subClassOf:
 `'wing' SubClassOf part_of some 'thoracic segment'` is correct
 `'thoracic segment' SubClassOf has_part some 'wing'` is incorrect as it implies all thoracic segment has wings on it. 
 
@@ -188,18 +188,18 @@ These relationships store knowledge in a queryable format. For more information 
 
 ### Scaling Ontologies
 
-There are many ways to classify stuff - e.g. a neuron can be classified by strucutre, electrophysiology, neurotransmitter, lineage, etc. 
+There are many ways to classify things. For example, a neuron can be classified by structure, electrophysiology, neurotransmitter, lineage, etc.
 
-Manually maintaining these multiple inheriteance (that occur through multiple classifications) does not scale
+Manually maintaining these multiple inheritances (that occur through multiple classifications) does not scale.
 
 ![](../images/discussions/intro-to-ontologies/neuron-multiple-inheritance.png)
 
 Problems with maintaining multiple inheritance classifications by hand
 - Doesn’t scale  
-    - When adding a new class how are human editors to know
+    - When adding a new class, how are human editors to know
         - all of the relevant classifications to add?
-        - how to rearrange the existing class hierarchy
-- Is bad for consistency:
+        - how to rearrange the existing class hierarchy?
+- It is bad for consistency
     - Reasons for existing classifications often opaque
     - Hard to check for consistency with distant superclasses
 - Doesn’t allow for querying 
