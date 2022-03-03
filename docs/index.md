@@ -1,21 +1,21 @@
 # On becoming an OBO Semantic Engineer
 
-Welcome to the OBOOK, the OBO Organized Knowledge Portal and our OBO Semantic Engineering Training!
+Welcome to the OBOOK and our OBO Semantic Engineering Training!
 
-## Introduction to the OBOOK 
+## Introduction to the OBOOK (Open Biological and Biomedical Ontologies Organized Knowledge)
 
-Documentation in the OBOOK is organised based on the [Diátaxis framework](https://diataxis.fr/) of documentation into 4 distinct sections: 
+Documentation in the OBOOK is organised into 4 distinct sections based on the [Diátaxis framework](https://diataxis.fr/) of documentation: 
 
-1. **Tutorials**: Learning-oriented documentation that contains exercises to help a beginner achieve basic competence in that area. 
-1. **How-to Guides**: Task-oriented documentation that functions as directions that guide the reader through the steps to achieve a specific end.
+1. **Tutorials**: Learning-oriented documentation that contains exercises to help a beginner achieve basic competence in a specific area. 
+1. **How-to Guides**: Task-oriented documentation that functions as directions to guide the reader through the steps to achieve a specific end.
 1. **Reference Guides**: Information-oriented documentation that describes a single topic in a succinct, technical and orderly way.
 1. **Explanations**: Understanding-oriented documentation that clarifies, deepens and broadens the reader’s understanding of a subject.
 
-To accommodate for the various training use cases we support, we added the following categories on top:
+To accommodate for the various training use cases we support, we added the following categories:
 
-1. Lesson: A collection of materials (tutorials, explanations and how-to-guides) that together seek to teach a well defined concept.
-1. Course: A convenience content type that allows us to assemble materials from OBOOK for a specific taught unit, such as the yearly ICBO tutorials.
-1. Pathway: A kind of course pertaining to a specific role in the OBO-sphere, such as curator or software developer.
+1. Courses: A convenience content type that assembles materials from OBOOK for a specific, taught unit, such as the yearly ICBO tutorials.
+1. Pathways: A kind of course pertaining to a specific role in the OBO-sphere, such as curator or software developer.
+1. Lessons: A collection of materials (tutorials, explanations and how-to guides) that together aim to teach a well defined concept.
 
 *Note*: We are in the process of transforming the documentation accordingly, so please be patient if some of the documentation is not yet in the correct place. Feel free to [create an issue](https://github.com/OBOAcademy/obook/issues) if you find something that you suspect isn't in place.
 
@@ -26,6 +26,7 @@ To accommodate for the various training use cases we support, we added the follo
 - *Nicole Vasilevsky*, Monarch Initiative. Nicole is a Visiting Associate Research Professor at University of Colorado Anschutz Medical Campus and is an Ontology Curator for ontologies such as Mondo Disease Ontology, the Human Phenotype Ontology, Uberon Anatomy Ontology, and Cell Ontology.
 - *Nicolas Matentzoglu*, Semanticly Ltd. Nico is an Ontology Engineer and Ontology Pipeline Specialist, being the Principal Ontology Pipeline Developer for the Monarch Initiative.
 - *Shawn Tan*, EMBL-EBI. Shawn is an Ontology Curator for The Brain Data Standards project.
+- *Bradley Varner*, EMBL-EBI. Bradley is an Ontology Curator for the Cell Annotation Platform.
 
 If you would like to contribute to this training, please [find out more here](contributing.md).
 
