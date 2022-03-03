@@ -15,7 +15,7 @@ Note: Work on this document is still in progress, items that are not linked are 
 ## Learning
 
 ### Learning about Ontologies
-1. [Fundamentals of Ontologies]
+1. [Fundamentals of Ontologies](../explanation/intro-to-ontologies.md)
 
 ### Learning Git and GitHub
 
