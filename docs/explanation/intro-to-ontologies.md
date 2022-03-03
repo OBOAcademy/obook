@@ -225,7 +225,7 @@ If we then have an entity `nose` that is subClassOf `sense organ` and `capable_o
 
 ## Acknowledgements
 - David Osumi-Sutherland (original creator of slides)
-- Nicole Vasilevsky (OSHU) Alex Diehl (Buffalo), Nico Matentzoglu 
+- Nicole Vasilevsky (OSHU) Alex Diehl (Buffalo), Nico Matentzoglu, Matt Brush, Matt Yoder, Carlo Toriniai, Simon Jupp 
 - Chris Mungall (LNBL),  Melissa Haendal (OSU), Jim Balhoff (RENCI), James Overton - slides, ideas & discussions
 - Terry Meehan  - who edited CL more than anyone 
 - Helen Parkinson (EBI)
