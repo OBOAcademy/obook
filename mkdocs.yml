@@ -115,9 +115,9 @@ nav:
           - Other useful resources: reference/other-resources.md
       - Explanation:
           - Introduction to Ontologies: explanation/intro-to-ontologies.md
+          - Logical axiomatization: explanation/logical-axiomatization.md
           - Term Comments: explanation/term-comments.md
           - Writing good issues: explanation/writing-good-issues.md
-          - Assert or Reason (under construction): explanation/deleting-asserted-sub-classes.md
           - Which biomedical ontologies should we use?: explanation/which-ontology-to-use.md
           - OWL, OBO, JSON? Base, simple, full, basic? What should you use, and why?: explanation/owl-format-variants.md
           - What are taxon constraints?: explanation/taxon-constraints-explainer.md

@@ -1,0 +1,71 @@
+# Logical axiomatization of classes & use of reasoning
+
+This explainer requires understanding of ontology classifications, please see "an ontology as a classification" section of the [introduction to ontologies documentation](../explanation/intro-to-ontologies.md) if you are unfamiliar with these concepts. 
+
+## What are logical axioms
+
+Logical axioms are relational information about a class that are primarily aimed at machines (as opposed to annotations like textual definitions which are primarily aimed at humans). These logical axioms allow reasoners to assist in and verify classification, lessening the development burden and enabling expressive queries.
+
+## What should you axiomatize?
+
+Ideally, everything in the definition should be axiomatize (though this is not always possible). For example, if we consider the cell type `oxytocin receptor sst GABAergic cortical interneuron` [(CL:4023122)](http://purl.obolibrary.org/obo/CL_4023122) which has the textual definition: 
+
+"An interneuron located in the cerebral cortex that expresses the oxytocin receptor. These interneurons also express somatostatin."
+
+The logical axioms should then follow accordingly:
+
+SubClassOf:
+- interneuron
+- 'has soma location' some 'cerebral cortex'
+- expresses some oxytocin receptor
+- 'capable of' some oxytocin receptor activity
+- expresses some somatostatin 
+
+## What should you NOT axiomatize?
+
+Everything in the logical axioms **must be true**, (do not axiomatize things that are true to only part of the entity)
+For example, `chandelier pvalb GABAergic cortical interneuron` are found in upper L2/3 and deep L5 of the cerebral cortex. 
+We do not make logical axioms for 'has soma location' some layer 2/3 and layer 5. 
+Axioms with both layers would mean that a cell of that type **must** but in both layer 2/3 and layer 5, which is an impossibility (a cell cannot be in two seperate location at once!). Instead we axiomatize a more general location: 'has soma location' some 'cerebral cortex'
+
+## Equivalent class logical definitions
+
+
+
+## Style guide
+
+Each ontology has certain styles and conventions in how they axiomatize. This style guide is specific to OBO ontologies. We will also give reasons as to why we choose to axiomatize in the way we do. However, be aware of your local ontology's practices. 
+
+### Respect the ontology style
+
+As a preamble (and to avoid over prescribing style), it is important for us to note that ontologies have specific styles to things like what relation to use, and should be respected. This is usually important for their use cases. For example the cell ontology has a [a guide to what relations to use](https://obophenotype.github.io/cell-ontology/relations_guide/). An example of an agreement in the community is that while anatomical locations of cells are recorded using 'part of', neurons should be recorded with 'has soma location'. This is to accommodate for the fact that many neurons have long reaching synapses that cover multiple anatomical location making them tricky to axiomatize using 'part of'. For example, `Betz cell`, a well known cell type which defines layer V of the primary motor cortex, synapses lower motor neurons or spinal interneuron (cell types that reside outside the brain). Having the axiom `'Betz cell' part_of 'cortical layer V'` is definitively wrong. In this case `has soma location` is used. Because of cases like these that are common in neurons, all neurons in CL should use `has soma location`.
+
+### Avoid redundant axioms 
+
+Do not add axioms that are not required. If a parent class already has the axiom, it should not be added to the child class too. 
+For example, `retinal bipolar neuron` is a child of `bipolar neuron` 
+`bipolar neuron` has the axiom `'has characteristic' some 'cortical bipolar morphology'`
+Therefore we do not add `'has characteristic' some 'cortical bipolar morphology'` to `retinal bipolar neuron`
+Axioms add lines to the ontology, resulting in larger ontologies that are harder to use. 
+
+### Let the reasoner do the work
+
+Asserted is_a parents do not need to be retained as entries in the 'SubClass of' section of the Description window in Protege if the logical definition for a term results in their inference.
+
+For example, `cerebral cortex GABAergic interneuron` has the following logical axioms:
+```
+Equivalent_To
+  'GABAergic interneuron' and 
+  ('has soma location' some 'cerebral cortex')
+```
+We do not need to assert that it is a `cerebral cortex neuron`, `CNS interneuron`, or `neuron of the forebrain` as the reasoner automatically does that. 
+
+We avoid having asserted subclass axioms as these are redundant lines in the ontology which can result in a larger that needed ontology, making them harder to use.
+
+A way of checking this: 
+```
+If you have created a logical definition for your term, you should delete the asserted is_a parent by clicking on the X to the right term.
+Once you synchronize the Reasoner, you will see the reasoned classification of your new term, including the inferred is_a parent(s).
+If the inferred classification does not contain the correct parentage, or doesn't make sense, then you will need to modify the logical definition.
+If an existing term contains a logical definition and still shows an asserted is_a parent in the 'SubClass of' section, you may delete that asserted parent, as well. Just make sure to run the Reasoner to check that the asserted parent is now replaced with the correct reasoned parent(s).
+```
