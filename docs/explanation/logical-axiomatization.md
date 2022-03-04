@@ -8,7 +8,7 @@ Logical axioms are relational information about a class that are primarily aimed
 
 ## What should you axiomatize?
 
-Ideally, everything in the definition should be axiomatize (though this is not always possible). For example, if we consider the cell type `oxytocin receptor sst GABAergic cortical interneuron` [(CL:4023122)](http://purl.obolibrary.org/obo/CL_4023122) which has the textual definition: 
+Ideally, everything in the definition should be axiomatize (though this is not always possible). For example, if we consider the cell type `oxytocin receptor sst GABAergic cortical interneuron` which has the textual definition: 
 
 "An interneuron located in the cerebral cortex that expresses the oxytocin receptor. These interneurons also express somatostatin."
 
@@ -33,17 +33,17 @@ Axioms with both layers would mean that a cell of that type **must** but in both
 An equivalent class axiom is an axiom that defines what the class. It means that if a class B fulfils all the criteria/restrictions in the equivalent axiom of class A, class B is by definition a subclass of class A. 
 Equivalent classes allow the reasoner to automatically classify entities. 
 
-For example, 
-`chandelier cell` has the equivalent class axiom `interneuron and ('has characteristic' some 'chandelier cell morphology')`
-`chandelier pvalb GABAergic cortical interneuron` has the subclass axioms `'has characteristic' some 'chandelier cell morphology'` and `interneuron`
-`chandelier pvalb GABAergic cortical interneuron` is therefore a subclass of `chandelier cell`
+For example:
+- `chandelier cell` has the equivalent class axiom `interneuron and ('has characteristic' some 'chandelier cell morphology')`
+- `chandelier pvalb GABAergic cortical interneuron` has the subclass axioms `'has characteristic' some 'chandelier cell morphology'` and `interneuron`
+- `chandelier pvalb GABAergic cortical interneuron` is therefore a subclass of `chandelier cell`
 
 Equivalent class axioms classification can be very powerful as it takes into consideration complexed layers of axioms. 
 
-For example, 
-`primary motor cortex pyramidal cell` has the equivalent class axiom `'pyramidal neuron' and ('has soma location' some 'primary motor cortex')`. 
-`Betz cells` have the axioms `'has characteristic' some 'standard pyramidal morphology'` and `'has soma location' some 'primary motor cortex layer 5'`
-`Betz cells` are inferred to be `primary motor cortex pyramidal cell` through the following chain (you can see this in protege by pressing the ? button on inferred class):
+For example: 
+- `primary motor cortex pyramidal cell` has the equivalent class axiom `'pyramidal neuron' and ('has soma location' some 'primary motor cortex')`. 
+- `Betz cells` have the axioms `'has characteristic' some 'standard pyramidal morphology'` and `'has soma location' some 'primary motor cortex layer 5'`
+- `Betz cells` are inferred to be `primary motor cortex pyramidal cell` through the following chain (you can see this in protege by pressing the ? button on inferred class):
 
 ![](../images/discussions/logical-axiomatization/betz-pyramidal.png) 
 
@@ -63,7 +63,7 @@ Each ontology has certain styles and conventions in how they axiomatize. This st
 
 ### Respect the ontology style
 
-As a preamble (and to avoid over prescribing style), it is important for us to note that ontologies have specific styles to things like what relation to use, and should be respected. This is usually important for their use cases. For example the cell ontology has a [a guide to what relations to use](https://obophenotype.github.io/cell-ontology/relations_guide/). An example of an agreement in the community is that while anatomical locations of cells are recorded using 'part of', neurons should be recorded with 'has soma location'. This is to accommodate for the fact that many neurons have long reaching synapses that cover multiple anatomical location making them tricky to axiomatize using 'part of'. For example, `Betz cell`, a well known cell type which defines layer V of the primary motor cortex, synapses lower motor neurons or spinal interneuron (cell types that reside outside the brain). Having the axiom `'Betz cell' part_of 'cortical layer V'` is definitively wrong. In this case `has soma location` is used. Because of cases like these that are common in neurons, all neurons in CL should use `has soma location`.
+As a preamble (and to avoid over prescribing style), it is important for us to note that ontologies have specific styles to things like what relation to use, and should be respected. This is usually important for their use cases. For example the cell ontology has a [guide to what relations to use](https://obophenotype.github.io/cell-ontology/relations_guide/). An example of an agreement in the community is that while anatomical locations of cells are recorded using 'part of', neurons should be recorded with 'has soma location'. This is to accommodate for the fact that many neurons have long reaching synapses that cover multiple anatomical location making them tricky to axiomatize using 'part of'. For example, `Betz cell`, a well known cell type which defines layer V of the primary motor cortex, synapses lower motor neurons or spinal interneuron (cell types that reside outside the brain). Having the axiom `'Betz cell' part_of 'cortical layer V'` is definitively wrong. In this case `has soma location` is used. Because of cases like these that are common in neurons, all neurons in CL should use `has soma location`.
 
 ### Avoid redundant axioms 
 
@@ -87,10 +87,10 @@ We do not need to assert that it is a `cerebral cortex neuron`, `CNS interneuron
 
 We avoid having asserted subclass axioms as these are redundant lines in the ontology which can result in a larger that needed ontology, making them harder to use.
 
-A way of checking this: 
+Good practice to let the reasoner do the work: 
 ```
-If you have created a logical definition for your term, you should delete the asserted is_a parent by clicking on the X to the right term.
-Once you synchronize the Reasoner, you will see the reasoned classification of your new term, including the inferred is_a parent(s).
-If the inferred classification does not contain the correct parentage, or doesn't make sense, then you will need to modify the logical definition.
-If an existing term contains a logical definition and still shows an asserted is_a parent in the 'SubClass of' section, you may delete that asserted parent, as well. Just make sure to run the Reasoner to check that the asserted parent is now replaced with the correct reasoned parent(s).
+1) If you have created a logical definition for your term, you should delete the asserted is_a parent by clicking on the X to the right term.
+2) Once you synchronize the Reasoner, you will see the reasoned classification of your new term, including the inferred is_a parent(s).
+3) If the inferred classification does not contain the correct parentage, or doesn't make sense, then you will need to modify the logical definition.
+4) If an existing term contains a logical definition and still shows an asserted is_a parent in the 'SubClass of' section, you may delete that asserted parent, as well. Just make sure to run the Reasoner to check that the asserted parent is now replaced with the correct reasoned parent(s).
 ```
