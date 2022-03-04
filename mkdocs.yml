@@ -115,7 +115,7 @@ nav:
           - Other useful resources: reference/other-resources.md
       - Explanation:
           - Introduction to Ontologies: explanation/intro-to-ontologies.md
-          - Logical axiomatization: explanation/logical-axiomatization.md
+          - Logical axiomatization of classes & use of reasoning: explanation/logical-axiomatization.md
           - Term Comments: explanation/term-comments.md
           - Writing good issues: explanation/writing-good-issues.md
           - Which biomedical ontologies should we use?: explanation/which-ontology-to-use.md
