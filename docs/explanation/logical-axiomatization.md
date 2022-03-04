@@ -90,7 +90,7 @@ Equivalent_To
 ```
 We do not need to assert that it is a `cerebral cortex neuron`, `CNS interneuron`, or `neuron of the forebrain` as the reasoner automatically does that. 
 
-We avoid having asserted subclass axioms as these are redundant lines in the ontology which can result in a larger that needed ontology, making them harder to use.
+We avoid having asserted subclass axioms as these are redundant lines in the ontology which can result in a larger ontology, making them harder to use.
 
 Good practice to let the reasoner do the work: 
 ```
