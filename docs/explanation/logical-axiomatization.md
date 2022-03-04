@@ -30,7 +30,32 @@ Axioms with both layers would mean that a cell of that type **must** but in both
 
 ## Equivalent class logical definitions
 
+An equivalent class axiom is an axiom that defines what the class. It means that if a class B fulfils all the criteria/restrictions in the equivalent axiom of class A, class B is by definition a subclass of class A. 
+Equivalent classes allow the reasoner to automatically classify entities. 
 
+For example, 
+`chandelier cell` has the equivalent class axiom `interneuron and ('has characteristic' some 'chandelier cell morphology')`
+`chandelier pvalb GABAergic cortical interneuron` has the subclass axioms `'has characteristic' some 'chandelier cell morphology'` and `interneuron`
+`chandelier pvalb GABAergic cortical interneuron` is therefore a subclass of `chandelier cell`
+
+Equivalent class axioms classification can be very powerful as it takes into consideration complexed layers of axioms. 
+
+For example, 
+`primary motor cortex pyramidal cell` has the equivalent class axiom `'pyramidal neuron' and ('has soma location' some 'primary motor cortex')`. 
+`Betz cells` have the axioms `'has characteristic' some 'standard pyramidal morphology'` and `'has soma location' some 'primary motor cortex layer 5'`
+`Betz cells` are inferred to be `primary motor cortex pyramidal cell` through the following chain (you can see this in protege by pressing the ? button on inferred class):
+
+![](../images/discussions/logical-axiomatization/betz-pyramidal.png) 
+
+The ability of the reasoner to infer complex classes helps in classifications that might have been missed if done manually. However, when creating an equivalent class axiom, you must be sure that it is not overly constrictive (in which case, classes that should be classified under it gets missed) nor too loose (in which case, classes will get wrongly classifed under it)
+
+Example of both overly constrictive and overly loose equivalent class axiom:
+neuron equivalent to cell and (part_of some 'central nervous system') 
+
+This is overly constrictive as there are neurons outside the central nervous system (eg peripheral neurons).
+This is also too loose as there are cells in the central nervous system that are not neurons (eg glial cells).
+
+In such cases, sometimes not having an equivalent class axioms is better (like in the case of neuron), and asserting is the best way to classify a child. 
 
 ## Style guide
 
