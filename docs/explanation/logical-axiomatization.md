@@ -50,10 +50,11 @@ For example:
 The ability of the reasoner to infer complex classes helps in classifications that might have been missed if done manually. However, when creating an equivalent class axiom, you must be sure that it is not overly constrictive (in which case, classes that should be classified under it gets missed) nor too loose (in which case, classes will get wrongly classifed under it)
 
 Example of both overly constrictive and overly loose equivalent class axiom:
-neuron equivalent to cell and (part_of some 'central nervous system') 
 
-This is overly constrictive as there are neurons outside the central nervous system (eg peripheral neurons).
-This is also too loose as there are cells in the central nervous system that are not neurons (eg glial cells).
+`neuron equivalent to cell and (part_of some 'central nervous system')`
+
+- This is overly constrictive as there are neurons outside the central nervous system (eg peripheral neurons).
+- This is also too loose as there are cells in the central nervous system that are not neurons (eg glial cells).
 
 In such cases, sometimes not having an equivalent class axioms is better (like in the case of neuron), and asserting is the best way to classify a child. 
 
