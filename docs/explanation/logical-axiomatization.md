@@ -26,7 +26,7 @@ SubClassOf:
 Everything in the logical axioms **must be true**, (do not axiomatize things that are true to only part of the entity)
 For example, `chandelier pvalb GABAergic cortical interneuron` are found in upper L2/3 and deep L5 of the cerebral cortex. 
 We do not make logical axioms for `has soma location` some layer 2/3 and layer 5. 
-Axioms with both layers would mean that a cell of that type **must** but in both layer 2/3 and layer 5, which is an impossibility (a cell cannot be in two seperate location at once!). Instead we axiomatize a more general location: 'has soma location' some 'cerebral cortex'
+Axioms with both layers would mean that a cell of that type **must** be in both layer 2/3 and layer 5, which is an impossibility (a cell cannot be in two seperate location at once!). Instead we axiomatize a more general location: 'has soma location' some 'cerebral cortex'
 
 ## Equivalent class logical definitions
 
