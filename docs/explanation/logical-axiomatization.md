@@ -71,9 +71,11 @@ For example, `Betz cell`, a well known cell type which defines layer V of the pr
 ### Avoid redundant axioms 
 
 Do not add axioms that are not required. If a parent class already has the axiom, it should not be added to the child class too. 
-For example, `retinal bipolar neuron` is a child of `bipolar neuron` 
-`bipolar neuron` has the axiom `'has characteristic' some 'cortical bipolar morphology'`
-Therefore we do not add `'has characteristic' some 'cortical bipolar morphology'` to `retinal bipolar neuron`
+For example:
+- `retinal bipolar neuron` is a child of `bipolar neuron` 
+- `bipolar neuron` has the axiom `'has characteristic' some 'cortical bipolar morphology'`
+- Therefore we do not add `'has characteristic' some 'cortical bipolar morphology'` to `retinal bipolar neuron`
+
 Axioms add lines to the ontology, resulting in larger ontologies that are harder to use. 
 
 ### Let the reasoner do the work
