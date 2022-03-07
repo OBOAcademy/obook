@@ -20,10 +20,10 @@ Another gentle overview on Ontology Matching was taught as part of the Knowledge
 
 ## Basic tutorials
 
-1. [Basic ontology matching tutorial](../tutorial/term_matching.md)
-1. [Using rdflib and AML to match two ontologies](../tutorial/ontology_matching.md)
-1. [Introduction to SSSOM](../tutorial/sssom_tutorial.md)
-1. [Introduction to processing mappings with SSSOM and sssom-py](../tutorial/ssom_py_tutorial.md)
+1. [Introduction to curating mappings](../tutorial/term-mapping.md)
+1. [Advanced mapping curation with SSSOM](../tutorial/sssom-tutorial.md)
+1. [Ontology matching with AML, LogMap and rdf-matcher](../tutorial/ontology-matching.md)
+1. [Introduction to processing mappings with SSSOM and sssom-py CLI](../tutorial/sssom-py-tutorial.md)
 
 ## Introduction to Ontology Mapping
 
@@ -80,12 +80,31 @@ There are a lot of use cases for synonyms so we will name just a few here that a
 [Thesauri](https://en.wikipedia.org/wiki/Thesaurus) are reference tools for finding synonyms of terms. Modern ontologies often include very rich thesauri, with some ontologies like Mondo capturing more than 70,000 exact and 35,000 related synonyms. They can provide a huge boost to traditional NLP pipelines by providing synonyms that can be used for both Named Entity Recognition and Entity Resolution. Some insight on how, for example, Uberon was used to boost text mining can be found [here](https://github.com/obophenotype/uberon/wiki/Using-uberon-for-text-mining).
 
 ### Term-term mappings / ontology mappings
-Term-term mappings relate a term, for example a class in an ontology, to another term, usually from another ontology or database. The term-term case of mappings is what most people in the ontology domain would understand when they hear "ontology mappings". This is also what most people understand when they here "Entity Resolution" in the database world - the task of determining whether, in essence, two rows in a database correspond to the same thing (as an example of a tool doing ER see [deepmatcher](https://github.com/anhaidgroup/deepmatcher), or [py-entitymatcher](https://pypi.org/project/py-entitymatching/)). For a list standard entity matching toolkit outside the ontology sphere see [here](https://www.biggorilla.org/software_cat/entity-matching/index.html). 
+Term-term mappings relate a term (or identifier), for example a class in an ontology, to another term, usually from another ontology or database. The term-term case of mappings is what most people in the ontology domain would understand when they hear "ontology mappings". This is also what most people understand when they here "Entity Resolution" in the database world - the task of determining whether, in essence, two rows in a database correspond to the same thing (as an example of a tool doing ER see [deepmatcher](https://github.com/anhaidgroup/deepmatcher), or [py-entitymatcher](https://pypi.org/project/py-entitymatching/)). For a list standard entity matching toolkit outside the ontology sphere see [here](https://www.biggorilla.org/software_cat/entity-matching/index.html). 
 
-### Further reading
-- A great overview can be found in ["Tackling the challenges of matching biomedical ontologies" (Faria et al 2018)](https://jbiomedsem.biomedcentral.com/articles/10.1186/s13326-017-0170-9)
-- A yearly competition of ontology matching systems is held by the [Ontology Alignment Evaluation Initiative (OAEI)](https://oaei.ontologymatching.org/). The challenge [results](http://oaei.ontologymatching.org/2020/results/) are a useful guide to identifying systems for matching you may want to try.
+## How are mappings collected in practice?
 
+Mappings between terms/identifiers are typically collected in three ways:
+
+1. Automatically, using terminological matchers (of which ontology matchers one the most important category in our domain).
+1. Manually, by dedicated curators.
+1. Using a mix of automated and manual approaches, where automated approaches typically generate "mapping candidates" which are "double checked" by humans before used in production systems.
+
+The main trade-off for mappings is very simple:
+1. Automated mappings are _very_ error prone (not only are they hugely incomplete, they are also often faulty).
+1. Human curated mappings are _very_ costly.
+
+--> The key for any given mapping project is to determine the _highest acceptable error rate_, and then distribute the workload between human and automated matching approaches. We will discuss all three ways of collecting mappings in the following.
+
+Aside from the main tradeoff above, there are other issues to keep in mind:
+- Manually curated mappings are far from perfect. Most of the cost of mapping review lies in the decision _how thorough_ a mapping should be reviewed. For example, a human reviewer may be tasked with reviewing 1000 mappings. If the acceptable error rate is quite high, the review may simply involve the comparison of labels (see [here](../tutorial/term-mapping.md)), which may take around 20 seconds. A tireless reviewer could possibly accept or dismiss 1000 mappings just based on the label in around 6 hours. Note that this is hardly better than what most automated approaches could do nowadays.
+- Some use cases involve so much data that manual curation is nearly out of the question.
+
+### Human curated mappings
+
+In the most basic of cases, a human curator gets presented with a list of terms/identifiers from one database or ontology, and charged with finding corresponding terms in another. They make use of various tools, most importantly "term browsers" that help them determine appropriate matches.
+
+For example, the curator may be charged with mapping all identifiers in their own phenotype database to the Human Phenotype Ontology (HPO).
 
 ## Some examples of domain-specific mapping of importance to the biomedical domain
 
@@ -94,3 +113,8 @@ Mapping phenotypes across species holds great promise for leveraging the knowled
 
 ### Disease ontology mappings
 Medical terminology and ontology mapping is a huge deal in medical informatics ([example](https://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/mapping_projects/index.html)). [Mondo](https://github.com/monarch-initiative/mondo) is a particularly rich source of well provenanced disease ontology mappings.
+
+## Further reading
+- A great overview can be found in ["Tackling the challenges of matching biomedical ontologies" (Faria et al 2018)](https://jbiomedsem.biomedcentral.com/articles/10.1186/s13326-017-0170-9)
+- A yearly competition of ontology matching systems is held by the [Ontology Alignment Evaluation Initiative (OAEI)](https://oaei.ontologymatching.org/). The challenge [results](http://oaei.ontologymatching.org/2020/results/) are a useful guide to identifying systems for matching you may want to try.
+

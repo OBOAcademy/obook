@@ -35,6 +35,7 @@ nav:
       - RDF Fundamentals: lesson/rdf.md
       - Semantic Database Fundamentals: lesson/semantic-database-fundamentals.md
       - Disease and Phenotype Ontologies: lesson/using-disease-and-phenotype-ontologies.md
+      - Ontology Alignment: lesson/ontology-alignment.md
   - Documentation: 
       - Tutorials:
           - Protege:
@@ -63,6 +64,11 @@ nav:
               - Basic SPARQL for OBO Engineers: tutorial/sparql.md
           - General Ontology Modelling:
               - Family History Knowledge Base (FHKB) tutorial: tutorial/fhkb.md
+          - Ontology alignment and terminological mappings:
+              - Introduction to curating mappings: tutorial/term-mapping.md
+              - Advanced mapping curation with SSSOM: tutorial/sssom-tutorial.md
+              - Ontology matching with AML, LogMap and rdf-matcher: tutorial/ontology-matching.md
+              - Introduction to processing mappings with SSSOM and sssom-py CLI: tutorial/sssom-py-tutorial.md
       - How-to guides:
           - Protege:
               - Installing ELK in Protege: howto/installing-elk-in-protege.md
@@ -113,6 +119,8 @@ nav:
           - Ontology Development Kit (ODK): reference/odk.md
           - Troubleshooting ROBOT: reference/troublehooting-robot.md
           - Other useful resources: reference/other-resources.md
+          - Ontology Matching:
+              - Semantic ETL: reference/semantic-etl.md
       - Explanation:
           - Introduction to Ontologies: explanation/intro-to-ontologies.md
           - Term Comments: explanation/term-comments.md
