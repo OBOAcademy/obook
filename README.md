@@ -1,6 +1,6 @@
 # Open Biological and Biomedical Ontologies (OBO) Organized Knowledge (OBOOK)
 
-The OBOOK is the main resource for OBOAcademy training materials.
+The OBOOK is the main resource for OBOAcademy training materials for Semantic OBO Engineers.
 
 - To get started with learning: https://oboacademy.github.io/obook/getting_started/
 - To contribute: https://oboacademy.github.io/obook/contributing/
@@ -8,10 +8,6 @@ The OBOOK is the main resource for OBOAcademy training materials.
 ## License
 
 This content is available under the [Creative Commons CC0 Public Domain Dedication](LICENSE).
-
-## Developer notes:
-
-To deploy the the tutorial pages, go to https://github.com/OBOAcademy/obook/actions/workflows/docs.yml and click "Run Workflow" on the `master` branch.
 
 ## Acknowledgements
 
