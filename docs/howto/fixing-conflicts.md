@@ -64,6 +64,5 @@ If the owl or obo file involved in the merge conflict was edited using Protégé
 
 4. In the Cell ontology (CL), edits sometimes result in creating a large amount of uninteded differences involving ^^xsd:string. If you see these differences after running the command above, they can be resolved by following [the instructions here](https://obophenotype.github.io/cell-ontology/Fixing_xsdstring_diffs/).
 
-
 5. Continue by going to step 1 under the main **Instructions** above. 
 
