@@ -14,6 +14,7 @@ This [video](https://drive.google.com/file/d/1DqYiXEdkLCVji55FmFlA9sPmfLouEqrj/v
 4. From the menu bar, select Branch > "Update from master".
 
 5. A message indicating the file with a conflict should appear along with the option to open the file (owl or obo file) in a text/code editor, such as Sublime Text. Click the button to open the file. 
+*See "Optional Reserialisation" below before executing the following steps to potentially make the fix easier to resolve.*
 
 6. Search the file for conflict markings ( <<<<<<< ======= >>>>>>> ).
 
@@ -34,3 +35,9 @@ This [video](https://drive.google.com/file/d/1DqYiXEdkLCVji55FmFlA9sPmfLouEqrj/v
 14. Return to Github.com and allow the QC queries to rerun.
 
 15. The conflict should be resolved and the branch allowed to be merged.
+
+
+*Optional Reserialisation*
+
+If the merge involves a serialisation issue, adapting and executing [the instructions here](https://github.com/obophenotype/cell-ontology/blob/master/docs/resolving_merge_conflicts.md) for your repository could make the conflict easier to resolve.
+
