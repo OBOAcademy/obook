@@ -37,6 +37,7 @@ This [video](https://drive.google.com/file/d/1DqYiXEdkLCVji55FmFlA9sPmfLouEqrj/v
 15. The conflict should be resolved and the branch allowed to be merged.
 
 
+
 **Ad hoc Reserialisation**
 
 Conflicts can be due to the addition of new terms to the same point in a file or when there are conflicting edits to the same term or axiom. Some of these clashes are easy to spot since they may involve whole term stanzas and declarations.  
@@ -54,7 +55,7 @@ If the owl or obo file involved in the merge conflict was edited using Protégé
 
  Replace "PATH_TO_ONTOLOGY" with the actual file path to the ontology. If you need to orient yourself, use the `pwd` (present working directory) or `ls` (list) line commands.
 
- If you are resolving a conflict in an .owl file, run:
+4. If you are resolving a conflict in an .owl file, run:
 
  `sh run.sh make normalize_src`
 
@@ -62,7 +63,6 @@ If the owl or obo file involved in the merge conflict was edited using Protégé
 
  `sh run.sh make normalize_obo_src`
 
-4. In the Cell ontology (CL), edits sometimes result in creating a large amount of uninteded differences involving ^^xsd:string. If you see these differences after running the command above, they can be resolved by following [the instructions here](https://obophenotype.github.io/cell-ontology/Fixing_xsdstring_diffs/).
+5. In the Cell ontology (CL), edits sometimes result in creating a large amount of uninteded differences involving ^^xsd:string. If you see these differences after running the command above, they can be resolved by following [the instructions here](https://obophenotype.github.io/cell-ontology/Fixing_xsdstring_diffs/).
 
-5. Continue by going to step 1 under the main **Instructions** above. 
-
+6. Continue by going to step 1 under the main **Instructions** above. 
