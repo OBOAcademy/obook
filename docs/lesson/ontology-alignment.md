@@ -104,7 +104,9 @@ Aside from the main tradeoff above, there are other issues to keep in mind:
 
 In the most basic of cases, a human curator gets presented with a list of terms/identifiers from one database or ontology, and charged with finding corresponding terms in another. They make use of various tools, most importantly "term browsers" that help them determine appropriate matches.
 
-For example, the curator may be charged with mapping all identifiers in their own phenotype database to the Human Phenotype Ontology (HPO).
+For example, the curator may be charged with mapping all identifiers in their own phenotype database to the Human Phenotype Ontology (HPO). 
+
+NICO CONTINUE HERE.
 
 ## Some examples of domain-specific mapping of importance to the biomedical domain
 
