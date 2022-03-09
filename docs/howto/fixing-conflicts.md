@@ -40,8 +40,6 @@ This [video](https://drive.google.com/file/d/1DqYiXEdkLCVji55FmFlA9sPmfLouEqrj/v
 
 **Ad hoc Reserialisation**
 
-Conflicts can be due to the addition of new terms to the same point in a file or when there are conflicting edits to the same term or axiom. Some of these clashes are easy to spot since they may involve whole term stanzas and declarations.  
-
 If the owl or obo file involved in the merge conflict was edited using Protégé 5.5.0, the above instructions should be sufficient. If edited in any other way, such as fixing a conflict in a text editor, the serialisation order may need to be fixed. This can be done as follows:
 
 1. Reserialise the master file using the Ontology Development Kit (ODK). This requires setting up Docker and ODK. If not already set up, follow [the instructions here](https://oboacademy.github.io/obook/howto/odk-setup/).
@@ -63,6 +61,6 @@ If the owl or obo file involved in the merge conflict was edited using Protégé
 
  `sh run.sh make normalize_obo_src`
 
-5. In the Cell ontology (CL), edits sometimes result in creating a large amount of uninteded differences involving ^^xsd:string. If you see these differences after running the command above, they can be resolved by following [the instructions here](https://obophenotype.github.io/cell-ontology/Fixing_xsdstring_diffs/).
+5. In some ontologies (such as the Cell ontology (CL)), edits may result in creating a large amount of uninteded differences involving ^^xsd:string. If you see these differences after running the command above, they can be resolved by following [the instructions here](https://obophenotype.github.io/cell-ontology/Fixing_xsdstring_diffs/).
 
 6. Continue by going to step 1 under the main **Instructions** above. 
