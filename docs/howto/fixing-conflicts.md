@@ -54,13 +54,13 @@ If the owl or obo file involved in the merge conflict was edited using Protégé
 
  Replace "PATH_TO_ONTOLOGY" with the actual file path to the ontology. If you need to orient yourself, use the `pwd` (present working directory) or `ls` (list) line commands.
 
- 3. If you are resolving a conflict in an .owl file, run:
+ If you are resolving a conflict in an .owl file, run:
 
-`sh run.sh make normalize_src`
+ `sh run.sh make normalize_src`
 
  If you are resolving a conflict in an .obo file, run:
 
-`sh run.sh make normalize_obo_src`
+ `sh run.sh make normalize_obo_src`
 
 4. In the Cell ontology (CL), edits sometimes result in creating a large amount of uninteded differences involving ^^xsd:string. If you see these differences after running the command above, they can be resolved by following [the instructions here](https://obophenotype.github.io/cell-ontology/Fixing_xsdstring_diffs/).
 
