@@ -40,7 +40,10 @@ See [Daily Workflow](daily-curator-workflow.md) for creating branches and basic 
    
 6. **Synchronize the reasoner** and make sure there are no terms that have identical definitions as a result of the merge. These are displayed with an 'equivalent' sign `≡` in the class hierarchy view on the left hand panel.   
 
-7. Save changes. 
+7. **Add alt_id to the winning term**.
+    - Navigate to the winning term and add the annotation hasAlternativeId with the ID (eg CL:0000000) of the losing term in the Literal tab. 
+
+8. Save changes. 
 
 See [Daily Workflow](daily-curator-workflow.md) section for commit, push and merge instructions. 
 
