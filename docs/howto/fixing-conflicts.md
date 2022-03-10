@@ -61,6 +61,6 @@ If the owl or obo file involved in the merge conflict was edited using Protégé
 
  `sh run.sh make normalize_obo_src`
 
-5. In some ontologies (such as the Cell ontology (CL)), edits may result in creating a large amount of uninteded differences involving ^^xsd:string. If you see these differences after running the command above, they can be resolved by following [the instructions here](https://obophenotype.github.io/cell-ontology/Fixing_xsdstring_diffs/).
+5. In some ontologies (such as the Cell ontology (CL)), edits may result in creating a large amount of unintended differences involving ^^xsd:string. If you see these differences after running the command above, they can be resolved by following [the instructions here](https://obophenotype.github.io/cell-ontology/Fixing_xsdstring_diffs/).
 
 6. Continue by going to step 1 under the main **Instructions** above. 
