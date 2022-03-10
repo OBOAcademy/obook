@@ -2,7 +2,7 @@
 
 The OBOOK is the main resource for OBOAcademy training materials for Semantic OBO Engineers.
 
-- To get started with learning: https://oboacademy.github.io/obook/getting_started/
+- To get started with learning: https://oboacademy.github.io/obook/getting-started/
 - To contribute: https://oboacademy.github.io/obook/contributing/
 
 ## License
