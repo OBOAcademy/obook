@@ -112,6 +112,7 @@ nav:
           - Monkeying around with OWL: reference/mungall-blog-radar.md
           - Ontology Development Kit (ODK): reference/odk.md
           - Troubleshooting ROBOT: reference/troublehooting-robot.md
+          - Common Errors in GitHub actions: reference/gh-actions-errors.md
           - Other useful resources: reference/other-resources.md
       - Explanation:
           - Introduction to Ontologies: explanation/intro-to-ontologies.md
