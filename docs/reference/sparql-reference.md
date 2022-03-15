@@ -132,7 +132,7 @@ WHERE
 
 ## Replacing 
 
-### Replace oio:source with oio:hasDbXref is synonyms annotations
+### Replace oio:source with oio:hasDbXref in synonyms annotations
 adaptable for replacing annotations properties on particular axioms
 
 ```SPARQL
