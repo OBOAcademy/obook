@@ -130,6 +130,30 @@ WHERE
 }
 ```
 
+### Deleting axiom annotations by prefix 
+
+```SPARQL
+# adding prefixes used
+prefix owl: <http://www.w3.org/2002/07/owl#>
+
+# delete triples
+DELETE {
+  ?anno ?property ?value .
+}
+WHERE {
+  # the variable property is either synonym_type: or source:
+  VALUES ?property { synonym_type: source: }
+  # structure of variable value and variable anno
+  ?anno a owl:Axiom ;
+         owl:annotatedSource ?s ;
+         owl:annotatedProperty ?p ;
+         owl:annotatedTarget ?o ;
+         ?property ?value .
+  # filter out the variable value which start with "ICD10EXP:" 
+  FILTER(STRSTARTS(STR(?value),"ICD10EXP:"))
+}
+```
+
 ## Replacing 
 
 ### Replace oio:source with oio:hasDbXref in synonyms annotations
