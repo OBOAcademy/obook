@@ -5,6 +5,22 @@ Comments are added in-code with `#` above each step to explain them so that quer
 
 ## Checks/Report generation
 
+### All terms native to ontology 
+note: we assume that all native terms here have the same namespace - that of the ontology
+
+```SPARQL
+# select unique instances of the variable
+SELECT DISTINCT ?term
+WHERE {
+  # selecting where the variable term is either used as a subject or object 
+  { ?s1 ?p1 ?term . }
+  UNION
+  { ?term ?p2 ?o2 . }
+  # filtering out only terms that have the MONDO namespace (assumed to be native terms)
+  FILTER(isIRI(?term) && (STRSTARTS(str(?term), "http://purl.obolibrary.org/obo/MONDO_")))
+}
+```
+
 ### Definition lacks xref 
 adaptable for lacking particular annotation
 
@@ -99,7 +115,7 @@ SELECT DISTINCT ?term ?property ?value WHERE
 }
 ```
 
-## Removing Triples
+## Removing
 
 ### Removes all RO terms
 adaptable for removing all terms of a particular namespace
