@@ -115,6 +115,30 @@ SELECT DISTINCT ?term ?property ?value WHERE
 }
 ```
 
+### Checking for misused replaced_by 
+adaptable for checking that a property is used in a certain way
+
+```SPARQL
+
+# adding prefixes used
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+
+# selecting only unique instances of the three variables 
+SELECT DISTINCT ?entity ?property ?value WHERE {
+ # the variable property is IAO_0100001 (item replaced by)
+ VALUES ?property { <http://purl.obolibrary.org/obo/IAO_0100001> }
+ 
+ # order of the variables in the triple
+ ?entity ?property ?value .
+ # removing entities that have either owl:deprecated true or oboInOwl:ObsoleteClass (these entities are the only ones that should have replaced_by)
+ FILTER NOT EXISTS { ?entity owl:deprecated true }
+ FILTER (?entity != oboInOwl:ObsoleteClass)
+}
+# arrange report by entity variable
+ORDER BY ?entity
+```
+
 ## Removing
 
 ### Removes all RO terms
