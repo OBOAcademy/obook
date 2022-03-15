@@ -5,7 +5,7 @@ Comments are added in-code with `#` above each step to explain them so that quer
 
 ## Checks/Report generation
 
-#### Definition lacks xref 
+### Definition lacks xref 
 adaptable for lacking particular annotation
 
 ```SPARQL
@@ -41,7 +41,7 @@ SELECT ?entity ?property ?value WHERE
 ORDER BY ?entity
 ```
 
-#### Checks wether definitions contain underscore characters 
+### Checks wether definitions contain underscore characters 
 adaptable for checking if there is particular character in annotation
 
 ```SPARQL
@@ -68,9 +68,40 @@ SELECT DISTINCT ?entity ?property ?value WHERE
 ORDER BY ?entity
 ```
 
+### Only allowing a fix set of annotation properties 
+
+```SPARQL
+# adding prefixes used
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+prefix IAO: <http://purl.obolibrary.org/obo/IAO_>
+prefix RO: <http://purl.obolibrary.org/obo/RO_>
+prefix mondo: <http://purl.obolibrary.org/obo/mondo#>
+prefix skos: <http://www.w3.org/2004/02/skos/core#>
+prefix dce: <http://purl.org/dc/elements/1.1/>
+prefix dc: <http://purl.org/dc/terms/>
+
+# selecting only unique instances of the three variables 
+SELECT DISTINCT ?term ?property ?value WHERE 
+{
+  # order of the variables in the triple
+	?term ?property ?value .
+    # the variable property is an annotation property
+  	?property a owl:AnnotationProperty .
+  # selects entities that are native to ontology (in this case MONDO)
+	FILTER (isIRI(?term) && regex(str(?term), "^http://purl.obolibrary.org/obo/MONDO_"))
+    # removes triples where the variable value is blank
+  	FILTER(!isBlank(?value))
+  # listing the allowed annotation properties
+  FILTER (?property NOT IN (dce:creator, dce:date, IAO:0000115, IAO:0000231, IAO:0100001, mondo:excluded_subClassOf, mondo:excluded_from_qc_check, mondo:excluded_synonym, mondo:pathogenesis, mondo:related, mondo:confidence, dc:conformsTo, mondo:should_conform_to, oboInOwl:consider, oboInOwl:created_by, oboInOwl:creation_date, oboInOwl:hasAlternativeId, oboInOwl:hasBroadSynonym, oboInOwl:hasDbXref, oboInOwl:hasExactSynonym, oboInOwl:hasNarrowSynonym, oboInOwl:hasRelatedSynonym, oboInOwl:id, oboInOwl:inSubset, owl:deprecated, rdfs:comment, rdfs:isDefinedBy, rdfs:label, rdfs:seeAlso, RO:0002161, skos:broadMatch, skos:closeMatch, skos:exactMatch, skos:narrowMatch))
+}
+```
+
 ## Removing Triples
 
-#### Removes all RO terms
+### Removes all RO terms
 adaptable for removing all terms of a particular namespace
 
 ```SPARQL
