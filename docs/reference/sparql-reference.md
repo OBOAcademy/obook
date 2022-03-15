@@ -129,3 +129,38 @@ WHERE
   }
 }
 ```
+
+## Replacing 
+
+### Replace oio:source with oio:hasDbXref is synonyms annotations
+adaptable for replacing annotations properties on particular axioms
+
+```SPARQL
+# adding prefixes used
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+# delete triples where the relation is oboInOwl:source
+DELETE {
+    ?ax oboInOwl:source ?source .
+}
+# insert triples where the variables ax and source defined above are used, but using oboInOwl:hasDbXref instead
+INSERT {
+    ?ax oboInOwl:hasDbXref ?source .
+}
+WHERE 
+{
+  # restricting to triples where the property variable is in this list
+  VALUES ?property { oboInOwl:hasExactSynonym oboInOwl:hasNarrowSynonym  oboInOwl:hasBroadSynonym oboInOwl:hasCloseSynonym oboInOwl:hasRelatedSynonym } .
+  # order of the variables in the triple
+  ?entity ?property ?value .
+  # structure on which the variable ax and source applies 
+  ?ax rdf:type owl:Axiom ;
+    owl:annotatedSource ?entity ;
+    owl:annotatedTarget ?value ;
+    owl:annotatedProperty ?property ;
+    oboInOwl:source ?source .
+  # filtering out triples where entity is an IRI
+  FILTER (isIRI(?entity))
+}
