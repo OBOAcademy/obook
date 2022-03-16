@@ -98,14 +98,16 @@ nav:
           - Formatting your ontology annotations correctly: reference/formatting-license.md
           - OBO-style term annotation: reference/go-style-annotation-property-practice.md
           - Glossary: reference/glossary.md
-          - GitHub Desktop: reference/github-desktop.md
+          -Git:
+            - Intro to GitHub: reference/github-intro.md 
+            - GitHub Desktop: reference/github-desktop.md
+            - Git FAQ: reference/git-faq.md
           - Semantic Engineering Toolbox: reference/semantic-engineering-toolbox.md
           - Tables and Triples: reference/tables-and-triples.md
           - Reasoning: reference/reasoning.md
           - A day in the life of an ontology curator: reference/ontology-curator.md
           - Protege interface: reference/protege-interface.md
           - SPARQL basics: reference/sparql-basics.md
-          - Git FAQ: reference/git-faq.md
           - Tools for Managing Issues: reference/managing-issues.md
           - Release Artefacts: reference/release-artefacts.md
           - Synonyms: reference/synonyms-obo.md
