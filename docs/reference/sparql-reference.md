@@ -21,6 +21,30 @@ WHERE {
 }
 ```
 
+### Count class by prefixes
+Adaptable to counting queries
+
+```SPARQL
+# this query counts the number of classes you have with each prefix (eg number of MONDO terms, CL terms, etc.)
+
+# adding prefixes used
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix obo: <http://purl.obolibrary.org/obo/>
+
+# selecting 2 variables, prefix and numberOfClasses, where number of classes is a count of distinct cls
+SELECT ?prefix (COUNT(DISTINCT ?cls) AS ?numberOfClasses) WHERE 
+{
+  # the variable cls is a class 
+  ?cls a owl:Class .
+  # removes any cases where the variable cls is blank
+  FILTER (!isBlank(?cls))
+  # Binds the variable prefix as the prefix of the class (eg. MONDO, CL, etc.)
+  BIND( STRBEFORE(STRAFTER(str(?cls),"http://purl.obolibrary.org/obo/"), "_") AS ?prefix)
+}
+# grouping the count by prefix
+GROUP BY ?prefix
+```
+
 ### Definition lacks xref 
 adaptable for lacking particular annotation
 
