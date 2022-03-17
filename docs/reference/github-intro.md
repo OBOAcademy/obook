@@ -1,4 +1,4 @@
-# Using Git, GitHub and GitHub Desktop (version control)
+# Git, GitHub and GitHub Desktop (version control)
 
 A repository can consist of many files with several users simultaneously editing those files at any moment in time. In order to ensure conflicting edits between the users are not made and a history of the edits are tracked, software classified as a "distributed version control system" is used. 
 
