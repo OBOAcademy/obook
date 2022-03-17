@@ -98,7 +98,7 @@ nav:
           - Formatting your ontology annotations correctly: reference/formatting-license.md
           - OBO-style term annotation: reference/go-style-annotation-property-practice.md
           - Glossary: reference/glossary.md
-          -Git:
+          - Git:
             - Intro to GitHub: reference/github-intro.md 
             - GitHub Desktop: reference/github-desktop.md
             - Git FAQ: reference/git-faq.md
