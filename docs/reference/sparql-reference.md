@@ -21,30 +21,6 @@ WHERE {
 }
 ```
 
-### Count class by prefixes
-Adaptable to counting queries
-
-```SPARQL
-# this query counts the number of classes you have with each prefix (eg number of MONDO terms, CL terms, etc.)
-
-# adding prefixes used
-prefix owl: <http://www.w3.org/2002/07/owl#>
-prefix obo: <http://purl.obolibrary.org/obo/>
-
-# selecting 2 variables, prefix and numberOfClasses, where number of classes is a count of distinct cls
-SELECT ?prefix (COUNT(DISTINCT ?cls) AS ?numberOfClasses) WHERE 
-{
-  # the variable cls is a class 
-  ?cls a owl:Class .
-  # removes any cases where the variable cls is blank
-  FILTER (!isBlank(?cls))
-  # Binds the variable prefix as the prefix of the class (eg. MONDO, CL, etc.)
-  BIND( STRBEFORE(STRAFTER(str(?cls),"http://purl.obolibrary.org/obo/"), "_") AS ?prefix)
-}
-# grouping the count by prefix
-GROUP BY ?prefix
-```
-
 ### Definition lacks xref 
 adaptable for lacking particular annotation
 
@@ -161,6 +137,56 @@ SELECT DISTINCT ?entity ?property ?value WHERE {
 }
 # arrange report by entity variable
 ORDER BY ?entity
+```
+
+## Count
+
+### Count class by prefixes
+
+```SPARQL
+# this query counts the number of classes you have with each prefix (eg number of MONDO terms, CL terms, etc.)
+
+# adding prefixes used
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix obo: <http://purl.obolibrary.org/obo/>
+
+# selecting 2 variables, prefix and numberOfClasses, where number of classes is a count of distinct cls
+SELECT ?prefix (COUNT(DISTINCT ?cls) AS ?numberOfClasses) WHERE 
+{
+  # the variable cls is a class 
+  ?cls a owl:Class .
+  # removes any cases where the variable cls is blank
+  FILTER (!isBlank(?cls))
+  # Binds the variable prefix as the prefix of the class (eg. MONDO, CL, etc.)
+  BIND( STRBEFORE(STRAFTER(str(?cls),"http://purl.obolibrary.org/obo/"), "_") AS ?prefix)
+}
+# grouping the count by prefix
+GROUP BY ?prefix
+```
+
+### Counting subclasses in a namespace
+Adaptable to counting queries
+
+```SPARQL
+# this query counts the number of classes that are subclass of CL:0000003 (native cell) that are in the pcl namespace
+
+# adding prefixes used
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX CL: <http://purl.obolibrary.org/obo/CL_>
+PREFIX PCL: <http://purl.obolibrary.org/obo/PCL_>
+
+# count the number of unique term 
+SELECT (COUNT (DISTINCT ?term) as ?pclcells)
+WHERE {
+    # the variable term is a class
+  	?term a owl:Class . 
+    # the variable term has to be a subclass of CL:0000003, including those that are subclassof by property path 
+  	?term rdfs:subClassOf* CL:0000003
+  # only count the term if it is in the pcl namespace 
+  FILTER(isIRI(?term) && (STRSTARTS(str(?term), "http://purl.obolibrary.org/obo/PCL_")))
+}
 ```
 
 ## Removing
