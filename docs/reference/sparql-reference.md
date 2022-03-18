@@ -170,7 +170,6 @@ GROUP BY ?prefix
 ```
 
 ### Counting subclasses in a namespace
-Adaptable to counting queries
 
 ```SPARQL
 # this query counts the number of classes that are subclass of CL:0000003 (native cell) that are in the pcl namespace
