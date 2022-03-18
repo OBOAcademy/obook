@@ -26,32 +26,35 @@ adaptable for lacking particular annotation
 
 ```SPARQL
 # adding prefixes used
-prefix oio: <http://www.geneontology.org/formats/oboInOwl#>
-prefix def: <http://purl.obolibrary.org/obo/IAO_0000115>
+prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+prefix definition: <http://purl.obolibrary.org/obo/IAO_0000115>
 prefix owl: <http://www.w3.org/2002/07/owl#>
 
 SELECT ?entity ?property ?value WHERE 
 {
-  # selects only definition
-  ?entity def: ?value .
+  # the variable property has to be defintion (IAO:0000115)
+  VALUES ?property {
+    definition:
+  }
+  # defining the order of variables in the triple 
+  ?entity ?property ?value .
   
   # selecting annotation on definition
   ?def_anno a owl:Axiom ;
   owl:annotatedSource ?entity ;
-  owl:annotatedProperty def: ;
+  owl:annotatedProperty definition: ;
   owl:annotatedTarget ?value .
   
   # filters out definitions which do not have a dbxref annotiton
   FILTER NOT EXISTS {
-    ?def_anno oio:hasDbXref ?x .
+    ?def_anno oboInOwl:hasDbXref ?x .
   }
   
   # removes triples where entity is blank
   FILTER (!isBlank(?entity))
   # selects entities that are native to ontology (in this case MONDO)
   FILTER (isIRI(?entity) && STRSTARTS(str(?entity), "http://purl.obolibrary.org/obo/MONDO_"))
-  # assigning def: as the property variable
-  BIND(def: as ?property)
+
 }
 # arrange report by entity variable
 ORDER BY ?entity
@@ -65,13 +68,14 @@ adaptable for checking if there is particular character in annotation
 prefix owl: <http://www.w3.org/2002/07/owl#>
 prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 prefix IAO: <http://purl.obolibrary.org/obo/IAO_>
+prefix definition: <http://purl.obolibrary.org/obo/IAO_0000115>
 
 # selecting only unique instances of the three variables 
 SELECT DISTINCT ?entity ?property ?value WHERE 
 {
-  # the variable property has to be IAO:0000115 
+  # the variable property has to be definition (IAO:0000115)
   VALUES ?property {
-    IAO:0000115
+    definition:
   }
   # defining the order of variables in the triple 
   ?entity ?property ?value .
@@ -97,7 +101,7 @@ prefix RO: <http://purl.obolibrary.org/obo/RO_>
 prefix mondo: <http://purl.obolibrary.org/obo/mondo#>
 prefix skos: <http://www.w3.org/2004/02/skos/core#>
 prefix dce: <http://purl.org/dc/elements/1.1/>
-prefix dc: <http://purl.org/dc/terms/>
+prefix dcterms: <http://purl.org/dc/terms/>
 
 # selecting only unique instances of the three variables 
 SELECT DISTINCT ?term ?property ?value WHERE 
@@ -111,7 +115,7 @@ SELECT DISTINCT ?term ?property ?value WHERE
     # removes triples where the variable value is blank
   	FILTER(!isBlank(?value))
   # listing the allowed annotation properties
-  FILTER (?property NOT IN (dce:creator, dce:date, IAO:0000115, IAO:0000231, IAO:0100001, mondo:excluded_subClassOf, mondo:excluded_from_qc_check, mondo:excluded_synonym, mondo:pathogenesis, mondo:related, mondo:confidence, dc:conformsTo, mondo:should_conform_to, oboInOwl:consider, oboInOwl:created_by, oboInOwl:creation_date, oboInOwl:hasAlternativeId, oboInOwl:hasBroadSynonym, oboInOwl:hasDbXref, oboInOwl:hasExactSynonym, oboInOwl:hasNarrowSynonym, oboInOwl:hasRelatedSynonym, oboInOwl:id, oboInOwl:inSubset, owl:deprecated, rdfs:comment, rdfs:isDefinedBy, rdfs:label, rdfs:seeAlso, RO:0002161, skos:broadMatch, skos:closeMatch, skos:exactMatch, skos:narrowMatch))
+  FILTER (?property NOT IN (dce:creator, dce:date, IAO:0000115, IAO:0000231, IAO:0100001, mondo:excluded_subClassOf, mondo:excluded_from_qc_check, mondo:excluded_synonym, mondo:pathogenesis, mondo:related, mondo:confidence, dcterms:conformsTo, mondo:should_conform_to, oboInOwl:consider, oboInOwl:created_by, oboInOwl:creation_date, oboInOwl:hasAlternativeId, oboInOwl:hasBroadSynonym, oboInOwl:hasDbXref, oboInOwl:hasExactSynonym, oboInOwl:hasNarrowSynonym, oboInOwl:hasRelatedSynonym, oboInOwl:id, oboInOwl:inSubset, owl:deprecated, rdfs:comment, rdfs:isDefinedBy, rdfs:label, rdfs:seeAlso, RO:0002161, skos:broadMatch, skos:closeMatch, skos:exactMatch, skos:narrowMatch))
 }
 ```
 
@@ -123,11 +127,12 @@ adaptable for checking that a property is used in a certain way
 # adding prefixes used
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+PREFIX replacedBy: <http://purl.obolibrary.org/obo/IAO_0100001> 
 
 # selecting only unique instances of the three variables 
 SELECT DISTINCT ?entity ?property ?value WHERE {
  # the variable property is IAO_0100001 (item replaced by)
- VALUES ?property { <http://purl.obolibrary.org/obo/IAO_0100001> }
+ VALUES ?property { replacedBy: }
  
  # order of the variables in the triple
  ?entity ?property ?value .
@@ -246,7 +251,7 @@ WHERE {
 
 ## Replacing 
 
-### Replace oio:source with oio:hasDbXref in synonyms annotations
+### Replace oboInOwl:source with oboInOwl:hasDbXref in synonyms annotations
 adaptable for replacing annotations properties on particular axioms
 
 ```SPARQL
