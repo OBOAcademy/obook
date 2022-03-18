@@ -162,7 +162,7 @@ SELECT ?prefix (COUNT(DISTINCT ?cls) AS ?numberOfClasses) WHERE
   ?cls a owl:Class .
   # removes any cases where the variable cls is blank
   FILTER (!isBlank(?cls))
-  # Binds the variable prefix as the prefix of the class (eg. MONDO, CL, etc.)
+  # Binds the variable prefix as the prefix of the class (eg. MONDO, CL, etc.). classes that do not have obo purls will come out as blank in the report. 
   BIND( STRBEFORE(STRAFTER(str(?cls),"http://purl.obolibrary.org/obo/"), "_") AS ?prefix)
 }
 # grouping the count by prefix
