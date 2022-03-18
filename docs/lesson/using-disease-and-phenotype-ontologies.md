@@ -31,7 +31,7 @@ These materials are under construction and incomplete.
 <a name="major"></a> 
 ## Major disease and phenotype ontologies that are available
 
-A landscape analysis of major disease and phenotype ontologies that are currently available is [here](https://github.com/jamesaoverton/obook/blob/master/09-DiseasesAndPhenotypes/ontologylandscape.md).
+A landscape analysis of major disease and phenotype ontologies that are currently available is [here](https://github.com/OBOAcademy/obook/blob/master/archive_original_cpath_course/09-DiseasesAndPhenotypes/ontologylandscape.md).
 
 <a name="decision"></a> 
 ## Decide which phenotype or disease ontology to use for different use cases
