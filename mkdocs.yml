@@ -107,7 +107,9 @@ nav:
           - Reasoning: reference/reasoning.md
           - A day in the life of an ontology curator: reference/ontology-curator.md
           - Protege interface: reference/protege-interface.md
-          - SPARQL basics: reference/sparql-basics.md
+          - SPARQL: 
+            - SPARQL basics: reference/sparql-basics.md
+            - SPARQL templates: reference/sparql-reference.md
           - Tools for Managing Issues: reference/managing-issues.md
           - Release Artefacts: reference/release-artefacts.md
           - Synonyms: reference/synonyms-obo.md
