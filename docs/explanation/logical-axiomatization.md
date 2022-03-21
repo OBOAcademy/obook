@@ -30,7 +30,7 @@ Axioms with both layers would mean that a cell of that type **must** be in both 
 
 ## Equivalent class logical definitions
 
-An equivalent class axiom is an axiom that defines what the class. It means that if a class B fulfils all the criteria/restrictions in the equivalent axiom of class A, class B is by definition a subclass of class A. 
+An equivalent class axiom is an axiom that defines the class; it is a necessary and sufficient logical axiom that defines the cell type. It means that if a class B fulfils all the criteria/restrictions in the equivalent axiom of class A, class B is by definition a subclass of class A. 
 Equivalent classes allow the reasoner to automatically classify entities. 
 
 For example:
@@ -38,23 +38,23 @@ For example:
 - `chandelier pvalb GABAergic cortical interneuron` has the subclass axioms `'has characteristic' some 'chandelier cell morphology'` and `interneuron`
 - `chandelier pvalb GABAergic cortical interneuron` is therefore a subclass of `chandelier cell`
 
-Equivalent class axioms classification can be very powerful as it takes into consideration complexed layers of axioms. 
+Equivalent class axioms classification can be very powerful as it takes into consideration complex layers of axioms. 
 
 For example: 
 - `primary motor cortex pyramidal cell` has the equivalent class axiom `'pyramidal neuron' and ('has soma location' some 'primary motor cortex')`. 
-- `Betz cells` have the axioms `'has characteristic' some 'standard pyramidal morphology'` and `'has soma location' some 'primary motor cortex layer 5'`
-- `Betz cells` are inferred to be `primary motor cortex pyramidal cell` through the following chain (you can see this in protege by pressing the ? button on inferred class):
+- `Betz cell` has the axioms `'has characteristic' some 'standard pyramidal morphology'` and `'has soma location' some 'primary motor cortex layer 5'`
+- `Betz cell` are inferred to be `primary motor cortex pyramidal cell` through the following chain (you can see this in Protégé by pressing the ? button on inferred class):
 
 ![](../images/discussions/logical-axiomatization/betz-pyramidal.png) 
 
-The ability of the reasoner to infer complex classes helps in classifications that might have been missed if done manually. However, when creating an equivalent class axiom, you must be sure that it is not overly constrictive (in which case, classes that should be classified under it gets missed) nor too loose (in which case, classes will get wrongly classifed under it)
+The ability of the reasoner to infer complex classes helps identify classifications that might have been missed if done manually. However, when creating an equivalent class axiom, you must be sure that it is not overly constrictive (in which case, classes that should be classified under it gets missed) nor too loose (in which case, classes will get wrongly classified under it).
 
 Example of both overly constrictive and overly loose equivalent class axiom:
 
 `neuron equivalent to cell and (part_of some 'central nervous system')`
 
-- This is overly constrictive as there are neurons outside the central nervous system (eg peripheral neurons).
-- This is also too loose as there are cells in the central nervous system that are not neurons (eg glial cells).
+- This is overly constrictive as there are neurons outside the central nervous system (e.g. peripheral neurons).
+- This is also too loose as there are cells in the central nervous system that are not neurons (e.g. glial cells).
 
 In such cases, sometimes not having an equivalent class axioms is better (like in the case of neuron), and asserting is the best way to classify a child. 
 
@@ -64,9 +64,9 @@ Each ontology has certain styles and conventions in how they axiomatize. This st
 
 ### Respect the ontology style
 
-As a preamble (and to avoid over prescribing style), it is important for us to note that ontologies have specific styles to things like what relation to use, and should be respected. This is usually important for their use cases. For example the cell ontology has a [guide to what relations to use](https://obophenotype.github.io/cell-ontology/relations_guide/). An example of an agreement in the community is that while anatomical locations of cells are recorded using `part of`, neurons should be recorded with `has soma location`. This is to accommodate for the fact that many neurons have long reaching synapses that cover multiple anatomical location making them tricky to axiomatize using `part of`. 
+It is important to note that ontologies have specific axiomatization styles and may apply to, for example, selecting a preferred relation. This usually reflects their use cases. For example, the Cell Ontology has a [guide for what relations to use](https://obophenotype.github.io/cell-ontology/relations_guide/). An example of an agreement in the community is that while anatomical locations of cells are recorded using `part of`, neurons should be recorded with `has soma location`. This is to accommodate for the fact that many neurons have long reaching axons that cover multiple anatomical locations making them difficult to axiomatize using `part of`. 
 
-For example, `Betz cell`, a well known cell type which defines layer V of the primary motor cortex, synapses lower motor neurons or spinal interneuron (cell types that reside outside the brain). Having the axiom `'Betz cell' part_of 'cortical layer V'` is definitively wrong. In this case `has soma location` is used. Because of cases like these that are common in neurons, all neurons in CL should use `has soma location`.
+For example, `Betz cell`, a well known cell type which defines layer V of the primary motor cortex, synapses lower motor neurons or spinal interneurons (cell types that reside outside the brain). Having the axiom `'Betz cell' part_of 'cortical layer V'` is wrong. In this case `has soma location` is used. Because of cases like these that are common in neurons, all neurons in CL should use `has soma location`.
 
 ### Avoid redundant axioms 
 
@@ -80,7 +80,7 @@ Axioms add lines to the ontology, resulting in larger ontologies that are harder
 
 ### Let the reasoner do the work
 
-Asserted is_a parents do not need to be retained as entries in the 'SubClass of' section of the Description window in Protege if the logical definition for a term results in their inference.
+Asserted is_a parents do not need to be retained as entries in the 'SubClass of' section of the Description window in Protégé if the logical definition for a term results in their inference.
 
 For example, `cerebral cortex GABAergic interneuron` has the following logical axioms:
 ```
@@ -94,8 +94,8 @@ We avoid having asserted subclass axioms as these are redundant lines in the ont
 
 Good practice to let the reasoner do the work: 
 ```
-1) If you have created a logical definition for your term, you should delete the asserted is_a parent by clicking on the X to the right term.
-2) Once you synchronize the Reasoner, you will see the reasoned classification of your new term, including the inferred is_a parent(s).
-3) If the inferred classification does not contain the correct parentage, or doesn't make sense, then you will need to modify the logical definition.
-4) If an existing term contains a logical definition and still shows an asserted is_a parent in the 'SubClass of' section, you may delete that asserted parent, as well. Just make sure to run the Reasoner to check that the asserted parent is now replaced with the correct reasoned parent(s).
+1) If you create a logical definition for your term, you should delete all redundant, asserted is_a parent relations by clicking on the X to the right of the term.
+2) If an existing term contains a logical definition and still shows an asserted is_a parent in the 'SubClass of' section, you may delete that asserted parent. Just make sure to run the Reasoner to check that the asserted parent is now replaced with the correct reasoned parent(s).
+3) Once you synchronize the Reasoner, you will see the reasoned classification of your new term, including the inferred is_a parent(s).
+4) If the inferred classification does not contain the correct parentage, or doesn't make sense, then you will need to modify the logical definition.
 ```
