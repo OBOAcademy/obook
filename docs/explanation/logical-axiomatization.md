@@ -1,14 +1,14 @@
 # Logical axiomatization of classes & use of reasoning
 
-This explainer requires understanding of ontology classifications, please see "an ontology as a classification" section of the [introduction to ontologies documentation](../explanation/intro-to-ontologies.md) if you are unfamiliar with these concepts. 
+This explainer requires understanding of ontology classifications. Please see "an ontology as a classification" section of the [introduction to ontologies documentation](../explanation/intro-to-ontologies.md) if you are unfamiliar with these concepts. 
 
 ## What are logical axioms
 
-Logical axioms are relational information about a class that are primarily aimed at machines (as opposed to annotations like textual definitions which are primarily aimed at humans). These logical axioms allow reasoners to assist in and verify classification, lessening the development burden and enabling expressive queries.
+Logical axioms are relational information about classes that are primarily aimed at machines. This is opposed to annotations like textual definitions which are primarily aimed at humans. These logical axioms allow reasoners to assist in and verify classification, lessening the development burden and enabling expressive queries.
 
 ## What should you axiomatize?
 
-Ideally, everything in the definition should be axiomatize (though this is not always possible). For example, if we consider the cell type `oxytocin receptor sst GABAergic cortical interneuron` which has the textual definition: 
+Ideally, everything in the definition should be axiomatized when possible. For example, if we consider the cell type `oxytocin receptor sst GABAergic cortical interneuron`, which has the textual definition: 
 
 "An interneuron located in the cerebral cortex that expresses the oxytocin receptor. These interneurons also express somatostatin."
 
@@ -24,9 +24,9 @@ SubClassOf:
 ## What should you NOT axiomatize?
 
 Everything in the logical axioms **must be true**, (do not axiomatize things that are true to only part of the entity)
-For example, `chandelier pvalb GABAergic cortical interneuron` are found in upper L2/3 and deep L5 of the cerebral cortex. 
+For example, the cell type `chandelier pvalb GABAergic cortical interneuron` is found in upper L2/3 and deep L5 of the cerebral cortex. 
 We do not make logical axioms for `has soma location` some layer 2/3 and layer 5. 
-Axioms with both layers would mean that a cell of that type **must** be in both layer 2/3 and layer 5, which is an impossibility (a cell cannot be in two seperate location at once!). Instead we axiomatize a more general location: 'has soma location' some 'cerebral cortex'
+Axioms with both layers would mean that a cell of that type **must** be in both layer 2/3 and layer 5, which is an impossibility (a cell cannot be in two seperate locations at once!). Instead we axiomatize a more general location: 'has soma location' some 'cerebral cortex'
 
 ## Equivalent class logical definitions
 
