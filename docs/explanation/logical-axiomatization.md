@@ -17,9 +17,17 @@ The logical axioms should then follow accordingly:
 SubClassOf:
 - interneuron
 - 'has soma location' some 'cerebral cortex'
-- expresses some oxytocin receptor
-- 'capable of' some oxytocin receptor activity
+- expresses some 'oxytocin receptor'
 - expresses some somatostatin 
+- 'capable of' some 'gamma-aminobutyric acid secretion, neurotransmission'
+
+These logical axioms allow a reasoner to automatically classify the term. For example, through the logical axioms, we can infer that `oxytocin receptor sst GABAergic cortical interneuron` is a `cerebral cortex GABAergic interneuron`.
+
+![](../images/discussions/logical-axiomatization/oxtrsst-heirachy.png)
+
+Axiomatizing definitions well will also allow for accurate querying. For example, if I wanted to find a neuron that expresses oxytocin receptor, having the SubClassOf axioms of `interneuron` and `expresses some 'oxytocin receptor'` will allow me to do so on DL query (see [tutorial on DL query](../tutorial/basic-dl-query.md) for more information about DL queries).
+
+![](../images/discussions/logical-axiomatization/dl-oxtrneuron.png)
 
 ## What should you NOT axiomatize?
 
@@ -76,7 +84,7 @@ For example:
 - `bipolar neuron` has the axiom `'has characteristic' some 'cortical bipolar morphology'`
 - Therefore we do not add `'has characteristic' some 'cortical bipolar morphology'` to `retinal bipolar neuron`
 
-Axioms add lines to the ontology, resulting in larger ontologies that are harder to use. 
+Axioms add lines to the ontology, resulting in larger ontologies that are harder to use. They also add redundancy, making the ontology hard to maintain as a single change in classification might require multiple edits.
 
 ### Let the reasoner do the work
 
