@@ -64,6 +64,8 @@ nav:
           - General Ontology Modelling:
               - Family History Knowledge Base (FHKB) tutorial: tutorial/fhkb.md
       - How-to guides:
+          - General:
+              - Creating an ontology from scratch: howto/create-ontology-from-scratch.md
           - Protege:
               - Installing ELK in Protege: howto/installing-elk-in-protege.md
               - Setting up your ID range: howto/idrange.md
