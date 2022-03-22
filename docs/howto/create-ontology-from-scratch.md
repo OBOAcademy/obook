@@ -66,13 +66,13 @@ Depending on your specific starting points, the way you start will be slightly d
 1. Make a table of all similar ontologies that exist, within and outside OBO (this requires [research](../lesson/ontology-term-use/#2-finding-good-ontologies), and is an essential part of the process). Document exactly in what way they are different from your use case, and why you need to build a new one (see [none-in-scope condition](#scope-condition) above).
 1. Determine whether you have something to start from. Often, you will have a database with entities you may wish to turn into classes in your ontology. See starting points [below](#starting-points).
 1. Gather [your tools](../reference/semantic-engineering-toolbox.md). You need to think about tools for at least two kinds of workflows to start with: 
-   1. Curation workflows: How will you edit your ontology? Some simple ontologies are edited using tables that link to [logical templates](../lesson/templates-for-obo.md). Others are edited primarily [with Protege](../lesson/contributing-to-obo-ontologies.md).
-   2. Continuous integration and release workflows: How will you import terms from other ontologies? How will you ensure the [quality](../tutorial/robot-tutorial-qc.md) of you ontology moving forward?
+    1. Curation workflows: How will you edit your ontology? Some simple ontologies are edited using tables that link to [logical templates](../lesson/templates-for-obo.md). Others are edited primarily [with Protege](../lesson/contributing-to-obo-ontologies.md).
+    2. Continuous integration and release workflows: How will you import terms from other ontologies? How will you ensure the [quality](../tutorial/robot-tutorial-qc.md) of you ontology moving forward?
 1. Decide on the Ontology ID (important, do not skip). Changing this later can be extremely costly. Refer to the [OBO ID policy](https://obofoundry.org/id-policy.html#allocating-idspaces) for details. An ID should be short and unique.
 1. Create a basic set-up for managing your workflows. This comprises (usually) three aspects (you may wish to try and use [the Ontology Development Kit](../tutorial/setting-up-project-odk.md) - it does exactly that):
-   1. Make a GitHub repository.
-   1. Add your editors files (owl, tsv, whatever you decided to use) to that repository.
-   1. Implement some `workflow` system, i.e. some way to run commands like `release` or `test`, as you will run these repeatedly. A typical system to achieve this is [make](https://makefiletutorial.com/), and many projects choose to encode their workflows as `make` targets ([ODK](https://github.com/INCATools/ontology-development-kit), [OBI Makfile](https://github.com/obi-ontology/obi/blob/master/Makefile)).
+    1. Make a GitHub repository.
+    1. Add your editors files (owl, tsv, whatever you decided to use) to that repository.
+    1. Implement some `workflow` system, i.e. some way to run commands like `release` or `test`, as you will run these repeatedly. A typical system to achieve this is [make](https://makefiletutorial.com/), and many projects choose to encode their workflows as `make` targets ([ODK](https://github.com/INCATools/ontology-development-kit), [OBI Makfile](https://github.com/obi-ontology/obi/blob/master/Makefile)).
 1. Determine the metadata and logical patterns you wish to employ for your curation. Here it is important that you determine what [kind of an ontology](#project-domain) you want to build.
 
 **Note**: Later in the process, you also want to think about the following:
@@ -99,17 +99,17 @@ There are many different starting points for building an ontology:
 There are two fundamentally different kinds of ontologies which need to be distinguished:
 
 1. **Project ontologies** (sometimes referred to as application ontologies) are ontologies that are developed to fulfil a specific use case, like:
-   - Grouping data in your project
-   - Indexing search engines or your organisation
-   - Informing Natural Language Processing applications
-   - Populating the biocuration interface your organisation provides to enable curators to annotate data
+    - Grouping data in your project
+    - Indexing search engines or your organisation
+    - Informing Natural Language Processing applications
+    - Populating the biocuration interface your organisation provides to enable curators to annotate data
 2. **Domain ontologies** are ontologies which seek to model a domain of discourse. In particular they:
-   - Reflect scientific consensus and are therefore social and collaborative enterprises subject to change
-   - Are build with re-use in mind:
-     - They re-use terms from other domain ontologies
-     - They provide terms intended for re-use by other ontologies
-     - They work with other ontologies on implementing consistent logical patterns that apply across all domain ontologies in the community.
-   - Are logically consistent with all ontologies they depend on, refer to, import.
+    - Reflect scientific consensus and are therefore social and collaborative enterprises subject to change
+    - Are build with re-use in mind:
+       - They re-use terms from other domain ontologies
+       - They provide terms intended for re-use by other ontologies
+       - They work with other ontologies on implementing consistent logical patterns that apply across all domain ontologies in the community.
+    - Are logically consistent with all ontologies they depend on, refer to, import.
 
 **Some things to consider:**
 
@@ -174,8 +174,8 @@ At first, we chose to name the ontology "Unified Breed Ontology" (UBO). Which me
 ### Some notes, need to be cleaned up (ignore)
 
 - Creation of components: for basic information: each “layer” is built in a google sheet for example:
-   - Transboundary: are children of species
-   - Breeds: are children of either species or transboundary (therefore we need transboundary and species in order to be able to add breeds)
+    - Transboundary: are children of species
+    - Breeds: are children of either species or transboundary (therefore we need transboundary and species in order to be able to add breeds)
 - Addition of new information as we have them
 - E.g. adding xref and synonym from OMIA
 - Upcoming: xref and synonym form another database. 
