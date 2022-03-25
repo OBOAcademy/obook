@@ -23,6 +23,8 @@ The goal of this course is to provide ongoing training for the OBO community. As
 
 | Date | Lesson | Notes | Recordings |
 | --- | --- | --- | --- |
+| 2022/04/19 | Application/project ontologies | |
+| 2022/04/05 | [Disjointness](https://oboacademy.github.io/obook/tutorial/disjointness/) | | 
 | 2022/03/22 | [Creating an ontology from scratch](../howto/create-ontology-from-scratch.md) | |[Here](https://drive.google.com/file/d/1xWAsIlwMQdGMVcb_-essZH1uo5beVT1Z/view?usp=sharing) |
 | 2022/03/08 | Obsoletions in OBO ontologies | Review [Obsoleting an Existing Ontology Term](https://oboacademy.github.io/obook/howto/obsolete-term/) and [Merging Ontology Terms](https://oboacademy.github.io/obook/howto/merge-terms/). Slides are [here](https://docs.google.com/presentation/d/1LrP4EJp_kXaloUl3BKWpf68KxsTURayrOn8fBuCjhgY/edit#slide=id.p1). | [Here](https://drive.google.com/file/d/1cAOQ2WKaXqzH8xif78yTtRZOtfqKTPb1/view?usp=sharing) |
 | 2022/02/22 | [SPARQL for OBO ontology development](../tutorial/sparql.md) | | [Here](https://drive.google.com/file/d/1oKJ-1iWmTHHWf1TaOAr1xfhSjK0BKYVu/view?usp=sharing) |
