@@ -1,53 +1,52 @@
-# How to start with the lessons
+# Getting started with the training
 
-Before you start with the lessons of this course, keep the following in mind:
+Here are some points to keep in mind whilst working through the lessons and other semantic engineering training materials.
 
-1. The materials in this course are all intended to be used for self-study. We sometimes offer [flipped-classroom](https://en.wikipedia.org/wiki/Flipped_classroom) sessions for new members on our teams - this means that we expect them to work through the entire course themselves and then come to use with questions and requests for clarifications.
-2. There is no need to reinvent the wheel: there are a lot of great materials out there already. Providing references to these these external resources is an essential part of the course - some lessons primarily comprise external tutorials, blog articles and more - please make sure you take advantage of them.
-3. Some of the materials developed by us are a bit rough around the edges, and we need your help to fix and improve them. To that end, we appreciate anything from [suggestions for improvement](#issues) to [pull requests](#pulls).
-4. Depending on your specific role and interest, you can choose which lessons are relevant to you. There is no specific order, but if you want to start somewhere, we recommend [Contributing to OBO ontologies: Protege and Github](lesson/contributing-to-obo-ontologies.md) and/or [Using Ontologies and Ontology Terms](lesson/ontology-term-use.md)
+1. The course materials are designed for self-study. [Flipped-classroom](https://en.wikipedia.org/wiki/Flipped_classroom) sessions are offered on occassion and are generally intended to onboard new contributors. The expectation is that new recruits will work through the course themselves and come to  sessions with questions and requests for clarifications.
+2. There are a lot of great materials out there already. Some lessons primarily comprise external tutorials, blog articles and more. Reviewing these external resources is an essential part of the course.
+3. These training materials are constantly evolving and your help with improving them would be greatly appreciated. Please feel free to submit [suggestions for improvement](#issues) and/or [pull requests](#pulls).
+4. Depending on your specific role and interest, some lessons may be more or less relevant for your use case. There is no specific order, but if you are new to OBO ontologies, here are some recommended starting points:
+- [Contributing to OBO ontologies: Protégé and Github](lesson/contributing-to-obo-ontologies.md)
+- [Using Ontologies and Ontology Terms](lesson/ontology-term-use.md)
 
 <a name="oboroles"></a> 
 ## The different roles of OBO Semantic Engineering
 
-There are a wide variety of entry points into the OBO world, for example:
+Some learning pathways are geared towards specific roles within the OBO Semantic Engineering space. Below are some of the typical roles and their typical tasks.
 
-### *Database Curator*: You are
+### *Database Curator*:
+- uses ontologies for annotating datasets, experiments and publications
+- requests new terms to be added to ontologies
+- suggests corrections to existing ontologies, e.g., incorrect synonyms, missing definitions, typos, modelling inconsistencies
 
-- using ontologies for annotating datasets, experiments and publications
-- requesting new terms from ontologies
-- Suggest corrections to existing ontologies, such as wrong or missing synonyms, typos and definitions
+### *Ontology Curator*:
+- develops and maintains ontologies
+- adds terms to ontologies
+- edits ontologies, such as adding synonyms and correcting typos
+- publishes ontology releases
 
-### *Ontology Curator*: You are 
-- developing and maintaining ontologies
-- adding terms to ontologies
-- performing changes to ontologies, like adding or correcting synonyms
-- responsible for ontology releases
-
-### *Ontology Engineer/Developer*: You are
-- developing design patterns for ontologies, specifying the logical structure of terms
-- responsible for ensuring the specification and consistent application of metadata in your ontologies (which annotation properties to use, minimal metadata standards)
+### *Ontology Engineer/Developer*:
+- develops design patterns for ontologies, specifies the logical structure of terms
+- ensures the specification and consistent application of metadata in ontologies, e.g., defining minimal metadata standards and which annotation properties to use
 - defining quality control checks
 
-### *Ontology Pipeline Specialist*: You are
-- developing ontology pipelines with `make` and `ROBOT`
-- building the release and quality control architecture that *Engineers* and *Curators* need to do their work.
-- building infrastructure for application ontologies, implementing dynamic imports modules, transformations of and mappings to other ontologies.
+### *Ontology Pipeline Specialist*:
+- develops ontology pipelines with `make` and `ROBOT` commands
+- builds the release and quality control architecture that *Engineers* and *Curators* need to do their work
+- builds infrastructure for application ontologies, implements dynamic imports modules, facilitates transformations of and mappings to other ontologies
 
-### *Semantic ETL Engineer*: You are
+### *Semantic ETL Engineer*:
+- builds incoming pipelines from public life science resources such as Bgee, Panther, UniProt and many others
+- leverages ontologies to glue together data from different sources
+- leverages inferences derived from ontologies to augment information in proprietary data sources
 
-- Building ingests from public life science resources such as Bgee, Panther, UniProt and many more
-- You use ontologies to glue together data from different sources
-- You use ontologies to augment your the information in your data sources through inference
+### *(Semantic) Software Engineer*:
+- uses ontologies to generate value to end-user applications, e.g., user interfaces, semantic facetted search
+- builds widgets that exploit the logical and graph structure of ontologies, e.g., phenotypic profile matching
+- builds ontology term browsers such as [OLS](https://www.ebi.ac.uk/ols/index)
 
-### *(Semantic) Software Engineer*: You are
+Of course, many of you will not be confined to only one of the above roles. While they all require specialised training, many shared skill requirements exist. The OBO Semantic Engineering course is intended to:
 
-- using ontologies to generate value to end-user applications (user interfaces, semantic facetted search)
-- building widgets that exploit the logical and graph structure of ontologies, for example phenotypic profile matching
-- building ontology term browsers such as [OLS](https://www.ebi.ac.uk/ols/index).
-
-Of course, many of you will occupy more than one of the above "hats" or roles. While they all require specialised training, many shared skill requirements exist. This course is being developed to:
-
-- Provide basic training for OBO Semantic Engineers of any of the above flavours
-- Provide an entry point for people new to the field, for example as part of onboarding activities for projects working with ontologies
-- Capture some of the typical pitfalls and how-to's guides to address common problems across the OBO-sphere
+- Provide basic training for OBO Semantic Engineers performing any of the tasks mentioned above
+- Provide an entry point for users new to the field, e.g., as part of onboarding activities for projects working with ontologies
+- Capture some of the typical pitfalls and provide guides to address common problems across the OBO-sphere
