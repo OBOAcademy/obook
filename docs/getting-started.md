@@ -2,7 +2,7 @@
 
 Here are some points to keep in mind whilst working through the lessons and other semantic engineering training materials.
 
-1. The course materials are designed for self-study. [Flipped-classroom](https://en.wikipedia.org/wiki/Flipped_classroom) sessions are offered on occassion and are generally intended to onboard new contributors. The expectation is that new recruits will work through the course themselves and come to  sessions with questions and requests for clarifications.
+1. The course materials are designed for self-study. [Flipped-classroom](https://en.wikipedia.org/wiki/Flipped_classroom) sessions are offered on occassion and are generally intended to onboard new contributors. The expectation is that new recruits will work through the course themselves and come to sessions with questions and requests for clarifications.
 2. There are a lot of great materials out there already. Some lessons primarily comprise external tutorials, blog articles and more. Reviewing these external resources is an essential part of the course.
 3. These training materials are constantly evolving and your help with improving them would be greatly appreciated. Please feel free to submit [suggestions for improvement](#issues) and/or [pull requests](#pulls).
 4. Depending on your specific role and interest, some lessons may be more or less relevant for your use case. There is no specific order, but if you are new to OBO ontologies, here are some recommended starting points:
