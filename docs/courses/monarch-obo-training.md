@@ -23,8 +23,9 @@ The goal of this course is to provide ongoing training for the OBO community. As
 
 | Date | Lesson | Notes | Recordings |
 | --- | --- | --- | --- |
-| 2022/05/17 | Contributing to ontologies: annotation properties | |
-| 2022/05/03 | Application/project ontologies | |
+| 2022/05/31 | Contributing to ontologies: annotation properties | |
+| 2022/05/17 | Application/project ontologies | |
+| 2022/05/03 | No meeting | |
 | 2022/04/19 | [Disjointness](https://oboacademy.github.io/obook/tutorial/disjointness/) | | 
 | 2022/04/05 | No meeting | |
 | 2022/03/22 | [Creating an ontology from scratch](../howto/create-ontology-from-scratch.md) | |[Here](https://drive.google.com/file/d/1xWAsIlwMQdGMVcb_-essZH1uo5beVT1Z/view?usp=sharing) |
