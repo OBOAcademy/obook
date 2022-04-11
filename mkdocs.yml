@@ -82,6 +82,7 @@ nav:
           - ODK:
               - Get set up for ODK-based ontology development: howto/setup-ontology-development-odk.md
               - Setting up the ODK: howto/odk-setup.md
+              - Update to a newer ODK version: howto/odk-update.md
               - Creating a Repo with ODK: howto/odk-create-repo.md
               - Dealing with Large Ontologies: howto/deal-with-large-ontologies.md
           - Git and Github:
