@@ -22,19 +22,20 @@ nav:
       - Contributing to OBO ontologies: lesson/contributing-to-obo-ontologies.md
       - Ontology Pipelines with ROBOT: lesson/ontology-pipelines.md
       - Analysing Linked Data: lesson/analysing-linked-data.md
-      - Application Ontology Development: lesson/application-ontology-development.md
       - Automating Ontology Workflows: lesson/automating-ontology-workflows.md
       - Developing an OBO Ontology: lesson/developing-an-obo-ontology.md
-      - Developing an Application Ontology: lesson/developing-application-ontologies.md
       - Ontology Design: lesson/ontology-design.md
       - Templates for OBO ontologies: lesson/templates-for-obo.md
-      - Ontology Development: lesson/ontology-development.md
       - Ontology Fundamentals: lesson/ontology-fundamentals.md
       - Modelling with Object Properties: lesson/modelling-with-object-properties.md
       - Ontology Term Use: lesson/ontology-term-use.md
       - RDF Fundamentals: lesson/rdf.md
-      - Semantic Database Fundamentals: lesson/semantic-database-fundamentals.md
       - Disease and Phenotype Ontologies: lesson/using-disease-and-phenotype-ontologies.md
+  - Lessons In Development:
+      - Application Ontology Development: lesson/application-ontology-development.md
+      - Developing an Application Ontology: lesson/developing-application-ontologies.md
+      - Ontology Development: lesson/ontology-development.md
+      - Semantic Database Fundamentals: lesson/semantic-database-fundamentals.md
   - Documentation: 
       - Tutorials:
           - Protege:
