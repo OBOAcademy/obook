@@ -7,8 +7,10 @@
 - [ELK reasoner](../howto/installing-elk-in-protege.md) (Protégé plug-in)
 - [Ontology contributor ID range](../howto/idrange.md)
 - [Docker and the Ontology Development Kit (ODK)](../howto/odk-setup.md) +
-- [ROBOT](http://robot.obolibrary.org) + <br/>
-\+ Required for engineers, optional for curators
+- [ROBOT](http://robot.obolibrary.org) + 
+<br/>
+<br/>
+<sub> \+ Required for engineers, optional for curators </sub>
 
 
 ## Primers (introduction to fundamental concepts and applications)
@@ -83,8 +85,10 @@
 - [Creating slims](../howto/add-new-slim.md)
 - [Setting up ODK](../howto/odk-setup.md)
 - [Switching ontologies](../howto/switching-ontologies.md)
-- [Dealing with large ontologies](../howto/deal-with-large-ontologies.md) + <br/>
-\+ Geared towards Engineers
+- [Dealing with large ontologies](../howto/deal-with-large-ontologies.md) + 
+<br/>
+<br/>
+<sub> \+ Geared towards Engineers </sub>
 
 
 ## Curated resources
