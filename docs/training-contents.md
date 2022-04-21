@@ -1,6 +1,6 @@
 # Training Contents
 
-##Prerequisites (required for training)
+## Prerequisites (required for training)
 
 [GitHub Desktop](https://desktop.github.com/)
 [Protégé](https://protege.stanford.edu/products.php)
@@ -11,18 +11,18 @@
 + Required for engineers, optional for curators
 
 
-##Primers (introduction to fundamental concepts and applications)
+## Primers (introduction to fundamental concepts and applications)
 
-###Ontologies
+### Ontologies
 Fundamentals of Ontologies
 
-###Git and GitHub
-Fundamentals of GitHub
-Github issues
-Cloning a Repo
-Creating pull requests
+### Git and GitHub
+1. [Fundamentals of GitHub](../tutorial/github-fundamentals.md)
+1. [Github issues](../tutorial/github-issues.md)
+1. [Cloning a Repo](../howto/clone-mondo-repo.md)
+1. [Creating pull requests](../howto/github-create-pull-request.md)
 
-###Protégé
+### Protégé
 Protégé interface
 Browse and search
 DL query
@@ -35,7 +35,7 @@ OBO-style term annotation
 Obsoleting terms
 Merging terms
 
-###Ontology Engineering
+### Ontology Engineering
 Setting up a ODK repository
 Developing an OBO ontology
 Understanding product variants
@@ -50,7 +50,7 @@ Basics of SPARQL
 Setting up slims
 
 
-##Lessons (formalised training) (?is there a sequence to these?)
+## Lessons (formalised training) (?is there a sequence to these?)
 
 Contributing to OBO ontologies
 Ontology Pipelines with ROBOT
@@ -66,7 +66,7 @@ RDF Fundamentals
 Disease and Phenotype Ontologies
 
 
-##How Tos
+## How Tos
 
 Adding taxon restrictions
 Changing files in pull requests
@@ -87,16 +87,16 @@ Dealing with large ontologies+
 + Geared towards Engineers
 
 
-##Curated resources
+## Curated resources
 
-###For the Ontology Curator
+### For the Ontology Curator
 
-####Pathways
+#### Pathways
 Ontology Curator (list of ontologies that are Go-style)
 Ontology Curator (list of ontologies that are OBI-style)
 
 
-###For the Ontology Engineer/Developer
+###F or the Ontology Engineer/Developer
 
-####Pathways
+#### Pathways
 Ontology Engineer/Developer
