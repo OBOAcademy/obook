@@ -1,28 +1,28 @@
 # Training Contents
 
-Prerequisites (required for training)
+##Prerequisites (required for training)
 
-GitHub Desktop
-Protégé
-ELK reasoner (Protégé plug-in)
-Ontology contributor ID range
-Docker and the Ontology Development Kit (ODK)*
-ROBOT*
-* Required for engineers, optional for curators
+[GitHub Desktop](https://desktop.github.com/)
+[Protégé](https://protege.stanford.edu/products.php)
+[ELK reasoner](../howto/installing-elk-in-protege.md) (Protégé plug-in)
+[Ontology contributor ID range](../howto/idrange.md)
+[Docker and the Ontology Development Kit (ODK)](../howto/odk-setup.md) +
+[ROBOT](http://robot.obolibrary.org) +
++ Required for engineers, optional for curators
 
 
-Primers (introduction to fundamental concepts and applications)
+##Primers (introduction to fundamental concepts and applications)
 
-Ontologies
+###Ontologies
 Fundamentals of Ontologies
 
-Git and GitHub
+###Git and GitHub
 Fundamentals of GitHub
 Github issues
 Cloning a Repo
 Creating pull requests
 
-Protégé
+###Protégé
 Protégé interface
 Browse and search
 DL query
@@ -35,7 +35,7 @@ OBO-style term annotation
 Obsoleting terms
 Merging terms
 
-Ontology Engineering
+###Ontology Engineering
 Setting up a ODK repository
 Developing an OBO ontology
 Understanding product variants
@@ -50,7 +50,7 @@ Basics of SPARQL
 Setting up slims
 
 
-Lessons (formalised training) (?is there a sequence to these?)
+##Lessons (formalised training) (?is there a sequence to these?)
 
 Contributing to OBO ontologies
 Ontology Pipelines with ROBOT
@@ -66,7 +66,7 @@ RDF Fundamentals
 Disease and Phenotype Ontologies
 
 
-How Tos
+##How Tos
 
 Adding taxon restrictions
 Changing files in pull requests
@@ -83,20 +83,20 @@ Merging terms
 Creating slims
 Setting up ODK
 Switching ontologies
-Dealing with large ontologies*
-*Geared towards Engineers
+Dealing with large ontologies+
++ Geared towards Engineers
 
 
-Curated resources
+##Curated resources
 
-For the Ontology Curator
+###For the Ontology Curator
 
-Pathways
+####Pathways
 Ontology Curator (list of ontologies that are Go-style)
 Ontology Curator (list of ontologies that are OBI-style)
 
 
-For the Ontology Engineer/Developer
+###For the Ontology Engineer/Developer
 
-Pathways
+####Pathways
 Ontology Engineer/Developer
