@@ -2,12 +2,12 @@
 
 ## Prerequisites (required for training)
 
-[GitHub Desktop](https://desktop.github.com/)
-[Protégé](https://protege.stanford.edu/products.php)
-[ELK reasoner](../howto/installing-elk-in-protege.md) (Protégé plug-in)
-[Ontology contributor ID range](../howto/idrange.md)
-[Docker and the Ontology Development Kit (ODK)](../howto/odk-setup.md) +
-[ROBOT](http://robot.obolibrary.org) +
+- [GitHub Desktop](https://desktop.github.com/)
+- [Protégé](https://protege.stanford.edu/products.php)
+- [ELK reasoner](../howto/installing-elk-in-protege.md) (Protégé plug-in)
+- [Ontology contributor ID range](../howto/idrange.md)
+- [Docker and the Ontology Development Kit (ODK)](../howto/odk-setup.md) +
+- [ROBOT](http://robot.obolibrary.org) +
 + Required for engineers, optional for curators
 
 
