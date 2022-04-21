@@ -8,7 +8,7 @@
 - [Ontology contributor ID range](../howto/idrange.md)
 - [Docker and the Ontology Development Kit (ODK)](../howto/odk-setup.md) +
 - [ROBOT](http://robot.obolibrary.org) +
-'+' Required for engineers, optional for curators
+- '+' Required for engineers, optional for curators
 
 
 ## Primers (introduction to fundamental concepts and applications)
@@ -84,7 +84,7 @@
 - [Setting up ODK](../howto/odk-setup.md)
 - [Switching ontologies](../howto/switching-ontologies.md)
 - [Dealing with large ontologies](../howto/deal-with-large-ontologies.md) +
-'+' Geared towards Engineers
+- '+' Geared towards Engineers
 
 
 ## Curated resources
