@@ -48,11 +48,12 @@ Community feedback is welcome for all open, OBO Foundry ontologies. Feedback is 
 
 ### Ways to provide feedback
 
-- GitHub issue tracker: Report bugs, new term requests, change requests, etc. on the GitHub issue tracker
+- Create a new issue on a GitHub issue tracker
 - Join the discussion: Comment on tickets or discussion board
-- Join the conversation: Attend ontology calls
+- Join the conversation: Attend ontology calls (Many ontology developer groups have recurring calls that are open to the community. Contact the ontology owner to request information about calls.)
 - Edit the ontology file: make changes on a branch and do a pull request (_more advanced_)
 
+#### How to guides
 - [Identifying missing terms](https://oboacademy.github.io/obook/lesson/ontology-term-use/#6-identifying-missing-terms) 
 - [Making term requests to existing ontologies](https://oboacademy.github.io/obook/lesson/ontology-term-use/#7-making-term-requests-to-existing-ontologies)
 
