@@ -21,6 +21,14 @@ Note: _Work on this document is in progress._
  - types of content that can be added to GitHub (e.g. you can attach a screenshot to an issue)
 1. [Intro to managing and tracking issues in GitHub](https://oboacademy.github.io/obook/tutorial/github-issues/). _This tutorial will walk you through creating issues about an ontology in GitHub._ 
 
+## Using Ontologies and Ontology Terms
+
+- [Why ontologies are useful](https://oboacademy.github.io/obook/lesson/ontology-term-use/#1-why-ontologies-are-useful)
+- [Finding good ontologies](https://oboacademy.github.io/obook/lesson/ontology-term-use/#2-finding-good-ontologies)
+- [Ontology repositories](https://oboacademy.github.io/obook/lesson/ontology-term-use/#3-ontology-repositories)
+- 
+- 
+
 # Curator docs
 
 _Under development._ May be revised/deleted.
