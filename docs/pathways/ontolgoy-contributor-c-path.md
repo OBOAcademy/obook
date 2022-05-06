@@ -54,7 +54,7 @@ Community feedback is welcome for all open, OBO Foundry ontologies. Feedback is 
 - Join the discussion: Comment on tickets or discussion board
 - Join the conversation: Attend ontology calls (Many ontology developer groups have recurring calls that are open to the community. Contact the ontology owner to request information about calls.)
 - Edit the ontology file: make changes on a branch and do a pull request (_more advanced_)
-  - See lesson on [Contributing to OBO ontologies](https://oboacademy.github.io/obook/lesson/contributing-to-obo-ontologies/)
+    - See lesson on [Contributing to OBO ontologies](https://oboacademy.github.io/obook/lesson/contributing-to-obo-ontologies/)
 
 ## Relevant Presentations
 
