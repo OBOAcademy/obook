@@ -1,12 +1,15 @@
 # Ontology Contributor Pathway: C-Path  
 
-Description: These are guidelines are developed for the [Critical Path Institute](https://c-path.org/) community to provide guidance on how to contribute to [OBO Foundry](https://obofoundry.org/) ontologies. While this guide is developed for the c-path community, it may be relevant to others as well.
+Description: These are guidelines are developed for the [Critical Path Institute](https://c-path.org/) (C-Path) community to provide guidance on how to contribute to [OBO Foundry](https://obofoundry.org/) ontologies. While this guide is developed for the C-Path community, it may be relevant to others as well.
 
-Note: Work on this document is still in progress, items that are not linked are currently being worked on.
+Note: _Work on this document is in progress._
 
-## Providing feedback to an ontology 
+## Providing Feedback to an Ontology 
 
-Most OBO Foundry ontologies use [GitHub](https://github.com/) for storing their files and for reporting issues.
+- The preferred mechanism for feedback for most OBO Foundry ontologies is via the ontology's [GitHub](https://github.com/) issue tracker. 
+- To find contact information for an ontology, go to the [OBO Foundry website](https://obofoundry.org/) website and search for a particular ontology.
+- For example, click on [**go**](https://obofoundry.org/ontology/go.html) (Gene Ontology) and you should see a link to the Tracker [https://github.com/geneontology/go-ontology/issues/](https://github.com/geneontology/go-ontology/issues/) and a contact person (in this case, Suzi Aleksander) on the left-hand side metadata.
+- If you can contact the ontology owner directly by email, but using the GitHub issue tracker is generally preferred.
 
 ## Getting started with GitHub
 
