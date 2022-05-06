@@ -14,6 +14,11 @@ Note: _Work on this document is in progress._
 ## Getting started with GitHub
 
 1. Open a free account at [https://github.com/](https://github.com/).
+1. [GitHub Fundamentals for OBO Engineers](https://oboacademy.github.io/obook/tutorial/github-fundamentals/). _Provides an introduction to GitHub including_:
+ - how to get started
+ - an overview of the organization of GitHub
+ - an introduction to Markdown (the simple markup language used in GitHub to do format text, like **bold** or _italics_)
+ - types of content that can be added to GitHub (e.g. you can attach a screenshot to an issue)
 1. [Intro to managing and tracking issues in GitHub](https://oboacademy.github.io/obook/tutorial/github-issues/)
 
 # Curator docs
