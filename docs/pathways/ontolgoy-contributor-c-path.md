@@ -13,7 +13,6 @@ Ontologies are routinely used for data standardization and in the analytical ana
 
 Ontologies are continuously iterated upon and improved. The OBO foundry ontologies are open, which means anyone can access them, and anyone can contribute to them. The types of contributions may include reporting issues, identifying bugs, making requests for new terms or changes, and you can also contribute directly to the ontology itself- if you are familiar with ontology editing workflows, you can download our ontologies and make edits on a branch and do a pull request in GitHub.
 
-
 ## Providing Feedback to an Ontology 
 
 - The preferred mechanism for feedback for most OBO Foundry ontologies is via the ontology's [GitHub](https://github.com/) issue tracker. 
@@ -40,7 +39,17 @@ Ontologies are continuously iterated upon and improved. The OBO foundry ontologi
 
 ## Contributing to Ontologies
 
-Th
+Community feedback is welcome for all open, OBO Foundry ontologies. Feedback is often provided in the form of:
+- new terms requests
+- etc.
+
+### Ways to provide feedback
+
+- GitHub issue tracker: Report bugs, new term requests, change requests, etc. on the GitHub issue tracker
+- Join the discussion: Comment on tickets or discussion board
+- Join the conversation: Attend ontology calls
+- Edit the ontology file: make changes on a branch and do a pull request (_more advanced_)
+
 - [Identifying missing terms](https://oboacademy.github.io/obook/lesson/ontology-term-use/#6-identifying-missing-terms) 
 - [Making term requests to existing ontologies](https://oboacademy.github.io/obook/lesson/ontology-term-use/#7-making-term-requests-to-existing-ontologies)
 
