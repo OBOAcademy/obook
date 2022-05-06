@@ -57,6 +57,11 @@ Community feedback is welcome for all open, OBO Foundry ontologies. Feedback is 
 - [Identifying missing terms](https://oboacademy.github.io/obook/lesson/ontology-term-use/#6-identifying-missing-terms) 
 - [Making term requests to existing ontologies](https://oboacademy.github.io/obook/lesson/ontology-term-use/#7-making-term-requests-to-existing-ontologies)
 
+## Relevant Presentations
+
+- [Using ontologies to standardize rare disease data collection](https://docs.google.com/presentation/d/1IpSW_X5hHSwLU_p4n-74QQSFD2vgk43ZvaOyxgmGNd4/edit#slide=id.p) - _By Nicole Vasilevsky, Presentation on June 15, 2022_
+- [RDCA-DAP: Searchability and Standardized Ontologies](https://www.youtube.com/watch?v=3y74zfNU3pw)- _By Ramona Walls, Recording from October 13, 2020_
+
 # Curator docs
 
 _Under development._ May be revised/deleted.
