@@ -26,8 +26,8 @@ Note: _Work on this document is in progress._
 - [Why ontologies are useful](https://oboacademy.github.io/obook/lesson/ontology-term-use/#1-why-ontologies-are-useful)
 - [Finding good ontologies](https://oboacademy.github.io/obook/lesson/ontology-term-use/#2-finding-good-ontologies)
 - [Ontology repositories](https://oboacademy.github.io/obook/lesson/ontology-term-use/#3-ontology-repositories)
-- 
-- 
+- [Assessing ontologies for use](https://oboacademy.github.io/obook/lesson/ontology-term-use/#4-assessing-ontologies-for-use)
+- [Identifying missing terms](https://oboacademy.github.io/obook/lesson/ontology-term-use/#6-identifying-missing-terms) 
 
 # Curator docs
 
