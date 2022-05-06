@@ -4,6 +4,16 @@ Description: These are guidelines are developed for the [Critical Path Institute
 
 Note: _Work on this document is in progress._
 
+## Why you should contribute to ontology development efforts?
+
+Ontologies are routinely used for data standardization and in the analytical analysis, but the ontologies themselves are under constant revisions and iterative development. Building ontologies is a community effort and we need expertise from different areas:
+- Technical expertise
+- Domain expertise
+- User experiences
+
+Ontologies are continuously iterated upon and improved. The OBO foundry ontologies are open, which means anyone can access them, and anyone can contribute to them. The types of contributions may include reporting issues, identifying bugs, making requests for new terms or changes, and you can also contribute directly to the ontology itself- if you are familiar with ontology editing workflows, you can download our ontologies and make edits on a branch and do a pull request in GitHub.
+
+
 ## Providing Feedback to an Ontology 
 
 - The preferred mechanism for feedback for most OBO Foundry ontologies is via the ontology's [GitHub](https://github.com/) issue tracker. 
@@ -27,7 +37,12 @@ Note: _Work on this document is in progress._
 - [Finding good ontologies](https://oboacademy.github.io/obook/lesson/ontology-term-use/#2-finding-good-ontologies)
 - [Ontology repositories](https://oboacademy.github.io/obook/lesson/ontology-term-use/#3-ontology-repositories)
 - [Assessing ontologies for use](https://oboacademy.github.io/obook/lesson/ontology-term-use/#4-assessing-ontologies-for-use)
+
+## Contributing to Ontologies
+
+Th
 - [Identifying missing terms](https://oboacademy.github.io/obook/lesson/ontology-term-use/#6-identifying-missing-terms) 
+- [Making term requests to existing ontologies](https://oboacademy.github.io/obook/lesson/ontology-term-use/#7-making-term-requests-to-existing-ontologies)
 
 # Curator docs
 
