@@ -1,16 +1,21 @@
-# Ontology Contributor Pathway: C-Path
+# Ontology Contributor Pathway: C-Path  
 
-Note: There is no one single accepted way of doing ontology curation in the OBO-World, see [here](ontology-curator.md). This guide reflects the practice of the GO-style ontology curation, as it is used by GO, Uberon, CL, PATO and others.
+Description: These are guidelines are developed for the [Critical Path Institute](https://c-path.org/) community to provide guidance on how to contribute to [OBO Foundry](https://obofoundry.org/) ontologies. While this guide is developed for the c-path community, it may be relevant to others as well.
 
 Note: Work on this document is still in progress, items that are not linked are currently being worked on.
 
-## Getting Set-up
+## Providing feedback to an ontology 
 
-1. Download and install [GitHub Desktop](https://desktop.github.com/)
-2. Download and install [Protege](https://protege.stanford.edu/products.php)
-3. Install [ELK reasoner in protege](../howto/installing-elk-in-protege.md)
-4. [Setting up your ID range](../howto/idrange.md)
-5. [Setting up ODK](../howto/odk-setup.md)
+Most OBO Foundry ontologies use [GitHub](https://github.com/) for storing their files and for reporting issues.
+
+## Getting started with GitHub
+
+1. Open a free account at [https://github.com/](https://github.com/).
+1. [Intro to managing and tracking issues in GitHub](https://oboacademy.github.io/obook/tutorial/github-issues/)
+
+# Curator docs
+
+_Under development._ May be revised/deleted.
 
 ## Learning
 
