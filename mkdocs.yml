@@ -18,6 +18,7 @@ nav:
       - Ontology Curator GO-style: pathways/ontology-curator-go-style.md
       - Ontology Curator OBI-style: pathways/ontology-curator-obi-style.md
       - Ontology Engineer/Developer: pathways/ontology-engineer.md
+      - C-Path contributor: pathways/ontolgoy-contributor-c-path.md
   - Lessons:
       - Contributing to OBO ontologies: lesson/contributing-to-obo-ontologies.md
       - Ontology Pipelines with ROBOT: lesson/ontology-pipelines.md
