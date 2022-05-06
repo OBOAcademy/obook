@@ -11,7 +11,7 @@ Note: _Work on this document is in progress._
 - For example, click on [**go**](https://obofoundry.org/ontology/go.html) (Gene Ontology) and you should see a link to the Tracker [https://github.com/geneontology/go-ontology/issues/](https://github.com/geneontology/go-ontology/issues/) and a contact person (in this case, Suzi Aleksander) on the left-hand side metadata.
 - If you can contact the ontology owner directly by email, but using the GitHub issue tracker is generally preferred.
 
-## Getting started with GitHub
+## Getting Started with GitHub
 
 1. Open a free account at [https://github.com/](https://github.com/).
 1. [GitHub Fundamentals for OBO Engineers](https://oboacademy.github.io/obook/tutorial/github-fundamentals/). _Provides an introduction to GitHub including_:
@@ -20,7 +20,6 @@ Note: _Work on this document is in progress._
  - an introduction to Markdown (the simple markup language used in GitHub to do format text, like **bold** or _italics_)
  - types of content that can be added to GitHub (e.g. you can attach a screenshot to an issue)
 1. [Intro to managing and tracking issues in GitHub](https://oboacademy.github.io/obook/tutorial/github-issues/). _This tutorial will walk you through creating issues about an ontology in GitHub._ 
-  - 
 
 # Curator docs
 
