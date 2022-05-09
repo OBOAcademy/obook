@@ -63,6 +63,8 @@ nav:
           - Dealing with Semantic Data: 
               - From Tables to Linked Data: tutorial/linking-data.md
               - Basic SPARQL for OBO Engineers: tutorial/sparql.md
+          - Mappings and SSSOM:
+              - Basic Tutorial: tutorial/sssom-manual.md
           - General Ontology Modelling:
               - Family History Knowledge Base (FHKB) tutorial: tutorial/fhkb.md
       - How-to guides:
