@@ -4,12 +4,11 @@ Based on [CL editors training](https://docs.google.com/presentation/d/11WeCHCeGY
 
 ## Why do we need ontologies 
 
+We face an every increasing deluge of biological data, analysis.  Ensuring that this data and analysis is Findable, Accessible, Interoperable and Re-usable ([FAIR](https://www.nature.com/articles/sdata201618)) is a major challenge.  Findability Interoperabiltiy and Resuability can all be enhanced by standardising metadata. Well standardised metadata can make it easy to *find* data and analyses despite variations in terminology (['Clara cell' vs 'nonciliated bronchiolar secretory cell'](https://pubmed.ncbi.nlm.nih.gov/7047186) vs ['club cell'](https://www.ebi.ac.uk/ols/ontologies/cl/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCL_0000158)) and precision ('bronchial epithelial cell' vs 'club cell'). Understanding what entities are referred to in metadata and how they relate to the annotated material can help users work out if the data or analysis they have found is of interest to them and can aid in its re-use and interoperability with other data and analyses.  For example does an annotation of sample data with a term for breast cancer refer to the health status of the patient from which the sample was derived or that the sample itself comes from a breast cancer tumor?
+
 ### We can't find what we're looking for
-- Too flexible, multiple options, no enforcement standards 
-    - standardized
-    - quasi-standardized
-    - non-standardized
-- Data at varying depth or granularity
+
+Given variation in terminology and precision, annotation with free text alone is not sufficient for findability.  One very lightweight solution to this is to rely on user generated keyword systems and some system that allows users to choose from previously used keywords.  This can produce some degree of annotation alignment but also results in fragmented annotation and varying levels of precision with no clear way to relate annotations.
 
 For example, trying to refer to feces, in NCBI BioSample:
 
@@ -27,13 +26,18 @@ For example, trying to refer to feces, in NCBI BioSample:
 
 ### We don't know what we're talking about
 
-Because we have no single reference glossary, the result is millions of statements that are not obviously related.
- 
-Here is the male genitalia of a gasteruptiid wasp, and these 5 different structures here have each been labeled "paramere" by different people, each studying different hymenopteran lineages. How do we know what "paramere" means when it is referred to?
+Terminology alone can be ambiguous.  The same term may be used for completely unrelated or vaguely analogous structures.  An insect femur and an mammalian femur are not evolutionarily or related or structurally similar.  Biologists often like to use abbreviations to annotate data, but these can be extremely ambiguous.  [*Drosophila* biologists use DA1](https://www.ebi.ac.uk/ols/search?q=DA1&groupField=iri&start=0&ontology=fbbt) to refer to structures in the tracheal system, musculature and nervous system.  Outside of *Drosophila* biology it is used to refer to a [rare disease](https://www.ebi.ac.uk/ols/ontologies/ordo/terms?iri=http%3A%2F%2Fwww.orpha.net%2FORDO%2FOrphanet_1146), [a neuron type](https://www.ebi.ac.uk/ols/ontologies/wbbt/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FWBbt_0004871) in *C.elegans*.  
+
+Some extreme examples of this ambiguity come from terminological drift in fields with a long history.  For example 
+in the male genitalia of a gasteruptiid wasp, these 5 different structures here have each been labeled "paramere" by different people, each studying different hymenopteran lineages. How do we know what "paramere" means when it is referred to?
 
 ![](../images/discussions/intro-to-ontologies/paramere.png)
 
+This striking example shows that even precise context is not always sufficient for disambiguation.
+
 ## Controlled vocabulary (CV)
+
+Rather than rely on users to generate lists of re-usable keywords, we can instead pre-specify allowable controlled vocabularies for annotation.
 
 ### Definition
 
