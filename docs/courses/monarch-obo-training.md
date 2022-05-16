@@ -25,7 +25,7 @@ The goal of this course is to provide ongoing training for the OBO community. As
 | --- | --- | --- | --- |
 | 2022/06/14 | Application/project ontologies | |
 | 2022/05/31 | Contributing to ontologies: annotation properties | |
-| 2022/05/17 | Introduction to managing mappings with SSSOM | |
+| 2022/05/17 | [Introduction to managing mappings with SSSOM](https://mapping-commons.github.io/sssom/tutorial/) | |
 | 2022/05/03 | No meeting | |
 | 2022/04/19 | [Disjointness](https://oboacademy.github.io/obook/tutorial/disjointness/) and Unsatisfiability | | [Here](https://drive.google.com/file/d/1N5khqNnNCCMgLyIDKTW7-ATTbo_AGnGS/view?usp=sharing) | 
 | 2022/04/05 | No meeting | |
