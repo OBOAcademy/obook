@@ -39,12 +39,12 @@ Ontologies are continuously iterated upon and improved. The OBO foundry ontologi
 
 ## Contributing to Ontologies
 
-Community feedback is welcome for all open, OBO Foundry ontologies. Feedback is often provided in the form of:
-- new terms requests
-- add/revise synonyms, definitions
-- reclassify a term
-- report a bug
-- etc.
+Community feedback is welcome for all open, OBO Foundry ontologies. Feedback is often provided in the form of:  
+- new terms requests  
+- add/revise synonyms, definitions  
+- reclassify a term  
+- report a bug  
+- etc.  
 
 ### Ways to provide feedback
 
