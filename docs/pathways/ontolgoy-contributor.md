@@ -49,7 +49,7 @@ Community feedback is welcome for all open, OBO Foundry ontologies. Feedback is 
 ### Ways to provide feedback
 
 - Create a new issue on a GitHub issue tracker 
-    - See lessson on [Identifying missing terms](https://oboacademy.github.io/obook/lesson/ontology-term-use/#6-identifying-missing-terms) 
+    - See lesson on [Identifying missing terms](https://oboacademy.github.io/obook/lesson/ontology-term-use/#6-identifying-missing-terms) 
     - See lesson on [Making term requests to existing ontologies](https://oboacademy.github.io/obook/lesson/ontology-term-use/#7-making-term-requests-to-existing-ontologies))
 - Join the discussion: Comment on tickets or discussion board
 - Join the conversation: Attend ontology calls (Many ontology developer groups have recurring calls that are open to the community. Contact the ontology owner to request information about calls.)
