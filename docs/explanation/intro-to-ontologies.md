@@ -37,11 +37,7 @@ This striking example shows that even precise context is not always sufficient f
 
 ## Controlled vocabulary (CV)
 
-Rather than rely on users to generate lists of re-usable keywords, we can instead pre-specify allowable controlled vocabularies for annotation.
-
-### Definition
-
-Any closed, prescribed list of terms.
+Rather than rely on users to generate lists of re-usable keywords, we can instead pre-specify a set of terms to use in annotation. This is usually refered to a controlled vocabulary or CV.
 
 ### Key features
 
@@ -82,7 +78,7 @@ Any controlled vocabulary that is arranged in a hierarchy.
     - Pinot Gris
     - Riesling
 
-Taxonomy – a hierarchical CV in which hierarchy = classification.  e.g. 'Merlot' is classified as a 'Red' (wine).  Some heirarchical CVs
+Taxonomy – a hierarchical CV in which hierarchy = classification.  e.g. 'Merlot' is classified as a 'Red' (wine). Not all heirchical CVs are classifications.  For example, anatomical atlases often have heirarchical CVs representing parthood.
 
 ### Support for Grouping and varying levels of precision
 
@@ -98,6 +94,7 @@ Hierarchical CVs tend to increase in complexity in particular ways.
 
 ### Synonyms
 
+To support findability, the developers of heirarchical CVs often need to associated synonyms or closely related terms with terms in their CV.
 
 
 ### Polyhierarchy
@@ -114,8 +111,11 @@ Developers of heirarchical CVs often come to realise that multiple relationship 
 
 ### Definition
 
-- A queryable store of knowledge
-- A classification
+Definitions of ontologies can be controversial. Rather than attempts a comprehensive definition, this tutorial will emphasise ontologies as:
+
+- Classifications
+- Queryable store of knowledge
+
 
 ### Key features
 
