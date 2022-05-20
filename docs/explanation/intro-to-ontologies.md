@@ -114,16 +114,16 @@ Developers of heirarchical CVs often come to realise that multiple relationship 
 Definitions of ontologies can be controversial. Rather than attempts a comprehensive definition, this tutorial will emphasise ontologies as:
 
 - Classifications
-- Queryable store of knowledge
+- Queryable stores of knowledge
 
 
-### Key features
+### Key features of well structured ontolgies:
 
+- Terms are arranged in a classification hierarchy
 - Terms are defined
 - Terms are richly annotated:
     - Textual definitions, references, synonyms, links, cross-references
-- Relationships between terms are defined, allowing logical inference and sophisticated queries as well as graphs
-- Terms are arranged in a classification hierarchy
+- Relationships between terms are defined, allowing logical inference and sophisticated queries as well as graph representations.
 - Expressed in a knowledge representation language such as RDFS, OBO, or OWL
 
 ### Examples 
@@ -161,7 +161,8 @@ A group of ontologies - loosely co-ordinated through the OBO Foundry, have stand
 
 OBO ontologies are mostly written in OWL2 or OBO syntax.  The latter is a legacy format that maps completely to OWL.
 
-For a more in-depth explanation of formats (OWL, OBO, RDF etc.) refer to explainer on [OWL format variants](../explanation/owl-format-variants.md)
+For a more in-depth explanation of formats (OWL, OBO, RDF etc.) refer to explainer on [OWL format variants](../explanation/owl-format-variants.md).
+In the examples below we will use OWL Manchester syntax, which allows us to express formal logic in English-like sentences.
 
 ### An ontology as a classification 
 
@@ -176,7 +177,7 @@ For example:
 OWL: hindwing SubClassOf wing 
 OBO: hindwing is_a wing
 
-In English we might say: "a hindwing is a type of wing" or more specifically, "all instances of hindwing are instances wing."
+In English we might say: "a hindwing is a type of wing" or more specifically, "all instances of hindwing are instances wing."  'Instance' here refers to  a single wing of an individual fly.
 
 ![](../images/discussions/intro-to-ontologies/hindwing-subclass.png)
 
@@ -194,9 +195,11 @@ Note the existential quantifier `some` in OWL format -- it is interpreted as "th
 
 ![](../images/discussions/intro-to-ontologies/leg-wing.png)
 
-Note that there is a difference in how you order subClassOf:
+The quantifier is important to the direction of relations.
+
+ subClassOf:
 `'wing' SubClassOf part_of some 'thoracic segment'` is correct
-`'thoracic segment' SubClassOf has_part some 'wing'` is incorrect as it implies all thoracic segment has wings on it. 
+`'thoracic segment' SubClassOf has_part some 'wing'` is incorrect as it implies all thoracic segment have wings as a part. 
 
 Similarly:
 `'claw' SubClassOf connected_to some 'tarsal segment'` is correct
