@@ -1,7 +1,7 @@
 # Contributing to ontologies: annotation properties
 
 Editors: Sabrina Toro (@sabrinatoro), Nicolas Matentzoglu (@matentzn)
-Examples with images can be found [here] (https://docs.google.com/presentation/d/1AIB7WNNkhQKzKnViJHZoNNjxZZ2Y90LuE2QqeTG1ra4/edit?usp=sharing)
+Examples with images can be found [here](https://docs.google.com/presentation/d/1AIB7WNNkhQKzKnViJHZoNNjxZZ2Y90LuE2QqeTG1ra4/edit?usp=sharing).
 
 ## What are annotation properties? 
 An entity such as an individual, a class, or a property can have annotations. **Annotation property defines the type of annotation and is used to link the entity to a value**, which in turn can be anything from a literal (a string, number, date etc) to another entity.
@@ -64,7 +64,7 @@ note: the type of annotation required for an annotation property can be defined 
 
 Note: before creating a new annotation property, it is always a good idea to check for an existing annotation property first. For example: OBO Metadata Ontology (https://www.ebi.ac.uk/ols/ontologies/omo), which could be imported
 
-Detailed explanations for adding a new annotation property can be found [here] (https://mondo.readthedocs.io/en/latest/editors-guide/new-annotation-property/)
+Detailed explanations for adding a new annotation property can be found [here](https://mondo.readthedocs.io/en/latest/editors-guide/new-annotation-property/)
 
 
 
