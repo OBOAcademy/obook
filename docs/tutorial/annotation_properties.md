@@ -6,11 +6,11 @@ Examples with images can be found [here](https://docs.google.com/presentation/d/
 ## What are annotation properties? 
 An entity such as an individual, a class, or a property can have annotations. **Annotation property defines the type of annotation and is used to link the entity to a value**, which in turn can be anything from a literal (a string, number, date etc) to another entity.
 
-Example: everything **in bold** is an annotation property
-http://purl.obolibrary.org/obo/MONDO_0004975 
+Example: everything **in bold** is an annotation property  
+http://purl.obolibrary.org/obo/MONDO_0004975   
 – **rdfs:label** – ‘Alzheimer disease’     
-– **has_exact_synonym** – Alzheimer dementia 
-– **database_cross_reference** - NCITC2866
+– **has_exact_synonym** – Alzheimer dementia  
+– **database_cross_reference** - NCITC2866  
 
 ## Annotation Properties facts
 - **Annotation properties have their own IDs**
