@@ -36,11 +36,12 @@ Example: 'synonym_type_property' (http://www.geneontology.org/formats/oboInOwl#S
     - boolean 
       e.g. 'owl.deprecated' (http://www.w3.org/2002/07/owl#deprecated)
   - Entity IRI - another annotation property: 
-      e.g. 'in_subset' (http://purl.obolibrary.org/obo/IAO_0000112)
+      e.g. 'has curation status' (http://purl.obolibrary.org/obo/IAO_0000114)
   - IRI editor :
       e.g. 'seeAlso' (http://www.w3.org/2000/01/rdf-schema#seeAlso)
   - A Property value 
       e.g. 'has_synonym_type' (http://www.geneontology.org/formats/oboInOwl#hasSynonymType)
+      e.g. 'in_subset' (http://purl.obolibrary.org/obo/IAO_0000112)
   
 note: the type of annotation required for an annotation property can be defined by adding a Range + "select datatype" in the Annotation Property's Description
   e.g. : 'scheduled for obsoletion on or after' (http://purl.obolibrary.org/obo/IAO_0006012)
