@@ -34,10 +34,10 @@ Example: 'synonym_type_property'(http://www.geneontology.org/formats/oboInOwl#Sy
 
 - **Annotation properties are used with specific type of annotations**
   - Literal: <em>(one can see [type: xsd:string] in the annotation)<em>
-    - String  
-      - e.g. 'definition' (http://purl.obolibrary.org/obo/IAO_0000115)
+    - String    
+        - e.g. 'definition' (http://purl.obolibrary.org/obo/IAO_0000115)
     - boolean  
-      - e.g. 'owl.deprecated' (http://www.w3.org/2002/07/owl#deprecated)
+        - e.g. 'owl.deprecated' (http://www.w3.org/2002/07/owl#deprecated)
   - Entity IRI :  
       - e.g. 'has curation status' (http://purl.obolibrary.org/obo/IAO_0000114)
   - IRI editor :  
