@@ -129,6 +129,7 @@ nav:
           - Introduction to Ontologies: explanation/intro-to-ontologies.md
           - Logical axiomatization of classes & use of reasoning: explanation/logical-axiomatization.md
           - Term Comments: explanation/term-comments.md
+          - Introduction to Annotation Properties: explanation/annotation-properties.md
           - Writing good issues: explanation/writing-good-issues.md
           - Which biomedical ontologies should we use?: explanation/which-ontology-to-use.md
           - OWL, OBO, JSON? Base, simple, full, basic? What should you use, and why?: explanation/owl-format-variants.md
