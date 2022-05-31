@@ -17,32 +17,32 @@ Example: <em>(everything **in bold** is an annotation property)<em>
 ## Annotation Properties facts
 - **Annotation properties have their own IDs**  
 
-Examples:
+ Examples:
 
-- rdfs:label : http://www.w3.org/2000/01/rdf-schema#label
-- has_exact_synonym : http://www.geneontology.org/formats/oboInOwl#hasExactSynonym
-- database_cross_reference : http://www.geneontology.org/formats/oboInOwl#hasDbXref
+   - rdfs:label : http://www.w3.org/2000/01/rdf-schema#label
+   - has_exact_synonym : http://www.geneontology.org/formats/oboInOwl#hasExactSynonym
+   - database_cross_reference : http://www.geneontology.org/formats/oboInOwl#hasDbXref
 
 
 - **Annotation properties are just like other entities (classes, individuals) and can have their own annotations**  
 
-Examples: http://purl.obolibrary.org/obo/IAO_0000232
+ Examples: http://purl.obolibrary.org/obo/IAO_0000232
 
-- rdfs:label : 'curator note'
-- definition : 'An administrative note of use for a curator but of no use for a user'
-- ...
+ - rdfs:label : 'curator note'
+ - definition : 'An administrative note of use for a curator but of no use for a user'
+ - ...
 
 - **Annotation properties can include hierarchical structure**  
 Example: 'synonym_type_property'(http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty)
 
 - **Annotation properties are (usually) used with specific type of annotation values**
-  
-- Literal: <em>(one can see [type: xsd:string] in the annotation)<em>
+
+ - Literal: <em>(one can see [type: xsd:string] in the annotation)<em>
     - String    
         - e.g. 'definition' (http://purl.obolibrary.org/obo/IAO_0000115)
     - boolean  
         - e.g. 'owl.deprecated' (http://www.w3.org/2002/07/owl#deprecated)
-- Entity IRI :  
+ - Entity IRI :  
     - Classes or individuals: e.g. 'has curation status' (http://purl.obolibrary.org/obo/IAO_0000114)
     - Arbitray URIs, e.g. links to website with the 'seeAlso' (http://www.w3.org/2000/01/rdf-schema#seeAlso) property
     - Or even other annotation properties `*`  
@@ -63,12 +63,14 @@ e.g. : 'scheduled for obsoletion on or after' (http://purl.obolibrary.org/obo/IA
     - Object Properties have the following property characteristics: Inverse, Symmetric, Asymmetric, Reflexive, Irreflexive, Functional, Inverse Functional, and Transitive.
     - (blue in protege)
 
-- **A Data Property:** 
+- **A Data Property:**
     - connect individuals with literals **in way that affects reasoning**
     - represent relation between a class and literal
     - also called “attributes”
     - E.g.: Data Property: 'hasName', 'hasPrice', 'hasCalories', 'hasSugarContent',...
     - (green in protege)
+    - More details on how to use Data Properties [here](https://oboacademy.github.io/obook/tutorial/fhkb/#data-properties-in-the-fhkb)
+
 
 
 ## Creating new Annotation Properties
@@ -80,3 +82,7 @@ Note: before creating a new annotation property, it is always a good idea to che
 
 Detailed explanations for adding a new annotation property can be found [here](https://mondo.readthedocs.io/en/latest/editors-guide/new-annotation-property/)
 
+
+## Remark: Using the word "Annotation"
+
+The word "annotation" is used in different contexts to mean different things. For instance, "annotation in owl" (ie annotations to an ontology term) is different from "annotation in the biocuration sense" (ie gene-to-disease, gene-to-phenotype, gene-to-function annotations). It is therefore crucial to give context when using the word "annotation". 
