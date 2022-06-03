@@ -2,8 +2,6 @@
 
 Description: These are guidelines are developed for anyone interested in contributing to ontologies to provide guidance on how to contribute to [OBO Foundry](https://obofoundry.org/) ontologies.
 
-Note: _Work on this document is in progress._
-
 ## Why you should contribute to ontology development efforts?
 
 Ontologies are routinely used for data standardization and in the analytical analysis, but the ontologies themselves are under constant revisions and iterative development. Building ontologies is a community effort and we need expertise from different areas:
@@ -11,14 +9,14 @@ Ontologies are routinely used for data standardization and in the analytical ana
 - Domain expertise
 - User experiences
 
-Ontologies are continuously iterated upon and improved. The OBO foundry ontologies are open, which means anyone can access them, and anyone can contribute to them. The types of contributions may include reporting issues, identifying bugs, making requests for new terms or changes, and you can also contribute directly to the ontology itself- if you are familiar with ontology editing workflows, you can download our ontologies and make edits on a branch and do a pull request in GitHub.
+The OBO foundry ontologies are open, which means anyone can access them, and anyone can contribute to them. The types of contributions may include reporting issues, identifying bugs, making requests for new terms or changes, and you can also contribute directly to the ontology itself- if you are familiar with ontology editing workflows, you can download our ontologies and make edits on a branch and do a pull request in GitHub.
 
 ## Providing Feedback to an Ontology 
 
 - The preferred mechanism for feedback for most OBO Foundry ontologies is via the ontology's [GitHub](https://github.com/) issue tracker. 
 - To find contact information for an ontology, go to the [OBO Foundry website](https://obofoundry.org/) website and search for a particular ontology.
-- For example, click on [**go**](https://obofoundry.org/ontology/go.html) (Gene Ontology) and you should see a link to the Tracker [https://github.com/geneontology/go-ontology/issues/](https://github.com/geneontology/go-ontology/issues/) and a contact person (in this case, Suzi Aleksander) on the left-hand side metadata.
-- If you can contact the ontology owner directly by email, but using the GitHub issue tracker is generally preferred.
+- For example, click on [**go**](https://obofoundry.org/ontology/go.html) (Gene Ontology) and you should see a link to the tracker ()[https://github.com/geneontology/go-ontology/issues/](https://github.com/geneontology/go-ontology/issues/)) and a contact person (in this case, Suzi Aleksander) in the metadata on the left hand side.
+- You can contact the ontology owner directly by email, but using the GitHub issue tracker is generally the preferred contact mechanism.
 
 ## Getting Started with GitHub
 
@@ -28,7 +26,7 @@ Ontologies are continuously iterated upon and improved. The OBO foundry ontologi
  - an overview of the organization of GitHub
  - an introduction to Markdown (the simple markup language used in GitHub to do format text, like **bold** or _italics_)
  - types of content that can be added to GitHub (e.g. you can attach a screenshot to an issue)
-1. [Intro to managing and tracking issues in GitHub](https://oboacademy.github.io/obook/tutorial/github-issues/). _This tutorial will walk you through creating issues about an ontology in GitHub._ 
+1. [Intro to managing and tracking issues in GitHub](https://oboacademy.github.io/obook/tutorial/github-issues/). _This tutorial walks you through creating issues in GitHub._ 
 
 ## Using Ontologies and Ontology Terms
 
@@ -40,10 +38,10 @@ Ontologies are continuously iterated upon and improved. The OBO foundry ontologi
 ## Contributing to Ontologies
 
 Community feedback is welcome for all open, OBO Foundry ontologies. Feedback is often provided in the form of:  
-- new terms requests  
-- add/revise synonyms, definitions  
-- reclassify a term  
-- report a bug  
+- New terms requests  
+- Add/revise synonyms, definitions  
+- Reclassify a term  
+- Report a bug  
 - etc.  
 
 ### Ways to provide feedback
@@ -52,7 +50,7 @@ Community feedback is welcome for all open, OBO Foundry ontologies. Feedback is 
     - See lesson on [Identifying missing terms](https://oboacademy.github.io/obook/lesson/ontology-term-use/#6-identifying-missing-terms) 
     - See lesson on [Making term requests to existing ontologies](https://oboacademy.github.io/obook/lesson/ontology-term-use/#7-making-term-requests-to-existing-ontologies)
 - Join the discussion: Comment on tickets or discussion board
-- Join the conversation: Attend ontology calls (Many ontology developer groups have recurring calls that are open to the community. Contact the ontology owner to request information about calls.)
+- Join the conversation: Attend ontology calls (many ontology developer groups have recurring calls that are open to the community. Contact the ontology owner to request information about calls.)
 - Edit the ontology file: make changes on a branch and do a pull request (_more advanced_)
     - See lesson on [Contributing to OBO ontologies](https://oboacademy.github.io/obook/lesson/contributing-to-obo-ontologies/)
 
