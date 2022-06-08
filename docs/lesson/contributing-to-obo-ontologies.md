@@ -299,13 +299,13 @@ In the ORCID field, add your ORCID ID (in the format 0000-0000-0000-0000)
 
 #### Setting Preferences for New entities metadata
 
-You can have Protege add a 'created by' annotation with your ORCID or GitHub username for every new term that you create.
+The current recommendation of the OBO Foundry is that an editor who creates a new term SHOULD add a `http://purl.org/dc/terms/contributor` annotation, set to the ORCID or GitHub username of the editor, and a `http://purl.org/dc/terms/date` annotation, set to the current date.
 
-Set your preferences to match the screenshot below, in the New entities metadata tab (under preferences).
+You can have Protégé automatically add those annotations by setting your preferences to match the screenshot below, in the New entities metadata tab (under preferences).
 
 If you do not have an ORCID, register for for free here: <https://orcid.org/> 
 
-![](https://lh3.googleusercontent.com/L8OnTKLNmYsTLZn6fHVdONVFe_cA-OhRLr5iO-MHld_zePvnA0ECImFKDXoqOeP0vKSHKRE8-LQYoqz5lbk9st8paCbmA74UPMb1LHmrpMuXsXbY_ZmYAsN6L8zNRCfbBHPKvv5A)
+1[](../images/reference/protege/protege-new-entities-metadata.png)
 
 <a name="editing"></a> 
 ### Protege editing
