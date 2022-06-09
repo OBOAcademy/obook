@@ -299,7 +299,7 @@ In the ORCID field, add your ORCID ID (in the format 0000-0000-0000-0000)
 
 #### Setting Preferences for New entities metadata
 
-The current recommendation of the OBO Foundry is that an editor who creates a new term SHOULD add a `http://purl.org/dc/terms/contributor` annotation, set to the ORCID or GitHub username of the editor, and a `http://purl.org/dc/terms/date` annotation, set to the current date.
+The current recommendation of the OBO Foundry Technical Working Group is that an editor who creates a new term SHOULD add a `http://purl.org/dc/terms/contributor` annotation, set to the ORCID or GitHub username of the editor, and a `http://purl.org/dc/terms/date` annotation, set to the current date.
 
 You can have Protégé automatically add those annotations by setting your preferences to match the screenshot below, in the New entities metadata tab (under preferences).
 
