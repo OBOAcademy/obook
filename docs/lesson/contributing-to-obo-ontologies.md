@@ -305,7 +305,7 @@ You can have Protégé automatically add those annotations by setting your prefe
 
 If you do not have an ORCID, register for for free here: <https://orcid.org/> 
 
-1[](../images/reference/protege/protege-new-entities-metadata.png)
+![](../images/reference/protege/protege-new-entities-metadata.png)
 
 <a name="editing"></a> 
 ### Protege editing
