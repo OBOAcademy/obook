@@ -14,7 +14,8 @@ Warning: Every ontology has their procedures on how they obsolete terms (eg noti
    - In Protégé, navigate to the term to be obsolete and go to the 'Usage' tab to see if that ID is used elsewhere.
    - If the term is a parent to other terms or is used in logical definitions, make sure that another term replaces the obsolete term
 
-### OBSOLETION PROCESS 
+
+### OBSOLETION PROCESS (Manual)
 
 Warning: some ontologies give advance notice on terms that will be obsoleted through the annotation 'scheduled for obsoletion on or after' instead of directly obsoleting the term. Please check with the conventions of your ontology before obsoleting a term. 
 
@@ -47,5 +48,23 @@ Warning: some ontologies give advance notice on terms that will be obsoleted thr
 Examples of additional axioms to add: 
 - rdfs:seeAlso - link to github issue
 - has_obsolence_reason 
+
+## Obsolete a class (using Protege 'Make entity obsolete' function)
+
+1. Navigate to the term to be obsoleted.
+1. In the Protege edit menu-> Make entity obsolete
+1. Prepend the definition with OBSOLETE. For example, OBSOLETE. Chronic form of myeloproliferative neoplasm. 
+1. Add a statement about why the term was made obsolete: In the 'Annotations' window, select ```+``` to add an annotation. In the resulting menu, select ```rdfs:comment``` and select Type:  ```Xsd:string```.
+Consult the wiki documentation for suggestions on standard comments:
+      
+     - [http://wiki.geneontology.org/index.php/Curator_Guide:_Obsoletion](http://wiki.geneontology.org/index.php/Curator_Guide:_Obsoletion)
+      
+     - [http://wiki.geneontology.org/index.php/Obsoleting_GO_Terms](http://wiki.geneontology.org/index.php/Obsoleting_GO_Terms)
+      
+     - [http://wiki.geneontology.org/index.php/Editor_Guide](http://wiki.geneontology.org/index.php/Editor_Guide)
+ 
+1. If the obsoleted term was replaced by another term in the ontology: In the 'Annotations' window, select ```+``` to add an annotation. In the resulting menu, select ```term replaced by``` and enter the ID of the replacement term.  
+ 
+1. If the obsoleted term was not replaced by another term in the ontology, but there are existing terms that might be appropriate for annotation, add those term IDs in the 'consider' tag: In the 'Annotations' window, select ```+``` to add an annotation. In the resulting menu, select ```consider``` and enter the ID of the replacement term. 
 
 See [Daily Workflow](daily-curator-workflow.md) section for commit, push and merge instructions. 

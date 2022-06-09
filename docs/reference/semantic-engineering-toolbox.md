@@ -38,6 +38,9 @@
 **Ontology Mappings**
 
 - [SSSOM and sssom-py](https://mapping-commons.github.io/sssom-py/index.html#): Toolkit and framework for managing mappings across and beyond ontologies.
+- [AgreementMakerLight (AML)](https://github.com/AgreementMakerLight/AML-Project): Matching tool for ontologies
+- [RDF Matcher](https://github.com/INCATools/rdf_matcher): Experimental SSSOM based matching tool
+- [LogMap](https://github.com/ernestojimenezruiz/logmap-matcher): Matching tool for ontologies
 
 **Where to find ontologies and terms: Term browsers and ontology repositories**
 

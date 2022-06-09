@@ -18,23 +18,25 @@ nav:
       - Ontology Curator GO-style: pathways/ontology-curator-go-style.md
       - Ontology Curator OBI-style: pathways/ontology-curator-obi-style.md
       - Ontology Engineer/Developer: pathways/ontology-engineer.md
+      - Ontology contributor: pathways/ontology-contributor.md
   - Lessons:
       - Contributing to OBO ontologies: lesson/contributing-to-obo-ontologies.md
       - Ontology Pipelines with ROBOT: lesson/ontology-pipelines.md
       - Analysing Linked Data: lesson/analysing-linked-data.md
-      - Application Ontology Development: lesson/application-ontology-development.md
       - Automating Ontology Workflows: lesson/automating-ontology-workflows.md
       - Developing an OBO Ontology: lesson/developing-an-obo-ontology.md
-      - Developing an Application Ontology: lesson/developing-application-ontologies.md
       - Ontology Design: lesson/ontology-design.md
       - Templates for OBO ontologies: lesson/templates-for-obo.md
-      - Ontology Development: lesson/ontology-development.md
       - Ontology Fundamentals: lesson/ontology-fundamentals.md
       - Modelling with Object Properties: lesson/modelling-with-object-properties.md
       - Ontology Term Use: lesson/ontology-term-use.md
       - RDF Fundamentals: lesson/rdf.md
-      - Semantic Database Fundamentals: lesson/semantic-database-fundamentals.md
       - Disease and Phenotype Ontologies: lesson/using-disease-and-phenotype-ontologies.md
+  - Lessons In Development:
+      - Application Ontology Development: lesson/application-ontology-development.md
+      - Developing an Application Ontology: lesson/developing-application-ontologies.md
+      - Ontology Development: lesson/ontology-development.md
+      - Semantic Database Fundamentals: lesson/semantic-database-fundamentals.md
   - Documentation: 
       - Tutorials:
           - Protege:
@@ -61,9 +63,13 @@ nav:
           - Dealing with Semantic Data: 
               - From Tables to Linked Data: tutorial/linking-data.md
               - Basic SPARQL for OBO Engineers: tutorial/sparql.md
+          - Mappings and SSSOM:
+              - Basic Tutorial: tutorial/sssom-manual.md
           - General Ontology Modelling:
               - Family History Knowledge Base (FHKB) tutorial: tutorial/fhkb.md
       - How-to guides:
+          - General:
+              - Creating an ontology from scratch: howto/create-ontology-from-scratch.md
           - Protege:
               - Installing ELK in Protege: howto/installing-elk-in-protege.md
               - Setting up your ID range: howto/idrange.md
@@ -80,6 +86,7 @@ nav:
           - ODK:
               - Get set up for ODK-based ontology development: howto/setup-ontology-development-odk.md
               - Setting up the ODK: howto/odk-setup.md
+              - Update to a newer ODK version: howto/odk-update.md
               - Creating a Repo with ODK: howto/odk-create-repo.md
               - Dealing with Large Ontologies: howto/deal-with-large-ontologies.md
           - Git and Github:
@@ -98,26 +105,32 @@ nav:
           - Formatting your ontology annotations correctly: reference/formatting-license.md
           - OBO-style term annotation: reference/go-style-annotation-property-practice.md
           - Glossary: reference/glossary.md
-          - GitHub Desktop: reference/github-desktop.md
+          - Git:
+            - Intro to GitHub: reference/github-intro.md 
+            - GitHub Desktop: reference/github-desktop.md
+            - Git FAQ: reference/git-faq.md
           - Semantic Engineering Toolbox: reference/semantic-engineering-toolbox.md
           - Tables and Triples: reference/tables-and-triples.md
           - Reasoning: reference/reasoning.md
           - A day in the life of an ontology curator: reference/ontology-curator.md
           - Protege interface: reference/protege-interface.md
-          - SPARQL basics: reference/sparql-basics.md
-          - Git FAQ: reference/git-faq.md
+          - SPARQL: 
+            - SPARQL basics: reference/sparql-basics.md
+            - SPARQL templates: reference/sparql-reference.md
           - Tools for Managing Issues: reference/managing-issues.md
           - Release Artefacts: reference/release-artefacts.md
           - Synonyms: reference/synonyms-obo.md
           - Monkeying around with OWL: reference/mungall-blog-radar.md
           - Ontology Development Kit (ODK): reference/odk.md
           - Troubleshooting ROBOT: reference/troublehooting-robot.md
+          - Common Errors in GitHub actions: reference/gh-actions-errors.md
           - Other useful resources: reference/other-resources.md
       - Explanation:
           - Introduction to Ontologies: explanation/intro-to-ontologies.md
+          - Logical axiomatization of classes & use of reasoning: explanation/logical-axiomatization.md
           - Term Comments: explanation/term-comments.md
+          - Introduction to Annotation Properties: explanation/annotation-properties.md
           - Writing good issues: explanation/writing-good-issues.md
-          - Assert or Reason (under construction): explanation/deleting-asserted-sub-classes.md
           - Which biomedical ontologies should we use?: explanation/which-ontology-to-use.md
           - OWL, OBO, JSON? Base, simple, full, basic? What should you use, and why?: explanation/owl-format-variants.md
           - What are taxon constraints?: explanation/taxon-constraints-explainer.md

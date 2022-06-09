@@ -26,7 +26,7 @@ CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
 * Download an [ODK wrapper script](../resources/odk.sh). The odk.sh has further instruction on how to best use it.
 * Now you are ready to go to a directory containing the odk.sh wrapper script and running `sh odk.sh robot --version` to see whether it works.
 * The ODK wrapper script is generally useful to have: you can for example enter a ODK container, similar to a virtual machine, 
-by simply running `sh odk.bat bash` (to leave the ODK container again, simply run `exit` from within the container. 
+by simply running `sh odk.sh bash` (to leave the ODK container again, simply run `exit` from within the container. 
 However,  for many of the ontologies we develop, we already ship an ODK wrapper script in the ontology repo, so we dont need the odk.sh or odk.bat file.
 That file is usually called `run.sh` or `run.bat` and can be found in your ontology repo in the `src/ontology` directory
 and can be used in the exact same way. 
