@@ -66,7 +66,7 @@ A Git repo typically has a master or main branch that is not directly editing.  
 
 You can copy (fork) any GitHub repo to some other location on GitHub without having to ask permission from the owners.  If you modify some files in that repo, e.g. to fix a bug in some code, or a typo in a document, you can then suggest to the owners (via a Pull Request) that they adopt (merge) you your changes back into their repo.
 
-If you have permission from the owners, you can instead make a new branch. For this training, we gave you access to the repository. See the [Appendix](https://github.com/jamesaoverton/obook/blob/master/04-OntologyTheory/appendix.md) for instructions on how to make a fork.
+If you have permission from the owners, you can instead make a new branch. For this training, we gave you access to the repository. See the [Appendix](../howto/github-create-fork.md) for instructions on how to make a fork.
 
 <a name="issues"></a> 
 ### Create GitHub Issues
