@@ -138,15 +138,17 @@ Similar ontologies. While there is no ontology OBO ontology related to breeds, t
 ### Starting point
 Our starting point was the raw OMIA data.
 
-- We got a list of breeds from DADIS
-- The list includes name of the breed, transboundary name, species, country, and more
-- We first had to understand the data and how the different pieces of data relate to each other. For example, some breed names are the same, but refer to either different species and/or different countries
-- a single concept needs to include the name of the breed, the species, and the country
-- Several breeds share a common "transboundary name", which represent the original breed from which they come from
-- these transboundary should be the parent term of these breeds
-- Concept of "species": is "species" equivalent to the NCBI Taxon representing "species"? Are breeds an instance of "species"? 
-
-Design decision: Since `species` represents the same concept as ‘species’ in NCBI, then the ontology should be built ‘on top of’ NCBI terms to avoid confusion of concepts and to avoid conflation of terms with the same concept
+- We got a list of breeds from DAD-IS, which includes name of the breed, transboundary name, species, country, and more
+- We first had to understand the data and how the different pieces of data relate to each other. 
+  - Some breed names are the same, but refer to either different species and/or different countries
+  - Several breeds share a common "transboundary name", which represent the original breed from which they come from
+- We needed to determine what a single concept / an indentifiable term would be
+  - In order to define a single breed, we needed to include the name of the breed, the transboundary name (when applicable), the species, and the country
+- We needed to understand the metadata and how each concepts relate to each other
+  - 'breed' is an instance of 'species', therefore 'species' should be the parent term of 'breeds' (using a _is_a_ relation) 
+  - when applicable, 'transboundary' should be the parent term of 'breeds'
+  - Note about the concept of "species": is "species" equivalent to the NCBI Taxon representing "species"? 
+    Design decision: Since `species` represents the same concept as ‘species’ in NCBI, the ontology should be built ‘on top of’ NCBI terms to avoid confusion of concepts and to avoid conflation of terms with the same concept
 
 
 Warnings based on our experience:
@@ -159,7 +161,7 @@ For us this was using Google Sheets, ROBOT & ODK.
 
 ## The Ontology ID
 
-At first, we chose to name the ontology "Unified Breed Ontology" (UBO). Which meant that for everything from ODK setup to creating identifiers for our terms, we used the `UBO` prefix. Later in the process, we decided to change the name to "Vertebrate Trait Ontology". Migrating all the terms and the ODK setup from `ubo` to `vbo` required some expert knowledge on the workings of the ODK, and created an unnecessary cost. We should have finalised the choice of name first.
+At first, we chose to name the ontology "Unified Breed Ontology" (UBO). Which meant that for everything from ODK setup to creating identifiers for our terms, we used the `UBO` prefix. Later in the process, we decided to change the name to "Vertebrate Breed Ontology". Migrating all the terms and the ODK setup from `ubo` to `vbo` required some expert knowledge on the workings of the ODK, and created an unnecessary cost. We should have finalised the choice of name first.
 
 ## Create a basic set up
 
@@ -177,7 +179,7 @@ At first, we chose to name the ontology "Unified Breed Ontology" (UBO). Which me
     - Transboundary: are children of species
     - Breeds: are children of either species or transboundary (therefore we need transboundary and species in order to be able to add breeds)
 - Addition of new information as we have them
-- E.g. adding xref and synonym from OMIA
+    - E.g. adding xref and synonym from OMIA
 - Upcoming: xref and synonym form another database. 
 - Future: Continue to add to the original document and/or create new components
 
