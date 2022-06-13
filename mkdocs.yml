@@ -88,6 +88,7 @@ nav:
           - Update to a newer ODK version: howto/odk-update.md
           - Creating a Repo with ODK: howto/odk-create-repo.md
           - Dealing with Large Ontologies: howto/deal-with-large-ontologies.md
+          - Updating Imports with ODK: howto/update-import.md
       - Git and Github:
           - Clone a repository: howto/clone-mondo-repo.md
           - Fork an ontology for editing: howto/github-create-fork.md

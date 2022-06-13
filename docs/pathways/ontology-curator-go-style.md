@@ -34,6 +34,7 @@ Note: Work on this document is still in progress, items that are not linked are 
 1. [Adding disjointness](../tutorial/disjointness.md)
 1. [Logical axiomatization of classes & use of reasoning](../explanation/logical-axiomatization.md)
 1. [Ontology Relations](../lesson/modelling-with-object-properties.md)
+1. [Updating Imports with ODK](../howto/update-import.md)
 1. [OBO-style term annotation](../reference/go-style-annotation-property-practice.md)
 1. [Obsoleting terms](../howto/obsolete-term.md)
 1. [Merging terms](../howto/merge-terms.md)
@@ -57,3 +58,4 @@ This section is a non-ordered collection of how to documents that a curator migh
 - [Creating slims](../howto/add-new-slim.md)
 - [Setting up ODK](../howto/odk-setup.md)
 - [Switching ontologies](../howto/switching-ontologies.md)
+- [Updating Imports with ODK](../howto/update-import.md)
