@@ -59,19 +59,21 @@ Any application ontology will be concerned with at least 3 ingredients:
     - a general selector, like "all classes" or simply "everything".
     - There are probably more, but these are the main ones we work with in the context of biomedical application ontologies.
 - The **source ontologies**, often referred to as "mirrors" (at least by those working with ODK). These are the full ontologies which we want to use in our application ontology. For example, we may want to include anatomical entities from the [Uberon ontology](https://github.com/obophenotype/uberon) into our application ontology. These are usually downloaded from the internet into the application ontology workspace, and then processed by the application ontology extraction workflow (see later).
-- Additional **ontology metadata** and **semantic glue**, such as axioms used to connect entities (classes) across your source ontologies to fulfil a use case, but also your regular ontology metadata (title, comments, etc).
+- Additional **ontology metadata** and **customisations**, such as axioms used to connect entities (classes) across your source ontologies to fulfil a use case, but also your regular ontology metadata (title, comments, etc).
 
 <a id="phases"></a>
 
 ## The five "phases" of project ontology development
 
-There are three phases on project ontology development which we will discuss in detail in this section:
+There are five phases on project ontology development which we will discuss in detail in this section:
 
 - [Managing the seed](#seed)
 - [Extracting modules](#extract)
 - [Managing metadata and customisations](#metadata)
 - [Merging and post-processing](#merge)
 - [Validation](#validation)
+
+There are other concerns, like continuous integration (basically making sure that changes to the seed or project ontology pipelines do not break anything) and release workflows which are not different from any other ontology.
 
 <a id="seed"></a>
 
