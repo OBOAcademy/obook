@@ -56,7 +56,7 @@ This workflow is appropriate if:
 1. You prefer to manage all your imported terms in a single file (rather than multiple files like in the "Using term files" workflow above).
 2. You wish to augment your imported ontologies with additional information. This requires a cautionary discussion.
 
-To enable this workflow, you add the following to your ODK config file (`src/ontology/cl-odk.yaml`), and [update the repository](RepoManagement.md):
+To enable this workflow, you add the following to your ODK config file (`src/ontology/cl-odk.yaml`), and update the repository (using `sh run.sh make update_repo`):
 
 ```
 use_custom_import_module: TRUE
@@ -77,7 +77,7 @@ When the imports are refreshed [see imports refresh workflow](#Refresh-imports),
 
 Now, if you wish to extent the Makefile (which is beyond these instructions) and add, say, synonyms to the imported terms, you can do that, but you need to (a) preserve the `ID` and `ENTITY` columns and (b) ensure that the ROBOT template is valid otherwise, [see here](http://robot.obolibrary.org/template).
 
-_WARNING_. Note that doing this is a _widespread antipattern_ (see related [issue](https://github.com/OBOFoundry/OBOFoundry.github.io/issues/1443)). You should not change the axioms of terms that do not belong into your ontology unless necessary - such changes should always be pushed into the ontology where they belong. However, since people are doing it, whether the OBO Foundry likes it or not, at least using the _custom imports module_ as described here localises the changes to a single simple template and ensures that none of the annotations added this way are merged into the [base file](https://github.com/INCATools/ontology-development-kit/blob/master/docs/ReleaseArtefacts.md#release-artefact-1-base-required).  
+_WARNING_. Note that doing this is a _widespread antipattern_ (see related [issue](https://github.com/OBOFoundry/OBOFoundry.github.io/issues/1443)). You should not change the axioms of terms that do not belong into your ontology unless necessary - such changes should always be pushed into the ontology where they belong. However, since people are doing it, whether the OBO Foundry likes it or not, at least using the _custom imports module_ as described here localises the changes to a single simple template and ensures that none of the annotations added this way are merged into the base file (see [format variant documentation](../explanation/owl-format-variants.md) for explanation on what base file is)
 
 ### Refresh imports
 
@@ -88,7 +88,7 @@ First, you navigate in your terminal to the ontology directory (underneath src i
 cd src/ontology
 ```
 
-Then, you regenerate the import that will now include any new terms you have added. Note: You must have [docker installed](SettingUpDockerForODK.md).
+Then, you regenerate the import that will now include any new terms you have added. Note: You must have [docker installed](../howto/odk-setup.md).
 
 ```
 sh run.sh make PAT=false imports/go_import.owl -B
