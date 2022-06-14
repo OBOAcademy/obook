@@ -18,11 +18,12 @@ In this tutorial, we discuss the fundamental building blocks of application onto
 
 ## Table of Contents
 
+- [Why do we need project ontologies?](#motivation)
 - [Overview](#overview)
 - [The three "ingredients" of project ontologies](#ingredients)
 - [The five "phases" of project ontology development](#phases)
 
-<a id="overview"></a>
+<a id="motivation"></a>
 
 ## Why do we need project ontologies?
 
@@ -41,6 +42,8 @@ There are a few reasons for developing project ontologies. Here are two that are
         - https://github.com/EBISPOT/covoc
 - **Mapping work**. When developing mappings across ontologies and terminologies, it is often useful to have access to all of them at once. This helps to explore the consequences of mapping decisions, as well providing a single interface for ontology matching tools which usually operate on single ontologies. Advanced Machine Learning based approaches are used to generate graph embeddings on such merged ontologies. Example ontologies:
     - https://github.com/monarch-initiative/mondo-ingest
+
+<a id="overview"></a>
 
 ## Basic architecture
 
