@@ -22,7 +22,7 @@ nav:
   - Lessons:
       - Contributing to OBO ontologies: lesson/contributing-to-obo-ontologies.md
       - Ontology Pipelines with ROBOT: lesson/ontology-pipelines.md
-      - Application Ontology Development: tutorial/application-ontology-development.md
+      - Project Ontology Development: tutorial/project-ontology-development.md
       - Analysing Linked Data: lesson/analysing-linked-data.md
       - Automating Ontology Workflows: lesson/automating-ontology-workflows.md
       - Developing an OBO Ontology: lesson/developing-an-obo-ontology.md
@@ -65,6 +65,7 @@ nav:
       - Mappings and SSSOM:
           - Basic Tutorial: tutorial/sssom-manual.md
       - General Ontology Modelling:
+          - Project Ontology Development: tutorial/project-ontology-development.md
           - Family History Knowledge Base (FHKB) tutorial: tutorial/fhkb.md
   - How-to guides:
       - General:
