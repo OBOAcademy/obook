@@ -44,7 +44,7 @@ There are a few reasons for developing project ontologies. Here are two that are
 
 ## Basic architecture
 
-Add image.
+![Basic architecture](../images/project_ontologies.png)
 
 <a id="ingredients"></a>
 
@@ -156,7 +156,9 @@ Set up a basic ODK ontology. We are not covering this again in this tutorial, pl
 
 ### Dealing with large imports
 
-One of the important things to re
+Many of the larger imports in application ontologies do not fit into the normal GitHub file size limit. In this cases it is better to attach them to a GitHub release rather than to check them into version control.
+
+TBD
 
 ## Additional materials and resources
 - TBD
