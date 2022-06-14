@@ -53,13 +53,13 @@ There are a few reasons for developing project ontologies. Here are two that are
 Any application ontology will be concerned with at least 3 ingredients:
 
 - The **seed**. This is a the _set of terms you wish to import into your application ontology_. The seed can take many forms: 
-  - a simple list of terms, e.g. `MONDO:123, MONDO:231`
-  - a list of terms including additional _relational selectors_, e.g. `MONDO:123, incl. all children`
-  - a list of terms including a _logical selector_, `MONDO:123, incl. all terms that are in some way logically related to MONDO:123`
-  - There are probably more, but these are the main ones we work with in the context of biomedical application ontologies.
-  - A general selector, like "all classes" or simply "everything".
+    - a simple list of terms, e.g. `MONDO:123, MONDO:231`
+    - a list of terms including additional _relational selectors_, e.g. `MONDO:123, incl. all children`
+    - a list of terms including a _logical selector_, `MONDO:123, incl. all terms that are in some way logically related to MONDO:123`
+    - a general selector, like "all classes" or simply "everything".
+    - There are probably more, but these are the main ones we work with in the context of biomedical application ontologies.
 - The **source ontologies**, often referred to as "mirrors" (at least by those working with ODK). These are the full ontologies which we want to use in our application ontology. For example, we may want to include anatomical entities from the [Uberon ontology](https://github.com/obophenotype/uberon) into our application ontology. These are usually downloaded from the internet into the application ontology workspace, and then processed by the application ontology extraction workflow (see later).
-- Additional **ontology metadata** and **semantic glue**, i.e. axioms used to connect entities (classes) across your source ontologies to fulfil a use case. 
+- Additional **ontology metadata** and **semantic glue**, such as axioms used to connect entities (classes) across your source ontologies to fulfil a use case, but also your regular ontology metadata (title, comments, etc).
 
 <a id="phases"></a>
 
