@@ -2,7 +2,7 @@
 
 Before you start:
 
--   make sure you are working on a [here](https://docs.google.com/presentation/d/1M8NZQOIQVswng-so6ROxVeMJfDnzth7BYNj_5MXxEik/edit#slide=id.g9db6baf776_1_0).
+-   make sure you are working on a branch [here](https://docs.google.com/presentation/d/1M8NZQOIQVswng-so6ROxVeMJfDnzth7BYNj_5MXxEik/edit#slide=id.g9db6baf776_1_0).
 -   make sure you have the editor's file open in Protege (in ODK ontologies, located in: ./src/ontology/ONT-edit.owl) where ONT is the name of your ontology (eg mondo-edit.owl for MONDO)
 -   familiarise yourself with the user [interface of protege](../reference/protege-interface.md)
 
