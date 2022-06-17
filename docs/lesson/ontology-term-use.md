@@ -20,7 +20,8 @@ These materials are under construction and may be incomplete.
 4. [Assess ontologies for use: license, quality](#assess)
 5. [Map local terminology to ontology terms](#map)
 6. [Identify missing terms](#missing)
-7. [Understand the differences between IRIs, CURIEs, and labels](#iri)
+7. [Make term requests to existing ontologies](#request)
+8. [Understand the differences between IRIs, CURIEs, and labels](#iri)
 
 ## Tutorials
 - None
@@ -117,8 +118,13 @@ The figure below by [Chris Mungall](https://bids.berkeley.edu/people/chris-munga
 
 ![term search and request workflow](https://lh5.googleusercontent.com/gpGaVX6N85gdQkBP5aZORh3G_oA1B71Hf9P2Pobl0InlAY2P7U7XWkH1iv8rsQpJtOuW2bazkhYsSOxfFGod15TvMg21gOYLAv1mcVHxkAqQHPucBm6Su-tl2IWgJXFKwd9L2xbd)
 
+<a name="request"></a> 
+## 7. Make term requests to existing ontologies
+
+See separate lesson on [Making term requests to existing ontologies]().
+
 <a name="iri"></a> 
-## 7.Differences between IRIs, CURIEs, and labels
+## 8.Differences between IRIs, CURIEs, and labels
 
 #### URI 
 A uniform resource identifier (URI) is a string of characters used to identify a name or a resource. 
