@@ -24,6 +24,8 @@
 <a name="request"></a> 
 ## Making term requests to existing ontologies
 
+In the following we explain how to make a term request to Mondo. This serves as an example that should apply to most other ontologies as well.
+
 ### Making a new term request to Mondo
 
 1. Go to Mondo [GitHub tracker](https://github.com/monarch-initiative/mondo/issues): Select New issue
@@ -32,10 +34,10 @@
 1. Please include:
 	1. A definition in the proper format
 	1. Sources/cross references for synonyms
-	1. Your ORCID or the URL for your ClinGen working group
+	1. Your ORCID or the URL for your group
 	1. Add any additional comments at the end
-1. Nicole will automatically be tagged
-1. Please email Nicole or comment on the ticket (Nicole will be emailed) if you have any additional questions or need the ticket is high priority
+1. A Mondo curator will automatically be tagged to review your issue
+1. Please indicate in the the issue if the issue should be considered high priority
 
 See [video](https://drive.google.com/file/d/14g9y1nmCmRTkPB1fa6y_jIW3lHyFV4-g/view?resourcekey)
 
@@ -76,8 +78,8 @@ Note: while this ticket generally follows best practices, one thing that can be 
 - [https://github.com/monarch-initiative/mondo/issues/1837](https://github.com/monarch-initiative/mondo/issues/1837)
 - [https://github.com/monarch-initiative/mondo/issues/276](https://github.com/monarch-initiative/mondo/issues/276)
 
-### Submitting other issues to Mondo
+### Submitting other issues
 
-- Users may want to request other types of changes to Mondo (or any other ontology) beyond just adding a new term.
+- Users may want to request other types of changes to an ontology such as Mondo beyond just adding a new term.
 - The Mondo curation team created many [issue templates](https://github.com/monarch-initiative/mondo/issues/new/choose) for users, for specific types of requests.
-- If none of the issue templates fit your issue, you can scroll to the bottom and click [Open a blank issue](https://github.com/monarch-initiative/mondo/issues/new) 
+- If none of the issue templates fit your issue, you can scroll to the bottom and click open a blank issue [(Mondo example)](https://github.com/monarch-initiative/mondo/issues/new).
