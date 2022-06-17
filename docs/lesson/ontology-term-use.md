@@ -124,7 +124,7 @@ The figure below by [Chris Mungall](https://bids.berkeley.edu/people/chris-munga
 See separate lesson on [Making term requests to existing ontologies]().
 
 <a name="iri"></a> 
-## 8.Differences between IRIs, CURIEs, and labels
+## 8. Differences between IRIs, CURIEs, and labels
 
 #### URI 
 A uniform resource identifier (URI) is a string of characters used to identify a name or a resource. 
