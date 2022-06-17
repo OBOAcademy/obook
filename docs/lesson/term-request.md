@@ -22,7 +22,7 @@
 - [Nicole Vasilevsky](https://orcid.org/0000-0001-5208-3432)
 
 <a name="request"></a> 
-## 7. Making term requests to existing ontologies
+## Making term requests to existing ontologies
 
 ### Making a new term request to Mondo
 
