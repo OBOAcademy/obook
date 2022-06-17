@@ -8,7 +8,7 @@
 
 ## What is delivered as part of the course
 
-**Description:** Make term requests to existing ontologies](#request)
+**Description:** [Make term requests to existing ontologies](#request)
 
 ## Tutorials
 - None
