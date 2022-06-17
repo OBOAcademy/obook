@@ -12,6 +12,11 @@ Example 1 (Cell Ontology):
 
 ![](https://lh4.googleusercontent.com/dBtjnSflSSf85x1wO8lNFhqbjy4hx-ubSQe7UuGl7AimU5JqIWxez0TZIffqoI0j0Uey-ucWMJSp8EEu6AfGE5XOsGsh07K1H2gBzmbY1xoNFXlTfxoO13yC7zczajOZjPuDroEv)
 
+Example 2 (Mondo):
+
+<img width="1489" alt="image" src="https://user-images.githubusercontent.com/6722114/174409050-45209f25-c1f5-4f41-a369-64a7a82d27e5.png">
+
+
 1. Commit message: Before Committing, you must add a commit message. In GitHub Desktop in the Commit field in the lower left, there is a subject line and a description. 
 
 1. Give a very descriptive title: Add a descriptive title in the subject line. For example: add new class ONTOLOGY:ID [term name] (e.g. add new class MONDO:0000006 heart disease)
@@ -24,7 +29,9 @@ Example 1 (Cell Ontology):
 
 2.  If you don't want to close the ticket, just refer to the ticket # without the word 'Fixes' or use 'Addresses'. The commit will be associated with the correct ticket but the ticket will remain open. 7.NOTE: It is also possible to type a longer message than allowed when using the '-m' argument; to do this, skip the -m, and a vi window (on mac) will open in which an unlimited description may be typed.
 
-1.  Click Commit to [branch]. This will save the changes to the ontology edit file. 
+<img width="304" alt="image" src="https://user-images.githubusercontent.com/6722114/174409098-1cdcd424-39d9-4e92-96d2-25aa80a12f26.png">
+
+1.  Click Commit to [branch]. This will save the changes to the ontology edit file. 
 
 2.  Push: To incorporate the changes into the remote repository, click Publish branch.
 
