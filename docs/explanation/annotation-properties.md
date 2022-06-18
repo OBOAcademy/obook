@@ -8,11 +8,12 @@ An entity such as an individual, a class, or a property can have annotations, su
 
 Here are some examples of frequently used annotation properties: (every element **in bold** is an annotation property)
 
-- http://purl.obolibrary.org/obo/MONDO_0004975
-    – **rdfs:label** –> ‘Alzheimer disease’
-    – **oboInOwl:hasExactSynonym** –> Alzheimer dementia
-    – **oboInOwl:hasDbXref** -> `NCIT:C2866`
-    - **skos:exactMatch**  -> http://www.orpha.net/ORDO/Orphanet_238616
+http://purl.obolibrary.org/obo/MONDO_0004975
+
+* **rdfs:label** –> ‘Alzheimer disease’
+* **oboInOwl:hasExactSynonym** –> Alzheimer dementia
+* **oboInOwl:hasDbXref** -> `NCIT:C2866`
+* **skos:exactMatch**  -> http://www.orpha.net/ORDO/Orphanet_238616
 
 
 ## Some useful things to know about annotation properties
