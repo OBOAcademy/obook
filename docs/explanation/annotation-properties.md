@@ -53,7 +53,7 @@ e.g. : 'scheduled for obsoletion on or after' (http://purl.obolibrary.org/obo/IA
 
 ## Annotation Property vs Data and Object Properties
 
-Some Annotation Properties look like data properties (connecting an entity to a literal value) and other look like object properties (connecting an entity to another entity). Other than the fact that statement involving data and object properties look very different in RDF, the key difference from a user perspective is that OWL Reasoners **entirely ignore triples involving annotation properties**. Data and Object Properties are taken into account by the reasoner.
+Some annotation properties look like data properties (connecting an entity to a literal value) and others look like object properties (connecting an entity to another entity). Other than the fact that statements involving data and object properties look very different in RDF, the key difference from a user perspective is that OWL Reasoners **entirely ignore triples involving annotation properties**. Data and Object Properties are taken into account by the reasoner.
 
 Object properties are different to annotation properties in that they:
 
