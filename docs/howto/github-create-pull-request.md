@@ -1,12 +1,33 @@
 Create a Pull Request in GitHub
 ===============================
 
+Overview
+---------
+### GitHub workflows
+
+A Git repo consists of a set of branches each with a complete history of all changes ever made to the files and directories. This is true for a local copy you check out to your computer from GitHub or for a copy (fork) you make on GitHub.
+
+![image](https://user-images.githubusercontent.com/6722114/115820759-59267500-a3b6-11eb-8452-b44404ce7aa7.png)
+
+A Git repo typically has a master or main branch that is not directly edited. Changes are made by creating a branch from Master (complete copy of the Master + its history) (either a direct branch or via a fork).  
+
+### Branch vs Fork
+
+You can copy (fork) any GitHub repo to some other location on GitHub without having to ask permission from the owners.  If you modify some files in that repo, e.g. to fix a bug in some code, or a typo in a document, you can then suggest to the owners (via a Pull Request) that they adopt (merge) you your changes back into their repo. See the [Appendix](../howto/github-create-fork.md) for instructions on how to make a fork.
+
+If you have permission from the owners, you can instead make a new branch. 
+
+### What is a Pull Request?
+
+A Pull Request (PR) is an event in Git where a contributor (you!) asks a maintainer of a Git repository to review changes (e.g. edits to an ontology file) they want to merge into a project (e.g. the owl file) (see [reference](https://www.gitkraken.com/learn/git/tutorials/what-is-a-pull-request-in-git)). Create a pull request to propose and collaborate on changes to a repository. These changes are proposed in a branch, which ensures that the default branch only contains finished and approved work. See more details [here](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
+
 Committing, pushing and making pull requests
 --------------------------------------------
+1. See these [instructions](https://oboacademy.github.io/obook/lesson/contributing-to-obo-ontologies/#basics-of-ontology-development-workflows) on cloning an ontology repo and creating a branch using GitHub Dekstop.
 
-1.  Review: Changes made to the ontology can be viewed in GitHub Desktop.
+1.  Review: Once changes are made to the ontology file, they can be viewed in GitHub Desktop.
 
-2.  Before committing, check the diff. An example diff from the Cell Ontology (CL) is pasted below. Large diffs are a sign that something went wrong. In this case, do not commit the changes and consider asking the ontology editor team for help instead.
+1.  Before committing, check the diff. An example diff from the Cell Ontology (CL) is pasted below. Large diffs are a sign that something went wrong. In this case, do not commit the changes and consider asking the ontology editor team for help instead.
 
 Example 1 (Cell Ontology):
 
