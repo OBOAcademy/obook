@@ -178,6 +178,9 @@ There are two very popular commands for downloading content: `curl` and `wget`. 
 ```console
 wget http://purl.obolibrary.org/obo/hp/hpoa/genes_to_phenotype.txt -O genes_to_phenotype.txt
 ```
+```console
+curl -L http://purl.obolibrary.org/obo/hp/hpoa/genes_to_phenotype.txt --output genes_to_phenotype.txt 
+```
 
 The `-O` parameter is optional and specifies a filename. If you do not add the parameter, `wget` will try to guess the filename from the URL. This does not always go so well with complex URLs, so I personally recommend basically always specifying the `-O` parameter.
 
