@@ -12,6 +12,11 @@
 
 As a ontology engineer, it would be useful for you to know how curators work, as such, it would be useful to be familiar with all the concepts in the [ontology curator pathways document](ontology-curator.md). This pathways will however be focusing on the engineering side of things.
 
+### Very basics
+
+1. [Basic introduction to CLI 1](../tutorial/intro-cli-1.md)
+1. [Basic introduction to CLI 2](../tutorial/intro-cli-2.md)
+
 ### Learning Git and GitHub
 
 1. [Fundamentals of GitHub](../tutorial/github-fundamentals.md)

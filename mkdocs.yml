@@ -63,6 +63,9 @@ nav:
       - Dealing with Semantic Data: 
           - From Tables to Linked Data: tutorial/linking-data.md
           - Basic SPARQL for OBO Engineers: tutorial/sparql.md
+      - Command line:
+          - Basic introduction to CLI 1: tutorial/intro-cli-1.md
+          - Basic introduction to CLI 2: tutorial/intro-cli-2.md
       - Mappings and SSSOM:
           - Basic Tutorial: tutorial/sssom-manual.md
       - General Ontology Modelling:
