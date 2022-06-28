@@ -178,6 +178,7 @@ There are two very popular commands for downloading content: `curl` and `wget`. 
 ```console
 wget http://purl.obolibrary.org/obo/hp/hpoa/genes_to_phenotype.txt -O genes_to_phenotype.txt
 ```
+or
 ```console
 curl -L http://purl.obolibrary.org/obo/hp/hpoa/genes_to_phenotype.txt --output genes_to_phenotype.txt 
 ```
