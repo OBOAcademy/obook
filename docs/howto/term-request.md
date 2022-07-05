@@ -58,10 +58,5 @@ In the following text below, we describe best practices for making a term reques
 - Other types of requests may include changes to the classification, typos, bugs, etc.
 - Some ontologies have other templates available on their issue tracker. Select the appropriate template. If there is not an appropriate template available, scroll to the bottom and select 'open a blank issue'.
 
-## Additional materials and resources
-
-- [Guidelines for writing definitions in Ontologies (paper)](https://philpapers.org/archive/SEPGFW.pdf)
-- [OntoTips](https://douroucouli.wordpress.com/category/tutorials/) - A guide by Chris Mungall covering various aspects of ontology engineering.
-
 ## Contributors
 - [Nicole Vasilevsky](https://orcid.org/0000-0001-5208-3432)
