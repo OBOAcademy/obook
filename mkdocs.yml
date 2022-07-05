@@ -31,7 +31,6 @@ nav:
       - Ontology Fundamentals: lesson/ontology-fundamentals.md
       - Modelling with Object Properties: lesson/modelling-with-object-properties.md
       - Ontology Term Use: lesson/ontology-term-use.md
-      - Making Term Requests: lesson/term-request.md
       - RDF Fundamentals: lesson/rdf.md
       - Disease and Phenotype Ontologies: lesson/using-disease-and-phenotype-ontologies.md
   - Lessons In Development:
