@@ -31,7 +31,6 @@ nav:
       - Ontology Fundamentals: lesson/ontology-fundamentals.md
       - Modelling with Object Properties: lesson/modelling-with-object-properties.md
       - Ontology Term Use: lesson/ontology-term-use.md
-      - Making Term Requests: lesson/term-request.md
       - RDF Fundamentals: lesson/rdf.md
       - Disease and Phenotype Ontologies: lesson/using-disease-and-phenotype-ontologies.md
   - Lessons In Development:
@@ -95,6 +94,7 @@ nav:
           - Dealing with Large Ontologies: howto/deal-with-large-ontologies.md
           - Updating Imports with ODK: howto/update-import.md
       - Git and Github:
+          - Make term requests to existing ontologies: howto/term-request.md
           - Clone a repository: howto/clone-mondo-repo.md
           - Fork an ontology for editing: howto/github-create-fork.md
           - Creating an GitHub Pull Request: howto/github-create-pull-request.md
