@@ -73,10 +73,13 @@ Some examples of conflicts that Nicole fixed in Mondo are below:
 ![Example3](images/lessons/FixGitHubConflictss/Slide3.jpeg)
 ![Example4](images/lessons/FixGitHubConflicts/Slide4.jpeg)
 
-### Further regarding on GitHub merge conflicts
+## Further regarding 
+
+### Gene Ontology Daily Workflow
+[Gene Ontology Editing Guide](https://go-ontology.readthedocs.io/en/latest/DailyWorkflow.html)
+
+### GitHub Merge Conflicts
 - [Resolving a merge conflict on GitHub](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-on-github)
 - [Git merge conflicts
 ](https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts)
 
-## Further reading
-- To do: find some GitHub articles
