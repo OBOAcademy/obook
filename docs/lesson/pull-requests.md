@@ -53,7 +53,25 @@ Conflicts arise when edits are made on two separate branches to the same line in
 
 Conflicts in ontology files can be fixed either on the command line or using GitHub Desktop. In this lesson, we describe how to fix conflicts using GitHub Desktop.
 
+### Fix conflicts in GitHub desktop
+1. In GitHub Desktop, go to your master/main branch and fetch pull. 
+2. Go to branch with conflict. 
+3. Pull branch. 
+4. Branch -> update from master. 
+5. Open in Sublime or Atom. 
+6. Make changes in file (open the ontology file in a text editor (like Sublime) and search for the conflicts. These are usually preceded by <<<<<. Fix the conflicts, then save). 
+7. In GitHub Desktop, continue merge. 
+8. Push. 
+9. In terminal: `open [ontology file name]` (e.g.`open mondo-edit.obo`) or open in Protege manually. 
+10. Save as (nothing should have changed in the diff). 
+11. Check the diff in GitHub online. 
 
+Some examples of conflicts Nicole worked on are below:  
+
+![Example1](images/FixGitHubConflicts/Slide1.jpeg)
+![Example2](images/FixGitHubConflicts/Slide2.jpeg)
+![Example3](images/FixGitHubConflicts/Slide3.jpeg)
+![Example4](images/FixGitHubConflicts/Slide4.jpeg)
 
 ### Further regarding on GitHub merge conflicts
 - [Resolving a merge conflict on GitHub](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-on-github)
