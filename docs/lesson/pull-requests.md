@@ -40,7 +40,7 @@ Participants will need to have access to the following resources and tools prior
 # GitHub Pull Request Workflow
 
 ## Update the local copy of the ontology
-1. In GitHub Dekstop, navigate to your local ontology directory of your ontology
+1. In GitHub Desktop, navigate to your local ontology directory of your ontology
 2. Make sure you are on the master/main branch and click Pull origin (or Fetch origin) 
 
 ## Create a New Working Branch
@@ -51,9 +51,8 @@ Participants will need to have access to the following resources and tools prior
 
 <img width="392" alt="image" src="https://user-images.githubusercontent.com/6722114/178575718-4ff6f7d2-4ae9-454d-bdd8-49b3ad63484a.png">
 
-
 ## Continuing work on an existing Working Branch
-1. If you are continuing to do work on an existing branch, in addition to updating master, go to your branch by selecting Current Branch in GitHub Desktop and either searching for or browsing for the branch name. 
+1. If you are continuing to do work on an existing branch, in addition to updating master, go to your branch by selecting Current Branch in GitHub Desktop and either search for or browse for the branch name. 
 2. **OPTIONAL:** To update the working branch with respect to the current version of the ontology, select Branch from the top menu, Update from master.This step is optional because it is not necessary to work on the current version of the ontology; all changes will be synchronized when git merge is performed.
 
 ## Editing an ontology on a branch
@@ -107,7 +106,7 @@ For example:
 ![pull request](images/pullrequest.png)
 
 3. Click the green button ‘Compare & pull request’ on the right.
-4. You may now add comments, if applicable and request a reviewer. See section below on reviwers.
+4. You may now add comments, if applicable and request a reviewer. See section below on reviewers.
 5. The diff for your file is at the bottom of the page. Examine it as a sanity check.
 6. Click on the green box ‘Pull request’ to generate a pull request.
 
@@ -118,7 +117,7 @@ For example:
 1. If you have write access to the repository, you can assign a reviewer.
 1. Otherwise, you can tag people in the description of your Pull Request.
 1. Tips for finding reviewers:
-  - An ontology repository should have an owner assigned. This may be described in the ReadMe file or on the [OBO Foundry website](). For example, the contact person for [Mondo](To do: ADD LINK HERE) is Nicole Vasilevsky.
+  - An ontology repository should have an owner assigned. This may be described in the ReadMe file or on the [OBO Foundry website](). For example, the contact person for [Mondo](https://obofoundry.org/ontology/mondo.html) is Nicole Vasilevsky.
   - The primary owner can likely review your PR or triage your request to the appropriate person.
   - If you are addressing a specific ticket, you may want to assign the person who created the ticket to review.
 
@@ -128,7 +127,7 @@ For example:
 1. To review a PR, you should view the Files changed and view the diff.
 1. Make sure the changes made address the ticket.
 1. Make sure there are not any unintended or unwanted changes on the PR.
-1. You can leave commnets and requests for changes on the PR.
+1. You can leave comments and requests for changes on the PR.
 
 <a name="change"></a> 
 ## How to change a pull request in response to review
@@ -144,10 +143,8 @@ For example:
 <a name="update"></a> 
 ## How to update from master
 
-1. In GitHub Dekstop, navigate to your branch.
+1. In GitHub Desktop, navigate to your branch.
 1. In the top file menu, select Branch -> Update from master.
-
-
 
 <a name="conflict"></a> 
 ## Resolve conflicts on branch
@@ -186,4 +183,5 @@ Some examples of conflicts that Nicole fixed in Mondo are below:
 - [Resolving a merge conflict on GitHub](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-on-github)
 - [Git merge conflicts
 ](https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts)
+
 
