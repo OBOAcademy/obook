@@ -68,10 +68,10 @@ Conflicts in ontology files can be fixed either on the command line or using Git
 
 Some examples of conflicts that Nicole fixed in Mondo are below:  
 
-![Example1](docs/images/lessons/FixGitHubConflicts/Slide1.jpeg)
-![Example2](docs/images/lessons/FixGitHubConflicts/Slide2.jpeg)
-![Example3](docs/images/lessons/FixGitHubConflictss/Slide3.jpeg)
-![Example4](docs/images/lessons/FixGitHubConflicts/Slide4.jpeg)
+![Example1](images/lessons/FixGitHubConflicts/Slide1.jpeg)
+![Example2](images/lessons/FixGitHubConflicts/Slide2.jpeg)
+![Example3](images/lessons/FixGitHubConflictss/Slide3.jpeg)
+![Example4](images/lessons/FixGitHubConflicts/Slide4.jpeg)
 
 ### Further regarding on GitHub merge conflicts
 - [Resolving a merge conflict on GitHub](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-on-github)
