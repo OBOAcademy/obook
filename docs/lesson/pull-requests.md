@@ -47,7 +47,10 @@ Participants will need to have access to the following resources and tools prior
 1. When starting to work on a ticket, you should create a new branch of the repository to edit the ontology file.
 2. Make sure you are on the master branch before creating a new branch. **_Please do not create a new branch off of an existing branch (unless the situation explicitly calls for it)._** 
 3. To create a new branch, click on Current Branch and select New Branch 
-4. Name your branch. Some recommended best practices for branch name are to name the branch after the issue number, for example issue-201. If you are not addressing a ticket per se, you could name the branch: 'initals-edits-date', e.g. nv-edits_2022-07-12, or give it a name specific to what you are doing, e.g. fix-typos-2022-07-12.
+4. Name your branch. Some recommended best practices for branch name are to name the branch after the issue number, for example issue-206. If you are not addressing a ticket per se, you could name the branch: 'initals-edits-date', e.g. nv-edits_2022-07-12, or give it a name specific to what you are doing, e.g. fix-typos-2022-07-12.
+
+<img width="392" alt="image" src="https://user-images.githubusercontent.com/6722114/178575718-4ff6f7d2-4ae9-454d-bdd8-49b3ad63484a.png">
+
 
 ## Continuing work on an existing Working Branch
 1. If you are continuing to do work on an existing branch, in addition to updating master, go to your branch by selecting Current Branch in GitHub Desktop and either searching for or browsing for the branch name. 
@@ -55,6 +58,9 @@ Participants will need to have access to the following resources and tools prior
 
 ## Editing an ontology on a branch
 1. Create a new branch, open Protege. Protege will display your branch name in the lower left corner (or it will show Git: **master**)
+
+<img width="131" alt="image" src="https://user-images.githubusercontent.com/6722114/178575944-8fead930-409e-4cc6-9907-1fac10ee308c.png">
+
 2. Make necessary edits in Protege. 
 
 ## Committing, pushing and making pull requests
@@ -69,7 +75,7 @@ Example 2 (Mondo):
 
 <img width="1489" alt="image" src="https://user-images.githubusercontent.com/6722114/174409050-45209f25-c1f5-4f41-a369-64a7a82d27e5.png"> 
 
-### Writ a good commit messages
+### Write a good commit messages
 
 3. Commit message: Before Committing, you must add a commit message. In GitHub Desktop in the Commit field in the lower left, there is a subject line and a description. 
 
@@ -80,6 +86,9 @@ Example 2 (Mondo):
 6. **NOTE**: You can use the word ‘fixes’ or ‘closes’ in the commit message - these are magic words in GitHub; when used in combination with the ticket number, it will automatically close the ticket. Learn more on this GitHub Help Documentation page about [Closing issues via commit messages](https://help.github.com/en/articles/closing-issues-using-keywords).
 
 7. ‘Fixes’ and “Closes’ is case-insensitive and can be plural or singular (fixes, closes, fix, close).
+
+<img width="306" alt="image" src="https://user-images.githubusercontent.com/6722114/178576147-7ee2c455-a6da-4e73-a2d3-897af8b78a15.png">
+
 
 8. If you don’t want to close the ticket, just refer to the ticket # without the word ‘fixes’ or use ‘adresses’ or 'addresses'. The commit will be associated with the correct ticket but the ticket will remain open.
 
