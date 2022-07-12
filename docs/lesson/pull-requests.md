@@ -2,12 +2,13 @@
 
 ## Prerequisites
 Participants will need to have access to the following resources and tools prior to the training:  
-- **GitHub account** - register for a free GitHub account [here](https://github.com/join?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home)  
-- **Protege** - Install Protege 5.5, download it [here](https://protege.stanford.edu/)  
+- **GitHub account** - register for a free GitHub account [here](https://github.com/join?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home)   
 - **Install GitHub Desktop** Please make sure you have some kind of git client installed on your machine. If you are new to Git, please install [GitHub Desktop](https://desktop.github.com/)  
+- **Protege** - Install Protege 5.5, download it [here](https://protege.stanford.edu/)   
 
 ## Preparation
 - Review tutorial on [Contributing to Ontologies](contributing-to-obo-ontologies.md)
+- See [How to guide on Pull Requests](howto/github-create-pull-request.md)
 
 ## What is delivered as part of the course
 
