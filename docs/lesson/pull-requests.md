@@ -36,9 +36,9 @@ Participants will need to have access to the following resources and tools prior
 
 # GitHub Pull Request Workflow
 
-## Update the local copy of the ontology with ‘git pull’
-1. In GitHub Dekstop, navigate to your local directory of your ontology
-2. Make sure you are on the master/main branch and click Fetch origin  
+## Update the local copy of the ontology
+1. In GitHub Dekstop, navigate to your local ontology directory of your ontology
+2. Make sure you are on the master/main branch and click Pull origin (or Fetch origin) 
 
 ## Create a New Working Branch
 1. When starting to work on a ticket, you should create a new branch of the repository to edit the ontology file.
@@ -47,7 +47,7 @@ Participants will need to have access to the following resources and tools prior
 4. Name your branch. Some recommended best practices for branch name are to name the branch after the issue number, for example issue-201. If you are not addressing a ticket per se, you could name the branch: 'initals-edits-date', e.g. nv-edits_2022-07-12, or give it a name specific to what you are doing, e.g. fix-typos-2022-07-12.
 
 ## Continuing work on an existing Working Branch
-1. If you are continuing to do work on an existing branch, in addition to updating master, go to your branch by selecting Current Branch in GitHub Desktop and either searching for or browswing for the branch name. 
+1. If you are continuing to do work on an existing branch, in addition to updating master, go to your branch by selecting Current Branch in GitHub Desktop and either searching for or browsing for the branch name. 
 2. **OPTIONAL:** To update the working branch with respect to the current version of the ontology, select Branch from the top menu, Update from master.This step is optional because it is not necessary to work on the current version of the ontology; all changes will be synchronized when git merge is performed.
 
 ## Editing an ontology on a branch
