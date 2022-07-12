@@ -46,6 +46,9 @@ Participants will need to have access to the following resources and tools prior
 3. To create a new branch, click on Current Branch and select New Branch 
 4. Name your branch. Some recommended best practices for branch name are to name the branch after the issue number, for example issue-201. If you are not addressing a ticket per se, you could name the branch: 'initals-edits-date', e.g. nv-edits_2022-07-12, or give it a name specific to what you are doing, e.g. fix-typos-2022-07-12.
 
+<img width="392" alt="image" src="https://user-images.githubusercontent.com/6722114/178575718-4ff6f7d2-4ae9-454d-bdd8-49b3ad63484a.png">
+
+
 ## Continuing work on an existing Working Branch
 1. If you are continuing to do work on an existing branch, in addition to updating master, go to your branch by selecting Current Branch in GitHub Desktop and either searching for or browsing for the branch name. 
 2. **OPTIONAL:** To update the working branch with respect to the current version of the ontology, select Branch from the top menu, Update from master.This step is optional because it is not necessary to work on the current version of the ontology; all changes will be synchronized when git merge is performed.
