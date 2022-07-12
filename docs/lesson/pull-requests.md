@@ -49,6 +49,12 @@ Participants will need to have access to the following resources and tools prior
 <a name="conflict"></a> 
 ## Resolve conflicts on branch
 
+Conflicts arise when edits are made on two separate branches to the same line in a file. ([reference](https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts#:~:text=A%20conflict%20arises%20when%20two,to%20help%20resolve%20merge%20conflicts)). When editing an ontology file (owl file or obo file), conflicts often arise when adding new terms to an ontology file on separate branches, or when there are a lot of open pull requests.
+
+Conflicts in ontology files can be fixed either on the command line or using GitHub Desktop. 
+
+### Further regarding
+[Resolving a merge conflict on GitHub](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-on-github)
 
 ## Further reading
 - To do: find some GitHub articles
