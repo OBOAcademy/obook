@@ -33,17 +33,108 @@ Participants will need to have access to the following resources and tools prior
 - Commit early, commit often
 - Write detailed commit messages
 
+# GitHub Pull Request Workflow
+
+## Update the local copy of the ontology with ‘git pull’
+1. In GitHub Dekstop, navigate to your local directory of your ontology
+2. Make sure you are on the master/main branch and click Fetch origin  
+
+## Create a New Working Branch
+1. When starting to work on a ticket, you should create a new branch of the repository to edit the ontology file.
+2. Make sure you are on the master branch before creating a new branch. **_Please do not create a new branch off of an existing branch (unless the situation explicitly calls for it)._** 
+3. To create a new branch, click on Current Branch and select New Branch 
+4. Name your branch. Some recommended best practices for branch name are to name the branch after the issue number, for example issue-201. If you are not addressing a ticket per se, you could name the branch: 'initals-edits-date', e.g. nv-edits_2022-07-12, or give it a name specific to what you are doing, e.g. fix-typos-2022-07-12.
+
+## Continuing work on an existing Working Branch
+1. If you are continuing to do work on an existing branch, in addition to updating master, go to your branch by selecting Current Branch in GitHub Desktop and either searching for or browswing for the branch name. 
+2. **OPTIONAL:** To update the working branch with respect to the current version of the ontology, select Branch from the top menu, Update from master.This step is optional because it is not necessary to work on the current version of the ontology; all changes will be synchronized when git merge is performed.
+
+## Editing an ontology on a branch
+1. Create a new branch, open Protege. Protege will display your branch name in the lower left corner (or it will show Git: **master**)
+2. Make necessary edits in Protege. 
+
+## Committing, pushing and making pull requests
+1. Review: GitHub Desktop will display the diff or changes made to the ontology. 
+2. Before committing, view the diff and ensure the changes were intended. Examples of a diff are pasted below. Large diffs are a sign that something went wrong. In this case, do not commit the changes and ask for help instead or consider Discarding your changes and starting the edits again.
+
+Example 1 (Cell Ontology):
+
+![](https://lh4.googleusercontent.com/dBtjnSflSSf85x1wO8lNFhqbjy4hx-ubSQe7UuGl7AimU5JqIWxez0TZIffqoI0j0Uey-ucWMJSp8EEu6AfGE5XOsGsh07K1H2gBzmbY1xoNFXlTfxoO13yC7zczajOZjPuDroEv)
+
+Example 2 (Mondo):
+
+<img width="1489" alt="image" src="https://user-images.githubusercontent.com/6722114/174409050-45209f25-c1f5-4f41-a369-64a7a82d27e5.png"> 
+
+### Writ a good commit messages
+
+3. Commit message: Before Committing, you must add a commit message. In GitHub Desktop in the Commit field in the lower left, there is a subject line and a description. 
+
+4. Give a very descriptive title: Add a descriptive title in the subject line. For example: add new class ONTOLOGY:ID [term name] (e.g. add new class MONDO:0000006 heart disease)
+
+5. Write a great summary of what the change is in the Description box, referring to the issue. The sentence should clearly state how the issue is addressed.
+
+6. **NOTE**: You can use the word ‘fixes’ or ‘closes’ in the commit message - these are magic words in GitHub; when used in combination with the ticket number, it will automatically close the ticket. Learn more on this GitHub Help Documentation page about [Closing issues via commit messages](https://help.github.com/en/articles/closing-issues-using-keywords).
+
+7. ‘Fixes’ and “Closes’ is case-insensitive and can be plural or singular (fixes, closes, fix, close).
+
+8. If you don’t want to close the ticket, just refer to the ticket # without the word ‘fixes’ or use ‘adresses’ or 'addresses'. The commit will be associated with the correct ticket but the ticket will remain open.
+
+9. **Push**: To incorporate the changes into the remote repository, click Commit to [branch name], then click Push.
+
+## Make a Pull Request (PR)
+
+1. You can either make a Pull Request (PR) directly from GitHub Desktop, or via the GitHub web browser.
+1. To make a PR from GitHub Desktop, click the button 'Create Pull Request'. You will be directed to your web browser and GitHub repo.
+1. Click Create Pull Request.
+1. If your PR is a work-in-progress and not ready for review, you can save it as a draft PR and convert it to a PR when it is ready for review.
+1. If you do not create a PR directly from GitHub Dekstop, you can go to your GitHub repo and you will see a yellow banner on top that notifies you of a pending PR.
+1. Navigate to the tab labeled as ‘Code’. You should see your commit listed at the top of the page in a light yellow box. If you don’t see it, click on the ‘Branches’ link to reveal it in the list, and click on it.  
+
+For example:  
+![pull request](images/pullrequest.png)
+
+3. Click the green button ‘Compare & pull request’ on the right.
+4. You may now add comments, if applicable and request a reviewer. See section below on reviwers.
+5. The diff for your file is at the bottom of the page. Examine it as a sanity check.
+6. Click on the green box ‘Pull request’ to generate a pull request.
+
 <a name="reviewer"></a> 
 ## How to find a reviewer for your pull request in an open source environment
+
+1. Depending on the level of your permissions for the repository, you may or may not be able to assign a reviewer yourself.
+1. If you have write access to the repository, you can assign a reviewer.
+1. Otherwise, you can tag people in the description of your Pull Request.
+1. Tips for finding reviewers:
+  - An ontology repository should have an owner assigned. This may be described in the ReadMe file or on the [OBO Foundry website](). For example, the contact person for [Mondo](To do: ADD LINK HERE) is Nicole Vasilevsky.
+  - The primary owner can likely review your PR or triage your request to the appropriate person.
+  - If you are addressing a specific ticket, you may want to assign the person who created the ticket to review.
 
 <a name="review"></a> 
 ## How to review a pull request
 
+1. To review a PR, you should view the Files changed and view the diff.
+1. Make sure the changes made address the ticket.
+1. Make sure there are not any unintended or unwanted changes on the PR.
+1. You can leave commnets and requests for changes on the PR.
+
 <a name="change"></a> 
 ## How to change a pull request in response to review
 
+1. Check out your branch in GitHub Desktop and open the file in Protege.
+1. Make the suggested changes.
+1. Check the diff.
+1. Commit your changes on your branch.
+1. Note, you do not need to create another PR, your commits will show up on the same PR.
+1. Resolve the comments on the PR. 
+1. Notify the reviewer that your PR is ready for re-review.
+
 <a name="update"></a> 
 ## How to update from master
+
+1. In GitHub Dekstop, navigate to your branch.
+1. In the top file menu, select Branch -> Update from master.
+
+
 
 <a name="conflict"></a> 
 ## Resolve conflicts on branch
