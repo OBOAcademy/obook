@@ -94,6 +94,10 @@ However, it is more capable for some filetypes than it is for others. Certain fi
 - [Git 101: Git and GitHub for Beginners](http://www.slideshare.net/HubSpot/git-101-git-and-github-for-beginners)
 - [Mastering Issues (10 min read)](https://guides.github.com/features/issues/)
 - [Nomi's intro to GitHub slides](https://docs.google.com/presentation/d/1xiALnyqKJ_cAF0hmR99v1FdQ-CC7WW33/edit?rtpof=true)
+- [Udemy course: Command Line Essentials: Git Bash for Windows](https://www.udemy.com/course/git-bash/)
+- [Udemy course: Git: Become an Expert in Git & GitHub in 4 Hours](https://www.udemy.com/course/git-expert-4-hours)
+- [Google: Introduction to Git and GitHub](https://www.coursera.org/learn/introduction-git-github)
+- [Udemy: Git Started with GitHub](https://www.udemy.com/course/git-started-with-github)
 
 #### Acknowledgements
 
