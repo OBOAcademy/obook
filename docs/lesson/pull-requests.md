@@ -15,12 +15,12 @@ Participants will need to have access to the following resources and tools prior
 
 ### Learning objectives
 
-- How to create a really good pull request
-- How to find a reviewer for your pull request in an open source environment
-- How to review a pull request
-- How to change a pull request in response to review
-- How to update from master
-- Resolve conflicts on branch
+- [How to create a really good pull request](#good-pr)
+- [How to find a reviewer for your pull request in an open source environment](#reviwer)
+- [How to review a pull request](#review)
+- [How to change a pull request in response to review](#change)
+- [How to update from master](#update)
+- [Resolve conflicts on branch](#conflict)
 
 - How to use GitHub
   - [GitHub workflows](#gh-workflows)
