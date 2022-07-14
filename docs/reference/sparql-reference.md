@@ -282,3 +282,4 @@ WHERE
   # filtering out triples where entity is an IRI
   FILTER (isIRI(?entity))
 }
+```
