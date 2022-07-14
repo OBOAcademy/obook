@@ -15,7 +15,7 @@ This can be done via one of two ways:
 1. Paste these files in your Protege plugin directory. This is in one of two locations:
     - ~/.Protege/plugins (note this is usually hidden from finder, but you can see it in the terminal) or
     - Go to Protege in Applications (Finder), right click, 'Show package contents' -> Java -> plugins
-2. If a directory called `plugins` does not exist in this folder, create it.
+2. If you go to `~/.Protege` and a directory called `plugins` does not exist in this folder, you can create it.
 3. Copy and paste the two files into the plugins directory
 4. Remove old elk.jar (Ex. org.semanticweb.elk.jar)
 5. Restart Protege. You should see ELK 0.5 installed in your Reasoner menu. 
