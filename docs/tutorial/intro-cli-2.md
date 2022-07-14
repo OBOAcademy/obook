@@ -87,6 +87,18 @@ If you have worked with ROBOT before, this looks quite a bit more ugly then simp
 robot --version
 ```
 
+If you get this (or a similar) error:
+
+```
+zsh: permission denied: robot
+```
+
+You will have to run the following command as well, which makes the `robot` wrapper script executable:
+
+```
+chmod +x ~/tools/robot
+```
+
 So, how can we achieve this? The answer is, we download a "wrapper script" and place it in the same folder as the Jar. Many tools provide such wrapper scripts, and they can sometimes do many more things than just "running the jar file". Let us know download the latest wrapper script:
 
 ```
