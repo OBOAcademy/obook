@@ -43,6 +43,9 @@ Participants will need to have access to the following resources and tools prior
 1. In GitHub Desktop, navigate to your local ontology directory of your ontology
 2. Make sure you are on the master/main branch and click Pull origin (or Fetch origin) 
 
+<img width="434" alt="image" src="https://user-images.githubusercontent.com/6722114/179310654-bd87fcf8-9855-4769-b309-9413b03434e7.png">
+
+
 ## Create a New Working Branch
 1. When starting to work on a ticket, you should create a new branch of the repository to edit the ontology file.
 2. Make sure you are on the master branch before creating a new branch. **_Please do not create a new branch off of an existing branch (unless the situation explicitly calls for it)._** 
