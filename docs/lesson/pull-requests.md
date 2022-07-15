@@ -74,6 +74,7 @@ Participants will need to have access to the following resources and tools prior
 
 <img width="506" alt="image" src="https://user-images.githubusercontent.com/6722114/179311118-b998f0e7-3271-4736-a308-48f024be5f34.png">
 
+**Example diffs:**
 
 Example 1 (Cell Ontology):
 
