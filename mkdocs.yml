@@ -11,6 +11,7 @@ nav:
   - Contribute to the course: contributing.md
   - Courses:
       - ICBO 2021 Tutorial: courses/icbo2021.md
+      - ICBO 2022 Tutorial: courses/icbo2022.md
       - Monarch Ontology Training: courses/monarch-obo-training.md
   - Pathways:
       - What is a pathway?: pathways/pathways.md
