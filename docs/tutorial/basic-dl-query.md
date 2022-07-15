@@ -7,7 +7,7 @@ Created by: Melissa Haendel, Chris Mungall, David Osumi-Sutherland, Matt Yoder, 
 
 The DL query tab shown below provides an interface for querying and searching an ontology. The ontology must be classified by a reasoner before it can be queried in the DL query tab.
 
-For this tutorial, we will be using cc.owl which can be found [here](resources/BDK14-exercises/basic-dl-query).
+For this tutorial, we will be using cc.owl which can be found [here](https://github.com/OHSUBD2K/BDK14-Ontologies-101/blob/master/BDK14_exercises/basic-dl-query/cc.owl).
 
 Go to the `basic-dl-query` folder and open `cc.owl`. Run the reasoner. Navigate to the DL Query tab.
 
