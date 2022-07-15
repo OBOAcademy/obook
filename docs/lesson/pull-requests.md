@@ -112,6 +112,9 @@ Example 2 (Mondo):
 <img width="617" alt="image" src="https://user-images.githubusercontent.com/6722114/179312344-fda913a9-f2fd-4e04-bfb2-c8b424fddeba.png">
 
 1. If your PR is a work-in-progress and not ready for review, you can save it as a draft PR and convert it to a PR when it is ready for review.
+
+<img width="343" alt="image" src="https://user-images.githubusercontent.com/6722114/179314287-e4474c60-f905-493a-90e9-9bd1af13f227.png">
+
 1. If you do not create a PR directly from GitHub Dekstop, you can go to your GitHub repo and you will see a yellow banner on top that notifies you of a pending PR.
 
 <img width="1241" alt="image" src="https://user-images.githubusercontent.com/6722114/179314202-a1d1e229-decd-4033-ad46-9f504cbbc2d0.png">
