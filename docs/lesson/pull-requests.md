@@ -90,7 +90,7 @@ Example 2 (Mondo):
 
 4. Give a very descriptive title: Add a descriptive title in the subject line. For example: add new class ONTOLOGY:ID [term name] (e.g. add new class MONDO:0000006 heart disease)
 
-5. Write a great summary of what the change is in the Description box, referring to the issue. The sentence should clearly state how the issue is addressed.
+5. Write a detailed summary of what the change is in the Description box, referring to the issue. The sentence should clearly state how the issue is addressed.
 
 6. **NOTE**: You can use the word ‘fixes’ or ‘closes’ in the commit message - these are magic words in GitHub; when used in combination with the ticket number, it will automatically close the ticket. Learn more on this GitHub Help Documentation page about [Closing issues via commit messages](https://help.github.com/en/articles/closing-issues-using-keywords).
 
@@ -108,6 +108,9 @@ Example 2 (Mondo):
 1. You can either make a Pull Request (PR) directly from GitHub Desktop, or via the GitHub web browser.
 1. To make a PR from GitHub Desktop, click the button 'Create Pull Request'. You will be directed to your web browser and GitHub repo.
 1. Click Create Pull Request.
+
+<img width="617" alt="image" src="https://user-images.githubusercontent.com/6722114/179312344-fda913a9-f2fd-4e04-bfb2-c8b424fddeba.png">
+
 1. If your PR is a work-in-progress and not ready for review, you can save it as a draft PR and convert it to a PR when it is ready for review.
 1. If you do not create a PR directly from GitHub Dekstop, you can go to your GitHub repo and you will see a yellow banner on top that notifies you of a pending PR.
 1. Navigate to the tab labeled as ‘Code’. You should see your commit listed at the top of the page in a light yellow box. If you don’t see it, click on the ‘Branches’ link to reveal it in the list, and click on it.  
