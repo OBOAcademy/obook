@@ -9,7 +9,7 @@ The DL query tab shown below provides an interface for querying and searching an
 
 For this tutorial, we will be using cc.owl which can be found [here](https://github.com/OHSUBD2K/BDK14-Ontologies-101/blob/master/BDK14_exercises/basic-dl-query/cc.owl).
 
-Go to the `basic-dl-query` folder and open `cc.owl`. Run the reasoner. Navigate to the DL Query tab.
+Open cc.owl in Protege (use Open from URL and enter the `https://raw.githubusercontent.com/OHSUBD2K/BDK14-Ontologies-101/master/BDK14_exercises/basic-dl-query/cc.owl`). Run the reasoner. Navigate to the DL Query tab.
 
 ![](../images/tutorials/dl-query/Figure57.png)
 
