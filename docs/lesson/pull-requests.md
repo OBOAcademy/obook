@@ -47,9 +47,12 @@ Participants will need to have access to the following resources and tools prior
 
 
 ## Create a New Working Branch
-1. When starting to work on a ticket, you should create a new branch of the repository to edit the ontology file.
+1. When starting to work on a ticket or making edits to an ontology, you should create a new branch of the repository to edit the ontology file.
 2. Make sure you are on the master branch before creating a new branch. **_Please do not create a new branch off of an existing branch (unless the situation explicitly calls for it)._** 
 3. To create a new branch, click on Current Branch and select New Branch 
+
+<img width="383" alt="image" src="https://user-images.githubusercontent.com/6722114/179310850-65c6b211-9190-44e5-8032-e4ab34a68c21.png">
+
 4. Name your branch. Some recommended best practices for branch name are to name the branch after the issue number, for example issue-206. If you are not addressing a ticket per se, you could name the branch: 'initals-edits-date', e.g. nv-edits_2022-07-12, or give it a name specific to what you are doing, e.g. fix-typos-2022-07-12.
 
 <img width="392" alt="image" src="https://user-images.githubusercontent.com/6722114/178575718-4ff6f7d2-4ae9-454d-bdd8-49b3ad63484a.png">
@@ -67,7 +70,10 @@ Participants will need to have access to the following resources and tools prior
 
 ## Committing, pushing and making pull requests
 1. Review: GitHub Desktop will display the diff or changes made to the ontology. 
-2. Before committing, view the diff and ensure the changes were intended. Examples of a diff are pasted below. Large diffs are a sign that something went wrong. In this case, do not commit the changes and ask for help instead or consider Discarding your changes and starting the edits again.
+2. Before committing, view the diff and ensure the changes were intended. Examples of a diff are pasted below. Large diffs are a sign that something went wrong. In this case, do not commit the changes and ask for help instead or consider discarding your changes and starting the edits again. To discard changes, right click on the changed file name and select Discard changes.
+
+<img width="506" alt="image" src="https://user-images.githubusercontent.com/6722114/179311118-b998f0e7-3271-4736-a308-48f024be5f34.png">
+
 
 Example 1 (Cell Ontology):
 
