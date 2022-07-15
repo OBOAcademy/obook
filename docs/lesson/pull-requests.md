@@ -113,6 +113,9 @@ Example 2 (Mondo):
 
 1. If your PR is a work-in-progress and not ready for review, you can save it as a draft PR and convert it to a PR when it is ready for review.
 1. If you do not create a PR directly from GitHub Dekstop, you can go to your GitHub repo and you will see a yellow banner on top that notifies you of a pending PR.
+
+<img width="1241" alt="image" src="https://user-images.githubusercontent.com/6722114/179314202-a1d1e229-decd-4033-ad46-9f504cbbc2d0.png">
+
 1. Navigate to the tab labeled as ‘Code’. You should see your commit listed at the top of the page in a light yellow box. If you don’t see it, click on the ‘Branches’ link to reveal it in the list, and click on it.  
 
 For example:  
