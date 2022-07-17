@@ -40,6 +40,10 @@ Note: Work on this document is still in progress, items that are not linked are 
 1. [Obsoleting terms](../howto/obsolete-term.md)
 1. [Merging terms](../howto/merge-terms.md)
 
+### General mindset
+
+1. [How to be a team open science player](../howto/team-open-science-mindset.md)
+
 ## Ontology Curator How To Collection
 
 This section is a non-ordered collection of how to documents that a curator might needs
