@@ -1,7 +1,7 @@
 # Pull Requests
 
 ## Work in Progress
-This lesson is under development. _Updated 2022-07-15_
+This lesson is under development. _Updated 2022-07-18_
 
 ## Prerequisites
 Participants will need to have access to the following resources and tools prior to the training:  
@@ -190,10 +190,11 @@ Conflicts in ontology files can be fixed either on the command line or using Git
 
 Some examples of conflicts that Nicole fixed in Mondo are below:  
 
-![Example1](images/lessons/FixGitHubConflicts/Slide1.jpeg)
-![Example2](images/lessons/FixGitHubConflicts/Slide2.jpeg)
-![Example3](images/lessons/FixGitHubConflictss/Slide3.jpeg)
-![Example4](images/lessons/FixGitHubConflicts/Slide4.jpeg)
+<img width="1025" alt="image" src="https://user-images.githubusercontent.com/6722114/179615230-e6a21d27-ce42-41d0-840d-8abd80ccd866.png">
+<img width="1043" alt="image" src="https://user-images.githubusercontent.com/6722114/179615278-c4565bcc-7267-4045-a734-4803bb20235f.png">
+<img width="1046" alt="image" src="https://user-images.githubusercontent.com/6722114/179615326-b2e7326b-68aa-4fd5-a667-f96cb4d6403e.png">
+<img width="955" alt="image" src="https://user-images.githubusercontent.com/6722114/179615360-b2bc96ea-d3cc-4a6c-acde-a0900040e318.png">
+
 
 <a name="reading"></a> 
 ## Further regarding 
