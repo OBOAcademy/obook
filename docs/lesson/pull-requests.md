@@ -57,7 +57,7 @@ Participants will need to have access to the following resources and tools prior
 
 ## Continuing work on an existing Working Branch
 1. If you are continuing to do work on an existing branch, in addition to updating master, go to your branch by selecting Current Branch in GitHub Desktop and either search for or browse for the branch name. 
-2. **OPTIONAL:** To update the working branch with respect to the current version of the ontology, select Branch from the top menu, Update from master.This step is optional because it is not necessary to work on the current version of the ontology; all changes will be synchronized when git merge is performed.
+2. **OPTIONAL:** To update the working branch with respect to the current version of the ontology, select Branch from the top menu, Update from master. This step is optional because it is not necessary to work on the current version of the ontology; all changes will be synchronized when git merge is performed.
 
 ## Editing an ontology on a branch
 1. Create a new branch, open Protege. Protege will display your branch name in the lower left corner (or it will show Git: **master**)
