@@ -116,18 +116,15 @@ Example 2 (Mondo):
 <img width="343" alt="image" src="https://user-images.githubusercontent.com/6722114/179314287-e4474c60-f905-493a-90e9-9bd1af13f227.png">
 
 1. If you do not create a PR directly from GitHub Dekstop, you can go to your GitHub repo and you will see a yellow banner on top that notifies you of a pending PR.
+1. Navigate to the tab labeled as ‘Code’. You should see your commit listed at the top of the page in a light yellow box. If you don’t see it, click on the ‘Branches’ link to reveal it in the list, and click on it.  
 
 <img width="1241" alt="image" src="https://user-images.githubusercontent.com/6722114/179314202-a1d1e229-decd-4033-ad46-9f504cbbc2d0.png">
 
-1. Navigate to the tab labeled as ‘Code’. You should see your commit listed at the top of the page in a light yellow box. If you don’t see it, click on the ‘Branches’ link to reveal it in the list, and click on it.  
-
-For example:  
-![pull request](images/pullrequest.png)
-
-3. Click the green button ‘Compare & pull request’ on the right.
-4. You may now add comments, if applicable and request a reviewer. See section below on reviewers.
-5. The diff for your file is at the bottom of the page. Examine it as a sanity check.
-6. Click on the green box ‘Pull request’ to generate a pull request.
+1. Click the green button ‘Compare & pull request’ on the right.
+1. You may now add comments, if applicable and request a reviewer. See section below on reviewers.
+1. You can see the diff for your file by clicking 'Files Changed'. Examine it as a sanity check.
+1. Go back to the Conversation tab.
+1. Click on the green box ‘Pull request’ to generate a pull request.
 
 <a name="reviewer"></a> 
 ## How to find a reviewer for your pull request in an open source environment
