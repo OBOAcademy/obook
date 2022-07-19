@@ -8,6 +8,25 @@ For another DOSDP tutorial see [here](dosdp-template.md).
 
 ## Anatomy of a DOSDP file:
 
+A DOSDP tempaltes are written in [YAML]([url](https://en.wikipedia.org/wiki/YAML)) file, an easily editable format for encoding nested data structures.  At the top level of nesting is a set of 'keys', which must match those specified in the DOSDP standard.  The various types of key and their function are outlined below.  Each key is followed by a colon and then a value, which may be a text string, a list or another set of keys. Lists items are indicated using a  '-'.  Nesting is achieved via indenting using some standard number of spaces (typically 3 or 4). Here's a little illustration:
+
+```yaml
+key1: some text
+key2: 
+   - first list item (text; note the indent)
+   - second list item
+key3:
+   key_under_key3: some text
+   another_key_under_key3:
+      - first list item (text; note the indent)
+      - second list item
+   yet_another_key_under_key3:
+      key_under_yet_another_key_under_key3: some more text
+```
+
+In the following text, keys and values together are sometimes referred to as 'fields'.
+
+
 ### Pattern level keys
 
 [Reference doc](https://github.com/INCATools/dead_simple_owl_design_patterns/blob/master/docs/dosdp_schema.md#properties)
@@ -29,7 +48,7 @@ contributors:
 
 [Reference doc](https://github.com/INCATools/dead_simple_owl_design_patterns/blob/master/docs/dosdp_schema.md#owl-entity-dictionaries)
 
-A major aim of the DOSDP system is to produce self-contained, human-readable templates. Templates need IDs in order to be reliably used programatically, but templates that only use IDs are not human readable. DODSPs therefore include a set of dictionaries that map labels to IDs. Strictly any readable name can be used, but by convention we use class labels.  IDs must be  OBO curie style e.g. CL:0000001).
+A major aim of the DOSDP system is to produce self-contained, human-readable templates. Templates need IDs in order to be reliably used programatically, but templates that only use IDs are not human readable. DOSDPs therefore include a set of dictionaries that map labels to IDs. Strictly any readable name can be used, but by convention we use class labels.  IDs must be  OBO curie style e.g. CL:0000001).
 
 Separate dictionaries are required for classes, relations (object properties) & annotationProperties
 
@@ -58,7 +77,7 @@ vars:
   anatomy: "'anatomical entity'"
 ```
 
-The var name (anatomy) corresponds to a column name in the table (TSV file) used in combination with this template, to generate new terms based on the template.  The range specifies what type of term is allowed in this column - in this case 'anatomical entity' (UBERON:0001062) or one of its subclasses, e.g.-
+The var name (anatomy) corresponds to a column name in the table (TSV file) used in combination with this template, to generate new terms based on the template.  The range specifies what type of term is allowed in this column - in this case 'anatomical entity' (UBERON:0001062; as specified in the dictionary) or one of its subclasses, e.g.-
 
 | anatomy |
 |--|
