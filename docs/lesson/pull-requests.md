@@ -22,9 +22,7 @@ Participants will need to have access to the following resources and tools prior
 - [How to change a pull request in response to review](#change)
 - [How to update from master](#update)
 - [Resolve conflicts on branch](#conflict)
-
-### Further regarding
-[Available here](#reading)
+- [Further reading available here](#reading)
 
 ## Contributors
 - [Nicole Vasilevsky](https://orcid.org/0000-0001-5208-3432)
