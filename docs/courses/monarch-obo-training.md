@@ -23,6 +23,7 @@ The goal of this course is to provide ongoing training for the OBO community. As
 
 | Date | Lesson | Notes | Recordings |
 | --- | --- | --- | --- |
+| 2022/07/26 | [Pull Request](../lesson/pull-request.md) | | |
 | 2022/07/12 | [Basic introduction to the CLI: Part 2](../tutorial/intro-cli-2.md) | | |
 | 2022/06/28 | [Basic introduction to the CLI: Part 1](../tutorial/intro-cli-1.md) | | [Here](https://drive.google.com/file/d/1KqulBcn4CZQ4FypuO4cfpxi0cH98dwMO/view?usp=sharing)
 | 2022/06/14 | [Application/project ontologies](../tutorial/project-ontology-development.md) | |  [Here](https://drive.google.com/file/d/1YXLBVRPH3ahuCwKAjkjMlTYf1-Jrry0L/view?usp=sharing)
