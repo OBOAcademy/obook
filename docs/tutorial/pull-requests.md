@@ -186,12 +186,15 @@ If you are assigned to review a pull request, you should receive an email notifi
 _Example_:
 <img width="1003" alt="image" src="https://user-images.githubusercontent.com/6722114/180077713-85c2da65-913a-4043-a7ff-a42e1ad48caa.png">
 
-3. Make sure the changes made address the ticket. In the example above, Sabrina addressed a ticket that requested adding a new term to Mondo, which is what she did on the PR (see https://github.com/monarch-initiative/mondo/pull/5078).
-4. Make sure there are not any unintended or unwanted changes on the PR.
-5. After you finish reviewing each file, you can mark the file as viewed. This collapses the file, helping you identify the files you still need to review.
-6. A progress bar in the pull request header shows the number of files you've viewed.
-7. You can leave comments and requests for changes on the PR.
-8.  After reviewing the file(s), you can approve the pull request or request additional changes by submitting your review with a summary comment. 
+### Things to look out for when reviewing a PR:
+1. Make sure the changes made address the ticket. In the example above, Sabrina addressed a ticket that requested adding a new term to Mondo, which is what she did on the PR (see https://github.com/monarch-initiative/mondo/pull/5078).
+1. Make sure there are not any unintended or unwanted changes on the PR.
+
+### Adding your review
+1. After you finish reviewing each file, you can mark the file as viewed. This collapses the file, helping you identify the files you still need to review.
+1. A progress bar in the pull request header shows the number of files you've viewed.
+1. You can leave comments and requests for changes on the PR.
+1.  After reviewing the file(s), you can approve the pull request or request additional changes by submitting your review with a summary comment. 
 
 The content above was adapted from [GitHub Docs](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/reviewing-proposed-changes-in-a-pull-request).
 
