@@ -206,6 +206,11 @@ _Example_:
 1. After you finish reviewing each file, you can mark the file as viewed. This collapses the file, helping you identify the files you still need to review.
 1. A progress bar in the pull request header shows the number of files you've viewed.
 1. You can leave comments and requests for changes on the PR inline for on the PR when viewing the 'Files changed'.
+1. You can add a single comment, or start a review if you have multiple comments. 
+1. After adding inline comments, click Review changes and select appropriate choice:
+- Comment (Submit general feedback without explicit approval)
+- Approve (Submit feedback and approve merging these changes)
+- Request changes (Submit feedback that must be addressed before merging)
 1.  After reviewing the file(s), you can approve the pull request or request additional changes by submitting your review with a summary comment. 
 
 ### When are you done with your review?
