@@ -67,7 +67,7 @@ _Example_: This PR addresses adds the new terms
 
 Close #5109
 
-
+<img width="466" alt="image" src="https://user-images.githubusercontent.com/6722114/180044558-bbf285d7-eccc-42d1-8c9b-7d6d56ea5f76.png">
 
 ### General tips
 - Commit early, commit often
