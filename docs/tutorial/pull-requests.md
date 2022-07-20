@@ -194,8 +194,13 @@ _Example_:
 If you review the PR and the changes properly address what was described in the description, then it should be sufficient. Not every PR needs comments, it can be approved without any comments or requests for changes.
 
 ### What kind of person do we need for what kind of pull request?
-It depends on what the pull request is addressing. 
+It depends on what the pull request is addressing. Remember the QC checks will check for things like unsatisfiable classes and many other checks (that vary between ontologies). Your job as a reviewer is to check for things that the QC checks won't pick up.
 - If it is content changes, like adding new terms, or reclassifying a term, an ontology curator could review your PR. 
+  - Examples of things to look for:
+    - Poorly written definitions
+    - Missing database cross-references
+    - Incorrectly scoped synonyms
+    - 
 - If the PR is addressing quality control or technical aspects, one of the ontology semantic engineers would probably be a good fit. 
 - If you don't know who to assign, we recommend assigning the ontology contact person and they can triage the request. 
 
