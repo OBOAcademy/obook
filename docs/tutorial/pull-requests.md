@@ -182,12 +182,16 @@ If you are assigned to review a pull request, you should receive an email notifi
 
 1. To review a PR, you should view the 'Files changed' and view the diff(s). You can review changes in a pull request one file at a time.
 1. While reviewing the files in a pull request, you can leave individual comments on specific changes.
-1. Make sure the changes made address the ticket.
-1. Make sure there are not any unintended or unwanted changes on the PR.
-1. After you finish reviewing each file, you can mark the file as viewed. This collapses the file, helping you identify the files you still need to review.
-1. A progress bar in the pull request header shows the number of files you've viewed.
-1. You can leave comments and requests for changes on the PR.
-1.  After reviewing the file(s), you can approve the pull request or request additional changes by submitting your review with a summary comment. 
+
+_Example_:
+<img width="1003" alt="image" src="https://user-images.githubusercontent.com/6722114/180077713-85c2da65-913a-4043-a7ff-a42e1ad48caa.png">
+
+3. Make sure the changes made address the ticket.
+4. Make sure there are not any unintended or unwanted changes on the PR.
+5. After you finish reviewing each file, you can mark the file as viewed. This collapses the file, helping you identify the files you still need to review.
+6. A progress bar in the pull request header shows the number of files you've viewed.
+7. You can leave comments and requests for changes on the PR.
+8.  After reviewing the file(s), you can approve the pull request or request additional changes by submitting your review with a summary comment. 
 
 The content above was adapted from [GitHub Docs](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/reviewing-proposed-changes-in-a-pull-request).
 
