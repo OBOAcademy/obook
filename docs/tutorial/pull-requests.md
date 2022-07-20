@@ -54,10 +54,12 @@ When committing a pull request, you must include a title and a description (more
   - Example: issue-5024
 
 ### What kind of information to include in the description
-- Explain why this PR exists
-  Example: This PR addresses ticket #5178 and adds the new term MONDO:0100503 DPH5-related diphthamide-deficiency syndrome`
+- Describe **what** was changed in the pull request
+- Explain **why** this PR exists
 - Make it clear how it does what it sets out to do. E.g., Does it change a column in the database? How is this being done? What happens to the old data?
 - Use screenshots to demonstrate what has changed
+
+_Example_: This PR addresses adds the new term MONDO:0100503 DPH5-related diphthamide-deficiency syndrome`. Fixes #5178.
 
 ### General tips
 - Commit early, commit often
