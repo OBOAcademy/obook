@@ -205,12 +205,11 @@ _Example_:
 ### Adding your review
 1. After you finish reviewing each file, you can mark the file as viewed. This collapses the file, helping you identify the files you still need to review.
 1. A progress bar in the pull request header shows the number of files you've viewed.
-1. You can leave comments and requests for changes on the PR.
+1. You can leave comments and requests for changes on the PR inline for on the PR when viewing the 'Files changed'.
 1.  After reviewing the file(s), you can approve the pull request or request additional changes by submitting your review with a summary comment. 
 
 ### When are you done with your review?
-If you review the PR and the changes properly address what was described in the description, then it should be sufficient. Not every PR needs comments, it can be approved without any comments or requests for changes. Feel free to ask for help with your review, and/or assign additional reviwers.
-
+If you review the PR and the changes properly address what was described in the description, then it should be sufficient. Not every PR needs comments, it can be approved without any comments or requests for changes. Feel free to ask for help with your review, and/or assign additional reviewers.
 
 Some of the content above was adapted from [GitHub Docs](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/reviewing-proposed-changes-in-a-pull-request).
 
