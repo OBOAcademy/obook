@@ -59,15 +59,9 @@ When committing a pull request, you must include a title and a description (more
 - Make it clear how it does what it sets out to do. E.g., Does it change a column in the database? How is this being done? What happens to the old data?
 - Use screenshots to demonstrate what has changed
 
-_Example_: This PR addresses adds the new terms
-- MONDO:0700082 Robertsonian translocation Down syndrome
-- MONDO:0700083 reciprocal translocation down syndrome
-- MONDO:0700093 balanced Robertsonian translocation Down syndrome
-- MONDO:0700094 unbalanced Robertsonian translocation Down syndrome
+_Example_: 
 
-Close #5109
-
-<img width="466" alt="image" src="https://user-images.githubusercontent.com/6722114/180044558-bbf285d7-eccc-42d1-8c9b-7d6d56ea5f76.png">
+<img width="819" alt="image" src="https://user-images.githubusercontent.com/6722114/180045920-41fb3bcf-7eea-4f3e-ab06-bc1c300796a1.png">
 
 ### General tips
 - Commit early, commit often
