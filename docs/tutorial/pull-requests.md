@@ -12,7 +12,7 @@ Participants will need to have access to the following resources and tools prior
 
 ## Preparation (_optional_)
 - Review tutorial on [Contributing to Ontologies](contributing-to-obo-ontologies.md)
-- See [How to guide on Pull Requests](howto/github-create-pull-request.md)
+- See ['How to' guide on Pull Requests](howto/github-create-pull-request.md)
 
 ## What is delivered as part of the course
 
@@ -21,6 +21,7 @@ Participants will need to have access to the following resources and tools prior
 ### Learning objectives
 
 - [How to create a really good pull request](#good-pr)
+- [GitHub Pull Request Workflow](#workflow)
 - [How to find a reviewer for your pull request in an open source environment](#reviewer)
 - [How to review a pull request](#review)
 - [How to change a pull request in response to review](#change)
@@ -35,12 +36,34 @@ Participants will need to have access to the following resources and tools prior
 - [Nico Matentzoglu](https://orcid.org/0000-0002-7356-1779)
 
 <a name="good-pr"></a> 
-## How to create a really good pull request
+# How to create a really good pull request
+
+### What is a Pull Request?
+
+A Pull Request (PR) is an event in Git where a contributor (you!) asks a maintainer of a Git repository to review changes (e.g. edits to an ontology file) they want to merge into a project (e.g. the owl file) (see [reference](https://www.gitkraken.com/learn/git/tutorials/what-is-a-pull-request-in-git)). A contributor creates a pull request to propose and collaborate on changes to a repository. These changes are proposed in a branch, which ensures that the default branch only contains finished and approved work. See more details [here](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
+
+### How to write a great descriptive title
+
+When committing a pull request, you must include a title and a description (more details in the [workflow](#workflow) below.) Tips below (adapted from [Hugo Dias](https://hugooodias.medium.com/the-anatomy-of-a-perfect-pull-request-567382bb6067)):
+- The title of the PR should be self-explanatory
+- **_Do_**: Describe what was changed in the pull request 
+  - _Example:_ Add new term: MONDO:0100503 DPH5-related diphthamide-deficiency syndrome`
+- **_Don't_**: write a vague title that has very little meaning. 
+  - Example: Add new term
+- **Don't**: use the branch name in the Pull Request (sometimes GitHub will offer this as a default name)
+  - Example: issue-5024
+
+### What kind of information to include in the description
+- Explain why this PR exists
+  Example: This PR addresses ticket #5178 and adds the new term MONDO:0100503 DPH5-related diphthamide-deficiency syndrome`
+- Make it clear how it does what it sets out to do. E.g., Does it change a column in the database? How is this being done? What happens to the old data?
+- Use screenshots to demonstrate what has changed
 
 ### General tips
 - Commit early, commit often
 - Write detailed commit messages
 
+<a name="workflow"></a> 
 # GitHub Pull Request Workflow
 
 ## Update the local copy of the ontology
@@ -211,4 +234,6 @@ Some examples of conflicts that Nicole fixed in Mondo are below:
 - [Git merge conflicts
 ](https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts)
 
+### The anatomy of a perfect pull request
 
+[Blog post by Hugo Dias](https://hugooodias.medium.com/the-anatomy-of-a-perfect-pull-request-567382bb6067)
