@@ -56,7 +56,7 @@ Participants will need to have access to the following resources and tools prior
 <img width="392" alt="image" src="https://user-images.githubusercontent.com/6722114/178575718-4ff6f7d2-4ae9-454d-bdd8-49b3ad63484a.png">
 
 ## Continuing work on an existing Working Branch
-1. If you are continuing to do work on an existing branch, in addition to updating master, go to your branch by selecting Current Branch in GitHub Desktop and either search for or browse for the branch name. 
+1. If you are continuing to do work on an existing branch, in addition to updating master, go to your branch by selecting Current Branch in GitHub Desktop and either search for or browse for the branch name. A video is below (and a higher resolution version of the video is [here](https://drive.google.com/file/d/1q0Fdj1OjzIKwGrmCRYyI2z8_xzO_4uU8/view?usp=sharing)).
 
 https://user-images.githubusercontent.com/6722114/179862863-78d9fb40-60b5-4441-9a29-ba022cc49fd8.mov
 
