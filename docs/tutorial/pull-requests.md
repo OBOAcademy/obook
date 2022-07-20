@@ -1,9 +1,5 @@
 # Pull Requests
 
-# Under development
-
-This tutorial is under development. _Updated 2022-07-20_
-
 ## Prerequisites
 Participants will need to have access to the following resources and tools prior to the training:  
 - **GitHub account** - register for a free GitHub account [here](https://github.com/join?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home)   
