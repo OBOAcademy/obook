@@ -60,7 +60,7 @@ nav:
           - GitHub Fundamentals for OBO Engineers: tutorial/github-fundamentals.md
           - GitHub Issue for OBO Engineers: tutorial/github-issues.md
           - Managing OBO ontology projects: tutorial/managing-ontology-project.md
-          - Term requests: tutorial/term-request.md
+          - Pull requests: tutorial/pull-requests.md
       - Dealing with Semantic Data: 
           - From Tables to Linked Data: tutorial/linking-data.md
           - Basic SPARQL for OBO Engineers: tutorial/sparql.md
