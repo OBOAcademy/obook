@@ -211,7 +211,7 @@ _Example_:
 - Comment (Submit general feedback without explicit approval)
 - Approve (Submit feedback and approve merging these changes)
 - Request changes (Submit feedback that must be addressed before merging)
-1. In addition or instead of adding inline comments, you can leave comments on the Conversation page. The conversation page is a good place to discuss the PR, and for the original creator to respond to the reviewer comemnts.  
+1. In addition or instead of adding inline comments, you can leave comments on the Conversation page. The conversation page is a good place to discuss the PR, and for the original creator to respond to the reviewer comments.  
 
 ### When are you done with your review?
 If you review the PR and the changes properly address what was described in the description, then it should be sufficient. Not every PR needs comments, it can be approved without any comments or requests for changes. Feel free to ask for help with your review, and/or assign additional reviewers.
