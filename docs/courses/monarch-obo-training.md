@@ -24,7 +24,7 @@ The goal of this course is to provide ongoing training for the OBO community. As
 | Date | Lesson | Notes | Recordings |
 | --- | --- | --- | --- |
 | 2022/07/26 | [Pull Requests](../tutorial/pull-requests.md) | | |
-| 2022/07/12 | [Basic introduction to the CLI: Part 2](../tutorial/intro-cli-2.md) | | |
+| 2022/07/12 | [Basic introduction to the CLI: Part 2](../tutorial/intro-cli-2.md) | Due to intermitent connection issues, the first few minutes of this recording are not included. Refer to the Tutorial link for the initial directions. | [Here](https://drive.google.com/file/d/1NKI0Xvoh446UuPKdQ2LYr1Zvgqxe-sGE/view?usp=sharing)
 | 2022/06/28 | [Basic introduction to the CLI: Part 1](../tutorial/intro-cli-1.md) | | [Here](https://drive.google.com/file/d/1KqulBcn4CZQ4FypuO4cfpxi0cH98dwMO/view?usp=sharing)
 | 2022/06/14 | [Application/project ontologies](../tutorial/project-ontology-development.md) | |  [Here](https://drive.google.com/file/d/1YXLBVRPH3ahuCwKAjkjMlTYf1-Jrry0L/view?usp=sharing)
 | 2022/05/31 | [Contributing to ontologies: annotation properties](../explanation/annotation-properties.md) | | [Here](https://drive.google.com/file/d/1ekMtyRthdpktIyUqargOEEhuqQUrzeH2/view?usp=sharing) |
