@@ -48,7 +48,7 @@ Let us first look at what we currently have loaded in our path:
 echo $PATH
 ```
 
-What you see here is a list of paths. To read this list a bit more easily, let us remember our lesson on [piping commands](../tutorial/into-cli-1.md#pipe):
+What you see here is a list of paths. To read this list a bit more easily, let us remember our lesson on [piping commands](../tutorial/intro-cli-1.md#pipe):
 
 ```console
 echo $PATH | tr ':' '\n'  | sort
