@@ -209,7 +209,7 @@ _Example_:
 1.  After reviewing the file(s), you can approve the pull request or request additional changes by submitting your review with a summary comment. 
 
 ### When are you done with your review?
-If you review the PR and the changes properly address what was described in the description, then it should be sufficient. Not every PR needs comments, it can be approved without any comments or requests for changes.
+If you review the PR and the changes properly address what was described in the description, then it should be sufficient. Not every PR needs comments, it can be approved without any comments or requests for changes. Feel free to ask for help with your review, and/or assign additional reviwers.
 
 
 Some of the content above was adapted from [GitHub Docs](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/reviewing-proposed-changes-in-a-pull-request).
