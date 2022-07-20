@@ -188,7 +188,16 @@ _Example_:
 
 ### Things to look out for when reviewing a PR:
 1. Make sure the changes made address the ticket. In the example above, Sabrina addressed a ticket that requested adding a new term to Mondo, which is what she did on the PR (see https://github.com/monarch-initiative/mondo/pull/5078).
-1. Make sure there are not any unintended or unwanted changes on the PR.
+1. Make sure there are not any unintended or unwanted changes on the PR. 
+
+### When are you done with your review?
+If you review the PR and the changes properly address what was described in the description, then it should be sufficient. Not every PR needs comments, it can be approved without any comments or requests for changes.
+
+### What kind of person do we need for what kind of pull request?
+It depends on what the pull request is addressing. 
+- If it is content changes, like adding new terms, or reclassying a term, an ontology curator could review your PR. 
+- If the PR is addressing quality control or technical aspects, one of the ontology semantic engineers would probably be a good fit. 
+- If you don't know who to assign, we recommend assigning the ontology contact person and they can triage the request. 
 
 ### Adding your review
 1. After you finish reviewing each file, you can mark the file as viewed. This collapses the file, helping you identify the files you still need to review.
