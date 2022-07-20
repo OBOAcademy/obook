@@ -207,11 +207,11 @@ _Example_:
 1. A progress bar in the pull request header shows the number of files you've viewed.
 1. You can leave comments and requests for changes on the PR inline for on the PR when viewing the 'Files changed'.
 1. You can add a single comment, or start a review if you have multiple comments. 
-1. After adding inline comments, click Review changes and select appropriate choice:
+1. After reviewing the file(s), you can approve the pull request or request additional changes by submitting your review with a summary comment. 
 - Comment (Submit general feedback without explicit approval)
 - Approve (Submit feedback and approve merging these changes)
 - Request changes (Submit feedback that must be addressed before merging)
-1.  After reviewing the file(s), you can approve the pull request or request additional changes by submitting your review with a summary comment. 
+1. In addition or instead of adding inline comments, you can leave comments on the Conversation page. The conversation page is a good place to discuss the PR, and for the original creator to respond to the reviewer comemnts.  
 
 ### When are you done with your review?
 If you review the PR and the changes properly address what was described in the description, then it should be sufficient. Not every PR needs comments, it can be approved without any comments or requests for changes. Feel free to ask for help with your review, and/or assign additional reviewers.
