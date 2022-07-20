@@ -195,7 +195,7 @@ If you review the PR and the changes properly address what was described in the 
 
 ### What kind of person do we need for what kind of pull request?
 It depends on what the pull request is addressing. 
-- If it is content changes, like adding new terms, or reclassying a term, an ontology curator could review your PR. 
+- If it is content changes, like adding new terms, or reclassifying a term, an ontology curator could review your PR. 
 - If the PR is addressing quality control or technical aspects, one of the ontology semantic engineers would probably be a good fit. 
 - If you don't know who to assign, we recommend assigning the ontology contact person and they can triage the request. 
 
