@@ -180,6 +180,13 @@ Example 2 (Mondo):
 
 If you are assigned to review a pull request, you should receive an email notification. You can also check for PRs assigned to you by going to [https://github.com/pulls/assigned](https://github.com/pulls/assigned).
 
+### What kind of person do we need for what kind of pull request?
+It depends on what the pull request is addressing. Remember the QC checks will check for things like unsatisfiable classes and many other checks (that vary between ontologies). Your job as a reviewer is to check for things that the QC checks won't pick up.
+
+- If it is content changes, like adding new terms, or reclassifying a term, an ontology curator could review your PR. 
+- If the PR is addressing quality control or technical aspects, one of the ontology semantic engineers would probably be a good fit. 
+- If you don't know who to assign, we recommend assigning the ontology contact person and they can triage the request. 
+
 1. To review a PR, you should view the 'Files changed' and view the diff(s). You can review changes in a pull request one file at a time.
 1. While reviewing the files in a pull request, you can leave individual comments on specific changes.
 
@@ -188,21 +195,12 @@ _Example_:
 
 ### Things to look out for when reviewing a PR:
 1. Make sure the changes made address the ticket. In the example above, Sabrina addressed a ticket that requested adding a new term to Mondo, which is what she did on the PR (see https://github.com/monarch-initiative/mondo/pull/5078).
+- Examples of things to look for in content changes (like adding new terms or revising existing terms):
+  - Poorly written definitions
+  - Missing or misformatted database cross-references
+  - Incorrectly scoped synonyms
+  - appropriate annotations
 1. Make sure there are not any unintended or unwanted changes on the PR. 
-
-### When are you done with your review?
-If you review the PR and the changes properly address what was described in the description, then it should be sufficient. Not every PR needs comments, it can be approved without any comments or requests for changes.
-
-### What kind of person do we need for what kind of pull request?
-It depends on what the pull request is addressing. Remember the QC checks will check for things like unsatisfiable classes and many other checks (that vary between ontologies). Your job as a reviewer is to check for things that the QC checks won't pick up.
-- If it is content changes, like adding new terms, or reclassifying a term, an ontology curator could review your PR. 
-  - Examples of things to look for:
-    - Poorly written definitions
-    - Missing database cross-references
-    - Incorrectly scoped synonyms
-    - 
-- If the PR is addressing quality control or technical aspects, one of the ontology semantic engineers would probably be a good fit. 
-- If you don't know who to assign, we recommend assigning the ontology contact person and they can triage the request. 
 
 ### Adding your review
 1. After you finish reviewing each file, you can mark the file as viewed. This collapses the file, helping you identify the files you still need to review.
@@ -210,7 +208,11 @@ It depends on what the pull request is addressing. Remember the QC checks will c
 1. You can leave comments and requests for changes on the PR.
 1.  After reviewing the file(s), you can approve the pull request or request additional changes by submitting your review with a summary comment. 
 
-The content above was adapted from [GitHub Docs](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/reviewing-proposed-changes-in-a-pull-request).
+### When are you done with your review?
+If you review the PR and the changes properly address what was described in the description, then it should be sufficient. Not every PR needs comments, it can be approved without any comments or requests for changes.
+
+
+Some of the content above was adapted from [GitHub Docs](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/reviewing-proposed-changes-in-a-pull-request).
 
 <a name="change"></a> 
 ## How to change a pull request in response to review
