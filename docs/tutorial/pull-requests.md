@@ -24,9 +24,6 @@ Participants will need to have access to the following resources and tools prior
 - How to update from master  
 - Resolve conflicts on branch  
 
-### Further Reading
-[Available below](#reading)
-
 ## Contributors
 - [Nicole Vasilevsky](https://orcid.org/0000-0001-5208-3432)
 - [Nico Matentzoglu](https://orcid.org/0000-0002-7356-1779)
