@@ -32,11 +32,12 @@ Participants will need to have access to the following resources and tools prior
 - [Nico Matentzoglu](https://orcid.org/0000-0002-7356-1779)
 
 <a name="good-pr"></a> 
+
 # How to create a really good pull request
 
 ### What is a Pull Request?
 
-A Pull Request (PR) is an event in Git where a contributor (you!) asks a maintainer of a Git repository to review changes (e.g. edits to an ontology file) they want to merge into a project (e.g. the owl file) (see [reference](https://www.gitkraken.com/learn/git/tutorials/what-is-a-pull-request-in-git)). A contributor creates a pull request to propose and collaborate on changes to a repository. These changes are proposed in a branch, which ensures that the default branch only contains finished and approved work. See more details [here](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
+A pull request (PR) is an event in Git where a contributor (you!) asks a maintainer of a Git repository to review changes (e.g. edits to an ontology file) they want to merge into a project (e.g. the owl file) (see [reference](https://www.gitkraken.com/learn/git/tutorials/what-is-a-pull-request-in-git)). A contributor creates a pull request to propose and collaborate on changes to a repository. These changes are proposed in a branch, which ensures that the default branch only contains finished and approved work. See more details [here](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
 
 ### How to write a great descriptive title
 
@@ -50,7 +51,7 @@ When committing a pull request, you must include a title and a description (more
 - **_Don't_**: write a vague title that has very little meaning. 
     - Example: Add new term
 
-- **Don't**: use the branch name in the Pull Request (sometimes GitHub will offer this as a default name)
+- **Don't**: use the branch name in the pull request (sometimes GitHub will offer this as a default name)
     - Example: issue-5024
 
 ### What kind of information to include in the description
@@ -76,6 +77,7 @@ _Example_:
     - Make additional changes on a single PR that goes beyond the scope of the ticket or PR. For example, if you are adding a new term, don't also fix definitions or formatting for other terms.
 
 <a name="workflow"></a> 
+
 # GitHub Pull Request Workflow
 
 ## Update the local copy of the ontology
@@ -150,9 +152,9 @@ Example 2 (Mondo):
 
 9. **Push**: To incorporate the changes into the remote repository, click Commit to [branch name], then click Push.
 
-## Make a Pull Request (PR)
+## Make a pull request (PR)
 
-1. You can either make a Pull Request (PR) directly from GitHub Desktop, or via the GitHub web browser.
+1. You can either make a pull request (PR) directly from GitHub Desktop, or via the GitHub web browser.
 1. To make a PR from GitHub Desktop, click the button 'Create Pull Request'. You will be directed to your web browser and GitHub repo.
 1. Click Create Pull Request.
 
@@ -174,17 +176,19 @@ Example 2 (Mondo):
 1. Click on the green box ‘Pull request’ to generate a pull request.
 
 <a name="reviewer"></a> 
+
 ## How to find a reviewer for your pull request in an open source environment
 
 1. Depending on the level of your permissions for the repository, you may or may not be able to assign a reviewer yourself.
 1. If you have write access to the repository, you can assign a reviewer.
-1. Otherwise, you can tag people in the description of your Pull Request.
+1. Otherwise, you can tag people in the description of your pull request.
 1. Tips for finding reviewers:
   - An ontology repository should have an owner assigned. This may be described in the ReadMe file or on the [OBO Foundry website](). For example, the contact person for [Mondo](https://obofoundry.org/ontology/mondo.html) is Nicole Vasilevsky.
   - The primary owner can likely review your PR or triage your request to the appropriate person.
   - If you are addressing a specific ticket, you may want to assign the person who created the ticket to review.
 
 <a name="review"></a> 
+
 ## How to review a pull request (PR)
 
 If you are assigned to review a pull request, you should receive an email notification. You can also check for PRs assigned to you by going to [https://github.com/pulls/assigned](https://github.com/pulls/assigned).
@@ -232,6 +236,7 @@ If you review the PR and the changes properly address what was described in the 
 Some of the content above was adapted from [GitHub Docs](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/reviewing-proposed-changes-in-a-pull-request).
 
 <a name="change"></a> 
+
 ## How to change a pull request in response to review
 
 1. Check out your branch in GitHub Desktop and open the file in Protege.
@@ -249,6 +254,7 @@ Some of the content above was adapted from [GitHub Docs](https://docs.github.com
 1. In the top file menu, select Branch -> Update from master.
 
 <a name="conflict"></a> 
+
 ## Resolve conflicts on branch
 
 Conflicts arise when edits are made on two separate branches to the same line in a file. ([reference](https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts#:~:text=A%20conflict%20arises%20when%20two,to%20help%20resolve%20merge%20conflicts)). When editing an ontology file (owl file or obo file), conflicts often arise when adding new terms to an ontology file on separate branches, or when there are a lot of open pull requests.
@@ -280,6 +286,7 @@ Some examples of conflicts that Nicole fixed in Mondo are below:
 
 
 <a name="reading"></a> 
+
 ## Further regarding 
 
 ### Gene Ontology Daily Workflow
