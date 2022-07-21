@@ -15,7 +15,7 @@
 
 This is a very unprofessional video recorded as part of one of our trainings. It walks you through this tutorial here, with some additional examples being given and a bit of Q&A.
 
-<iframe src="https://drive.google.com/file/d/13YK_WabCeZrvzycoObWsWek7tGDHnNdW/preview" width="640" height="480" allow="autoplay"></iframe>
+<iframe src="https://www.youtube.com/watch?v=8rAgSN9wwxk" width="640" height="480" allow="autoplay"></iframe>
 
 ## Glossary
 
