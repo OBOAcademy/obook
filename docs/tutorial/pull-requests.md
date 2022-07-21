@@ -66,6 +66,7 @@ _Example_:
 <img width="819" alt="image" src="https://user-images.githubusercontent.com/6722114/180045920-41fb3bcf-7eea-4f3e-ab06-bc1c300796a1.png">
 
 ### General tips
+
 - The pull request should be small
 - Whenever possible, break pull-requests into smaller ones
 - Single Responsibility Principle: The pull request should do only one thing
@@ -75,6 +76,7 @@ _Example_:
 # GitHub Pull Request Workflow
 
 ## Update the local copy of the ontology
+
 1. In GitHub Desktop, navigate to your local ontology directory of your ontology
 2. Make sure you are on the master/main branch and click Pull origin (or Fetch origin) 
 
@@ -82,6 +84,7 @@ _Example_:
 
 
 ## Create a New Working Branch
+
 1. When starting to work on a ticket or making edits to an ontology, you should create a new branch of the repository to edit the ontology file.
 2. Make sure you are on the master branch before creating a new branch. **_Please do not create a new branch off of an existing branch (unless the situation explicitly calls for it)._** 
 3. To create a new branch, click on Current Branch and select New Branch 
@@ -93,14 +96,15 @@ _Example_:
 <img width="392" alt="image" src="https://user-images.githubusercontent.com/6722114/178575718-4ff6f7d2-4ae9-454d-bdd8-49b3ad63484a.png">
 
 ## Continuing work on an existing Working Branch
+
 1. If you are continuing to do work on an existing branch, in addition to updating master, go to your branch by selecting Current Branch in GitHub Desktop and either search for or browse for the branch name. 
 
 A video is  [here](https://drive.google.com/file/d/1q0Fdj1OjzIKwGrmCRYyI2z8_xzO_4uU8/view?usp=sharing)).
 
-
 2. **OPTIONAL:** To update the working branch with respect to the current version of the ontology, select Branch from the top menu, Update from master. This step is optional because it is not necessary to work on the current version of the ontology; all changes will be synchronized when git merge is performed.
 
 ## Editing an ontology on a branch
+
 1. Create a new branch, open Protege. Protege will display your branch name in the lower left corner (or it will show Git: **master**)
 
 <img width="131" alt="image" src="https://user-images.githubusercontent.com/6722114/178575944-8fead930-409e-4cc6-9907-1fac10ee308c.png">
@@ -108,6 +112,7 @@ A video is  [here](https://drive.google.com/file/d/1q0Fdj1OjzIKwGrmCRYyI2z8_xzO_
 2. Make necessary edits in Protege. 
 
 ## Committing, pushing and making pull requests
+
 1. Review: GitHub Desktop will display the diff or changes made to the ontology. 
 2. Before committing, view the diff and ensure the changes were intended. Examples of a diff are pasted below. Large diffs are a sign that something went wrong. In this case, do not commit the changes and ask for help instead or consider discarding your changes and starting the edits again. To discard changes, right click on the changed file name and select Discard changes.
 
@@ -182,6 +187,7 @@ Example 2 (Mondo):
 If you are assigned to review a pull request, you should receive an email notification. You can also check for PRs assigned to you by going to [https://github.com/pulls/assigned](https://github.com/pulls/assigned).
 
 ### What kind of person do we need for what kind of pull request?
+
 It depends on what the pull request is addressing. Remember the QC checks will check for things like unsatisfiable classes and many other checks (that vary between ontologies). Your job as a reviewer is to check for things that the QC checks won't pick up.
 
 - If it is content changes, like adding new terms, or reclassifying a term, an ontology curator could review your PR. 
@@ -195,6 +201,7 @@ _Example_:
 <img width="1003" alt="image" src="https://user-images.githubusercontent.com/6722114/180077713-85c2da65-913a-4043-a7ff-a42e1ad48caa.png">
 
 ### Things to look out for when reviewing a PR:
+
 1. Make sure the changes made address the ticket. In the example above, Sabrina addressed a ticket that requested adding a new term to Mondo, which is what she did on the PR (see https://github.com/monarch-initiative/mondo/pull/5078).
 - Examples of things to look for in content changes (like adding new terms or revising existing terms):
   - Poorly written definitions
@@ -204,6 +211,7 @@ _Example_:
 1. Make sure there are not any unintended or unwanted changes on the PR. 
 
 ### Adding your review
+
 1. After you finish reviewing each file, you can mark the file as viewed. This collapses the file, helping you identify the files you still need to review.
 1. A progress bar in the pull request header shows the number of files you've viewed.
 1. You can leave comments and requests for changes on the PR inline for on the PR when viewing the 'Files changed'.
@@ -215,6 +223,7 @@ _Example_:
 1. In addition or instead of adding inline comments, you can leave comments on the Conversation page. The conversation page is a good place to discuss the PR, and for the original creator to respond to the reviewer comments.  
 
 ### When are you done with your review?
+
 If you review the PR and the changes properly address what was described in the description, then it should be sufficient. Not every PR needs comments, it can be approved without any comments or requests for changes. Feel free to ask for help with your review, and/or assign additional reviewers.
 
 Some of the content above was adapted from [GitHub Docs](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/reviewing-proposed-changes-in-a-pull-request).
@@ -244,6 +253,7 @@ Conflicts arise when edits are made on two separate branches to the same line in
 Conflicts in ontology files can be fixed either on the command line or using GitHub Desktop. In this lesson, we describe how to fix conflicts using GitHub Desktop.
 
 ### Fix conflicts in GitHub desktop
+
 1. In GitHub Desktop, go to your master/main branch and fetch pull. 
 2. Go to branch with conflict. 
 3. Pull branch. 
@@ -270,9 +280,11 @@ Some examples of conflicts that Nicole fixed in Mondo are below:
 ## Further regarding 
 
 ### Gene Ontology Daily Workflow
+
 [Gene Ontology Editing Guide](https://go-ontology.readthedocs.io/en/latest/DailyWorkflow.html)
 
 ### GitHub Merge Conflicts
+
 - [Resolving a merge conflict on GitHub](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-on-github)
 - [Git merge conflicts
 ](https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts)
