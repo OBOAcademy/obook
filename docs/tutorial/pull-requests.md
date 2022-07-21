@@ -45,13 +45,13 @@ When committing a pull request, you must include a title and a description (more
 - The title of the PR should be self-explanatory
 
 - **_Do_**: Describe what was changed in the pull request 
-  - _Example:_ Add new term: MONDO:0100503 DPH5-related diphthamide-deficiency syndrome`
+    - _Example:_ Add new term: MONDO:0100503 DPH5-related diphthamide-deficiency syndrome`
 
 - **_Don't_**: write a vague title that has very little meaning. 
-  - Example: Add new term
+    - Example: Add new term
 
 - **Don't**: use the branch name in the Pull Request (sometimes GitHub will offer this as a default name)
-  - Example: issue-5024
+    - Example: issue-5024
 
 ### What kind of information to include in the description
 
