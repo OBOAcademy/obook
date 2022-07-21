@@ -202,10 +202,10 @@ _Example_:
 
 1. Make sure the changes made address the ticket. In the example above, Sabrina addressed a ticket that requested adding a new term to Mondo, which is what she did on the PR (see https://github.com/monarch-initiative/mondo/pull/5078).
 - Examples of things to look for in content changes (like adding new terms or revising existing terms):
-  - Poorly written definitions
-  - Missing or misformatted database cross-references
-  - Incorrectly scoped synonyms
-  - appropriate annotations
+    - Poorly written definitions
+    - Missing or misformatted database cross-references
+    - Incorrectly scoped synonyms
+    - appropriate annotations
 1. Make sure there are not any unintended or unwanted changes on the PR. 
 
 ### Adding your review
