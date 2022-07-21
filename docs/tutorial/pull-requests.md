@@ -177,6 +177,8 @@ Example 2 (Mondo):
 
 ## How to find a reviewer for your pull request in an open source environment
 
+1. Publicly managed ontologies do not have a structure in place to automatically deal with PRs. 
+1. If you make a PR to an open source project, you should open a separate social channel to the developers to notify them of your PR (e.g. find the project mailing list, Slack, etc.). You should introduce yourself and give some context. 
 1. Depending on the level of your permissions for the repository, you may or may not be able to assign a reviewer yourself.
 1. If you have write access to the repository, you can assign a reviewer.
 1. Otherwise, you can tag people in the description of your pull request.
