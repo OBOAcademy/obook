@@ -29,6 +29,6 @@ This can be done via one of two ways:
 4. Remove old elk.jar (Ex. org.semanticweb.elk.jar)
 5. Restart Protege. You should see ELK 0.5 installed in your Reasoner menu. 
 
-For a video showing how to install Elk on a Mac, click [here](https://drive.google.com/file/d/1sV8LYHB1x11sVMXiDKlWix_5WircYx0E/view?usp=sharing)
+For a video showing how to install Elk on a Mac, click [here](https://www.youtube.com/watch?v=5-UYTmly59I))
 
 Important: it seems Elk 0.5. Does not work with all versions of Protege, in particular, 5.2 and below. These instructions were only tested with Protege 5.5.
