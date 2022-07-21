@@ -1,6 +1,6 @@
 # Fixing merge conflicts
 
-This [video](https://www.youtube.com/watch?v=cB1ZDfBNNN0) illustrates an example of fixing a merge conflict in the mondo ontology.
+This [video](https://www.youtube.com/watch?v=cB1ZDfBNNN0) illustrates an example of fixing a merge conflict in the Mondo Disease Ontology.
 
 **Instructions:**
 
