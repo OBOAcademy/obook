@@ -22,7 +22,7 @@ Note: Work on this document is still in progress, items that are not linked are 
 1. [Fundamentals of GitHub](../tutorial/github-fundamentals.md)
 2. [Github issues](../tutorial/github-issues.md)
 3. [Cloning a Repo](../howto/clone-mondo-repo.md)
-4. [Creating pull requests](../howto/github-create-pull-request.md)
+4. [Creating pull requests](../tutorial/pull-requests.md)
 5. [Introduction into the command line](../tutorial/intro-cli-1.md)
 
 ### Learning protege
