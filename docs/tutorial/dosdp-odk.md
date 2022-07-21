@@ -13,7 +13,7 @@
 
 ## Video
 
-This is a very unprofessional video recorded as part of one of our trainings. It walks you through this tutorial here, with some additional examples being given and a bit of Q&A.
+This is a very unprofessional [video](https://www.youtube.com/watch?v=8rAgSN9wwxk) recorded as part of one of our trainings. It walks you through this tutorial here, with some additional examples being given and a bit of Q&A.
 
 <iframe src="https://www.youtube.com/watch?v=8rAgSN9wwxk" width="640" height="480" allow="autoplay"></iframe>
 
