@@ -66,11 +66,14 @@ _Example_:
 <img width="819" alt="image" src="https://user-images.githubusercontent.com/6722114/180045920-41fb3bcf-7eea-4f3e-ab06-bc1c300796a1.png">
 
 ### General tips
-
-- The pull request should be small
-- Whenever possible, break pull-requests into smaller ones
-- Single Responsibility Principle: The pull request should do only one thing
-- Commit early, commit often
+- **Do**:
+    - Follow the _Single Responsibility Principle_: The pull request should do only one thing.
+        - _Note_: sometimes a small edit can change a lot of code, for example, if you want to change all of the created_by annotations to dc:creator. That's okay.
+    - The pull request should be atomic: it should be small and self contained with simple changes that affect a little code a possible
+    - Whenever possible, break pull-requests into smaller ones  
+    - Commit early, commit often
+- **Don't**:
+    - Make additional changes on a single PR that goes beyond the scope of the ticket or PR. For example, if you are adding a new term, don't also fix definitions or formatting for other terms.
 
 <a name="workflow"></a> 
 # GitHub Pull Request Workflow
