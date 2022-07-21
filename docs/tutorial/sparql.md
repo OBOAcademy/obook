@@ -26,9 +26,7 @@ SPARQL has many uses in the OBO-sphere, but the following in particular:
 2. Creating summary tables for ontologies
 3. Sophisticated data transformations in ontology pipelines
 
-We will discuss each of these in the following and give examples. An informal discussion of SPARQL in OBO can be followed here:
-
-<iframe src="https://drive.google.com/file/d/1dueong-Du3WPPRvpYoHeFIau-_4F_6Hg/preview" width="640" height="480" allow="autoplay"></iframe>
+We will discuss each of these in the following and give examples. An informal discussion of SPARQL in OBO can be followed in this [video](https://www.youtube.com/watch?v=ClYYke6c3tk).
 
 ### Quality control checking
 
