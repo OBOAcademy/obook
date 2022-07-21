@@ -96,9 +96,7 @@ _Example_:
 
 1. If you are continuing to do work on an existing branch, in addition to updating master, go to your branch by selecting Current Branch in GitHub Desktop and either search for or browse for the branch name. 
 
-A video is below.
-
-<iframe src="https://www.youtube.com/watch?v=kE_50AzpuB8" width="640" height="480" allow="autoplay"></iframe>
+A video is [here](https://www.youtube.com/watch?v=kE_50AzpuB8).
 
 2. **OPTIONAL:** To update the working branch with respect to the current version of the ontology, select Branch from the top menu, Update from master. This step is optional because it is not necessary to work on the current version of the ontology; all changes will be synchronized when git merge is performed.
 
