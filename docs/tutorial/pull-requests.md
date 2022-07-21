@@ -41,15 +41,20 @@ A Pull Request (PR) is an event in Git where a contributor (you!) asks a maintai
 ### How to write a great descriptive title
 
 When committing a pull request, you must include a title and a description (more details in the [workflow](#workflow) below.) Tips below (adapted from [Hugo Dias](https://hugooodias.medium.com/the-anatomy-of-a-perfect-pull-request-567382bb6067)):
+
 - The title of the PR should be self-explanatory
+
 - **_Do_**: Describe what was changed in the pull request 
   - _Example:_ Add new term: MONDO:0100503 DPH5-related diphthamide-deficiency syndrome`
+
 - **_Don't_**: write a vague title that has very little meaning. 
   - Example: Add new term
+
 - **Don't**: use the branch name in the Pull Request (sometimes GitHub will offer this as a default name)
   - Example: issue-5024
 
 ### What kind of information to include in the description
+
 - Describe **what** was changed in the pull request
 - Explain **why** this PR exists
 - Make it clear how it does what it sets out to do. E.g., Does it edit the ontology-edit.owl file? Does it edit another file(s)?
