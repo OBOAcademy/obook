@@ -70,6 +70,18 @@ Data properties are different to annotation properties in that they:
 - Example Data Property: 'hasName', 'hasPrice', 'hasCalories', 'hasSugarContent',...
 - More details on how to use Data Properties [here](https://oboacademy.github.io/obook/tutorial/fhkb/#data-properties-in-the-fhkb)
 
+### Examples
+
+**Annotation Property** | **Description**
+--- | ---
+database_cross_reference | links a class to an external term
+excluded from QC check | links a class to another entity
+**Data Property** | **Description**
+has birth year | 
+has length |
+**Object Property** | **Description**
+part_of | 
+location_in |
 
 ## Creating new Annotation Properties
 
