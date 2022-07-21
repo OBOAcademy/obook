@@ -186,7 +186,7 @@ If you are assigned to review a pull request, you should receive an email notifi
 
 ### What kind of person do we need for what kind of pull request?
 
-It depends on what the pull request is addressing. Remember the QC checks will check for things like unsatisfiable classes and many other checks (that vary between ontologies). Your job as a reviewer is to check for things that the QC checks won't pick up.
+It depends on what the pull request is addressing. Remember the QC checks will check for things like unsatisfiable classes and many other checks (that vary between ontologies). Your job as a reviewer is to check for things that the QC checks won't pick up and need human judgement.
 
 - If it is content changes, like adding new terms, or reclassifying a term, an ontology curator could review your PR. 
 - If the PR is addressing quality control or technical aspects, one of the ontology semantic engineers would probably be a good fit. 
@@ -200,13 +200,19 @@ _Example_:
 
 ### Things to look out for when reviewing a PR:
 
-1. Make sure the changes made address the ticket. In the example above, Sabrina addressed a ticket that requested adding a new term to Mondo, which is what she did on the PR (see https://github.com/monarch-initiative/mondo/pull/5078).
-- Examples of things to look for in content changes (like adding new terms or revising existing terms):
-    - Poorly written definitions
-    - Missing or misformatted database cross-references
-    - Incorrectly scoped synonyms
-    - appropriate annotations
+1. Make sure the changes made address the ticket. In the example above, Sabrina addressed a ticket that requested adding a new term to Mondo, which is what she did on the PR (see [https://github.com/monarch-initiative/mondo/pull/5078](https://github.com/monarch-initiative/mondo/pull/5078)).
+  - Examples of things to look for in content changes (like adding new terms or revising existing terms):
+      - Poorly written definitions
+      - Missing or misformatted database cross-references
+      - Incorrectly scoped synonyms
+      - appropriate annotations
 1. Make sure there are not any unintended or unwanted changes on the PR. 
+1. Check that the logic is correct. This can be a difficult thing to do. Some tips:
+    - Open the branch in Protege and examine the hierarchy in Protege  
+    - Compare the logic that was use to the logic used in an existing term
+    - If the ontology uses Design Patterns, ensure the logic is consistent with the Design Patterns
+    - Ask an expert in ontology logic to help review the PR
+    - Remember there is no magic bullet to ensuring an ontology is logically sound, but do the best you can
 
 ### Adding your review
 
