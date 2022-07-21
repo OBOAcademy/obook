@@ -31,8 +31,6 @@ Participants will need to have access to the following resources and tools prior
 - [Nicole Vasilevsky](https://orcid.org/0000-0001-5208-3432)
 - [Nico Matentzoglu](https://orcid.org/0000-0002-7356-1779)
 
-<a name="good-pr"></a> 
-
 # How to create a really good pull request
 
 ### What is a Pull Request?
