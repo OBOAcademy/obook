@@ -16,13 +16,13 @@ Participants will need to have access to the following resources and tools prior
 
 ### Learning objectives
 
-- [How to create a really good pull request](#good-pr)
-- [GitHub Pull Request Workflow](#workflow)
-- [How to find a reviewer for your pull request in an open source environment](#reviewer)
-- [How to review a pull request](#review)
-- [How to change a pull request in response to review](#change)
-- [How to update from master](#update)
-- [Resolve conflicts on branch](#conflict)
+- How to create a really good pull request
+- GitHub Pull Request Workflow
+- How to find a reviewer for your pull request in an open source environment
+- How to review a pull request
+- How to change a pull request in response to review
+- How to update from master
+- Resolve conflicts on branch
 
 ### Further Reading
 [Available below](#reading)
@@ -73,8 +73,6 @@ _Example_:
     - Commit early, commit often
 - **Don't**:
     - Make additional changes on a single PR that goes beyond the scope of the ticket or PR. For example, if you are adding a new term, don't also fix definitions or formatting for other terms.
-
-<a name="workflow"></a> 
 
 # GitHub Pull Request Workflow
 
@@ -173,8 +171,6 @@ Example 2 (Mondo):
 1. Go back to the Conversation tab.
 1. Click on the green box ‘Pull request’ to generate a pull request.
 
-<a name="reviewer"></a> 
-
 ## How to find a reviewer for your pull request in an open source environment
 
 1. Publicly managed ontologies do not have a structure in place to automatically deal with PRs. 
@@ -186,8 +182,6 @@ Example 2 (Mondo):
   - An ontology repository should have an owner assigned. This may be described in the ReadMe file or on the [OBO Foundry website](). For example, the contact person for [Mondo](https://obofoundry.org/ontology/mondo.html) is Nicole Vasilevsky.
   - The primary owner can likely review your PR or triage your request to the appropriate person.
   - If you are addressing a specific ticket, you may want to assign the person who created the ticket to review.
-
-<a name="review"></a> 
 
 ## How to review a pull request (PR)
 
@@ -235,8 +229,6 @@ If you review the PR and the changes properly address what was described in the 
 
 Some of the content above was adapted from [GitHub Docs](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/reviewing-proposed-changes-in-a-pull-request).
 
-<a name="change"></a> 
-
 ## How to change a pull request in response to review
 
 1. Check out your branch in GitHub Desktop and open the file in Protege.
@@ -247,13 +239,10 @@ Some of the content above was adapted from [GitHub Docs](https://docs.github.com
 1. Resolve the comments on the PR. 
 1. Notify the reviewer that your PR is ready for re-review.
 
-<a name="update"></a> 
 ## How to update from master
 
 1. In GitHub Desktop, navigate to your branch.
 1. In the top file menu, select Branch -> Update from master.
-
-<a name="conflict"></a> 
 
 ## Resolve conflicts on branch
 
@@ -283,9 +272,6 @@ Some examples of conflicts that Nicole fixed in Mondo are below:
 <img width="1043" alt="image" src="https://user-images.githubusercontent.com/6722114/179615278-c4565bcc-7267-4045-a734-4803bb20235f.png">
 <img width="1046" alt="image" src="https://user-images.githubusercontent.com/6722114/179615326-b2e7326b-68aa-4fd5-a667-f96cb4d6403e.png">
 <img width="955" alt="image" src="https://user-images.githubusercontent.com/6722114/179615360-b2bc96ea-d3cc-4a6c-acde-a0900040e318.png">
-
-
-<a name="reading"></a> 
 
 ## Further regarding 
 
