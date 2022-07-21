@@ -266,7 +266,7 @@ Conflicts in ontology files can be fixed either on the command line or using Git
 10. Save as (nothing should have changed in the diff). 
 11. Check the diff in GitHub online. 
 
-Watch a [video example](https://drive.google.com/file/d/1DqYiXEdkLCVji55FmFlA9sPmfLouEqrj/view?usp=sharing) of fixing a conflict in the Mondo ontology file.
+Watch a [video example](https://www.youtube.com/watch?v=cB1ZDfBNNN0) of fixing a conflict in the Mondo ontology file.
 
 Some examples of conflicts that Nicole fixed in Mondo are below:  
 
