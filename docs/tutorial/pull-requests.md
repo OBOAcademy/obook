@@ -28,7 +28,7 @@ Participants will need to have access to the following resources and tools prior
 - [Nicole Vasilevsky](https://orcid.org/0000-0001-5208-3432)
 - [Nico Matentzoglu](https://orcid.org/0000-0002-7356-1779)
 
-# How to create a really good pull request
+## How to create a really good pull request
 
 ### What is a Pull Request?
 
@@ -71,17 +71,16 @@ _Example_:
 - **Don't**:
     - Make additional changes on a single PR that goes beyond the scope of the ticket or PR. For example, if you are adding a new term, don't also fix definitions or formatting for other terms.
 
-# GitHub Pull Request Workflow
+## GitHub Pull Request Workflow
 
-## Update the local copy of the ontology
+### Update the local copy of the ontology
 
 1. In GitHub Desktop, navigate to your local ontology directory of your ontology
 2. Make sure you are on the master/main branch and click Pull origin (or Fetch origin) 
 
 <img width="434" alt="image" src="https://user-images.githubusercontent.com/6722114/179310654-bd87fcf8-9855-4769-b309-9413b03434e7.png">
 
-
-## Create a New Working Branch
+### Create a New Working Branch
 
 1. When starting to work on a ticket or making edits to an ontology, you should create a new branch of the repository to edit the ontology file.
 2. Make sure you are on the master branch before creating a new branch. **_Please do not create a new branch off of an existing branch (unless the situation explicitly calls for it)._** 
@@ -93,7 +92,7 @@ _Example_:
 
 <img width="392" alt="image" src="https://user-images.githubusercontent.com/6722114/178575718-4ff6f7d2-4ae9-454d-bdd8-49b3ad63484a.png">
 
-## Continuing work on an existing Working Branch
+### Continuing work on an existing Working Branch
 
 1. If you are continuing to do work on an existing branch, in addition to updating master, go to your branch by selecting Current Branch in GitHub Desktop and either search for or browse for the branch name. 
 
@@ -101,7 +100,7 @@ A video is  [here](https://drive.google.com/file/d/1q0Fdj1OjzIKwGrmCRYyI2z8_xzO_
 
 2. **OPTIONAL:** To update the working branch with respect to the current version of the ontology, select Branch from the top menu, Update from master. This step is optional because it is not necessary to work on the current version of the ontology; all changes will be synchronized when git merge is performed.
 
-## Editing an ontology on a branch
+### Editing an ontology on a branch
 
 1. Create a new branch, open Protege. Protege will display your branch name in the lower left corner (or it will show Git: **master**)
 
@@ -109,7 +108,7 @@ A video is  [here](https://drive.google.com/file/d/1q0Fdj1OjzIKwGrmCRYyI2z8_xzO_
 
 2. Make necessary edits in Protege. 
 
-## Committing, pushing and making pull requests
+### Committing, pushing and making pull requests
 
 1. Review: GitHub Desktop will display the diff or changes made to the ontology. 
 2. Before committing, view the diff and ensure the changes were intended. Examples of a diff are pasted below. Large diffs are a sign that something went wrong. In this case, do not commit the changes and ask for help instead or consider discarding your changes and starting the edits again. To discard changes, right click on the changed file name and select Discard changes.
@@ -126,7 +125,7 @@ Example 2 (Mondo):
 
 <img width="1489" alt="image" src="https://user-images.githubusercontent.com/6722114/174409050-45209f25-c1f5-4f41-a369-64a7a82d27e5.png"> 
 
-### Write a good commit messages
+#### Write a good commit messages
 
 3. Commit message: Before Committing, you must add a commit message. In GitHub Desktop in the Commit field in the lower left, there is a subject line and a description. 
 
@@ -145,7 +144,7 @@ Example 2 (Mondo):
 
 9. **Push**: To incorporate the changes into the remote repository, click Commit to [branch name], then click Push.
 
-## Make a pull request (PR)
+### Make a pull request (PR)
 
 1. You can either make a pull request (PR) directly from GitHub Desktop, or via the GitHub web browser.
 1. To make a PR from GitHub Desktop, click the button 'Create Pull Request'. You will be directed to your web browser and GitHub repo.
