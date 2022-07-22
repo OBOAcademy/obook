@@ -25,7 +25,7 @@ The goal of this course is to provide ongoing training for the OBO community. As
 | --- | --- | --- | --- |
 | 2022/07/26 | [Pull Requests](../tutorial/pull-requests.md) | | |
 | 2022/07/12 | [Basic introduction to the CLI: Part 2](../tutorial/intro-cli-2.md) | Due to intermitent connection issues, the first few minutes of this recording are not included. Refer to the Tutorial link for the initial directions. | [Here](https://www.youtube.com/watch?v=OCoN4TE8Vqc)
-| 2022/06/28 | [Basic introduction to the CLI: Part 1](../tutorial/intro-cli-1.md) | | [Here](https://drive.google.com/file/d/1KqulBcn4CZQ4FypuO4cfpxi0cH98dwMO/view?usp=sharing)
+| 2022/06/28 | [Basic introduction to the CLI: Part 1](../tutorial/intro-cli-1.md) | | [Here](https://www.youtube.com/watch?v=22VAjt7JG3o)
 | 2022/06/14 | [Application/project ontologies](../tutorial/project-ontology-development.md) | |  [Here](https://drive.google.com/file/d/1YXLBVRPH3ahuCwKAjkjMlTYf1-Jrry0L/view?usp=sharing)
 | 2022/05/31 | [Contributing to ontologies: annotation properties](../explanation/annotation-properties.md) | | [Here](https://drive.google.com/file/d/1ekMtyRthdpktIyUqargOEEhuqQUrzeH2/view?usp=sharing) |
 | 2022/05/17 | [Introduction to managing mappings with SSSOM](https://mapping-commons.github.io/sssom/tutorial/) | | [Here](https://drive.google.com/file/d/1iSaK5AXyw73k4zpNEQFPbc115XNWRm1v/view?usp=sharing) | 
