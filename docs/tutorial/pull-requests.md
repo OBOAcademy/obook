@@ -205,8 +205,11 @@ _Example_:
       - Missing or misformatted database cross-references
       - Incorrectly scoped synonyms
       - appropriate annotations
-1. Make sure there are not any unintended or unwanted changes on the PR. 
-1. Check that the logic is correct. This can be a difficult thing to do. Some tips:
+1. Make sure there are not any unintended or unwanted changes on the PR. See example below. Protege reordered the location of a term in the file.
+
+<img width="1573" alt="image" src="https://user-images.githubusercontent.com/6722114/180480790-0699ed02-3872-4ce9-a543-6b9af18adf7c.png">
+
+3. Check that the logic is correct. This can be a difficult thing to do. Some tips:
     - Open the branch in Protege and examine the hierarchy in Protege  
     - Compare the logic that was use to the logic used in an existing term
     - If the ontology uses Design Patterns, ensure the logic is consistent with the Design Patterns
