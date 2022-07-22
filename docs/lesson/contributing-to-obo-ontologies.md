@@ -82,7 +82,11 @@ If you have permission from the owners, you can instead make a new branch. For t
 	1. Add any additional comments at the end
 1. If you use a template, an ontology curator may automatically be assigned.
 
-See [this example video](https://www.youtube.com/watch?v=0dAlVTYGRf0): creating a new term request to the Mondo Disease Ontology
+#### Video explanation
+
+See this example video on creating a new term request to the Mondo Disease Ontology:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0dAlVTYGRf0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <a name="etiquette"></a> 
 ## Basic Open Source etiquette
