@@ -96,7 +96,11 @@ _Example_:
 
 1. If you are continuing to do work on an existing branch, in addition to updating master, go to your branch by selecting Current Branch in GitHub Desktop and either search for or browse for the branch name. 
 
-A video is [here](https://www.youtube.com/watch?v=kE_50AzpuB8).
+#### Video Explanation
+
+A video is below.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kE_50AzpuB8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 2. **OPTIONAL:** To update the working branch with respect to the current version of the ontology, select Branch from the top menu, Update from master. This step is optional because it is not necessary to work on the current version of the ontology; all changes will be synchronized when git merge is performed.
 
@@ -269,7 +273,10 @@ Conflicts in ontology files can be fixed either on the command line or using Git
 10. Save as (nothing should have changed in the diff). 
 11. Check the diff in GitHub online. 
 
-Watch a [video example](https://www.youtube.com/watch?v=cB1ZDfBNNN0) of fixing a conflict in the Mondo ontology file.
+#### Video Explanation
+Watch a video below with an example fixing a conflict in the Mondo ontology file.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/cB1ZDfBNNN0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Some examples of conflicts that Nicole fixed in Mondo are below:  
 
