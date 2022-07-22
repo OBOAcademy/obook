@@ -13,7 +13,9 @@
 
 ## Video
 
-This is a very unprofessional [video](https://www.youtube.com/watch?v=8rAgSN9wwxk) recorded as part of one of our trainings. It walks you through this tutorial here, with some additional examples being given and a bit of Q&A.
+This is a very unprofessional video below recorded as part of one of our trainings. It walks you through this tutorial here, with some additional examples being given and a bit of Q&A.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8rAgSN9wwxk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Glossary
 
