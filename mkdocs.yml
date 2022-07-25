@@ -77,6 +77,7 @@ nav:
           - How to be a team open science player: howto/team-open-science-mindset.md
           - Creating an ontology from scratch: howto/create-ontology-from-scratch.md
       - Protege:
+          - Setup Protege 5.5: howtow/set-up-protege.md
           - Installing ELK in Protege: howto/installing-elk-in-protege.md
           - Setting up your ID range: howto/idrange.md
           - Editing in Protege: howto/edit-in-protege.md
