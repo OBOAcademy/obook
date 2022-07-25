@@ -27,10 +27,10 @@ The goal of this course is to provide ongoing training for the OBO community. As
 | 2022/07/12 | [Basic introduction to the CLI: Part 2](../tutorial/intro-cli-2.md) | Due to intermitent connection issues, the first few minutes of this recording are not included. Refer to the Tutorial link for the initial directions. | [Here](https://www.youtube.com/watch?v=OCoN4TE8Vqc)
 | 2022/06/28 | [Basic introduction to the CLI: Part 1](../tutorial/intro-cli-1.md) | | [Here](https://www.youtube.com/watch?v=22VAjt7JG3o)
 | 2022/06/14 | [Application/project ontologies](../tutorial/project-ontology-development.md) | |  [Here](https://www.youtube.com/watch?v=zO_ia2SHsLk)
-| 2022/05/31 | [Contributing to ontologies: annotation properties](../explanation/annotation-properties.md) | | [Here](https://drive.google.com/file/d/1ekMtyRthdpktIyUqargOEEhuqQUrzeH2/view?usp=sharing) |
-| 2022/05/17 | [Introduction to managing mappings with SSSOM](https://mapping-commons.github.io/sssom/tutorial/) | | [Here](https://drive.google.com/file/d/1iSaK5AXyw73k4zpNEQFPbc115XNWRm1v/view?usp=sharing) | 
+| 2022/05/31 | [Contributing to ontologies: annotation properties](../explanation/annotation-properties.md) | | [Here](https://www.youtube.com/watch?v=8csb0aE47sA) |
+| 2022/05/17 | [Introduction to managing mappings with SSSOM](https://mapping-commons.github.io/sssom/tutorial/) | | [Here](https://www.youtube.com/watch?v=ZZeZcg-Vwjw&feature=youtu.be) | 
 | 2022/05/03 | No meeting | |
-| 2022/04/19 | [Disjointness](https://oboacademy.github.io/obook/tutorial/disjointness/) and Unsatisfiability | | [Here](https://drive.google.com/file/d/1N5khqNnNCCMgLyIDKTW7-ATTbo_AGnGS/view?usp=sharing) | 
+| 2022/04/19 | [Disjointness](https://oboacademy.github.io/obook/tutorial/disjointness/) and Unsatisfiability | | [Here](https://www.youtube.com/watch?v=M41Z-dj8VEM) | 
 | 2022/04/05 | No meeting | |
 | 2022/03/22 | [Creating an ontology from scratch](../howto/create-ontology-from-scratch.md) | |[Here](https://drive.google.com/file/d/1xWAsIlwMQdGMVcb_-essZH1uo5beVT1Z/view?usp=sharing) |
 | 2022/03/08 | Obsoletions in OBO ontologies | Review [Obsoleting an Existing Ontology Term](https://oboacademy.github.io/obook/howto/obsolete-term/) and [Merging Ontology Terms](https://oboacademy.github.io/obook/howto/merge-terms/). Slides are [here](https://docs.google.com/presentation/d/1LrP4EJp_kXaloUl3BKWpf68KxsTURayrOn8fBuCjhgY/edit#slide=id.p1). | [Here](https://drive.google.com/file/d/1cAOQ2WKaXqzH8xif78yTtRZOtfqKTPb1/view?usp=sharing) |
