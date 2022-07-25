@@ -34,39 +34,14 @@ _Note - if you have issues opening Protege, then reduce the memory, try 10G (or 
 
 ## Instructions for new Protege users
 
-### Obtaining your ID range
-- Curators and projects are assigned specific ontology term ID ranges .
-- These ID ranges are stored in the file: src/ontology/[ontology-name]-idranges.owl
-- **NOTE:** You should only use IDs within your range.
-
-### Setting ID range
-- Once you have your assigned ID range, you need to configure Protege so that your ID range is recorded in the Preferences menu. Protege does not read the [ontology-name]-idranges.owl file.
-- In the Protege menu, select Preferences.
-In the resulting pop-up window, click on the `New Entities` tab and set the values as described below.
-1. In the `Entity IRI` section:
-  - `Start with`: Specified IRI: http://purl.obolibrary.org/obo
-  - `Followed by` /
-  - `End with`: Select `Auto-generated ID`
-2. In the Entity Label section:
-  - Select `Custom label`
-  - `IRI` http://www.w3.org/2000/01/rdf-schema#label
-3. In the Auto-generated ID section:
-  - Select `Numeric (iterative)`
-  - Prefix: "MONDO_"
-  - Suffix: leave this blank
-  - Digit Count: "7"
-  - Start and End: see [mondo-idranges.owl](https://github.com/monarch-initiative/mondo/blob/master/src/ontology/mondo-idranges.owl). Only paste the number after the MONDO: prefix. Also, note that when you paste in your MONDO ID range, the number will automatically be converted to a standard number, e.g. pasting 0110001 will be converted to 110,001.)
-4. Check the `Remember last ID between Protege sessions` box (Note: You want the ID to be remembered to prevent clashes when working in parallel on branches.)
-
-![NewEntities](images/NewEntities.png)
+### Setting your ID range
+See [instructions here](https://oboacademy.github.io/obook/howto/idrange/).
 
 ## User details
 
-1. `User name` Clcik `Use supplied user name:` add your name (ie nicolevasilevsky)
+1. `User name` Click `Use supplied user name:` add your name (ie nicolevasilevsky)
 2. Check `Use Git user name when available`
 3. Add `ORCID`. Add the ID number only, do not include https://, ie 0000-0001-5208-3432
-
-![UserDetails](images/UserDetails.png)
 
 ## Setting username and auto-adding creation date
 
@@ -77,4 +52,3 @@ In the resulting pop-up window, click on the `New Entities` tab and set the valu
 4. `Date property` http://purl.org/dc/elements/1.1/date
 5. `Date value format` Select ISO-8601
 
-![NewEntitiesMetadata](images/NewEntitiesMetadata.png)
