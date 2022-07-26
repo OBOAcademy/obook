@@ -40,7 +40,7 @@ The goal of this course is to provide ongoing training for the OBO community. As
 | 2022/01/11 | Office hours with Nicole and Sabrina - no formal lesson | Bring any open questions. |
 | 2021/12/14 | [Lessons learned from troubleshooting ROBOT](../reference/troublehooting-robot.md) | Open discussion, no advance preparation is needed. |
 | 2021/11/30 | [Semantics of object properties](../lesson/modelling-with-object-properties.md) (including Relations Ontology) | |
-| 2021/11/16 | [SPARQL for OBO ontology development](../tutorial/sparql.md) | | [Here](https://drive.google.com/file/d/1dueong-Du3WPPRvpYoHeFIau-_4F_6Hg/view?usp=sharing)|
+| 2021/11/16 | [SPARQL for OBO ontology development](../tutorial/sparql.md) | | [Here](https://studio.youtube.com/video/8afSbakYeAw/edit)|
 | 2021/11/02 | [Templating: DOSDPs and ROBOT](../lesson/templates-for-obo.md) | |
 | 2021/10/19 | [Ontology Design](../lesson/ontology-design.md) | |
 | 2021/10/05 | Cancelled due to overlap with [ISB conference](https://www.biocuration.org/14th-annual-biocuration-conference-virtual/) | |
