@@ -35,8 +35,8 @@ The goal of this course is to provide ongoing training for the OBO community. As
 | 2022/03/22 | [Creating an ontology from scratch](../howto/create-ontology-from-scratch.md) | |[Here](https://www.youtube.com/watch?v=5jGHvKl6ycs&feature=youtu.be) |
 | 2022/03/08 | Obsoletions in OBO ontologies | Review [Obsoleting an Existing Ontology Term](https://oboacademy.github.io/obook/howto/obsolete-term/) and [Merging Ontology Terms](https://oboacademy.github.io/obook/howto/merge-terms/). Slides are [here](https://docs.google.com/presentation/d/1LrP4EJp_kXaloUl3BKWpf68KxsTURayrOn8fBuCjhgY/edit#slide=id.p1). | [Here](https://www.youtube.com/watch?v=VP3ihK1SWH0&feature=youtu.be) |
 | 2022/02/22 | [SPARQL for OBO ontology development](../tutorial/sparql.md) | | [Here](https://www.youtube.com/watch?v=Lo-1ktQzQf0&feature=youtu.be) |
-| 2022/02/07 | [ODK/DOSDPs](https://oboacademy.github.io/obook/tutorial/dosdp-template/) | | [Here](https://drive.google.com/file/d/13YK_WabCeZrvzycoObWsWek7tGDHnNdW/view?usp=sharing) |
-| 2022/01/25 | [Contributing to OBO ontologies](../lesson/contributing-to-obo-ontologies.md) | This is not new content but we'll start at the beginning again with our previous lessons. | [Here](https://drive.google.com/file/d/1brhUUMXB6SIikreptVdYNRoGlPVO1WSQ/view?usp=sharing) |
+| 2022/02/07 | [ODK/DOSDPs](https://oboacademy.github.io/obook/tutorial/dosdp-template/) | | [Here](https://www.youtube.com/watch?v=y5H-QUE6_-g&feature=youtu.be) |
+| 2022/01/25 | [Contributing to OBO ontologies](../lesson/contributing-to-obo-ontologies.md) | This is not new content but we'll start at the beginning again with our previous lessons. | [Here](https://www.youtube.com/watch?v=rJrOjQbFLIY) |
 | 2022/01/11 | Office hours with Nicole and Sabrina - no formal lesson | Bring any open questions. |
 | 2021/12/14 | [Lessons learned from troubleshooting ROBOT](../reference/troublehooting-robot.md) | Open discussion, no advance preparation is needed. |
 | 2021/11/30 | [Semantics of object properties](../lesson/modelling-with-object-properties.md) (including Relations Ontology) | |
