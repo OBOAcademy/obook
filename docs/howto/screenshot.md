@@ -8,13 +8,15 @@ The instructions below describe how to capture a screenshot of your screen, eith
 
 ![image](https://user-images.githubusercontent.com/6722114/181063086-d14b3e28-9d25-4464-b575-ae58b69ef395.png)
 
-1. **Partial screen**: Hit the Shift, Command and 4 keys together to take a screenshot of a portion of the screen. Crosshairs will appear and select the portion you would like to capture.
-
-![image](https://user-images.githubusercontent.com/6722114/181063417-b991c80e-676a-4005-a449-cdc23d728820.png)
+1. **Partial screen**: Hit the Shift, Control, Command and 4 keys together to take a screenshot of a portion of the screen. Crosshairs will appear and select the portion you would like to capture.
 
 ![image](https://user-images.githubusercontent.com/6722114/181063353-c96be768-0763-402b-8a0b-811ad41fb808.png)
 
 1. Paste the partial screenshot into comment box in GitHub.
+
+### Video explanation: Partial screenshot on a Mac
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/W1DWZbYQc7Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Screenshot Instructions (PC)
 1. Using snipping tools to capture screenshots is described [here](https://support.microsoft.com/en-us/windows/use-snipping-tool-to-capture-screenshots-00246869-1843-655f-f220-97299b865f6b).
