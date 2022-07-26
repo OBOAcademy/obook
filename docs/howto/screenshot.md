@@ -10,7 +10,7 @@ The instructions below describe how to capture a screenshot of your screen, eith
 
 ## Screenshot Instructions (PC)
 1. Using snipping tools to capture screenshots is described [here](https://support.microsoft.com/en-us/windows/use-snipping-tool-to-capture-screenshots-00246869-1843-655f-f220-97299b865f6b).
-1. ** Full screen**: Shift, Command,4 
+1. **Full screen**: Shift, Command,4 
 1. **Partial screen**: Shift, Command, 3 
 1. **Video**: Shift + Command + 5
 1. Paste the partial screenshot into comment box in GitHub.
