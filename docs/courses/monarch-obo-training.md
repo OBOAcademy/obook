@@ -48,8 +48,8 @@ The goal of this course is to provide ongoing training for the OBO community. As
 | 2021/09/08 | [Migrating legacy ontology systems to ODK](../tutorial/migrating-ontology-to-odk.md) | |
 | 2021/09/07 | [Ontology Pipelines with ROBOT](../lesson/ontology-pipelines.md) | |
 | 2021/09/01 | [Manage dynamic imports the ODK](../tutorial/managing-dynamic-imports-odk.md) | |
-| 2021/08/25 | [Ontology Release Management with the ODK](../tutorial/managing-ontology-releases-odk.md) | | [Here](https://drive.google.com/file/d/1YYRyOSwI2qU43zDPliuGAZQIPJCcnjCD/view?usp=sharing) |
-| 2021/08/24 | [Contributing to OBO ontologies 2](../lesson/contributing-to-obo-ontologies.md) | | [Here](https://drive.google.com/file/d/1ZopIh3BGsX24DaBrm6pDbHRyeOLAmosq/view?usp=sharing) |
+| 2021/08/25 | [Ontology Release Management with the ODK](../tutorial/managing-ontology-releases-odk.md) | | [Here](https://www.youtube.com/watch?v=KO61I4apFcU) |
+| 2021/08/24 | [Contributing to OBO ontologies 2](../lesson/contributing-to-obo-ontologies.md) | | [Here](https://www.youtube.com/watch?v=kAw4N2tYyco) |
 | 2021/08/17 | [Contributing to OBO ontologies](../lesson/contributing-to-obo-ontologies.md) | |
 
 ## Notes
