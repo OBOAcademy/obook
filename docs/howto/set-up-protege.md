@@ -52,3 +52,11 @@ See [instructions here](https://oboacademy.github.io/obook/howto/idrange/).
 4. `Date property` http://purl.org/dc/elements/1.1/date
 5. `Date value format` Select ISO-8601
 
+## Install Protege OBO plugin
+
+This plugin enables some extra functionality, such as the option to obsolete entities from the menu. To install it:
+1. Go to `File > Check for plugins...`.
+2. Click on `OBO Annotations Editor` and click on `Install`.
+3. Restart Protege for the plugin to be active.
+4. You should now have the option to obsolete entities in `Edit > Make entity obsolete`.
+5. You can see a list of all installed plugins in `Preferences > Plugins`.
