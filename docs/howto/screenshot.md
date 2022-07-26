@@ -23,3 +23,5 @@ The instructions below describe how to capture a screenshot of your screen, eith
 1. **Video**: Shift + Command + 5
 1. Paste the partial screenshot into comment box in GitHub.
 
+# Reference
+[Wikihow Take a Screenshot on a Mac](https://www.wikihow.com/Take-a-Screenshot-on-a-Mac)
