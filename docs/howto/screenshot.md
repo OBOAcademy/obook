@@ -17,11 +17,17 @@ The instructions below describe how to capture a screenshot of your screen, eith
 1. Paste the partial screenshot into comment box in GitHub.
 
 ## Screenshot Instructions (PC)
-1. Using snipping tools to capture screenshots is described [here](https://support.microsoft.com/en-us/windows/use-snipping-tool-to-capture-screenshots-00246869-1843-655f-f220-97299b865f6b).
-1. **Full screen**: Shift, Command, 4 
-1. **Partial screen**: Shift, Command, 3 
-1. **Video**: Shift + Command + 5
-1. Paste the partial screenshot into comment box in GitHub.
+
+### Use the Snipping Tool (available with Windows 10)
+1. The easiest way to elicit the tool is to press Windows logo key + Shift + S to open a dialog window to select the type of screen capture you would like to do. 1. Options exist for free form, rectangular, window or full screen snips. 
+1. After snipping, a notification dialog pops up so the user can select the location to save or annotate the screenshot. Otherwise, the default setting is to save to the clipboard.
+
+### Use your keyboard
+Different keyboards have different keys. One of the following options should work:
+1. Fn + Print Screen is an option on some keyboards
+1. PrtScn or PrtSc
+1. Hit Shift, Window, S keys together to take a screenshot. You will be able to resize the screenshot as needed.
 
 # Reference
-[Wikihow Take a Screenshot on a Mac](https://www.wikihow.com/Take-a-Screenshot-on-a-Mac)
+- [Wikihow Take a Screenshot on a Mac](https://www.wikihow.com/Take-a-Screenshot-on-a-Mac)
+- Using snipping tools to capture screenshots is described [here](https://support.microsoft.com/en-us/windows/use-snipping-tool-to-capture-screenshots-00246869-1843-655f-f220-97299b865f6b).
