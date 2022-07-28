@@ -243,6 +243,8 @@ GitHub added a 'suggested Changes' feature that allows a PR reviewer to suggest 
 1. Click that to display the normal line comment form
 1. Click the button with a plus and minus sign, it adds a suggestion block to the comment text area with the existing text
 
+<img width="1025" alt="image" src="https://user-images.githubusercontent.com/6722114/181652145-36cfb3c4-1b84-4941-b4a6-9c7729f0a72f.png">
+
 <img width="1169" alt="image" src="https://user-images.githubusercontent.com/6722114/181651841-f00c13a9-6c3b-417f-8f2f-80e6fb3727c2.png">
 
 3. You can make changes to the text inside the suggestion box. Note that you can add context for your suggested changes outside of the suggestion block
