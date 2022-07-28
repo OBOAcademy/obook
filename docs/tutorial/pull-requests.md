@@ -234,6 +234,18 @@ _Example_:
 - Request changes (Submit feedback that must be addressed before merging)
 1. In addition or instead of adding inline comments, you can leave comments on the Conversation page. The conversation page is a good place to discuss the PR, and for the original creator to respond to the reviewer comments.  
 
+### Inline commits
+
+GitHub added a 'suggested Changes' feature that allows a PR reviewer to suggest an exact change in a comment in a PR. You can add inline comments and commit your comment using 'inline commits'. Read more about it [here](https://haacked.com/archive/2019/06/03/suggested-changes/).
+
+1. Go to the 'Files changed' tab of a pull request
+1. Hover over the line you want to fix, and a blue box with a plus sign appears near the gutter on the left
+1. Click that to display the normal line comment form
+1. Click the button with a plus and minus sign, it adds a suggestion block to the comment text area with the existing text
+1. You can make changes to the text inside the suggestion box. Note that you can add context for your suggested changes outside of the suggestion block
+1. When you create the comment, it will show up to the maintainer as a diff
+1. The maintainer can see what changes you are suggesting and accept them with a click
+
 ### When are you done with your review?
 
 If you review the PR and the changes properly address what was described in the description, then it should be sufficient. Not every PR needs comments, it can be approved without any comments or requests for changes. Feel free to ask for help with your review, and/or assign additional reviewers.
