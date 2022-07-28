@@ -314,3 +314,5 @@ Some examples of conflicts that Nicole fixed in Mondo are below:
 ### The anatomy of a perfect pull request
 
 [Blog post by Hugo Dias](https://hugooodias.medium.com/the-anatomy-of-a-perfect-pull-request-567382bb6067)
+
+### [Suggesting Changes on GitHub](https://haacked.com/archive/2019/06/03/suggested-changes/) - includes description of how to make inline commits
