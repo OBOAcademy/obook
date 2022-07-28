@@ -242,9 +242,12 @@ GitHub added a 'suggested Changes' feature that allows a PR reviewer to suggest 
 1. Hover over the line you want to fix, and a blue box with a plus sign appears near the gutter on the left
 1. Click that to display the normal line comment form
 1. Click the button with a plus and minus sign, it adds a suggestion block to the comment text area with the existing text
-1. You can make changes to the text inside the suggestion box. Note that you can add context for your suggested changes outside of the suggestion block
-1. When you create the comment, it will show up to the maintainer as a diff
-1. The maintainer can see what changes you are suggesting and accept them with a click
+
+<img width="1169" alt="image" src="https://user-images.githubusercontent.com/6722114/181651841-f00c13a9-6c3b-417f-8f2f-80e6fb3727c2.png">
+
+3. You can make changes to the text inside the suggestion box. Note that you can add context for your suggested changes outside of the suggestion block
+4. When you create the comment, it will show up to the maintainer as a diff
+5. The maintainer can see what changes you are suggesting and accept them with a click
 
 ### When are you done with your review?
 
