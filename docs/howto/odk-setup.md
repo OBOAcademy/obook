@@ -30,10 +30,22 @@ However,  for many of the ontologies we develop, we already ship an ODK wrapper 
 That file is usually called `run.sh` or `run.bat` and can be found in your ontology repo in the `src/ontology` directory
 and can be used in the exact same way. 
 
+<a id="memory"></a>
+
 ## Problems with memory (important)
 
-One of the most frequent problems with running the ODK for the first time is failure because of lack of memory. This can look like a Java OutOfMemory exception, 
-but more often than not it will appear as something like an `Error 137`. There are two places you need to consider to set your memory:
+One of the most frequent problems with running the ODK for the first time is failure because of lack of memory. 
+There are two potential causes for out-of-memory errors:
+
+1. The application (for example, the ODK release run) needs more memory than assigned to `JAVA` _inside the ODK docker container_. This memory is set as part of the ODK wrapper files, i.e. `src/ontology/run.bat` or `src/ontology/run.sh`, usually with `ODK_JAVA_OPTS`.
+2. The application needs more memory than is assigned to your docker installation. On most systems (apart from a handful fo Windows ones based on WSL), you have to set docker memory in the docker preferences. That happens here is that the Java memory above may be set to something like 10GB, while the maximum docker memory is set to 8GB. If the application needs, say, 9GB to run, you have assigned enough Java memory, but docker does not permit more than 8 to be used. 
+
+Out-of-memory errors can take many forms, like a Java OutOfMemory exception, 
+but more often than not it will appear as something like an `Error 137`. 
+
+### Solving memory issues
+
+There are two places you need to consider to set your memory:
 
 1. Your ODK wrapper script (see above), i.e. odk.bat, odk.sh or src/ontology/run.sh (or run.bat) file. You can set the memory in there by adding 
 `robot_java_args: '-Xmx8G'` to your src/ontology/cl-odk.yaml file, see for example [here](https://github.com/INCATools/ontology-development-kit/blob/0e0aef2b26b8db05f5e78b7c38f807d04312d06a/configs/uberon-odk.yaml#L36).
