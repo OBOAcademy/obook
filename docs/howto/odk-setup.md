@@ -45,6 +45,8 @@ but more often than not it will appear as something like an `Error 137`.
 
 ### Solving memory issues
 
+#### Setting memory limits:
+
 There are two places you need to consider to set your memory:
 
 1. Your ODK wrapper script (see above), i.e. odk.bat, odk.sh or src/ontology/run.sh (or run.bat) file. You can set the memory in there by adding 
@@ -53,3 +55,12 @@ There are two places you need to consider to set your memory:
 by right-clicking on the docker whale in your system bar-->Preferences-->Resources-->Advanced, see picture below.
 
 ![dockermemory](../images/docker_memory.png)
+
+#### More intelligent pipeline design
+
+If your problem is that you do not have enough memory on your machine, the only solution is to try to engineer the pipelines a bit more intelligently, but even that has limits: large ontologies require a lot of memory to process when using ROBOT. For example, handling ncbitaxon as an import in any meaningful way easily consumes up to 12GB alone. Here are some tricks you may want to contemplate to reduce memory:
+
+- `robot query` uses an entirely different framework for representing the ontology, which means that whenever you use ROBOT query, for at least a short moment, you will have the entire ontology in memory _twice_. Sometimes you can optimse memory by seperating `query` and other `robot` commands into seperate commands (i.e. not chained in the same `robot` command). 
+- The `robot reason` command consumes _a lot_ of memory. `reduce` and `materialise` potentially even more. Use these only ever in the last possible moment in a pipeline.
+
+- `
