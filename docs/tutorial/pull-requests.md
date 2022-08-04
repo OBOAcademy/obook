@@ -57,7 +57,7 @@ When committing a pull request, you must include a title and a description (more
 - Explain **why** this PR exists
 - Make it clear how it does what it sets out to do. E.g., Does it edit the ontology-edit.owl file? Does it edit another file(s)?
 - What was your motivation for the chosen solution?
-- Use screenshots to demonstrate what has changed
+- Use screenshots to demonstrate what has changed. See [How to guide on creating screenshots](../howto/screendshot.md)
 
 _Example_: 
 
