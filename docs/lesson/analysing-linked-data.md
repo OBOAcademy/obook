@@ -41,7 +41,7 @@ While these Semantic Web flagship projects are doubtlessly useful, it is sometim
 
 #### Where the OBO and Semantic Web communities are slightly at odds
 
-The [OBO format](http://owlcollab.github.io/oboformat/doc/obo-syntax.html#5.1) is a very popular syntax for representing biomedical ontologies. A lot of tools have been built over the years to hack OBO ontologies on the basis of that format - I still work with it on a daily basis. Although it has semantically been proven to be a subset of OWL (i.e. there is a lossless mapping of OBO into OWL) and can be viewed as just another syntax, it is in many ways ideosyncratic. For starters, you wont find many, if any, IRIs in OBO ontologies. The format itself uses CURIEs which are mapped to the general OBO PURL namespace during transformation to OWL. For example, if you see MONDO:0003847 in an OBO file, and were to translate it to OWL, you will see this term being translated to http://purl.obolibrary.org/obo/MONDO_0003847. Secondly, you have a bunch of built-in properties like BROAD or ABBREVIATION that mapped to a vocabulary called oboInOwl (oio). These are pretty non-standard on the general Semantic Web, and  often have to be manually mapped to the more popular counterparts in the Dublin Core or SKOS namespaces.
+The [OBO format](http://owlcollab.github.io/oboformat/doc/obo-syntax.html#5.1) is a very popular syntax for representing biomedical ontologies. A lot of tools have been built over the years to hack OBO ontologies on the basis of that format - I still work with it on a daily basis. Although it has semantically been proven to be a subset of OWL (i.e. there is a lossless mapping of OBO into OWL) and can be viewed as just another syntax, it is in many ways idiosyncratic. For starters, you wont find many, if any, IRIs in OBO ontologies. The format itself uses CURIEs which are mapped to the general OBO PURL namespace during transformation to OWL. For example, if you see MONDO:0003847 in an OBO file, and were to translate it to OWL, you will see this term being translated to http://purl.obolibrary.org/obo/MONDO_0003847. Secondly, you have a bunch of built-in properties like BROAD or ABBREVIATION that mapped to a vocabulary called oboInOwl (oio). These are pretty non-standard on the general Semantic Web, and  often have to be manually mapped to the more popular counterparts in the Dublin Core or SKOS namespaces.
 
 Having URIs as identifiers is not generally popular in the life sciences. As discussed elsewhere, it is much more likely to encounter CURIEs such as MONDO:0003847 than URIs such as http://purl.obolibrary.org/obo/MONDO_0003847 in biomedical databases.
 
@@ -52,27 +52,27 @@ Having URIs as identifiers is not generally popular in the life sciences. As dis
 Why does the biomedical research, and clinical, community care about the Semantic Web and Linked Data? There are endless lists of applications that try to apply semantic technologies to biomedical problems, but for this week, we only want to look at the broader picture. In our experience, the use cases where Semantic Web standards are applied successfully are:
 
 - Where to find ontologies: Ontology repositories
-   - [OBO Foundry Ontology Library](http://obofoundry.org/)
-   - [BioPortal](https://bioportal.bioontology.org/)
-     - [CPT Story](https://www.bioontology.org/why-bioportal-no-longer-offers-the-current-procedural-terminology-cpt/). The Current Procedural Terminology was the by far most highly accessed Terminology on Bioportal - for many years. Due to license concerns, it had to be withdrawn from the repository. This story serves a cautionary tale of using terminologies with non-open or non-transparent licensing schemes.
-   - [AgroPortal](http://agroportal.lirmm.fr/): Like BioPortal, but focussed on the Agronomy domain.
-   - [Linked Open Data Vocabularies (LOV)](https://lov.linkeddata.es/dataset/lov/): Lists the most important vocabularies in the Linked Data space, such as [Dublin Core](https://dublincore.org/), [SKOS](https://www.w3.org/TR/skos-reference/) and [Friend-of-a-Friend](http://xmlns.com/foaf/spec/) (FOAF).
+    - [OBO Foundry Ontology Library](http://obofoundry.org/)
+    - [BioPortal](https://bioportal.bioontology.org/)
+        - [CPT Story](https://www.bioontology.org/why-bioportal-no-longer-offers-the-current-procedural-terminology-cpt/). The Current Procedural Terminology was the by far most highly accessed Terminology on Bioportal - for many years. Due to license concerns, it had to be withdrawn from the repository. This story serves a cautionary tale of using terminologies with non-open or non-transparent licensing schemes.
+    - [AgroPortal](http://agroportal.lirmm.fr/): Like BioPortal, but focussed on the Agronomy domain.
+    - [Linked Open Data Vocabularies (LOV)](https://lov.linkeddata.es/dataset/lov/): Lists the most important vocabularies in the Linked Data space, such as [Dublin Core](https://dublincore.org/), [SKOS](https://www.w3.org/TR/skos-reference/) and [Friend-of-a-Friend](http://xmlns.com/foaf/spec/) (FOAF).
 - Where to find terms: Term browsers
-   - [OLS](https://www.ebi.ac.uk/ols/index): The boss of the current term browsers out there. While the code base is a bit dated, it still gives access to a wide range of relevant open biomedical ontology terms. Note, while being a bit painful, it is possible to [set up your own OLS](https://github.com/EBISPOT/ontotools-docker-config) (for your organisation) which only contains those terms/ontologies that are relevant for your work.
-   - [Ontobee](http://www.ontobee.org/): The default term browser for OBO term purls. For example, click on http://purl.obolibrary.org/obo/OBI_0000070. This will redirect you directly to Ontobee, to show you the terms location in the hierarchy. A key difference between Ontobee and OLS/Bioportal is that Ontobee limits hierarchical relationships to is_a. This means if you are browsing ontologies such as GO, Uberon, CL, ENVO, you will not see part-of links in the hierarchy, and these links are crucial for understanding these ontologies.
-   - [AberOWL](http://aber-owl.net/#/): Another ontology repository and semantic search engine. Some ontologies such as [PhenomeNet](http://aber-owl.net/ontology/PhenomeNET/) can only be found on AberOWL, however, I personally prefer OLS.
-   - [identifiers.org](https://identifiers.org/): A centralised registry for identifiers used in the life sciences. This is one of the tools that bridge the gap between CURIEs and URLs, but it does not cover (OBO) ontologies very well, and if so, is not aware of the proper URI prefixes (see for example [here](https://identifiers.org/resolve?query=HP:0000001), and HP term resolution that does not list the proper persistent URL of the HP identifier (http://purl.obolibrary.org/obo/HP_0000001)). Identifiers.org has mainly good coverage for databases/resources that use CURIE type identifiers. But: you can enter any ID you find in your data and it will tell you what it is associated with.
+    - [OLS](https://www.ebi.ac.uk/ols/index): The boss of the current term browsers out there. While the code base is a bit dated, it still gives access to a wide range of relevant open biomedical ontology terms. Note, while being a bit painful, it is possible to [set up your own OLS](https://github.com/EBISPOT/ontotools-docker-config) (for your organisation) which only contains those terms/ontologies that are relevant for your work.
+    - [Ontobee](http://www.ontobee.org/): The default term browser for OBO term purls. For example, click on http://purl.obolibrary.org/obo/OBI_0000070. This will redirect you directly to Ontobee, to show you the terms location in the hierarchy. A key difference between Ontobee and OLS/Bioportal is that Ontobee limits hierarchical relationships to is_a. This means if you are browsing ontologies such as GO, Uberon, CL, ENVO, you will not see part-of links in the hierarchy, and these links are crucial for understanding these ontologies.
+    - [AberOWL](http://aber-owl.net/#/): Another ontology repository and semantic search engine. Some ontologies such as [PhenomeNet](http://aber-owl.net/ontology/PhenomeNET/) can only be found on AberOWL, however, I personally prefer OLS.
+    - [identifiers.org](https://identifiers.org/): A centralised registry for identifiers used in the life sciences. This is one of the tools that bridge the gap between CURIEs and URLs, but it does not cover (OBO) ontologies very well, and if so, is not aware of the proper URI prefixes (see for example [here](https://identifiers.org/resolve?query=HP:0000001), and HP term resolution that does not list the proper persistent URL of the HP identifier (http://purl.obolibrary.org/obo/HP_0000001)). Identifiers.org has mainly good coverage for databases/resources that use CURIE type identifiers. But: you can enter any ID you find in your data and it will tell you what it is associated with.
 - Curate biomedical data. There are a lot of different tools in this space - which we will discuss in a bespoke unit later in the course. Examples:
-   - [isatools](https://isa-tools.org/index.html): The open source ISA framework and tools help to manage an increasingly diverse set of life science, environmental and biomedical experiments that employing one or a combination of technologies.
-   - [RightField](https://rightfield.org.uk/about): System for curating ontology terms in Excel spreadsheets.
-   - [CEDAR Templates](https://more.metadatacenter.org/tools-training/cedar-template-tools): Basically a templating system that allows to create templates to record metadata, for example in a lab setting, of course with ontology integration.
-   - [Other examples](https://github.com/timrdf/csv2rdf4lod-automation/wiki/Alternative-Tabular-to-RDF-converters) of tabular data to RDF converters, but new ones coming up every year.
+    - [isatools](https://isa-tools.org/index.html): The open source ISA framework and tools help to manage an increasingly diverse set of life science, environmental and biomedical experiments that employing one or a combination of technologies.
+    - [RightField](https://rightfield.org.uk/about): System for curating ontology terms in Excel spreadsheets.
+    - [CEDAR Templates](https://more.metadatacenter.org/tools-training/cedar-template-tools): Basically a templating system that allows to create templates to record metadata, for example in a lab setting, of course with ontology integration.
+    - [Other examples](https://github.com/timrdf/csv2rdf4lod-automation/wiki/Alternative-Tabular-to-RDF-converters) of tabular data to RDF converters, but new ones coming up every year.
 - Building ontologies
-   - [Populous/Webulous](https://github.com/EBISPOT/webulous): A system to maintain/generate ontologies from spreadsheets. The idea was to basically to define patterns in a (now mostly dead) language called OPPL, and then apply them to spreadsheets to generate OWL axioms. EBI recently discontinued the service, as there is a general exodus to Google Sheets + ROBOT templates instead.
-   - [ROBOT templates + Google Sheets and Cogs](http://robot.obolibrary.org/template): A lightweight approach based on a set of tools that allows curating ontologies in spreadsheets (e.g. Google Sheets) which are converted into OWL using ROBOT.
-   - [DOSDP tools + Dead Simple Design Patterns (DOSDP)](https://github.com/INCATools/dead_simple_owl_design_patterns): Similar to ROBOT templates, DOSDPs (which really should be called DOSDTs, because they are not really design _patterns_; they are ontology templates), another system that allows the generation of OWL axioms based on spreadsheet data.
+    - [Populous/Webulous](https://github.com/EBISPOT/webulous): A system to maintain/generate ontologies from spreadsheets. The idea was to basically to define patterns in a (now mostly dead) language called OPPL, and then apply them to spreadsheets to generate OWL axioms. EBI recently discontinued the service, as there is a general exodus to Google Sheets + ROBOT templates instead.
+    - [ROBOT templates + Google Sheets and Cogs](http://robot.obolibrary.org/template): A lightweight approach based on a set of tools that allows curating ontologies in spreadsheets (e.g. Google Sheets) which are converted into OWL using ROBOT.
+    - [DOSDP tools + Dead Simple Design Patterns (DOSDP)](https://github.com/INCATools/dead_simple_owl_design_patterns): Similar to ROBOT templates, DOSDPs (which really should be called DOSDTs, because they are not really design _patterns_; they are ontology templates), another system that allows the generation of OWL axioms based on spreadsheet data.
 - Cleaning messy data
-   - [OpenRefine](https://openrefine.org/): I have not myself used this ever, but some of my colleagues have. OpenRefine allows you to upload (spreadsheet) data, explore it and clean it (going as far as reconciling terms using Wikidata concepts).
+    - [OpenRefine](https://openrefine.org/): I have not myself used this ever, but some of my colleagues have. OpenRefine allows you to upload (spreadsheet) data, explore it and clean it (going as far as reconciling terms using Wikidata concepts).
 
 ##### Which biomedical ontologies should we use?
 
@@ -124,7 +124,7 @@ You, as a scientist, might be using the term "gene" to refer to basic physical a
 
 ##### Lots (loaaaads!) of _ways to make statements about things_. 
 
-For example, to express "a mutation of SHH in humans causes isolated microphthalmia with coloboma-5" you could say something like (http://purl.obolibrary.org/obo/MONDO_0012709 | "microphthalmia, isolated, with coloboma 5")--\[http://purl.obolibrary.org/obo/RO_0004020 | "has basis in dysfunction of"\]-->(https://identifiers.org/HGNC:10848 | "SSH (gene)"). Or you could say:  (http://purl.obolibrary.org/obo/MONDO_0012709 | "microphthalmia, isolated, with coloboma 5")--\[http://www.w3.org/2000/01/rdf-schema#subClassOf | "is a"\]-->(http://purl.obolibrary.org/obo/MONDO_0003847 | "Mendelian Disease"). If we use the analogy of "language", then the URIs (above) are the words, and the statements are *sentences in a language*. Unfortunately, there are _many_ languages in the Semantic Web, such as OWL, RDFS, SKOS, SWRL, SHACL, SHEX, and dialects (OWL 2 EL, OWL 2 RL) and a *plethora* of scripts, or serialisations (you can store the exact same sentence in the same language such as RDF, or OWL, in many different ways)- more about that later. In here lies also one of the largest problems of the Semantic Web - lots of overlapping standards means, lots of incompatible data - which raises the bar for actually being able to seamlessly integrate "statements about things" across resources.
+For example, to express "a mutation of SHH in humans causes isolated microphthalmia with coloboma-5" you could say something like (http://purl.obolibrary.org/obo/MONDO_0012709 | "microphthalmia, isolated, with coloboma 5")--\[http://purl.obolibrary.org/obo/RO_0004020 | "has basis in dysfunction of"\]-->(https://identifiers.org/HGNC:10848 | "SSH (gene)"). Or you could say:  (http://purl.obolibrary.org/obo/MONDO_0012709 | "microphthalmia, isolated, with coloboma 5")--\[http://www.w3.org/2000/01/rdf-schema#subClassOf | "is a"\]-->(http://purl.obolibrary.org/obo/MONDO_0003847 | "Mendelian Disease"). If we use the analogy of "language", then the URIs (above) are the words, and the statements are *sentences in a language*. Unfortunately, there are _many_ languages in the Semantic Web, such as OWL, RDFS, SKOS, SWRL, SHACL, SHEX, and dialects (OWL 2 EL, OWL 2 RL) and a *plethora* of formats, or serialisations (you can store the exact same sentence in the same language such as RDF, or OWL, in many different ways)- more about that later. In here lies also one of the largest problems of the Semantic Web - lots of overlapping standards means, lots of incompatible data - which raises the bar for actually being able to seamlessly integrate "statements about things" across resources.
 
 ##### _Collections of statements about things that somehow belong together and provide some meaning, or context, for those things_. 
 
@@ -210,24 +210,22 @@ The [OBO Foundry](http://obofoundry.org/) is a community-driven effort to coordi
 
 - The [Semantic Web Layer Cake](https://en.wikipedia.org/wiki/Semantic_Web_Stack): A iconic, colourful graphic that describes the layered design of the semantic web, from URIs to Logic. Its not particularly useful, but as a Semantic Web Explorer, you should have seen it.
 - [Linked Data](https://en.wikipedia.org/wiki/Linked_data) is mostly referred to as a "method for publishing data", a key concept in the Semantic Web domain, coined by Tim Berners Lee in 2006. Related concepts:
-  - [Linked Data Principles](https://www.w3.org/wiki/LinkedData):
-    - Use URIs as names for things
-    - Use HTTP URIs so that people can look up those names.
-    - When someone looks up a URI, provide useful information.
-    - Include links to other URIs. so that they can discover more things.
-  - [5-Star system](https://5stardata.info/en/)
-    1. make your stuff available on the Web (whatever format) under an open license
-    2. make it available as structured data (e.g., Excel instead
-    of image scan of a table)
-    3. use non-proprietary formats (e.g., CSV instead of Excel)
-    4. use URIs to denote things, so that people can point at
-    your stuff
-    5. link your data to other data to provide context
+   - [Linked Data Principles](https://www.w3.org/wiki/LinkedData):
+       - Use URIs as names for things
+       - Use HTTP URIs so that people can look up those names.
+       - When someone looks up a URI, provide useful information.
+       - Include links to other URIs. so that they can discover more things.
+   - [5-Star system](https://5stardata.info/en/)
+       1. make your stuff available on the Web (whatever format) under an open license
+       2. make it available as structured data (e.g., Excel instead of image scan of a table)
+       3. use non-proprietary formats (e.g., CSV instead of Excel)
+       4. use URIs to denote things, so that people can point at your stuff
+       5. link your data to other data to provide context
 - [FAIR data](https://en.wikipedia.org/wiki/FAIR_data): Principles defined in 2016, somewhat orthogonal to Linked Data Principles. A nice tutorial, also going a bit more in depth into identifiers than what we did in this section, can be found [here](http://www.repronim.org/module-FAIR-data/01-Web-of-Data/). The idea of FAIR data is probably more impactful in the biomedical and pharmaceutical world then the idea of Linked Data. While there are some (slighltly irritating) voices on the sidelines that say that "It can't be FAIR if its not RDF", it is probably true that a nicely formatted CSV file on the Web is at least as useful as a (hard to understand) RDF dump containing the same data. Worldwide collaborations between major pharmaceutical corporations promoting FAIR data, such as the [Pistoia Alliance](https://www.pistoiaalliance.org/news/fair-toolkit-launch/) do mention Semantic Web Technologies in their [White papers](https://www.sciencedirect.com/science/article/pii/S1359644618303039?via%3Dihub), but keep the jargon a bit more hidden from the general public. Data, according to the FAIR principles, should be:
-  - Findable (machine readable metadata, etc)
-  - Accessible (open authentication, authorisation)
-  - Interoperable (integrated with other data, closely related to controlled vocabularies and linked data)
-  - Reusable (metadata, license, provenance)
+    - Findable (machine readable metadata, etc)
+    - Accessible (open authentication, authorisation)
+    - Interoperable (integrated with other data, closely related to controlled vocabularies and linked data)
+    - Reusable (metadata, license, provenance)
 - [World Wide Web Consortium (W3C)](https://www.w3.org/): The World Wide Web Consortium (W3C) is an international community that develops open standards, in particular many of those (but not all!) pertaining to the Semantic Web.
 
 #### The Ecosystem of Linked Data and Semantic Web: Standards, Technologies and Research Areas
@@ -255,20 +253,20 @@ Here are a few key research areas, which are, by no means (!), exhaustive.
     - [Ontology merging](https://en.wikipedia.org/wiki/Ontology_merging): combine two ontologies by corresponding concepts and relations.
     - Ontology matching: A sub-problem of ontology alignment, namely the problem of determining whether two terms (for example two diseases) from different ontologies should be linked together or not.
 - How can we integrate data from unstructured and semistructured sources such as documents or spreadsheets?
-  - [Named Entity Recognition (NER)](https://en.wikipedia.org/wiki/Named-entity_recognition): the process of identifying a named "thing" in a text.
-  - [Entity linking](https://en.wikipedia.org/wiki/Entity_linking): The task of associating a named entity, for example the result of a Named Entity Recognition algorithm, or the column of a spreadsheet, to a concept in an ontology. For example, the value "Mendelian Disease" is _linked_ to the concept http://purl.obolibrary.org/obo/MONDO_0003847.
-  - [Relationship extraction](https://medium.com/@andreasherman/different-ways-of-doing-relation-extraction-from-text-7362b4c3169e): Once you have identified the genes and diseases in your Pubmed abstracts, you will want to understand how they related to each other. Is the gene the "basis in dysfunction of" the disease? Or just randomly co-occurs in the sentence?
-  - Note: Many of the problems in this category are typically associated with the domain of Natural Language Processing rather than Semantic Web.
+   - [Named Entity Recognition (NER)](https://en.wikipedia.org/wiki/Named-entity_recognition): the process of identifying a named "thing" in a text.
+   - [Entity linking](https://en.wikipedia.org/wiki/Entity_linking): The task of associating a named entity, for example the result of a Named Entity Recognition algorithm, or the column of a spreadsheet, to a concept in an ontology. For example, the value "Mendelian Disease" is _linked_ to the concept http://purl.obolibrary.org/obo/MONDO_0003847.
+   - [Relationship extraction](https://medium.com/@andreasherman/different-ways-of-doing-relation-extraction-from-text-7362b4c3169e): Once you have identified the genes and diseases in your Pubmed abstracts, you will want to understand how they related to each other. Is the gene the "basis in dysfunction of" the disease? Or just randomly co-occurs in the sentence?
+   - Note: Many of the problems in this category are typically associated with the domain of Natural Language Processing rather than Semantic Web.
 - How can we generate insight from semantically integrated data?
-   - Knowledge Graphs and Machine Learning
-     - [Knowledge Graph Embeddings](https://towardsdatascience.com/introduction-to-knowledge-graph-embedding-with-dgl-ke-77ace6fb60ef). The number one hype topic in recent years: How do you get from a graph of interrelated entities to a faithful representation in a vector space (basically numbers), so that Machine Learning algorithms can do their magic?
-     - [Link predication](https://en.wikipedia.org/wiki/Link_prediction): Based on what we know, which are the best drug targets for my rare disease of interest?
-   - Logical reasoning: While the research on deductive reasoning, at least the more "hard-core" [Description Logic](https://en.wikipedia.org/wiki/Description_logic) kind, seems to be a bit more quiet in recent years (maybe I am wrong here, I just see much less papers coming through my Google Scholar alerts now then I used to), there is still a lot going on in this domain: more efficient SPARQL engines, rule-based reasoning such as the recently commercialised [RDFox](https://link.springer.com/content/pdf/10.1007%2F978-3-319-25010-6_1.pdf) reasoner and many more. 
+    - Knowledge Graphs and Machine Learning
+        - [Knowledge Graph Embeddings](https://towardsdatascience.com/introduction-to-knowledge-graph-embedding-with-dgl-ke-77ace6fb60ef). The number one hype topic in recent years: How do you get from a graph of interrelated entities to a faithful representation in a vector space (basically numbers), so that Machine Learning algorithms can do their magic?
+        - [Link predication](https://en.wikipedia.org/wiki/Link_prediction): Based on what we know, which are the best drug targets for my rare disease of interest?
+    - Logical reasoning: While the research on deductive reasoning, at least the more "hard-core" [Description Logic](https://en.wikipedia.org/wiki/Description_logic) kind, seems to be a bit more quiet in recent years (maybe I am wrong here, I just see much less papers coming through my Google Scholar alerts now then I used to), there is still a lot going on in this domain: more efficient SPARQL engines, rule-based reasoning such as the recently commercialised [RDFox](https://link.springer.com/content/pdf/10.1007%2F978-3-319-25010-6_1.pdf) reasoner and many more. 
 - Other research areas (not in any way exhaustive):
-   - Web decentralisation and privacy:
-     - [Solid](https://solidproject.org/): Solid (Social Linked Data) is a web decentralization project led by Tim Berners-Lee, with the aim of true ownership of personal data and improved privacy. "Pods" are like secure personal web servers for data from which application can request data.
-     - [Shape validation](https://www.w3.org/2014/data-shapes/wiki/Main_Page): It is very difficult to validate huge Knowledge Graphs of interrelated data efficiently (by validate we can mean a lot of things, such as making sure that your cat does not accidentally end up as someone's "Mendelian Disease"). Shape languages such as Shex and SHACL are poised to solve this problem, but the research is ongoing.
-   - New standards and tools: There is always someone proposing a new semantic standard for something or building a new kind of triple store, SPARQL extension or similar.
+    - Web decentralisation and privacy:
+        - [Solid](https://solidproject.org/): Solid (Social Linked Data) is a web decentralization project led by Tim Berners-Lee, with the aim of true ownership of personal data and improved privacy. "Pods" are like secure personal web servers for data from which application can request data.
+        - [Shape validation](https://www.w3.org/2014/data-shapes/wiki/Main_Page): It is very difficult to validate huge Knowledge Graphs of interrelated data efficiently (by validate we can mean a lot of things, such as making sure that your cat does not accidentally end up as someone's "Mendelian Disease"). Shape languages such as Shex and SHACL are poised to solve this problem, but the research is ongoing.
+    - New standards and tools: There is always someone proposing a new semantic standard for something or building a new kind of triple store, SPARQL extension or similar.
    
 #### Typical Jobs of Semantic Data Engineers in the biomedical domain
 
@@ -282,21 +280,24 @@ This is much harder still than it should have to be. Scientific databases are sc
 
 ##### Extending existing ontologies
 It is rare nowadays that you will have to develop an ontology entirely from scratch - most biomedical sub-domains will have some kind of reasonable ontology to build upon. However, there is often a great need to extend existing ontologies - usually because you have the need of representing certain concepts in much more detail, or your specific problem has not been modelled yet - think for example when how disease ontologies needed to be extended during the Coronavirus Crisis. Extending ontologies usually have two major facets:
+
 1. If at all possible you should seek to contribute new terms, synonyms and relationships to the ontologies you seek to extend directly. Here, you can use GitHub to make issues requesting new terms, but more boldly, you can also add new terms yourself. We will teach you how to do that in one of the next weeks.
 2. If the knowledge is considered out of scope for the ontology to be extended (for example because the terms are considered too detailed), then you will maintain your own "branch" of the ontology. Many tools such as the [Ontology Development Kit](https://github.com/INCATools/ontology-development-kit) and [ROBOT](http://robot.obolibrary.org/) can help you maintain such a branch but the general instinct should be: 
-  - Make a _public_ GitHub repo. 
-  - Reach out to the developers of the main ontology
-  - Stay in touch and coordinate releases
+    - Make a _public_ GitHub repo. 
+    - Reach out to the developers of the main ontology
+    - Stay in touch and coordinate releases
 
 ##### Mapping data into ontologies/knowledge graphs
 
 Also sometimes more broadly referred to as "data integration", this problem involves a variety of tasks, such as:
+
 1. _Named Entity Recognition_. If you have a set of documents, such as PubMed abstracts or clinical notes, you may have to first identify the parts of speech that refer to clinical entities.
 2. _Entity Linking_: Once you have identified the biomedical entities of interest, you may want to link them to your existing knowledge graph. This process is sometimes called entity mapping or data mapping as well. Very often, this task is not fully automated. We have worked on projects where we used approaches to Entity Linking to suggest good mappings to users, which then had to confirm or reject them. It is also good to understand that not all entity linking must be vertical (i.e. between "equivalent" entities). Very often, there is no equivalent entity in your knowledge graph to map to, and here you need to decide whether to (a) create a new entity in the knowledge graph to map to or (b) map to a broader entity (for example "microphthalmia, isolated, with coloboma 5" to "Mendelian Disease"). What is more efficient / useful solely depends on your use case!
 
 ##### Build application ontologies
 
 To make your data discoverable, it is often useful to extract a view from the ontologies you are using (for example, Gene Ontology, Disease Ontology) that only contains the terms and relationships of relevance to your data. We usually refer to this kind of ontology as an application ontology, or an ontology specific to your application, which will integrate subsets of other ontologies. This process will typically involve the following:
+
 - Define a seed, or a set of terms you want to import from your external ontologies of interest.
 - Extract relevant subsets from ontologies using this seed (for example using [ROBOT extract](http://robot.obolibrary.org/extract)).
 - Combine and potentially link these subsets together.
@@ -305,6 +306,7 @@ To make your data discoverable, it is often useful to extract a view from the on
 ##### Leverage ontologies and knowledge graphs for you data analysis problems
 
 There are many ways your semantic data can be leveraged for data analysis, but in my experience, two are particularly central:
+
 1. _Data grouping and search_: make data about "microphthalmia, isolated, with coloboma 5" available when searching for data about "Mendelian Disease".
 2. _Link prediction_: Figure out what additional knowledge is hidden in your data that can drive your research (e.g. possible new therapies or drug targets).
 
