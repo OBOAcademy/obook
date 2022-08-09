@@ -13,19 +13,20 @@ The OBO foundry ontologies are open, which means anyone can access them, and any
 
 ## Providing Feedback to an Ontology 
 
-- The preferred mechanism for feedback for most OBO Foundry ontologies is via the ontology's [GitHub](https://github.com/) issue tracker. 
-- To find contact information for an ontology, go to the [OBO Foundry website](https://obofoundry.org/) website and search for a particular ontology.
-- For example, click on [**go**](https://obofoundry.org/ontology/go.html) (Gene Ontology) and you should see a link to the tracker ()[https://github.com/geneontology/go-ontology/issues/](https://github.com/geneontology/go-ontology/issues/)) and a contact person (in this case, Suzi Aleksander) in the metadata on the left hand side.
-- You can contact the ontology owner directly by email, but using the GitHub issue tracker is generally the preferred contact mechanism.
+- The preferred mechanism for feedback for almost all OBO Foundry ontologies is via the ontology's [GitHub](https://github.com/) issue tracker. 
+- To find the correct GitHub issue tracker, go to the [OBO Foundry website](https://obofoundry.org/) website and search for a particular ontology.
+- For example, click on [**go**](https://obofoundry.org/ontology/go.html) (Gene Ontology) and you should see a link to the tracker ([https://github.com/geneontology/go-ontology/issues/](https://github.com/geneontology/go-ontology/issues/))
+- The OBO Metadata also has a link to a contact but this is generally for OBO administrative purposes, and should not be used for general questions, new term requests, or general feedback
+- Some ontologies may have other means of engaging their use community, and these should all be listed in a standard way on the OBO page. This includes mailing lists, slack groups, and Twitter or other social media accounts.
 
 ## Getting Started with GitHub
 
 1. Open a free account at [https://github.com/](https://github.com/).
 1. [GitHub Fundamentals for OBO Engineers](https://oboacademy.github.io/obook/tutorial/github-fundamentals/). _Provides an introduction to GitHub including_:
- - how to get started
- - an overview of the organization of GitHub
- - an introduction to Markdown (the simple markup language used in GitHub to do format text, like **bold** or _italics_)
- - types of content that can be added to GitHub (e.g. you can attach a screenshot to an issue)
+    - how to get started
+    - an overview of the organization of GitHub
+    - an introduction to Markdown (the simple markup language used in GitHub to do format text, like **bold** or _italics_)
+    - types of content that can be added to GitHub (e.g. you can attach a screenshot to an issue)
 1. [Intro to managing and tracking issues in GitHub](https://oboacademy.github.io/obook/tutorial/github-issues/). _This tutorial walks you through creating issues in GitHub._ 
 
 ## Using Ontologies and Ontology Terms
@@ -37,7 +38,8 @@ The OBO foundry ontologies are open, which means anyone can access them, and any
 
 ## Contributing to Ontologies
 
-Community feedback is welcome for all open, OBO Foundry ontologies. Feedback is often provided in the form of:  
+Community feedback is welcome for all open, OBO Foundry ontologies. Feedback is often provided in the form of:
+
 - New terms requests  
 - Add/revise synonyms, definitions  
 - Reclassify a term  
