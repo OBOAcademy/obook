@@ -756,12 +756,12 @@ Basic information management is always important:
 More advanced data management is part of this course:
 
 - consistent use of versioned
-  - software
-  - reference data
+    - software
+    - reference data
 - terminology
-  - controlled vocabularies
-  - data dictionaries
-  - ontologies
+    - controlled vocabularies
+    - data dictionaries
+    - ontologies
 
 Some simple rules of thumb can help reduce complexity and confusion:
 
@@ -777,9 +777,10 @@ Some simple rules of thumb can help reduce complexity and confusion:
 When starting a new project,
 make a nice clean new space for it.
 Try for that "new project smell".
-I always create a new directory on my computer.
-I almost always create a new GitHub repository.
-I usually create a README and a Makefile, right away.
+
+- I always create a new directory on my computer.
+- I almost always create a new GitHub repository.
+- I usually create a README and a Makefile, right away.
 
 It's not always clear when a project is really "new"
 or just a new phase of an old project.
