@@ -37,6 +37,7 @@ For example, Autistic behavior has the related synonym Autism spectrum disorder.
 ### Synonym types
 
 Synonyms can also be classified by types. The default is no type. The synonym types vary in each ontology, but some commonly used synonym types include:
+
 - abbreviation - to indicate the synonym is an abbreviation. **Note** the scope for an acronym should be determined on a case-by-case basis. Not all acronyms are necessarily exact.
 - ambiguous - to indicate the synonym is open to more than one interpretation; may have a double meaning
 - dubious synonym - to indicate the synonym may be suspect
