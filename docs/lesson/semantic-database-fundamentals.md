@@ -4,7 +4,7 @@
 These materials are under construction and incomplete.
 
 ## Prerequisites
-- Review tutorial on [Application Ontology Development](/redesign/05_applicationOntologyDevelopment.md)
+- TBD
 
 ## Preparation
 - TBD
