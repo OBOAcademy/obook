@@ -71,7 +71,7 @@ Consult the wiki documentation for suggestions on standard comments:
 
 1. Add any additional annotations needed - this is specific to ontologies and you should consult the conventions of the ontology you are working on. 
 
-Examples of additional axioms to add: 
+Examples of additional annotations to add: 
 - rdfs:seeAlso - link to GitHub issue
 - has_obsolence_reason 
 
