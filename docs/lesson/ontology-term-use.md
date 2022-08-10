@@ -107,7 +107,7 @@ Data can mapped to ontology terms manually, using spreadsheets, or via curation 
 - [Zooma](https://bio.tools/zooma)
 - [BioPortal Annotator](https://bioportal.bioontology.org/annotator)
 - [Canto](http://gmod.org/wiki/Canto) - a web-based literature curation tools
-- [Textpresso](http://www.textpresso.org/celegans/) - designed for C. elegans curation
+- [Textpresso](https://www.textpresso.org/) - designed for C. elegans curation
 - [OntoBrowser](https://opensource.nibr.com/projects/ontobrowser) - an online collaborative curation tool
 
 <a name="missing"></a> 
