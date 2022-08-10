@@ -162,6 +162,8 @@ More complex queries are also possible.
 
 - All issues either assigned to me OR on which I have commented OR am mentioned: [https://github.com/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+involves%3Anicolevasilevsky+](https://github.com/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+involves%3Anicolevasilevsky+)
 
+Note, you must be signed in to GitHub to view the above links.
+
 Further reading on [Issue querys](https://help.github.com/articles/searching-issues/)
 
 #### Nofifications

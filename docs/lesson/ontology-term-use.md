@@ -107,7 +107,7 @@ Data can mapped to ontology terms manually, using spreadsheets, or via curation 
 - [Zooma](https://bio.tools/zooma)
 - [BioPortal Annotator](https://bioportal.bioontology.org/annotator)
 - [Canto](http://gmod.org/wiki/Canto) - a web-based literature curation tools
-- [Textpresso](http://www.textpresso.org/celegans/) - designed for C. elegans curation
+- [Textpresso](https://www.textpresso.org/) - designed for C. elegans curation
 - [OntoBrowser](https://opensource.nibr.com/projects/ontobrowser) - an online collaborative curation tool
 
 <a name="missing"></a> 
@@ -121,7 +121,9 @@ The figure below by [Chris Mungall](https://bids.berkeley.edu/people/chris-munga
 <a name="request"></a> 
 ## 7. Make term requests to existing ontologies
 
-See separate lesson on [Making term requests to existing ontologies](../how-to/term-request.md).
+See separate lesson on [Making term requests to existing ontologies](../howto/term-request.md).
+
+
 
 <a name="iri"></a> 
 ## 8. Differences between IRIs, CURIEs, and labels
