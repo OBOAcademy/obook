@@ -37,7 +37,7 @@ At the end of this lesson, you should know how to do:
 
 ## Additional Materials and Resources
 - [Monkeying around with OWL: Musings on building and using ontologies, posts by Chris Mungall](https://douroucouli.wordpress.com/)
-- [Documentation on Cell Ontology relations](https://github.com/obophenotype/cell-ontology/blob/master/documentation/relations_guide.md)
+- [Documentation on Cell Ontology relations](https://github.com/obophenotype/cell-ontology/blob/master/docs/relations_guide.md)
 - [Guidelines for writing definitions in Ontologies (paper)](https://philpapers.org/archive/SEPGFW.pdf)
 - [How to deal with unintentional equivalent classes](https://douroucouli.wordpress.com/2018/09/04/debugging-ontologies-using-owl-reasoning-part-2-unintentional-entailed-equivalence/): Cool post by Chris Mungall on how to deal with an important reasoning issue.
 
