@@ -21,14 +21,11 @@ These materials are under construction and incomplete.
 
 ## Tutorials
 
-
 # Week 8: Ontology Development
 
 **First Instructor:** Nico Matentzoglu, Becky Jackson  
 
 ## Description
-
-
 
 By the end of this session, you should be able to:
 

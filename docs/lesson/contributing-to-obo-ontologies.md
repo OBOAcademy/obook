@@ -324,7 +324,7 @@ Before you start:
 
 -   make sure you are working on a branch - see quick guide [here](https://docs.google.com/presentation/d/1M8NZQOIQVswng-so6ROxVeMJfDnzth7BYNj_5MXxEik/edit#slide=id.g9db6baf776_1_0).
 
--   make sure you have the editor's file open in Protege as detailed [here](https://github.com/jamesaoverton/obook/blob/master/04-OntologyTheory/SearchingMondo.md).
+-   make sure you have the editor's file open in Protege as detailed [here](https://mondo.readthedocs.io/en/latest/editors-guide/searching-mondo/).
 
 New classes are created in the Class hierarchy panel on the left.
 
@@ -338,7 +338,7 @@ We will work on these two tickets:
 
 #### https://github.com/monarch-initiative/mondo/issues/616
 
--   Search for the parent term 'hypereosinophilic syndrome' (see [search guide](https://github.com/jamesaoverton/obook/blob/master/04-OntologyTheory/SearchingMondo.md) if you are unsure how to do this).
+-   Search for the parent term 'hypereosinophilic syndrome' (see [search guide](https://mondo.readthedocs.io/en/latest/editors-guide/searching-mondo/) if you are unsure how to do this).
 
 -   When you are clicked on the term in the Class hierarchy pane, click the add subclass button to add a child class to 'hypereosinophilic syndrome'
 
@@ -521,7 +521,7 @@ There are three buttons at the top of the class hierarchy view. These allow you 
 ##### Add the new term 'mycotoxin allergy'
 
 1. Navigate to the Mondo repo in GitHub Desktop, create a branch, and open mondo-edit.obo in Protege.
-1. Search for the parent term 'allergic disease' (see [search guide](https://github.com/jamesaoverton/obook/blob/master/04-OntologyTheory/SearchingMondo.md) if you are unsure how to do this).
+1. Search for the parent term 'allergic disease' (see [search guide](https://mondo.readthedocs.io/en/latest/editors-guide/searching-mondo/) if you are unsure how to do this).
 1. When you are clicked on the term in the Class hierarchy pane, click the add subclass button to add a child class to 'allergic disease'
 1. A dialog will popup. Name this new subclass: mycotoxin allergy. Click "OK" to add the class.
 
