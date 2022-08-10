@@ -6,13 +6,13 @@ Warning: Every ontology has their procedures on how they obsolete terms (eg noti
 
 ### PRE OBSOLETION PROCESS (or basic obsoletion etiquette)
 1. Check if the term (or any of its children) is being used for annotation: 
-   - Go to your ontology browser of choice, search for the term, either by label or ID
-   - See which other ontologies use the to be obsolete term
-   - Notify affected groups (usually by adding an issue in their tracker)
+    - Go to your ontology browser of choice, search for the term, either by label or ID
+    - See which other ontologies use the to be obsolete term
+    - Notify affected groups (usually by adding an issue in their tracker)
 
 2. Check if the term is used elsewhere in the ontology
-   - In Protégé, navigate to the term to be obsolete and go to the 'Usage' tab to see if that ID is used elsewhere.
-   - If the term is a parent to other terms or is used in logical definitions, make sure that another term replaces the obsolete term
+    - In Protégé, navigate to the term to be obsolete and go to the 'Usage' tab to see if that ID is used elsewhere.
+    - If the term is a parent to other terms or is used in logical definitions, make sure that another term replaces the obsolete term
 
 
 ### OBSOLETION PROCESS (Manual)
