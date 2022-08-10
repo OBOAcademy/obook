@@ -121,7 +121,7 @@ The figure below by [Chris Mungall](https://bids.berkeley.edu/people/chris-munga
 <a name="request"></a> 
 ## 7. Make term requests to existing ontologies
 
-See separate lesson on [Making term requests to existing ontologies](../how-to/term-request.md).
+See separate lesson on [Making term requests to existing ontologies](https://oboacademy.github.io/obook/howto/term-request/).
 
 <a name="iri"></a> 
 ## 8. Differences between IRIs, CURIEs, and labels
