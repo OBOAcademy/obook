@@ -42,7 +42,7 @@ See [Daily Workflow](daily-curator-workflow.md) for creating branches and basic 
 
 7. **Add alt_id to the winning term**.
     - Navigate to the winning term and add the annotation hasAlternativeId with the ID (eg CL:0000000) of the losing term in the Literal tab. 
-
+    - **Note**: any `id` annotation with value = the OBO ID of the losing term should be deleted. Failure to do this breaks OBO<->OWL conversion.
 8. Save changes. 
 
 See [Daily Workflow](daily-curator-workflow.md) section for commit, push and merge instructions. 
