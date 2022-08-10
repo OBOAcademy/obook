@@ -40,7 +40,7 @@ Different ontologies are build for different purposes and were created for vario
 
 The unified phenotype ontology (uPheno) aggregates species-specific phenotype ontologies into a unified resource. Several species-specific phenotype ontologies exist, such as the [Human Phenotype Ontology](https://hpo.jax.org/app/), Mammalian Phenotype Ontology (http://www.informatics.jax.org/searches/MP_form.shtml) and many more.
 
-Similarly to the phenotype ontologies, there are many disease ontologies that exist that are specific to certain areas of diseases, such as infectious diseases (e.g. [Infectious Disease Ontology](http://www.bioontology.org/wiki/index.php/Infectious_Disease_Ontology)), cancer (e.g. [National Cancer Institute Thesaurus](https://ncithesaurus.nci.nih.gov/ncitbrowser/pages/home.jsf?version=20.11e)), rare diseases (e.g. [Orphanet](https://www.orpha.net/consor/cgi-bin/index.php)), etc.
+Similarly to the phenotype ontologies, there are many disease ontologies that exist that are specific to certain areas of diseases, such as infectious diseases (e.g. [Infectious Disease Ontology](https://bioportal.bioontology.org/ontologies/IDO)), cancer (e.g. [National Cancer Institute Thesaurus](https://ncithesaurus.nci.nih.gov/ncitbrowser/pages/home.jsf?version=20.11e)), rare diseases (e.g. [Orphanet](https://www.orpha.net/consor/cgi-bin/index.php)), etc.
 
 In addition, there are several more general disease ontologies, such as the [Mondo Disease Ontology](https://mondo.monarchinitiative.org/), the [Human Disease Ontology (DO)](http://www.disease-ontology.org/), [SNOMED](https://browser.ihtsdotools.org/?), etc. 
 
