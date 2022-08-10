@@ -176,6 +176,8 @@ Before browsing  or searching an ontology, it is useful to run an OWL reasoner f
 
 ![image](https://user-images.githubusercontent.com/6722114/115822558-9b04ea80-a3b9-11eb-922b-c4c908fd99cc.png)
 
+For more details on why it is important to have the reasoner on when using the editors version of an ontology, see the [Reasoning reference guide](../reference/reasoning/). But for now, you don't need a deeper understanding, just be sure that you always have the reasoner on.
+
 #### Entities tab
 
 You will see various tabs along the top of the screen. Each tab provides a different perspective on the ontology. 
@@ -279,7 +281,9 @@ Find and edit mondo-idranges.owl by adding the following:
 	    
 	    EquivalentTo: 
         xsd:integer[>= 0806000 , <= 0806999]. #add a range of 999 above the previous integer
-	
+
+Be sure to change "Your Name" to your actual name! And note that this value should almost always be an individual, and not an organization or group.
+
 create a pull request and add matentzn or nicolevasilevsky as a reviewer
 
 proceed to settting up as below:
@@ -365,7 +369,7 @@ Note, most of these are bold in the annotation property list:
 
 Use this panel to add a definition to the class you created. Select the + button to add an annotation to the selected entity. Click on the annotation 'definition' on the left and copy and paste in the definition to the white editing box on the right. Click OK.
 
-Definition: A disorder characterized by episodes of swelling under the skin (angioedema) and an elevated number of the white blood cells known as eosinophils (eosinophilia). During these episodes, symptoms of hives (urticaria), fever, swelling, weight gain and eosinophilia may occur. Symptoms usually appear every 3-4 weeks and resolve on their own within several days. Other cells may be elevated during the episodes, such as neutrophils and lymphocytes. Although the syndrome is often considered a subtype of the idiopathic hypereosinophilic syndromes, it does not typically have organ involvement or lead to other health concerns.
+Definition: _A disorder characterized by episodes of swelling under the skin (angioedema) and an elevated number of the white blood cells known as eosinophils (eosinophilia). During these episodes, symptoms of hives (urticaria), fever, swelling, weight gain and eosinophilia may occur. Symptoms usually appear every 3-4 weeks and resolve on their own within several days. Other cells may be elevated during the episodes, such as neutrophils and lymphocytes. Although the syndrome is often considered a subtype of the idiopathic hypereosinophilic syndromes, it does not typically have organ involvement or lead to other health concerns._
 
 ![](https://lh3.googleusercontent.com/4p6jqLqln6U1NHs71h30sdbqfPjSop7KxLJrF_JFfapYPPnBL1A3uA4MHRhqXHUA5YLN7rezy7SD1vNH-KslUWM5qb_Z8PP9IWQJSfg2GzX5XL3aa1CkcAtiR46tETCnwzIXHukm)
 
@@ -392,9 +396,9 @@ To add a dbxref to the definition:
 1.  Add synonyms 
 1.  Click the add annotations button
 1.  Add the following synonyms as 'has_exact_synonym': 
-1.  EAE
-1.  Gleich's syndrome
-1.  Gleich syndrome
+    -  EAE
+    -  Gleich's syndrome
+    -  Gleich syndrome
 1.  All synonyms in Mondo should have a dbxref on the synonym
 1.  Click the @ symbol next to the synonym
 1.  Click the + button
@@ -402,17 +406,17 @@ To add a dbxref to the definition:
 1.  Add database cross reference
 1.  Click the add annotations button
 1.  Add the following database_cross_reference':
-1.  GARD:0013029
+    -  GARD:0013029
 1.  Click the @ symbol next to the synonym
 1.  Click the + button
-1.  Add source: MONDO:equivalentTo
+    -  Add source: MONDO:equivalentTo
 
 <a name="class-description"></a> 
 ### The Class description view
 
 We have seen how to add sub/superclasses and annotate the class hierarchy. Another way to do the same thing is via the Class description view. When an OWL class is selected in the entities view, the right-hand side of the tab shows the class description panel. If we select the 'vertebral column disease' class, we see in the class description view that this class is a "SubClass Of" (= has a SuperClass) the 'musculoskeletal system disease' class. Using the (+) button beside "SubClass Of" we could add another superclass to the 'skeletal system disease' class.
 
-Note the Anonymous Ancestors. These are superclasses that are inherited from the parents. If you hover over the Subclass Of (Anonymous Ancestor) you can see the parent that the class inherited the superclass from.
+Note the Anonymous Ancestors. This is a difficult concept we will return to later, and the contents of this portion may seem confusing at first (some of these may be clearer after you complete the "Basics of OWL" section below). These are OWL expressions that are inherited from the parents. If you hover over the Subclass Of (Anonymous Ancestor) you can see the parent that the class inherited the expression from. For many ontologies, you will see some quite abstract expressions in here inherited from upper ontologies, but these can generally be ignored for most purposes.
 
 ![](https://lh4.googleusercontent.com/hC3R3tw3S5eVNLc70iCN0lrtj9rD_gIPUBxberpw4gSRRR6xct1Xv5dHYSfXPchpYvpGMhIgGnQQ18dl6pWicyClpL-GGyi_JjkeSKOetm4hleSfA-kxu6ww6v-3q-NOLj3xhd7m)
 
@@ -444,11 +448,13 @@ Save your work.
 ## Ontology design patterns
 
 Dead Simple Ontology Design Patterns (DOSDPs) are specifications, written in yaml format, that specify how ontology terms should be created (see [article here](https://jbiomedsem.biomedcentral.com/articles/10.1186/s13326-017-0126-0)). They can be used to:
+
 - generate documentation
 - generate new terms
 - retrofit existing ontology terms 
 
 DOSDPs have some key features:
+
 - **Description**: that describes the purpose of the patterns
 - **Examples**: Provides examples of terms that use the Patterns
 - **Declared classes**: these are the classes that are used in the pattern. Any subclass of the declared class can be used in this pattern.
@@ -457,6 +463,7 @@ DOSDPs have some key features:
 - **Pattern for class name, annotations, text definition and equivalentTo (logical definition)**: Ontology classes are used as 'fillers' to create new classes that conform to the specific patterns.
 
 Examples of design patterns are available here:
+
 - [uPheno pattern library](https://github.com/obophenotype/upheno/tree/master/src/patterns/dosdp-dev)
 - [Mondo Disease Ontology pattern library](https://github.com/monarch-initiative/mondo/tree/master/src/patterns/dosdp-patterns)
 
@@ -488,9 +495,10 @@ _under development_
 ## Logic and debugging
 
 Below are exercises to demonstrate how to:
-  - Add equivalent axioms (logical definitions) to ontology terms
-  - Run the reasoner and view the inferred hierarchy
-  - Debugging and viewing explanations
+
+- Add equivalent axioms (logical definitions) to ontology terms
+- Run the reasoner and view the inferred hierarchy
+- Debugging and viewing explanations
 
 #### Practice adding logic and debugging
 
@@ -582,4 +590,6 @@ For this class, we want to follow the design pattern for [acquired](https://gith
 
 
 ## Further reading
+
+- [Debugging ontologies using OWL reasoning](https://douroucouli.wordpress.com/2018/08/03/debugging-ontologies-using-owl-reasoning-part-1-basics-and-disjoint-classes-axioms/)
 - [Chris Mungall on how to write great textual definitions](https://douroucouli.wordpress.com/2019/07/08/ontotip-write-simple-concise-clear-operational-textual-definitions/)
