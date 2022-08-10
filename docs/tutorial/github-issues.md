@@ -158,6 +158,8 @@ Once you start using GitHub for lots of things it is easy to get overwhelmed by 
 - All issues assigned to me: [https://github.com/issues/assigned](https://github.com/issues/assigned)
 - All issues on which I am @ mentioned: [https://github.com/issues/mentioned](https://github.com/issues/mentioned)
 
+Note, you must be signed in to GitHub to view the above links.
+
 More complex queries are also possible.
 
 - All issues either assigned to me OR on which I have commented OR am mentioned: [https://github.com/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+involves%3Anicolevasilevsky+](https://github.com/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+involves%3Anicolevasilevsky+)
