@@ -69,7 +69,7 @@ Consult the wiki documentation for suggestions on standard comments:
  
 1. If the obsoleted term was not replaced by another term in the ontology, but there are existing terms that might be appropriate for annotation, add those term IDs in the 'consider' tag: In the 'Annotations' window, select ```+``` to add an annotation. In the resulting menu, select ```consider``` and enter the ID of the replacement term. 
 
-1. Add any additional axioms needed - this is specific to ontologies and you should consult the conventions of the ontology you are working on. 
+1. Add any additional annotations needed - this is specific to ontologies and you should consult the conventions of the ontology you are working on. 
 
 Examples of additional axioms to add: 
 - rdfs:seeAlso - link to GitHub issue
