@@ -1,6 +1,6 @@
 ## The Landscape of Disease and Phenotype Ontologies
 
-_Compiled by Nicole Vasilevsky. Feel free to make pull requests to suggest edits._
+_Compiled by Nicole Vasilevsky. Feel free to make pull requests to suggest edits._ Note: This currently just provides an overview of disease and phenotype ontologies. Contributors are welcome to add more descriptions of other medical ontologies. This was last updated in 2021.
 
 ### Disease Ontologies & Terminologies
 -----
