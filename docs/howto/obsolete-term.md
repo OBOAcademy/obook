@@ -45,7 +45,7 @@ Warning: some ontologies give advance notice on terms that will be obsoleted thr
 
 7. Add any additional axioms needed - this is specific to ontologies and you should consult the conventions of the ontology you are working on. 
 
-Examples of additional axioms to add: 
+Examples of additional annotations to add: 
 - rdfs:seeAlso - link to GitHub issue
 - has_obsolence_reason 
 - add ‘OBSOLETE.’ to the term definition: In the 'Description' window, click on the ```o``` on the right-hand side of the definition entry. In the resulting window, in the Literal tab, at the beginning of the definition, type: ```OBSOLETE.``` 
