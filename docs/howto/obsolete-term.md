@@ -46,8 +46,10 @@ Warning: some ontologies give advance notice on terms that will be obsoleted thr
 7. Add any additional axioms needed - this is specific to ontologies and you should consult the conventions of the ontology you are working on. 
 
 Examples of additional axioms to add: 
-- rdfs:seeAlso - link to github issue
+- rdfs:seeAlso - link to GitHub issue
 - has_obsolence_reason 
+- add ‘OBSOLETE.’ to the term definition: In the 'Description' window, click on the ```o``` on the right-hand side of the definition entry. In the resulting window, in the Literal tab, at the beginning of the definition, type: ```OBSOLETE.``` 
+- if the obsoleted term was not replaced by another term in the ontology, but there are existing terms that might be appropriate for annotation, add those term IDs in the 'consider' tag: In the 'Annotations' window, select ```+``` to add an annotation. In the resulting menu, select ```consider``` and enter the ID of the replacement term.  
 
 ## Obsolete a class (using Protege 'Make entity obsolete' function)
 
@@ -66,5 +68,11 @@ Consult the wiki documentation for suggestions on standard comments:
 1. If the obsoleted term was replaced by another term in the ontology: In the 'Annotations' window, select ```+``` to add an annotation. In the resulting menu, select ```term replaced by``` and enter the ID of the replacement term.  
  
 1. If the obsoleted term was not replaced by another term in the ontology, but there are existing terms that might be appropriate for annotation, add those term IDs in the 'consider' tag: In the 'Annotations' window, select ```+``` to add an annotation. In the resulting menu, select ```consider``` and enter the ID of the replacement term. 
+
+1. Add any additional axioms needed - this is specific to ontologies and you should consult the conventions of the ontology you are working on. 
+
+Examples of additional axioms to add: 
+- rdfs:seeAlso - link to GitHub issue
+- has_obsolence_reason 
 
 See [Daily Workflow](daily-curator-workflow.md) section for commit, push and merge instructions. 
