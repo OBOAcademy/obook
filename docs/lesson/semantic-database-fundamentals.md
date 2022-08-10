@@ -4,7 +4,7 @@
 These materials are under construction and incomplete.
 
 ## Prerequisites
-- TBD
+- Review tutorial on [Project Ontology Development](../tutorial/project-ontology-development.md)
 
 ## Preparation
 - TBD

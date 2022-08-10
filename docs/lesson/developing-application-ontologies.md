@@ -4,7 +4,7 @@
 These materials are under construction and incomplete.
 
 ## Prerequisites
-- Review tutorial on [Ontology Contribution](lesson/contributing-to-obo-ontologies.md)
+- Review tutorial on [Ontology Contribution](../lesson/contributing-to-obo-ontologies.md)
 
 ## Preparation
 - TBD
