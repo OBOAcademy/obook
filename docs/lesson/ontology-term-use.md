@@ -121,7 +121,8 @@ The figure below by [Chris Mungall](https://bids.berkeley.edu/people/chris-munga
 <a name="request"></a> 
 ## 7. Make term requests to existing ontologies
 
-See separate lesson on [Making term requests to existing ontologies](../howto/term-request/).
+See separate lesson on [Making term requests to existing ontologies](../howto/term-request.md).
+
 
 
 <a name="iri"></a> 
