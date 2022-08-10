@@ -31,7 +31,7 @@ These materials are under construction and incomplete.
 <a name="major"></a> 
 ## Major disease and phenotype ontologies that are available
 
-A landscape analysis of major disease and phenotype ontologies that are currently available is [here](https://github.com/OBOAcademy/obook/blob/master/archive_original_cpath_course/09-DiseasesAndPhenotypes/ontologylandscape.md).
+A landscape analysis of major disease and phenotype ontologies that are currently available is [here](..reference/ontology-landscape.md) (also available in Zenodo [here](https://zenodo.org/record/6299898#.YvM_kezMJ6od)).
 
 <a name="decision"></a> 
 ## Decide which phenotype or disease ontology to use for different use cases
@@ -44,7 +44,7 @@ Similarly to the phenotype ontologies, there are many disease ontologies that ex
 
 In addition, there are several more general disease ontologies, such as the [Mondo Disease Ontology](https://mondo.monarchinitiative.org/), the [Human Disease Ontology (DO)](http://www.disease-ontology.org/), [SNOMED](https://browser.ihtsdotools.org/?), etc. 
 
-Different disease ontologies may be built for different purposes; for example, ontologies like Mondo and DO are intended to be used for classifying data, and downstream computational analyses. Some terminologies are used for indexing purposes, such as International classification of Diseases (ICD). ICD-11 is intended for indexing medical encounters for the purposes of billing and coding. Some of the disease ontologies listed on the [landscape](https://zenodo.org/record/6299898#.YvM_kezMJ6od) contain terms that define diseases, such as [Ontology for General Medical Sciences (OGMS)](http://obofoundry.org/ontology/ogms.html) are upper level ontologies and are intended for integration with other ontologies. 
+Different disease ontologies may be built for different purposes; for example, ontologies like Mondo and DO are intended to be used for classifying data, and downstream computational analyses. Some terminologies are used for indexing purposes, such as International classification of Diseases (ICD). ICD-11 is intended for indexing medical encounters for the purposes of billing and coding. Some of the disease ontologies listed on the [landscape](..reference/ontology-landscape.md) contain terms that define diseases, such as [Ontology for General Medical Sciences (OGMS)](http://obofoundry.org/ontology/ogms.html) are upper level ontologies and are intended for integration with other ontologies. 
 
 When deciding on which phenotype or disease ontology to use, some things to consider:
 
