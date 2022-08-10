@@ -43,7 +43,7 @@ Warning: some ontologies give advance notice on terms that will be obsoleted thr
 
 ![](../images/howtoguides/obsolete/fig6.png)
 
-7. Add any additional axioms needed - this is specific to ontologies and you should consult the conventions of the ontology you are working on. 
+7. Add any additional annotations needed - this is specific to ontologies and you should consult the conventions of the ontology you are working on. 
 
 Examples of additional annotations to add: 
 - rdfs:seeAlso - link to GitHub issue
