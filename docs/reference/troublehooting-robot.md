@@ -1,8 +1,7 @@
 # Lessons learned from troubleshooting ROBOT
 
 ## Prerequisites
-- Review tutorial on [Ontology pipelines with ROBOT and SPARQL](https://oboacademy.github.io/obook/lesson/ontology_pipelines/)
-- Review tutorial on [Ontology Pipelines with ROBOT 2](https://oboacademy.github.io/obook/lesson/ontology_pipelines/)
+- Review tutorial on [Ontology pipelines with ROBOT and SPARQL](https://oboacademy.github.io/obook/lesson/ontology-pipelines/)
 
 ### Learning objectives
 Learn common mistakes when using ROBOT and how to troubleshoot and fix them.
