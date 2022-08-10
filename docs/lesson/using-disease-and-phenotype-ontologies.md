@@ -31,7 +31,7 @@ These materials are under construction and incomplete.
 <a name="major"></a> 
 ## Major disease and phenotype ontologies that are available
 
-A landscape analysis of major disease and phenotype ontologies that are currently available is [here](..reference/medical-ontology-landscape.md) (also available in Zenodo [here](https://zenodo.org/record/6299898#.YvM_kezMJ6od)).
+A landscape analysis of major disease and phenotype ontologies that are currently available is [here](..docs/reference/medical-ontology-landscape.md) (also available in Zenodo [here](https://zenodo.org/record/6299898#.YvM_kezMJ6od)).
 
 <a name="decision"></a> 
 ## Decide which phenotype or disease ontology to use for different use cases
