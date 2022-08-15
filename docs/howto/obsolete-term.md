@@ -6,13 +6,13 @@ Warning: Every ontology has their procedures on how they obsolete terms (eg noti
 
 ### PRE OBSOLETION PROCESS (or basic obsoletion etiquette)
 1. Check if the term (or any of its children) is being used for annotation: 
-   - Go to your ontology browser of choice, search for the term, either by label or ID
-   - See which other ontologies use the to be obsolete term
-   - Notify affected groups (usually by adding an issue in their tracker)
+    - Go to your ontology browser of choice, search for the term, either by label or ID
+    - See which other ontologies use the to be obsolete term
+    - Notify affected groups (usually by adding an issue in their tracker)
 
 2. Check if the term is used elsewhere in the ontology
-   - In Protégé, navigate to the term to be obsolete and go to the 'Usage' tab to see if that ID is used elsewhere.
-   - If the term is a parent to other terms or is used in logical definitions, make sure that another term replaces the obsolete term
+    - In Protégé, navigate to the term to be obsolete and go to the 'Usage' tab to see if that ID is used elsewhere.
+    - If the term is a parent to other terms or is used in logical definitions, make sure that another term replaces the obsolete term
 
 
 ### OBSOLETION PROCESS (Manual)
@@ -43,11 +43,13 @@ Warning: some ontologies give advance notice on terms that will be obsoleted thr
 
 ![](../images/howtoguides/obsolete/fig6.png)
 
-7. Add any additional axioms needed - this is specific to ontologies and you should consult the conventions of the ontology you are working on. 
+7. Add any additional annotations needed - this is specific to ontologies and you should consult the conventions of the ontology you are working on. 
 
-Examples of additional axioms to add: 
-- rdfs:seeAlso - link to github issue
+Examples of additional annotations to add: 
+- IAO:0000233 term tracker item - link to GitHub issue
 - has_obsolence_reason 
+- add ‘OBSOLETE.’ to the term definition: In the 'Description' window, click on the ```o``` on the right-hand side of the definition entry. In the resulting window, in the Literal tab, at the beginning of the definition, type: ```OBSOLETE.``` 
+- if the obsoleted term was not replaced by another term in the ontology, but there are existing terms that might be appropriate for annotation, add those term IDs in the 'consider' tag: In the 'Annotations' window, select ```+``` to add an annotation. In the resulting menu, select ```consider``` and enter the ID of the replacement term.  
 
 ## Obsolete a class (using Protege 'Make entity obsolete' function)
 
@@ -66,5 +68,11 @@ Consult the wiki documentation for suggestions on standard comments:
 1. If the obsoleted term was replaced by another term in the ontology: In the 'Annotations' window, select ```+``` to add an annotation. In the resulting menu, select ```term replaced by``` and enter the ID of the replacement term.  
  
 1. If the obsoleted term was not replaced by another term in the ontology, but there are existing terms that might be appropriate for annotation, add those term IDs in the 'consider' tag: In the 'Annotations' window, select ```+``` to add an annotation. In the resulting menu, select ```consider``` and enter the ID of the replacement term. 
+
+1. Add any additional annotations needed - this is specific to ontologies and you should consult the conventions of the ontology you are working on. 
+
+Examples of additional annotations to add: 
+- IAO:0000233 term tracker item - link to GitHub issue
+- has_obsolence_reason 
 
 See [Daily Workflow](daily-curator-workflow.md) section for commit, push and merge instructions. 
