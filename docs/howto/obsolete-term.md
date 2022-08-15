@@ -39,9 +39,9 @@ Warning: some ontologies give advance notice on terms that will be obsoleted thr
 
 ![](../images/howtoguides/obsolete/fig5.png)
 
-6. Your obsolete term should now be stripped of its logical axioms and should look like the figure below. 
+6. Your obsolete term should now be stripped of its logical axioms and should look similar to the figure below. 
 
-![](../images/howtoguides/obsolete/fig6.png)
+<img width="1154" alt="image" src="https://user-images.githubusercontent.com/6722114/184711682-c9dfe4d9-f1b6-42fc-b301-07edb00328da.png">
 
 7. Add any additional annotations needed - this is specific to ontologies and you should consult the conventions of the ontology you are working on. 
 
