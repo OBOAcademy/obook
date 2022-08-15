@@ -49,6 +49,8 @@ See [Daily Workflow](daily-curator-workflow.md) section for commit, push and mer
 
 ## Merge using owltools
 
+To use owltools will need to have Docker installed and running (see instructions [here](../howto/setup-docker.md)).
+
 This is the workflow that is used in [Mondo](https://mondo.readthedocs.io/en/latest/editors-guide/merging-and-obsoleting/).
 
 1. Create a branch and name it issue-### (for example issue-2864)
