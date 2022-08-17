@@ -1,26 +1,28 @@
 **NOTE** This documentation is incomplete, for now you may be better consulting the [GO Editor Docs](http://wiki.geneontology.org/index.php/Ontology_Editing_Guide)
 
+For instructions on obsoleting terms (without merging/replacing with a new term, see [obsoletion how to guide.](obsolete-term.md))
+
 # Merging Ontology Terms
 
 See [Daily Workflow](daily-curator-workflow.md) for creating branches and basic Protégé instructions. 
 
-**Note** Before performing a merge, make sure that you know all of the consequences that the merge will cause. In particular, be sure to look at child terms and any other terms that refer to the ‘deprecated’ term. In many cases a simple merge of two terms is not sufficient because it will result in equivalent classes for child terms. For example if deprecated term X is going to be merged into target term Y and ‘regulation of X’ and ‘regulation of Y’ terms exist, then you will need to merge the regulation terms in addition to the primary terms. You will also need to edit any terms that refer to the deprecated term to be sure that the names and definitions are consistent.
+**Note** Before performing a merge, make sure that you know all of the consequences that the merge will cause. In particular, be sure to look at child terms and any other terms that refer to the ‘obsoleted’ term. In many cases a simple merge of two terms is not sufficient because it will result in equivalent classes for child terms. For example if obsoleted term X is going to be merged into target term Y and ‘regulation of X’ and ‘regulation of Y’ terms exist, then you will need to merge the regulation terms in addition to the primary terms. You will also need to edit any terms that refer to the obsoleted term to be sure that the names and definitions are consistent.
 
 ## Manual Workflow
 
-1.	**Find the ID of the term in which the deprecated term will be merged** 
+1.	**Find the ID of the term in which the obsoleted term will be merged** 
     - Navigate to 'winning' term using the Search box. **Copy the ID of the winning term somewhere.**  
     
- 2. **Duplicate annotations from the deprecated terms**
-    - Navigate to the term to be deprecated.  
+ 2. **Duplicate annotations from the obsoleted terms**
+    - Navigate to the term to be obsoleted.  
     - Right click on it and select ```Duplicate class``` then OK in the pop up window. This should create a class with the exact same name. 
     - On the duplicated class (you can see this by (CL:XXXX) within your range added), right click and select ```Change IRI (Rename)```
     - Copy the ID of the winning term (obtained in Step 1).
     - Be sure to use the underscore ```_``` in the identifier instead of the colon ```:```, for example: ```GO_1234567```. Make sure that the 'change all entities with this URI' box is checked.  
     - Navigate to the winning term IRI, all annotations should be merged.
 
-3. **Change deprecated term label to a synonym**
-    - In the annotations box of the winning term there are now two terms with labels 'rdfs:label'. Click the ```o``` to change the label of the  deprecated term.     
+3. **Change obsoleted term label to a synonym**
+    - In the annotations box of the winning term there are now two terms with labels 'rdfs:label'. Click the ```o``` to change the label of the  obsoleted term.     
     - In the resulting pop-up window, select the appropriate synonym label from the list on the left:
       1.	```has_broad_synonym```
       2.	```has_exact_synonym```
@@ -28,13 +30,13 @@ See [Daily Workflow](daily-curator-workflow.md) for creating branches and basic 
       4.	```has_related_synonym``` (if unsure, this is the safest choice)
 
 4.  **Remove duplicated or inappropriate annotations**
-    - Check the definition, if there are multiple entries, remove the deprecated one by clicking on the ```x``` on the right.
+    - Check the definition, if there are multiple entries, remove the obsoleted one by clicking on the ```x``` on the right.
     - Check the subclasses and remove inappropriate/duplciated ones by clicking on the ```x``` on the right.
     - Check list of synonyms and remove inappropriate/duplciated ones by clicking on the ```x``` on the right. 
     - Note down the created_by and created_date (there can only be one value per term for each of these fields; this will be useful if you need to pick one after the merge is done).
 
 5. **Obsolete old term**
-    - Deprecate/obsolete the old term by following instructions found in [Obsoleting an Existing Ontology Term] (https://ontology-development-kit.readthedocs.io/en/latest/ObsoleteTerm.html).
+    - Oobsolete the old term by following instructions found in [Obsoleting an Existing Ontology Term] (https://ontology-development-kit.readthedocs.io/en/latest/ObsoleteTerm.html).
     - Ensure that you add a ```rdfs:comment``` that states that term was duplicated and to refer to the new new.
     - Ensure that you add a ```term replaced by``` annotations as per the instructions and add the winning merged term.
    
@@ -48,6 +50,8 @@ See [Daily Workflow](daily-curator-workflow.md) for creating branches and basic 
 See [Daily Workflow](daily-curator-workflow.md) section for commit, push and merge instructions. 
 
 ## Merge using owltools
+
+To use owltools will need to have Docker installed and running (see instructions [here](../howto/setup-docker.md)).
 
 This is the workflow that is used in [Mondo](https://mondo.readthedocs.io/en/latest/editors-guide/merging-and-obsoleting/).
 
