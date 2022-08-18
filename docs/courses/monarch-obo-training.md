@@ -23,7 +23,7 @@ The goal of this course is to provide ongoing training for the OBO community. As
 
 | Date | Lesson | Notes | Recordings |
 | --- | --- | --- | --- |
-| 2022/09/06 | [Pull Requests: Part 2](../tutorial/pull-requests.md) | | |
+| 2022/09/06 | [Pull Requests: Part 2](../tutorial/pull-requests.md) |  | |
 | 2022/07/26 | [Pull Requests: Part 1](../tutorial/pull-requests.md) | | |
 | 2022/07/12 | [Basic introduction to the CLI: Part 2](../tutorial/intro-cli-2.md) | Due to intermitent connection issues, the first few minutes of this recording are not included. Refer to the Tutorial link for the initial directions. | [Here](https://www.youtube.com/watch?v=OCoN4TE8Vqc)
 | 2022/06/28 | [Basic introduction to the CLI: Part 1](../tutorial/intro-cli-1.md) | | [Here](https://www.youtube.com/watch?v=22VAjt7JG3o)
@@ -52,6 +52,14 @@ The goal of this course is to provide ongoing training for the OBO community. As
 | 2021/08/25 | [Ontology Release Management with the ODK](../tutorial/managing-ontology-releases-odk.md) | | [Here](https://www.youtube.com/watch?v=KO61I4apFcU) |
 | 2021/08/24 | [Contributing to OBO ontologies 2](../lesson/contributing-to-obo-ontologies.md) | | [Here](https://www.youtube.com/watch?v=kAw4N2tYyco) |
 | 2021/08/17 | [Contributing to OBO ontologies](../lesson/contributing-to-obo-ontologies.md) | |
+
+## Upcoming courses
+| Date | Lesson  
+| --- | --- 
+| 2022/09/20 | How to be an open science ontologist
+| 2022/10/04 | OBO Academy hackathon (work on open tickets together)
+| 2022/10/18 | Fundamentals of matching (Introduction) 
+| 2022/11/01 | Fundamentals of matching (Advanced) 
 
 ## Notes
 Most of materials used by this course were developed by James Overton, Becky Jackson, Nicole Vasilevsky and Nico Matentzoglu as part of a project with the Critical Path Institute (see [here](../index.md)). The materials are improved as part of an internal training program (onboarding and CPD) for the Phenomics First project (NIH / NHGRI #1RM1HG010860-01).
