@@ -24,7 +24,7 @@ The goal of this course is to provide ongoing training for the OBO community. As
 | Date | Lesson | Notes | Recordings |
 | --- | --- | --- | --- |
 | 2022/09/06 | [Pull Requests: Part 2](../tutorial/pull-requests.md) | | |
-| 2022/07/26 | [Pull Requests: Part 1](../tutorial/pull-requests.md) | | |
+| 2022/07/26 | [Pull Requests: Part 1](../tutorial/pull-requests.md) | | [Here](https://www.youtube.com/watch?v=zg6B9KFfnac) |
 | 2022/07/12 | [Basic introduction to the CLI: Part 2](../tutorial/intro-cli-2.md) | Due to intermitent connection issues, the first few minutes of this recording are not included. Refer to the Tutorial link for the initial directions. | [Here](https://www.youtube.com/watch?v=OCoN4TE8Vqc)
 | 2022/06/28 | [Basic introduction to the CLI: Part 1](../tutorial/intro-cli-1.md) | | [Here](https://www.youtube.com/watch?v=22VAjt7JG3o)
 | 2022/06/14 | [Application/project ontologies](../tutorial/project-ontology-development.md) | |  [Here](https://www.youtube.com/watch?v=zO_ia2SHsLk)
