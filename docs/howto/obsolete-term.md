@@ -4,6 +4,8 @@ See [Daily Workflow](daily-curator-workflow.md) for creating branches and basic 
 
 Warning: Every ontology has their procedures on how they obsolete terms (eg notice periods, notification emails, to_be_obsolete tags, etc.), this how-to guide only serves as a guide on how obsolete a term directly on protege. 
 
+For instructions on how to **merge** terms (i.e., replace a term with another term in the ontology), see [instructions here](merge-terms.md). 
+
 ### PRE OBSOLETION PROCESS (or basic obsoletion etiquette)
 1. Check if the term (or any of its children) is being used for annotation: 
     - Go to your ontology browser of choice, search for the term, either by label or ID

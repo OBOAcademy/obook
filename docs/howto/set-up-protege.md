@@ -15,22 +15,28 @@ As of July 2022, OBO ontology editors are using `Protege version 5.5.0`
 
 ## Increase memory in Protege
 
-1. Protege needs at least 4G of RAM to cope with Mondo, ideally use 12G or 16G if your machine can handle it.
-1. If running from Protege.app on a mac, open the /Applications/Protege-5.5.0/Protégé.app/Contents/info.plist file
+Protege needs at least 4G of RAM to cope with Mondo, ideally use 12G or 16G if your machine can handle it.
+
+### Mac Instructions
+
+1. If running from Protege.app on a Mac, open the /Applications/Protege-5.5.0/Protégé.app/Contents/info.plist file
 1. Below the line: <string>-Xss16M</string>
 1. Insert another line: <string>-Xmx12G</string>
-1. Note - if you have issues opening Protege, then reduce the memory, try 10G (or lower) instead.
+
+### PC Instructions
+_adapted from [Memory Management with Protégé](https://www.michaeldebellis.com/post/memory-management-with-prot%C3%A9g%C3%A9) by Michael DeBellis_
+
+1. Navigate to folder where Protege is installed (likely c:/programfiles/protege or open explorer and search protege.exe and find the location of file)
+1. Open Protege.l4j.ini. This file is what Protege looks at when it starts up to determine how much memory Java can allocate. If you edit that file in Notepad or some other lightweight text processor it should currently look like this: -Xms200M -Xmx500M -Xss16M
+1. Xmx is the one you want to edit (it is recommended that you make a copy of the original file first). That specifies the maximum amount of memory Protege can use. Xms is the initial memory that will be allocated and Xss defines the increments used when allocating more memory. 
+1. Change -Xmx500M to Xmx12G
+1. Save and reopen Protege.
+
+### Note on increasing memory 
+If you have issues opening Protege, then reduce the memory, try 10G (or lower) instead.
 
 ## Add ELK reasoner
 See [instructions here](https://oboacademy.github.io/obook/howto/installing-elk-in-protege/). 
-
-## Fix memory settings
-- Protege needs at least 4G of RAM to cope with Mondo, ideally use 12G or 16G if your machine can handle it.
-- If running from Protege.app on a mac, open the /Applications/Protege-5.5.0/Protégé.app/Contents/info.plist file
-  - Below the line: `<string>-Xss16M</string>`
-  - Insert another line: `<string>-Xmx12G</string>`
-
-_Note - if you have issues opening Protege, then reduce the memory, try 10G (or lower) instead._
 
 ## Instructions for new Protege users
 
