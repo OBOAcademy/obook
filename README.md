@@ -9,7 +9,6 @@ The OBOOK is the main resource for OBOAcademy training materials for Semantic OB
 
 ### Installing dependencies
 
-If you want to install the dependencies on your python environment
 ```bash
 # Create a virtual environment in the project folder
 python -m venv .env
