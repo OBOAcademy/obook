@@ -13,7 +13,7 @@ The goal of this course is to provide ongoing training for the OBO community. As
 
 ## We (Tutors)
 - [Nicole Vasilevsky](https://orcid.org/0000-0001-5208-3432), University of Colorado Anschutz Medical Campus
-- [Nico Matentzoglu](https://orcid.org/0000-0002-7356-1779), semanticly Ltd
+- [Nico Matentzoglu](https://orcid.org/0000-0002-7356-1779), Semanticly Ltd
 - [Sabrina Toro](https://tislab.org/members/sabrina-toro.html), University of Colorado Anschutz Medical Campus
 - Prepare the materials for each lesson and provide schedules
 - Build new training materials where needed
@@ -56,7 +56,7 @@ The goal of this course is to provide ongoing training for the OBO community. As
 ## Upcoming courses
 | Date | Lesson  
 | --- | --- 
-| 2022/09/20 | How to be an open science ontologist
+| 2022/09/20 | [How to be an open science ontologist](../howto/team-open-science-mindset.md)
 | 2022/10/04 | OBO Academy hackathon (work on open tickets together)
 | 2022/10/18 | Fundamentals of matching (Introduction) 
 | 2022/11/01 | Fundamentals of matching (Advanced) 
