@@ -324,7 +324,7 @@ Unified Medical Language System | Broad coverage
 #### Parkinson Disease ontology (PDO)  
 **Description:**  A comprehensive semantic framework with a subclass-based taxonomic hierarchy, covering the whole breadth of the Parkinson disease knowledge domain from major biomedical concepts to different views on disease features held by molecular biologists, clinicians, and drug developers.    
 **Disease area:**  Parkinson disease  
-**Use Cases:** This resource has been created for use in the IMI-funded [AETIONOMY project](www.aetionomy.org). Last release was in 2015, may be inactive.
+**Use Cases:** This resource has been created for use in the IMI-funded [AETIONOMY project](https://www.aetionomy.org). Last release was in 2015, may be inactive.
 **Website:**  https://bioportal.bioontology.org/ontologies/PDON   
 **Open:** Yes  
 

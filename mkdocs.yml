@@ -104,6 +104,7 @@ nav:
           - Creating an GitHub Pull Request: howto/github-create-pull-request.md
           - Change a pull request: howto/change-files-pull-request.md
           - Fixing conflicts: howto/fixing-conflicts.md
+          - Github actions to automate tasks: howto/github-actions.md
       - Quality control:
           - Deploy a custom OBO-Dashboard: howto/deploy-custom-obo-dashboard.md
       - Command line:
