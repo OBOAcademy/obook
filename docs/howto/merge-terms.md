@@ -36,7 +36,7 @@ See [Daily Workflow](daily-curator-workflow.md) for creating branches and basic 
     - Note down the created_by and created_date (there can only be one value per term for each of these fields; this will be useful if you need to pick one after the merge is done).
 
 5. **Obsolete old term**
-    - Oobsolete the old term by following instructions found in [Obsoleting an Existing Ontology Term] (https://ontology-development-kit.readthedocs.io/en/latest/ObsoleteTerm.html).
+    - Oobsolete the old term by following instructions found in [obsoletion how to guide.](obsolete-term.md).
     - Ensure that you add a ```rdfs:comment``` that states that term was duplicated and to refer to the new new.
     - Ensure that you add a ```term replaced by``` annotations as per the instructions and add the winning merged term.
    
