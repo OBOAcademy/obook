@@ -54,12 +54,20 @@ The goal of this course is to provide ongoing training for the OBO community. As
 | 2021/08/17 | [Contributing to OBO ontologies](../lesson/contributing-to-obo-ontologies.md) | |
 
 ## Upcoming courses
+
+_Note: this is tentative and subject to change_
+
 | Date | Lesson  
 | --- | --- 
 | 2022/09/20 | [How to be an open science ontologist](../howto/team-open-science-mindset.md)
-| 2022/10/04 | OBO Academy hackathon (work on open tickets together)
-| 2022/10/18 | Fundamentals of matching (Introduction) 
-| 2022/11/01 | Fundamentals of matching (Advanced) 
+| 2022/10/04 | _No meeting_ - ISB virtual conference: [register here](https://docs.google.com/forms/d/e/1FAIpQLSeDhec3KJ2JaJyh-OYcEpBMrSEFYIBzL4N8k57RPv09HqnnQg/viewform)
+| 2022/10/18 | OBO Academy hackathon (work on open tickets together)
+| 2022/11/01 | Fundamentals of matching (Introduction) 
+| 2022/11/15 | Fundamentals of matching (Advanced) 
+| 2022/11/29 | [Contributing to OBO ontologies](../lesson/contributing-to-obo-ontologies.md) - Part 1 
+| 2022/12/13 | [Contributing to OBO ontologies](../lesson/contributing-to-obo-ontologies.md) - Part 2 
+| 2022/12/27 | _No meeting_: Celebrate the holidays
+| 2023/01/07 | Phenio / semantic similarity
 
 ## Notes
 Most of materials used by this course were developed by James Overton, Becky Jackson, Nicole Vasilevsky and Nico Matentzoglu as part of a project with the Critical Path Institute (see [here](../index.md)). The materials are improved as part of an internal training program (onboarding and CPD) for the Phenomics First project (NIH / NHGRI #1RM1HG010860-01).
