@@ -40,7 +40,7 @@ For example, the annotation property 'synonym_type_property' (http://www.geneont
         - e.g. 'owl:deprecated' (http://www.w3.org/2002/07/owl#deprecated)
 - Entity IRI :  
     - Classes or individuals: e.g. 'has curation status' (http://purl.obolibrary.org/obo/IAO_0000114)
-    - Arbitray URIs, e.g. links to website with the 'seeAlso' (http://www.w3.org/2000/01/rdf-schema#seeAlso) property
+    - Arbitray URIs, e.g. links to website with the 'term tracker item' (type xsd:anyURI) (http://purl.obolibrary.org/obo/IAO_0000233) property
     - Or even other annotation properties `*`  
         - e.g. 'has_synonym_type' (http://www.geneontology.org/formats/oboInOwl#hasSynonymType)      
         - e.g. 'in_subset' (http://purl.obolibrary.org/obo/IAO_0000112)
