@@ -49,7 +49,7 @@ Warning: some ontologies give advance notice on terms that will be obsoleted thr
 
 Examples of additional annotations to add: 
 
-- IAO:0000233 term tracker item - link to GitHub issue  
+- IAO:0000233 term tracker item (type xsd:anyURI) - link to GitHub issue  
 
 - has_obsolence_reason   
 
@@ -78,7 +78,7 @@ Consult the wiki documentation for suggestions on standard comments:
 1. Add any additional annotations needed - this is specific to ontologies and you should consult the conventions of the ontology you are working on. 
 
 Examples of additional annotations to add: 
-- IAO:0000233 term tracker item - link to GitHub issue
+- IAO:0000233 term tracker item (type xsd:anyURI) - link to GitHub issue
 - has_obsolence_reason 
 
 See [Daily Workflow](daily-curator-workflow.md) section for commit, push and merge instructions. 
