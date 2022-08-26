@@ -7,8 +7,8 @@ Participants will need to have access to the following resources and tools prior
 - **Protege** - Install Protege 5.5, download it [here](https://protege.stanford.edu/)   
 
 ## Preparation (_optional_)
-- Review tutorial on [Contributing to Ontologies](contributing-to-obo-ontologies.md)
-- See ['How to' guide on Pull Requests](howto/github-create-pull-request.md)
+- Review tutorial on [Contributing to Ontologies](../lesson/contributing-to-obo-ontologies.md)
+- See ['How to' guide on Pull Requests](../howto/github-create-pull-request.md)
 
 ## What is delivered as part of the course
 
@@ -57,7 +57,7 @@ When committing a pull request, you must include a title and a description (more
 - Explain **why** this PR exists
 - Make it clear how it does what it sets out to do. E.g., Does it edit the ontology-edit.owl file? Does it edit another file(s)?
 - What was your motivation for the chosen solution?
-- Use screenshots to demonstrate what has changed. See [How to guide on creating screenshots](../howto/screendshot.md)
+- Use screenshots to demonstrate what has changed. See [How to guide on creating screenshots](../howto/screenshot.md)
 
 _Example_: 
 
