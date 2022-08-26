@@ -73,7 +73,7 @@ If to merge MONDO:0023052 ectrodactyly polydactyly with MONDO:0009156 ectrodacty
 1. Check the output in GitHub desktop
 1. Open a new version of your ontology edit file in Protege
 1. Search for the term that was obsoleted
-1. Add SeeAlso with a link to the GitHub issue that requested the obsoletion.
+1. Add 'term tracker item' (type xsd:anyURI) with a link to the GitHub issue that requested the obsoletion.
 1. Add an obsoletion reason: use the annotation property 'has obsolescence reason' and write 'terms merged' in the literal field.
 1. Search for the 'term replaced by' term
 1. Delete the old ID
