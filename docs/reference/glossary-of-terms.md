@@ -5,13 +5,16 @@ This document is a list of terms that you might encounter in the ontology world.
 Acknowledgement: Many terms are taken directly from [OAK documentation](https://incatools.github.io/ontology-access-kit/glossary.html) with the permission of Chris Mungall.
 
 #### Ontology
-A flexible concept loosely encompassing any collection of [Ontology elements](#Ontology-element) and statements or relationships connecting them
+A flexible concept loosely encompassing any collection of [Ontology elements](#Ontology-element) and statements or relationships connecting them.
 
 #### Knowledge Graph
+A network of real-world entities—i.e. objects, events, situations, or concepts—and illustrates the relationship between them. Knowledge graphs (in the ontologies world) are thought of as real data built using an ontology as a framework.
 
 #### Controlled Vocabulary
+A standardized and organized arrangements of words and phrases and provide a consistent way to describe data. A controlled vocabulary may have no meaning specified (just a set of terms people agree on), or may also have detailed definitions. Ontologies can be seen as a controlled vocabulary expressed in an ontological language which includes relations. 
 
 #### Data Model
+
 
 #### Ontology element
 A discrete part of an [Ontology](#Ontology), with a unique persistent identifier. The most important elements are [Terms](#Term) but other elements can include various metadata artefacts like [Annotation Properties](#Annotation-Property) or [Subsets](#Subset)
@@ -135,12 +138,11 @@ See [predicate](#predicate)
 #### Predicate
 An [Ontology elements](#Ontology-element) that represents the type of a [Relationship](#Relationship).
 Typically corresponds to an [ObjectProperty](#ObjectProperty) in [OWL](#OWL), but this is not always true;
-in particular, the [is-a](#is-a) relationship type is a builtin construct `SubClassOf` in OWL
+in particular, the is-a relationship type is a builtin construct `SubClassOf` in OWL
 Examples:
  * is-a
  * part-of (BFO:0000050)
 
-#### is-a
 
 #### Subset
 An [Ontology elements](#Ontology-element) that represents a named collection of elements, typically grouped for some purpose
@@ -154,12 +156,13 @@ An [Ontology Repository](#Ontology-Repository) that is a comprehensive collectio
 #### Ontology Repository 
 
 #### OLS
-Ontology Lookup Service. An [Ontology Repository](#Ontology-Repository) that is a curated collection of multiple biologically relevant ontologies, many from [OBO](#OBO).
-OLS exposes an [API](#API) endpoint, that is utilized by the OAK OLS [Implementation](#Implementation)
+Ontology Lookup Service. An [Ontology Repository](#Ontology-Repository) that is a curated collection of multiple biologically relevant ontologies, many from [OBO](#OBO). OLS can be accessed with this [link](https://www.ebi.ac.uk/ols/index)
 
 #### Endpoint
 
+
 #### API
+Application Programming Interface. An intermediary that allows two or more computer programs to communicate with each other. In ontologies, this usually means an [Endpoint](#Endpoint) in which the ontology can be programmatically accessed.
 
 #### OBO
 
@@ -168,8 +171,10 @@ A [Triplestore](#Triplestore) and a [Ontology Repository](#Ontology-Repository) 
 Accessible via AK Ubergraph [Implementation](#Implementation)
 
 #### Triplestore
+A purpose-built database for the storage and retrieval of triples through semantic queries. A triple is a data entity composed of subject–predicate–object, like "Bob is 35" or "Bob knows Fred".
 
 #### SPARQL
+The standard query language and protocol for Linked Open Data on the web or for RDF [triplestores](#Triplestore) - used to query ontologies.
 
 #### Semantic SQL
 Semantic SQL is a proposed standardized schema for representing any RDF/OWL ontology, plus a set of tools for building a database conforming to this schema from RDF/OWL files. See [Semantic-SQL](https://github.com/INCATools/semantic-sql)
