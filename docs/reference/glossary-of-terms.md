@@ -14,7 +14,7 @@ A network of real-world entities—i.e. objects, events, situations, or concepts
 A standardized and organized arrangements of words and phrases and provide a consistent way to describe data. A controlled vocabulary may have no meaning specified (just a set of terms people agree on), or may also have detailed definitions. Ontologies can be seen as a controlled vocabulary expressed in an ontological language which includes relations. 
 
 #### Data Model
-
+A representation of the structure and integrity of the data elements of the, in principle "single", specific enterprise application(s) by which it will be used.
 
 #### Ontology element
 A discrete part of an [Ontology](#Ontology), with a unique persistent identifier. The most important elements are [Terms](#Term) but other elements can include various metadata artefacts like [Annotation Properties](#Annotation-Property) or [Subsets](#Subset)
@@ -56,24 +56,30 @@ Simple Standard for Sharing Ontological Mappings.
 Formally a graph is a data structure consisting of [Nodes](#Nodes) and [Edges](#Edge). There are different forms of graphs, but for the purposes of OAK, an ontology graph has all [Terms](#Term) as nodes, and relationships connecting terms (is-a, part-of) as edges. Note the concept of an ontology graph and an [RDF](#RDF) graph do not necessarily fully align - RDF graphs of OWL ontologies employ numerous blank nodes that obscure the ontology structure.
 
 #### Nodes
+[Terms](#Term) represented in a [graph](#Graph)
 
 #### Edge
+[ObjectProperty](#ObjectProperty) (or relations) represented in a [graph](#Graph)
 
 #### Triple
+A set of three entities that codifies a statement about semantic data in the form of [Subject](#Subject)-[predicate](#predicate)-[Object](#Object) expressions (e.g., "Bob is 35", or "Bob knows John").
 
 #### OWL
 An ontology language that uses constructs from [Description Logic](#Description-Logic). OWL is not itself an ontology format, it can be serialized through different formats such as [Functional Syntax](#Functional-Syntax), and it can be mapped to :[RDF](#RDF) and serialized via an RDF format.
 
 #### Description Logic
+Description Logic (DL) are a family of formal knowledge representation languages. It provides a logical formalism for ontologies and is what [OWL](#OWL) is based on. DL querying can be used to query ontologies in Protege.
 
 #### Functional Syntax
 
 #### RDF
-A datamodel consisting of simple [Subject](#Subject) [predicate](#predicate) [Object](#Object) [Triples](#Triple) organized into an RDF [Graph](#Graph)
+A datamodel consisting of simple [Subject](#Subject) [predicate](#predicate) [Object](#Object) [Triples](#Triple) organized into an RDF [Graph](#Graph).
 
 #### Subject
+The "left" side of a [Triple](#Triple).
 
 #### Object
+The "right" side of a [Triple](#Triple).
 
 #### OBO Format
 A serialization format for ontologies designed for easy viewing, direct editing, and readable diffs. It is popular in bioinformatics, but not widely used or known outside the genomics sphere. OBO is mapped to OWL, but only expresses a subset, and provides some OWL abstractions in a more easy to understand fashion.
@@ -191,3 +197,9 @@ A measure of how informative an ontology concept is; broader concepts are less i
 #### Anonymous Ancestor
 
 #### Materialised
+
+#### Application Ontology
+Usually refers to a [Project Ontology](#Project Ontology).
+
+#### Project Ontology
+An ontology that is specific to a project and does not necessarily have interoperability with other ontologies in mind. 
