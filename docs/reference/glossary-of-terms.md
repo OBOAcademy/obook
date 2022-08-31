@@ -80,7 +80,7 @@ A measures of the similarity between two sets of data to see which members are s
 Knowledge Graph Change Language (KGCL) is a [data model](#Data model) for communicating desired changes to an ontology. It can also be used to communicate differences between two ontologies. See [KGCL docs](https://github.com/INCATools/kgcl).
 
 #### Knowledge Graph
-A network of real-world entities (i.e., objects, events, situations, and concepts) that illustrates the relationships between them. Knowledge graphs (in the ontologies world) are thought of as real data built using an ontology as a framework.
+A network of real-world entities (i.e., objects, events, situations, and concepts) that illustrates the relationships between them. Knowledge graphs (in relation to ontologies) are thought of as real data built using an ontology as a framework.
 
 #### Label
 Usually refers to a human-readable label corresponding to the `rdfs:label` [predicate](#predicate). Labels are typically unique per ontology. In OBO Format and in the bio-ontology literature, labels are sometimes called [Names](#Name). Sometimes in the machine learning literature, and in databases such as Neo4J, "label" actually refers to a [Category](#Category).
