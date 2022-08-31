@@ -2,7 +2,7 @@
 
 This document is a list of terms that you might encounter in the ontology world. It is not an exhaustive list and will continue grow and evolve. Please do create a ticket if there is a term you find missing here, or a term that you encounter that you do not understand, and we will do our best to add them in here. This list is not arranged in any particular order, please use the search function to find needed term.
 
-Acknowledgement: Many terms are taken directly from [OAK documentation](https://incatools.github.io/ontology-access-kit/glossary.html) with the permission of Chris Mungall.
+Acknowledgement: Many terms are taken directly from [OAK documentation](https://incatools.github.io/ontology-access-kit/glossary.html) with the permission of Chris Mungall. Many descriptions are also taken from https://www.w3.org/TR/owl2-syntax/
 
 #### Ontology
 A flexible concept loosely encompassing any collection of [Ontology elements](#Ontology-element) and statements or relationships connecting them.
@@ -71,6 +71,7 @@ An ontology language that uses constructs from [Description Logic](#Description-
 Description Logic (DL) are a family of formal knowledge representation languages. It provides a logical formalism for ontologies and is what [OWL](#OWL) is based on. DL querying can be used to query ontologies in Protege.
 
 #### Functional Syntax
+The syntax in which the ontology is written - "a functional-style syntax ontology document is a sequence of Unicode characters accessible via some IRI by means of the standard protocols such that its text matches the ontologyDocument production of the grammar defined in this specification document, and it can be converted into an ontology by means of the canonical parsing process" From https://www.w3.org/TR/owl2-syntax/
 
 #### RDF
 A datamodel consisting of simple [Subject](#Subject) [predicate](#predicate) [Object](#Object) [Triples](#Triple) organized into an RDF [Graph](#Graph).
@@ -91,6 +92,7 @@ Knowledge Graph Change Language (KGCL) is a [Datamodel](#Datamodel) for communic
 In the context of [OWL](#OWL), the term [Annotation](#Annotation) means a piece of metadata that does not have a strict logical interpretation. Annotations can be on entities, for example, [Label](#Label) annotations, or annotations can be on [Axioms](#Axiom).
 
 #### Axiom
+Axioms are statements that are asserted to be true in the domain being described. For example, using a subclass axiom, one can state that the class a:Student is a subclass of the class a:Person.
 
 #### Pronto
 An [Ontology Library](#Ontology-Library) for parsing obo and owl files
@@ -108,11 +110,13 @@ A programmatic abstraction that allows us to focus on *what* something should do
 #### Datamodel
 
 #### Individual
-
-#### Named Individual
 An [Ontology elements](#Ontology-element) that represents an instance of a class. For example, the instance "John" or "John's heart". Note that instances are not commonly represented in ontologies.
 
+#### Named Individual
+An [Individual](#Individual) that is given an explicit name that can be used in any ontology to refer to the same object.
+
 #### Anonymous Individual
+If an individual is not expected to be used outside an ontology, one can use an anonymous individual, which is identified by a local node ID rather than a global IRI. Anonymous individuals are analogous to blank nodes in RDF.
 
 #### Property
 An [Ontology elements](#Ontology-element) that represents an attribute or a characteristic of an element.
@@ -140,6 +144,7 @@ See [Relationship](#Relationship)
 A [Relationship](#Relationship) is a type connection between two ontology elements. The first element is called the [subject](#Subject), and the second one the [Object](#Object), with the type of connection being the [Relationship Type](#Relationship-Type). Sometimes Relationships are equated with [Triples](#Triple) in [RDF](#RDF) but this can be confusing, because some relationships map to *multiple* triples when following the OWL RDF serialization. An example is the relationship "finger part-of hand", which in OWL is represented using a [Existential Restriction](#Existential-Restriction) that maps to 4 triples.
 
 #### Existential Restriction
+Existential restrictions describe classes of individuals that participate in at least one relationship along a specified property to individuals that are members of a specified class. In Protégé, the keyword 'some' is used to denote existential restrictions and is interpreted as "there exists", "there is at least one", or "some". See [documentation on classifications](../explanation/intro-to-ontologies/#an-ontology-as-a-classification) for more details.
 
 #### Relationship Type
 See [predicate](#predicate)
@@ -152,7 +157,6 @@ Examples:
  * is-a
  * part-of (BFO:0000050)
 
-
 #### Subset
 An [Ontology elements](#Ontology-element) that represents a named collection of elements, typically grouped for some purpose
 
@@ -163,17 +167,19 @@ An ontology tool that will perform inference over an ontology to yield new *axio
 An [Ontology Repository](#Ontology-Repository) that is a comprehensive collection of multiple biologically relevant ontologies.
 
 #### Ontology Repository 
+A curated collection of ontologies.
 
 #### OLS
 Ontology Lookup Service. An [Ontology Repository](#Ontology-Repository) that is a curated collection of multiple biologically relevant ontologies, many from [OBO](#OBO). OLS can be accessed with this [link](https://www.ebi.ac.uk/ols/index)
 
 #### Endpoint
-
+Where an [API](#API) interfaces with the ontology.
 
 #### API
 Application Programming Interface. An intermediary that allows two or more computer programs to communicate with each other. In ontologies, this usually means an [Endpoint](#Endpoint) in which the ontology can be programmatically accessed.
 
 #### OBO
+Open Biological and Biomedical Ontology. This could refer to the [OBO Foundry](https://obofoundry.org/) (e.g. OBO ontologies = ontologies that follow the standards of the OBO Foundry) or the [Functional Syntax](#Function-Syntax)/file format that some ontologies use.
 
 #### Ubergraph
 A [Triplestore](#Triplestore) and a [Ontology Repository](#Ontology-Repository) that allows for [SPARQL](#SPARQL) querying of integrated [OBO](#OBO) ontologies.
