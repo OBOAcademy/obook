@@ -41,9 +41,6 @@ An [Ontology elements](#Ontology-element) that formally represents something tha
 A CURIE is a compact [URI](#URI). For example, `CL:0000001`.
 
 #### Data Model
-A representation of the structure and integrity of the data elements of the, in principle "single", specific enterprise application(s) by which it will be used.
-
-#### Datamodel
 An abstract model that organizes elements of data and standardizes how they relate to one another and to the properties of real-world entities.
 
 #### DatatypeProperty
@@ -53,10 +50,7 @@ DatatypeProperty relate terms to literal data (e.g., strings, numbers, datetimes
 Description Logic (DL) are a family of formal knowledge representation languages. It provides a logical formalism for ontologies and is what [OWL](#OWL) is based on. DL querying can be used to query ontologies in Protege.
 
 #### Edge
-[ObjectProperty](#ObjectProperty) (or relations) represented in a [graph](#Graph)
-
-#### Edge
-See [Relationship](#Relationship)
+[ObjectProperty](#ObjectProperty) (or relations) represented in a [graph](#Graph). Also see See [Relationship](#Relationship)
 
 #### Endpoint
 Where an [API](#API) interfaces with the ontology.
@@ -79,14 +73,11 @@ A measure of how informative an ontology concept is; broader concepts are less i
 #### Interface
 A programmatic abstraction that allows us to focus on *what* something should do rather than *how* it is done.
 
-#### Iterator
-A programming language construct used frequently in OAK - it allows for passing of results from API calls without fetching everything in advance.
-
 #### Jaccard Similarity
 A measures of the similarity between two sets of data to see which members are shared and distinct.
 
 #### KGCL
-Knowledge Graph Change Language (KGCL) is a [Datamodel](#Datamodel) for communicating desired changes to an ontology. It can also be used to communicate differences between two ontologies. See [KGCL docs](https://github.com/INCATools/kgcl).
+Knowledge Graph Change Language (KGCL) is a [data model](#Data model) for communicating desired changes to an ontology. It can also be used to communicate differences between two ontologies. See [KGCL docs](https://github.com/INCATools/kgcl).
 
 #### Knowledge Graph
 A network of real-world entities (i.e., objects, events, situations, and concepts) that illustrates the relationships between them. Knowledge graphs (in the ontologies world) are thought of as real data built using an ontology as a framework.
@@ -116,7 +107,7 @@ The "right" side of a [Triple](#Triple).
 A simple association between two terms, also see [predicate](#predicate) & [Relationship](#Relationship). 
 
 #### OBO
-Open Biological and Biomedical Ontology. This could refer to the [OBO Foundry](https://obofoundry.org/) (e.g. OBO ontologies = ontologies that follow the standards of the OBO Foundry) or the [Functional Syntax](#Function-Syntax)/file format that some ontologies use.
+Open Biological and Biomedical Ontology. This could refer to the [OBO Foundry](https://obofoundry.org/) (e.g. OBO ontologies = ontologies that follow the standards of the OBO Foundry) or [OBO Format](#OBO-Format)
 
 #### OBO Format
 A serialization format for ontologies designed for easy viewing, direct editing, and readable diffs. It is popular in bioinformatics, but not widely used or known outside the genomics sphere. OBO is mapped to OWL, but only expresses a subset, and provides some OWL abstractions in a more easy to understand fashion.
@@ -185,7 +176,7 @@ Semantic SQL is a proposed standardized schema for representing any RDF/OWL onto
 The standard query language and protocol for Linked Open Data on the web or for RDF [triplestores](#Triplestore) - used to query ontologies.
 
 #### SSSOM
-Simple Standard for Sharing Ontological Mappings. 
+Simple Standard for Sharing Ontological Mappings (https://github.com/mapping-commons/sssom). 
 
 #### Subject
 The "left" side of a [Triple](#Triple).
@@ -200,10 +191,7 @@ A core element in an ontology, typically a [Class](#Class), but sometimes used t
 The process of annotating spans of texts within a text document with references to ontology terms, or the result of this process. This is frequently done automatically. The [Bioportal](#Bioportal) implementation provides text annotation services.
 
 #### Triple
-A set of three entities that codifies a statement about semantic data in the form of [Subject](#Subject)-[predicate](#predicate)-[Object](#Object) expressions (e.g., "Bob is 35", or "Bob knows John").
-
-#### Triple
-See [Relationship](#Relationship)
+A set of three entities that codifies a statement about semantic data in the form of [Subject](#Subject)-[predicate](#predicate)-[Object](#Object) expressions (e.g., "Bob is 35", or "Bob knows John"). Also see See [Relationship](#Relationship).
 
 #### Triplestore
 A purpose-built database for the storage and retrieval of triples through semantic queries. A triple is a data entity composed of subject–predicate–object, like "Bob is 35" or "Bob knows Fred".
