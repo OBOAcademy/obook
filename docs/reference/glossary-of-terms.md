@@ -49,6 +49,9 @@ DatatypeProperty relate terms to literal data (e.g., strings, numbers, datetimes
 #### Description Logic
 Description Logic (DL) are a family of formal knowledge representation languages. It provides a logical formalism for ontologies and is what [OWL](#OWL) is based on. DL querying can be used to query ontologies in Protege.
 
+#### DOSDP
+[Dead Simple Ontology Design Patterns](http://incatools.github.io/dead_simple_owl_design_patterns/). A templating system for ontologies with well-documented patterns and templates.
+
 #### Edge
 [ObjectProperty](#ObjectProperty) (or relations) represented in a [graph](#Graph). Also see See [Relationship](#Relationship)
 
@@ -85,6 +88,9 @@ A network of real-world entities (i.e., objects, events, situations, and concept
 #### Label
 Usually refers to a human-readable label corresponding to the `rdfs:label` [predicate](#predicate). Labels are typically unique per ontology. In OBO Format and in the bio-ontology literature, labels are sometimes called [Names](#Name). Sometimes in the machine learning literature, and in databases such as Neo4J, "label" actually refers to a [Category](#Category).
 
+#### Lutra
+[Lutra](https://ottr.xyz/#Lutra) is the open source reference implementation of the OTTR templating language.
+
 #### Mapping
 See [SSSOM]('SSSOM')
 
@@ -118,6 +124,9 @@ Ontology Lookup Service. An [Ontology Repository](#Ontology-Repository) that is 
 #### Ontology
 A flexible concept loosely encompassing any collection of [Ontology elements](#Ontology-element) and statements or relationships connecting them.
 
+#### ODK
+[Ontology Development Kit](https://github.com/INCATools/ontology-development-kit). A toolkit and docker image for managing ontologies.
+
 #### Ontology element
 A discrete part of an [Ontology](#Ontology), with a unique persistent identifier. The most important elements are [Terms](#Term) but other elements can include various metadata artefacts like [Annotation Properties](#Annotation-Property) or [Subsets](#Subset)
 
@@ -127,11 +136,17 @@ The systems or platform where various types of ontologies are stored from differ
 #### Ontology Repository 
 A curated collection of ontologies.
 
+### OTTR
+[Reasonable Ontology Templates](https://ottr.xyz/). A system for composable ontology templates and documentation.
+
 #### OWL
 An ontology language that uses constructs from [Description Logic](#Description-Logic). OWL is not itself an ontology format, it can be serialized through different formats such as [Functional Syntax](#Functional-Syntax), and it can be mapped to :[RDF](#RDF) and serialized via an RDF format.
 
 #### OWL Annotation
 In the context of [OWL](#OWL), the term [Annotation](#Annotation) means a piece of metadata that does not have a strict logical interpretation. Annotations can be on entities, for example, [Label](#Label) annotations, or annotations can be on [Axioms](#Axiom).
+
+#### OWL API
+A java-based API to interact with OWL ontologies. Full documentation can be found at http://owlcs.github.io/owlapi/apidocs_5/index.html
 
 #### Predicate
 An [Ontology elements](#Ontology-element) that represents the type of a [Relationship](#Relationship).
@@ -154,8 +169,14 @@ In [OWL](#OWL), properties are divided into disjoint categories:
   * [AnnotationProperty](#AnnotationProperty)
   * [DatatypeProperty](#DatatypeProperty)
   
+#### Protege 
+A typical ontology development tool used by ontology developers in the OBO-sphere. Full documentation can be found at https://protege.stanford.edu/
+  
 #### RDF
 A datamodel consisting of simple [Subject](#Subject) [predicate](#predicate) [Object](#Object) [Triples](#Triple) organized into an RDF [Graph](#Graph).
+
+#### rdflib
+A python library to interact with RDF data. Full documentation can be found at https://rdflib.readthedocs.io/en/stable/
 
 #### Reasoner
 An ontology tool that will perform inference over an ontology to yield new *axioms* (e.g. new [Edges](#Edge)) or to determine if an ontology is logically coherent.
@@ -165,6 +186,9 @@ A [Relationship](#Relationship) is a type connection between two ontology elemen
 
 #### Relationship Type
 See [predicate](#predicate)  
+
+### ROBOT
+A toolkit for transforming and interacting with ontologies. Full documentation can be found at http://robot.obolibrary.org/
 
 #### Semantic Similarity
 A means of measuring similarity between either pairs of ontology concepts, or between entities annotated using ontology concepts. There is a wide variety of different methods for calculating semantic similarity, for example [Jaccard Similarity](#Jaccard-Similarity) and [Information Content](#Information-Content) based measures.
