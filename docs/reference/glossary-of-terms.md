@@ -98,6 +98,7 @@ Axioms are statements that are asserted to be true in the domain being described
 An [Ontology Library](#Ontology-Library) for parsing obo and owl files
 
 #### Ontology Library
+The systems or platform where various types of ontologies are stored from different sources and provide the ability to data providers and application developers to share and reuse the ontologies.
 
 #### Iterator
 A programming language construct used frequently in OAK - it allows for passing of results from API calls without fetching everything in advance.
@@ -105,9 +106,8 @@ A programming language construct used frequently in OAK - it allows for passing 
 #### Interface
 A programmatic abstraction that allows us to focus on *what* something should do rather than *how* it is done.
 
-#### Implementation
-
 #### Datamodel
+An abstract model that organizes elements of data and standardizes how they relate to one another and to the properties of real-world entities.
 
 #### Individual
 An [Ontology elements](#Ontology-element) that represents an instance of a class. For example, the instance "John" or "John's heart". Note that instances are not commonly represented in ontologies.
@@ -183,7 +183,6 @@ Open Biological and Biomedical Ontology. This could refer to the [OBO Foundry](h
 
 #### Ubergraph
 A [Triplestore](#Triplestore) and a [Ontology Repository](#Ontology-Repository) that allows for [SPARQL](#SPARQL) querying of integrated [OBO](#OBO) ontologies.
-Accessible via AK Ubergraph [Implementation](#Implementation)
 
 #### Triplestore
 A purpose-built database for the storage and retrieval of triples through semantic queries. A triple is a data entity composed of subject–predicate–object, like "Bob is 35" or "Bob knows Fred".
@@ -198,14 +197,16 @@ Semantic SQL is a proposed standardized schema for representing any RDF/OWL onto
 A means of measuring similarity between either pairs of ontology concepts, or between entities annotated using ontology concepts. There is a wide variety of different methods for calculating semantic similarity, for example [Jaccard Similarity](#Jaccard-Similarity) and [Information Content](#Information-Content) based measures.
 
 #### Jaccard Similarity
-
+A measures of the similarity between two sets of data to see which members are shared and distinct.
 
 #### Information Content
 A measure of how informative an ontology concept is; broader concepts are less informative as they encompass many things, whereas more specific concepts are more unique. This is usually measured as ``-log2(Pr(term))``. The method of calculating the probability varies, depending on which predicates are taken into account (for many ontologies, it makes sense to use part-of as well as is-a), and whether the probability is the probability of observing a descendant term, or of an entity annotated using that term.
 
 #### Anonymous Ancestor
+An accumulation of all of the superclasses from ancestors of a class.
 
 #### Materialised
+The process of calculating the implicit statements in an ontology - making inferred axioms explicit by asserting them.
 
 #### Application Ontology
 Usually refers to a [Project Ontology](#Project Ontology).
