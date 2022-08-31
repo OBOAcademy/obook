@@ -122,10 +122,13 @@ In [OWL](#OWL), properties are divided into disjoint categories:
   * [DatatypeProperty](#DatatypeProperty)
 
 #### ObjectProperty
+A simple association between two terms, also see [predicate](#predicate) & [Relationship](#Relationship). 
 
 #### AnnotationProperty
+Annotation properties are used to place annotations on individuals, class names, property names, and ontology names. They do not affect the logical definition unless they are used as a "shortcut" that a pipeline expands to a logical axiom.
 
 #### DatatypeProperty
+DatatypeProperty relate terms to literal data (e.g., strings, numbers, datetimes, etc.) as opposed to [ObjectProperty](#ObjectProperty) which relate individuals to other terms. 
 
 #### Edge
 See [Relationship](#Relationship)
