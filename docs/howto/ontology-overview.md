@@ -16,19 +16,26 @@ This 'how to' guide provides a template for an Ontology Overview for your ontolo
 - Include a figure with exemplary term (using OBO graph)  
 
 ### Curation and governance workflows
-Emphasize the ontology level curation, ie how to add terms
-Goverance: How do people request terms
-Contribute terms directly (ie ROBOT templates, etc)
-How do we add terms
-ROBOT
-DOSDP
-Manual additions via Protege
-No need for details about QC, ODK unless it is related to curation (ie pipeline that automatically generates mappings, include that)
 
+#### Ontology Curation
+
+Describe the ontology level curation, ie how to add terms. For example, terms are added to the ontology via:
+- Manual additions via Protege
+- ROBOT templates
+- DOSDP templates
+
+#### Governance
+
+- How do people request new terms or changes
+- How do people contribute terms directly (ie ROBOT templates, etc) (if applicable)
+
+**Note:** There is no need for details about QC, ODK unless it is related to curation (ie pipeline that automatically generates mappings, include that)
 
 ### How the ontology used in practice
-include 1-3 actual use cases. Want concrete examples
-eg this group uses the ontology to annotate this data for this purpose
-Eg this group uses the ontology to compute phenotypic similarity for prediction of related diseases
-Eg clingen is mapping their data to Mondo in order to populate a search index to allow for searching of variants implicated in rare diseases
-Use the ontology for NER as a dictionary as a synonym source	
+
+Include 1-3 actual use cases. Please provide concrete examples.
+
+For example:
+1. this group uses the ontology to annotate this data for this purpose
+2. this group uses the ontology to compute phenotypic similarity for prediction of related diseases
+3. The ontology is used for named entity recognition (NER) as a dictionary as a synonym source	
