@@ -44,7 +44,7 @@ A CURIE is a compact [URI](#URI). For example, `CL:0000001`.
 An abstract model that organizes elements of data and standardizes how they relate to one another and to the properties of real-world entities.
 
 #### DatatypeProperty
-DatatypeProperty relate terms to literal data (e.g., strings, numbers, datetimes, etc.) as opposed to [ObjectProperty](#ObjectProperty) which relate individuals to other terms. 
+DatatypeProperty relate [Ontology elements](#Ontology-element) to literal data (e.g., strings, numbers, datetimes, etc.) as opposed to [ObjectProperty](#ObjectProperty) which relate individuals to other terms. Unlike [AnnotationProperty](#AnnotationProperty), DatatypeProperty axioms fall on the logical side of [OWL](#OWL) and are hence useable by reasoners.
 
 #### Description Logic
 Description Logics (DL) are a family of formal knowledge representation languages. It provides a logical formalism for ontologies and is what [OWL](#OWL) is based on. DL querying can be used to query ontologies in Protege.
@@ -53,7 +53,7 @@ Description Logics (DL) are a family of formal knowledge representation language
 [Dead Simple Ontology Design Patterns](http://incatools.github.io/dead_simple_owl_design_patterns/). A templating system for ontologies with well-documented patterns and templates.
 
 #### Edge
-[ObjectProperty](#ObjectProperty) (or relations) represented in a [graph](#Graph). Also see [Relationship](#Relationship)
+A typed, directed link between [Nodes](#Nodes) in a [knowledge graph](#Knowledge Graph). Translations of OWL into Knowledge graphs vary, but typically edges are generated for simple triples (relating two individuals or two classes via an [ObjectProperty](#ObjectProperty) or [AnnotationProperty](#AnnotationProperty)) and simple [existential restrictions](#Existential-Restriction) (A SubClassOf R some B), with the edge type corresponding to the property.
 
 #### Endpoint
 Where an [API](#API) interfaces with the ontology.
