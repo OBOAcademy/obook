@@ -11,13 +11,13 @@ The OBOOK is the main resource for OBOAcademy training materials for Semantic OB
 
 ```bash
 # Create a virtual environment in the project folder
-python -m venv .env
+python -m venv .venv
 
 # Activate the virtual environment
 # in mac/linux
-source .env/bin/activate
+source .venv/bin/activate
 # in Windows
-.\.env\Scripts\activate
+.\.venv\Scripts\activate
 
 # Install dependencies
 pip install mkdocs
@@ -30,9 +30,9 @@ If you haven't, activate the local virtual environment
 
 ```bash
 # in mac/linux
-source .env/bin/activate
+source .venv/bin/activate
 # in Windows
-.\.env\Scripts\activate
+.\.venv\Scripts\activate
 ```
 
 Then run:
