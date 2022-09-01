@@ -5,6 +5,43 @@ The OBOOK is the main resource for OBOAcademy training materials for Semantic OB
 - To get started with learning: https://oboacademy.github.io/obook/getting-started/
 - To contribute: https://oboacademy.github.io/obook/contributing/
 
+## Running the website locally
+
+### Installing dependencies
+
+```bash
+# Create a virtual environment in the project folder
+python -m venv .venv
+
+# Activate the virtual environment
+# in mac/linux
+source .venv/bin/activate
+# in Windows
+.\.venv\Scripts\activate
+
+# Install dependencies
+pip install mkdocs
+pip install mkdocs-material
+```
+
+### Running the site locally
+
+If you haven't, activate the local virtual environment
+
+```bash
+# in mac/linux
+source .venv/bin/activate
+# in Windows
+.\.venv\Scripts\activate
+```
+
+Then run:
+```
+mkdocs serve
+```
+
+Go to http://127.0.0.1:8000/, you should see the site.
+
 ## License
 
 This content is available under the [Creative Commons CC0 Public Domain Dedication](LICENSE).
