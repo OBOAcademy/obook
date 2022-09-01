@@ -36,6 +36,7 @@ Describe the ontology level curation, ie how to add terms. For example, terms ar
 Include 1-3 actual use cases. Please provide concrete examples.
 
 For example:
+
 1. this group uses the ontology to annotate this data for this purpose
 2. this group uses the ontology to compute phenotypic similarity for prediction of related diseases
 3. The ontology is used for named entity recognition (NER) as a dictionary as a synonym source	
