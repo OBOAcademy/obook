@@ -92,7 +92,7 @@ Usually refers to a human-readable text string corresponding to the `rdfs:label`
 [Lutra](https://ottr.xyz/#Lutra) is the open source reference implementation of the [OTTR](#OTTR) templating language.
 
 #### Mapping
-See [SSSOM]('SSSOM')
+A means of linking two resources (e.g. two ontologies, or an ontology and a database) together. Also see [SSSOM]('SSSOM')
 
 #### Materialised
 The process of calculating the implicit statements in an ontology - making inferred axioms explicit by asserting them.
