@@ -53,7 +53,7 @@ Description Logic (DL) are a family of formal knowledge representation languages
 [Dead Simple Ontology Design Patterns](http://incatools.github.io/dead_simple_owl_design_patterns/). A templating system for ontologies with well-documented patterns and templates.
 
 #### Edge
-[ObjectProperty](#ObjectProperty) (or relations) represented in a [graph](#Graph). Also see See [Relationship](#Relationship)
+[ObjectProperty](#ObjectProperty) (or relations) represented in a [graph](#Graph). Also see [Relationship](#Relationship)
 
 #### Endpoint
 Where an [API](#API) interfaces with the ontology.
@@ -86,10 +86,10 @@ Knowledge Graph Change Language (KGCL) is a [data model](#Data model) for commun
 A network of real-world entities (i.e., objects, events, situations, and concepts) that illustrates the relationships between them. Knowledge graphs (in relation to ontologies) are thought of as real data built using an ontology as a framework.
 
 #### Label
-Usually refers to a human-readable label corresponding to the `rdfs:label` [predicate](#predicate). Labels are typically unique per ontology. In OBO Format and in the bio-ontology literature, labels are sometimes called [Names](#Name). Sometimes in the machine learning literature, and in databases such as Neo4J, "label" actually refers to a [Category](#Category).
+Usually refers to a human-readable text string corresponding to the `rdfs:label` [predicate](#predicate). Labels are typically unique per ontology. In OBO Format and in the bio-ontology literature, labels are sometimes called [Names](#Name). Sometimes in the machine learning literature, and in databases such as Neo4J, "label" actually refers to a [Category](#Category).
 
 #### Lutra
-[Lutra](https://ottr.xyz/#Lutra) is the open source reference implementation of the OTTR templating language.
+[Lutra](https://ottr.xyz/#Lutra) is the open source reference implementation of the [OTTR](#OTTR) templating language.
 
 #### Mapping
 See [SSSOM]('SSSOM')
@@ -140,16 +140,16 @@ A curated collection of ontologies.
 [Reasonable Ontology Templates](https://ottr.xyz/). A system for composable ontology templates and documentation.
 
 #### OWL
-An ontology language that uses constructs from [Description Logic](#Description-Logic). OWL is not itself an ontology format, it can be serialized through different formats such as [Functional Syntax](#Functional-Syntax), and it can be mapped to :[RDF](#RDF) and serialized via an RDF format.
+Web Ontology Language. An ontology language that uses constructs from [Description Logic](#Description-Logic). OWL is not itself an ontology format, it can be serialized through different formats such as [Functional Syntax](#Functional-Syntax), and it can be mapped to :[RDF](#RDF) and serialized via an RDF format.
 
 #### OWL Annotation
 In the context of [OWL](#OWL), the term [Annotation](#Annotation) means a piece of metadata that does not have a strict logical interpretation. Annotations can be on entities, for example, [Label](#Label) annotations, or annotations can be on [Axioms](#Axiom).
 
 #### OWL API
-A java-based API to interact with OWL ontologies. Full documentation can be found at http://owlcs.github.io/owlapi/apidocs_5/index.html
+A java-based [API](#API) to interact with OWL ontologies. Full documentation can be found at http://owlcs.github.io/owlapi/apidocs_5/index.html
 
 #### Predicate
-An [Ontology elements](#Ontology-element) that represents the type of a [Relationship](#Relationship).
+An [Ontology element](#Ontology-element) that represents the type of a [Relationship](#Relationship).
 Typically corresponds to an [ObjectProperty](#ObjectProperty) in [OWL](#OWL), but this is not always true;
 in particular, the is-a relationship type is a builtin construct `SubClassOf` in OWL
 Examples:
@@ -215,7 +215,7 @@ A core element in an ontology, typically a [Class](#Class), but sometimes used t
 The process of annotating spans of texts within a text document with references to ontology terms, or the result of this process. This is frequently done automatically. The [Bioportal](#Bioportal) implementation provides text annotation services.
 
 #### Triple
-A set of three entities that codifies a statement about semantic data in the form of [Subject](#Subject)-[predicate](#predicate)-[Object](#Object) expressions (e.g., "Bob is 35", or "Bob knows John"). Also see See [Relationship](#Relationship).
+A set of three entities that codifies a statement about semantic data in the form of [Subject](#Subject)-[predicate](#predicate)-[Object](#Object) expressions (e.g., "Bob is 35", or "Bob knows John"). Also see [Relationship](#Relationship).
 
 #### Triplestore
 A purpose-built database for the storage and retrieval of triples through semantic queries. A triple is a data entity composed of subject–predicate–object, like "Bob is 35" or "Bob knows Fred".
