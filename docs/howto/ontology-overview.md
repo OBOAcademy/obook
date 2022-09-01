@@ -10,6 +10,9 @@ This 'how to' guide provides a template for an Ontology Overview for your ontolo
 - Describe the domain and scope of ontology. 
     - For example, the Mondo ontology covers concepts in the area of diseases across species and integrates disease terminologies from several underlying sources.
 - Include a figure of upper level terms (critical: give a list of all the high level terms that the ontology covers (1-2 levels). Eg Mondo: disease or disorder, disease susceptibility, disease characteristic). 
+
+<img width="212" alt="image" src="https://user-images.githubusercontent.com/6722114/187983205-758a5453-98ba-42cc-8fce-f7f81b37e8f5.png">
+
 - Include a figure with exemplary term (using OBO graph)  
 
 ### Curation and governance workflows
