@@ -8,7 +8,7 @@ Acknowledgement: Many terms are taken directly from [OAK documentation](https://
 This term is frequently ambiguous. It can refer to [Text Annotation](#Text-Annotation), [OWL Annotation](#OWL Annotation), or [Association](#Association).
 
 #### AnnotationProperty
-Annotation properties are used to place annotations on individuals, class names, property names, and ontology names. They do not affect the logical definition unless they are used as a "shortcut" that a pipeline expands to a logical axiom.
+Annotation properties are [OWL](#OWL) [axioms](#Axiom) that are used to place annotations on individuals, class names, property names, and ontology names. They do not affect the logical definition unless they are used as a "shortcut" that a pipeline expands to a logical axiom.
 
 #### Anonymous Ancestor
 An accumulation of all of the superclasses from ancestors of a class.
