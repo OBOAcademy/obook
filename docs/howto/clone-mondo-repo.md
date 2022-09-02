@@ -1,6 +1,10 @@
 Cloning a repo
 --------------------
 
+**Prerequisite**: Install Github Desktop
+Github Desktop can be downloaded [here](https://desktop.github.com/)
+
+
 For the purpose of going through this how-to guide, we will use Mondo as an example. However, all obo onotlogies can be cloned in a similar way.
 
 1.  Open the GitHub repository where the ontology you want to clone lives, in this case, [Mondo GitHub repository](https://github.com/monarch-initiative/mondo)
