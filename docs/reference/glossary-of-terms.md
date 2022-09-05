@@ -212,7 +212,7 @@ The "left" side of a [Triple](#Triple).
 A named collection of elements, typically grouped for some purpose
 
 #### Term
-Usually used to mean [Class](#Class), however sometimes used to refer to wider [OWL entities](#OWL-Entity).
+Usually used to mean [Class](#Class) and [Individuals](#Individual), however sometimes used to refer to wider [OWL entities](#OWL-Entity).
 
 #### Text Annotation
 The process of annotating spans of texts within a text document with references to ontology terms, or the result of this process. This is frequently done automatically. The [Bioportal](#Bioportal) implementation provides text annotation services.
