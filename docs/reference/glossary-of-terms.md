@@ -2,7 +2,7 @@
 
 This document is a list of terms that you might encounter in the ontology world. It is not an exhaustive list and will continue to evolve. Please create a ticket if there is a term you find missing or a term you encounter that you do not understand, and we will do our best to add them. This list is not arranged in any particular order. Please use the search function to find terms.
 
-Acknowledgement: Many terms are taken directly from [OAK documentation](https://incatools.github.io/ontology-access-kit/glossary.html) with the permission of Chris Mungall. Many descriptions are also taken from https://www.w3.org/TR/owl2-syntax/
+Acknowledgement: Many terms are taken directly from [OAK documentation](https://incatools.github.io/ontology-access-kit/glossary.html) with the permission of Chris Mungall. Many descriptions are also taken from https://www.w3.org/TR/owl2-syntax/.
 
 #### Annotation
 This term is frequently ambiguous. It can refer to [Text Annotation](#Text-Annotation), [OWL Annotation](#OWL Annotation), or Association.
@@ -28,14 +28,11 @@ Axioms are statements that are asserted to be true in the domain being described
 #### Bioportal
 An [Ontology Repository](#Ontology-Repository) that is a comprehensive collection of multiple biologically relevant ontologies.
 
-#### Concept
-See [Term](#Term)
-
 #### Controlled Vocabulary
 Standardized and organized arrangements of words and phrases that provide a consistent way to describe data. A controlled vocabulary may or may not include definitions. Ontologies can be seen as a controlled vocabulary expressed in an ontological language which includes relations.
 
 #### Class
-An [OWL entity](#OWL-entity) that formally represents something that can be instantiated. For example, the class "heart"
+An [OWL entity](#OWL-entity) that formally represents something that can be instantiated. For example, the class "heart".
 
 #### CURIE
 A CURIE is a compact [URI](#URI). For example, `CL:0000001`.
@@ -163,7 +160,7 @@ Examples:
 An ontology that is specific to a project and does not necessarily have interoperability with other ontologies in mind. 
 
 #### Pronto
-An [Ontology Library](#Ontology-Library) for parsing obo and owl files
+An [Ontology Library](#Ontology-Library) for parsing obo and owl files.
 
 #### Property
 An [Ontology elements](#Ontology-element) that represents an attribute or a characteristic of an element.
@@ -173,13 +170,13 @@ In [OWL](#OWL), properties are divided into disjoint categories:
   * [DatatypeProperty](#DatatypeProperty)
   
 #### Protege 
-A typical ontology development tool used by ontology developers in the OBO-sphere. Full documentation can be found at https://protege.stanford.edu/
+A typical ontology development tool used by ontology developers in the OBO-sphere. Full documentation can be found at https://protege.stanford.edu/.
   
 #### RDF
 A datamodel consisting of simple [Subject](#Subject) [predicate](#predicate) [Object](#Object) [Triples](#Triple) organized into an RDF [Graph](#Graph).
 
 #### rdflib
-A python library to interact with RDF data. Full documentation can be found at https://rdflib.readthedocs.io/en/stable/
+A python library to interact with RDF data. Full documentation can be found at https://rdflib.readthedocs.io/en/stable/.
 
 #### Reasoner
 An ontology tool that will perform inference over an ontology to yield new *axioms* (e.g. new [Edges](#Edge)) or to determine if an ontology is logically coherent.
@@ -209,7 +206,7 @@ Simple Standard for Sharing Ontological Mappings (https://github.com/mapping-com
 The "left" side of a [Triple](#Triple).
 
 #### Subset
-A named collection of elements, typically grouped for some purpose
+A named collection of elements, typically grouped for some purpose.
 
 #### Term
 Usually used to mean [Class](#Class) and [Individuals](#Individual), however sometimes used to refer to wider [OWL entities](#OWL-Entity).
