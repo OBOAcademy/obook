@@ -71,3 +71,5 @@ _Note: this is tentative and subject to change_
 
 ## Notes
 Most of materials used by this course were developed by James Overton, Becky Jackson, Nicole Vasilevsky and Nico Matentzoglu as part of a project with the Critical Path Institute (see [here](../index.md)). The materials are improved as part of an internal training program (onboarding and CPD) for the Phenomics First project (NIH / NHGRI #1RM1HG010860-01).
+
+Thanks to Sarah Gehrke for her help with project management.
