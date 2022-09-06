@@ -23,6 +23,7 @@ The goal of this course is to provide ongoing training for the OBO community. As
 
 | Date | Lesson | Notes | Recordings |
 | --- | --- | --- | --- |
+| 2022/09/20 | [How to be an open science ontologist](../howto/team-open-science-mindset.md) | | |
 | 2022/09/06 | [Pull Requests: Part 2](../tutorial/pull-requests.md) | | |
 | 2022/07/26 | [Pull Requests: Part 1](../tutorial/pull-requests.md) | | [Here](https://www.youtube.com/watch?v=zg6B9KFfnac) |
 | 2022/07/12 | [Basic introduction to the CLI: Part 2](../tutorial/intro-cli-2.md) | Due to intermitent connection issues, the first few minutes of this recording are not included. Refer to the Tutorial link for the initial directions. | [Here](https://www.youtube.com/watch?v=OCoN4TE8Vqc)
@@ -59,11 +60,10 @@ _Note: this is tentative and subject to change_
 
 | Date | Lesson  
 | --- | --- 
-| 2022/09/20 | [How to be an open science ontologist](../howto/team-open-science-mindset.md)
 | 2022/10/04 | _No meeting_ - ISB virtual conference: [register here](https://docs.google.com/forms/d/e/1FAIpQLSeDhec3KJ2JaJyh-OYcEpBMrSEFYIBzL4N8k57RPv09HqnnQg/viewform)
-| 2022/10/18 | OBO Academy hackathon (work on open tickets together)
-| 2022/11/01 | Fundamentals of matching (Introduction) 
-| 2022/11/15 | Fundamentals of matching (Advanced) 
+| 2022/10/18 | Introduction to Medical Action Ontology (MAxO) 
+| 2022/11/01 | OBO Academy hackathon (work on open tickets together)
+| 2022/11/15 | Fundamentals of matching 
 | 2022/11/29 | [Contributing to OBO ontologies](../lesson/contributing-to-obo-ontologies.md) - Part 1 
 | 2022/12/13 | [Contributing to OBO ontologies](../lesson/contributing-to-obo-ontologies.md) - Part 2 
 | 2022/12/27 | _No meeting_: Celebrate the holidays
