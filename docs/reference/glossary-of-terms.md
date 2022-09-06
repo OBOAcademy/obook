@@ -2,7 +2,7 @@
 
 This document is a list of terms that you might encounter in the ontology world. It is not an exhaustive list and will continue to evolve. Please create a ticket if there is a term you find missing or a term you encounter that you do not understand, and we will do our best to add them. This list is not arranged in any particular order. Please use the search function to find terms.
 
-Acknowledgement: Many terms are taken directly from [OAK documentation](https://incatools.github.io/ontology-access-kit/glossary.html) with the permission of Chris Mungall. Many descriptions are also taken from https://www.w3.org/TR/owl2-syntax/.
+Acknowledgement: Many terms are taken directly from [OAK documentation](https://incatools.github.io/ontology-access-kit/glossary.html) with the permission of [Chris Mungall](https://orcid.org/0000-0002-6601-2165). Many descriptions are also taken from https://www.w3.org/TR/owl2-syntax/.
 
 #### Annotation
 This term is frequently ambiguous. It can refer to [Text Annotation](#Text-Annotation), [OWL Annotation](#OWL Annotation), or Association.
