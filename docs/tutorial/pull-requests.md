@@ -70,6 +70,10 @@ _Example_:
     - The pull request should be atomic: it should be small and self contained with simple changes that affect a little code a possible
     - Whenever possible, break pull-requests into smaller ones  
     - Commit early, commit often
+    - Include specific information like the ID and label for terms changed. Note, you can easily obtain term metadata like OBO ID, IRI, term label in Protege, see screenshot below. You can also copy the IRI in markdown, which is really convenient for pasting into GitHub.
+
+<img width="1143" alt="image" src="https://user-images.githubusercontent.com/6722114/188779564-82de605a-d5fa-4dfb-a283-07e3e071c7e7.png">
+
 - **Don't**:
     - Make additional changes on a single PR that goes beyond the scope of the ticket or PR. For example, if you are adding a new term, don't also fix definitions or formatting for other terms.
 
