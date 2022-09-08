@@ -62,12 +62,16 @@ _Note: this is tentative and subject to change_
 | --- | --- 
 | 2022/10/04 | _No meeting_ - ISB virtual conference: [register here](https://docs.google.com/forms/d/e/1FAIpQLSeDhec3KJ2JaJyh-OYcEpBMrSEFYIBzL4N8k57RPv09HqnnQg/viewform)
 | 2022/10/18 | Introduction to Medical Action Ontology (MAxO) 
-| 2022/11/01 | OBO Academy hackathon (work on open tickets together)
-| 2022/11/15 | Fundamentals of matching 
-| 2022/11/29 | [Contributing to OBO ontologies](../lesson/contributing-to-obo-ontologies.md) - Part 1 
-| 2022/12/13 | [Contributing to OBO ontologies](../lesson/contributing-to-obo-ontologies.md) - Part 2 
+| 2022/11/01 | [Contributing to OBO ontologies](../lesson/contributing-to-obo-ontologies.md) - Part 1 
+| 2022/11/15 | OBO Academy hackathon (work on open tickets together)
+| 2022/11/29 | [Contributing to OBO ontologies](../lesson/contributing-to-obo-ontologies.md) - Part 2 
+| 2022/12/13 | Fundamentals of matching 
 | 2022/12/27 | _No meeting_: Celebrate the holidays
-| 2023/01/07 | Phenio / semantic similarity
+| 2023/01/07 | TBD
+
+
+
+
 
 ## Notes
 Most of materials used by this course were developed by James Overton, Becky Jackson, Nicole Vasilevsky and Nico Matentzoglu as part of a project with the Critical Path Institute (see [here](../index.md)). The materials are improved as part of an internal training program (onboarding and CPD) for the Phenomics First project (NIH / NHGRI #1RM1HG010860-01).
