@@ -1,8 +1,6 @@
-Create a pull request in GitHub
-===============================
+# Create a pull request in GitHub
 
-Committing, pushing and making pull requests
---------------------------------------------
+## Committing, pushing and making pull requests
 
 1.  Review: Changes made to the ontology can be viewed in GitHub Desktop.
 
@@ -20,20 +18,19 @@ NOTE: You can use the word 'fixes' or 'closes' in the description of the commit 
 
 2.  If you don't want to close the ticket, just refer to the ticket # without the word 'Fixes' or use 'Adresses'. The commit will be associated with the correct ticket but the ticket will remain open. 7.NOTE: It is also possible to type a longer message than allowed when using the '-m' argument; to do this, skip the -m, and a vi window (on mac) will open in which an unlimited description may be typed.
 
-1.  Click Commit to [branch]. This will save the changes to the cl-edit.owl file. 
+3.  Click Commit to [branch]. This will save the changes to the cl-edit.owl file.
 
-2.  Push: To incorporate the changes into the remote repository, click Publish branch.
+4.  Push: To incorporate the changes into the remote repository, click Publish branch.
 
-Make a Pull Request
--------------------
+## Make a Pull Request
 
 1.  Click: Create Pull Request in GitHub Desktop
 
-2.  This will automatically open GitHub Desktop 
+2.  This will automatically open GitHub Desktop
 
 3.  Click the green button 'Create pull request'
 
-4.  You may now add comments to your pull request. 
+4.  You may now add comments to your pull request.
 
 5.  The CL editors team will review your PR and either ask for changes or merge it.
 

@@ -8,9 +8,9 @@ Ontology terms have separate names and IDs. The names are annotation values (lab
 
 ![image](https://user-images.githubusercontent.com/6722114/115822913-3302d400-a3ba-11eb-89eb-70c767701843.png)
 
-Set your new entity preferences precisely as in the following screenshot of the New Entities tab.  
+Set your new entity preferences precisely as in the following screenshot of the New Entities tab.
 
-**Note** -  you have been assigned an ID range in the Mondo [idranges file](https://github.com/monarch-initiative/mondo/blob/master/src/ontology/mondo-idranges.owl)  - you should be able to find your own range assigned there.
+**Note** - you have been assigned an ID range in the Mondo [idranges file](https://github.com/monarch-initiative/mondo/blob/master/src/ontology/mondo-idranges.owl)  - you should be able to find your own range assigned there.
 
 ![image](https://user-images.githubusercontent.com/6722114/115964257-6a67a280-a4d8-11eb-8dcd-768b51d75720.png)
 
@@ -34,7 +34,7 @@ You can have Protege add a 'created by' annotation with your ORCID or GitHub use
 
 Set your preferences to match the screenshot below, in the New entities metadata tab (under preferences).
 
-If you do not have an ORCID, register for for free here: <https://orcid.org/> 
+If you do not have an ORCID, register for for free here: <https://orcid.org/>
 
 ![](https://lh3.googleusercontent.com/L8OnTKLNmYsTLZn6fHVdONVFe_cA-OhRLr5iO-MHld_zePvnA0ECImFKDXoqOeP0vKSHKRE8-LQYoqz5lbk9st8paCbmA74UPMb1LHmrpMuXsXbY_ZmYAsN6L8zNRCfbBHPKvv5A)
 
@@ -44,9 +44,9 @@ If you do not have an ORCID, register for for free here: <https://orcid.org/> 
 
 Before you start:
 
--   make sure you are working on a branch - see quick guide [here](https://docs.google.com/presentation/d/1M8NZQOIQVswng-so6ROxVeMJfDnzth7BYNj_5MXxEik/edit#slide=id.g9db6baf776_1_0).
+- make sure you are working on a branch - see quick guide [here](https://docs.google.com/presentation/d/1M8NZQOIQVswng-so6ROxVeMJfDnzth7BYNj_5MXxEik/edit#slide=id.g9db6baf776_1_0).
 
--   make sure you have the editor's file open in Protege as detailed [here](https://github.com/jamesaoverton/obook/blob/master/04-OntologyTheory/SearchingMondo.md).
+- make sure you have the editor's file open in Protege as detailed [here](https://github.com/jamesaoverton/obook/blob/master/04-OntologyTheory/SearchingMondo.md).
 
 New classes are created in the Class hierarchy panel on the left.
 
@@ -55,14 +55,15 @@ There are three buttons at the top of the class hierarchy view. These allow you 
 Practice adding a new term:
 
 We will work on these two tickets:
+
 1.  <https://github.com/monarch-initiative/mondo/issues/616>
-2.  <https://github.com/monarch-initiative/mondo/issues/2541> 
+2.  <https://github.com/monarch-initiative/mondo/issues/2541>
 
 #### https://github.com/monarch-initiative/mondo/issues/616
 
--   Search for the parent term 'hypereosinophilic syndrome' (see [search guide](https://github.com/jamesaoverton/obook/blob/master/04-OntologyTheory/SearchingMondo.md) if you are unsure how to do this).
+- Search for the parent term 'hypereosinophilic syndrome' (see [search guide](https://github.com/jamesaoverton/obook/blob/master/04-OntologyTheory/SearchingMondo.md) if you are unsure how to do this).
 
--   When you are clicked on the term in the Class hierarchy pane, click the add subclass button to add a child class to 'hypereosinophilic syndrome'
+- When you are clicked on the term in the Class hierarchy pane, click the add subclass button to add a child class to 'hypereosinophilic syndrome'
 
 ![](https://lh6.googleusercontent.com/8Yx82gFh0zvlnoXVnkGerib50qgHcy2V4yYczwL5MRxiJ_XatFkLBAKjJiX9ZyDbyjhDhKx6i1g65o8YvlhABB_Z86mdj1yORgUqImocZm9Y6-sipAisTWhWbHEatGHYGXKEBKI8)
 
@@ -74,16 +75,16 @@ A dialog will popup. Name this new subclass: migratory muscle precursor. Click "
 
 #### Adding annotations 
 
-Using Protégé you can add annotations such as labels, definitions, synonyms, database cross references (dbxrefs) to any OWL entity. The panel on the right, named Annotations, is where these annotations are added. CL includes a pre-declared set of annotation properties. The most commonly used annotations are below. 
+Using Protégé you can add annotations such as labels, definitions, synonyms, database cross references (dbxrefs) to any OWL entity. The panel on the right, named Annotations, is where these annotations are added. CL includes a pre-declared set of annotation properties. The most commonly used annotations are below.
 
--   rdfs:label
--   definition
--   has_exact_synonym
--   has_broad_synonym
--   has_narrow_synonym
--   has_related synonym
--   database_cross_reference
--   rdfs:comment
+- rdfs:label
+- definition
+- has_exact_synonym
+- has_broad_synonym
+- has_narrow_synonym
+- has_related synonym
+- database_cross_reference
+- rdfs:comment
 
 Note, most of these are bold in the annotation property list:
 
@@ -101,13 +102,13 @@ Definitions in Mondo should have a 'database cross reference' (dbxref), which is
 
 To add a dbxref to the definition:
 
--   Click the @ symbol next to the definition
--   Click the + button next in the pop-up window
--   Scroll up on the left hand side until you find 'database_cross_reference', and click it
--   Add the PMID in the editing box (PMID:25527564). _Note: the PMID should not have any spaces)
--   Click OK
--   Add the additional dbxref: GARD:0013029
--   The dbxrefs should appear as below.
+- Click the @ symbol next to the definition
+- Click the + button next in the pop-up window
+- Scroll up on the left hand side until you find 'database_cross_reference', and click it
+- Add the PMID in the editing box (PMID:25527564). \_Note: the PMID should not have any spaces)
+- Click OK
+- Add the additional dbxref: GARD:0013029
+- The dbxrefs should appear as below.
 
 ![](https://lh6.googleusercontent.com/l589uvv3OKKxrabrqKQdL-NF6PfKi_mSfaz-xk--59WtSD15VOy9CQVZXdE0SHl6ZA761zv9G0UULHF5EKRfMToX2F0kqrwuGbjdnzVV3JRRJbb2l40UjOLeXi-7aM_TBkCSkN3L)
 
@@ -115,9 +116,9 @@ To add a dbxref to the definition:
 
 #### Add Synonyms and Database cross reference
 
-1.  Add synonyms 
+1.  Add synonyms
 1.  Click the add annotations button
-1.  Add the following synonyms as 'has_exact_synonym': 
+1.  Add the following synonyms as 'has_exact_synonym':
 1.  EAE
 1.  Gleich's syndrome
 1.  Gleich syndrome

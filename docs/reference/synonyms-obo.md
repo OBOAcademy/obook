@@ -6,17 +6,17 @@ A synonym indicates an alternative name for a term. Terms can have multiple syno
 
 #### Exact
 
-The definition of the synonym is exactly the same as primary term definition. This is used when the same class can have more than one name. 
+The definition of the synonym is exactly the same as primary term definition. This is used when the same class can have more than one name.
 
 For example, hereditary Wilms' tumor has the exact synonoym familial Wilms' tumor.
 
 Additionally, translations into other languages are listed as exact synonyms. For example, the Plant Ontology list both Spanish and Japanese translations as exact synonyms; e.g. anther wall has exact synonym ‘pared de la antera’ (Spanish) and ‘葯壁 ‘(Japanese).
 
-#### Narrow 
+#### Narrow
 
-The definition of the synonym is the same as the primary definition, but has additional qualifiers. 
+The definition of the synonym is the same as the primary definition, but has additional qualifiers.
 
-For example, pod is a narrow synonym of fruit. 
+For example, pod is a narrow synonym of fruit.
 
 **Note** - when adding a narrow synonym, please first consider whether a new subclass should be added instead of a narrow synonym. If there is any uncertainty, start a discussion on the GitHub issue tracker.
 
@@ -28,9 +28,9 @@ For example, Cyst of eyelid has the broad synonym Lesion of the eyelid.
 
 **Note** - when adding a broad synonym, please first consider whether a new superclass should be added instead of a broad synonym. If there is any uncertainty, start a discussion on the GitHub issue tracker.
 
-#### Related 
+#### Related
 
-This scope is applied when a word of phrase has been used synonymously with the primary term name in the literature, but the usage is not strictly correct. That is, the synonym in fact has a slightly different meaning than the primary term name. Since users may not be aware that the synonym was being used incorrectly when searching for a term, related synonyms are included. 
+This scope is applied when a word of phrase has been used synonymously with the primary term name in the literature, but the usage is not strictly correct. That is, the synonym in fact has a slightly different meaning than the primary term name. Since users may not be aware that the synonym was being used incorrectly when searching for a term, related synonyms are included.
 
 For example, Autistic behavior has the related synonym Autism spectrum disorder.
 
@@ -47,4 +47,4 @@ Synonyms can also be classified by types. The default is no type. The synonym ty
 
 ### Database cross references
 
-Whenever possible, database cross-references (dbxrefs) for synonyms should be provided, to indicate the publication that used the synonym. References to PubMed IDs should be in the format PMID:XXXXXXX (no space). However, dbxrefs for synonyms are not mandatory in most ontologies. 
+Whenever possible, database cross-references (dbxrefs) for synonyms should be provided, to indicate the publication that used the synonym. References to PubMed IDs should be in the format PMID:XXXXXXX (no space). However, dbxrefs for synonyms are not mandatory in most ontologies.

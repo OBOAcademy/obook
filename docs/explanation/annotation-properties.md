@@ -4,17 +4,17 @@ Editors: Sabrina Toro (@sabrinatoro), Nicolas Matentzoglu (@matentzn)
 Examples with images can be found [here](https://docs.google.com/presentation/d/1AIB7WNNkhQKzKnViJHZoNNjxZZ2Y90LuE2QqeTG1ra4/edit?usp=sharing).
 
 ## What are annotation properties?
-An entity such as an individual, a class, or a property can have annotations, such as labels, synonyms and definitions. **An annotation property is used to link the entity to a value**, which in turn can be anything from a literal (a string, number, date etc) to another entity (such as, another class).  
+
+An entity such as an individual, a class, or a property can have annotations, such as labels, synonyms and definitions. **An annotation property is used to link the entity to a value**, which in turn can be anything from a literal (a string, number, date etc) to another entity (such as, another class).
 
 Here are some examples of frequently used annotation properties: (every element **in bold** is an annotation property)
 
 http://purl.obolibrary.org/obo/MONDO_0004975
 
-* **rdfs:label** –> ‘Alzheimer disease’
-* **oboInOwl:hasExactSynonym** –> Alzheimer dementia
-* **oboInOwl:hasDbXref** -> `NCIT:C2866`
-* **skos:exactMatch**  -> http://www.orpha.net/ORDO/Orphanet_238616
-
+- **rdfs:label** –> ‘Alzheimer disease’
+- **oboInOwl:hasExactSynonym** –> Alzheimer dementia
+- **oboInOwl:hasDbXref** -> `NCIT:C2866`
+- **skos:exactMatch** -> http://www.orpha.net/ORDO/Orphanet_238616
 
 ## Some useful things to know about annotation properties
 
@@ -23,9 +23,7 @@ http://purl.obolibrary.org/obo/MONDO_0004975
 - oboInOwl:hasExactSynonym : http://www.geneontology.org/formats/oboInOwl#hasExactSynonym
 - oboInOwl:hasDbXref : http://www.geneontology.org/formats/oboInOwl#hasDbXref
 
-
 **Annotation properties are just like other entities (classes, individuals) and can have their own annotations.** For example, the annotation propert http://purl.obolibrary.org/obo/IAO_0000232 has an rdfs:label ('curator note') and a human readable definition (IAO:0000115): 'An administrative note of use for a curator but of no use for a user'.
- 
 
 **Annotation properties can be organised in a hierarchical structure.**
 
@@ -34,22 +32,21 @@ For example, the annotation property 'synonym_type_property' (http://www.geneont
 **Annotation properties are (usually) used with specific type of annotation values.**
 
 - Literal: (one can see [type: xsd:string] in the annotation)
-    - xsd:string    
-        - e.g. 'definition' (http://purl.obolibrary.org/obo/IAO_0000115)
-    - xds:boolean  
-        - e.g. 'owl:deprecated' (http://www.w3.org/2002/07/owl#deprecated)
-- Entity IRI :  
-    - Classes or individuals: e.g. 'has curation status' (http://purl.obolibrary.org/obo/IAO_0000114)
-    - Arbitray URIs, e.g. links to website with the 'term tracker item' (type xsd:anyURI) (http://purl.obolibrary.org/obo/IAO_0000233) property
-    - Or even other annotation properties `*`  
-        - e.g. 'has_synonym_type' (http://www.geneontology.org/formats/oboInOwl#hasSynonymType)      
-        - e.g. 'in_subset' (http://purl.obolibrary.org/obo/IAO_0000112)
+  - xsd:string
+    - e.g. 'definition' (http://purl.obolibrary.org/obo/IAO_0000115)
+  - xds:boolean
+    - e.g. 'owl:deprecated' (http://www.w3.org/2002/07/owl#deprecated)
+- Entity IRI :
+  - Classes or individuals: e.g. 'has curation status' (http://purl.obolibrary.org/obo/IAO_0000114)
+  - Arbitray URIs, e.g. links to website with the 'term tracker item' (type xsd:anyURI) (http://purl.obolibrary.org/obo/IAO_0000233) property
+  - Or even other annotation properties `*`
+    - e.g. 'has_synonym_type' (http://www.geneontology.org/formats/oboInOwl#hasSynonymType)
+    - e.g. 'in_subset' (http://purl.obolibrary.org/obo/IAO_0000112)
 
 Note: the type of annotation required for an annotation property can be defined by adding a Range + "select datatype" in the Annotation Property's Description  
 e.g. : 'scheduled for obsoletion on or after' (http://purl.obolibrary.org/obo/IAO_0006012)
 
 - **Annotations do not affect reasoning**. No matter what values you connect with your annotation properties, the reasoner will ignore it - even if it is nonsensical.
-
 
 ## Annotation Property vs Data and Object Properties
 
@@ -70,16 +67,14 @@ Data properties are different to annotation properties in that they:
 - Example Data Property: 'hasName', 'hasPrice', 'hasCalories', 'hasSugarContent',...
 - More details on how to use Data Properties [here](https://oboacademy.github.io/obook/tutorial/fhkb/#data-properties-in-the-fhkb)
 
-
 ## Creating new Annotation Properties
 
-Note: before creating a new annotation property, it is always a good idea to check for an existing annotation property first.   
+Note: before creating a new annotation property, it is always a good idea to check for an existing annotation property first.
 
-- For example: OBO Metadata Ontology (https://www.ebi.ac.uk/ols/ontologies/omo), which could be imported  
+- For example: OBO Metadata Ontology (https://www.ebi.ac.uk/ols/ontologies/omo), which could be imported
 
 Detailed explanations for adding a new annotation property can be found [here](https://mondo.readthedocs.io/en/latest/editors-guide/new-annotation-property/)
 
-
 ## The term "Annotation" in Ontologies and Data Curation means different things.
 
-The word "annotation" is used in different contexts to mean different things. For instance, "annotation in owl" (ie annotations to an ontology term) is different from "annotation in the biocuration sense" (ie gene-to-disease, gene-to-phenotype, gene-to-function annotations). It is therefore crucial to give context when using the word "annotation". 
+The word "annotation" is used in different contexts to mean different things. For instance, "annotation in owl" (ie annotations to an ontology term) is different from "annotation in the biocuration sense" (ie gene-to-disease, gene-to-phenotype, gene-to-function annotations). It is therefore crucial to give context when using the word "annotation".

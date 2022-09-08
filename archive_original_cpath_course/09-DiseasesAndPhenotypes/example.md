@@ -8,7 +8,6 @@ The practical example covers the following questions:
 2. Use these ontology terms for some basic ontology-powered analysis
 3. Link up external data to provide additional links
 
-
 # Additional Task:
 
 1. Add [Mondo-OMIM mappings](https://raw.githubusercontent.com/monarch-initiative/mondo/sssom-rewrite/src/ontology/mappings/mondo_exactmatch_omim.sssom.tsv) to Makefile and an run the respective `make` command to obtain the data.

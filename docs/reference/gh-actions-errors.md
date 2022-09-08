@@ -2,7 +2,7 @@
 
 ## `Killed`: Running out of memory
 
-Running the same workflow several times simultaneously (e.g. if two PRs are submitted in a short time, and the second PR triggers the CI workflow while the CI workflow triggered by the first PR is still running) could lead to lack-of-memory situations because all concurrent workflows have to share a single memory limit. 
+Running the same workflow several times simultaneously (e.g. if two PRs are submitted in a short time, and the second PR triggers the CI workflow while the CI workflow triggered by the first PR is still running) could lead to lack-of-memory situations because all concurrent workflows have to share a single memory limit.
 
 (Note: it isn't really clear with documentation of GitHub Actions on whether concurrent workflow runs share a single memory limit.)
 

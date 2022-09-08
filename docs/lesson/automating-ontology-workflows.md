@@ -1,15 +1,19 @@
 # Automating Ontology Development Workflows: Make, Shell and Automation Thinking
 
 ### Warning
+
 These materials are under construction and incomplete.
 
 ## Prerequisites
+
 - Ontology Pipelines
 
 ## What is delivered as part of the course
+
 In this course, you will learn the basics of automation in and around the OBO ontology world - and beyond. The primary goal is to enable ontology pipeline developers to plan the automation of their ontology workflows and data pipelines, but some of the materials are very general and apply to scientific computing more widely. The course serves also as a prerequisite for advanced application ontology development.
 
 ## Learning objectives
+
 - Unix shell
 - `make`
 - Advanced Git, GitHub
@@ -17,6 +21,7 @@ In this course, you will learn the basics of automation in and around the OBO on
 ## Preparation
 
 Please complete the following tutorials.
+
 - [The Unix Shell](http://swcarpentry.github.io/shell-novice/) (~4.5 hours)
 - [Version Control with Git](http://swcarpentry.github.io/git-novice/) (~3 hours)
 - [Introduction to GitHub](../tutorial/github-fundamentals.md)
@@ -38,7 +43,7 @@ In this article I want to make some basic points about automation
 and how to think about it.
 The focus is on automation with software and data,
 but not on any particular software or data.
-Some of these points may seem *too* basic,
+Some of these points may seem _too_ basic,
 especially for experienced programmers,
 but in 20+ years of programming
 I've never seen anybody lay out these basic points in quite this way.
@@ -123,7 +128,7 @@ but software development is not like working on the assembly line,
 and estimating time and budget for software development is notoriously hard.
 I think this is because software developers
 aren't just executing automation,
-they're building *new* automation for each new project.
+they're building _new_ automation for each new project.
 
 Although we talk about "bit rot",
 and software does require maintenance of a sort,
@@ -138,9 +143,9 @@ Software automation is special because it can operate on itself,
 and once complete can be cheaply copied.
 Software development is largely about building automated systems of various sorts,
 usually out of many existing pieces.
-We spend most of our time building *new* systems,
-or modifying an existing system to handle *new* inputs,
-or adapting existing software to a *new* use case.
+We spend most of our time building _new_ systems,
+or modifying an existing system to handle _new_ inputs,
+or adapting existing software to a _new_ use case.
 
 #### The Dangers of Automation
 
@@ -365,7 +370,7 @@ We almost always want the result of the test
 to be a simple True or False.
 Given a bunch of inputs,
 some of which pass the test and some of which fail it,
-we can think of the test as *determining* some way in which
+we can think of the test as _determining_ some way in which
 all the things that pass are the **same**
 and all the things that fail are the **same**.
 Programmers will also be familiar with more complex conditionals
@@ -450,7 +455,7 @@ echo "Done!"
 So far this is just a more annoying way to use a checklist.
 The magic happens once you break the steps down into small enough pieces
 and realize that you know how to tell the computer
-to do *some* of the steps
+to do _some_ of the steps
 instead of doing them all yourself.
 
 For example,
@@ -656,7 +661,7 @@ with their input and output files carefully specified.
 When you ask Make to build a given output file,
 it will look at the whole tree of scripts,
 figure out which input files are required to build your requested output file,
-then which files are required to build *those* files,
+then which files are required to build _those_ files,
 and so on until it has determined a sequence of steps.
 Make is also smart enough to check whether some of the dependencies
 are already up-to-date,
@@ -756,12 +761,12 @@ Basic information management is always important:
 More advanced data management is part of this course:
 
 - consistent use of versioned
-    - software
-    - reference data
+  - software
+  - reference data
 - terminology
-    - controlled vocabularies
-    - data dictionaries
-    - ontologies
+  - controlled vocabularies
+  - data dictionaries
+  - ontologies
 
 Some simple rules of thumb can help reduce complexity and confusion:
 
@@ -858,7 +863,7 @@ The submission deadline is tomorrow
 but the core lab "fixed" something
 and they have a new version of the dataset
 that we need to use for the figures.
-Now I *really* don't have time to automate,
+Now I _really_ don't have time to automate,
 so I'm up late clicking through Excel again
 and hoping that I remembered to redo
 all the changes that I made last time.
@@ -943,10 +948,12 @@ and some brief notes on how-to do the stuff this project is for.
 These could both go in the README of a small project.
 
 ## Additional materials and resources
+
 - [A whirlwind introduction to the command line](https://github.com/jamesaoverton/command-line)
 - [Programming with Python](https://swcarpentry.github.io/python-novice-inflammation/)
 - [Oh My Git!](https://ohmygit.org)
 
 ## Contributors
+
 - [Nico Matentzoglu](https://orcid.org/0000-0002-7356-1779)
 - [James Overton](https://orcid.org/0000-0001-5139-5557)

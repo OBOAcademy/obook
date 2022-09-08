@@ -17,12 +17,12 @@ You have:
 
 - Install https://ohmyz.sh/ (optional)
 - For advanced windows users with docker installed, you can:
-    1. Follow the [instructions here](../howto/odk-setup.md) to set yourself up for ODK development.
-    2. Place `odk.bat` as instructed above in some directory on your machine (the path to the odk.bat file should have no spaces!)
-    3. Create a new file `.bash_profile` in the same directory as your odk.bat file.
-    4. Add something like `-v %cd%\.bash_profile:/root/.bash_profile` to the odk.bat file (this is mounting the `.bash_profile` file inside your ODK container). There is already a similar -v statement in this file, just copy it right after
-    5. Enter the ODK using `odk.bat bash` on your CMD (first, `cd` to the directory containing the odk.bat file).
-    6. Now you can follow most of this tutorial here as well.
+  1. Follow the [instructions here](../howto/odk-setup.md) to set yourself up for ODK development.
+  2. Place `odk.bat` as instructed above in some directory on your machine (the path to the odk.bat file should have no spaces!)
+  3. Create a new file `.bash_profile` in the same directory as your odk.bat file.
+  4. Add something like `-v %cd%\.bash_profile:/root/.bash_profile` to the odk.bat file (this is mounting the `.bash_profile` file inside your ODK container). There is already a similar -v statement in this file, just copy it right after
+  5. Enter the ODK using `odk.bat bash` on your CMD (first, `cd` to the directory containing the odk.bat file).
+  6. Now you can follow most of this tutorial here as well.
 
 ## Tutorial
 
@@ -56,7 +56,7 @@ echo $PATH | tr ':' '\n'  | sort
 
 What we do here:
 
-1. Using the `echo` command to print the contents of the $PATH variable. In Unix systems, the `$` signifies the beginning of a variable name (if you are curious about what other "environment variables" are currently active on your system, use the `printenv` command). The output of the `echo` command is piped to the next command (`tr`).
+1. Using the `echo` command to print the contents of the $PATH variable. In Unix systems, the `$`signifies the beginning of a variable name (if you are curious about what other "environment variables" are currently active on your system, use the`printenv`command). The output of the`echo` command is piped to the next command (`tr`).
 2. The `tr – translate characters` command copies the input of the previous command to the next with substitution or deletion of selected characters. Here, we substitute the `:` character, which is used to separate the different directory paths in the `$PATH` variable, with "\n", which is the all important character that denotes a "new line".
 3. Just because, we also sort the output alphabetically to make it more readable.
 
@@ -174,6 +174,7 @@ There is a lot to say about your shell profiles, and we are taking a very simpli
 ```console
 head ~/.zshrc
 ```
+
 If you have installed oh-my-zsh, the output will look something like:
 
 ```
@@ -258,7 +259,7 @@ wouldn't it be nice to be able to use, instead,
 cdhp
 ```
 
-or, if you are continuously checking `git status`, why not implement a  alias `gits`? Or activating your python environment (`source ~/.pyenv/versions/oak/bin/activate`) with a nice `env-oak`? To achieve this we do the following:
+or, if you are continuously checking `git status`, why not implement a alias `gits`? Or activating your python environment (`source ~/.pyenv/versions/oak/bin/activate`) with a nice `env-oak`? To achieve this we do the following:
 
 (1) Open your profile in a text editor of your choice, e.g.
 
@@ -290,6 +291,7 @@ Will bring you straight to your `tools` directory you created in the previous le
 ```console
 hg robot
 ```
+
 Will search your terminal command history for every command you have executed involving `robot`.
 
 ### List of ideas for aliases
@@ -326,7 +328,7 @@ rreport() {
 }
 ```
 
-This allows me to quickly run a robot report on an ontology. 
+This allows me to quickly run a robot report on an ontology.
 
 ```
 rreport cl.owl

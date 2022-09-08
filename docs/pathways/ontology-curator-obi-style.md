@@ -16,4 +16,3 @@ Note: There is no one single accepted way of doing ontology curation in the OBO-
 ### Learning how to edit ontologies
 
 ## Ontology Curator How To Collection
-

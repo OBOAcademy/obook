@@ -8,15 +8,11 @@ This method only works if the file you want to edit has already been editing as 
 
 - Go to the pull request on GitHub, and click on the "Files Changed" tab up top
 - Find the file you want to edit in the pull request.
-- On the right, click on on the three `...`, and then "Edit file". 
+- On the right, click on on the three `...`, and then "Edit file".
 
 ![changepr](../images/changing_pr.png)
 
-If this option is greyed out, it means that 
-    - you don't have edit rights on the repository
-    - the edit was made from a different fork, and the person that created the pull request did not activate the "Allow maintainers to make edits" option when submitting the PR
-    - the pull request has already been merged
+If this option is greyed out, it means that - you don't have edit rights on the repository - the edit was made from a different fork, and the person that created the pull request did not activate the "Allow maintainers to make edits" option when submitting the PR - the pull request has already been merged
 
 - Do the edits, and then commit changes, usually to the same branch
-![changepr](../images/changing_pr_commit.png)
-
+  ![changepr](../images/changing_pr_commit.png)

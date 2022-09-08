@@ -147,7 +147,7 @@ The submission deadline is tomorrow
 but the core lab "fixed" something
 and they have a new version of the dataset
 that we need to use for the figures.
-Now I *really* don't have time to automate,
+Now I _really_ don't have time to automate,
 so I'm up late clicking through Excel again
 and hoping that I remembered to redo
 all the changes that I made last time.
@@ -230,5 +230,3 @@ but consider a brief explanation of why it works the way it does
 (aimed at a colleague who knows your field well),
 and some brief notes on how-to do the stuff this project is for.
 These could both go in the README of a small project.
-
-

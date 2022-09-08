@@ -3,7 +3,7 @@
 ### Summary
 
 A project ontology, sometimes and **controversially referred to as an application ontology**, is an ontology which is composed of other ontologies for a particular use case, such as Natural Language Processing applications, Semantic Search and Knowledge Graph integration. A defining feature of a project ontology is _that it is not intended to be used as a domain ontology_. Concretely, this means that content from project ontologies (such as terms or axioms) is not to be re-used by domain ontologies (under no circumstances). Project ontology developers have the freedom to slice & dice, delete and add relationships, change labels etc as their use case demands it. Usually, such processing is minimal, and in a well developed environment such as OBO, new project ontology-specific terms are usually kept at a minimum.
- 
+
 In this tutorial, we discuss the fundamental building blocks of application ontologies and show you how to build one using the [Ontology Development Kit](https://github.com/INCATools/ontology-development-kit) as one of several options.
 
 ## Prerequisites
@@ -30,18 +30,18 @@ In this tutorial, we discuss the fundamental building blocks of application onto
 There are a few reasons for developing project ontologies. Here are two that are popular in our domain:
 
 - **Semantic integration**. You have curated a lot of data using standard ontologies and now you wish to access this data using the "semantic fabric" provided by the ontology. Concrete examples:
-    - Adding a "semantic layer to your knowledge graph". For example, your data is annotated using specific anatomy terms, and you wish to query your knowledge graph through anatomical groupings, such as "anatomical entities that are part of the cardio-vascular system".
-    - Offering "semantic search". For example, you may want to restrict a certain search widget to "diseases" only, or try to figure out whether a user is searching for phenotypes associated with diseases. A concrete example is populating a Solr or elastic-search index using not only the labels and synonyms of an ontology, but also their relationships. Try it: https://platform.opentargets.org/, https://monarchinitiative.org/.
-    - Example ontologies:
-        - https://github.com/monarch-initiative/phenio
-        - https://github.com/EBISPOT/efo
-        - https://github.com/EBISPOT/scatlas_ontology
+  - Adding a "semantic layer to your knowledge graph". For example, your data is annotated using specific anatomy terms, and you wish to query your knowledge graph through anatomical groupings, such as "anatomical entities that are part of the cardio-vascular system".
+  - Offering "semantic search". For example, you may want to restrict a certain search widget to "diseases" only, or try to figure out whether a user is searching for phenotypes associated with diseases. A concrete example is populating a Solr or elastic-search index using not only the labels and synonyms of an ontology, but also their relationships. Try it: https://platform.opentargets.org/, https://monarchinitiative.org/.
+  - Example ontologies:
+    - https://github.com/monarch-initiative/phenio
+    - https://github.com/EBISPOT/efo
+    - https://github.com/EBISPOT/scatlas_ontology
 - **Natural language processing (NLP)**. You are developing an NLP application such as an annotator for text. Here, you may like to use ontologies to tag specific phrases in your documents, like those related to COVID. Ontologies in these cases serve essentially as more or less sophisticated dictionaries. But there are some more sophisticated uses of ontologies for NER.
-    - Example ontologies:
-        - https://github.com/berkeleybop/bero
-        - https://github.com/EBISPOT/covoc
+  - Example ontologies:
+    - https://github.com/berkeleybop/bero
+    - https://github.com/EBISPOT/covoc
 - **Mapping work**. When developing mappings across ontologies and terminologies, it is often useful to have access to all of them at once. This helps to explore the consequences of mapping decisions, as well providing a single interface for ontology matching tools which usually operate on single ontologies. Advanced Machine Learning based approaches are used to generate graph embeddings on such merged ontologies. Example ontologies:
-    - https://github.com/monarch-initiative/mondo-ingest
+  - https://github.com/monarch-initiative/mondo-ingest
 
 <a id="overview"></a>
 
@@ -55,12 +55,12 @@ There are a few reasons for developing project ontologies. Here are two that are
 
 Any application ontology will be concerned with at least 3 ingredients:
 
-- The **seed**. This is a the _set of terms you wish to import into your application ontology_. The seed can take many forms: 
-    - a simple list of terms, e.g. `MONDO:123, MONDO:231`
-    - a list of terms including additional _relational selectors_, e.g. `MONDO:123, incl. all children`
-    - a list of terms including a _logical selector_, `MONDO:123, incl. all terms that are in some way logically related to MONDO:123`
-    - a general selector, like "all classes" or simply "everything".
-    - There are probably more, but these are the main ones we work with in the context of biomedical application ontologies.
+- The **seed**. This is a the _set of terms you wish to import into your application ontology_. The seed can take many forms:
+  - a simple list of terms, e.g. `MONDO:123, MONDO:231`
+  - a list of terms including additional _relational selectors_, e.g. `MONDO:123, incl. all children`
+  - a list of terms including a _logical selector_, `MONDO:123, incl. all terms that are in some way logically related to MONDO:123`
+  - a general selector, like "all classes" or simply "everything".
+  - There are probably more, but these are the main ones we work with in the context of biomedical application ontologies.
 - The **source ontologies**, often referred to as "mirrors" (at least by those working with ODK). These are the full ontologies which we want to use in our application ontology. For example, we may want to include anatomical entities from the [Uberon ontology](https://github.com/obophenotype/uberon) into our application ontology. These are usually downloaded from the internet into the application ontology workspace, and then processed by the application ontology extraction workflow (see later).
 - Additional **ontology metadata** and **customisations**, such as axioms used to connect entities (classes) across your source ontologies to fulfil a use case, but also your regular ontology metadata (title, comments, etc).
 
@@ -118,7 +118,7 @@ One of the design confusions in this part of the process is that most use cases 
 
 ### Managing metadata and customisations
 
-Just like any other ontology, a project ontology should be well annotated according to the standards of [FAIR Semantics](https://github.com/FAIRsFAIR/FAIRSemantics), for example using the [OBO Foundry conventions](http://obofoundry.org/). In particular, project ontologies should be 
+Just like any other ontology, a project ontology should be well annotated according to the standards of [FAIR Semantics](https://github.com/FAIRsFAIR/FAIRSemantics), for example using the [OBO Foundry conventions](http://obofoundry.org/). In particular, project ontologies should be
 
 - annotated with a title, a license, a description
 - versioned and annotated with versionIRIs
@@ -166,6 +166,7 @@ Many of the larger imports in application ontologies do not fit into the normal 
 TBD
 
 ## Additional materials and resources
+
 - TBD
 
 ## Contributors

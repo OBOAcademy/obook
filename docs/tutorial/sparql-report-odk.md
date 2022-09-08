@@ -16,7 +16,7 @@ For a tutorial on how to generate reports independent of ODK please see [here]()
 
 ```
 robot_report:
-  custom_sparql_exports: 
+  custom_sparql_exports:
     - basic-report
     - my-cat-report
 ```
