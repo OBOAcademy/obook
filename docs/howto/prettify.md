@@ -1,7 +1,7 @@
 # Prettify markdown files
 
 ## Description
-Prettier standardizes the representation and formatting of Markdown. More information is available at [https://prettier.io/](https://prettier.io/).
+Prettier standardizes the representation and formatting of Markdown. More information is available at [https://prettier.io/](https://prettier.io/). Note, these instructions are for a Mac.
 
 ## Install npm
 
