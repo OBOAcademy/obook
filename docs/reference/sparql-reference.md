@@ -1,18 +1,19 @@
-# Reference templates for SPARQL queries 
+# Reference templates for SPARQL queries
 
-This document contains template SPARQL queries that can be adapted. 
+This document contains template SPARQL queries that can be adapted.
 Comments are added in-code with `#` above each step to explain them so that queries can be spliced together
 
 ## Checks/Report generation
 
-### All terms native to ontology 
+### All terms native to ontology
+
 note: we assume that all native terms here have the same namespace - that of the ontology
 
 ```SPARQL
 # select unique instances of the variable
 SELECT DISTINCT ?term
 WHERE {
-  # selecting where the variable term is either used as a subject or object 
+  # selecting where the variable term is either used as a subject or object
   { ?s1 ?p1 ?term . }
   UNION
   { ?term ?p2 ?o2 . }
@@ -21,7 +22,8 @@ WHERE {
 }
 ```
 
-### Definition lacks xref 
+### Definition lacks xref
+
 adaptable for lacking particular annotation
 
 ```SPARQL
@@ -30,26 +32,26 @@ prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
 prefix definition: <http://purl.obolibrary.org/obo/IAO_0000115>
 prefix owl: <http://www.w3.org/2002/07/owl#>
 
-SELECT ?entity ?property ?value WHERE 
+SELECT ?entity ?property ?value WHERE
 {
   # the variable property has to be defintion (IAO:0000115)
   VALUES ?property {
     definition:
   }
-  # defining the order of variables in the triple 
+  # defining the order of variables in the triple
   ?entity ?property ?value .
-  
+
   # selecting annotation on definition
   ?def_anno a owl:Axiom ;
   owl:annotatedSource ?entity ;
   owl:annotatedProperty definition: ;
   owl:annotatedTarget ?value .
-  
+
   # filters out definitions which do not have a dbxref annotiton
   FILTER NOT EXISTS {
     ?def_anno oboInOwl:hasDbXref ?x .
   }
-  
+
   # removes triples where entity is blank
   FILTER (!isBlank(?entity))
   # selects entities that are native to ontology (in this case MONDO)
@@ -60,7 +62,8 @@ SELECT ?entity ?property ?value WHERE
 ORDER BY ?entity
 ```
 
-### Checks wether definitions contain underscore characters 
+### Checks wether definitions contain underscore characters
+
 adaptable for checking if there is particular character in annotation
 
 ```SPARQL
@@ -70,14 +73,14 @@ prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 prefix IAO: <http://purl.obolibrary.org/obo/IAO_>
 prefix definition: <http://purl.obolibrary.org/obo/IAO_0000115>
 
-# selecting only unique instances of the three variables 
-SELECT DISTINCT ?entity ?property ?value WHERE 
+# selecting only unique instances of the three variables
+SELECT DISTINCT ?entity ?property ?value WHERE
 {
   # the variable property has to be definition (IAO:0000115)
   VALUES ?property {
     definition:
   }
-  # defining the order of variables in the triple 
+  # defining the order of variables in the triple
   ?entity ?property ?value .
   # filtering out triples where the variable value has _ in it
   FILTER( regex(STR(?value), "_"))
@@ -88,7 +91,7 @@ SELECT DISTINCT ?entity ?property ?value WHERE
 ORDER BY ?entity
 ```
 
-### Only allowing a fix set of annotation properties 
+### Only allowing a fix set of annotation properties
 
 ```SPARQL
 # adding prefixes used
@@ -103,8 +106,8 @@ prefix skos: <http://www.w3.org/2004/02/skos/core#>
 prefix dce: <http://purl.org/dc/elements/1.1/>
 prefix dcterms: <http://purl.org/dc/terms/>
 
-# selecting only unique instances of the three variables 
-SELECT DISTINCT ?term ?property ?value WHERE 
+# selecting only unique instances of the three variables
+SELECT DISTINCT ?term ?property ?value WHERE
 {
   # order of the variables in the triple
 	?term ?property ?value .
@@ -119,7 +122,8 @@ SELECT DISTINCT ?term ?property ?value WHERE
 }
 ```
 
-### Checking for misused replaced_by 
+### Checking for misused replaced_by
+
 adaptable for checking that a property is used in a certain way
 
 ```SPARQL
@@ -127,13 +131,13 @@ adaptable for checking that a property is used in a certain way
 # adding prefixes used
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
-PREFIX replacedBy: <http://purl.obolibrary.org/obo/IAO_0100001> 
+PREFIX replacedBy: <http://purl.obolibrary.org/obo/IAO_0100001>
 
-# selecting only unique instances of the three variables 
+# selecting only unique instances of the three variables
 SELECT DISTINCT ?entity ?property ?value WHERE {
  # the variable property is IAO_0100001 (item replaced by)
  VALUES ?property { replacedBy: }
- 
+
  # order of the variables in the triple
  ?entity ?property ?value .
  # removing entities that have either owl:deprecated true or oboInOwl:ObsoleteClass (these entities are the only ones that should have replaced_by)
@@ -156,13 +160,13 @@ prefix owl: <http://www.w3.org/2002/07/owl#>
 prefix obo: <http://purl.obolibrary.org/obo/>
 
 # selecting 2 variables, prefix and numberOfClasses, where number of classes is a count of distinct cls
-SELECT ?prefix (COUNT(DISTINCT ?cls) AS ?numberOfClasses) WHERE 
+SELECT ?prefix (COUNT(DISTINCT ?cls) AS ?numberOfClasses) WHERE
 {
-  # the variable cls is a class 
+  # the variable cls is a class
   ?cls a owl:Class .
   # removes any cases where the variable cls is blank
   FILTER (!isBlank(?cls))
-  # Binds the variable prefix as the prefix of the class (eg. MONDO, CL, etc.). classes that do not have obo purls will come out as blank in the report. 
+  # Binds the variable prefix as the prefix of the class (eg. MONDO, CL, etc.). classes that do not have obo purls will come out as blank in the report.
   BIND( STRBEFORE(STRAFTER(str(?cls),"http://purl.obolibrary.org/obo/"), "_") AS ?prefix)
 }
 # grouping the count by prefix
@@ -181,14 +185,14 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX CL: <http://purl.obolibrary.org/obo/CL_>
 PREFIX PCL: <http://purl.obolibrary.org/obo/PCL_>
 
-# count the number of unique term 
+# count the number of unique term
 SELECT (COUNT (DISTINCT ?term) as ?pclcells)
 WHERE {
     # the variable term is a class
-  	?term a owl:Class . 
-    # the variable term has to be a subclass of CL:0000003, including those that are subclassof by property path 
+  	?term a owl:Class .
+    # the variable term has to be a subclass of CL:0000003, including those that are subclassof by property path
   	?term rdfs:subClassOf* CL:0000003
-  # only count the term if it is in the pcl namespace 
+  # only count the term if it is in the pcl namespace
   FILTER(isIRI(?term) && (STRSTARTS(str(?term), "http://purl.obolibrary.org/obo/PCL_")))
 }
 ```
@@ -196,6 +200,7 @@ WHERE {
 ## Removing
 
 ### Removes all RO terms
+
 adaptable for removing all terms of a particular namespace
 
 ```SPARQL
@@ -207,8 +212,8 @@ prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 DELETE {
   ?s ?p ?o
 }
-WHERE 
-{ 
+WHERE
+{
   {
     # the variable p must be a rdfs:label
     VALUES ?p {
@@ -218,13 +223,13 @@ WHERE
   ?s a owl:ObjectProperty ;
   # the other variables can be anything else (note the above value restriction of p)
   ?p ?o
-    # filter out triples where ?s starts with "http://purl.obolibrary.org/obo/RO_" 
+    # filter out triples where ?s starts with "http://purl.obolibrary.org/obo/RO_"
     FILTER (isIRI(?s) && STRSTARTS(str(?s), "http://purl.obolibrary.org/obo/RO_"))
   }
 }
 ```
 
-### Deleting axiom annotations by prefix 
+### Deleting axiom annotations by prefix
 
 ```SPARQL
 # adding prefixes used
@@ -243,14 +248,15 @@ WHERE {
          owl:annotatedProperty ?p ;
          owl:annotatedTarget ?o ;
          ?property ?value .
-  # filter out the variable value which start with "ICD10EXP:" 
+  # filter out the variable value which start with "ICD10EXP:"
   FILTER(STRSTARTS(STR(?value),"ICD10EXP:"))
 }
 ```
 
-## Replacing 
+## Replacing
 
 ### Replace oboInOwl:source with oboInOwl:hasDbXref in synonyms annotations
+
 adaptable for replacing annotations properties on particular axioms
 
 ```SPARQL
@@ -267,13 +273,13 @@ DELETE {
 INSERT {
     ?ax oboInOwl:hasDbXref ?source .
 }
-WHERE 
+WHERE
 {
   # restricting to triples where the property variable is in this list
   VALUES ?property { oboInOwl:hasExactSynonym oboInOwl:hasNarrowSynonym  oboInOwl:hasBroadSynonym oboInOwl:hasCloseSynonym oboInOwl:hasRelatedSynonym } .
   # order of the variables in the triple
   ?entity ?property ?value .
-  # structure on which the variable ax and source applies 
+  # structure on which the variable ax and source applies
   ?ax rdf:type owl:Axiom ;
     owl:annotatedSource ?entity ;
     owl:annotatedTarget ?value ;

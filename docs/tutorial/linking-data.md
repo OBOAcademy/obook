@@ -11,11 +11,11 @@ Linked Data.
 
 The boss just sent me this new table to figure out:
 
-datetime | investigator | subject | species | strain | sex | group | protocol | organ | disease | qualifier | comment
----|---|---|---|---|---|---|---|---|---|---|---
-1/1/14 10:21 AM | JAO | 12 | RAT | F 344/N | FEMALE | 1 | HISTOPATHOLOGY | LUNG | ADENOCARCINOMA | SEVERE | 
-1/1/14 10:30 AM | JO | 31 | MOUSE | B6C3F1 | MALE | 2 | HISTOPATHOLOGY | NOSE | INFLAMMATION | MILD | 
-1/1/14 10:45 AM | JAO | 45 | RAT | F 344/N | MALE | 1 | HISTOPATHOLOGY | ADRENAL CORTEX | NECROSIS | MODERATE | 
+| datetime        | investigator | subject | species | strain  | sex    | group | protocol       | organ          | disease        | qualifier | comment |
+| --------------- | ------------ | ------- | ------- | ------- | ------ | ----- | -------------- | -------------- | -------------- | --------- | ------- |
+| 1/1/14 10:21 AM | JAO          | 12      | RAT     | F 344/N | FEMALE | 1     | HISTOPATHOLOGY | LUNG           | ADENOCARCINOMA | SEVERE    |
+| 1/1/14 10:30 AM | JO           | 31      | MOUSE   | B6C3F1  | MALE   | 2     | HISTOPATHOLOGY | NOSE           | INFLAMMATION   | MILD      |
+| 1/1/14 10:45 AM | JAO          | 45      | RAT     | F 344/N | MALE   | 1     | HISTOPATHOLOGY | ADRENAL CORTEX | NECROSIS       | MODERATE  |
 
 It doesn't seem too bad,
 but there's lots of stuff that I don't quite understand.
@@ -98,7 +98,7 @@ I'm **not** going to edit these files.
 When I want to change the data I'll make copies in another directory.
 I don't want git to track the cached data,
 so I'll add `/cache/` to `.gitignore`
-and tell git to track *that*.
+and tell git to track _that_.
 Then I'll use `curl` to download the file.
 
 ```sh
@@ -402,12 +402,12 @@ If there's a lot of replacements like "JO",
 then you might also consider listing them in another table
 that you can read into your script.
 
-The important part is to *automate* your cleaning!
+The important part is to _automate_ your cleaning!
 
 Why didn't I just edit `cache/data.csv` in Excel?
 In step 2 I saved a copy of the data
 because I didn't want it to change while I was working on it,
-but I *do* expect it to change!
+but I _do_ expect it to change!
 By automating the cleaning process,
 I should be able to just update `cache/data.csv`
 run everything again,
@@ -428,19 +428,19 @@ The next hard part is sorting out your terminology.
 
 ## 6. Getting Connected
 
-It's pretty easy to convert a table *structure* to triples.
-The hard part is converting the table *contents*.
+It's pretty easy to convert a table _structure_ to triples.
+The hard part is converting the table _contents_.
 There are some identifiers in the table that would be better as URLs,
 and there's a bunch of terminology that would be better
 if it was linked to an ontology or other system.
 
-I'll start with the identifiers that are *local* to this data:
+I'll start with the identifiers that are _local_ to this data:
 subject_id and group_id.
 I can convert them to URLs by defining a prefix
 and then just using that prefix.
 I'll use string concatenation to update the table:
 
-```sql 
+```sql
 -- update subject and groupd IDs
 UPDATE data SET subject_id='ex:subject-' || subject_id;
 UPDATE data SET group_id='ex:group-' || group_id;
@@ -458,7 +458,7 @@ that while I was writing the Turtle conversion code later in this essay,
 I had to come back here and change these identifiers.
 The thing is that Turtle is often more strict than I expect
 about identifier syntax.
-Turtle identifiers *look* like
+Turtle identifiers _look_ like
 [CURIEs](https://en.wikipedia.org/wiki/CURIE),
 but they're actually
 [QNames](https://en.wikipedia.org/wiki/QName).
@@ -473,7 +473,7 @@ I didn't remember that the local part (aka "suffix", aka "NCName")
 can't start with a digit.
 So I tried to use "subject:12" and "group:1" as my identifiers.
 That worked fine until I generated Turtle.
-The Turtle *looked* fine,
+The Turtle _looked_ fine,
 so it took me quite a while to figure out why
 it looked very wrong when I converted it into RDXML format.
 
@@ -513,39 +513,39 @@ I'm going to do that hard work for you
 so we can keep moving.
 I'll add this table to `src/term.tsv`
 
-id | code | label
----|---|---
-obo:NCBITaxon_10116 | RAT | Rattus norvegicus
-obo:NCBITaxon_10090 | MOUSE | Mus musculus
-ex:F344N | F 344/N | F 344/N
-ex:B6C3F1 | B6C3F1 | B6C3F1
-obo:PATO_0000383 | FEMALE | female
-obo:PATO_0000384 | MALE | male
-obo:OBI_0600020 | HISTOPATHOLOGY | histology
-obo:UBERON_0002048 | LUNG | lung
-obo:UBERON_0007827 | NOSE | external nose
-obo:UBERON_0001235 | ADRENAL CORTEX | adrenal cortex
-obo:MPATH_268 | ADENOCARCINOMA | adenocarcinoma
-obo:MPATH_212 | INFLAMMATION | inflammation
-obo:MPATH_4 | NECROSIS | necrosis
-obo:PATO_0000396 | SEVERE | severe intensity
-obo:PATO_0000394 | MILD | mild intensity
-obo:PATO_0000395 | MODERATE | moderate intensity
-orcid:0000-0001-5139-5557 | JAO | James A. Overton
+| id                        | code           | label              |
+| ------------------------- | -------------- | ------------------ |
+| obo:NCBITaxon_10116       | RAT            | Rattus norvegicus  |
+| obo:NCBITaxon_10090       | MOUSE          | Mus musculus       |
+| ex:F344N                  | F 344/N        | F 344/N            |
+| ex:B6C3F1                 | B6C3F1         | B6C3F1             |
+| obo:PATO_0000383          | FEMALE         | female             |
+| obo:PATO_0000384          | MALE           | male               |
+| obo:OBI_0600020           | HISTOPATHOLOGY | histology          |
+| obo:UBERON_0002048        | LUNG           | lung               |
+| obo:UBERON_0007827        | NOSE           | external nose      |
+| obo:UBERON_0001235        | ADRENAL CORTEX | adrenal cortex     |
+| obo:MPATH_268             | ADENOCARCINOMA | adenocarcinoma     |
+| obo:MPATH_212             | INFLAMMATION   | inflammation       |
+| obo:MPATH_4               | NECROSIS       | necrosis           |
+| obo:PATO_0000396          | SEVERE         | severe intensity   |
+| obo:PATO_0000394          | MILD           | mild intensity     |
+| obo:PATO_0000395          | MODERATE       | moderate intensity |
+| orcid:0000-0001-5139-5557 | JAO            | James A. Overton   |
 
 And I'll add these prefixes to `src/prefix.tsv`:
 
-prefix | base
----|---
-rdf | http://www.w3.org/1999/02/22-rdf-syntax-ns#
-rdfs | http://www.w3.org/2000/01/rdf-schema#
-xsd | http://www.w3.org/2001/XMLSchema#
-owl | http://www.w3.org/2002/07/owl#
-obo | http://purl.obolibrary.org/obo/
-orcid | http://orcid.org/
-ex | https://example.com/
-subject | https://example.com/subject/
-group | https://example.com/group/
+| prefix  | base                                        |
+| ------- | ------------------------------------------- |
+| rdf     | http://www.w3.org/1999/02/22-rdf-syntax-ns# |
+| rdfs    | http://www.w3.org/2000/01/rdf-schema#       |
+| xsd     | http://www.w3.org/2001/XMLSchema#           |
+| owl     | http://www.w3.org/2002/07/owl#              |
+| obo     | http://purl.obolibrary.org/obo/             |
+| orcid   | http://orcid.org/                           |
+| ex      | https://example.com/                        |
+| subject | https://example.com/subject/                |
+| group   | https://example.com/group/                  |
 
 Now I can import these tables into SQL
 and use the term table as a FOREIGN KEY constraint
@@ -655,7 +655,7 @@ $ sqlite3 build/data.db <<< "SELECT * FROM linked_ids LIMIT 1;"
 ```
 
 I can also define a similar view for their "official" labels:
- 
+
 ```sql
 CREATE VIEW linked_data_label AS
 SELECT assay_datetime,
@@ -847,7 +847,7 @@ sitting next to other rows,
 without really linking together.
 
 The next thing I would do with this data
-is reorganized it based on the *thing* it's talking about.
+is reorganized it based on the _thing_ it's talking about.
 I know that:
 
 - there was an assay
@@ -1032,4 +1032,3 @@ $ git add --update
 $ git commit -m "Update README"
 $ quit
 ```
-

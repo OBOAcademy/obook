@@ -1,12 +1,15 @@
 # Developing an OBO Reference Ontology
 
 ### Warning
+
 These materials are under construction and incomplete.
 
 ## Prerequisites
+
 - Review tutorial on [Ontology Development Automation](automating-ontology-workflows.md)
 
 ## Preparation
+
 - TBD
 
 ## What is delivered as part of the course
@@ -14,6 +17,7 @@ These materials are under construction and incomplete.
 **Description:** Leading a new or existing OBO project; maybe reference ontology develoment?
 
 ### Learning objectives
+
 - detailed knowledge of OBO principles and best practises
 - use OBO Dashboard
 - use OBO Registry
@@ -23,7 +27,7 @@ These materials are under construction and incomplete.
 
 # Week 8: Ontology Development
 
-**First Instructor:** Nico Matentzoglu, Becky Jackson  
+**First Instructor:** Nico Matentzoglu, Becky Jackson
 
 ## Description
 
@@ -38,6 +42,7 @@ By the end of this session, you should be able to:
 ## Preparation
 
 Please complete the following and then read the section below:
+
 - [ROBOT Mini-Tutorial, part 2](../tutorial/robot-tutorial-2.md)
 - Software Carpentry: [Automation and Make](http://swcarpentry.github.io/make-novice/)
 
@@ -63,22 +68,21 @@ This series of steps can be turned into ROBOT commands:
 
 Since we can turn these steps into a series of commands, we can create a `Makefile` that stores these as "recipes" for our ontology release!
 
-
 - Review the ROBOT commands we've learned so far (Becky; review; 30 minutes)
-    - Week 5: [`report`](http://robot.obolibrary.org/report) and [`query`](http://robot.obolibrary.org/query)
-    - Week 6: [`convert`](http://robot.obolibrary.org/convert), [`extract`](http://robot.obolibrary.org/extract), and [`template`](http://robot.obolibrary.org/template)
-    - New: [`merge`](http://robot.obolibrary.org/merge), [`reason`](http://robot.obolibrary.org/reason), [`annotate`](http://robot.obolibrary.org/annotate), and [`diff`](http://robot.obolibrary.org/diff)
-    - [Chaining ROBOT commands](http://robot.obolibrary.org/chaining)
-    - Specifying [custom prefixes](http://robot.obolibrary.org/global#prefixes)
+  - Week 5: [`report`](http://robot.obolibrary.org/report) and [`query`](http://robot.obolibrary.org/query)
+  - Week 6: [`convert`](http://robot.obolibrary.org/convert), [`extract`](http://robot.obolibrary.org/extract), and [`template`](http://robot.obolibrary.org/template)
+  - New: [`merge`](http://robot.obolibrary.org/merge), [`reason`](http://robot.obolibrary.org/reason), [`annotate`](http://robot.obolibrary.org/annotate), and [`diff`](http://robot.obolibrary.org/diff)
+  - [Chaining ROBOT commands](http://robot.obolibrary.org/chaining)
+  - Specifying [custom prefixes](http://robot.obolibrary.org/global#prefixes)
 - Introduction to Makefiles & workflows (Becky; review; 30 minutes)
-    - Review Software Carpentry course content
-    - How can the ROBOT commands be combined to create an ontology release?
-    - Practice writing recipes using ROBOT commands
+  - Review Software Carpentry course content
+  - How can the ROBOT commands be combined to create an ontology release?
+  - Practice writing recipes using ROBOT commands
 - Using the ODK to [bootstrap a new ontology](https://github.com/INCATools/ontology-development-kit/blob/master/docs/CreatingRepo.md) (Nico; 45 minutes)
 - Introduction to the [OBO Foundry Registry](http://obofoundry.org/) (if time)
-
 
 ## Additional materials and resources
 
 ## Contributors
+
 - [Nico Matentzoglu](https://orcid.org/0000-0002-7356-1779)

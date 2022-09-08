@@ -39,7 +39,7 @@ The `or` keyword is to used to create a class expression that is the union of tw
 (WARNING: `or` is not supported by ELK reasoner)
 
 ![](../images/tutorials/dl-query/Figure64.png)
-  
+
 This is illustrated by the red area in the following Venn diagram:
 
 ![](../images/tutorials/dl-query/Figure65.png)

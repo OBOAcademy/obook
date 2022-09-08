@@ -10,22 +10,20 @@ For this class, we want to follow the design pattern for [specific_infectious_di
 1. Add the synonym: `cork worker's lung`
 1. Add the equivalence axiom according to the pattern specifications.
 
-`'extrinsic allergic alveolitis'
- and 'infectious disease'
- and ('disease has infectious agent' some Penicillium glabrum)`
+`'extrinsic allergic alveolitis' and 'infectious disease' and ('disease has infectious agent' some Penicillium glabrum)`
 
 1. Run the reasoner
 1. View the inferred hierarchy.
 1. Confirm that there are no unsatisifiable classes and everything looks okay.
 1. Save your work and create a pull request and reference issue #1639.
 
-### Add annotations and logical definition (equivalence axiom) to 
+### Add annotations and logical definition (equivalence axiom) to
 
 1. Create a new branch (named farmer-lung) and open mondo-edit.obo in Protege.
 1. Search for the term `'farmer's lung disease'`
 1. Similar to above, we want to add a logical axiom. In this case though, Farmer's lung can be caused by more than one infectious agent, so we'll add this as a subclassOf axiom:
- `'disease has infectious agent' some Penicillium glabrum`
-![image](https://user-images.githubusercontent.com/6722114/118717601-1f8d3200-b7db-11eb-9517-320a2e21445f.png)
+   `'disease has infectious agent' some Penicillium glabrum`
+   ![image](https://user-images.githubusercontent.com/6722114/118717601-1f8d3200-b7db-11eb-9517-320a2e21445f.png)
 
 1. Run the reasoner
 1. View the inferred hierarchy.
@@ -34,5 +32,3 @@ For this class, we want to follow the design pattern for [specific_infectious_di
 ![image](https://user-images.githubusercontent.com/6722114/118717934-8874aa00-b7db-11eb-86df-01a5823f7f7b.png)
 
 3. Save your work and create a pull request and reference issue [#1639](https://github.com/monarch-initiative/mondo/issues/1639).
-
-

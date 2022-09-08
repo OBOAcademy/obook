@@ -36,6 +36,7 @@ source .venv/bin/activate
 ```
 
 Then run:
+
 ```
 mkdocs serve
 ```
@@ -49,6 +50,7 @@ This content is available under the [Creative Commons CC0 Public Domain Dedicati
 ## Acknowledgements
 
 ### Critical Path Institute
+
 <img src="https://user-images.githubusercontent.com/7070631/122019745-049ee500-cdbc-11eb-9ed0-3ac3ca717d9b.png" data-canonical-src="https://user-images.githubusercontent.com/7070631/122019745-049ee500-cdbc-11eb-9ed0-3ac3ca717d9b.png" width="300" />
 
 Critical Path Institute (CPI) is an independent, nonprofit organisation dedicated to bringing together experts from regulatory agencies, industry, and academia to collaborate and improve the medical product development process.

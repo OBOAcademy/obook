@@ -24,12 +24,13 @@ To prepare our data for the following exercise, we run:
 ```
 make data
 ```
-We have provided a lot of comments in the `Makefile` if you want to follow along. This 
+
+We have provided a lot of comments in the `Makefile` if you want to follow along. This
 `Makefile` pulls together a large number of tricks you learned earlier in the course, so
 it is worth it! In essence, we:
+
 - download HP & Mondo and extract modules
 - transform all our data into OWL (CPath and HPOA)
-
 
 Now, we are ready to _deploy our containers using docker-compose_:
 
@@ -40,10 +41,12 @@ docker-compose up -d
 `docker-compose up` starts all the containers configured in your [docker-compose config](docker-compose.yml), in particular an instance of neo4j and one of the rdf4j, a popular framework for accessing triple stores. `-d` starts docker-compose in detached mode, so that you can use the terminal again after the containers have started up.
 
 ### RDF4J Setup
+
 After a few seconds of waiting, you should be able to visit your RDF4J Workbench in your Browser:
 http://localhost:8080/rdf4j-workbench
 
 Now we need to create a new repository to work with:
+
 1. Click on `New repository` in the menu on the left
 2. As `Type`, select `Memory Store + RDFS`
 3. As `ID`, type `obook`
@@ -58,7 +61,8 @@ make load
 
 After the process is complete, you can go back to your [obook repository](http://localhost:8080/rdf4j-workbench/repositories/obook), and you should be able to see that you have loaded a bit more than 80,0000 statements into the triple store. You can click on `Contexts` in the left menu, to see the different datasets you loaded, and click on one of them to see what they contain.
 
-### Neo4J: Loading and Exploration 
+### Neo4J: Loading and Exploration
+
 Next, we want to do is open neo4j in your browser: http://localhost:7473/browser/
 
 You are asked to log in; please use the following details:
@@ -79,11 +83,12 @@ CALL ebi.spot.neo4j2owl.owl2Import('file://cpath_template.owl','file://obook-neo
 
 After you have run this, you will get a confirmation that some data was loaded, and you should also see some `labels` on the left, like `Class` and `Entity`. You can explore the data a bit by yourself if you like, by clicking on these labels.
 
-Lets look at our `mhterm_disease` annotations. These are the links from our original CPATH dataset to the mapped Mondo IDs we created last time. Execute the following query: 
+Lets look at our `mhterm_disease` annotations. These are the links from our original CPATH dataset to the mapped Mondo IDs we created last time. Execute the following query:
 
 ```
 MATCH p=()-[r:mhterm_disease]->() RETURN p
 ```
+
 You will see a bunch of nodes (circles) connected by edges with labels (the lines). If you have a small screen, you may want to switch full screen (the two arrows pointing away from each other) and zoom out (bottom right) to get the whole picture.
 
 If you click on one of the nodes, you can see a grey circular menu appearing around the node; we will use this later - for now, just shift your attention to the metadata in the lower menu. As you can see, the CPATH metadata appears here mostly as so called node properties (similar to RDF annotation assertions to literal values). For example, you will see (at least if you click the little black arrow on the far right), that you OBOOK data item has a `studyid` like `DMD-1000` or a `usubjid` like `DMD-1000/0737794` (see screenshot below).
@@ -98,13 +103,13 @@ CALL ebi.spot.neo4j2owl.owl2Import('file://mondo.owl','file://obook-neo4j-config
 
 Once Mondo is loaded, you should play a bit with the new representation to get yourself to be more familiar:
 
-1. Click on `chronic obstructive pulmonary disease` (yes, you noticed correctly that the nodes representing diseases are now labelled because of the ontology). In the grey circle around the node, click the symbol for "Expand" (an X with arrows on the corners). 
+1. Click on `chronic obstructive pulmonary disease` (yes, you noticed correctly that the nodes representing diseases are now labelled because of the ontology). In the grey circle around the node, click the symbol for "Expand" (an X with arrows on the corners).
 2. Search for the diseases that emerged as a result, and click on `tracheal disease`, and expand that too. You will notice that now, two of your previously disconnected sections of CPath data are now connected with edges. And not only that, you even see more information emerging, such as associated anatomical locations (for example on the `tracheal disease` class).
 
 Lets get a bit into the weeds of cypher and look for all CPATH datapoints that pertain to thoracic diseases:
 
 ```
-MATCH (c:CPATH)-[r:mhterm_disease]->(d) 
+MATCH (c:CPATH)-[r:mhterm_disease]->(d)
 WHERE (d)-[:SUBCLASSOF*]->( {iri:"http://purl.obolibrary.org/obo/MONDO_0000651"})
 RETURN c,d LIMIT 25
 ```
@@ -140,7 +145,7 @@ RETURN c,p,d LIMIT 20
 To make our database a bit more readable, we can chose to add Neo4J Labels like this:
 
 ```
-MATCH (p:Class)-[r:SUBCLASSOF*]->(a:Class {iri:"http://purl.obolibrary.org/obo/HP_0000118"}) 
+MATCH (p:Class)-[r:SUBCLASSOF*]->(a:Class {iri:"http://purl.obolibrary.org/obo/HP_0000118"})
 set p :Phenotype
 RETURN p
 ```
@@ -148,7 +153,7 @@ RETURN p
 and:
 
 ```
-MATCH (p:Class)-[r:SUBCLASSOF*]->(a:Class {iri:"http://purl.obolibrary.org/obo/MONDO_0000001"}) 
+MATCH (p:Class)-[r:SUBCLASSOF*]->(a:Class {iri:"http://purl.obolibrary.org/obo/MONDO_0000001"})
 set p :Disease
 RETURN p
 ```
@@ -164,7 +169,7 @@ MATCH l=(p:Phenotype)-[r]-(d:Disease) RETURN l LIMIT 25
 
 ### RDF4J exploration
 
-In contrast to the Neo4J example we described above, all data has already been loaded. Let's to some 
+In contrast to the Neo4J example we described above, all data has already been loaded. Let's to some
 light querying to start with:
 
 ```
@@ -200,14 +205,14 @@ Lastly, like in the neo4j example, lets get all data items that are associated w
 
 As you can see, both approaches to knowledge graphs are somewhat different, but also similar in many ways. Lets look at the main differences from a OBO Semantic Engineer perspective:
 
-| Feature | Neo4J | RDF4J |
-| ------  | ----- | ----- |
-| Reasoning | You can do property paths, but not reasoning per se. However, a lot of what we consider useful reasoning can be done as a preprocessing step! | There are various entailment regimes that can be selected (we selected RDFS). Some Triple stores go beyond that and allow OWL RL or even OWL DL entailment regime! |
-| Querying | Cypher is a graph pattern matching language, and somewhat nicer than SPARQL (easier to learn for sure). The engine is supposedly much more optimised to graph queries and can hand huge amounts of data. | SPARQL is arguably a bit cumbersome, but there is a moment in most Semantic Engineering careers that will say: "We could have done all that with SPARQL". |
-| Loading data | Easy loading of all kinds of data, including RDF with [neosemantics](https://neo4j.com/labs/neosemantics/), CSV and JSON. Some very optimised forms of loading that are blazing fast (the tutorial used a custom module that is for educational purposes only, super slow). | Easy loading of data using the REST interface, but also using a bespoke admin console. Loading speed is ok, but not always in the Gigabyte range and beyond. |
-| Graph analytics | Blazing fast graph analytics using the Graph Data Science Toolkit | Not so much. |
-| UI | Shiny bubble and lines UI to explore your graph. Everyone loves it in the beginning, but the more your project progresses, the less relevant it will be. | Query Interface. A bit poor otherwise. But you can click on entities at least! |
-| License | Commercial, but some open options | Open! Eclipse Distribution License. |
+| Feature         | Neo4J                                                                                                                                                                                                                                                                       | RDF4J                                                                                                                                                              |
+| --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Reasoning       | You can do property paths, but not reasoning per se. However, a lot of what we consider useful reasoning can be done as a preprocessing step!                                                                                                                               | There are various entailment regimes that can be selected (we selected RDFS). Some Triple stores go beyond that and allow OWL RL or even OWL DL entailment regime! |
+| Querying        | Cypher is a graph pattern matching language, and somewhat nicer than SPARQL (easier to learn for sure). The engine is supposedly much more optimised to graph queries and can hand huge amounts of data.                                                                    | SPARQL is arguably a bit cumbersome, but there is a moment in most Semantic Engineering careers that will say: "We could have done all that with SPARQL".          |
+| Loading data    | Easy loading of all kinds of data, including RDF with [neosemantics](https://neo4j.com/labs/neosemantics/), CSV and JSON. Some very optimised forms of loading that are blazing fast (the tutorial used a custom module that is for educational purposes only, super slow). | Easy loading of data using the REST interface, but also using a bespoke admin console. Loading speed is ok, but not always in the Gigabyte range and beyond.       |
+| Graph analytics | Blazing fast graph analytics using the Graph Data Science Toolkit                                                                                                                                                                                                           | Not so much.                                                                                                                                                       |
+| UI              | Shiny bubble and lines UI to explore your graph. Everyone loves it in the beginning, but the more your project progresses, the less relevant it will be.                                                                                                                    | Query Interface. A bit poor otherwise. But you can click on entities at least!                                                                                     |
+| License         | Commercial, but some open options                                                                                                                                                                                                                                           | Open! Eclipse Distribution License.                                                                                                                                |
 
 Thanks to [neosemantics](https://neo4j.com/labs/neosemantics/), you don't really need to chose anymore; there is no reason not to have both running in your environment, they use the same data and can both be fired up simply using docker.
 

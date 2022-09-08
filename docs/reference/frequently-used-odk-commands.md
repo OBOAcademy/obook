@@ -3,7 +3,7 @@
 ## Updates the Makefile to the latest ODK
 
 ```
-sh run.sh make update_repo 
+sh run.sh make update_repo
 ```
 
 ## Recreates and deploys the automated documentation
@@ -33,7 +33,7 @@ sh run.sh make refresh-chebi
 ## Refresh all imports
 
 ```
-sh run.sh make refresh-imports 
+sh run.sh make refresh-imports
 ```
 
 ## Refresh all imports excluding large ones
@@ -59,8 +59,9 @@ sh run.sh make odkversion
 (of a specific file)
 
 ```
-sh run.sh make validate_profile_% 
+sh run.sh make validate_profile_%
 ```
+
 Example:
 
 ```

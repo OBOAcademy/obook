@@ -18,15 +18,15 @@ For this reference, we will use the cell ontology to highlight the key informati
 
 When you open the ontology on protege, you should land on the Active ontology tab, alternatively, it is available on the top as one of your tabs.
 
-
 ![](../images/reference/protege/protege-active-ontology-tab.png)
 
 ### Ontology Level Annotations
 
 Annotations on the active ontology tab are ontology level annotations and contain metadata about the ontology.
 This includes:
+
 1. title (name of the ontology)
-1. description 
+1. description
 1. license
 1. contributors (ideally this should be in ORCID but many ontologies use names instead)
 1. references (under rdfs:comment)
@@ -34,6 +34,6 @@ This includes:
 
 ## Entities tab
 
-Entities are where your "entries" in the ontology live and where you can add terms etc. 
+Entities are where your "entries" in the ontology live and where you can add terms etc.
 
 ![](../images/reference/protege/protege-entities-tab.png)

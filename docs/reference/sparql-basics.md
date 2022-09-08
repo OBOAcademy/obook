@@ -26,7 +26,6 @@ WHERE {
 
 Without the prefix. It means the exact same thing. But it looks nicer. Some people even go as far as adding entire entities into the prefix header:
 
-
 ```
 PREFIX label: <http://www.w3.org/2000/01/rdf-schema#label>
 
