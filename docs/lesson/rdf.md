@@ -1,15 +1,18 @@
 # Introduction to RDF
 
 **First Instructor:** James Overton  
-**Second Instructor:** Becky Jackson  
+**Second Instructor:** Becky Jackson
 
 ### Warning
+
 These materials are under construction and incomplete.
-	
+
 ## Description
+
 Modelling and querying data with RDF triples, and working with RDF using tables
 
 ## Topics
+
 - RDF modelling
 - RDFS
 - SPARQL
@@ -22,15 +25,15 @@ Modelling and querying data with RDF triples, and working with RDF using tables
 - Lesson 4 SPARQL
 
 ## Software Carpentry Lessons
+
 [Using Databases and SQL](http://swcarpentry.github.io/sql-novice-survey/)
 
 ## New Material
+
 - [Tables and Triples](https://oboacademy.github.io/obook/reference/tables-and-triples/)
 
 ## Optional material
+
 - [Linking data](https://oboacademy.github.io/obook/tutorial/linking-data/)
 
 ## Semantic Engineer Toolbox
-
-
-

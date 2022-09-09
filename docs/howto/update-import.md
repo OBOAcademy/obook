@@ -1,8 +1,8 @@
 # Update Imports Workflow
 
-This page discusses how to update the contents of your imports using the ODK, like adding or removing terms. 
+This page discusses how to update the contents of your imports using the ODK, like adding or removing terms.
 
-Note: This is a specialised how-to for ODK managed ontologies and is replicated from ODK docs to consolidate workflows in the obook. Not all ontologies use ODKs and many ontologies have their own workflows for imports, please also check with your local ontology documents and/or developers. 
+Note: This is a specialised how-to for ODK managed ontologies and is replicated from ODK docs to consolidate workflows in the obook. Not all ontologies use ODKs and many ontologies have their own workflows for imports, please also check with your local ontology documents and/or developers.
 
 Note: The extract function in ROBOT can also be used to extract subsets from onotlogies for modular imports without the use of the ODK. For details on that, please refer to the [ROBOT documentation](http://robot.obolibrary.org/extract)
 
@@ -16,6 +16,7 @@ Importing a new term is split into two sub-phases:
 2. Refreshing imports dynamically
 
 ### Declaring terms to be imported
+
 There are three ways to declare terms that are to be imported from an external ontology. Choose the appropriate one for your particular scenario (all three can be used in parallel if need be):
 
 1. Protege-based declaration
@@ -24,7 +25,7 @@ There are three ways to declare terms that are to be imported from an external o
 
 #### Protege-based declaration
 
-This workflow is to be avoided, but may be appropriate if the editor _does not have access to the ODK docker container_. 
+This workflow is to be avoided, but may be appropriate if the editor _does not have access to the ODK docker container_.
 This approach also applies to ontologies that use base module import approach.
 
 1. Open your ontology (edit file) in Protege (5.5+).
@@ -37,7 +38,6 @@ This approach also applies to ontologies that use base module import approach.
 
 Now you can use this term for example to construct logical definitions. The next time the imports are refreshed (see how to refresh [here](#Refresh-imports)), the metadata (labels, definitions, etc) for this term are imported from the respective external source ontology and becomes visible in your ontology.
 
-
 #### Using term files
 
 Every import has, by default a term file associated with it, which can be found in the imports directory. For example, if you have a GO import in `src/ontology/go_import.owl`, you will also have an associated term file `src/ontology/go_terms.txt`. You can add terms in there simply as a list:
@@ -49,7 +49,7 @@ GO:0008151
 
 Now you can run the [refresh imports workflow](#Refresh-imports)) and the two terms will be imported.
 
-#### Using the custom import template 
+#### Using the custom import template
 
 This workflow is appropriate if:
 
@@ -83,7 +83,8 @@ _WARNING_. Note that doing this is a _widespread antipattern_ (see related [issu
 
 If you want to refresh the import yourself (this may be necessary to pass the travis tests), and you have the ODK installed, you can do the following (using go as an example):
 
-First, you navigate in your terminal to the ontology directory (underneath src in your hpo root directory). 
+First, you navigate in your terminal to the ontology directory (underneath src in your hpo root directory).
+
 ```
 cd src/ontology
 ```
@@ -115,8 +116,8 @@ sh run.sh make IMP=true MIR=false PAT=false imports/go_import.owl -B
 ## Using the Base Module approach
 
 Since ODK 1.2.31, we support an entirely new approach to generate modules: Using base files.
-The idea is to only import axioms from ontologies that _actually belong to it_. 
-A base file is a subset of the ontology that only contains those axioms that nominally 
+The idea is to only import axioms from ontologies that _actually belong to it_.
+A base file is a subset of the ontology that only contains those axioms that nominally
 belong there. In other words, the base file does not contain any axioms that belong
 to another ontology. An example would be this:
 
@@ -144,25 +145,26 @@ Axiom 1: BFO:123 SubClassOf BFO:124
 Gets removed.
 
 The base file pipeline is a bit more complex then the normal pipelines, because
-of the logical interactions between the imported ontologies. This is solved by _first 
+of the logical interactions between the imported ontologies. This is solved by \_first
 merging all mirrors into one huge file and then extracting one mega module from it.
 
 Example: Let's say we are importing terms from Uberon, GO and RO in our ontologies.
 When we use the base pipelines, we
 
-1) First obtain the base (ususally by simply downloading it, but there is also an option now to create it with ROBOT)
-2) We merge all base files into one big pile
-3) Then we extract a single module `imports/merged_import.owl`
+1. First obtain the base (ususally by simply downloading it, but there is also an option now to create it with ROBOT)
+2. We merge all base files into one big pile
+3. Then we extract a single module `imports/merged_import.owl`
 
 The first implementation of this pipeline is PATO, see https://github.com/pato-ontology/pato/blob/master/src/ontology/pato-odk.yaml.
 
 To check if your ontology uses this method, check src/ontology/cl-odk.yaml to see if `use_base_merging: TRUE` is declared under `import_group`
 
-If your ontology uses Base Module approach, please use the following steps: 
+If your ontology uses Base Module approach, please use the following steps:
 
 First, add the term to be imported to the term file associated with it (see above "Using term files" section if this is not clear to you)
 
-Next, you navigate in your terminal to the ontology directory (underneath src in your hpo root directory). 
+Next, you navigate in your terminal to the ontology directory (underneath src in your hpo root directory).
+
 ```
 cd src/ontology
 ```
@@ -172,9 +174,9 @@ Then refresh imports by running
 ```
 sh run.sh make imports/merged_import.owl
 ```
+
 Note: if your mirrors are updated, you can run `sh run.sh make no-mirror-refresh-merged`
 
 This requires quite a bit of memory on your local machine, so if you encounter an error, it might be a lack of memory on your computer. A solution would be to create a ticket in an issue tracker requesting for the term to be imported, and your one of the local devs should pick this up and run the import for you.
 
 Lastly, restart Protege, and the term should be imported in ready to be used.
-

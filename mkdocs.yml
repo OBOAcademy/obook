@@ -61,7 +61,7 @@ nav:
           - GitHub Issue for OBO Engineers: tutorial/github-issues.md
           - Managing OBO ontology projects: tutorial/managing-ontology-project.md
           - Pull requests: tutorial/pull-requests.md
-      - Dealing with Semantic Data: 
+      - Dealing with Semantic Data:
           - From Tables to Linked Data: tutorial/linking-data.md
           - Basic SPARQL for OBO Engineers: tutorial/sparql.md
       - Command line:
@@ -116,17 +116,17 @@ nav:
       - Formatting your ontology annotations correctly: reference/formatting-license.md
       - OBO-style term annotation: reference/go-style-annotation-property-practice.md
       - Git:
-        - Intro to GitHub: reference/github-intro.md 
-        - GitHub Desktop: reference/github-desktop.md
-        - Git FAQ: reference/git-faq.md
+          - Intro to GitHub: reference/github-intro.md
+          - GitHub Desktop: reference/github-desktop.md
+          - Git FAQ: reference/git-faq.md
       - Semantic Engineering Toolbox: reference/semantic-engineering-toolbox.md
       - Tables and Triples: reference/tables-and-triples.md
       - Reasoning: reference/reasoning.md
       - A day in the life of an ontology curator: reference/ontology-curator.md
       - Protege interface: reference/protege-interface.md
-      - SPARQL: 
-        - SPARQL basics: reference/sparql-basics.md
-        - SPARQL templates: reference/sparql-reference.md
+      - SPARQL:
+          - SPARQL basics: reference/sparql-basics.md
+          - SPARQL templates: reference/sparql-reference.md
       - Tools for Managing Issues: reference/managing-issues.md
       - Release Artefacts: reference/release-artefacts.md
       - Synonyms: reference/synonyms-obo.md
@@ -150,4 +150,3 @@ nav:
       - New lesson template: config/template.md
       - Case studies for teaching: teaching/case-studies.md
 repo_url: https://github.com/OBOAcademy/obook/
-

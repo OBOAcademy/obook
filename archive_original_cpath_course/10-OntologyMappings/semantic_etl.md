@@ -15,16 +15,17 @@ Semantic Data Engineering or Semantic Extract-Transform-Load (ETL) is an enginee
 
 The following glossary only says how we use the terms we are defining, not how they are defined by some higher authority.
 
-| Term | Definition | Example |
-| ---- | ----- | ----- |
-| Entity | An entity is a thing in the world, like a molecule, or something more complex, like a disease. Entities do not have to be material, they can be processes as well, like cell proliferation. | Marfan syndrome, H2O molecule, Ring finger, Phone |
-| Term | A term is a sequence of characters (string) that refers to an *entity* in a precise way. | SMOKER (referring to the role of being a smoker), HP:0004934 (see explanations below) |
-| Relation | A link between two (or more) entities that signifies some kind of interaction. | `:A :loves :B`, `:smoking :causes :cancer` |
-| Property | A type of relation. | The `:causes` in `:smoking :causes :cancer` |
+| Term     | Definition                                                                                                                                                                                  | Example                                                                               |
+| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| Entity   | An entity is a thing in the world, like a molecule, or something more complex, like a disease. Entities do not have to be material, they can be processes as well, like cell proliferation. | Marfan syndrome, H2O molecule, Ring finger, Phone                                     |
+| Term     | A term is a sequence of characters (string) that refers to an _entity_ in a precise way.                                                                                                    | SMOKER (referring to the role of being a smoker), HP:0004934 (see explanations below) |
+| Relation | A link between two (or more) entities that signifies some kind of interaction.                                                                                                              | `:A :loves :B`, `:smoking :causes :cancer`                                            |
+| Property | A type of relation.                                                                                                                                                                         | The `:causes` in `:smoking :causes :cancer`                                           |
 
 ## Getting the data
 
 As a Semantic Engineer, you typically coordinate the data collection from three largely separate sources:
+
 1. Unstructured text, for example a corpus of scientific literature
 2. External biological databases, such as [STRING](https://string-db.org/), a database of Protein-Protein Interaction Networks.
 3. Manual in-house [bio-curation](https://en.wikipedia.org/wiki/Biocuration) efforts, i.e. the manual translation and integration of information relevant to biology (or medicine) into a database.
@@ -39,7 +40,8 @@ The discipline that is concerned with techniques for extracting information from
 
 NLP is a super exciting and vast engineering discipline which goes beyond the scope of this course. NLP is concerned with many problems such as document classification, speech recognition and language translation. In the context of information extraction, we are particularly interested in Named Entity Recognition (NER), and Relationship Extraction (ER).
 
-#### [Named Entity Recognition](https://monkeylearn.com/blog/named-entity-recognition/) 
+#### [Named Entity Recognition](https://monkeylearn.com/blog/named-entity-recognition/)
+
 Named Entity Recognition (NER) is the task of identifying and categorising entities in text. NER tooling provides functionality to first isolate parts of sentence that correspond to things in the world, and then assigning them to categories (e.g. Drug, Disease, Publication).
 
 For example, consider this sentence:
@@ -68,8 +70,8 @@ _Interesting sources for further reading:_
 
 #### [Relationship extraction](http://nlpprogress.com/english/relationship_extraction.html)
 
-Relationship extraction (RE) is the task of extracting semantic relationships from text. 
-RE is an important component for the construction of Knowledge Graphs from the Scientific Literature, a task that many Semantic Data Engineering projects pursue to  augment or inform their manual curation processes. 
+Relationship extraction (RE) is the task of extracting semantic relationships from text.
+RE is an important component for the construction of Knowledge Graphs from the Scientific Literature, a task that many Semantic Data Engineering projects pursue to augment or inform their manual curation processes.
 
 _Interesting sources for further reading:_
 
@@ -82,7 +84,7 @@ _Interesting sources for further reading:_
 - In-house biocuration. [Biocuration](https://en.wikipedia.org/wiki/Biocuration#:~:text=Biocuration%20is%20the%20field%20of,biocurators%2C%20software%20developers%20and%20bioinformaticians.) is the task of manual translation and integration of information relevant to biology (or medicine) into some kind of database form. Biocuration can take many forms:
   - The curation of scientific literature, i.e. extracting structured metadata from scientific papers to increase discoverability of relevant knowledge. The object of the curation is usually a particular publication, which goes through a triage process (Is the paper relevant to my problem? Is it good enough?), an initial metadata extraction phase (titles, authors, etc), and eventually to extracting the scientific knowledge (not unlike what the Named Entity Recongnition and Relation Extraction procedures described [above](#Information-Extraction-from-text)) do.
   - The focussed curation of specific scientific entities, such as diseases. For example, you may be interested in discovering all therapeutic interventions / drugs used for treating a specific disease.
-  
+
 ## Integrating data
 
 There is a huge amount of literature and tutorials on the topic of integrating data, the practice of consolidating data from disparate sources into a single dataset. We want to emphasise here two _aspects_ of data integration, which are of particular importance to the Semantic Data engineer.
@@ -103,6 +105,7 @@ As in the Phenotype[X-linked] Nettleship-Falls form of Phenotype[ocular albinism
 We could end up, for example, resolving ocular albinism to [HP:0001107](https://monarchinitiative.org/phenotype/HP:0001107).
 
 There are a lot of materials about Entity Resolution in general:
+
 - https://www.districtdatalabs.com/basics-of-entity-resolution
 - https://www.sciencedirect.com/topics/computer-science/entity-resolution
 
@@ -111,6 +114,7 @@ In effect the term _Ontology Mapping_, which is the focus of this lesson, is _En
 ### Knowledge Graph / Ontology merging
 
 Knowledge, Knowledge Graph or Ontology Merging are the disciplines concerned with combining all your data sources into a semantically coherent whole. This is a very complex research area, in particular to do this in a way that is semantically consistent. There are essentially two separate problems to be solved to achieve semantic merging:
+
 1. The entities aligned during the entity resolution process must be aligned in the semantically correct way: if you you use logical equivalence to align them (`owl:equivalentClasses`) the classes must mean absolutely the same thing, or else you may run into the [hairball problem](https://www.biorxiv.org/content/10.1101/048843v3), in essence faulty equivalence cliques. In cases of close, narrow or broadly matching classes, the respective specialised semantically correct relationships need to be used in the merging process.
 2. The axioms of the merged ontologies must be logically consistent. For example, one ontology may say: _a disease is a material entity_. Another: _a disease is a process_. A background, or upper, ontology such as the ubiquitous [Basic Formal Ontology (BFO)](http://www.obofoundry.org/ontology/bfo.html) furthermore says that a _process is not a material entity and vice versa_. Merging this two ontologies would cause logical inconsistency.
 

@@ -15,6 +15,7 @@ Note: Work on this document is still in progress, items that are not linked are 
 ## Learning
 
 ### Learning about Ontologies
+
 1. [Fundamentals of Ontologies](../explanation/intro-to-ontologies.md)
 
 ### Learning Git and GitHub
@@ -31,7 +32,7 @@ Note: Work on this document is still in progress, items that are not linked are 
 1. [Browse and Search](../howto/protege-browse-search.md)
 1. [DL query](../tutorial/basic-dl-query.md)
 1. [Editing Terms](../howto/edit-in-protege.md)
-1. [Creating New Terms](../howto/create-new-term.md) 
+1. [Creating New Terms](../howto/create-new-term.md)
 1. [Adding disjointness](../tutorial/disjointness.md)
 1. [Logical axiomatization of classes & use of reasoning](../explanation/logical-axiomatization.md)
 1. [Ontology Relations](../lesson/modelling-with-object-properties.md)

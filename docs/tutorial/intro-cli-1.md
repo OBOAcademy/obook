@@ -42,7 +42,7 @@ We are not going to discuss here in any detail what the command line is. We will
 The basic idea behind the command line is that you run a command to achieve a goal. Among the most common goals relevant to you as a semantic engineer will be:
 
 1. Navigating the file system (changing directories, logging into remote servers and more)
-2. Reading and writing files 
+2. Reading and writing files
 3. Searching stuff
 
 Most commands result in some kind of printed statement. Lets try one. Open your terminal (a terminal is the program you use to enter commands. For a nice overview of how shell, terminal, command line and console relate, see [here](https://www.geeksforgeeks.org/difference-between-terminal-console-shell-and-command-line)). On Mac, you can type CMD+Space to search for programs and then type "terminal". For this tutorial we use the default Terminal.app, but there are many others, including [iterm2](https://iterm2.com/). For this introduction, it does not matter which terminal you use. When first opening the terminal you will see something like this:
@@ -146,7 +146,7 @@ Now if we list the contents of our current directory again (`ls -l`), we will se
 mv tutorial-my my-tutorial
 ```
 
-Now, lets enter our newly created directory using the _c_hange _d_irectory command (`cd`), and create another sub-directory in `my-tutorial`, called "data" (`mkdir data`):
+Now, lets enter our newly created directory using the \_c_hange \_d_irectory command (`cd`), and create another sub-directory in `my-tutorial`, called "data" (`mkdir data`):
 
 ```console
 cd my-tutorial
@@ -171,7 +171,7 @@ Now, let's get into something more advanced: downloading files.
 
 ## Downloading and searching files
 
-Our first task is to download the famous Human Phenotype Ontology Gene to Phenotype Annotations (aka HPOA). As you should already now, whenever we download ontologies, or ontology related files, we should always use a persistent URL, if available! This is the one for HPOA: `http://purl.obolibrary.org/obo/hp/hpoa/genes_to_phenotype.txt`. 
+Our first task is to download the famous Human Phenotype Ontology Gene to Phenotype Annotations (aka HPOA). As you should already now, whenever we download ontologies, or ontology related files, we should always use a persistent URL, if available! This is the one for HPOA: `http://purl.obolibrary.org/obo/hp/hpoa/genes_to_phenotype.txt`.
 
 There are two very popular commands for downloading content: `curl` and `wget`. I think most of my colleagues prefer `curl`, but I like `wget` because it simpler for beginners. So I will use it here. Lets us try downloading the file!
 
@@ -184,9 +184,8 @@ The `-O` parameter is optional and specifies a filename. If you do not add the p
 You can also use the curl equivalent of the wget command;
 
 ```console
-curl -L http://purl.obolibrary.org/obo/hp/hpoa/genes_to_phenotype.txt --output genes_to_phenotype.txt 
+curl -L http://purl.obolibrary.org/obo/hp/hpoa/genes_to_phenotype.txt --output genes_to_phenotype.txt
 ```
-
 
 Try before reading on: Exercises!
 
@@ -236,12 +235,11 @@ You will see a list of hundreds of lines out output. Each line corresponds to a 
 ```
 grep is case sensitive. It wont find matches like Diabetes, with capital D!
 
-Use the `-i` parameter in the grep command to instruct grep to 
+Use the `-i` parameter in the grep command to instruct grep to
 perform case insensitive matches.
 ```
 
 There is a lot more to grep than we can cover here today, but one super cool thing is searching across an entire directory.
-
 
 ```console
 grep -r "Elevated circulating follicle" .
@@ -256,7 +254,7 @@ Assuming you are in the `data` directory, you should see something like this:
 ./hp.obo:name: Elevated circulating follicle stimulating hormone level
 ```
 
-There are two new aspects to the command here: 
+There are two new aspects to the command here:
 
 1. The `-r` option ("recursive") allows is to search a directory **and all directories within in**.
 2. The `.` in the beginning. Remember, in the previous use of the `grep` command we had the name of a file in the place where now the `.` is. The `.` means "this directory" - i.e. the directory you are in right now (if lost, remember `pwd`).
@@ -302,7 +300,7 @@ BNC1
 C14ORF39
 ```
 
-What is happening here? 
+What is happening here?
 
 1. `grep` is looking for "Elevated circulating follicle" in all files in the directory, then "|" is passing the output on to
 2. `cut`, which extracts the second column of the table (how cool?), then "|" is passing the output on to
@@ -328,7 +326,7 @@ The last critical feature of the command line we cover today is the "file redire
 
 ```console
 matentzn@mbp.local:~/my-tutorial/data $ grep "Elevated circulating follicle" genes_to_phenotype.txt | cut -f2 | sort | uniq | head -3 > gene.txt
-matentzn@mbp.local:~/my-tutorial/data $ head gene.txt 
+matentzn@mbp.local:~/my-tutorial/data $ head gene.txt
 AR
 BNC1
 C14ORF39

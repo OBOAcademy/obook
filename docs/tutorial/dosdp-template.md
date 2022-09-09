@@ -2,7 +2,7 @@
 
 Note: This is an updated Version of Jim Balhoff's DOSDP tutorial [here](https://github.com/INCATools/dosdp-tools/wiki/Generating-ontology-terms-using-a-pattern/_edit).
 
-The main use case for `dosdp-tools` (and the [DOS-DP framework](https://github.com/dosumis/dead_simple_owl_design_patterns)) is managing a set of ontology terms, which all follow a common logical pattern, by simply collecting the unique aspect of each term as a line in a spreadsheet. For example, we may be developing an ontology of environmental exposures. We would like to have terms in our ontology which represent exposure to a variety of stressors, such as chemicals, radiation, social stresses, etc. 
+The main use case for `dosdp-tools` (and the [DOS-DP framework](https://github.com/dosumis/dead_simple_owl_design_patterns)) is managing a set of ontology terms, which all follow a common logical pattern, by simply collecting the unique aspect of each term as a line in a spreadsheet. For example, we may be developing an ontology of environmental exposures. We would like to have terms in our ontology which represent exposure to a variety of stressors, such as chemicals, radiation, social stresses, etc.
 
 ## Creating an ontology of environmental exposures
 
@@ -54,9 +54,9 @@ To support this, we simply need to declare the ChEBI OWL file as an `owl:import`
 
 Creating terms by hand like we just did works fine, and relying on the reasoner for the classification will save us a lot of trouble and maintain correctness as our ontology grows. But since all the terms use the same logical pattern, it would be nice to keep this in one place; this will help make sure we always follow the pattern correctly when we create new concepts. We really only need to store the list of inputs (e.g. chemicals) in order to create all our exposure concepts. As we will see later, we may also want to manage separate sets of terms that follow other, different, patterns. To do this with `dosdp-tools`, we need three main files: a **pattern template**, a spreadsheet of **pattern fillers**, and a **source ontology**. You will also usually need a file of **prefix definitions** so that the tool knows how to expand your shortened identifiers into IRIs.
 
-For our chemical exposures, getting the **source ontology** is easy: just download [chebi.owl](http://purl.obolibrary.org/obo/chebi.owl). *Note—it's about 450 MB.*
+For our chemical exposures, getting the **source ontology** is easy: just download [chebi.owl](http://purl.obolibrary.org/obo/chebi.owl). _Note—it's about 450 MB._
 
-For our **pattern fillers spreadsheet**, we just need to make a tab-delimited file containing the chemical stressors for which we need exposure concepts. The file needs a column for the term IRI to be used for the generated class (*this column is always called `defined_class`*), and also a column for the chemical to reference (*choose a label according to your data model*). It should look like this:
+For our **pattern fillers spreadsheet**, we just need to make a tab-delimited file containing the chemical stressors for which we need exposure concepts. The file needs a column for the term IRI to be used for the generated class (_this column is always called `defined_class`_), and also a column for the chemical to reference (_choose a label according to your data model_). It should look like this:
 
 ```
 defined_class input
@@ -73,31 +73,31 @@ The trickiest part to DOS-DP is creating your **pattern template** (but it's not
 # We can provide a name for this pattern here.
 pattern_name: exposure_with_input
 
-# In 'classes', we define the terms we will use in this pattern. 
-# In the OBO community the terms often have numeric IDs, so here 
+# In 'classes', we define the terms we will use in this pattern.
+# In the OBO community the terms often have numeric IDs, so here
 # we can provide human-readable names we can use further in the pattern.
 # The key is the name to be used; the value is the ID in prefixed form (i.e. a CURIE).
 classes:
   exposure event: ExO:0000002
   Thing: owl:Thing
 
-# Use 'relations' the same way as 'classes', 
+# Use 'relations' the same way as 'classes',
 # but for the object properties used in the pattern.
 relations:
   has input: RO:0002233
 
-# The 'vars' section defines the various slots that can be 
-# filled in for this pattern. We have only one, which we call 'input'. 
-# The value is the range, meaning the class of things that are valid 
-# values for this pattern. By specifying owl:Thing, we're allowing any 
-# class to be provided as a variable filler. You need a column in your 
+# The 'vars' section defines the various slots that can be
+# filled in for this pattern. We have only one, which we call 'input'.
+# The value is the range, meaning the class of things that are valid
+# values for this pattern. By specifying owl:Thing, we're allowing any
+# class to be provided as a variable filler. You need a column in your
 # spreadsheet for each variable defined here, in addition to the `defined class` column.
 vars:
-  input: 'Thing'
+  input: "Thing"
 
-# We can provide a template for an `rdfs:label` value to generate 
-# for our new term. dosdp-tools will search the source ontology 
-# to find the label for the filler term, and fill it into the 
+# We can provide a template for an `rdfs:label` value to generate
+# for our new term. dosdp-tools will search the source ontology
+# to find the label for the filler term, and fill it into the
 # name template in place of the %s.
 name:
   text: "exposure to %s"
@@ -111,11 +111,11 @@ def:
   vars:
     - input
 
-# Here we can generate a logical axiom for our new concept. Create an 
+# Here we can generate a logical axiom for our new concept. Create an
 # expression using OWL Manchester syntax. The expression can use any
-# of the terms defined at the beginning of the pattern. A reference 
+# of the terms defined at the beginning of the pattern. A reference
 # to the variable value will be inserted in place of the %s.
-equivalentTo: 
+equivalentTo:
   text: "'exposure event' and 'has input' some %s"
   vars:
     - input
@@ -142,6 +142,7 @@ This will apply the pattern to each line in your spreadsheet, and save the resul
 Well... you're sort of done. But wouldn't it be nice if your exposure ontology included some information about the chemicals you referenced? Without this our reasoner can't classify our exposure concepts. As we said above, we could add an `owl:import` declaration and load all of ChEBI, but your exposure ontology has three classes and ChEBI has over 120,000 classes. Instead, we can use the [ROBOT](https://github.com/ontodev/robot) tool to extract a module of just the relevant axioms from ChEBI. Later, we will also see how to use ROBOT to merge the outputs from multiple DOS-DP patterns into one ontology. You can download ROBOT from [its homepage](https://github.com/ontodev/robot).
 
 ## Extracting a module from the source ontology
+
 ROBOT has a few different methods for extracting a subset from an ontology. We'll use the Syntactic Locality Module Extractor (SLME) to get a set of axioms relevant to the ChEBI terms we've referenced. ROBOT will need a file containing the list of terms. We can use a Unix command to get these out of our spreadsheet file:
 
 ```bash
@@ -186,7 +187,7 @@ relations:
   has role: RO:0000087
 
 vars:
-  input: 'Thing'
+  input: "Thing"
 
 name:
   text: "exposure to %s"
@@ -198,11 +199,11 @@ def:
   vars:
     - input
 
-equivalentTo: 
+equivalentTo:
   text: "'exposure event' and 'has input' some ('has role' some %s)"
   vars:
     - input
-``` 
+```
 
 Let's create an [input file](https://raw.githubusercontent.com/INCATools/dosdp-tools/master/src/test/resources/tutorial/exposure_with_input_with_role.tsv) for this pattern, with a single filler, [neurotoxin](http://purl.obolibrary.org/obo/CHEBI_50910):
 
@@ -238,4 +239,5 @@ robot merge --input exposure_with_input.owl --input exposure_with_input_with_rol
 If you open the new `exposo.owl` in Protégé and run the reasoner, you'll now see 'exposure to sarin' classified under both 'exposure to chemical substance' and also 'exposure to neurotoxin'.
 
 ## Conclusion
+
 By using `dosdp-tools` and `robot` together, you can effectively develop ontologies which compose parts of ontologies from multiple domains using standard patterns. You will probably want to orchestrate the types of commands used in this tutorial within a Makefile, so that you can automate this process for easy repeatability.

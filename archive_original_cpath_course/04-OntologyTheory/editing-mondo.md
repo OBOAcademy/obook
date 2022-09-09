@@ -1,5 +1,4 @@
-Editing Mondo
-=============
+# Editing Mondo
 
 Next you are going to practice some basic editing in Mondo, on your branch.
 
@@ -16,4 +15,3 @@ Next you are going to practice some basic editing in Mondo, on your branch.
 1.  Create a branch in Mondo and relabel this class: <https://github.com/monarch-initiative/mondo/issues/2689>
 
 2.  Do a pull request
-

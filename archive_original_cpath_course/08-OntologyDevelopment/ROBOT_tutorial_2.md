@@ -1,16 +1,18 @@
 # ROBOT Mini-Tutorial II
 
 In week 6, we got some hands-on experience with ROBOT using `convert`, `extract`, and `template`. This week, we will learn four new ROBOT commands:
-* [Annotate](http://robot.obolibrary.org/annotate)
-* [Merge](http://robot.obolibrary.org/merge)
-* [Reason](http://robot.obolibrary.org/reason)
-* [Diff](http://robot.obolibrary.org/diff)
+
+- [Annotate](http://robot.obolibrary.org/annotate)
+- [Merge](http://robot.obolibrary.org/merge)
+- [Reason](http://robot.obolibrary.org/reason)
+- [Diff](http://robot.obolibrary.org/diff)
 
 The goal of these and previous commands is to build up to creating an ontology release workflow.
 
 Before starting this tutorial, either:
-* make sure Docker is running and you are in the container
-* [download and install ROBOT](http://robot.obolibrary.org/) for your operating system
+
+- make sure Docker is running and you are in the container
+- [download and install ROBOT](http://robot.obolibrary.org/) for your operating system
 
 To start, we will be working in the same folder as the first ROBOT Mini-Tutorial (this may be the `06-Ontology-Development` folder). Navigate to this folder in your terminal and list the contents of the current directory by running `ls`. You should see `catalog-v001.xml` listed as one of these files. We want to delete this so that we can fix the ontology IRI problem we ran into last week! Before going any further with this tutorial, do this by running either `del catalog-v001.xml` for Windows or `rm catalog-v001.xml` if you're using Docker, MacOS, or other Linux system.
 
@@ -25,6 +27,7 @@ The `annotate` command allows you to attach metadata to your ontology in the for
 As we discussed during week 6, ontology IRIs are very important! We saw how importing an ontology without an IRI into another ontology without an IRI can cause some problems in the `catalog-v001.xml` file. We're going to fix that problem by giving IRIs to both our `animals.owl` and `animals2.owl` files.
 
 Let's start with `animals.owl`:
+
 ```
 robot annotate --input animals.owl \
   --ontology-iri http://example.com/animals.owl \
@@ -33,7 +36,7 @@ robot annotate --input animals.owl \
 
 You'll notice we gave the same file name as the input file; we're just updating our previous file so we don't need to do this in a separate OWL file.
 
-On your own, give `animals2.owl` the ontology IRI `http://example.com/animals2.owl`. Remember that, in reality, we always want our ontology IRIs to be *resolvable*, so these would be pretty bad IRIs for an actual ontology.
+On your own, give `animals2.owl` the ontology IRI `http://example.com/animals2.owl`. Remember that, in reality, we always want our ontology IRIs to be _resolvable_, so these would be pretty bad IRIs for an actual ontology.
 
 Let's fix our import statement now. Open `animals2.owl` in Protégé and go to the **Entities** tab. You'll see that even though we still have the import statement in the **Active ontology** tab, the top-level terms are no longer labeled. Since we changed the ontology IRI, Protégé can no longer resolve our local file (because the `catalog-v001.xml` file was not updated). Go back to the **Active ontology** tab and click the X to the right of our original import. Then, re-add `animals.owl` as an import using the same steps as last time. When you return to the **Entities** tab, you'll once again see the labels of the top-level terms.
 
@@ -56,9 +59,10 @@ Go ahead and open or reload `animals.owl` in Protege. You'll see in the **Active
 ### Ontology Annotations
 
 In addition to ontology and version IRIs, you may also want to add some other metadata to your ontology. For example, when we were introduced to `report`, we added a description to the ontology to fix one of the report problems. The three ontology annotations that are required by the OBO Foundry are:
-* Title (`dc11:title`)
-* License (`dc:license`)
-* Description (`dc11:description`)
+
+- Title (`dc11:title`)
+- License (`dc:license`)
+- Description (`dc11:description`)
 
 These three annotation properties all come from the [Dublin Core](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/), but they have slightly different namespaces. This is because DC is split into two parts: the `/terms/` and `/elements/1.1/` namespaces. Just remember to double check that you're using the correct namespace. If you click on the DC link, you can find the complete list of DC terms in their respective namespaces.
 
@@ -70,7 +74,7 @@ Let's go ahead and add a title and description to our `animals.owl` file. We'll 
 robot annotate --input animals.owl \
   --annotation dc11:title "Animal Ontology" \
   --annotation dc11:description "An ontology about animals" \
-  --output animals.owl 
+  --output animals.owl
 ```
 
 `--annotation` adds these as strings, but remember that an annotation can also point to an link or IRI. We want our license to be a link, so we'll use `--link-annotation` instead to add that:
@@ -89,7 +93,7 @@ When you open `animals.owl` in Protégé again, you'll see these annotations add
 
 ## Merge
 
-We've already learned how to include external ontologies as imports. Usually, for the released version of an ontology, the imports are *merged in* so that all contents are in one file.
+We've already learned how to include external ontologies as imports. Usually, for the released version of an ontology, the imports are _merged in_ so that all contents are in one file.
 
 Another reason you may want to merge two ontologies is if you're adding new terms to an ontology using `template`, like how we created new animal terms in `animals2.tsv` last time. We're going to demonstrate two methods of merging now. The first involves merging two (or more!) separate files and the second involves merging all imports into the current input ontology.
 
@@ -103,17 +107,17 @@ Continuing with the `animals.owl` file we created last week, now run the followi
 robot merge --input animals.owl --input animals-new.owl --output animals-full.owl
 ```
 
-When you just import an external ontology into your ontology, you'll notice in the Protégé class hierarchy that all terms from the external ontology are a less-bold text than internal terms. This can be seen when you open `animals2.owl`, where we imported `animals.owl`. This is simply Protégé's way of telling us that these terms are not part of *your current ontology*. Now that we've merged these two ontologies together, when you open `animals-full.owl` in Protégé, you'll see that *all* the terms are bold.
+When you just import an external ontology into your ontology, you'll notice in the Protégé class hierarchy that all terms from the external ontology are a less-bold text than internal terms. This can be seen when you open `animals2.owl`, where we imported `animals.owl`. This is simply Protégé's way of telling us that these terms are not part of _your current ontology_. Now that we've merged these two ontologies together, when you open `animals-full.owl` in Protégé, you'll see that _all_ the terms are bold.
 
 By default, the output ontology will get the ontology IRI of the first input ontology. We picked `animals.owl` as our first ontology here because this is the ontology that we're adding terms to, so we want our new output ontology to replace the original while keeping the same IRI. `merge` will also copy over all the ontology annotations from `animals.owl` (the first input) into the new file. The annotations from `animals2.owl` are ignored, but we'll talk more about this in our class session.
 
 If we were editing an ontology in the wild, we'd probably now replace the original with this new file using `cp` or `copy`. For now, don't replace `animals.owl` because we'll need it for this next part.
 
-*IMPORTANT*: Be very careful to check that the format is the same if you're replacing a file! Remember, you can always output OWL Functional syntax or another syntax by ending your output with `.ofn`, for example: `--output animals-full.ofn`.
+_IMPORTANT_: Be very careful to check that the format is the same if you're replacing a file! Remember, you can always output OWL Functional syntax or another syntax by ending your output with `.ofn`, for example: `--output animals-full.ofn`.
 
 ### Merging Imports
 
-When we want to merge all our imports into our working ontology, we call this *collapsing the import closure*. Luckily (since we're lazy), you don't need to type out each of your imports as an input to do this.
+When we want to merge all our imports into our working ontology, we call this _collapsing the import closure_. Luckily (since we're lazy), you don't need to type out each of your imports as an input to do this.
 
 We already have `animals.owl` imported into `animals2.owl`. Let's collapse the import closure:
 
@@ -127,11 +131,12 @@ Even though we gave this a different file name, if you open `animals-full-2.owl`
 
 ## Reason
 
-As we saw in the prepwork for Week 5, running a reasoner in Protégé creates an inferred class hierarchy. In the OBO Foundry, releases versions of ontologies usually have this inferred hierarchy *asserted*, so you see the full inferred hierarchy when you open the ontology without running the reasoner. ROBOT `reason` allows us to output a version of the ontology with these inferences asserted.
+As we saw in the prepwork for Week 5, running a reasoner in Protégé creates an inferred class hierarchy. In the OBO Foundry, releases versions of ontologies usually have this inferred hierarchy _asserted_, so you see the full inferred hierarchy when you open the ontology without running the reasoner. ROBOT `reason` allows us to output a version of the ontology with these inferences asserted.
 
 As we discussed, ELK and HermiT are the two main reasoners you'll be using. Instead of using our example ontologies (the asserted and inferred hierarchies for these will look exactly the same), we're going to use another ontology from the **Ontologies 101** tutorial from week 5. Navigate back to that directory and then navigate to `BDK14_exercises/basic-classification`.
 
 Like running the reasoner in Protégé, running `reason` does three things:
+
 1. Check for inconsistency
 2. Check for unsatisfiable classes
 3. Assert the inferred class hierarchy
@@ -176,6 +181,7 @@ If you just open `reasoned.owl` in Protégé, you won't really notice a differen
 ## Diff
 
 The `diff` command can be used to compare the axioms in two ontologies to see what has been added and what has been removed. While the diffs on GitHub are useful for seeing what changed, it can be really tough for a human to read the raw OWL formats. Using ROBOT, we can output these diffs in a few different formats (using the `--format` option):
+
 - `plain`: plain text with just the added and removed axioms listed in OWL functional syntax (still tough for a human to read, but could be good for passing to other scripts)
 - `pretty`: similar to `plain`, but the IRIs are replaced with CURIEs and labels where available (still hard to read)
 - `html`: a nice, sharable HTML file with the diffs sorted by term
@@ -192,4 +198,4 @@ robot diff --left ubiq-ligase-complex.owl \
 
 Open `diff.html` in your browser side-by-side with `reasoned.owl` and you can see how the changes look in both.
 
-*Homework question*: Running `reason` should assert inferences, yet there are some removed axioms in our diff. Why do you think these axioms were removed?
+_Homework question_: Running `reason` should assert inferences, yet there are some removed axioms in our diff. Why do you think these axioms were removed?

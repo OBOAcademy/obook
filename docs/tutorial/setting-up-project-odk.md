@@ -18,7 +18,6 @@ You have:
 
 A recording of a demo of creating a ODK-repo is available [here](https://www.youtube.com/watch?v=cd7750JVDaw)
 
-
 ## Your first repository
 
 1. Create temporary directory to get started
@@ -49,7 +48,7 @@ title: "Cat Anatomy Ontology"
 github_org: obophenotype
 git_main_branch: main
 repo: cat_anatomy_ontology
-release_artefacts: 
+release_artefacts:
   - base
   - full
   - simple
@@ -59,11 +58,11 @@ export_formats:
   - obo
   - json
 import_group:
-  products: 
+  products:
     - id: ro
     - id: pato
     - id: omo
-robot_java_args: '-Xmx8G'
+robot_java_args: "-Xmx8G"
 ```
 
 Safe this config file as in your temporary directory, e.g. `~/odk_tutorial/cato-odk.yaml`.
@@ -83,7 +82,6 @@ https://github.com/INCATools/ontology-development-kit/blob/master/schema/project
 
 #### Git config:
 
-
 ```
 github_org: obophenotype
 git_main_branch: main
@@ -92,11 +90,10 @@ repo: cat_anatomy_ontology
 
 The `github_org` (the GitHub or GitLab organisation) and the `repo` (repository name) will be used for some basic config of the git repo. Enter your own `github_org` here rather than `obophenotype`. Your default `github_org` is your GitHub username. If you are not creating a new repo, but working on a repo that predates renaming the GitHub main branch from `master` to `main`, you may want to set the `git_main_branch` as well.
 
-
 #### Pipeline configuration
 
 ```
-release_artefacts: 
+release_artefacts:
   - base
   - full
   - simple
@@ -115,7 +112,7 @@ We also configure export products: we always want to export to `OWL` (`owl`), bu
 
 ```
 import_group:
-  products: 
+  products:
     - id: ro
     - id: pato
     - id: omo
@@ -137,7 +134,7 @@ Run the following:
 
 ```
 cd ~/odk_tutorial
-sh seed-via-docker.sh -c -C cato-odk.yaml 
+sh seed-via-docker.sh -c -C cato-odk.yaml
 ```
 
 This will create a basic layout of your repo under `target/cato/*`
@@ -156,7 +153,7 @@ mv target/cato ~/
 
 If you use GitHub Desktop, you can now simply add this repo by selecting `File -> Add local repository` and select the directory you moved the repo to (as an aside, you should really have a nice workspace directory like `~/git` or `~/ws` or some such to organise your projects).
 
-Then click `Publish the repository` on 
+Then click `Publish the repository` on
 
 ### Using the Command Line
 

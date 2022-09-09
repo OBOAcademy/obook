@@ -4,20 +4,24 @@
 **Second Instructor:** James Overton
 
 ## Description
+
 This week, we will learn about building high quality ontologies with reuse and design patterns. First, we will cover the various "flavors" of ontology languages. We will talk about how to reuse pieces of existing ontologies as imports. Then, we will dive deeper into using the ROBOT command line tool to extract these import modules and build full ontologies from design patterns in spreadsheets (ROBOT templates).
 
 By the end of this session, you should be able to:
+
 - Find terms from other ontologies to reuse in your ontology
 - Extract those terms from the external ontology using ROBOT and import them into your ontology
 - Identify ontology design patterns for the logical definitions in your ontology
 - Create ROBOT templates using the ontology design patterns and use them to add to your ontology
 
 ## Preparation
+
 - Complete OpenHPI [Week 5: Ontology Engineering](https://open.hpi.de/courses/semanticweb2015/items/1iXXFr86raHqrB5bRBJZeM) videos 5.1, 5.2, and 5.4 - 5.6 (~2.5 hours)
   - We are skipping **5.3: Ontology Learning** and both sections on **MORE Ontology Evaluation** (5.7 and 5.8)
 - Complete the [ROBOT Mini-Tutorial](https://github.com/jamesaoverton/obook/blob/master/06-OntologyDesign/ROBOT_tutorial.md) to learn three new ROBOT commands
 
 ## Outline
+
 - OpenHPI course review: questions? (~15 minutes)
 - OWL ontology serializations ("formats") (~15 minutes)
 - Converting between serializations with [`robot convert`](http://robot.obolibrary.org/convert) (Review; ~15 minutes)

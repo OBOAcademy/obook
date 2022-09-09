@@ -2,24 +2,25 @@
 
 See [Daily Workflow](daily-curator-workflow.md) for creating branches and basic Protégé instructions.
 
-Warning: Every ontology has their procedures on how they obsolete terms (eg notice periods, notification emails, to_be_obsolete tags, etc.), this how-to guide only serves as a guide on how obsolete a term directly on protege. 
+Warning: Every ontology has their procedures on how they obsolete terms (eg notice periods, notification emails, to_be_obsolete tags, etc.), this how-to guide only serves as a guide on how obsolete a term directly on protege.
 
-For instructions on how to **merge** terms (i.e., replace a term with another term in the ontology), see [instructions here](merge-terms.md). 
+For instructions on how to **merge** terms (i.e., replace a term with another term in the ontology), see [instructions here](merge-terms.md).
 
 ### PRE OBSOLETION PROCESS (or basic obsoletion etiquette)
-1. Check if the term (or any of its children) is being used for annotation: 
-    - Go to your ontology browser of choice, search for the term, either by label or ID
-    - See which other ontologies use the to be obsolete term
-    - Notify affected groups (usually by adding an issue in their tracker)
+
+1. Check if the term (or any of its children) is being used for annotation:
+
+   - Go to your ontology browser of choice, search for the term, either by label or ID
+   - See which other ontologies use the to be obsolete term
+   - Notify affected groups (usually by adding an issue in their tracker)
 
 2. Check if the term is used elsewhere in the ontology
-    - In Protégé, navigate to the term to be obsolete and go to the 'Usage' tab to see if that ID is used elsewhere.
-    - If the term is a parent to other terms or is used in logical definitions, make sure that another term replaces the obsolete term
-
+   - In Protégé, navigate to the term to be obsolete and go to the 'Usage' tab to see if that ID is used elsewhere.
+   - If the term is a parent to other terms or is used in logical definitions, make sure that another term replaces the obsolete term
 
 ### OBSOLETION PROCESS (Manual)
 
-Warning: some ontologies give advance notice on terms that will be obsoleted through the annotation 'scheduled for obsoletion on or after' instead of directly obsoleting the term. Please check with the conventions of your ontology before obsoleting a term. 
+Warning: some ontologies give advance notice on terms that will be obsoleted through the annotation 'scheduled for obsoletion on or after' instead of directly obsoleting the term. Please check with the conventions of your ontology before obsoleting a term.
 
 1. Navigate to the term to be obsoleted.
 
@@ -41,44 +42,45 @@ Warning: some ontologies give advance notice on terms that will be obsoleted thr
 
 ![](../images/howtoguides/obsolete/fig5.png)
 
-6. Your obsolete term should now be stripped of its logical axioms and should look similar to the figure below. 
+6. Your obsolete term should now be stripped of its logical axioms and should look similar to the figure below.
 
 <img width="1154" alt="image" src="https://user-images.githubusercontent.com/6722114/184711682-c9dfe4d9-f1b6-42fc-b301-07edb00328da.png">
 
-7. Add any additional annotations needed - this is specific to ontologies and you should consult the conventions of the ontology you are working on. 
+7. Add any additional annotations needed - this is specific to ontologies and you should consult the conventions of the ontology you are working on.
 
-Examples of additional annotations to add: 
+Examples of additional annotations to add:
 
-- IAO:0000233 term tracker item (type xsd:anyURI) - link to GitHub issue  
+- IAO:0000233 term tracker item (type xsd:anyURI) - link to GitHub issue
 
-- has_obsolence_reason   
+- has_obsolence_reason
 
-- add ‘OBSOLETE.’ to the term definition: In the 'Description' window, click on the ```o``` on the right-hand side of the definition entry. In the resulting window, in the Literal tab, at the beginning of the definition, type: ```OBSOLETE.```  
+- add ‘OBSOLETE.’ to the term definition: In the 'Description' window, click on the `o` on the right-hand side of the definition entry. In the resulting window, in the Literal tab, at the beginning of the definition, type: `OBSOLETE.`
 
-- if the obsoleted term was not replaced by another term in the ontology, but there are existing terms that might be appropriate for annotation, add those term IDs in the 'consider' tag: In the 'Annotations' window, select ```+``` to add an annotation. In the resulting menu, select ```consider``` and enter the ID of the replacement term.  
+- if the obsoleted term was not replaced by another term in the ontology, but there are existing terms that might be appropriate for annotation, add those term IDs in the 'consider' tag: In the 'Annotations' window, select `+` to add an annotation. In the resulting menu, select `consider` and enter the ID of the replacement term.
 
 ## Obsolete a class (using Protege 'Make entity obsolete' function)
 
-1. Navigate to the term to be obsoleted.
-1. In the Protege edit menu-> Make entity obsolete
-1. Prepend the definition with OBSOLETE. For example, OBSOLETE. Chronic form of myeloproliferative neoplasm. 
-1. Add a statement about why the term was made obsolete: In the 'Annotations' window, select ```+``` to add an annotation. In the resulting menu, select ```rdfs:comment``` and select Type:  ```Xsd:string```.
-Consult the wiki documentation for suggestions on standard comments:
-      
-     - [http://wiki.geneontology.org/index.php/Curator_Guide:_Obsoletion](http://wiki.geneontology.org/index.php/Curator_Guide:_Obsoletion)
-      
-     - [http://wiki.geneontology.org/index.php/Obsoleting_GO_Terms](http://wiki.geneontology.org/index.php/Obsoleting_GO_Terms)
-      
-     - [http://wiki.geneontology.org/index.php/Editor_Guide](http://wiki.geneontology.org/index.php/Editor_Guide)
- 
-1. If the obsoleted term was replaced by another term in the ontology: In the 'Annotations' window, select ```+``` to add an annotation. In the resulting menu, select ```term replaced by``` and enter the ID of the replacement term.  
- 
-1. If the obsoleted term was not replaced by another term in the ontology, but there are existing terms that might be appropriate for annotation, add those term IDs in the 'consider' tag: In the 'Annotations' window, select ```+``` to add an annotation. In the resulting menu, select ```consider``` and enter the ID of the replacement term. 
+1.  Navigate to the term to be obsoleted.
+1.  In the Protege edit menu-> Make entity obsolete
+1.  Prepend the definition with OBSOLETE. For example, OBSOLETE. Chronic form of myeloproliferative neoplasm.
+1.  Add a statement about why the term was made obsolete: In the 'Annotations' window, select `+` to add an annotation. In the resulting menu, select `rdfs:comment` and select Type: `Xsd:string`.
+    Consult the wiki documentation for suggestions on standard comments:
 
-1. Add any additional annotations needed - this is specific to ontologies and you should consult the conventions of the ontology you are working on. 
+         - [http://wiki.geneontology.org/index.php/Curator_Guide:_Obsoletion](http://wiki.geneontology.org/index.php/Curator_Guide:_Obsoletion)
 
-Examples of additional annotations to add: 
+         - [http://wiki.geneontology.org/index.php/Obsoleting_GO_Terms](http://wiki.geneontology.org/index.php/Obsoleting_GO_Terms)
+
+         - [http://wiki.geneontology.org/index.php/Editor_Guide](http://wiki.geneontology.org/index.php/Editor_Guide)
+
+1.  If the obsoleted term was replaced by another term in the ontology: In the 'Annotations' window, select `+` to add an annotation. In the resulting menu, select `term replaced by` and enter the ID of the replacement term.
+
+1.  If the obsoleted term was not replaced by another term in the ontology, but there are existing terms that might be appropriate for annotation, add those term IDs in the 'consider' tag: In the 'Annotations' window, select `+` to add an annotation. In the resulting menu, select `consider` and enter the ID of the replacement term.
+
+1.  Add any additional annotations needed - this is specific to ontologies and you should consult the conventions of the ontology you are working on.
+
+Examples of additional annotations to add:
+
 - IAO:0000233 term tracker item (type xsd:anyURI) - link to GitHub issue
-- has_obsolence_reason 
+- has_obsolence_reason
 
-See [Daily Workflow](daily-curator-workflow.md) section for commit, push and merge instructions. 
+See [Daily Workflow](daily-curator-workflow.md) section for commit, push and merge instructions.

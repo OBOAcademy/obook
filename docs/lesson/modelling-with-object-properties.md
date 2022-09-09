@@ -7,10 +7,11 @@ We will cover, in particular, the following subjects:
 1. What is the role of object properties in OBO ontologies, and how should we model them?
 2. What is the relation ontology (RO), and how do we add object properties to it?
 
-<a name="preparation"></a> 
+<a name="preparation"></a>
+
 ## Preparation
 
-We have worked with the University of Manchester to incorporate the [Family History Knowledge Base Tutorial](http://owl.cs.manchester.ac.uk/publications/talks-and-tutorials/fhkbtutorial/) fully into OBO Academy. 
+We have worked with the University of Manchester to incorporate the [Family History Knowledge Base Tutorial](http://owl.cs.manchester.ac.uk/publications/talks-and-tutorials/fhkbtutorial/) fully into OBO Academy.
 
 This is it: [OBOAcademy: Family History - Modelling with Object Properties](../tutorial/fhkb.md).
 
@@ -27,17 +28,17 @@ For some example usage, run the following query in the ontobee OLS endpoint:
 http://www.ontobee.org/sparql
 
 ```
-prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
-prefix owl: <http://www.w3.org/2002/07/owl#> 
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix owl: <http://www.w3.org/2002/07/owl#>
 SELECT distinct *
-WHERE { 
+WHERE {
 GRAPH ?graph_uri
 { ?dp rdf:type owl:DatatypeProperty .
-  ?sub ?dp ?obj } 
+  ?sub ?dp ?obj }
 }
 ```
 
-Note that many uses of data properties across OBO are a bit questionable, for example, you do _never_ want to attach a modification dates or similar to your classes using data properties, as these _fall under OWL semantics_. This means that logically, if a superclass has a relation using a DatatypeProperty, then this relation _holds for all subclasses of that class as well.
+Note that many uses of data properties across OBO are a bit questionable, for example, you do _never_ want to attach a modification dates or similar to your classes using data properties, as these _fall under OWL semantics_. This means that logically, if a superclass has a relation using a DatatypeProperty, then this relation \_holds for all subclasses of that class as well.
 
 2. Annotation properties are similar to data properties, but they are _outside of OWL semantics_, i.e. OWL reasoners and reasoning do not care, in fact ignore, anything related to annotation properties. This makes them suitable for attaching metadata like labels etc to our classes and properties. We sometimes use annotation properties even to describe relationships between classes if we want reasoners to ignore them. The most typical example is IAO:replaced_by, which connects an obsolete term with its replacement. Widely used annotation properties in the OBO-sphere are standardised in the [OBO Metadata Ontology (OMO)](https://github.com/information-artifact-ontology/ontology-metadata).
 
@@ -51,7 +52,8 @@ In the same way as _annotation properties_ are maintained in [OMO](https://githu
 
 Object properties are of central importance to all ontological modelling in the OBO sphere, and understanding their semantics is critical for any put the most trivial ontologies. We assume the reader to have completed the [Family History Tutorial mentioned above](#preparation).
 
-<a name="semantics"></a> 
+<a name="semantics"></a>
+
 ## Object property semantics in OBO
 
 In our experience, these are the most widely used characteristics we specify about object properties (OP):
@@ -69,16 +71,18 @@ Other characteristics like functionality and symmetry are used across OBO ontolo
 The Relation Ontology serves two main purposes in the OBO world:
 
 1. As a place to standardise object properties. The idea is this: many ontologies are modelling _mereological_ relations, such as partonomies, which requires relationships such as "part of" and "has part". To ensure that ontologies are interoperable, we need to make sure that all ontologies use the _same_ "part of" relationship. Historically this is not always been true, and still is not. At the time of this writing, running:
+
 ```
-prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
-prefix owl: <http://www.w3.org/2002/07/owl#> 
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix owl: <http://www.w3.org/2002/07/owl#>
 SELECT distinct ?graph_uri ?s
-WHERE { 
-GRAPH ?graph_uri 
+WHERE {
+GRAPH ?graph_uri
 { ?s rdf:type owl:ObjectProperty ;
-   rdfs:label "part of" . } 
+   rdfs:label "part of" . }
 }
 ```
+
 On the [OntoBee SPARQL endpoint](http://www.ontobee.org/sparql) still reveals a number of ontologies using non-standard part-of relations. In our experience, most of these are accidental due to past format conversions, but not all. This problem was _much worse_ before RO came along, and our goal is to unify the representation of key properties like "part of" across all OBO ontologies. The [OBO Dashboard](http://dashboard.obofoundry.org/) checks for object properties that are not aligned with RO.
 
 2. As a place to encode and negotiate object property semantics. Object properties (OP) can have domains and ranges, can have characteristics such as functionality and transitivity, see [above](#semantics). Arguing the exact semantics of an OP can be a difficult and lengthy collaborative process, esp. since OP semantics can have a huge impact on ontology reasoning. Detailed RO documentation (modelling patterns and practices) can be found in [here](https://oborel.github.io/obo-relations/). The process of how relationships are added to RO is discussed in the next section.

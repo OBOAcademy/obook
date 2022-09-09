@@ -1,13 +1,16 @@
 # Contributing to OBO ontologies
 
 ## Prerequisites
-Participants will need to have access to the following resources and tools prior to the training:  
-- **GitHub account** - register for a free GitHub account [here](https://github.com/join?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home)  
-- **Protege** - Install Protege 5.5, download it [here](https://protege.stanford.edu/)  
-- **[Install ELK 0.5](../howto/installing-elk-in-protege.md)**   
-- **Install GitHub Desktop** Please make sure you have some kind of git client installed on your machine. If you are new to Git, please install [GitHub Desktop](https://desktop.github.com/)  
+
+Participants will need to have access to the following resources and tools prior to the training:
+
+- **GitHub account** - register for a free GitHub account [here](https://github.com/join?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home)
+- **Protege** - Install Protege 5.5, download it [here](https://protege.stanford.edu/)
+- **[Install ELK 0.5](../howto/installing-elk-in-protege.md)**
+- **Install GitHub Desktop** Please make sure you have some kind of git client installed on your machine. If you are new to Git, please install [GitHub Desktop](https://desktop.github.com/)
 
 ## Preparation
+
 - Review tutorial on [Ontology Term Use](ontology-term-use.md)
 
 ## What is delivered as part of the course
@@ -15,6 +18,7 @@ Participants will need to have access to the following resources and tools prior
 **Description:** How to contribute terms to existing ontologies.
 
 ### Learning objectives
+
 - How to use GitHub
   - [GitHub workflows](#gh-workflows)
   - [Branch vs Fork](#branch)
@@ -24,9 +28,9 @@ Participants will need to have access to the following resources and tools prior
 - [Understand basics of ontology development workflows](#workflow)
   - [Browsing and Searching in Protege](#browsing)
   - [Add new terms to an ontology](#add)
-      - [Initial Protege setup](#setup)
-      - [Protege editing](#editing)
-      - [The Class description view](#class-description)
+    - [Initial Protege setup](#setup)
+    - [Protege editing](#editing)
+    - [The Class description view](#class-description)
 - [Use GitHub: make pull requests](#pr)
 - [Understand ontology design patterns](#pattern)
 - [Use templates: ROBOT, DOSDP](template) (_under development_)
@@ -34,11 +38,13 @@ Participants will need to have access to the following resources and tools prior
   - [Logic and debugging](#logic)
 
 ## Tutorials
+
 - N/A
 
 ## Additional materials and resources
 
 ## Contributors
+
 - [Nicole Vasilevsky](https://orcid.org/0000-0001-5208-3432)
 - [Rebecca Jackson](https://orcid.org/0000-0003-4871-5569)
 - [Melissa Haendel](https://orcid.org/0000-0001-9114-8737)
@@ -50,7 +56,8 @@ Participants will need to have access to the following resources and tools prior
 
 ## Use GitHub
 
-<a name="gh-workflows"></a> 
+<a name="gh-workflows"></a>
+
 ### GitHub workflows
 
 GitHub - distributed version control (Git) + social media for geeks who like to build code/documented collaboratively.
@@ -59,16 +66,18 @@ A Git repo consists of a set of branches each with a complete history of all cha
 
 ![image](https://user-images.githubusercontent.com/6722114/115820759-59267500-a3b6-11eb-8452-b44404ce7aa7.png)
 
-A Git repo typically has a master or main branch that is not directly editing.  Changes are made by creating a branch from Master (complete copy of the Master + its history).  
+A Git repo typically has a master or main branch that is not directly editing. Changes are made by creating a branch from Master (complete copy of the Master + its history).
 
-<a name="branch"></a> 
+<a name="branch"></a>
+
 ### Branch vs Fork
 
 You can copy (fork) any GitHub repo to some other location on GitHub without having to ask permission from the owners.  If you modify some files in that repo, e.g. to fix a bug in some code, or a typo in a document, you can then suggest to the owners (via a Pull Request) that they adopt (merge) you your changes back into their repo.
 
 If you have permission from the owners, you can instead make a new branch. For this training, we gave you access to the repository. See the [Appendix](../howto/github-create-fork.md) for instructions on how to make a fork.
 
-<a name="issues"></a> 
+<a name="issues"></a>
+
 ### Create GitHub Issues
 
 1. Go to GitHub tracker for the ontology where you'd like to create an issue
@@ -76,10 +85,10 @@ If you have permission from the owners, you can instead make a new branch. For t
 1. Pick appropriate template (if applicable)
 1. Fill in the information that is requested on the template below each header
 1. For a new term request, please include:
-	1. A definition in the proper format
-	1. Sources/cross references for synonyms
-	1. Your ORCID
-	1. Add any additional comments at the end
+   1. A definition in the proper format
+   1. Sources/cross references for synonyms
+   1. Your ORCID
+   1. Add any additional comments at the end
 1. If you use a template, an ontology curator may automatically be assigned.
 
 #### Video Explanation
@@ -88,23 +97,26 @@ See this example video on creating a new term request to the Mondo Disease Ontol
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/0dAlVTYGRf0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<a name="etiquette"></a> 
+<a name="etiquette"></a>
+
 ## Basic Open Source etiquette
 
-- Keep in mind that open source ontology repositories on GitHub are public and open to all. 
+- Keep in mind that open source ontology repositories on GitHub are public and open to all.
 - Be respectful in your requests and comments.
 - Do not include any private information.
 - GitHub sends notifications to your email, and you can respond via your email client. Keep in mind, the responses are posted publicly. Be sure to delete your email signature that includes any personal information, like your email address or phone number.
 - Many ontologies have limited resources and personnel for development and maintenance. Please be patient with your requests.
-- If your ticket/request has been unanswered for a long period of time, feel free to kindly check in by commenting on the ticket. 
-- Including a deadline or priority on the ticket can help the ontology curators with triaging tickets. 
+- If your ticket/request has been unanswered for a long period of time, feel free to kindly check in by commenting on the ticket.
+- Including a deadline or priority on the ticket can help the ontology curators with triaging tickets.
 
-<a name="readme"></a> 
+<a name="readme"></a>
+
 ## Reading READMEs
 
 A README is a text file that introduces and explains a project. It is intended for _everyone_, not just the software or ontology developers. Ideally, the README file will include detailed information about the ontology, how to get started with using any of the files, license information and other details. The README is usually on the front page of the GitHub repository.
 
-<a name="workflow"></a> 
+<a name="workflow"></a>
+
 ## Basics of ontology development workflows
 
 ### Ontology development workflows
@@ -118,7 +130,7 @@ The steps below describe how to make changes to an ontology.
 1.  Open the [Mondo GitHub repository](https://github.com/monarch-initiative/mondo)
 2.  Click Code
 
- ![image](https://user-images.githubusercontent.com/6722114/116610830-801b0480-a8ea-11eb-8567-9da0c1159954.png)
+![image](https://user-images.githubusercontent.com/6722114/116610830-801b0480-a8ea-11eb-8567-9da0c1159954.png)
 
 3. Click 'Open with GitHub Desktop'
 
@@ -128,6 +140,7 @@ The steps below describe how to make changes to an ontology.
 5. This will open GitHub Desktop and the repo should start downloading. This could take some time depending on how big the file is and how much memory your computer has.
 
 #### Create a branch using GitHub Desktop
+
 3. Click the little arrow in Current Branch
 4. Click New Branch
 5. Give your branch a name: training-initials (ie `training-NV`)
@@ -138,10 +151,11 @@ The steps below describe how to make changes to an ontology.
 
 1. Open Protege
 2. Go to: File -> Open
-3. Navigate to [ontology-name]/src/ontology/[ontology-name]-edit.obo and open this file in Protege. For example: mondo/src/ontology/mondo-edit.obo 
+3. Navigate to [ontology-name]/src/ontology/[ontology-name]-edit.obo and open this file in Protege. For example: mondo/src/ontology/mondo-edit.obo
 4. _Note: all ontologies that use the [Ontology Development Kit (ODK)](https://github.com/INCATools/ontology-development-kit) will have the 'edit' files stored in the same folder path: src/ontology/[ontology-name]-edit.owl (or [ontology-name]-edit.obo)_
 
-<a name="browsing"></a> 
+<a name="browsing"></a>
+
 ### Browsing and Searching in Protege
 
 The instructions below are using the Mondo Disease Ontology as an example, but this can be applied to any ontology.
@@ -172,7 +186,7 @@ The panel in the center is the ontology annotations panel. This panel contains b
 
 #### Running the reasoner
 
-Before browsing  or searching an ontology, it is useful to run an OWL reasoner first.  This ensures that you can view the full, intended classification and allows you to run queries.  Navigate to the query menu, and run the ELK reasoner:
+Before browsing or searching an ontology, it is useful to run an OWL reasoner first. This ensures that you can view the full, intended classification and allows you to run queries. Navigate to the query menu, and run the ELK reasoner:
 
 ![image](https://user-images.githubusercontent.com/6722114/115822558-9b04ea80-a3b9-11eb-922b-c4c908fd99cc.png)
 
@@ -180,14 +194,14 @@ For more details on why it is important to have the reasoner on when using the e
 
 #### Entities tab
 
-You will see various tabs along the top of the screen. Each tab provides a different perspective on the ontology. 
-For the purposes of this tutorial, we care mostly about the Entities tab, the DL query tab and the search tool.  OWL Entities include Classes (which we are focussed on editing in this tutorial), relations (OWL Object Properties) and Annotation Properties (terms like, 'definition' and 'label' which we use to annotate OWL entities.
-Select the Entities tab and then the Classes sub-tab.  Now choose the inferred view (as shown below).
+You will see various tabs along the top of the screen. Each tab provides a different perspective on the ontology.
+For the purposes of this tutorial, we care mostly about the Entities tab, the DL query tab and the search tool. OWL Entities include Classes (which we are focussed on editing in this tutorial), relations (OWL Object Properties) and Annotation Properties (terms like, 'definition' and 'label' which we use to annotate OWL entities.
+Select the Entities tab and then the Classes sub-tab. Now choose the inferred view (as shown below).
 
 ![image](https://user-images.githubusercontent.com/6722114/115822595-a9530680-a3b9-11eb-8797-b60964733067.png)
 
 The Entities tab is split into two halves. The left-hand side provides a suite of panels for selecting various entities in your ontology. When a particular entity is selected the panels on the right-hand side display information about that entity. The entities panel is context specific, so if you have a class selected (like Thing) then the panels on the right are aimed at editing classes. The panels on the right are customizable. Based on prior use you may see new panes or alternate arrangements.
-You should see the class OWL:Thing.  You could start browsing from here, but the upper level view of the ontology is too abstract for our purposes. To find something more interesting to look at we need to search or query.
+You should see the class OWL:Thing. You could start browsing from here, but the upper level view of the ontology is too abstract for our purposes. To find something more interesting to look at we need to search or query.
 
 #### Searching in Protege
 
@@ -195,33 +209,35 @@ You can search for any entity using the search bar on the right:
 
 ![image](https://user-images.githubusercontent.com/6722114/115822673-c8ea2f00-a3b9-11eb-9dca-dfe3d3bfe72a.png)
 
-The search window will open on top of your Protege pane, we recommend resizing it and moving it to the side of the main window so you can view together.  
+The search window will open on top of your Protege pane, we recommend resizing it and moving it to the side of the main window so you can view together.
 
 ![image](https://user-images.githubusercontent.com/6722114/115822725-dacbd200-a3b9-11eb-96de-5b727f931a71.png)
 
 Here's an example search for 'COVID-19':
 ![image](https://user-images.githubusercontent.com/6722114/115822742-e28b7680-a3b9-11eb-8d28-1046833b2f4d.png)
 
-It shows results found in display names, definitions, synonyms and more.  The default results list is truncated.  To see full results check the 'Show all results option'. You may need to resize the box to show all results.
-Double clicking on a result, displays details about it in the entities tab, e.g. 
+It shows results found in display names, definitions, synonyms and more. The default results list is truncated. To see full results check the 'Show all results option'. You may need to resize the box to show all results.
+Double clicking on a result, displays details about it in the entities tab, e.g.
 
 ![image](https://user-images.githubusercontent.com/6722114/115822767-f040fc00-a3b9-11eb-8f90-5b1cc9a8775f.png)
 
 In the Entities, tab, you can browse related types, opening/closing branches and clicking on terms to see details on the right. In the default layout, annotations on a term are displayed in the top panel and logical assertions in the 'Description' panel at the bottom.
 
 Try to find these specific classes:
+
 - 'congenital heart disease'
 - 'Kindler syndrome'
 - 'kidney failure'
 
-Note - a cool feature in the search tool in Protege is you can search on partial string matching. For example, if you want to search for ‘down syndrome’, you could search on a partial string: ‘do synd’. 
+Note - a cool feature in the search tool in Protege is you can search on partial string matching. For example, if you want to search for ‘down syndrome’, you could search on a partial string: ‘do synd’.
 
 - Try searching for ‘br car and see what kind of results are returned.
 - **Question:** The search will also search on synonyms. Try searching for ‘shingles’ and see what results are returned. Were you able to find the term?
 
 **Note** - if the search is slow, you can uncheck the box ‘Search in annotation values. Try this and search for a term and note if the search is faster. Then search for ‘shingles’ again and note what results you get.
 
-<a name="pr"></a> 
+<a name="pr"></a>
+
 ## Use GitHub: make pull requests
 
 ### Committing, pushing and making pull requests
@@ -242,16 +258,18 @@ NOTE: You can use the word 'fixes' or 'closes' in the description of the commit 
 
 2.  If you don't want to close the ticket, just refer to the ticket # without the word 'Fixes' or use 'Adresses'. The commit will be associated with the correct ticket but the ticket will remain open. NOTE: It is also possible to type a longer message than allowed when using the '-m' argument; to do this, skip the -m, and a vi window (on mac) will open in which an unlimited description may be typed.
 
-1.  Click Commit to [branch]. This will save the changes to the cl-edit.owl file. 
+3.  Click Commit to [branch]. This will save the changes to the cl-edit.owl file.
 
-2.  Push: To incorporate the changes into the remote repository, click Publish branch.
+4.  Push: To incorporate the changes into the remote repository, click Publish branch.
 
-<a name="add"></a> 
+<a name="add"></a>
+
 ## Add New Terms to an Ontology:
 
-The instructions below are using the Mondo Disease Ontology as an example, but this can be applied to any ontology. 
+The instructions below are using the Mondo Disease Ontology as an example, but this can be applied to any ontology.
 
-<a name="setup"></a> 
+<a name="setup"></a>
+
 ### Setup
 
 #### Setting Preferences for New entities
@@ -260,26 +278,26 @@ Ontology terms have separate names and IDs. The names are annotation values (lab
 
 ![image](https://user-images.githubusercontent.com/6722114/115822913-3302d400-a3ba-11eb-89eb-70c767701843.png)
 
-Set your new entity preferences precisely as in the following screenshot of the New Entities tab.  
+Set your new entity preferences precisely as in the following screenshot of the New Entities tab.
 
-**Note** -  you have been assigned an ID range in the Mondo [idranges file](https://github.com/monarch-initiative/mondo/blob/master/src/ontology/mondo-idranges.owl)  - you should be able to find your own range assigned there.
+**Note** - you have been assigned an ID range in the Mondo [idranges file](https://github.com/monarch-initiative/mondo/blob/master/src/ontology/mondo-idranges.owl)  - you should be able to find your own range assigned there.
 
-***DIY (only if you know what you are doing!)***
+**_DIY (only if you know what you are doing!)_**
 
 To add your own ID ranges:
 
-Go into src/ontology 
+Go into src/ontology
 
 create a branch
 
-Find and edit mondo-idranges.owl by adding the following: 
+Find and edit mondo-idranges.owl by adding the following:
 
-	Datatype: idrange:10 #update this to next following integer from previous
-	
-	    Annotations: 
-	        allocatedto: "Your Name" #change to your name
-	    
-	    EquivalentTo: 
+    Datatype: idrange:10 #update this to next following integer from previous
+
+        Annotations:
+            allocatedto: "Your Name" #change to your name
+
+        EquivalentTo:
         xsd:integer[>= 0806000 , <= 0806999]. #add a range of 999 above the previous integer
 
 Be sure to change "Your Name" to your actual name! And note that this value should almost always be an individual, and not an organization or group.
@@ -287,7 +305,6 @@ Be sure to change "Your Name" to your actual name! And note that this value shou
 create a pull request and add matentzn or nicolevasilevsky as a reviewer
 
 proceed to settting up as below:
-
 
 ![image](https://user-images.githubusercontent.com/6722114/115964257-6a67a280-a4d8-11eb-8dcd-768b51d75720.png)
 
@@ -311,20 +328,21 @@ The current recommendation of the OBO Foundry Technical Working Group is that an
 
 You can have Protégé automatically add those annotations by setting your preferences to match the screenshot below, in the New entities metadata tab (under preferences).
 
-If you do not have an ORCID, register for for free here: <https://orcid.org/> 
+If you do not have an ORCID, register for for free here: <https://orcid.org/>
 
 ![](../images/reference/protege/protege-new-entities-metadata.png)
 
-<a name="editing"></a> 
+<a name="editing"></a>
+
 ### Protege editing
 
 #### Creating a new class
 
 Before you start:
 
--   make sure you are working on a branch - see quick guide [here](https://docs.google.com/presentation/d/1M8NZQOIQVswng-so6ROxVeMJfDnzth7BYNj_5MXxEik/edit#slide=id.g9db6baf776_1_0).
+- make sure you are working on a branch - see quick guide [here](https://docs.google.com/presentation/d/1M8NZQOIQVswng-so6ROxVeMJfDnzth7BYNj_5MXxEik/edit#slide=id.g9db6baf776_1_0).
 
--   make sure you have the editor's file open in Protege as detailed [here](https://mondo.readthedocs.io/en/latest/editors-guide/searching-mondo/).
+- make sure you have the editor's file open in Protege as detailed [here](https://mondo.readthedocs.io/en/latest/editors-guide/searching-mondo/).
 
 New classes are created in the Class hierarchy panel on the left.
 
@@ -333,14 +351,15 @@ There are three buttons at the top of the class hierarchy view. These allow you 
 Practice adding a new term:
 
 We will work on these two tickets:
+
 1.  <https://github.com/monarch-initiative/mondo/issues/616>
-2.  <https://github.com/monarch-initiative/mondo/issues/2541> 
+2.  <https://github.com/monarch-initiative/mondo/issues/2541>
 
 #### https://github.com/monarch-initiative/mondo/issues/616
 
--   Search for the parent term 'hypereosinophilic syndrome' (see [search guide](https://mondo.readthedocs.io/en/latest/editors-guide/searching-mondo/) if you are unsure how to do this).
+- Search for the parent term 'hypereosinophilic syndrome' (see [search guide](https://mondo.readthedocs.io/en/latest/editors-guide/searching-mondo/) if you are unsure how to do this).
 
--   When you are clicked on the term in the Class hierarchy pane, click the add subclass button to add a child class to 'hypereosinophilic syndrome'
+- When you are clicked on the term in the Class hierarchy pane, click the add subclass button to add a child class to 'hypereosinophilic syndrome'
 
 ![](https://lh6.googleusercontent.com/8Yx82gFh0zvlnoXVnkGerib50qgHcy2V4yYczwL5MRxiJ_XatFkLBAKjJiX9ZyDbyjhDhKx6i1g65o8YvlhABB_Z86mdj1yORgUqImocZm9Y6-sipAisTWhWbHEatGHYGXKEBKI8)
 
@@ -352,16 +371,16 @@ A dialog will popup. Name this new subclass: migratory muscle precursor. Click "
 
 #### Adding annotations 
 
-Using Protégé you can add annotations such as labels, definitions, synonyms, database cross references (dbxrefs) to any OWL entity. The panel on the right, named Annotations, is where these annotations are added. CL includes a pre-declared set of annotation properties. The most commonly used annotations are below. 
+Using Protégé you can add annotations such as labels, definitions, synonyms, database cross references (dbxrefs) to any OWL entity. The panel on the right, named Annotations, is where these annotations are added. CL includes a pre-declared set of annotation properties. The most commonly used annotations are below.
 
--   rdfs:label
--   definition
--   has_exact_synonym
--   has_broad_synonym
--   has_narrow_synonym
--   has_related synonym
--   database_cross_reference
--   rdfs:comment
+- rdfs:label
+- definition
+- has_exact_synonym
+- has_broad_synonym
+- has_narrow_synonym
+- has_related synonym
+- database_cross_reference
+- rdfs:comment
 
 Note, most of these are bold in the annotation property list:
 
@@ -379,13 +398,13 @@ Definitions in Mondo should have a 'database cross reference' (dbxref), which is
 
 To add a dbxref to the definition:
 
--   Click the @ symbol next to the definition
--   Click the + button next in the pop-up window
--   Scroll up on the left hand side until you find 'database_cross_reference', and click it
--   Add the PMID in the editing box (PMID:25527564). _Note: the PMID should not have any spaces)
--   Click OK
--   Add the additional dbxref: GARD:0013029
--   The dbxrefs should appear as below.
+- Click the @ symbol next to the definition
+- Click the + button next in the pop-up window
+- Scroll up on the left hand side until you find 'database_cross_reference', and click it
+- Add the PMID in the editing box (PMID:25527564). \_Note: the PMID should not have any spaces)
+- Click OK
+- Add the additional dbxref: GARD:0013029
+- The dbxrefs should appear as below.
 
 ![](https://lh6.googleusercontent.com/l589uvv3OKKxrabrqKQdL-NF6PfKi_mSfaz-xk--59WtSD15VOy9CQVZXdE0SHl6ZA761zv9G0UULHF5EKRfMToX2F0kqrwuGbjdnzVV3JRRJbb2l40UjOLeXi-7aM_TBkCSkN3L)
 
@@ -393,12 +412,12 @@ To add a dbxref to the definition:
 
 #### Add Synonyms and Database cross reference
 
-1.  Add synonyms 
+1.  Add synonyms
 1.  Click the add annotations button
-1.  Add the following synonyms as 'has_exact_synonym': 
-    -  EAE
-    -  Gleich's syndrome
-    -  Gleich syndrome
+1.  Add the following synonyms as 'has_exact_synonym':
+    - EAE
+    - Gleich's syndrome
+    - Gleich syndrome
 1.  All synonyms in Mondo should have a dbxref on the synonym
 1.  Click the @ symbol next to the synonym
 1.  Click the + button
@@ -406,12 +425,13 @@ To add a dbxref to the definition:
 1.  Add database cross reference
 1.  Click the add annotations button
 1.  Add the following database_cross_reference':
-    -  GARD:0013029
+    - GARD:0013029
 1.  Click the @ symbol next to the synonym
 1.  Click the + button
-    -  Add source: MONDO:equivalentTo
+    - Add source: MONDO:equivalentTo
 
-<a name="class-description"></a> 
+<a name="class-description"></a>
+
 ### The Class description view
 
 We have seen how to add sub/superclasses and annotate the class hierarchy. Another way to do the same thing is via the Class description view. When an OWL class is selected in the entities view, the right-hand side of the tab shows the class description panel. If we select the 'vertebral column disease' class, we see in the class description view that this class is a "SubClass Of" (= has a SuperClass) the 'musculoskeletal system disease' class. Using the (+) button beside "SubClass Of" we could add another superclass to the 'skeletal system disease' class.
@@ -434,24 +454,25 @@ Save your work.
 
 1.  Click: Create Pull Request in GitHub Desktop
 
-2.  This will automatically open GitHub Desktop 
+2.  This will automatically open GitHub Desktop
 
 3.  Click the green button 'Create pull request'
 
-4.  You may now add comments to your pull request. 
+4.  You may now add comments to your pull request.
 
 5.  The CL editors team will review your PR and either ask for changes or merge it.
 
 6.  The changes will be available in the next release.
 
-<a name="pattern"></a> 
+<a name="pattern"></a>
+
 ## Ontology design patterns
 
 Dead Simple Ontology Design Patterns (DOSDPs) are specifications, written in yaml format, that specify how ontology terms should be created (see [article here](https://jbiomedsem.biomedcentral.com/articles/10.1186/s13326-017-0126-0)). They can be used to:
 
 - generate documentation
 - generate new terms
-- retrofit existing ontology terms 
+- retrofit existing ontology terms
 
 DOSDPs have some key features:
 
@@ -467,12 +488,14 @@ Examples of design patterns are available here:
 - [uPheno pattern library](https://github.com/obophenotype/upheno/tree/master/src/patterns/dosdp-dev)
 - [Mondo Disease Ontology pattern library](https://github.com/monarch-initiative/mondo/tree/master/src/patterns/dosdp-patterns)
 
+<a name="template"></a>
 
-<a name="template"></a> 
 ## Use templates: ROBOT, DOSDP
+
 _under development_
 
-<a name="owl"></a> 
+<a name="owl"></a>
+
 ## Basics of OWL
 
 - Clone the [Ontologies 101](https://github.com/OHSUBD2K/BDK14-Ontologies-101) repository, then open the folder `BDK14_exercises` from your file system
@@ -484,14 +507,15 @@ _under development_
   - Open `basic-restriction/er-sec-complex.owl` in Protégé, then do the following exercise:
     - [Basic Restrictions](https://ontology101tutorial.readthedocs.io/en/latest/EXERCISE_BasicRestrictions.html)
   - Open `basic-dl-query/cc.owl` in Protégé, then do the following exercises:
-    - [DL Query Tab](https://ontology101tutorial.readthedocs.io/en/latest/DL_QueryTab.html) - note that `owl:Nothing` is defined as the very bottom node of an ontology, therefore the DL query results will show `owl:Nothing` as a subclass. This is expected and does not mean there is a problem with your ontology! It's only bad when something is a subclass of `owl:Nothing` and therefore *unsatisfiable* (more on that below).
+    - [DL Query Tab](https://ontology101tutorial.readthedocs.io/en/latest/DL_QueryTab.html) - note that `owl:Nothing` is defined as the very bottom node of an ontology, therefore the DL query results will show `owl:Nothing` as a subclass. This is expected and does not mean there is a problem with your ontology! It's only bad when something is a subclass of `owl:Nothing` and therefore _unsatisfiable_ (more on that below).
     - [Basic DL Queries](https://ontology101tutorial.readthedocs.io/en/latest/EXERCISE_BasicDL_Queries.html)
   - Open `basic-classification/ubiq-ligase-complex.owl` in Protégé, then do the following exercises:
     - [Basic Classification](https://ontology101tutorial.readthedocs.io/en/latest/EXERCISE_BasicClassification.html)
 - Read [(I can't get no) satisfiability](http://ontogenesis.knowledgeblog.org/1329/) (~10 minutes)
-  - **Optional**: Open a new ontology in Protégé. Try creating an *inconsistent* ontology using the classes and instances in the first Pets example (hint: you'll also need to create the "eats" object property)... what happens when you run the reasoner? 
-  
-<a name="logic"></a>   
+  - **Optional**: Open a new ontology in Protégé. Try creating an _inconsistent_ ontology using the classes and instances in the first Pets example (hint: you'll also need to create the "eats" object property)... what happens when you run the reasoner?
+
+<a name="logic"></a>
+
 ## Logic and debugging
 
 Below are exercises to demonstrate how to:
@@ -559,7 +583,7 @@ For this class, we want to follow the design pattern for [allergy](https://githu
 3. Mycotoxin is a child of a 'specifically dependent continuant' and and 'independent continuant' is disjoint with 'specifically dependent continuant'.
 4. This logical axiom uses the relation 'realized in response to stimulus'
 5. Click on this relation in Protege (you can click on the relation name in the equivalence axiom, or you can click on the Object properties tab and search for this relation.
-6. There are domain and range restrictions on this property, where the range has to be a material enity. Chebi mycotoxin is actually a role, so it is not a material entity. 
+6. There are domain and range restrictions on this property, where the range has to be a material enity. Chebi mycotoxin is actually a role, so it is not a material entity.
 
 ![image](https://user-images.githubusercontent.com/6722114/118698760-a33c2400-b7c5-11eb-8c8c-85c91c9a7dab.png)
 
@@ -584,10 +608,9 @@ For this class, we want to follow the design pattern for [acquired](https://gith
 1. Add the database cross reference to the definition: MONDO:patterns/allergy
 1. Add the equivalence axiom according to the pattern specifications.
 1. Run the reasoner
-1. View the inferred hierarchy. 
+1. View the inferred hierarchy.
 
 ![image](https://user-images.githubusercontent.com/6722114/148823091-e5d82cf2-d265-4937-9184-a636b504246d.png)
-
 
 ## Further reading
 
