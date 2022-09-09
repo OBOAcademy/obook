@@ -57,6 +57,7 @@ Examples of additional annotations to add:
 - add ‘OBSOLETE.’ to the term definition: In the 'Description' window, click on the `o` on the right-hand side of the definition entry. In the resulting window, in the Literal tab, at the beginning of the definition, type: `OBSOLETE.`
 
 - if the obsoleted term was not replaced by another term in the ontology, but there are existing terms that might be appropriate for annotation, add those term IDs in the 'consider' tag: In the 'Annotations' window, select `+` to add an annotation. In the resulting menu, select `consider` and enter the ID of the replacement term.
+  > **NOTE:** Here you have to add the ID of the entity as an `xsd:string`, e.g. GO:0005819, not the term label.
 
 ## Obsolete a class (using Protege 'Make entity obsolete' function)
 
@@ -75,6 +76,8 @@ Examples of additional annotations to add:
 1.  If the obsoleted term was replaced by another term in the ontology: In the 'Annotations' window, select `+` to add an annotation. In the resulting menu, select `term replaced by` and enter the ID of the replacement term.
 
 1.  If the obsoleted term was not replaced by another term in the ontology, but there are existing terms that might be appropriate for annotation, add those term IDs in the 'consider' tag: In the 'Annotations' window, select `+` to add an annotation. In the resulting menu, select `consider` and enter the ID of the replacement term.
+
+    > **NOTE:** Here you have to add the ID of the entity as an `xsd:string`, e.g. GO:0005819, not the term label.
 
 1.  Add any additional annotations needed - this is specific to ontologies and you should consult the conventions of the ontology you are working on.
 

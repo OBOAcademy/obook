@@ -76,6 +76,8 @@ nav:
       - General:
           - How to be a team open science player: howto/team-open-science-mindset.md
           - Creating an ontology from scratch: howto/create-ontology-from-scratch.md
+          - Create an ontology overview: howto/ontology-overview.md
+          - Prettify Markdown Files: howto/prettify.md
       - Protege:
           - Setup Protege 5.5: howto/set-up-protege.md
           - Installing ELK in Protege: howto/installing-elk-in-protege.md

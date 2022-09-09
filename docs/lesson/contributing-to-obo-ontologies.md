@@ -85,11 +85,17 @@ If you have permission from the owners, you can instead make a new branch. For t
 1. Pick appropriate template (if applicable)
 1. Fill in the information that is requested on the template below each header
 1. For a new term request, please include:
-   1. A definition in the proper format
-   1. Sources/cross references for synonyms
-   1. Your ORCID
-   1. Add any additional comments at the end
+   1. The parent ID and label
+   2. A definition in the proper format
+   3. Sources/cross references for synonyms
+   4. Your ORCID
+   5. Add any additional comments at the end
+1. If you are requesting changes to an existing term, include as much information as possible, including the term ID and label.
 1. If you use a template, an ontology curator may automatically be assigned.
+
+**Tip**: you can easily obtain term metadata like OBO ID, IRI, or the term label by clicking the three lines above the Annotations box (next to the term name) in Protege, see screenshot below. You can also copy the IRI in markdown, which is really convenient for pasting into GitHub.
+
+<img width="1143" alt="image" src="https://user-images.githubusercontent.com/6722114/188779564-82de605a-d5fa-4dfb-a283-07e3e071c7e7.png">
 
 #### Video Explanation
 

@@ -4,3 +4,4 @@ site/
 11-KnowledgeGraphs/Untitled.owl
 docs/resources/fhkb.zip
 docs/tutorial/project-ontology
+.env
