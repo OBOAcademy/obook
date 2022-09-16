@@ -31,13 +31,13 @@ Example: After waiting for the PR to be reviewed, Meghan kindly asked Nicole if 
 
 1. **Reduce the fear of breaking the ontology**
 
-    - We've all probably already made the same mistakes before - it's okay to break things or or make mistakes.
+    - We've all probably already made the same mistakes before - it's okay to break things or make mistakes.
 
 Example: The QC checks on [this PR](https://github.com/monarch-initiative/mondo/pull/5266) failed 6 times before it passed.
 
 <img width="788" alt="image" src="https://user-images.githubusercontent.com/6722114/190459249-e52957a6-8d8f-4ba8-bd7d-547039a7c76d.png">
 
-    - We have so many checks in place and GitHub has version control. Nothing has ever been broken to the point where it can't be fixed. (Remember to work on a branch!)
+    - We have so many checks in place, and GitHub has version control. Nothing has ever been broken to the point where it can't be fixed. (Remember to work on a branch!)
     - Perfect is the enemy of good enough.
     - It's okay if your PR is rejected.
 
@@ -46,7 +46,7 @@ Example: The QC checks on [this PR](https://github.com/monarch-initiative/mondo/
     - Problem of decentralization and lack of hierarchy needs proactive and brave decision makers.
     - No one will do your work for you.
     - Learn the tools using OBOOK, make fixes - just try it/do it.
-    - Can improve the materials by fixing it (please feel empowered to fix anything, including typos and content).
+    - Improve the online documentation by creating your own branches and making pull requests to fix anything, including typos and content.
 
 <img width="1080" alt="image" src="https://user-images.githubusercontent.com/6722114/190459617-ba48bafd-e4ef-44e2-ac6e-d70de1cd8147.png">
 
