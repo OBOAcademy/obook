@@ -21,8 +21,8 @@ We want our community ontology editors and developers to be _excited_ to be part
 
 1. **Take ownership of our community ontologies**
 
-    - Ensure that you see your issues and Pull Requests through to the end
-    - Feel empowered to nag reviewers or experts to help
+    - Ensure that you see your issues and pull requests through to the end
+    - Feel empowered to nudge reviewers or experts to help
 
 Example: After waiting for the PR to be reviewed, Meghan kindly asked Nicole if she should find a different reviewer.
 
@@ -80,18 +80,18 @@ Example: In Mondo, if new classifications are made, Mondo curators report this b
     - Take the time to write proper, detailed responses, avoid being vague or terse
     - Sloppy, quick responses can cause more work than not responding at all
     - Bullet lists, checklists for action items
-    - Hide unnecessary details and with details tag: <details><summary>[click arrow to expand]</summary>. See [example here](https://github.com/OBOFoundry/OBOFoundry.github.io/pull/1978#issuecomment-1183176682)
-    - Undercut any aggressive comments
+   - Hide unnecessary details with `<details>` tag: `<details><summary>[click arrow to expand]</summary>`. See [example here](https://github.com/OBOFoundry/OBOFoundry.github.io/pull/1978#issuecomment-1183176682)
+    - - Thoughtful and clear comments and replies generally achieve better results than aggressive comments.
     - Link to external issues
 
 Example:
 
 <img width="643" alt="image" src="https://user-images.githubusercontent.com/6722114/190461543-4be5e98e-0436-4d1a-ad91-60e371a71eff.png">
 
-1. **Reduce work for others as others as much as possible**
+1. **Reduce work for others as much as possible**
 1. **Be positive and show proactive gratitude**
 
     - If a member of the community opens an issue, always thank them for the issue right away. We need to encourage people to open issues.
     - Don't let issues linger without any response
     - When giving feedback, be positive and constructive
-    - Show appreciation: thank users for issues and thank a reviewer for their PR
+    - Show appreciation: thank users for issues and thank a PR reviewer for their review
