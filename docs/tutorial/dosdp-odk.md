@@ -58,7 +58,7 @@ robot_java_args: '-Xmx8G'
 In your `src/ontology/{yourontology}-odk.yaml` file, simply add the following:
 
 ```yaml
-use_dosdps: TRUE
+use_dosdps: true
 ```
 
 This flag activates DOSDP in ODK - without it, none of the DOSDP workflows in ODK can be used. Technically, this flag tells ODK the following things:
