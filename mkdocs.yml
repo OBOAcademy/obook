@@ -78,6 +78,8 @@ nav:
           - Creating an ontology from scratch: howto/create-ontology-from-scratch.md
           - Create an ontology overview: howto/ontology-overview.md
           - Prettify Markdown Files: howto/prettify.md
+          - Create Screenshot and paste into an issue: howto/screenshot.md
+          - Set-up docker: howto/setup-docker.md
       - Protege:
           - Setup Protege 5.5: howto/set-up-protege.md
           - Installing ELK in Protege: howto/installing-elk-in-protege.md
@@ -114,6 +116,7 @@ nav:
   - Reference:
       - Frequently used ODK commands: reference/frequently-used-odk-commands.md
       - Protege Interface: reference/protege-interface.md
+      - Protege FAQ: reference/protege-faq.md
       - Formatting your ontology annotations correctly: reference/formatting-license.md
       - OBO-style term annotation: reference/go-style-annotation-property-practice.md
       - Glossary: reference/glossary.md
@@ -137,6 +140,7 @@ nav:
       - Troubleshooting ROBOT: reference/troublehooting-robot.md
       - Common Errors in GitHub actions: reference/gh-actions-errors.md
       - Other useful resources: reference/other-resources.md
+      - Medical Ontology landscape: reference/medical-ontology-landscape.md
   - Explanations:
       - Introduction to Ontologies: explanation/intro-to-ontologies.md
       - Logical axiomatization of classes & use of reasoning: explanation/logical-axiomatization.md
