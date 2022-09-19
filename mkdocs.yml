@@ -74,7 +74,7 @@ nav:
           - Family History Knowledge Base (FHKB) tutorial: tutorial/fhkb.md
   - How-to guides:
       - General:
-          - How to be a team open science player: howto/open-science-engineer.md
+          - Maximising impact as an open science engineer: howto/open-science-engineer.md
           - Creating an ontology from scratch: howto/create-ontology-from-scratch.md
           - Create an ontology overview: howto/ontology-overview.md
           - Prettify Markdown Files: howto/prettify.md
