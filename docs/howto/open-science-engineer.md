@@ -171,7 +171,7 @@ Here, we invite you to embrace the idea that ontologies and many of the tools we
 
 ### TLDR - Summary
 
-- Principle of Collaboration
+- [Principle of Collaboration](#collaboration)
     - Upvote answers, on Stack Overflow, GitHub and any other open communication platform.
     - Get involved on other peoples issue trackers.
     - Always do a basic search before asking.
@@ -180,11 +180,11 @@ Here, we invite you to embrace the idea that ontologies and many of the tools we
     - Always strive to reduce work for other members of the community.
     - Be positive and generous with gratitude and attribution.
     - Promote open communication (less slack, more GitHub).
-- Principle of Upstream Fixing
+- [Principle of Upstream fixing](#upstream)
     - The key to maximising your impact is to push any fixes as far upstream as possible.
     - When you experience a problem, always report it to the immediate source. If you can report it as high upstream as possible.
     - In a perfect world, provide a fix in the form of a pull request.
-- Principle of No-ownership
+- [Principle of No-ownership](#noownership)
     - See your issues and pull requests through to the end (dont drop the ball, no one will do your work for you)
     - Feel empowered to nudge reviewers until they tell you not to.
     - Find review buddies (this is really helpful to organise community work).
