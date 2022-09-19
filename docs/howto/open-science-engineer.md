@@ -148,7 +148,6 @@ Here, we invite you to embrace the idea that ontologies and many of the tools we
 1. Feel empowered to **nudge reviewers** or experts to help. Get that issue answered and PR merged whatever it takes!
 
     *Example*: After waiting for the PR to be reviewed, Meghan kindly asked Nicole if she should find a different reviewer.
-
     <img width="787" alt="image" src="https://user-images.githubusercontent.com/6722114/190458254-ed13ef7b-9c0a-455a-ad49-89d2548b81ab.png" />
 1. Find **review buddies**. For every ontology you seek to contribute to **pair up with someone** who will review your pull requests and you will review their pull requests. Sometimes, it is very difficult to get _anyone_ to review your pull request. Reach out to people in person, and form an alliance for review. It is fun, and you learn new things (and get to know new people!).
 1. Be **proactive**.
@@ -156,16 +155,14 @@ Here, we invite you to embrace the idea that ontologies and many of the tools we
     - No one will do your work for you. See your pull requests and issues through all the way to the release!
     - Learn the tools necessary to make basic fixes - just try it/do it.
     - Always have your index finger on the *Edit* button when reading documentation. There is always something to fix, including typos and content.
-
-    <img width="1080" alt="image" src="https://user-images.githubusercontent.com/6722114/190459617-ba48bafd-e4ef-44e2-ac6e-d70de1cd8147.png">
+    <img width="1080" alt="image" src="https://user-images.githubusercontent.com/6722114/190459617-ba48bafd-e4ef-44e2-ac6e-d70de1cd8147.png" />
 
 
 ### Reduce your fear of "breaking the ontology".
 
 1. Most of our ontologies have many checks in place, and GitHub has version control. Nothing has ever been broken to the point where it can't be fixed. (Remember to work on a branch!)
     Example: The QC checks on [this PR](https://github.com/monarch-initiative/mondo/pull/5266) failed 6 times before it passed.
-
-    <img width="788" alt="image" src="https://user-images.githubusercontent.com/6722114/190459249-e52957a6-8d8f-4ba8-bd7d-547039a7c76d.png">
+    <img width="788" alt="image" src="https://user-images.githubusercontent.com/6722114/190459249-e52957a6-8d8f-4ba8-bd7d-547039a7c76d.png" />
 1. Perfect is the enemy of good enough.
 1. **It's okay if your PR is rejected**. Mentally, prepare yourself for having the PR rejected. This is fine - the community always looks to the best possible way to change the ontology. The next PR will be accepted!
 1. If you make a mistake, and it is pointed out during pull request review, *consider adding an appropriate QC check* to prevent the issue from happening again. And who knows - maybe you have an opportunity to fix past mistakes!
