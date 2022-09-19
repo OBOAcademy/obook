@@ -103,7 +103,7 @@ An even better fix would be to have each fix to the ontology result in a new, sh
 - Over time, we have developed QC checks that ensure that the same exact synonym cannot be shared between two classes. However the checks where not perfect..
 - `@vasvir` (GitHub name), a member of the global community reached out to us on Uberon: https://github.com/obophenotype/uberon/issues/2424.
     ![vasvir first issue](../images/open_science_contribution1.png)
-https://github.com/obophenotype/uberon/pull/2640
+[https://github.com/obophenotype/uberon/pull/2640](https://github.com/obophenotype/uberon/pull/2640)
 - Instead of fixing the discovered issue by ourselves, we invited @vasvir to fix the issues himself. We gave him some instructions on how to proceed, leading not only to [eight new pull requests](https://github.com/obophenotype/uberon/pulls?q=is%3Apr+author%3Avasvir+), but also an entirely new [Quality Control check](https://github.com/obophenotype/uberon/pull/2640) that augments the existing checks with case-insensititivy (`Gasserian ganglion` and `gasserian ganglion` where previously considered distinct). Note: before the PRs, @vasvir did not _speak any SPARQL_.
     ![vasvir QC PR](../images/open_science_contribution2.png)
 - Members of our team helped @vasvir to see his first pull requests through by instructing them how to use the technology (robot, ODK, docker, SPARQL), and follow our pull request conventions.
