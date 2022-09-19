@@ -161,12 +161,12 @@ Here, we invite you to embrace the idea that ontologies and many of the tools we
 
 ### Reduce your fear of "breaking the ontology".
 
-1. Most of our ontologies have many checks in place, and GitHub has version control. Nothing has ever been broken to the point where it can't be fixed. (Remember to work on a branch!)
+1. Most of our ontologies have many checks in place, and GitHub has version control. Nothing has ever been broken to the point where it can't be fixed. (Remember to work on a branch!)  
     Example: The QC checks on [this PR](https://github.com/monarch-initiative/mondo/pull/5266) failed 6 times before it passed.
     <img width="788" alt="image" src="https://user-images.githubusercontent.com/6722114/190459249-e52957a6-8d8f-4ba8-bd7d-547039a7c76d.png" />
-1. Perfect is the enemy of good enough.
-1. **It's okay if your PR is rejected**. Mentally, prepare yourself for having the PR rejected. This is fine - the community always looks to the best possible way to change the ontology. The next PR will be accepted!
-1. If you make a mistake, and it is pointed out during pull request review, *consider adding an appropriate QC check* to prevent the issue from happening again. And who knows - maybe you have an opportunity to fix past mistakes!
+1. Perfect is the enemy of good enough.  
+1. **It's okay if your PR is rejected**. Mentally, prepare yourself for having the PR rejected. This is fine - the community always looks to the best possible way to change the ontology. The next PR will be accepted!  
+1. If you make a mistake, and it is pointed out during pull request review, *consider adding an appropriate QC check* to prevent the issue from happening again. And who knows - maybe you have an opportunity to fix past mistakes!  
 
 <a id="tldr"></a>
 
