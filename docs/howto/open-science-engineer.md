@@ -104,7 +104,7 @@ An even better fix would be to have each fix to the ontology result in a new, sh
 - `@vasvir` (GitHub name), a member of the global community reached out to us on Uberon: https://github.com/obophenotype/uberon/issues/2424.
     ![vasvir first issue](../images/open_science_contribution1.png)
 [https://github.com/obophenotype/uberon/pull/2640](https://github.com/obophenotype/uberon/pull/2640)
-- Instead of fixing the discovered issue by ourselves, we invited @vasvir to fix the issues himself. We gave him some instructions on how to proceed, leading not only to [eight new pull requests](https://github.com/obophenotype/uberon/pulls?q=is%3Apr+author%3Avasvir+), but also an entirely new [Quality Control check](https://github.com/obophenotype/uberon/pull/2640) that augments the existing checks with case-insensititivy (`Gasserian ganglion` and `gasserian ganglion` where previously considered distinct). Note: before the PRs, @vasvir did not _speak any SPARQL_.
+- Instead of fixing the discovered issue by ourselves, we invited @vasvir to fix the issues himself. We gave him some instructions on how to proceed, leading not only to [eight new pull requests](https://github.com/obophenotype/uberon/pulls?q=is%3Apr+author%3Avasvir+), but also an entirely new [Quality Control check](https://github.com/obophenotype/uberon/pull/2640) that augments the existing checks with case-insensitivity (`Gasserian ganglion` and `gasserian ganglion` where previously considered distinct). Note: before the PRs, @vasvir did not _speak any SPARQL_.
     ![vasvir QC PR](../images/open_science_contribution2.png)
 - Members of our team helped @vasvir to see his first pull requests through by instructing them how to use the technology (robot, ODK, docker, SPARQL), and follow our pull request conventions.
 
@@ -149,12 +149,13 @@ Here, we invite you to embrace the idea that ontologies and many of the tools we
 
     *Example*: After waiting for the PR to be reviewed, Meghan kindly asked Nicole if she should find a different reviewer.
     <img width="787" alt="image" src="https://user-images.githubusercontent.com/6722114/190458254-ed13ef7b-9c0a-455a-ad49-89d2548b81ab.png" />
-1. Find **review buddies**. For every ontology you seek to contribute to **pair up with someone** who will review your pull requests and you will review their pull requests. Sometimes, it is very difficult to get _anyone_ to review your pull request. Reach out to people in person, and form an alliance for review. It is fun, and you learn new things (and get to know new people!).
-1. Be **proactive**.
-    - Problem of decentralization and lack of hierarchial organisation needs *proactive and brave* decision makers.
-    - No one will do your work for you. See your pull requests and issues through all the way to the release!
-    - Learn the tools necessary to make basic fixes - just try it/do it.
-    - Always have your index finger on the *Edit* button when reading documentation. There is always something to fix, including typos and content.
+1. Find **review buddies**. For every ontology you seek to contribute to **pair up with someone** who will review your pull requests and you will review their pull requests. Sometimes, it is very difficult to get _anyone_ to review your pull request. Reach out to people directly, and form an alliance for review. It is fun, and you learn new things (and get to know new people!).
+1. Be **proactive**  
+
+    - Problem of decentralization and lack of hierarchial organisation needs *proactive and brave* decision makers.  
+    - No one will do your work for you. See your pull requests and issues through all the way to the release!  
+    - Learn the tools necessary to make basic fixes - just try it/do it.  
+    - Always have your index finger on the *Edit* button when reading documentation. There is always something to fix, including typos and content.  
     <img width="1080" alt="image" src="https://user-images.githubusercontent.com/6722114/190459617-ba48bafd-e4ef-44e2-ac6e-d70de1cd8147.png" />
 
 
