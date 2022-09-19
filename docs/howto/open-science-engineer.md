@@ -33,16 +33,16 @@ The heart and soul of a successful Open Science culture is collaboration. The re
 
 ### Question answering and documentation
 
-1. When you find an answer on [Stack Overflow](https://stackoverflow.com/questions/22338900/prot%c3%a9g%c3%a9-how-can-i-rename-an-object-property), GitHub issues or even [Hacker News](https://news.ycombinator.com/)) that helps you, **upvote it**. It cannot be stressed enough how important this is to let good answers float up to the top (become more visible), and recognise the time and energy people spend formulating answers. If you do not have a Stack Overflow account, make one now.
+1. When you find an answer on [Stack Overflow](https://stackoverflow.com/questions/22338900/prot%c3%a9g%c3%a9-how-can-i-rename-an-object-property), GitHub issues or even [Hacker News](https://news.ycombinator.com/)) that helps you, **upvote it**. It cannot be stressed enough how important this is to let good answers float up to the top (become more visible), and recognise the time and energy people spend formulating answers. If you do not have a Stack Overflow account, [make one now](https://stackoverflow.com/users/login?ssrc=head&returnurl=https%3a%2f%2fstackoverflow.com%2f).
 1. If you cannot find an answer to a question on GitHub or Stack Overflow, and you figure out a solution consider **asking the question and answering it yourself!** Consider this: if you provide an answer that will result in only 6 open science people spending one hour less solving a problem (a conservative estimate), you saved the taxpayer 6 hours of salary (not to speak of improving the quality of the solutions)!
 1. Answer questions on GitHub issues even when on trackers not in your purview. People often falsely assume that they should not try to answer queries in an open source project that they are not directly involved with. This is wrong! Open source developers highly (!) appreciate it when you chip in on answering queries, from dealing with errors and exceptions to "How do I?" kind of queries. **Get involved on other peoples issue trackers**!
-1. Before asking questions on slack or issue trackers, **always do a basic search first**. Consider (1) the projects documentation, (2) open _and closed_ issues on the issue tracker of the project your query is related to. If you do not find the information you need try and craft questions that are concise yet give sufficient context. To enable future users to find these answers, consider using the issue tracker instead of slack! Also it is important to remember that the people that answer your questions have to spend time they could have spend on other Open Science work!
+1. Before asking questions on slack or issue trackers, **always do a basic search first**. Consider (1) the project's documentation, (2) open _and closed_ issues on the issue tracker of the project your query is related to. If you do not find the information you need try and craft questions that are concise yet give sufficient context. To enable future users to find these answers, consider using the issue tracker instead of slack! Also it is important to remember that the people that answer your questions have to spend time they could have spend on other Open Science work!
 1. Make yourself responsible for **continuously improving open science documentation**. If a question was answered on slack or in an issue, consider a 10 minute detour to update the documentation of the project to reflect the solution if you think it could be helpful. This is the only way to scale Open Science projects: *as the user base increases, providing support on a 1:1 basis will soon be infeasible*.
 1. Good documentation is as important as good quality code, and everyone can help out, even if it is "only" about formatting, typos and adding additional links!
 
 #### Social Conduct and review
 
-1. **Be overly generous with likes**. Being a Open Science Engineer can be quite a lonely affair: hundreds of unanswered issues and questions, pull requests that remain un-reviewed for months, projects for which you never really get credit (want to be a QC engineer, anyone?). Even if you do not have time to respond to all issues you scroll through in a day, *add a like if you find an answer useful*. This goes for slack comments, Tweets and *random Pull Requests you have nothing to do with* as well. And, perhaps most importantly **star all GitHub repos** that are useful to you (you could, for example, scroll throughhttps://github.com/topics/obofoundry and star all ontologies and ontology projects useful in your work)! This is a *huge deal* as it significantly **motivates other OSEs** and therefore provides fuel to the Open Science movement.
+1. **Be overly generous with likes**. Being a Open Science Engineer can be quite a lonely affair: hundreds of unanswered issues and questions, pull requests that remain un-reviewed for months, projects for which you never really get credit (want to be a QC engineer, anyone?). Even if you do not have time to respond to all issues you scroll through in a day, *add a like if you find an answer useful*. This goes for slack comments, Tweets and *random Pull Requests you have nothing to do with* as well. And, perhaps most importantly **star all GitHub repos** that are useful to you (you could, for example, scroll through [https://github.com/topics/obofoundry](https://github.com/topics/obofoundry) and star all ontologies and ontology projects useful in your work)! This is a *huge deal* as it significantly **motivates other OSEs** and therefore provides fuel to the Open Science movement.
 1. **Reduce work for others as much as possible by communicating clearly.**
     - Take the time to write clear responses with just the right amount of detail. The goal of your communication is to get the point across as swiftly as possible, and misunderstandings are a huge time killer.
     - Again: Sloppy, quick responses can cause more work than *not responding at all*!
@@ -52,7 +52,7 @@ The heart and soul of a successful Open Science culture is collaboration. The re
     <img width="643" alt="image" src="https://user-images.githubusercontent.com/6722114/190461543-4be5e98e-0436-4d1a-ad91-60e371a71eff.png">
 1. **Be positive and generous with gratitude and attribution**
     - If a member of the community opens an issue, *always thank them* for the issue right away. We need to encourage people to open issues.
-    - Don't let issues linger without any response. It is better to respond with a thank you and some instructions for the issuer on what to do to fix the issue themselves than to let it linger. We need our stakeholders to be more involved - first time issuers are specially vulnerable and may not bother to come back if they are ignored.
+    - Don't let issues linger without any response. It is better to respond with a thank you and some instructions for the issuer on what to do to fix the issue themselves than to let it linger. We need our stakeholders to be more involved - first time issuers are especially vulnerable and may not bother to come back if they are ignored.
     - When giving feedback, be positive, friendly and constructive.
     - **Show appreciation**: thank users for issues and thank a PR reviewer for their review. Always.
     - **Attribute, attribute, attribute**. If someone helped you sort something out emphasise this publicly!
@@ -70,9 +70,9 @@ The heart and soul of a successful Open Science culture is collaboration. The re
 
 Maximising impact of your changes is by **far the best way you can benefit society** as an Open Science Engineer. Open Science projects are a web of mutually dependent efforts, for example:
 
-* Ontologies re-use terms and axioms from other ontologies
-* Software packages provide functionality that help building Knowledge Graphs, ensuring the quality of ontology releases and extract new insights from existing knowledge and scientific facts.
-* Projects use ontologies for indexing data and making them discoverable.
+* Ontologies re-use terms and axioms from other ontologies  
+* Software packages provide functionality that help building Knowledge Graphs, ensuring the quality of ontology releases and extract new insights from existing knowledge and scientific facts.  
+* Projects use ontologies for indexing data and making them discoverable.  
 
 The **key to maximising your impact is to push any fixes as far upstream as possible**. Consider the following projects and the way they depend on each other (note that this is a gross simplification for illustration; in reality the number of dependencies is much higher):
 
@@ -103,8 +103,8 @@ An even better fix would be to have each fix to the ontology result in a new, sh
 - Over time, we have developed QC checks that ensure that the same exact synonym cannot be shared between two classes. However the checks where not perfect..
 - `@vasvir` (GitHub name), a member of the global community reached out to us on Uberon: https://github.com/obophenotype/uberon/issues/2424.
     ![vasvir first issue](../images/open_science_contribution1.png)
-https://github.com/obophenotype/uberon/pull/2640
-- Instead of fixing the discovered issue by ourselves, we invited @vasvir to fix the issues himself. We gave him some instructions on how to proceed, leading not only to [eight new pull requests](https://github.com/obophenotype/uberon/pulls?q=is%3Apr+author%3Avasvir+), but also an entirely new [Quality Control check](https://github.com/obophenotype/uberon/pull/2640) that augments the existing checks with case-insensititivy (`Gasserian ganglion` and `gasserian ganglion` where previously considered distinct). Note: before the PRs, @vasvir did not _speak any SPARQL_.
+[https://github.com/obophenotype/uberon/pull/2640](https://github.com/obophenotype/uberon/pull/2640)
+- Instead of fixing the discovered issue by ourselves, we invited @vasvir to fix the issues himself. We gave him some instructions on how to proceed, leading not only to [eight new pull requests](https://github.com/obophenotype/uberon/pulls?q=is%3Apr+author%3Avasvir+), but also an entirely new [Quality Control check](https://github.com/obophenotype/uberon/pull/2640) that augments the existing checks with case-insensitivity (`Gasserian ganglion` and `gasserian ganglion` where previously considered distinct). Note: before the PRs, @vasvir did not _speak any SPARQL_.
     ![vasvir QC PR](../images/open_science_contribution2.png)
 - Members of our team helped @vasvir to see his first pull requests through by instructing them how to use the technology (robot, ODK, docker, SPARQL), and follow our pull request conventions.
 
@@ -149,30 +149,31 @@ Here, we invite you to embrace the idea that ontologies and many of the tools we
 
     *Example*: After waiting for the PR to be reviewed, Meghan kindly asked Nicole if she should find a different reviewer.
     <img width="787" alt="image" src="https://user-images.githubusercontent.com/6722114/190458254-ed13ef7b-9c0a-455a-ad49-89d2548b81ab.png" />
-1. Find **review buddies**. For every ontology you seek to contribute to **pair up with someone** who will review your pull requests and you will review their pull requests. Sometimes, it is very difficult to get _anyone_ to review your pull request. Reach out to people in person, and form an alliance for review. It is fun, and you learn new things (and get to know new people!).
-1. Be **proactive**.
-    - Problem of decentralization and lack of hierarchial organisation needs *proactive and brave* decision makers.
-    - No one will do your work for you. See your pull requests and issues through all the way to the release!
-    - Learn the tools necessary to make basic fixes - just try it/do it.
-    - Always have your index finger on the *Edit* button when reading documentation. There is always something to fix, including typos and content.
+1. Find **review buddies**. For every ontology you seek to contribute to **pair up with someone** who will review your pull requests and you will review their pull requests. Sometimes, it is very difficult to get _anyone_ to review your pull request. Reach out to people directly, and form an alliance for review. It is fun, and you learn new things (and get to know new people!).
+1. Be **proactive**  
+
+    - Problem of decentralization and lack of hierarchial organisation needs *proactive and brave* decision makers.  
+    - No one will do your work for you. See your pull requests and issues through all the way to the release!  
+    - Learn the tools necessary to make basic fixes - just try it/do it.  
+    - Always have your index finger on the *Edit* button when reading documentation. There is always something to fix, including typos and content.  
     <img width="1080" alt="image" src="https://user-images.githubusercontent.com/6722114/190459617-ba48bafd-e4ef-44e2-ac6e-d70de1cd8147.png" />
 
 
 ### Reduce your fear of "breaking the ontology".
 
-1. Most of our ontologies have many checks in place, and GitHub has version control. Nothing has ever been broken to the point where it can't be fixed. (Remember to work on a branch!)
+1. Most of our ontologies have many checks in place, and GitHub has version control. Nothing has ever been broken to the point where it can't be fixed. (Remember to work on a branch!)  
     Example: The QC checks on [this PR](https://github.com/monarch-initiative/mondo/pull/5266) failed 6 times before it passed.
     <img width="788" alt="image" src="https://user-images.githubusercontent.com/6722114/190459249-e52957a6-8d8f-4ba8-bd7d-547039a7c76d.png" />
-1. Perfect is the enemy of good enough.
-1. **It's okay if your PR is rejected**. Mentally, prepare yourself for having the PR rejected. This is fine - the community always looks to the best possible way to change the ontology. The next PR will be accepted!
-1. If you make a mistake, and it is pointed out during pull request review, *consider adding an appropriate QC check* to prevent the issue from happening again. And who knows - maybe you have an opportunity to fix past mistakes!
+1. Perfect is the enemy of good enough.  
+1. **It's okay if your PR is rejected**. Mentally, prepare yourself for having the PR rejected. This is fine - the community always looks to the best possible way to change the ontology. The next PR will be accepted!  
+1. If you make a mistake, and it is pointed out during pull request review, *consider adding an appropriate QC check* to prevent the issue from happening again. And who knows - maybe you have an opportunity to fix past mistakes!  
 
 <a id="tldr"></a>
 
 ### TLDR - Summary
 
 - [Principle of Collaboration](#collaboration)
-    - Upvote answers, on Stack Overflow, GitHub and any other open communication platform.
+    - Upvote answers, on [Stack Overflow](https://stackoverflow.com/), GitHub and any other open communication platform.
     - Get involved on other peoples issue trackers.
     - Always do a basic search before asking.
     - Continuously improve Open Science documentation.
@@ -188,7 +189,7 @@ Here, we invite you to embrace the idea that ontologies and many of the tools we
     - See your issues and pull requests through to the end (dont drop the ball, no one will do your work for you)
     - Feel empowered to nudge reviewers until they tell you not to.
     - Find review buddies (this is really helpful to organise community work).
-    - Be proactive.. and brave.
+    - Be proactive... and brave.
     - Reduce your fear of breaking the ontology.
     - Reduce your fear of getting a pull request rejected.
     - Reduce other peoples fear of breaking the ontology by adding additional QC checks.
