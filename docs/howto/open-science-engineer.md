@@ -173,7 +173,7 @@ Here, we invite you to embrace the idea that ontologies and many of the tools we
 ### TLDR - Summary
 
 - [Principle of Collaboration](#collaboration)
-    - Upvote answers, on Stack Overflow, GitHub and any other open communication platform.
+    - Upvote answers, on [Stack Overflow](https://stackoverflow.com/), GitHub and any other open communication platform.
     - Get involved on other peoples issue trackers.
     - Always do a basic search before asking.
     - Continuously improve Open Science documentation.
@@ -189,7 +189,7 @@ Here, we invite you to embrace the idea that ontologies and many of the tools we
     - See your issues and pull requests through to the end (dont drop the ball, no one will do your work for you)
     - Feel empowered to nudge reviewers until they tell you not to.
     - Find review buddies (this is really helpful to organise community work).
-    - Be proactive.. and brave.
+    - Be proactive... and brave.
     - Reduce your fear of breaking the ontology.
     - Reduce your fear of getting a pull request rejected.
     - Reduce other peoples fear of breaking the ontology by adding additional QC checks.
