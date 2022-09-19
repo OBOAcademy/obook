@@ -69,6 +69,7 @@ The heart and soul of a successful Open Science culture is collaboration. The re
 ## Principle of Upstream Fixing
 
 Maximising impact of your changes is by **far the best way you can benefit society** as an Open Science Engineer. Open Science projects are a web of mutually dependent efforts, for example:
+
 * Ontologies re-use terms and axioms from other ontologies
 * Software packages provide functionality that help building Knowledge Graphs, ensuring the quality of ontology releases and extract new insights from existing knowledge and scientific facts.
 * Projects use ontologies for indexing data and making them discoverable.
@@ -149,8 +150,8 @@ Here, we invite you to embrace the idea that ontologies and many of the tools we
     *Example*: After waiting for the PR to be reviewed, Meghan kindly asked Nicole if she should find a different reviewer.
 
     <img width="787" alt="image" src="https://user-images.githubusercontent.com/6722114/190458254-ed13ef7b-9c0a-455a-ad49-89d2548b81ab.png" />
-1. **Find review buddies.** For every ontology you seek to contribute to **pair up with someone** who will review your pull requests and you will review their pull requests. Sometimes, it is very difficult to get _anyone_ to review your pull request. Reach out to people in person, and form an alliance for review. It is fun, and you learn new things (and get to know new people!).
-1. **Be proactive**
+1. Find **review buddies**. For every ontology you seek to contribute to **pair up with someone** who will review your pull requests and you will review their pull requests. Sometimes, it is very difficult to get _anyone_ to review your pull request. Reach out to people in person, and form an alliance for review. It is fun, and you learn new things (and get to know new people!).
+1. Be **proactive**.
     - Problem of decentralization and lack of hierarchial organisation needs *proactive and brave* decision makers.
     - No one will do your work for you. See your pull requests and issues through all the way to the release!
     - Learn the tools necessary to make basic fixes - just try it/do it.
