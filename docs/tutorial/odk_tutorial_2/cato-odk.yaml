@@ -1,0 +1,19 @@
+id: cato
+title: "Cat Anatomy Ontology"
+github_org: obophenotype
+git_main_branch: main
+repo: cat_anatomy_ontology
+release_artefacts: 
+  - base
+  - full
+  - simple
+primary_release: full
+export_formats:
+  - owl
+  - obo
+  - json
+import_group:
+  products: 
+    - id: ro
+    - id: cob
+robot_java_args: '-Xmx8G'
