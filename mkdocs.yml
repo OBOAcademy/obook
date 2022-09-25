@@ -49,6 +49,7 @@ nav:
           - ROBOT - Generating SPARQL table reports: tutorial/sparql-report-robot.md
           - ODK - Adding SPARQL table reports: tutorial/sparql-report-odk.md
           - ODK - Getting started with your own repo: tutorial/setting-up-project-odk.md
+          - ODK - 20 minute complete walk-through: tutorial/odk-tutorial-2.md
           - ODK - Managing imports: tutorial/managing-dynamic-imports-odk.md
           - ODK - Managing ontology releases: tutorial/managing-ontology-releases-odk.md
           - ODK - Migrating to ODK: tutorial/migrating-ontology-to-odk.md

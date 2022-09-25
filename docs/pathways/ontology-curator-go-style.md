@@ -43,7 +43,7 @@ Note: Work on this document is still in progress, items that are not linked are 
 
 ### General mindset
 
-1. [How to be a team open science player](../howto/team-open-science-mindset.md)
+1. [How to be a team open science player](../howto/open-science-engineer.md)
 
 ## Ontology Curator How To Collection
 
