@@ -11,12 +11,14 @@ We developed a completely automated variant of the Custom OBO Dashboard Workflow
    1. Important: Add your ontology ID to the ID 'id' field
    2. Add the path to your ontology to the `mirror_from` field.
 1. Optional: use the `profile` section to overwrite the custom robot report profile and add custom checks!
+
    ```
    profile:
      baseprofile: "https://raw.githubusercontent.com/ontodev/robot/master/robot-core/src/main/resources/report_profile.txt"
      custom:
        - "WARN\tfile:./sparql/missing_xrefs.sparql"
     ```
+
  1. Click on "Settings" > "Pages" to configure the `GitHub pages`. Set the `Source` to deploy from branch, and `Branch` to build from `main` (or `master` if you are still using the old default) and `/(root)` as directory. Hit `Save`.
      <img width="322" alt="image" src="https://user-images.githubusercontent.com/7070631/192293973-891b400d-c9f1-46d8-aff1-4bc3e6083c43.png">
  1. Click on the `Actions` tab in your repo. On the left, select the `Run dashboard` workflow and click on the `Run workflow` button. This action will rebuild the dashboard and make a pull request with the changes.
