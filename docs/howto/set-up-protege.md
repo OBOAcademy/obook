@@ -18,7 +18,7 @@ As of July 2022, OBO ontology editors are using `Protege version 5.5.0`
 
 ## Increase memory in Protege
 
-Protege needs at least 4G of RAM to cope with Mondo, ideally use 12G or 16G if your machine can handle it.
+Protege needs at least 4G of RAM to cope with Mondo, ideally use 12G or 16G if your machine can handle it. Edits to the Protege configuration files will not take effect until Protege is restarted.
 
 ### Mac Instructions
 
