@@ -23,8 +23,11 @@ Protege needs at least 4G of RAM to cope with Mondo, ideally use 12G or 16G if y
 ### Mac Instructions
 
 1. If running from Protege.app on a Mac, open the /Applications/Protege-5.5.0/Protégé.app/Contents/info.plist file
-1. Below the line: <string>-Xss16M</string>
-1. Insert another line: <string>-Xmx12G</string>
+1. Below the line: `<string>-Xss16M</string>`
+1. Insert another line: `<string>-Xmx12G</string>`
+
+Some Mac users might find that the edits need to be applied to `/Applications/Protégé.app/Contents/Info.plist`.
+
 
 ### PC Instructions
 
