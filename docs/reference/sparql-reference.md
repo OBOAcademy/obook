@@ -50,8 +50,8 @@ SELECT DISTINCT ?term ?label ?def
   FILTER(isIRI(?term) && (STRSTARTS(str(?term), "http://purl.obolibrary.org/obo/CP_")))
 }
 
-# arrange report by entity variable
-ORDER BY ?entity
+# arrange report by term variable
+ORDER BY ?term
 ```
 
 
