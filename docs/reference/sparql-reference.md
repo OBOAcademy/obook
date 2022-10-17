@@ -33,7 +33,7 @@ prefix owl: <http://www.w3.org/2002/07/owl#>
 # select a report with 3 variables
 SELECT DISTINCT ?term ?label ?def
 
-# defining th properties to be used
+# defining the properties to be used
 	WHERE {
 		VALUES ?defproperty {
  		definition:
