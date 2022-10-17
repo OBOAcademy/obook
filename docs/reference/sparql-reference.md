@@ -22,6 +22,39 @@ WHERE {
 }
 ```
 
+### Report of labels and definitions of terms with certain namespace
+
+```SPARQL
+prefix label: <http://www.w3.org/2000/01/rdf-schema#label>
+prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+prefix definition: <http://purl.obolibrary.org/obo/IAO_0000115>
+prefix owl: <http://www.w3.org/2002/07/owl#>
+
+# select a report with 3 variables
+SELECT DISTINCT ?term ?label ?def
+
+# defining th properties to be used
+	WHERE {
+		VALUES ?defproperty {
+ 		definition:
+		}
+		VALUES ?labelproperty {
+ 		label:
+		}
+
+# defining the order of the triples
+      ?term ?defproperty ?def .
+      ?term ?labelproperty ?label .
+      
+# selects entities that are in a certain namespace
+  FILTER(isIRI(?term) && (STRSTARTS(str(?term), "http://purl.obolibrary.org/obo/CP_")))
+}
+
+# arrange report by entity variable
+ORDER BY ?entity
+```
+
+
 ### Definition lacks xref
 
 adaptable for lacking particular annotation
