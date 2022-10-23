@@ -30,7 +30,7 @@ Usually refers to a [Project Ontology](#Project Ontology).
 
 #### Axiom
 
-Axioms are statements that are asserted to be true in the domain being described. For example, using a subclass axiom, one can state that the class a:Student is a subclass of the class a:Person.
+Axioms are statements that are asserted to be true in the domain being described. For example, using a subclass axiom, one can state that the class a:Student is a subclass of the class a:Person. (Note: in OWL, there are also annotation axioms which does not apply any logical descriptions)
 
 #### Bioportal
 
@@ -46,15 +46,15 @@ An [OWL entity](#OWL-entity) that formally represents something that can be inst
 
 #### CURIE
 
-A CURIE is a compact [URI](#URI). For example, `CL:0000001`.
+A CURIE is a compact [URI](#URI). For example, `CL:0000001` expands to http:purl.obolibrary.org/obo/CL_0000001. For more information, please see https://www.w3.org/TR/curie/. 
 
 #### Data Model
 
-An abstract model that organizes elements of data and standardizes how they relate to one another and to the properties of real-world entities.
+An abstract model that organizes elements of data and standardizes how they relate to one another.
 
-#### DatatypeProperty
+#### dataProperty
 
-DatatypeProperty relate [OWL entities](#OWL-entity) to literal data (e.g., strings, numbers, datetimes, etc.) as opposed to [ObjectProperty](#ObjectProperty) which relate individuals to other [OWL entities](#OWL-entity). Unlike [AnnotationProperty](#AnnotationProperty), DatatypeProperty axioms fall on the logical side of [OWL](#OWL) and are hence useable by reasoners.
+dataProperty relate [OWL entities](#OWL-entity) to literal data (e.g., strings, numbers, datetimes, etc.) as opposed to [ObjectProperty](#ObjectProperty) which relate individuals to other [OWL entities](#OWL-entity). Unlike [AnnotationProperty](#AnnotationProperty), dataProperty axioms fall on the logical side of [OWL](#OWL) and are hence useable by reasoners.
 
 #### Description Logic
 
@@ -66,7 +66,7 @@ Description Logics (DL) are a family of formal knowledge representation language
 
 #### Edge
 
-A typed, directed link between [Nodes](#Nodes) in a [knowledge graph](#Knowledge Graph). Translations of OWL into Knowledge graphs vary, but typically edges are generated for simple triples (relating two individuals or two classes via an [ObjectProperty](#ObjectProperty) or [AnnotationProperty](#AnnotationProperty)) and simple [existential restrictions](#Existential-Restriction) (A SubClassOf R some B), with the edge type corresponding to the property.
+A typed, directed link between [Nodes](#Nodes) in a [knowledge graph](#Knowledge Graph). Translations of OWL into Knowledge graphs vary, but typically edges are generated for simple triples, relating two individuals or two classes via an [AnnotationProperty](#AnnotationProperty) or [ObjectProperty](#ObjectProperty) and simple [existential restrictions](#Existential-Restriction) (A SubClassOf R some B), with the edge type corresponding to the property.
 
 #### Endpoint
 
@@ -74,11 +74,11 @@ Where an [API](#API) interfaces with the ontology.
 
 #### Existential Restriction
 
-Existential restrictions describe classes of individuals that participate in at least one relationship along a specified property to individuals that are members of a specified class. In Protégé, the keyword 'some' is used to denote existential restrictions and is interpreted as "there exists", "there is at least one", or "some". See [documentation on classifications](../explanation/intro-to-ontologies/#an-ontology-as-a-classification) for more details.
+A relationship between two classes, A R (some) B, that states that all individuals of class A stand in relation R to at least one individual of class B. For example, `neuron has_part some dendrite` states that all instances of neuron have at least one individual of type dentrite as a part. In Manchester syntax, the keyword 'some' is used to denote existential restrictions and is interpreted as "there exists", "there is at least one", or "some". See [documentation on classifications](../explanation/intro-to-ontologies/#an-ontology-as-a-classification) for more details.
 
 #### Functional Syntax
 
-The syntax in which the ontology is written - a functional-style syntax ontology document is a sequence of Unicode characters accessible via some IRI by means of the standard protocols such that its text matches the ontologyDocument production of the grammar defined in this specification document, and it can be converted into an ontology by means of the canonical parsing process
+An official syntax of OWL (others are RDF-XML and OWL-XML) in which each line represents and axiom (although things get a little more complex with axiom annotations, and axioms use prefix syntax (order = relation (subject, object)). This is in contrast to in-fix syntax (e.g. Manchester syntax) (order = subject relation object). Functional syntax is the preferred syntax for editor files maintained on GitHub, because it can be safely diff'd and (somewhat) human readable.
 
 #### Graph
 
@@ -86,7 +86,7 @@ Formally a graph is a data structure consisting of [Nodes](#Nodes) and [Edges](#
 
 #### Individual
 
-An [Ontology elements](#Ontology-element) that represents an instance of a class. For example, the instance "John" or "John's heart". Note that instances are not commonly represented in ontologies.
+An [Ontology elements](#Ontology-element) that represents an instance of a class. For example, the instance "John" or "John's heart". Note that instances are not commonly represented in ontologies. For instance, "John" (an instance of person) or "John's heart" (an instance of heart).
 
 #### Information Content
 
@@ -122,7 +122,7 @@ A means of linking two resources (e.g. two ontologies, or an ontology and a data
 
 #### Materialised
 
-The process of calculating the implicit statements in an ontology - making inferred axioms explicit by asserting them.
+The process of making inferred axioms explicit by asserting them.
 
 #### Name
 
@@ -142,7 +142,7 @@ The "right" side of a [Triple](#Triple).
 
 #### ObjectProperty
 
-A simple association between two [OWL entities](#OWL-entity), also see [predicate](#predicate) & [Relationship](#Relationship).
+An [owl entity](#OWL-Entity) that is used to related 2 [individuals](#Individual) ('my left foot' part_of 'my left leg') or two classes ('foot' part_of some leg) or an individual and a class ('the neuron depicted in this image' (is) has_soma_location some 'primary motor cortex. More rarely it is used to define a class in terms of some individual (the class 'relatives of Shawn' related_to Value Shawn.
 
 #### OBO
 
@@ -221,7 +221,7 @@ In [OWL](#OWL), properties are divided into disjoint categories:
 
 - [ObjectProperty](#ObjectProperty)
 - [AnnotationProperty](#AnnotationProperty)
-- [DatatypeProperty](#DatatypeProperty)
+- [dataProperty](#dataProperty)
 
 #### Protege
 
