@@ -56,9 +56,17 @@ An abstract model that organizes elements of data and standardizes how they rela
 
 dataProperty relate [OWL entities](#OWL-entity) to literal data (e.g., strings, numbers, datetimes, etc.) as opposed to [ObjectProperty](#ObjectProperty) which relate individuals to other [OWL entities](#OWL-entity). Unlike [AnnotationProperty](#AnnotationProperty), dataProperty axioms fall on the logical side of [OWL](#OWL) and are hence useable by reasoners.
 
+#### Datatype
+
+Datatypes are [OWL entities](#OWL-entity) that refer to sets of data values. Thus, datatypes are analogous to [classes](#Class), the main difference being that the former contain data values such as strings and numbers, rather than individuals. Datatypes are a kind of data range, which allows them to be used in restrictions. For example, the datatype xsd:integer denotes the set of all integers, and can be used with the [range](#Range) of a [dataProperty](#dataProperty) to state that the range of said dataProperty must be an integer. 
+
 #### Description Logic
 
 Description Logics (DL) are a family of formal knowledge representation languages. It provides a logical formalism for ontologies and is what [OWL](#OWL) is based on. DL querying can be used to query ontologies in Protege.
+
+#### Domain
+
+Domain, in reference to a [dataProperty](#dataProperty) or [ObjectProperty](#ObjectProperty), refers to the restriction on the [subject](#Subject) of a [triple](#Triple) - if a given property has a given [class](#Class) in its domain this means that any individual that has a value for the property, will be inferred to be an instance of that domain class. For example, if `John hasParent Mary` and `Person` is listed in the domain of `hasParent`, then `John` will be inferred to be an instance of `Person`. 
 
 #### DOSDP
 
@@ -130,7 +138,7 @@ Usually synonymous with [Label](#Label), but in the formal logic and OWL communi
 
 #### Named Individual
 
-An [Individual](#Individual) that is given an explicit name that can be used in any ontology to refer to the same object.
+An [Individual](#Individual) that is given an explicit name that can be used in any ontology to refer to the same object; named individuals get IRIs whereas [anonymous individuals](#Anonymous-Individual) do not.
 
 #### Nodes
 
@@ -194,7 +202,15 @@ A java-based [API](#API) to interact with OWL ontologies. Full documentation can
 
 #### OWL Entity
 
-OWL Entities, such as classes, properties, and individuals, are identified by IRIs. They form the primitive terms of an ontology and constitute the basic elements of an ontology. For example, a class a:Person can be used to represent the set of all people. Similarly, the object property a:parentOf can be used to represent the parent-child relationship. Finally, the individual a:Peter can be used to represent a particular person called "Peter".
+OWL Entities, such as classes, properties, and individuals, are identified by IRIs. They form the primitive terms of an ontology and constitute the basic elements of an ontology. For example, a class a:Person can be used to represent the set of all people. Similarly, the object property a:parentOf can be used to represent the parent-child relationship. Finally, the individual a:Peter can be used to represent a particular person called "Peter". 
+The following is a complete list of types of OWL Entities:
+
+- [Class](#Class) 
+- [Individual](#Individual)
+- [ObjectProperty](#ObjectProperty)
+- [AnnotationProperty](#AnnotationProperty)
+- [dataProperty](#dataProperty) 
+- [Datatype](#datatype)
 
 #### Predicate
 
@@ -226,6 +242,10 @@ In [OWL](#OWL), properties are divided into disjoint categories:
 #### Protege
 
 A typical ontology development tool used by ontology developers in the OBO-sphere. Full documentation can be found at https://protege.stanford.edu/.
+
+#### Range
+
+Range, in reference to a [dataProperty](#dataProperty) or [ObjectProperty](#ObjectProperty), refers to the restriction on the [object](#Object) of a [triple](#Triple) - if a given property has a given [class](#Class) in its domain this means that any individual that has a value for the property (i.e. is the subject of a relation along the property), will be inferred to be an instance of that domain class. For example, if `John hasParent Mary` and `Person` is listed in the domain of `hasParent`, then `John` will be inferred to be an instance of `Person`.
 
 #### RDF
 
@@ -273,7 +293,7 @@ The "left" side of a [Triple](#Triple).
 
 #### Subset
 
-A named collection of elements, typically grouped for some purpose.
+A named collection of elements, typically grouped for some purpose. In the ODK/OBO world, there is a standard [annotation property](#AnnotationProperty) and pattern for this, for more information, see the [subset documentation](../howto/add-new-slim/#adding-a-term-to-a-subset-slim).
 
 #### Term
 
@@ -293,7 +313,7 @@ A purpose-built database for the storage and retrieval of triples through semant
 
 #### Ubergraph
 
-A [Triplestore](#Triplestore) and a [Ontology Repository](#Ontology-Repository) that allows for [SPARQL](#SPARQL) querying of integrated [OBO](#OBO) ontologies.
+An integrated OBO ontology [Triplestore](#Triplestore) and a [Ontology Repository](#Ontology-Repository), with merged set of mutually referential OBO ontologies (see the [ubergraph github](https://github.com/INCATools/ubergraph) for list of ontologies included), that allows for [SPARQL](#SPARQL) querying of integrated [OBO](#OBO) ontologies.
 
 #### URI
 
