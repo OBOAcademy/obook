@@ -184,7 +184,7 @@ The systems or platform where various types of ontologies are stored from differ
 
 A curated collection of ontologies.
 
-### OTTR
+#### OTTR
 
 [Reasonable Ontology Templates](https://ottr.xyz/). A system for composable ontology templates and documentation.
 
