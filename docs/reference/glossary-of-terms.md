@@ -6,7 +6,7 @@ Acknowledgement: Many terms are taken directly from [OAK documentation](https://
 
 #### Annotation
 
-This term is frequently ambiguous. It can refer to [Text Annotation](#Text-Annotation), [OWL Annotation](#OWL Annotation), or Association.
+This term is frequently ambiguous. It can refer to [Text Annotation](#Text-Annotation), [OWL Annotation](#OWL-Annotation), or Association.
 
 #### AnnotationProperty
 
@@ -26,7 +26,7 @@ Application Programming Interface. An intermediary that allows two or more compu
 
 #### Application Ontology
 
-Usually refers to a [Project Ontology](#Project Ontology).
+Usually refers to a [Project Ontology](#Project-Ontology).
 
 #### Axiom
 
@@ -74,7 +74,7 @@ Domain, in reference to a [dataProperty](#dataProperty) or [ObjectProperty](#Obj
 
 #### Edge
 
-A typed, directed link between [Nodes](#Nodes) in a [knowledge graph](#Knowledge Graph). Translations of OWL into Knowledge graphs vary, but typically edges are generated for simple triples, relating two individuals or two classes via an [AnnotationProperty](#AnnotationProperty) or [ObjectProperty](#ObjectProperty) and simple [existential restrictions](#Existential-Restriction) (A SubClassOf R some B), with the edge type corresponding to the property.
+A typed, directed link between [Nodes](#Nodes) in a [knowledge graph](#Knowledge-Graph). Translations of OWL into Knowledge graphs vary, but typically edges are generated for simple triples, relating two individuals or two classes via an [AnnotationProperty](#AnnotationProperty) or [ObjectProperty](#ObjectProperty) and simple [existential restrictions](#Existential-Restriction) (A SubClassOf R some B), with the edge type corresponding to the property.
 
 #### Endpoint
 
@@ -110,7 +110,7 @@ A measures of the similarity between two sets of data to see which members are s
 
 #### KGCL
 
-Knowledge Graph Change Language (KGCL) is a [data model](#Data model) for communicating desired changes to an ontology. It can also be used to communicate differences between two ontologies. See [KGCL docs](https://github.com/INCATools/kgcl).
+Knowledge Graph Change Language (KGCL) is a [data model](#Data-model) for communicating desired changes to an ontology. It can also be used to communicate differences between two ontologies. See [KGCL docs](https://github.com/INCATools/kgcl).
 
 #### Knowledge Graph
 
