@@ -1,5 +1,7 @@
 # Adding taxon restrictions
 
+Before adding taxon restrictions, please review the [types of taxon restrictions documentation](../explanation/taxon-constraints-explainer/#Types-of-Taxon-Restrictions).
+
 See [Daily Workflow](daily-curator-workflow.md) for creating branches and basic Protégé instructions.
 
 1. `in taxon` relations are added as `Subclasses`.
