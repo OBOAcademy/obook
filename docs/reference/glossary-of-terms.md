@@ -267,7 +267,7 @@ A [Relationship](#Relationship) is a type connection between two ontology elemen
 
 See [predicate](#predicate)
 
-### ROBOT
+#### ROBOT
 
 A toolkit for transforming and interacting with ontologies. Full documentation can be found at http://robot.obolibrary.org/
 
