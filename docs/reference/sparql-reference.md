@@ -22,6 +22,37 @@ WHERE {
 }
 ```
 
+### Report of terms with labels containing certain strings in ubergraph
+
+```SPARQL
+# adding prefixes used
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix BFO: <http://purl.obolibrary.org/obo/BFO_>
+
+# selecting only unique instances of the three variables
+SELECT DISTINCT ?entity ?label WHERE
+{
+  # the variable label is a rdfs:label
+  VALUES ?property {
+    rdfs:label
+  }
+  
+  # only look for uberon terms. note: this is only used in ubergraph, use filter for local ontology instead.
+  ?entity rdfs:isDefinedBy <http://purl.obolibrary.org/obo/uberon.owl> .
+    
+  # defining the order of variables in the triple
+  ?entity ?property ?label .
+  # entity must be material
+  ?entity rdfs:subClassOf BFO:0000040
+  # filtering out triples where the variable label has sulcus or incisure, or fissure in it
+  FILTER(contains(STR(?label), "sulcus")||contains(STR(?label), "incisure")||contains(STR(?label), "fissure"))
+
+}
+# arrange report by entity variable
+ORDER BY ?entity
+```
+
 ### Report of labels and definitions of terms with certain namespace
 
 ```SPARQL
