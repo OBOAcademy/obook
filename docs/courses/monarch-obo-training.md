@@ -26,6 +26,7 @@ The goal of this course is to provide ongoing training for the OBO community. As
 
 | Date       | Lesson                                                                                                                  | Notes                                                                                                                                                                                                                                                                                                                | Recordings                                                           |
 | ---------- | ----------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| 2022/11/15 | [Contributing to OBO ontologies](../lesson/contributing-to-obo-ontologies.md) - Part 2 | |
 | 2022/11/01 | [Contributing to OBO ontologies](../lesson/contributing-to-obo-ontologies.md) - Part 1 | |
 | 2022/10/18 | [Introduction to Medical Action Ontology (MAxO)](https://github.com/monarch-initiative/MAxO) |  | [Here](https://youtu.be/MBUgeNbTngg)
 | 2022/10/04 | _No meeting_ - ISB virtual conference: [register here](https://docs.google.com/forms/d/e/1FAIpQLSeDhec3KJ2JaJyh-OYcEpBMrSEFYIBzL4N8k57RPv09HqnnQg/viewform) |  |
@@ -66,8 +67,7 @@ _Note: this is tentative and subject to change_
 
 | Date | Lesson  
 | --- | --- 
-| 2022/11/15 | OBO Academy hackathon (work on open tickets together)
-| 2022/11/29 | [Contributing to OBO ontologies](../lesson/contributing-to-obo-ontologies.md) - Part 2 
+| 2022/11/29 | OBO Academy hackathon (work on open tickets together)
 | 2022/12/13 | Fundamentals of matching 
 | 2022/12/27 | _No meeting_: Celebrate the holidays
 | 2023/01/10 | TBD
