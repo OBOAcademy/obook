@@ -115,12 +115,12 @@ nav:
       - Command line:
           - How to filter a file based on another file: howto/filter-text-file.md
   - Reference:
+      - Glossary of Terms: reference/glossary-of-terms.md
       - Frequently used ODK commands: reference/frequently-used-odk-commands.md
       - Protege Interface: reference/protege-interface.md
       - Protege FAQ: reference/protege-faq.md
       - Formatting your ontology annotations correctly: reference/formatting-license.md
       - OBO-style term annotation: reference/go-style-annotation-property-practice.md
-      - Glossary: reference/glossary.md
       - Git:
           - Intro to GitHub: reference/github-intro.md
           - GitHub Desktop: reference/github-desktop.md
