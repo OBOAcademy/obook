@@ -13,6 +13,15 @@
 
 [Pull Requests lesson](tutorial/pull-requests/)
 
+## outlined
+
+1. (Nico) Show structure of OBOOK
+  - Naming conventions of How To guides
+  - How to create a new how to guide
+2. (Nicole) Present the issues: [OBOOK need volunteer](https://github.com/OBOAcademy/obook/issues?q=is%3Aissue+is%3Aopen+label%3Aneed-volunteer)
+3. (Students) Use Slack to find a buddy to review your PRs during this Hackathon
+4. Work through issues together
+
 ## Contributors
 
 - [Nicole Vasilevsky](https://orcid.org/0000-0001-5208-3432)
