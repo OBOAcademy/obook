@@ -28,9 +28,9 @@ Application Programming Interface. An intermediary that allows two or more compu
 
 Usually refers to a [Project Ontology](#Project-Ontology).
 
-#### Axiom
+#### OWL Axiom
 
-Axioms are statements that are asserted to be true in the domain being described. For example, using a subclass axiom, one can state that the class a:Student is a subclass of the class a:Person. (Note: in OWL, there are also annotation axioms which does not apply any logical descriptions)
+Every OWL ontology consists of a set of OWL axioms - statements in OWL made using OWL entities. While most axioms in OWL make logical assertions that can be used by a reasoner (for example, that (all) toenails are part of some toe), OWL also includes non-logical axioms, for example the statement `UBERON:0009567 rdfs:label 'nail of pedal digit'`. These use annotation properties as predicates. e.g. rdfs:label, and are not used in reasoning.
 
 #### Bioportal
 
@@ -86,7 +86,9 @@ A relationship between two classes, A R (some) B, that states that all individua
 
 #### Functional Syntax
 
-An official syntax of OWL (others are RDF-XML and OWL-XML) in which each line represents and axiom (although things get a little more complex with axiom annotations, and axioms use prefix syntax (order = relation (subject, object)). This is in contrast to in-fix syntax (e.g. Manchester syntax) (order = subject relation object). Functional syntax is the preferred syntax for editor files maintained on GitHub, because it can be safely diff'd and (somewhat) human readable.
+An official syntax of OWL (others are RDF-XML and OWL-XML) in which each line represents an axiom and axioms use prefix syntax: the relation comes first, followed by subject and object in brackets, e.g. `SubClassOf(:big_toe :toe )`
+
+Functional syntax is the preferred syntax for editor files maintained on GitHub, because it can be safely diff'd and (somewhat) human readable.
 
 #### Graph
 
@@ -150,7 +152,7 @@ The "right" side of a [Triple](#Triple).
 
 #### ObjectProperty
 
-An [owl entity](#OWL-Entity) that is used to related 2 [individuals](#Individual) ('my left foot' part_of 'my left leg') or two classes ('foot' part_of some leg) or an individual and a class ('the neuron depicted in this image' (is) has_soma_location some 'primary motor cortex. More rarely it is used to define a class in terms of some individual (the class 'relatives of Shawn' related_to Value Shawn.
+An [owl entity](#OWL-Entity) that is used to relate two [individuals](#Individual) (`'my left foot' part_of 'my left leg'`) or two classes (`'foot' subClassof part_of some leg`) or an individual and a class (`'the neuron depicted in this image' type: has_soma_location some 'primary motor cortex`). More rarely it is used to define a class in terms of some individual (e.g. `'relatives of Shawn' EquivalentTo related_to Value Shawn`)
 
 #### OBO
 
@@ -166,7 +168,7 @@ Ontology Lookup Service. An [Ontology Repository](#Ontology-Repository) that is 
 
 #### Ontology
 
-A flexible concept loosely encompassing any collection of [OWL entities](#OWL-entity) and statements or relationships connecting them.
+A flexible concept loosely encompassing any collection of [OWL entities](#OWL-entity) and statements(axioms) or relationships connecting them.
 
 #### ODK
 
