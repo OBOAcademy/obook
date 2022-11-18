@@ -13,7 +13,7 @@
 
 [Pull Requests lesson](tutorial/pull-requests/)
 
-## outlined
+## Outline
 
 1. (Nico) Show structure of OBOOK
   - Naming conventions of How To guides
