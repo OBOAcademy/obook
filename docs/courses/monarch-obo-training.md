@@ -26,7 +26,7 @@ The goal of this course is to provide ongoing training for the OBO community. As
 
 | Date       | Lesson                                                                                                                  | Notes                                                                                                                                                                                                                                                                                                                | Recordings                                                           |
 | ---------- | ----------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
-| 2022/11/29 | OBO Academy hackathon | Work on open tickets together.  |
+| 2022/11/29 | [OBO Academy hackathon](../lesson/hackathon.md) | Work on open tickets together.  |
 | 2022/11/15 | [Contributing to OBO ontologies](../lesson/contributing-to-obo-ontologies.md) - Part 2 | |
 | 2022/11/01 | [Contributing to OBO ontologies](../lesson/contributing-to-obo-ontologies.md) - Part 1 | |
 | 2022/10/18 | [Introduction to Medical Action Ontology (MAxO)](https://github.com/monarch-initiative/MAxO) |  | [Here](https://youtu.be/MBUgeNbTngg)
