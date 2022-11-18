@@ -94,7 +94,7 @@ Formally a graph is a data structure consisting of [Nodes](#Nodes) and [Edges](#
 
 #### Individual
 
-An [Ontology elements](#Ontology-element) that represents an instance of a class. For example, the instance "John" or "John's heart". Note that instances are not commonly represented in ontologies. For instance, "John" (an instance of person) or "John's heart" (an instance of heart).
+An [OWL entity](#OWL-entity) that represents an instance of a class. For example, the instance "John" or "John's heart". Note that instances are not commonly represented in ontologies. For instance, "John" (an instance of person) or "John's heart" (an instance of heart).
 
 #### Information Content
 
@@ -166,15 +166,11 @@ Ontology Lookup Service. An [Ontology Repository](#Ontology-Repository) that is 
 
 #### Ontology
 
-A flexible concept loosely encompassing any collection of [Ontology elements](#Ontology-element) and statements or relationships connecting them.
+A flexible concept loosely encompassing any collection of [OWL entities](#OWL-entity) and statements or relationships connecting them.
 
 #### ODK
 
 [Ontology Development Kit](https://github.com/INCATools/ontology-development-kit). A toolkit and docker image for managing ontologies.
-
-#### Ontology element
-
-A loosely defined concept that is generalised as discrete part of an [Ontology](#Ontology). Usually used to mean [OWL Entities](#OWL-entity) but other elements can include various metadata artefacts like [Annotation Properties](#Annotation-Property).
 
 #### Ontology Library
 
@@ -214,7 +210,7 @@ The following is a complete list of types of OWL Entities:
 
 #### Predicate
 
-An [Ontology element](#Ontology-element) that represents the type of a [Relationship](#Relationship).
+An [OWL entity](#OWL-entity) that represents the type of a [Relationship](#Relationship).
 Typically corresponds to an [ObjectProperty](#ObjectProperty) in [OWL](#OWL), but this is not always true;
 in particular, the is-a relationship type is a builtin construct `SubClassOf` in OWL
 Examples:
@@ -232,7 +228,7 @@ An [Ontology Library](#Ontology-Library) for parsing obo and owl files.
 
 #### Property
 
-An [Ontology elements](#Ontology-element) that represents an attribute or a characteristic of an element.
+An [OWL entity](#OWL-entity) that represents an attribute or a characteristic of an element.
 In [OWL](#OWL), properties are divided into disjoint categories:
 
 - [ObjectProperty](#ObjectProperty)
@@ -261,7 +257,7 @@ An ontology tool that will perform inference over an ontology to yield new _axio
 
 #### Relationship
 
-A [Relationship](#Relationship) is a type connection between two ontology elements. The first element is called the [subject](#Subject), and the second one the [Object](#Object), with the type of connection being the [Relationship Type](#Relationship-Type). Sometimes Relationships are equated with [Triples](#Triple) in [RDF](#RDF) but this can be confusing, because some relationships map to _multiple_ triples when following the OWL RDF serialization. An example is the relationship "finger part-of hand", which in OWL is represented using a [Existential Restriction](#Existential-Restriction) that maps to 4 triples.
+A [Relationship](#Relationship) is a type connection between two [OWL entities](#OWL-entity). The first element is called the [subject](#Subject), and the second one the [Object](#Object), with the type of connection being the [Relationship Type](#Relationship-Type). Sometimes Relationships are equated with [Triples](#Triple) in [RDF](#RDF) but this can be confusing, because some relationships map to _multiple_ triples when following the OWL RDF serialization. An example is the relationship "finger part-of hand", which in OWL is represented using a [Existential Restriction](#Existential-Restriction) that maps to 4 triples.
 
 #### Relationship Type
 
