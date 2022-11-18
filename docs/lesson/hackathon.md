@@ -2,11 +2,11 @@
 
 ## Goals/Learning outcomes
 
-- Strengthen social workflows in creating Pull Requests (PRs), including
-  - creating a PR
-  - writing a description of the PR
-  - Reviewing a PR
-  - Adding suggestions using suggestion mode
+- Strengthen social workflows in creating Pull Requests (PRs), including:
+    - creating a PR
+    - writing a description of the PR
+    - Reviewing a PR
+    - Adding suggestions using suggestion mode
 - Foster a sense of shared efforts in open science 
 
 ## Prerequisites
