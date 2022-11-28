@@ -12,4 +12,6 @@ This guide explains how to embed a YouTube video into a page in this OBO Academy
 
 The content should look something like this: `<iframe width="560" height="315" src="https://www.youtube.com/embed/_z8-KGDzZ6U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
 
+The embedded video should look like this:
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_z8-KGDzZ6U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
