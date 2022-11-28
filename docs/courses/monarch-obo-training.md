@@ -70,7 +70,7 @@ _Note: this is tentative and subject to change_
 | --- | --- 
 | 2022/12/13 | Fundamentals of matching 
 | 2022/12/27 | _No meeting_: Celebrate the holidays
-| 2023/01/10 | TBD
+| 2023/01/10 | Taxon constraints
 
 ## Notes
 
