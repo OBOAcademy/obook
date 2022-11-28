@@ -1,1 +1,0 @@
-# Basic term mapping tutorial
