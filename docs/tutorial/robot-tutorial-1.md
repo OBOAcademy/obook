@@ -1,13 +1,15 @@
 # ROBOT Mini-Tutorial 1: Convert, Extract and Template
 
 Last week, we were introduced to ROBOT for quality control and generating reports about terms in an ontology. This week, we will learn about three new ROBOT commands:
-* Convert
-* Extract
-* Template
+
+- Convert
+- Extract
+- Template
 
 Before starting this tutorial, either:
-* make sure Docker is running and you are in the container
-* [download and install ROBOT](http://robot.obolibrary.org/) for your operating system
+
+- make sure Docker is running and you are in the container
+- [download and install ROBOT](http://robot.obolibrary.org/) for your operating system
 
 We will be using the files from the [Ontologies 101 Tutorial](https://github.com/OHSUBD2K/BDK14-Ontologies-101).
 In your terminal, navigate to the repository that you cloned and then into the `BDK14_exercises` folder.
@@ -17,13 +19,13 @@ In your terminal, navigate to the repository that you cloned and then into the `
 So far, we have been saving our ontologies in Protege using the default RDF/XML syntax, but there are many flavors of OWL.
 We will discuss each of these serializations in more detail during the class session, but ROBOT supports the following:
 
-* owl - RDF/XML
-* owx - OWL/XML
-* ttl - Turtle
-* obo - OBO Format
-* ofn - OWL Functional
-* omn - OWL Manchester
-* json - obographs JSON
+- owl - RDF/XML
+- owx - OWL/XML
+- ttl - Turtle
+- obo - OBO Format
+- ofn - OWL Functional
+- omn - OWL Manchester
+- json - obographs JSON
 
 ### Let's Try It!
 
@@ -43,7 +45,7 @@ RDF/XML and Turtle are very different serializations, but the actual data that i
 ### On Your Own
 
 1. Convert `chromosome-parts.owl` into the following formats: `obo` (OBO Format), `ofn` (OWL Functional), and `omn` (OWL Manchester).
-2. Open each file and take a minute to scroll through (we don't expect you to be able to read these, they're *mostly* meant for computers!)
+2. Open each file and take a minute to scroll through (we don't expect you to be able to read these, they're _mostly_ meant for computers!)
 3. Why do you think we need these different serializations? What do you think the purpose of OWL Manchester vs. RDF/XML is?
 
 ---
@@ -53,11 +55,11 @@ RDF/XML and Turtle are very different serializations, but the actual data that i
 Sometimes we only want to browse or share a subset of an ontology, especially with some of the larger OBO Foundry ontologies.
 There are two main methods for creating subsets:
 
-* MIREOT
-* SLME
+- MIREOT
+- SLME
 
 Right now, we will use use MIREOT and talk more about SLME in our class session.
-MIREOT makes sure that you have the *minimal* amount of information you need to reuse an existing ontology term.
+MIREOT makes sure that you have the _minimal_ amount of information you need to reuse an existing ontology term.
 It allows us to extract a small portion of the class hierarchy by specifying upper and lower boundaries, which you will see in the example below.
 We need to know the identifiers (as CURIEs) of the terms that we want to set as our boundaries.
 
@@ -81,6 +83,7 @@ Since "chromosome" has two named parents, both of those parents are included, wh
 Now let's try it with an upper term. This time, we want "organelle" to be the upper boundary. Find the CURIE for "organelle".
 
 Return to your terminal and enter the following command (where the `--upper-term` is the new CURIE we just found):
+
 ```
 robot extract --method MIREOT \
   --input chromosome-parts.owl \
@@ -104,9 +107,9 @@ Open `chromosome.owl` and again return to the Class hierarchy. This time, we see
 
 Most of the knowledge encapsulated in ontologies comes from domain experts.
 Often, these domain experts are not computer scientists and are not familiar with the command line.
-Luckily, most domain experts *are* familiar with spreadsheets!
+Luckily, most domain experts _are_ familiar with spreadsheets!
 
-ROBOT provides a way to convert spreadsheets into OWL ontologies using *template strings*. We'll get more into these during the class session, but if you want to get a head start, they are all [documented here](http://robot.obolibrary.org/template#template-strings).
+ROBOT provides a way to convert spreadsheets into OWL ontologies using _template strings_. We'll get more into these during the class session, but if you want to get a head start, they are all [documented here](http://robot.obolibrary.org/template#template-strings).
 Essentially, the first row of a ROBOT template is a human-readable header. The second row is the ROBOT template string.
 Each row below that represents an entity to be created in the output ontology. We can create new entities by giving them new IDs, but we can also reference existing entities just by label.
 For now, we're going to create a new, small ontology with new terms using a template.
@@ -116,10 +119,10 @@ For now, we're going to create a new, small ontology with new terms using a temp
 Download (or copy/paste) the [animals.tsv](robot_tutorial_1/animals.tsv) file and move it to the `basic-subclass/` folder (or whatever folder you would like to work in; we will not be using any of the Ontology 101 files anymore).
 This contains the following data:
 
-| CURIE       | Label  | Parent | Comment        |
-| ----------- | ------ | ------ | -------------- |
-| ID          | LABEL  | SC %   | A rdfs:comment |
-| obo:0000001 | animal |        | Any animal in the world. |
+| CURIE       | Label  | Parent | Comment                      |
+| ----------- | ------ | ------ | ---------------------------- |
+| ID          | LABEL  | SC %   | A rdfs:comment               |
+| obo:0000001 | animal |        | Any animal in the world.     |
 | obo:0000002 | canine | animal | A member of the genus Canis. |
 | obo:0000003 | feline | animal | A member of the genus Felis. |
 
@@ -144,11 +147,11 @@ Open `animals.owl` in Protege, and you'll be able to see the class hierarchy we 
 Now let's make another small ontology that reuses some terms from our `animals.owl` file. Download (or copy/paste) [animals2.tsv](robot_tutorial_1/animals2.tsv) into the same folder.
 This contains the following:
 
-| CURIE       | Label | Parent | Comment        |
-| ----------- | ----- | ------ | -------------- |
-| ID          | LABEL | SC %   | A rdfs:comment |
+| CURIE       | Label | Parent | Comment                                            |
+| ----------- | ----- | ------ | -------------------------------------------------- |
+| ID          | LABEL | SC %   | A rdfs:comment                                     |
 | obo:0000004 | dog   | canine | A member of the subspecies Canis lupus familiaris. |
-| obo:0000005 | cat   | feline | A member of the species Felis catus. |
+| obo:0000005 | cat   | feline | A member of the species Felis catus.               |
 
 You'll notice that we are referencing two terms from our other spreadsheet in this one.
 
@@ -166,6 +169,7 @@ This is because, even though ROBOT knew about these classes, we didn't ask for t
 Next week, we'll learn about combining ontologies with the **Merge** command.
 
 For now, let's add the original `animals.owl` file as an import:
+
 1. Go to the "Active ontology" tab and find the "Imported ontologies" section at the bottom
 2. Click the **+** next to "Direct imports"
 3. Select "Import an ontology contained in a local file" and click Continue

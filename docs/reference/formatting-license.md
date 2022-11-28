@@ -2,6 +2,8 @@
 
 The new OBO Foundry guidelines encourage the annotation of ontologies with an appropriately formatted description, title and license. Here are some examples that can be used as a guide to implement those in your ontology.
 
+**Note**: these examples purposefully do not include version information, this should not be manually added, instead it should be added by ROBOT as part of a pipeline. An ontology set up with the ODK will take care of all of this for you.
+
 ## RDF/XML Example:
 
 ```

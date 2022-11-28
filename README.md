@@ -2,8 +2,46 @@
 
 The OBOOK is the main resource for OBOAcademy training materials for Semantic OBO Engineers.
 
-- To get started with learning: https://oboacademy.github.io/obook/getting_started/
+- To get started with learning: https://oboacademy.github.io/obook/getting-started/
 - To contribute: https://oboacademy.github.io/obook/contributing/
+
+## Running the website locally
+
+### Installing dependencies
+
+```bash
+# Create a virtual environment in the project folder
+python -m venv .venv
+
+# Activate the virtual environment
+# in mac/linux
+source .venv/bin/activate
+# in Windows
+.\.venv\Scripts\activate
+
+# Install dependencies
+pip install mkdocs
+pip install mkdocs-material
+```
+
+### Running the site locally
+
+If you haven't, activate the local virtual environment
+
+```bash
+# in mac/linux
+source .venv/bin/activate
+# in Windows
+.\.venv\Scripts\activate
+```
+
+Then run:
+
+```
+mkdocs serve
+```
+
+Go to http://127.0.0.1:8000/, you should see the site.
 
 ## License
 
@@ -12,6 +50,7 @@ This content is available under the [Creative Commons CC0 Public Domain Dedicati
 ## Acknowledgements
 
 ### Critical Path Institute
+
 <img src="https://user-images.githubusercontent.com/7070631/122019745-049ee500-cdbc-11eb-9ed0-3ac3ca717d9b.png" data-canonical-src="https://user-images.githubusercontent.com/7070631/122019745-049ee500-cdbc-11eb-9ed0-3ac3ca717d9b.png" width="300" />
 
 Critical Path Institute (CPI) is an independent, nonprofit organisation dedicated to bringing together experts from regulatory agencies, industry, and academia to collaborate and improve the medical product development process.

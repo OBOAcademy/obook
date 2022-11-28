@@ -13,16 +13,16 @@
 
 ## Video
 
-This is a very unprofessional video recorded as part of one of our trainings. It walks you through this tutorial here, with some additional examples being given and a bit of Q&A.
+This is a very unprofessional video below recorded as part of one of our trainings. It walks you through this tutorial here, with some additional examples being given and a bit of Q&A.
 
-<iframe src="https://drive.google.com/file/d/13YK_WabCeZrvzycoObWsWek7tGDHnNdW/preview" width="640" height="480" allow="autoplay"></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8rAgSN9wwxk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Glossary
 
-* _Template_: A document with _template strings_ that include variables which can be instantiated my a tool. For example, a ROBOT template may contain the template string `SC 'part of' some %` which can be instantiated by `ROBOT` to be transformed into an OWL axiom: `SubClassOf(CATO:001 ObjectSomeValuesFrom(BFO:0000051 UBERON:123))`. Similarly, DOSDP YAML files are often referred to as "templates" (which is appropriate). Unfortunately, we often refer to them as "patterns" which is not strictly the right way to name them: they are templates that _encode_ patterns (and that only to a limited extend). We recommend to refer to the DOSDP YAML files as "templates".
-* _Template string_: See above: a single string with one or more slots for variables that can be instantiated and transformed into something else. The most important template string in DOSDP is the `equivalentTo` or `subClassOf` [field](http://incatools.github.io/dead_simple_owl_design_patterns/dosdp_schema/#logical-convenience-fields): It tells [DOSDP tools](../reference/semantic-engineering-toolbox.md) how to generate an OWL axiom, with which variable slots (`vars`).
-* _Pattern_: See above, often misused to mean _Template_. In fact, a pattern provides a _general modelling solution_ to a problem. Patterns can often be encoded in templates, but this is often incomplete. For example, a template typically does not care about the semantics of the properties it refers to, while this is critical for a pattern. (Avoid using this when talking about DOSDP YAML files).
-* _DOSDP template table_: The spreadsheet (typically TSV or CSV) that contains the DOSDP variable data. The DOSDP template table is applied to the _template string_ in the _template_ to generate a set of OWL axioms and annotation assertions.
+- _Template_: A document with _template strings_ that include variables which can be instantiated my a tool. For example, a ROBOT template may contain the template string `SC 'part of' some %` which can be instantiated by `ROBOT` to be transformed into an OWL axiom: `SubClassOf(CATO:001 ObjectSomeValuesFrom(BFO:0000051 UBERON:123))`. Similarly, DOSDP YAML files are often referred to as "templates" (which is appropriate). Unfortunately, we often refer to them as "patterns" which is not strictly the right way to name them: they are templates that _encode_ patterns (and that only to a limited extend). We recommend to refer to the DOSDP YAML files as "templates".
+- _Template string_: See above: a single string with one or more slots for variables that can be instantiated and transformed into something else. The most important template string in DOSDP is the `equivalentTo` or `subClassOf` [field](http://incatools.github.io/dead_simple_owl_design_patterns/dosdp_schema/#logical-convenience-fields): It tells [DOSDP tools](../reference/semantic-engineering-toolbox.md) how to generate an OWL axiom, with which variable slots (`vars`).
+- _Pattern_: See above, often misused to mean _Template_. In fact, a pattern provides a _general modelling solution_ to a problem. Patterns can often be encoded in templates, but this is often incomplete. For example, a template typically does not care about the semantics of the properties it refers to, while this is critical for a pattern. (Avoid using this when talking about DOSDP YAML files).
+- _DOSDP template table_: The spreadsheet (typically TSV or CSV) that contains the DOSDP variable data. The DOSDP template table is applied to the _template string_ in the _template_ to generate a set of OWL axioms and annotation assertions.
 
 ### Preparation
 
@@ -34,7 +34,7 @@ title: "Cat Anatomy Ontology"
 github_org: obophenotype
 git_main_branch: main
 repo: cat_anatomy_ontology
-release_artefacts: 
+release_artefacts:
   - base
   - full
   - simple
@@ -44,20 +44,21 @@ export_formats:
   - obo
   - json
 import_group:
-  products: 
+  products:
     - id: ro
     - id: pato
     - id: omo
 robot_java_args: '-Xmx8G'
 ```
 
-<a name="activate"></a> 
+<a name="activate"></a>
+
 ### Activate DOSDP in ODK
 
 In your `src/ontology/{yourontology}-odk.yaml` file, simply add the following:
 
 ```yaml
-use_dosdps: TRUE
+use_dosdps: true
 ```
 
 This flag activates DOSDP in ODK - without it, none of the DOSDP workflows in ODK can be used. Technically, this flag tells ODK the following things:
@@ -81,7 +82,8 @@ This will:
 1. Update your ontology repository to whatever ODK you have installed in docker (`v1.3`, for example)
 2. Apply any changes to your configuration file. For example, the fact that you have activated the DOSDP pipeline in your config file will lead to the ODK extending your `Makefile` in certain ways
 
-<a name="first-pattern"></a> 
+<a name="first-pattern"></a>
+
 ### Adding a first, simple template
 
 (1) Create a new file `src/patterns/dosdp-patterns/haircoat_colour_pattern.yaml` and paste the following content:
@@ -90,8 +92,8 @@ This will:
 pattern_name: haircoat_colour_pattern
 pattern_iri: http://purl.obolibrary.org/obo/obo-academy/patterns/haircoat_colour_pattern.yaml
 
-description: '
-  Captures the multicoloured characteristic of the fur, i.e. spotted, dotted, motley etc.'
+description: "
+  Captures the multicoloured characteristic of the fur, i.e. spotted, dotted, motley etc."
 
 classes:
   colour_pattern: PATO:0001533
@@ -100,7 +102,7 @@ classes:
 relations:
   has_characteristic: RO:0000053
 
-vars: 
+vars:
   colour_pattern: "'colour_pattern'"
 
 name:
@@ -108,12 +110,12 @@ name:
   vars:
     - colour_pattern
 
-def: 
+def:
   text: "A coat of hair with a %s colour pattern."
   vars:
     - colour_pattern
 
-equivalentTo: 
+equivalentTo:
   text: "'coat_of_hair' and 'has_characteristic' some %s"
   vars:
     - colour_pattern
@@ -133,8 +135,8 @@ CATO:0000001	PATO:0000333
 
 We are creating a minimal table here with just two columns:
 
-* `defined_class` refers to the ID for the term that is being modelled by the template (mandatory for all DOSDP templates)
-* `colour_pattern` refers to the variable of the same name specified in the `vars:` section of the DOSDP template YAML file.
+- `defined_class` refers to the ID for the term that is being modelled by the template (mandatory for all DOSDP templates)
+- `colour_pattern` refers to the variable of the same name specified in the `vars:` section of the DOSDP template YAML file.
 
 ### DOSDP generate: Turning the template tables into OWL axioms
 
@@ -146,7 +148,7 @@ Lets first try to transform the simple table above to OWL using the ODK pipeline
 sh run.sh make ../patterns/definitions.owl -B IMP=false
 ```
 
-This process will will create the `../patterns/definitions.owl` file, which is the file that contains _all axioms_ generated by _all templates_ you have configured. In our simple scenario, this means a simple single pattern. Let us look at definitions.owl in your favourite text editor first. 
+This process will will create the `../patterns/definitions.owl` file, which is the file that contains _all axioms_ generated by _all templates_ you have configured. In our simple scenario, this means a simple single pattern. Let us look at definitions.owl in your favourite text editor first.
 
 ```
 Tip: Remember, the `-B` tells `make` to run the make command no matter what - one of the advantages of `make` is that it only runs a command again if something changed, for example, you have added something to a DOSDP template table.
@@ -212,7 +214,7 @@ Still a few things to iron out - there is an UBERON term that we still need to i
 
 Re-using terms is at the heart of the OBO philosophy, but when it comes to re-using axiom patterns, such as the ones we can define as part of a ROBOT template, we are (as of 2022) still in the early stages. One thing we can do to facilitate re-use is to share DOSDP templates between different projects. We do that by simply adding the URL at which the pattern is located to `src/patterns/dosdp-patterns/external.txt`. Note: if you are copying a URL from GitHub, make sure it is the `raw` url, i.e.:
 
-* src/patterns/dosdp-patterns/external.txt
+- src/patterns/dosdp-patterns/external.txt
 
 ```
 https://raw.githubusercontent.com/obophenotype/bio-attribute-ontology/master/src/patterns/dosdp-patterns/entity_attribute.yaml
@@ -252,7 +254,7 @@ github_org: obophenotype
 git_main_branch: main
 use_dosdps: TRUE
 repo: cat_anatomy_ontology
-release_artefacts: 
+release_artefacts:
   - base
   - full
   - simple
@@ -262,7 +264,7 @@ export_formats:
   - obo
   - json
 import_group:
-  products: 
+  products:
     - id: ro
     - id: pato
     - id: omo
@@ -277,8 +279,7 @@ pattern_pipelines_group:
 
 ### ODK configuration reference for DOSDP
 
-| Flag | Explanation |
-| ---- | ----------- |
-| use_dosdps: TRUE | Activates DOSDP in your ODK repository setup |
-| pattern_pipelines_group:<br>products:<br>  - id: manual<br>    dosdp_tools_options: "--obo-prefixes=true --restrict-axioms-to=logical" | Adding a `manual` pipeline to your DOSDP setup in which only _logical_ axioms are generated. |
-
+| Flag                                                                                                                               | Explanation                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| use_dosdps: TRUE                                                                                                                   | Activates DOSDP in your ODK repository setup                                                 |
+| pattern_pipelines_group:<br>products:<br> - id: manual<br> dosdp_tools_options: "--obo-prefixes=true --restrict-axioms-to=logical" | Adding a `manual` pipeline to your DOSDP setup in which only _logical_ axioms are generated. |

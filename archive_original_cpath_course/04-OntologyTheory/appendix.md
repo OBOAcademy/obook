@@ -1,10 +1,8 @@
-Appendix
-========
+# Appendix
 
-Create a fork from GitHub
--------------------------
+## Create a fork from GitHub
 
-Note: Creating a fork allows you to create your copy  GitHub repository. This example provides instructions on forking the Mondo GitHub reposiitory. You can't break any of the Mondo files by editing your forked copy.
+Note: Creating a fork allows you to create your copy GitHub repository. This example provides instructions on forking the Mondo GitHub reposiitory. You can't break any of the Mondo files by editing your forked copy.
 
 1.  On GitHub, navigate to https://github.com/monarch-initiative/mondo
 1.  In the top-right corner of the page, click Fork.

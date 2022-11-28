@@ -1,7 +1,7 @@
 ## Intro to managing and tracking issues in GitHub
 
-
 ### [Overview](#overview)
+
 - [How to create issues](#create-issues)
 - [How to assign issues](#assign-issues)
 - [How to communicate about issues](#communicate-about-issues)
@@ -13,6 +13,7 @@
 - [Miscellany that is good to know](#miscellany)
 
 ### Create issues
+
 [Back to top](#overview)
 
 **Why:**
@@ -37,6 +38,7 @@ How to create an issue in GitHub:
 Follow the instructions above to create a ticket about a hypothetical issue (such as an improvement to this tutorial) that includes a sub-task list.
 
 ### Assign issues
+
 [Back to top](#overview)
 
 **Assign issues to people**
@@ -55,12 +57,12 @@ Follow the instructions above to create a ticket about a hypothetical issue (suc
 
 **New Labels**
 
- - In GitHub, navigate to the [Issues page](https://github.com/nicolevasilevsky/c-path-practice/issues) or the [pull requests tab](https://github.com/nicolevasilevsky/c-path-practice/pulls)
- - Click Labels button next to the search field
- - Click New Label to create a new label, or click Edit to edit an existing one.
- - In the text box, type your new label name.
- - Select a color for the label from the color bar. You can customize this color by editing the hexadecimal number above the color bar. For a list of hexadecimal numbers see [HTML color codes](http://htmlcolorcodes.com/)
- - Click Create Label to save the new label.
+- In GitHub, navigate to the [Issues page](https://github.com/nicolevasilevsky/c-path-practice/issues) or the [pull requests tab](https://github.com/nicolevasilevsky/c-path-practice/pulls)
+- Click Labels button next to the search field
+- Click New Label to create a new label, or click Edit to edit an existing one.
+- In the text box, type your new label name.
+- Select a color for the label from the color bar. You can customize this color by editing the hexadecimal number above the color bar. For a list of hexadecimal numbers see [HTML color codes](http://htmlcolorcodes.com/)
+- Click Create Label to save the new label.
 
 **Your turn:**
 
@@ -71,19 +73,21 @@ On the ticket you previously created:
 - Create a new label and add it to the ticket
 
 ### Communicate about issues
+
 [Back to top](#overview)
 
 **Comment on issues**
 
 - Click on an issue in the issue tracker in the [https://github.com/nicolevasilevsky/c-path-practice/issues](https://github.com/nicolevasilevsky/c-path-practice/issues) repo
 - Scroll to the bottom of the issue, and add content in the "Leave a comment" field
-- Use the top tool bar to format your text, add **bold**, *italic*, lists etc.
+- Use the top tool bar to format your text, add **bold**, _italic_, lists etc.
 - Preview your text to see how your formatting looks
-- Click Comment. 
+- Click Comment.
 
 **Close issues**
+
 - If an issue has been addressed, click Close Issue. Best practice is to point to the work (whether code, documentation, etc) that has been done to close it.
-- Only close the ticket if the issue has been resolved, usually someone will write a comment describing the action they did to close the issue and click Close Issue. 
+- Only close the ticket if the issue has been resolved, usually someone will write a comment describing the action they did to close the issue and click Close Issue.
 - The issue will no longer be dispalyed in the list of open issue, but will be archived.
 - When making a change to code or documentation in GitHub, it is possible to automatically couple a change to an issue and close it. Just use 'fixes' or 'closes' followed by the issue number.
 
@@ -117,6 +121,7 @@ You can link documents and files by:
 - Include a comment that says, 'related to #1' and link to ticket [#1](https://github.com/nicolevasilevsky/c-path-practice/issues/1)
 
 ### Organize issues
+
 [Back to top](#overview)
 
 **Milestones**
@@ -152,15 +157,19 @@ To create project:
 Create a new project and add columns and add cards to the columns.
 
 ### Query issues
+
 [Back to top](#overview)
 
 Once you start using GitHub for lots of things it is easy to get overwhelmed by the number of issues. The query dashboard [https://github.com/issues](https://github.com/issues) allows you to filter on tickets.
+
 - All issues assigned to me: [https://github.com/issues/assigned](https://github.com/issues/assigned)
 - All issues on which I am @ mentioned: [https://github.com/issues/mentioned](https://github.com/issues/mentioned)
 
 More complex queries are also possible.
 
 - All issues either assigned to me OR on which I have commented OR am mentioned: [https://github.com/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+involves%3Anicolevasilevsky+](https://github.com/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+involves%3Anicolevasilevsky+)
+
+Note, you must be signed in to GitHub to view the above links.
 
 Further reading on [Issue querys](https://help.github.com/articles/searching-issues/)
 
@@ -170,16 +179,13 @@ Further reading on [Issue querys](https://help.github.com/articles/searching-iss
 - You can set rules in your email to filter for emails that mention you, ie @username.
 
 ### Help
+
 [Back to top](#overview)
 
-- You may find the answers you seek in  [StackOverflow](http://stackoverflow.com/questions/tagged/github), although it is primarily geared towards programmers.
+- You may find the answers you seek in [StackOverflow](http://stackoverflow.com/questions/tagged/github), although it is primarily geared towards programmers.
 - GitHub kind of monitors [https://github.com/isaacs/github/issues/](https://github.com/isaacs/github/issues/) but not with any rigor.
 - To be safe, contact GitHub directly at [https://github.com/contact](https://github.com/contact), but recognize that they support literally millions of users and responsiveness is not guaranteed. Forums like isaacs sometimes offer some help because other users can help identify workarounds, for instance, as shown [here](https://github.com/isaacs/github/issues/65#issuecomment-123740194).
 
 #### Acknowledgements
 
 _Adopted from [CD2H MTIP tutorial](https://data2health.github.io/mtip-tutorial/)_
-
-
-
-

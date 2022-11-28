@@ -38,7 +38,7 @@ A convenience content type that allows us to assemble materials from obook for a
 
 ### Pathways
 
-A pathway is a kind of course, but without the expectation that it is ever taught in a concrete setting. A pathways pertains to a single concrete role (Ontology Curator, Pipeline Developer etc).  It is a collection of materials (lessons, tutorials, how-to-guides) that is ordered in a linear fashion for the convenience of the student. For example, we are developing a pathway for ontology pipeline developers that start by teaching common concepts such as how to make term requests etc, and then go into depth on ROBOT pipelines, ODK and Make.
+A pathway is a kind of course, but without the expectation that it is ever taught in a concrete setting. A pathways pertains to a single concrete role (Ontology Curator, Pipeline Developer etc). It is a collection of materials (lessons, tutorials, how-to-guides) that is ordered in a linear fashion for the convenience of the student. For example, we are developing a pathway for ontology pipeline developers that start by teaching common concepts such as how to make term requests etc, and then go into depth on ROBOT pipelines, ODK and Make.
 
 ## Best practices:
 

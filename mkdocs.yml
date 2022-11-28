@@ -11,6 +11,7 @@ nav:
   - Contribute to the course: contributing.md
   - Courses:
       - ICBO 2021 Tutorial: courses/icbo2021.md
+      - ICBO 2022 Tutorial: courses/icbo2022.md
       - Monarch Ontology Training: courses/monarch-obo-training.md
   - Pathways:
       - What is a pathway?: pathways/pathways.md
@@ -18,121 +19,146 @@ nav:
       - Ontology Curator GO-style: pathways/ontology-curator-go-style.md
       - Ontology Curator OBI-style: pathways/ontology-curator-obi-style.md
       - Ontology Engineer/Developer: pathways/ontology-engineer.md
+      - Ontology contributor: pathways/ontology-contributor.md
   - Lessons:
       - Contributing to OBO ontologies: lesson/contributing-to-obo-ontologies.md
       - Ontology Pipelines with ROBOT: lesson/ontology-pipelines.md
+      - Project Ontology Development: tutorial/project-ontology-development.md
       - Analysing Linked Data: lesson/analysing-linked-data.md
-      - Application Ontology Development: lesson/application-ontology-development.md
       - Automating Ontology Workflows: lesson/automating-ontology-workflows.md
       - Developing an OBO Ontology: lesson/developing-an-obo-ontology.md
-      - Developing an Application Ontology: lesson/developing-application-ontologies.md
       - Ontology Design: lesson/ontology-design.md
       - Templates for OBO ontologies: lesson/templates-for-obo.md
-      - Ontology Development: lesson/ontology-development.md
       - Ontology Fundamentals: lesson/ontology-fundamentals.md
       - Modelling with Object Properties: lesson/modelling-with-object-properties.md
       - Ontology Term Use: lesson/ontology-term-use.md
       - RDF Fundamentals: lesson/rdf.md
-      - Semantic Database Fundamentals: lesson/semantic-database-fundamentals.md
-      - Disease and Phenotype Ontologies: lesson/using-disease-and-phenotype-ontologies.md
       - Ontology Alignment: lesson/ontology-alignment.md
-  - Documentation: 
-      - Tutorials:
-          - Protege:
-              - DL queries: tutorial/basic-dl-query.md
-              - Disjointness: tutorial/disjointness.md
-          - Ontology Pipelines - ODK, ROBOT, etc:
-              - ROBOT Mini-Tutorial 1 - Convert, Extract and Template: tutorial/robot-tutorial-1.md
-              - ROBOT Mini-Tutorial 2 - Annotate, Merge, Reason and Diff: tutorial/robot-tutorial-2.md
-              - ROBOT Mini-Tutorial QC - Quality Control with report, verify and query: tutorial/robot-tutorial-qc.md
-              - ROBOT - Generating SPARQL table reports: tutorial/sparql-report-robot.md
-              - ODK - Adding SPARQL table reports: tutorial/sparql-report-odk.md
-              - ODK - Getting started with your own repo: tutorial/setting-up-project-odk.md
-              - ODK - Managing imports: tutorial/managing-dynamic-imports-odk.md
-              - ODK - Managing ontology releases: tutorial/managing-ontology-releases-odk.md
-              - ODK - Migrating to ODK: tutorial/migrating-ontology-to-odk.md
-          - Templates:
-              - Getting started with DOSDP templates: tutorial/dosdp-overview.md
-              - DOSDP Templates Basic Tutorial: tutorial/dosdp-template.md
-              - Introduction to Managing DOSDP Templates in ODK: tutorial/dosdp-odk.md
-          - Git, GitHub and Collaborative Workflows:
-              - GitHub Fundamentals for OBO Engineers: tutorial/github-fundamentals.md
-              - GitHub Issue for OBO Engineers: tutorial/github-issues.md
-              - Managing OBO ontology projects: tutorial/managing-ontology-project.md
-          - Dealing with Semantic Data: 
-              - From Tables to Linked Data: tutorial/linking-data.md
-              - Basic SPARQL for OBO Engineers: tutorial/sparql.md
-          - General Ontology Modelling:
-              - Family History Knowledge Base (FHKB) tutorial: tutorial/fhkb.md
-          - Ontology alignment and terminological mappings:
-              - Introduction to curating mappings: tutorial/term-mapping.md
-              - Advanced mapping curation with SSSOM: tutorial/sssom-tutorial.md
-              - Ontology matching with AML, LogMap and rdf-matcher: tutorial/ontology-matching.md
-              - Introduction to processing mappings with SSSOM and sssom-py CLI: tutorial/sssom-py-tutorial.md
-      - How-to guides:
-          - Protege:
-              - Installing ELK in Protege: howto/installing-elk-in-protege.md
-              - Setting up your ID range: howto/idrange.md
-              - Editing in Protege: howto/edit-in-protege.md
-              - Daily Workflow: howto/daily-curator-workflow.md
-              - Edit in Protege: howto/edit-in-protege.md
-              - Switching Ontologies in Protege: howto/switching-ontologies.md
-              - Browsing and Searching: howto/protege-browse-search.md
-              - Creating New Terms in Protege: howto/create-new-term.md
-              - Obsoleting a Term: howto/obsolete-term.md
-              - Merging Terms: howto/merge-terms.md
-              - Adding Taxon Restrictions: howto/add-taxon-restrictions.md
-              - Creating a new Slim (under construction): howto/add-new-slim.md
-          - ODK:
-              - Get set up for ODK-based ontology development: howto/setup-ontology-development-odk.md
-              - Setting up the ODK: howto/odk-setup.md
-              - Creating a Repo with ODK: howto/odk-create-repo.md
-              - Dealing with Large Ontologies: howto/deal-with-large-ontologies.md
-          - Git and Github:
-              - Clone a repository: howto/clone-mondo-repo.md
-              - Fork an ontology for editing: howto/github-create-fork.md
-              - Creating an GitHub Pull Request: howto/github-create-pull-request.md
-              - Change a pull request: howto/change-files-pull-request.md
-              - Fixing conflicts: howto/fixing-conflicts.md
-          - Quality control:
-              - Deploy a custom OBO-Dashboard: howto/deploy-custom-obo-dashboard.md
-          - Command line:
-              - How to filter a file based on another file: howto/filter-text-file.md
-      - Reference:
-          - Frequently used ODK commands: reference/frequently-used-odk-commands.md
-          - Protege Interface: reference/protege-interface.md)
-          - Formatting your ontology annotations correctly: reference/formatting-license.md
-          - OBO-style term annotation: reference/go-style-annotation-property-practice.md
-          - Glossary: reference/glossary.md
+      - Disease and Phenotype Ontologies: lesson/using-disease-and-phenotype-ontologies.md
+  - Lessons In Development:
+      - Developing an Application Ontology: lesson/developing-application-ontologies.md
+      - Ontology Development: lesson/ontology-development.md
+      - Semantic Database Fundamentals: lesson/semantic-database-fundamentals.md
+  - Tutorials:
+      - Protege:
+          - DL queries: tutorial/basic-dl-query.md
+          - Disjointness: tutorial/disjointness.md
+      - Ontology Pipelines - ODK, ROBOT, etc:
+          - ROBOT Mini-Tutorial 1 - Convert, Extract and Template: tutorial/robot-tutorial-1.md
+          - ROBOT Mini-Tutorial 2 - Annotate, Merge, Reason and Diff: tutorial/robot-tutorial-2.md
+          - ROBOT Mini-Tutorial QC - Quality Control with report, verify and query: tutorial/robot-tutorial-qc.md
+          - ROBOT - Generating SPARQL table reports: tutorial/sparql-report-robot.md
+          - ODK - Adding SPARQL table reports: tutorial/sparql-report-odk.md
+          - ODK - Getting started with your own repo: tutorial/setting-up-project-odk.md
+          - ODK - 20 minute complete walk-through: tutorial/odk-tutorial-2.md
+          - ODK - Managing imports: tutorial/managing-dynamic-imports-odk.md
+          - ODK - Managing ontology releases: tutorial/managing-ontology-releases-odk.md
+          - ODK - Migrating to ODK: tutorial/migrating-ontology-to-odk.md
+      - Templates:
+          - Getting started with DOSDP templates: tutorial/dosdp-overview.md
+          - DOSDP Templates Basic Tutorial: tutorial/dosdp-template.md
+          - Introduction to Managing DOSDP Templates in ODK: tutorial/dosdp-odk.md
+      - Git, GitHub and Collaborative Workflows:
+          - GitHub Fundamentals for OBO Engineers: tutorial/github-fundamentals.md
+          - GitHub Issue for OBO Engineers: tutorial/github-issues.md
+          - Managing OBO ontology projects: tutorial/managing-ontology-project.md
+          - Pull requests: tutorial/pull-requests.md
+      - Dealing with Semantic Data:
+          - From Tables to Linked Data: tutorial/linking-data.md
+          - Basic SPARQL for OBO Engineers: tutorial/sparql.md
+      - Command line:
+          - Basic introduction to CLI 1: tutorial/intro-cli-1.md
+          - Basic introduction to CLI 2: tutorial/intro-cli-2.md
+      - Mappings and SSSOM:
+          - Basic Tutorial: tutorial/sssom-manual.md
+      - General Ontology Modelling:
+          - Project Ontology Development: tutorial/project-ontology-development.md
+          - Family History Knowledge Base (FHKB) tutorial: tutorial/fhkb.md
+  - How-to guides:
+      - General:
+          - Maximising impact as an open science engineer: howto/open-science-engineer.md
+          - Creating an ontology from scratch: howto/create-ontology-from-scratch.md
+          - Create an ontology overview: howto/ontology-overview.md
+          - Prettify Markdown Files: howto/prettify.md
+          - Create Screenshot and paste into an issue: howto/screenshot.md
+          - Set-up docker: howto/setup-docker.md
+      - Protege:
+          - Setup Protege 5.5: howto/set-up-protege.md
+          - Installing ELK in Protege: howto/installing-elk-in-protege.md
+          - Setting up your ID range: howto/idrange.md
+          - Editing in Protege: howto/edit-in-protege.md
+          - Daily Workflow: howto/daily-curator-workflow.md
+          - Edit in Protege: howto/edit-in-protege.md
+          - Switching Ontologies in Protege: howto/switching-ontologies.md
+          - Browsing and Searching: howto/protege-browse-search.md
+          - Creating New Terms in Protege: howto/create-new-term.md
+          - Obsoleting a Term: howto/obsolete-term.md
+          - Merging Terms: howto/merge-terms.md
+          - Adding Taxon Restrictions: howto/add-taxon-restrictions.md
+          - Creating a new Slim (under construction): howto/add-new-slim.md
+      - ODK:
+          - Get set up for ODK-based ontology development: howto/setup-ontology-development-odk.md
+          - Setting up the ODK: howto/odk-setup.md
+          - Update to a newer ODK version: howto/odk-update.md
+          - Creating a Repo with ODK: howto/odk-create-repo.md
+          - Dealing with Large Ontologies: howto/deal-with-large-ontologies.md
+          - Updating Imports with ODK: howto/update-import.md
+      - Git and Github:
+          - Make term requests to existing ontologies: howto/term-request.md
+          - Clone a repository: howto/clone-mondo-repo.md
+          - Fork an ontology for editing: howto/github-create-fork.md
+          - Creating an GitHub Pull Request: howto/github-create-pull-request.md
+          - Change a pull request: howto/change-files-pull-request.md
+          - Fixing conflicts: howto/fixing-conflicts.md
+          - Github actions to automate tasks: howto/github-actions.md
+      - Quality control:
+          - Deploy a custom OBO-Dashboard: howto/deploy-custom-obo-dashboard.md
+      - Command line:
+          - How to filter a file based on another file: howto/filter-text-file.md
+  - Reference:
+      - Glossary of Terms: reference/glossary-of-terms.md
+      - Frequently used ODK commands: reference/frequently-used-odk-commands.md
+      - Protege Interface: reference/protege-interface.md
+      - Protege FAQ: reference/protege-faq.md
+      - Formatting your ontology annotations correctly: reference/formatting-license.md
+      - OBO-style term annotation: reference/go-style-annotation-property-practice.md
+      - Ontology Matching:
+          - Semantic ETL: reference/semantic-etl.md
+      - Git:
+          - Intro to GitHub: reference/github-intro.md
           - GitHub Desktop: reference/github-desktop.md
-          - Semantic Engineering Toolbox: reference/semantic-engineering-toolbox.md
-          - Tables and Triples: reference/tables-and-triples.md
-          - Reasoning: reference/reasoning.md
-          - A day in the life of an ontology curator: reference/ontology-curator.md
-          - Protege interface: reference/protege-interface.md
-          - SPARQL basics: reference/sparql-basics.md
           - Git FAQ: reference/git-faq.md
-          - Tools for Managing Issues: reference/managing-issues.md
-          - Release Artefacts: reference/release-artefacts.md
-          - Synonyms: reference/synonyms-obo.md
-          - Monkeying around with OWL: reference/mungall-blog-radar.md
-          - Ontology Development Kit (ODK): reference/odk.md
-          - Troubleshooting ROBOT: reference/troublehooting-robot.md
-          - Other useful resources: reference/other-resources.md
-          - Ontology Matching:
-              - Semantic ETL: reference/semantic-etl.md
-      - Explanation:
-          - Introduction to Ontologies: explanation/intro-to-ontologies.md
-          - Term Comments: explanation/term-comments.md
-          - Writing good issues: explanation/writing-good-issues.md
-          - Assert or Reason (under construction): explanation/deleting-asserted-sub-classes.md
-          - Which biomedical ontologies should we use?: explanation/which-ontology-to-use.md
-          - OWL, OBO, JSON? Base, simple, full, basic? What should you use, and why?: explanation/owl-format-variants.md
-          - What are taxon constraints?: explanation/taxon-constraints-explainer.md
+      - Semantic Engineering Toolbox: reference/semantic-engineering-toolbox.md
+      - Tables and Triples: reference/tables-and-triples.md
+      - Reasoning: reference/reasoning.md
+      - A day in the life of an ontology curator: reference/ontology-curator.md
+      - Protege interface: reference/protege-interface.md
+      - SPARQL:
+          - SPARQL basics: reference/sparql-basics.md
+          - SPARQL templates: reference/sparql-reference.md
+      - Tools for Managing Issues: reference/managing-issues.md
+      - Release Artefacts: reference/release-artefacts.md
+      - Synonyms: reference/synonyms-obo.md
+      - Monkeying around with OWL: reference/mungall-blog-radar.md
+      - Ontology Development Kit (ODK): reference/odk.md
+      - Troubleshooting ROBOT: reference/troublehooting-robot.md
+      - Common Errors in GitHub actions: reference/gh-actions-errors.md
+      - Other useful resources: reference/other-resources.md
+      - Medical Ontology landscape: reference/medical-ontology-landscape.md
+  - Explanations:
+      - Introduction to Ontologies: explanation/intro-to-ontologies.md
+      - Logical axiomatization of classes & use of reasoning: explanation/logical-axiomatization.md
+      - Term Comments: explanation/term-comments.md
+      - Introduction to Annotation Properties: explanation/annotation-properties.md
+      - Writing good issues: explanation/writing-good-issues.md
+      - Which biomedical ontologies should we use?: explanation/which-ontology-to-use.md
+      - OWL, OBO, JSON? Base, simple, full, basic? What should you use, and why?: explanation/owl-format-variants.md
+      - What are taxon constraints?: explanation/taxon-constraints-explainer.md
   - OBOOK Editors:
       - Getting started for OBOOK editors: getting-started-obook.md
       - How to add images: images/index.md
       - New lesson template: config/template.md
       - Case studies for teaching: teaching/case-studies.md
+  - Outreach:
+      - Outreach materials: reference/outreach.md
 repo_url: https://github.com/OBOAcademy/obook/
-

@@ -26,9 +26,9 @@ SPARQL has many uses in the OBO-sphere, but the following in particular:
 2. Creating summary tables for ontologies
 3. Sophisticated data transformations in ontology pipelines
 
-We will discuss each of these in the following and give examples. An informal discussion of SPARQL in OBO can be followed here:
+We will discuss each of these in the following and give examples. An informal discussion of SPARQL in OBO can be followed in video below.
 
-<iframe src="https://drive.google.com/file/d/1dueong-Du3WPPRvpYoHeFIau-_4F_6Hg/preview" width="640" height="480" allow="autoplay"></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ClYYke6c3tk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Quality control checking
 
@@ -50,7 +50,7 @@ SELECT DISTINCT ?entity ?property ?value WHERE {
 ORDER BY ?entity
 ```
 
-This is a typical workflow. Think of an ontology editor working on an ontology. Often, that curator notices that the same problem happens repeatedly and tell us, the Ontology Pipeline Developer, that they would like a check to prevent the error. We then capture the erroneous situation as a SPARQL query. Then, we add it to our [ontology repository](https://github.com/monarch-initiative/mondo/tree/master/src/sparql/qc), and execute it with ROBOT report or ROBOT verify (see above) in our CI pipelines, usually based on GitHub actions or Travis. Note that the [Ontology Development Kit](https://github.com/INCATools/ontology-development-kit) provides a built-in framework for for such queries build on ROBOT verify and report. 
+This is a typical workflow. Think of an ontology editor working on an ontology. Often, that curator notices that the same problem happens repeatedly and tell us, the Ontology Pipeline Developer, that they would like a check to prevent the error. We then capture the erroneous situation as a SPARQL query. Then, we add it to our [ontology repository](https://github.com/monarch-initiative/mondo/tree/master/src/sparql/qc), and execute it with ROBOT report or ROBOT verify (see above) in our CI pipelines, usually based on GitHub actions or Travis. Note that the [Ontology Development Kit](https://github.com/INCATools/ontology-development-kit) provides a built-in framework for for such queries build on ROBOT verify and report.
 
 ### Creating summary tables for ontologies
 
@@ -98,9 +98,9 @@ INSERT {
        owl:annotatedTarget ?related ;
        oboInOwl:hasDbXref ?xref2 .
 }
-WHERE 
-{ 
-  { 
+WHERE
+{
+  {
     ?term oboInOwl:hasRelatedSynonym ?related ;
       oboInOwl:hasExactSynonym ?exact ;
       a owl:Class .
@@ -114,7 +114,7 @@ WHERE
            owl:annotatedProperty oboInOwl:hasRelatedSynonym ;
            owl:annotatedTarget ?related ;
            oboInOwl:hasDbXref ?xref2 .
-    
+
     FILTER (str(?related)=str(?exact))
     FILTER (isIRI(?term) && regex(str(?term), "^http://purl.obolibrary.org/obo/MONDO_"))
   }

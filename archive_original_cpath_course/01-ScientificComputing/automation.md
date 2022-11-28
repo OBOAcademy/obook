@@ -13,7 +13,7 @@ In this article I want to make some basic points about automation
 and how to think about it.
 The focus is on automation with software and data,
 but not on any particular software or data.
-Some of these points may seem *too* basic,
+Some of these points may seem _too_ basic,
 especially for experienced programmers,
 but in 20+ years of programming
 I've never seen anybody lay out these basic points in quite this way.
@@ -98,7 +98,7 @@ but software development is not like working on the assembly line,
 and estimating time and budget for software development is notoriously hard.
 I think this is because software developers
 aren't just executing automation,
-they're building *new* automation for each new project.
+they're building _new_ automation for each new project.
 
 Although we talk about "bit rot",
 and software does require maintenance of a sort,
@@ -113,9 +113,9 @@ Software automation is special because it can operate on itself,
 and once complete can be cheaply copied.
 Software development is largely about building automated systems of various sorts,
 usually out of many existing pieces.
-We spend most of our time building *new* systems,
-or modifying an existing system to handle *new* inputs,
-or adapting existing software to a *new* use case.
+We spend most of our time building _new_ systems,
+or modifying an existing system to handle _new_ inputs,
+or adapting existing software to a _new_ use case.
 
 ## The Dangers of Automation
 
@@ -340,7 +340,7 @@ We almost always want the result of the test
 to be a simple True or False.
 Given a bunch of inputs,
 some of which pass the test and some of which fail it,
-we can think of the test as *determining* some way in which
+we can think of the test as _determining_ some way in which
 all the things that pass are the **same**
 and all the things that fail are the **same**.
 Programmers will also be familiar with more complex conditionals
@@ -425,7 +425,7 @@ echo "Done!"
 So far this is just a more annoying way to use a checklist.
 The magic happens once you break the steps down into small enough pieces
 and realize that you know how to tell the computer
-to do *some* of the steps
+to do _some_ of the steps
 instead of doing them all yourself.
 
 For example,
@@ -631,7 +631,7 @@ with their input and output files carefully specified.
 When you ask Make to build a given output file,
 it will look at the whole tree of scripts,
 figure out which input files are required to build your requested output file,
-then which files are required to build *those* files,
+then which files are required to build _those_ files,
 and so on until it has determined a sequence of steps.
 Make is also smart enough to check whether some of the dependencies
 are already up-to-date,
@@ -683,4 +683,3 @@ especially when it comes to software and data,
 is **communication**:
 expressing things clearly for humans and machines
 so they can see and do **exactly** what you did.
-

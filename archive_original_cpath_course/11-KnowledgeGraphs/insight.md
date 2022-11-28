@@ -6,7 +6,7 @@ There are (at least) four levels of inference that we care about in our domain, 
 
 1. Deductive reasoning: Applying the semantics "rules" in the ontology to make implicit knowledge explicit using a reasoner.
 2. Semantic similarity: Using the graph structure to determine similar nodes. For our domain this comes in two major flavours:
-   1. Term-based similarity. For example, we can say that two phenotypes are similar if 
+   1. Term-based similarity. For example, we can say that two phenotypes are similar if
       - they are associated with similar biological processes and anatomical entities, or
       - they share the same or similar parents in the ontology (they could both be, say, lung diseases)
    2. Profile-based similarity. For example this set of phenotypes is somehow similar to this other set of phenotypes.
@@ -16,7 +16,7 @@ There are (at least) four levels of inference that we care about in our domain, 
 
 ## Deductive reasoning
 
-Given the semantics rules, or axioms, in the ontology, we can deduce certain things about our data. For example, 
+Given the semantics rules, or axioms, in the ontology, we can deduce certain things about our data. For example,
 you can sat that if you love someone, they will love you back: `SymmetricObjectProperty(<http://w3id.org/obook/loves>)`. So a reasoner could simply look for triples of the form `:a <http://w3id.org/obook/loves> :b` and add the, albeit optimistic, assertion to the knowledge graph that `:b <http://w3id.org/obook/loves> :a`. There are many more such rules that can be applied, such as the inverse rule: `InverseProperty(<http://w3id.org/obook/part_of>, <http://w3id.org/obook/has_part>)`, so if you know from your data that `:a <http://w3id.org/obook/part_of> :b`, then you can add the assertion `:b <http://w3id.org/obook/has_part> :a`. The main downside with deductive reasoning is that they are generally not always scalable - but many open and commercial tools are now emerging (like RDFox) that are set to change the game a bit here.
 
 ## Semantic similarity

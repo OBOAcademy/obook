@@ -187,6 +187,7 @@ SELECT DISTINCT ?entity ?property ?value WHERE
 ```
 
 This is one of the reasons we still like using ROBOT verify, despite the fact that ROBOT report can also be extended with custom checks.
+
 - Another cool thing about `verify` is that you can add the `--output-dir results/` parameter to your query to get ROBOT to export the query results as TSV files. This can be useful if you have many QC queries and need to work with them independently of the checks.
 - Note that ROBOT notices two errors despite there being only 1, technically speaking. This is because the WHERE clause in SPARQL which twice (one where label 1 is first, one where label 2 is first). You can be smart about it and get around it by sorting your results before binding them, but for most use cases this hack is hardly worth the effort.
 

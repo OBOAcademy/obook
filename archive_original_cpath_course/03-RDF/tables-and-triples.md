@@ -16,18 +16,18 @@ which should help make RDF make more sense.
 Tables are great!
 Here's a table!
 
-first_name | last_name
----|---
-Luke | Skywalker
-Leia | Organa
-Darth | Vader
-Han | Solo
+| first_name | last_name |
+| ---------- | --------- |
+| Luke       | Skywalker |
+| Leia       | Organa    |
+| Darth      | Vader     |
+| Han        | Solo      |
 
 You won't be surprised to find out
-that tables have *rows* and *columns*.
+that tables have _rows_ and _columns_.
 Often each row corresponds to some thing
 that we want to talk about,
-such as a fictional character from *Star Wars*.
+such as a fictional character from _Star Wars_.
 Each column usually corresponds to some sort of property
 that those things might have.
 Then the cells contain the values of those properties
@@ -41,18 +41,18 @@ the things (rows) and their properties (columns).
 Tables are great!
 We can add another name to our table:
 
-first_name | last_name
----|---
-Luke | Skywalker
-Leia | Organa
-Darth | Vader
-Han | Solo
-Anakin | Skywalker
+| first_name | last_name |
+| ---------- | --------- |
+| Luke       | Skywalker |
+| Leia       | Organa    |
+| Darth      | Vader     |
+| Han        | Solo      |
+| Anakin     | Skywalker |
 
 Hmm.
 That's a perfectly good table,
 but it's not capturing the information that we wanted.
-It turns out (**Spoiler Alert!**) that Anakin Skywalker *is* Darth Vader!
+It turns out (**Spoiler Alert!**) that Anakin Skywalker _is_ Darth Vader!
 We might have thought that the rows of our table
 were describing individual people,
 but it turns out that they're just describing individual names.
@@ -69,7 +69,7 @@ Random strings and number can be good artificial keys,
 but sometimes a simple incrementing integer is good enough.
 
 The main problem with artificial keys
-is that it's our job to *maintain the link*
+is that it's our job to _maintain the link_
 between the thing and the identifier that we gave it.
 We prefer natural keys because we just have to inspect that thing
 (in some way)
@@ -81,30 +81,30 @@ but it probably isn't practical.
 We do use fingerprints and facial recognition,
 for similar things, though.
 
-(Do people in *Star Wars* even have DNA?
+(Do people in _Star Wars_ even have DNA?
 Or just midichlorions?)
 
 Let's add a column with an artificial key to our table:
 
-sw_id | first_name | last_name
----|---|---
-1 | Luke | Skywalker
-2 | Leia | Organa
-3 | Darth | Vader
-4 | Han | Solo
-3 | Anakin | Skywalker
+| sw_id | first_name | last_name |
+| ----- | ---------- | --------- |
+| 1     | Luke       | Skywalker |
+| 2     | Leia       | Organa    |
+| 3     | Darth      | Vader     |
+| 4     | Han        | Solo      |
+| 3     | Anakin     | Skywalker |
 
 This is our table of names,
 allowing a given person to have multiple names.
-But what we *thought* we wanted was a person table
+But what we _thought_ we wanted was a person table
 with one row for each person, like this:
 
-sw_id | first_name | last_name
----|---|---
-1 | Luke | Skywalker
-2 | Leia | Organa
-3 | Darth | Vader
-4 | Han | Solo
+| sw_id | first_name | last_name |
+| ----- | ---------- | --------- |
+| 1     | Luke       | Skywalker |
+| 2     | Leia       | Organa    |
+| 3     | Darth      | Vader     |
+| 4     | Han        | Solo      |
 
 In SQL we could assert that the "sw_id" column of the person table
 is a PRIMARY KEY.
@@ -112,29 +112,29 @@ This means it must be unique.
 (It probably shouldn't be NULL either!)
 
 The names in the person table could be the primary names
-that we use in our *Star Wars* database system,
+that we use in our _Star Wars_ database system,
 and we could have another alternative_name table:
 
-sw_id | first_name | last_name
----|---|---
-3 | Anakin | Skywalker
+| sw_id | first_name | last_name |
+| ----- | ---------- | --------- |
+| 3     | Anakin     | Skywalker |
 
 ## Holes
 
 Tables are great!
 We can add more columns to our person table:
 
-sw_id | first_name | last_name | occupation
----|---|---|---
-1 | Luke | Skywalker | Jedi
-2 | Leia | Organa | princess
-3 | Darth | Vader |
-4 | Han | Solo | scoundrel
+| sw_id | first_name | last_name | occupation |
+| ----- | ---------- | --------- | ---------- |
+| 1     | Luke       | Skywalker | Jedi       |
+| 2     | Leia       | Organa    | princess   |
+| 3     | Darth      | Vader     |
+| 4     | Han        | Solo      | scoundrel  |
 
 The 2D pattern of a table is a strong one.
 It not only provides a "slot" (cell)
 for every combination of row and column,
-it also makes it very obvious when one of those slots is *empty*.
+it also makes it very obvious when one of those slots is _empty_.
 What does it mean for a slot to be empty?
 It could mean many things.
 
@@ -185,12 +185,12 @@ has more information.
 Tables are great!
 Let's add even more information to our table:
 
-sw_id | first_name | last_name | occupation | enemy
----|---|---|---|---
-1 | Luke | Skywalker | Jedi | 3
-2 | Leia | Organa | princess | 3
-3 | Darth | Vader | | 1,2,4
-4 | Han | Solo | scoundrel | 3
+| sw_id | first_name | last_name | occupation | enemy |
+| ----- | ---------- | --------- | ---------- | ----- |
+| 1     | Luke       | Skywalker | Jedi       | 3     |
+| 2     | Leia       | Organa    | princess   | 3     |
+| 3     | Darth      | Vader     |            | 1,2,4 |
+| 4     | Han        | Solo      | scoundrel  | 3     |
 
 We're trying to say that Darth Vader is the enemy of everybody else in our table.
 We're using the primary key of the person in the enemy column, which is good,
@@ -212,14 +212,14 @@ This can work pretty well.
 The usual advice is to break this "one to many" information
 into a new "enemy" table:
 
-sw_id | enemy
----|---
-1 | 3
-2 | 3
-3 | 1
-3 | 2
-3 | 4
-4 | 1
+| sw_id | enemy |
+| ----- | ----- |
+| 1     | 3     |
+| 2     | 3     |
+| 3     | 1     |
+| 3     | 2     |
+| 3     | 4     |
+| 4     | 1     |
 
 Then you can JOIN the person table to the enemy table as needed.
 
@@ -228,12 +228,12 @@ Then you can JOIN the person table to the enemy table as needed.
 Tables are great!
 Let's add even more information to our table:
 
-sw_id | first_name | last_name | occupation | father | lightsaber_color | ship
----|---|---|---|---|---|---
-1 | Luke | Skywalker | Jedi | 3 | green |
-2 | Leia | Organa | princess | 3 | |
-3 | Darth | Vader | | | red |
-4 | Han | Solo | scoundrel | | | Millennium Falcon
+| sw_id | first_name | last_name | occupation | father | lightsaber_color | ship              |
+| ----- | ---------- | --------- | ---------- | ------ | ---------------- | ----------------- |
+| 1     | Luke       | Skywalker | Jedi       | 3      | green            |
+| 2     | Leia       | Organa    | princess   | 3      |                  |
+| 3     | Darth      | Vader     |            |        | red              |
+| 4     | Han        | Solo      | scoundrel  |        |                  | Millennium Falcon |
 
 A bunch of these columns only apply to a few rows.
 Now we've got a lot more NULLs to deal with.
@@ -249,52 +249,52 @@ that worked for the "many to one" problem in the previous section.
 
 name table:
 
-sw_id | first_name | last_name
----|---|---
-1 | Luke | Skywalker
-2 | Leia | Organa
-3 | Darth | Vader
-4 | Han | Solo
-3 | Anakin | Skywalker
+| sw_id | first_name | last_name |
+| ----- | ---------- | --------- |
+| 1     | Luke       | Skywalker |
+| 2     | Leia       | Organa    |
+| 3     | Darth      | Vader     |
+| 4     | Han        | Solo      |
+| 3     | Anakin     | Skywalker |
 
 occupation table:
 
-sw_id | occupation
----|---
-1 | Jedi
-2 | princess
-4 | scoundrel
+| sw_id | occupation |
+| ----- | ---------- |
+| 1     | Jedi       |
+| 2     | princess   |
+| 4     | scoundrel  |
 
 enemy table:
 
-sw_id | enemy
----|---
-1 | 3
-2 | 3
-3 | 1
-3 | 2
-3 | 4
-4 | 1
+| sw_id | enemy |
+| ----- | ----- |
+| 1     | 3     |
+| 2     | 3     |
+| 3     | 1     |
+| 3     | 2     |
+| 3     | 4     |
+| 4     | 1     |
 
 father table:
 
-sw_id | father
----|---
-1 | 3
-2 | 3
+| sw_id | father |
+| ----- | ------ |
+| 1     | 3      |
+| 2     | 3      |
 
 lightsaber_color table:
 
-sw_id | lightsaber_color
----|---
-1 | green
-3 | red
+| sw_id | lightsaber_color |
+| ----- | ---------------- |
+| 1     | green            |
+| 3     | red              |
 
 ship table:
 
-sw_id | ship
----|---
-4 | Millennium Falcon
+| sw_id | ship              |
+| ----- | ----------------- |
+| 4     | Millennium Falcon |
 
 Hmm.
 Yeah, that will work.
@@ -304,7 +304,7 @@ It feels like we've lost something.
 ## Entity, Attribute, Value
 
 Tables are great!
-But there's such a thing as *too many* tables.
+But there's such a thing as _too many_ tables.
 We started out with a table
 with a bunch of rows and a bunch of columns,
 and ended up with a bunch of tables
@@ -314,32 +314,32 @@ I have a brilliant idea!
 Let's combine all these property tables into just one table,
 by adding a "property" column!
 
-sw_id | property | value
----|---|---
-1 | first_name | Luke
-2 | first_name | Leia
-3 | first_name | Darth
-4 | first_name | Han
-5 | first_name | Anakin
-1 | last_name | Skywalker
-2 | last_name | Skywalker
-3 | last_name | Vader
-4 | last_name | Solo
-5 | last_name | Skywalker
-1 | occupation | Jedi
-2 | occupation | princess
-4 | occupation | scoundrel
-1 | enemy | 3
-2 | enemy | 3
-3 | enemy | 1
-3 | enemy | 2
-3 | enemy | 4
-4 | enemy | 1
-1 | father | 3
-2 | father | 3
-1 | lightsaber_color | green
-3 | lightsaber_color | red
-4 | ship | Millenium Falcon
+| sw_id | property         | value            |
+| ----- | ---------------- | ---------------- |
+| 1     | first_name       | Luke             |
+| 2     | first_name       | Leia             |
+| 3     | first_name       | Darth            |
+| 4     | first_name       | Han              |
+| 5     | first_name       | Anakin           |
+| 1     | last_name        | Skywalker        |
+| 2     | last_name        | Skywalker        |
+| 3     | last_name        | Vader            |
+| 4     | last_name        | Solo             |
+| 5     | last_name        | Skywalker        |
+| 1     | occupation       | Jedi             |
+| 2     | occupation       | princess         |
+| 4     | occupation       | scoundrel        |
+| 1     | enemy            | 3                |
+| 2     | enemy            | 3                |
+| 3     | enemy            | 1                |
+| 3     | enemy            | 2                |
+| 3     | enemy            | 4                |
+| 4     | enemy            | 1                |
+| 1     | father           | 3                |
+| 2     | father           | 3                |
+| 1     | lightsaber_color | green            |
+| 3     | lightsaber_color | red              |
+| 4     | ship             | Millenium Falcon |
 
 It turns out that I'm not the first one to think of this idea.
 People call it "Entity, Attribute, Value" or "EAV".
@@ -376,7 +376,7 @@ So you need to know the schemas of the two tables
 before you can start merging them together.
 But if you happen to have two EAV tables then,
 as luck would have it,
-they already have *the same* schema!
+they already have _the same_ schema!
 
 You also need to know that you're talking about the same things:
 the rows have to be about the same things,
@@ -388,43 +388,43 @@ Yes, you guessed it: URLs (and URNs and URIs and IRIs)!
 Let's assume that we use the same URLs for the same things
 across the two tables.
 Since we're a close-knit community,
-we've come to an agreement on a *Star Wars* data vocabulary.
+we've come to an agreement on a _Star Wars_ data vocabulary.
 
 URLs are annoyingly long to use in databases,
 so let's use standard "sw" prefix to shorten them.
 Now we have table 1:
 
-sw_id | property | value
----|---|---
-sw:1 | sw:first_name | Luke
-sw:2 | sw:first_name | Leia
-sw:3 | sw:first_name | Darth
-sw:4 | sw:first_name | Han
-sw:5 | sw:first_name | Anakin
-sw:1 | sw:last_name | Skywalker
-sw:2 | sw:last_name | Skywalker
-sw:3 | sw:last_name | Vader
-sw:4 | sw:last_name | Solo
-sw:5 | sw:last_name | Skywalker
-sw:1 | sw:occupation | sw:Jedi
-sw:2 | sw:occupation | sw:princess
-sw:4 | sw:occupation | sw:scoundrel
+| sw_id | property      | value        |
+| ----- | ------------- | ------------ |
+| sw:1  | sw:first_name | Luke         |
+| sw:2  | sw:first_name | Leia         |
+| sw:3  | sw:first_name | Darth        |
+| sw:4  | sw:first_name | Han          |
+| sw:5  | sw:first_name | Anakin       |
+| sw:1  | sw:last_name  | Skywalker    |
+| sw:2  | sw:last_name  | Skywalker    |
+| sw:3  | sw:last_name  | Vader        |
+| sw:4  | sw:last_name  | Solo         |
+| sw:5  | sw:last_name  | Skywalker    |
+| sw:1  | sw:occupation | sw:Jedi      |
+| sw:2  | sw:occupation | sw:princess  |
+| sw:4  | sw:occupation | sw:scoundrel |
 
 and table 2:
 
-sw_id | property | value
----|---|---
-sw:1 | sw:enemy | sw:3
-sw:2 | sw:enemy | sw:3
-sw:3 | sw:enemy | sw:1
-sw:3 | sw:enemy | sw:2
-sw:3 | sw:enemy | sw:4
-sw:4 | sw:enemy | sw:1
-sw:1 | sw:father | sw:3
-sw:2 | sw:father | sw:3
-sw:1 | sw:lightsaber_color | green
-sw:3 | sw:lightsaber_color | red
-sw:4 | sw:ship | Millenium Falcon
+| sw_id | property            | value            |
+| ----- | ------------------- | ---------------- |
+| sw:1  | sw:enemy            | sw:3             |
+| sw:2  | sw:enemy            | sw:3             |
+| sw:3  | sw:enemy            | sw:1             |
+| sw:3  | sw:enemy            | sw:2             |
+| sw:3  | sw:enemy            | sw:4             |
+| sw:4  | sw:enemy            | sw:1             |
+| sw:1  | sw:father           | sw:3             |
+| sw:2  | sw:father           | sw:3             |
+| sw:1  | sw:lightsaber_color | green            |
+| sw:3  | sw:lightsaber_color | red              |
+| sw:4  | sw:ship             | Millenium Falcon |
 
 To merge these two tables, we simple concatenate them.
 It couldn't be simpler.
@@ -452,7 +452,7 @@ SELECT "@prefix sw: <http://example.com/sw_> ."
 UNION ALL
 SELECT ""
 UNION ALL
-SELECT 
+SELECT
    sw_id
 || " "
 || property
@@ -499,7 +499,7 @@ and we're comfortable with them.
 
 RDF, on the other hand, looks strange at first.
 For most common data processing,
-RDF is *too* flexible.
+RDF is _too_ flexible.
 But sometimes flexiblity is the most important thing.
 
 The greatest strength of tables is their rigid structure,
@@ -530,4 +530,3 @@ make sure to use the right tool for the right job.
 When you need to merge heterogeneous data, reach for triples.
 For most other data processing tasks, use tables.
 They're great!
-

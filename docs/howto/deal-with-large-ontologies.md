@@ -1,18 +1,21 @@
 # Dealing with huge ontologies in your import chain
 
 Dealing with very large ontologies, such as the Protein Ontology (PR), NCBI Taxonomy (NCBITaxon), Gene Ontology (GO) and the CHEBI Ontology is a big challenge when developing ontologies, especially if we want to import and re-use terms from them. There are two major problems:
+
 1. It currently takes about 12–16 GB of memory to process PR and NCBITaxon – memory that many of us do not have available.
-2. The files are so large, pulling them over the internet can lead to failures, timeouts and other problems. 
+2. The files are so large, pulling them over the internet can lead to failures, timeouts and other problems.
 
 There are a few strategies we can employ to deal with the problem of memory consumption:
+
 1. We try to reduce the memory footprint of the import as much as possible. In other words: we try to not do the fancy stuff ODK does by default when extracting a module, and keep it simple.
 2. We manage the import manually ourselves (no import)
 
 To deal with file size, we:
+
 1. Instead of importing the whole thing, we import curated subsets.
 2. If available, we use gzipped (compressed) versions.
 
-All four strategies will be discussed in the following. We will then look a bit 
+All four strategies will be discussed in the following. We will then look a bit
 
 ## Overwrite ODK default: less fancy, custom modules
 
@@ -27,6 +30,7 @@ imports/%_import.owl: mirror/%.owl imports/%_terms_combined.txt
 
 .PRECIOUS: imports/%_import.owl
 ```
+
 (Note: This snippet was copied here on 10 February 2021 and may be out of date by the time you read this.)
 
 As you can see, a lot of stuff is going on here: first we run some preprocessing (which is really costly in ROBOT, as we need to load the ontology into Jena, and then back into the OWL API – so basically the ontology is loaded three times in total), then extract a module, then run more SPARQL queries etc, etc. Costly. For small ontologies, this is fine. All of these processes are important to mitigate some of the shortcomings of module extraction techniques, but even if they could be sorted in ROBOT, it may still not be enough.
@@ -47,7 +51,7 @@ _The ODK supports this reduced module out of the box. To activate it, do this:_
 
 ```
 import_group:
-  products: 
+  products:
     - id: pr
       use_gzipped: TRUE
       is_large: TRUE
@@ -101,7 +105,7 @@ You can use those slims simply like this:
 
 ```
 import_group:
-  products: 
+  products:
     - id: ncbitaxon
       mirror_from: http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim.obo
 ```
@@ -114,7 +118,7 @@ Add this to your `src/ontology/ont-odk.yaml`:
 
 ```
 import_group:
-  products: 
+  products:
     - id: my_ncbitaxon
 ```
 
@@ -133,7 +137,6 @@ imports/my_ncbitaxon_import.owl: imports/my_ncbitaxon_import.tsv
 
 Now you can manage your import manually in the template, and the ODK will not include your manually-curated import in your base release. But again, avoid this pattern for anything except the most trivial case (e.g. you need one term from a huge ontology).
 
-
 ## File is too large: Network timeouts and long runtimes
 
 Remember that ontologies are text files. While this makes them easy to read in your browser, it also makes them huge: from 500 MB (CHEBI) to 2 GB (NCBITaxon), which is an enormous amount.
@@ -142,17 +145,18 @@ Thankfully, ROBOT can automatically read gzipped ontologies without the need of 
 
 ```
 import_group:
-  products: 
+  products:
     - id: pr
       use_gzipped: TRUE
 ```
+
 This will try to append `.gz` to the default download location (http://purl.obolibrary.org/obo/pr.owl &rarr; http://purl.obolibrary.org/obo/pr.owl.gz). Note that you must make sure that this file actually exists. It does for CHEBI and the Protein Ontology, but not for many others.
 
 If the file exists, but is located elsewhere, you can do this:
 
 ```
 import_group:
-  products: 
+  products:
     - id: pr
       mirror_from: http://purl.obolibrary.org/obo/pr.owl.gz
 ```

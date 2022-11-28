@@ -5,7 +5,7 @@ These are not _all_ articles, but I selection we found useful during our every w
 
 ## Ontology development and modelling
 
-- [OntoTips Series](https://douroucouli.wordpress.com/2019/03/09/ontotips-a-series-of-assorted-ontology-development-guidelines/). Must read series for the beginning ontology developer. 
+- [OntoTips Series](https://douroucouli.wordpress.com/2019/03/09/ontotips-a-series-of-assorted-ontology-development-guidelines/). Must read series for the beginning ontology developer.
 
 - [Warning about complex modelling](https://douroucouli.wordpress.com/2021/03/24/avoid-mixing-parthood-with-cardinality-constraints/). Chris is generally big on Occam's Razor solutions: given two solutions that solve a use case, the simpler is better.
 

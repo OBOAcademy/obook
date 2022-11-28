@@ -3,7 +3,7 @@
 **Essentials**
 
 - [Protégé](https://protege.stanford.edu/)
-    - [DL Query Tab](https://protegewiki.stanford.edu/wiki/DLQueryTab)
+  - [DL Query Tab](https://protegewiki.stanford.edu/wiki/DLQueryTab)
 - [ROBOT](http://robot.obolibrary.org)
 - [OBO Dashboard](http://dashboard.obofoundry.org/): OBO-wide quality control monitor for OBO ontologies.
 
@@ -13,7 +13,6 @@
 - [Ontology Development Kit (ODK)](https://github.com/INCATools/ontology-development-kit)
 - [DROID](https://github.com/ontodev/droid): DROID is a web-based interface for working with `make`, managed by `git`.
 
-
 **Text editors:**
 
 - [Kakoune](https://kakoune.org/) text/code editor
@@ -22,7 +21,7 @@
 
 **SPARQL query tool:**
 
-- [Yasgui](https://yasgui.triply.cc/#) 
+- [Yasgui](https://yasgui.triply.cc/#)
 - [ROBOT query](http://robot.obolibrary.org/query)
 
 **SPARQL endpoints**
@@ -38,6 +37,9 @@
 **Ontology Mappings**
 
 - [SSSOM and sssom-py](https://mapping-commons.github.io/sssom-py/index.html#): Toolkit and framework for managing mappings across and beyond ontologies.
+- [AgreementMakerLight (AML)](https://github.com/AgreementMakerLight/AML-Project): Matching tool for ontologies
+- [RDF Matcher](https://github.com/INCATools/rdf_matcher): Experimental SSSOM based matching tool
+- [LogMap](https://github.com/ernestojimenezruiz/logmap-matcher): Matching tool for ontologies
 
 **Where to find ontologies and terms: Term browsers and ontology repositories**
 
@@ -47,9 +49,9 @@
 - [identifiers.org](https://identifiers.org/): A centralised registry for identifiers used in the life sciences. This is one of the tools that bridge the gap between CURIEs and URLs, but it does not cover (OBO) ontologies very well, and if so, is not aware of the proper URI prefixes (see for example [here](https://identifiers.org/resolve?query=HP:0000001), and HP term resolution that does not list the proper persistent URL of the HP identifier (http://purl.obolibrary.org/obo/HP_0000001)). Identifiers.org has mainly good coverage for databases/resources that use CURIE type identifiers. But: you can enter any ID you find in your data and it will tell you what it is associated with.
 - [OBO Foundry Ontology Library](http://obofoundry.org/). The OBO Foundry works with other repositories and term browsers such as OLS, Ontobee and BioPortal. For example, OLS directly reads the OBO Foundry registry metadata, and automatically loads new ontologies added to the OBO Foundry Ontology Library.
 - [BioPortal](https://bioportal.bioontology.org/)
-    - [CPT Story](https://www.bioontology.org/why-bioportal-no-longer-offers-the-current-procedural-terminology-cpt/). The Current Procedural Terminology was the by far most highly accessed Terminology on Bioportal - for many years. Due to license concerns, it had to be withdrawn from the repository. This story serves a cautionary tale of using terminologies with non-open or non-transparent licensing schemes.
+  - [CPT Story](https://www.bioontology.org/why-bioportal-no-longer-offers-the-current-procedural-terminology-cpt/). The Current Procedural Terminology was the by far most highly accessed Terminology on Bioportal - for many years. Due to license concerns, it had to be withdrawn from the repository. This story serves a cautionary tale of using terminologies with non-open or non-transparent licensing schemes.
 - [AgroPortal](http://agroportal.lirmm.fr/): Like BioPortal, but focussed on the Agronomy domain.
-- [Linked Open Data Vocabularies (LOV)](https://lov.linkeddata.es/dataset/lov/): Lists the most important vocabularies in the Linked Data space, such as [Dublin Core](https://dublincore.org/), [SKOS](https://www.w3.org/TR/skos-reference/) and [Friend-of-a-Friend](http://xmlns.com/foaf/spec/) (FOAF). 
+- [Linked Open Data Vocabularies (LOV)](https://lov.linkeddata.es/dataset/lov/): Lists the most important vocabularies in the Linked Data space, such as [Dublin Core](https://dublincore.org/), [SKOS](https://www.w3.org/TR/skos-reference/) and [Friend-of-a-Friend](http://xmlns.com/foaf/spec/) (FOAF).
 
 **Ontology visualisation**
 
@@ -67,7 +69,6 @@
 8. Basic Shell scripting and pipelining
 9. From tables to ontologies: [DOSDP templates](https://incatools.github.io/dead_simple_owl_design_patterns/) and [ROBOT templates](http://robot.obolibrary.org/template)
 10. [GitHub Actions](https://docs.github.com/en/actions)
-
 
 **Other tools in my toolbox**
 

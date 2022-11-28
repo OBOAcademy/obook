@@ -3,3 +3,5 @@ site/
 11-KnowledgeGraphs/person.owl
 11-KnowledgeGraphs/Untitled.owl
 docs/resources/fhkb.zip
+docs/tutorial/project-ontology
+.env
