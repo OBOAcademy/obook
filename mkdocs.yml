@@ -71,6 +71,7 @@ nav:
           - Basic introduction to CLI 2: tutorial/intro-cli-2.md
       - Mappings and SSSOM:
           - Basic Tutorial: tutorial/sssom-tutorial.md
+          - Introduction to the SSSOM Toolkit: tutorial/sssom-toolkit.md
           - Introduction to Semantic Matching: tutorial/semantic-matching.md
       - General Ontology Modelling:
           - Project Ontology Development: tutorial/project-ontology-development.md
