@@ -154,6 +154,7 @@ nav:
   - OBOOK Editors:
       - Getting started for OBOOK editors: getting-started-obook.md
       - How to add images: images/index.md
+      - How to embed videos: howto/embed-video.md
       - New lesson template: config/template.md
       - Case studies for teaching: teaching/case-studies.md
   - Outreach:
