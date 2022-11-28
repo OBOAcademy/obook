@@ -33,7 +33,7 @@ nav:
       - Modelling with Object Properties: lesson/modelling-with-object-properties.md
       - Ontology Term Use: lesson/ontology-term-use.md
       - RDF Fundamentals: lesson/rdf.md
-      - Ontology Alignment: lesson/ontology-alignment.md
+      - Semantic Entity Matching: lesson/entity-matching.md
       - Disease and Phenotype Ontologies: lesson/using-disease-and-phenotype-ontologies.md
   - Lessons In Development:
       - Developing an Application Ontology: lesson/developing-application-ontologies.md
