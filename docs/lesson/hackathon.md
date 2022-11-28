@@ -11,7 +11,7 @@
 
 ## Prerequisites
 
-[Pull Requests lesson](/tutorial/pull-requests.md/)
+[Pull Requests lesson](tutorial/pull-requests.md/)
 
 ## Outline
 
