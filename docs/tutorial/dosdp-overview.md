@@ -50,7 +50,6 @@ contributors:
 A major aim of the DOSDP system is to produce self-contained, human-readable templates. Templates need IDs in order to be reliably used programatically, but templates that only use IDs are not human readable. DOSDPs therefore include a set of dictionaries that map labels to IDs. Strictly any readable name can be used, but by convention we use class labels. IDs must be OBO curie style e.g. CL:0000001).
 
 Separate dictionaries are required for classes, relations (object properties) & annotationProperties
-
 e.g.
 
 ```yaml
