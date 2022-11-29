@@ -110,6 +110,7 @@ nav:
           - Change a pull request: howto/change-files-pull-request.md
           - Fixing conflicts: howto/fixing-conflicts.md
           - Github actions to automate tasks: howto/github-actions.md
+          - Revert a commit: howto/revert-commit.md
       - Quality control:
           - Deploy a custom OBO-Dashboard: howto/deploy-custom-obo-dashboard.md
       - Command line:
