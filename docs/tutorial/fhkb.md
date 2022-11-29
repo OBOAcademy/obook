@@ -324,8 +324,6 @@ For the impatient reader, there is a convenience snapshot of the ontology includ
 the raw individuals available at http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial
 ```
 
-<img src="../images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
-
 ```
 If you are working with Protégé, you may want to look at the Matrix plugin for
 Protégé at this point. The plugin allows you to add individuals quickly in the
@@ -670,8 +668,6 @@ Do the following:
 | Task 12: Domains and Ranges                                                                                                                                                                                                                                                                                                                                                                                  |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | <ol><li> Make sure the appropriate `Person`, `Man` and `Woman` are domains and ranges for `hasFather`, `hasMother` and `hasParent`. </li><li> Run the reasoner and look at the property hierarchy. </li><li> Also look at the properties `hasAncestor`, `hasGrandparent`, `hasUncle` and so on; look to see what domains and ranges are found. Add any domains and ranges explicitly as necessary.</li></ol> |
-
-<img src="../images/FHKB%20figures/images/WarningIcon.png" alt="note" width="50"/>
 
 ```
 Protégé for example in its current version (November 2015) does not visualise
