@@ -19,6 +19,7 @@ nav:
       - Ontology Curator GO-style: pathways/ontology-curator-go-style.md
       - Ontology Curator OBI-style: pathways/ontology-curator-obi-style.md
       - Ontology Engineer/Developer: pathways/ontology-engineer.md
+      - Semantic Engineer: pathways/semantic-engineer.md
       - Ontology contributor: pathways/ontology-contributor.md
   - Lessons:
       - Contributing to OBO ontologies: lesson/contributing-to-obo-ontologies.md
