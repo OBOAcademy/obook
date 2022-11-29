@@ -168,7 +168,7 @@ _Compiled by Nicole Vasilevsky. Feel free to make pull requests to suggest edits
 
 **Description:** Describes the biopsychosocial state (i.e., disease, psychological, social, and environmental state) of persons with rare diseases in a holistic way.  
 **Disease area:** Rare disease  
-**Use Cases:** [Rehabilita, Disruptive Technologies for the Rehabilitation of the Future](http://www.gbt.tfo.upm.es/item325), a project that aims to enhance rehabilitation transforming it to a more personalized, ubiquitous and evidence-based rehabilitation.  
+**Use Cases:** [Rehabilita, Disruptive Technologies for the Rehabilitation of the Future](https://pemb.cat/en/strategic-projects/rehabilita__disruptive_technologies_for_the_rehabilitation_of_the_future/53/), a project that aims to enhance rehabilitation transforming it to a more personalized, ubiquitous and evidence-based rehabilitation.  
 **Website:** http://purl.bioontology.org/ontology/HORD  
 **Open:** Yes
 
