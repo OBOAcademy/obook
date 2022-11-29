@@ -67,7 +67,7 @@ In OWL, we use object properties to describe binary relationships between two in
 
 For example, we can use a named class to capture all the individuals that are idiopathic diseases. But we could also describe the class of idiopathic disease as all the instances that are '_has modifier'_ idiopathic disease.
 
-In OWL, there are three main types of restrictions that can be placed on classes. These are **quantifier restriction**, **cardinality restrictions**, and **hasValue** restriction. In this tutorial will initially focus on quantifier restrictions.
+In OWL, there are three main types of restrictions that can be placed on classes. These are **quantifier restriction**, **cardinality restrictions**, and **hasValue** restriction. In this tutorial, we will initially focus on quantifier restrictions.
 
 Quantifier restrictions are further categorized into two types, the **existential** and the **universal** restriction.
 
@@ -91,7 +91,7 @@ We wanted to capture the knowledge that the named class '**idiopathic achalasia*
 
 This example introduces **equivalence axioms** or **defined classes** (also called **logical definitions**) and automatic classification.
 
-The example involves classification of Mendelian diseases that have a monogenic (single gene) varation. These equivalence axioms are based off the Mondo Deisgn Pattern [disease_series_by_gene](https://github.com/monarch-initiative/mondo/blob/master/src/patterns/dosdp-patterns/disease_series_by_gene.yaml).
+The example involves classification of Mendelian diseases that have a monogenic (single gene) varation. These equivalence axioms are based off the Mondo Design Pattern [disease_series_by_gene](https://github.com/monarch-initiative/mondo/blob/master/src/patterns/dosdp-patterns/disease_series_by_gene.yaml).
 
 Constructs:
 
@@ -111,13 +111,13 @@ Constructs:
 1. Run the reasoner.
 1. You shouldn't see any change, but try deleting the superclass assertion to 'cardioacrofacial dysplasia' and re-running the reasoner.
 1. You should see that 'cardioacrofacial dysplasia' is an inferred superclass.
-1. Undo the last change and save your work and commmit and create a pull request.
+1. Undo the last change, save your work, commmit, and create a pull request.
 
 ### Adding classes and automatically classifying them
 
 For teaching purposes, let's say we need a new class that is 'fungal allergy'.
 
-1. Create a branch and re-open mondo-edit.obo
+1. Create a new branch and re-open mondo-edit.obo
 1. Add a new term under owl:Thing named 'fungal allergy'.
 1. Following the design pattern [allergy.yaml](https://github.com/monarch-initiative/mondo/blob/master/src/patterns/dosdp-patterns/allergy.yaml), add the text definition, synonym and equivalentTo axiom, using the substance ECTO_0000524 'exposure to mycotoxin'.
 1. Run the reasoner and note where the class is automatically classified.
@@ -138,7 +138,7 @@ By default, OWL assumes that these classes can overlap, i.e. there are individua
 
 1. Create a branch in the Mondo repo (name it: disjoint-[your initials]. For example: disjoint-nv)
 1. Open the mondo-edit.obo file
-1. Per this [ticket](https://github.com/monarch-initiative/mondo/issues/1221), we want to assert that **infectious disease** and **'syndromic disease'** are disjoint.
+1. Per this [ticket](https://github.com/monarch-initiative/mondo/issues/1221), we want to assert that **infectious disease** and **syndromic disease** are disjoint.
 1. To do this first search for and select the **infectious disease** class.
 1. In the class 'Description' view, scroll down and select the (+) button next to Disjoint With. You are presented with the now familiar window allowing you to select, or type, to choose a class. In the Expression editor, add 'syndromic disease' as disjoint with 'infectious disease'.
 1. Run the ELK reasoner.
