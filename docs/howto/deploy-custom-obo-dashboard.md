@@ -6,7 +6,7 @@ We developed a completely automated variant of the Custom OBO Dashboard Workflow
 
 <img width="1125" alt="image" src="https://user-images.githubusercontent.com/7070631/192291201-ab2ea488-ec15-4894-ae6b-85655a9e3e75.png">
 
-1. Fork https://github.com/OBOFoundry/obo-nor.github.io or make a copy ([how to make a copy quickly](](https://gist.github.com/natedana/cc71d496b611e70673cab5e8f5a78485))) (probably better to make a copy)
+1. Fork https://github.com/OBOFoundry/obo-nor.github.io or make a copy ([how to make a copy quickly](https://gist.github.com/natedana/cc71d496b611e70673cab5e8f5a78485)) (probably better to make a copy)
 1. Modify the `dashboard-config.yml` file, in particular the `ontologies` section:
    1. Important: Add your ontology ID to the ID 'id' field
    2. Add the path to your ontology to the `mirror_from` field.
@@ -20,7 +20,9 @@ We developed a completely automated variant of the Custom OBO Dashboard Workflow
     ```
 
  1. Click on "Settings" > "Pages" to configure the `GitHub pages`. Set the `Source` to deploy from branch, and `Branch` to build from `main` (or `master` if you are still using the old default) and `/(root)` as directory. Hit `Save`.
+
      <img width="322" alt="image" src="https://user-images.githubusercontent.com/7070631/192293973-891b400d-c9f1-46d8-aff1-4bc3e6083c43.png">
+     
  1. Click on the `Actions` tab in your repo. On the left, select the `Run dashboard` workflow and click on the `Run workflow` button. This action will rebuild the dashboard and make a pull request with the changes.
  1. Review and merge the pull request. Once it is merged, GitHub will automatically rebuild your dashboard website.
  1. After 5 minutes, click on "Settings" > "Pages" again. You should now a new section with information where your site is deployed: 
