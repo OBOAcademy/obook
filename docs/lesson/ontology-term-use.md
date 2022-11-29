@@ -45,7 +45,7 @@ These materials are under construction and may be incomplete.
 
 ## 1. Why ontologies are useful
 
-Ontologies provide a logical classification of information in a particular domain or subject area. Ontologies can be used for data annotations, for structuring disparate data types, classifying information, for inferencing and reasoning across data and computational analyses.
+Ontologies provide a logical classification of information in a particular domain or subject area. Ontologies can be used for data annotations, structuring disparate data types, classifying information, inferencing and reasoning across data, and computational analyses.
 
 ### Difference between a terminology and an ontology
 
@@ -61,7 +61,7 @@ An ontology contains a formal classification of terminology in a domain that pro
 
 ## 2. Finding good ontologies
 
-Numerous ontologies exist. Some recommended sources to find community developed, high quality and frequently used ontologies are listed below.
+Numerous ontologies exist. Some recommended sources to find community developed, high quality, and frequently used ontologies are listed below.
 
 - [OBO Foundry](http://obofoundry.org/). Read more [below](#repo)
 - [The Ontology Lookup Service (OLS)](https://www.ebi.ac.uk/ols/ontologies). The OLS contains over 200 ontologies.
