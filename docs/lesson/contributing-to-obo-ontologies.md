@@ -24,7 +24,7 @@ Participants will need to have access to the following resources and tools prior
   - [Branch vs Fork](#branch)
   - [How to create GitHub Issues](#issues)
 - [Understand basic Open Source etiquette](#etiquette)
-- [Reading READMEs](readme)
+- [Reading READMEs](#readme)
 - [Understand basics of ontology development workflows](#workflow)
   - [Browsing and Searching in Protege](#browsing)
   - [Add new terms to an ontology](#add)
@@ -33,8 +33,8 @@ Participants will need to have access to the following resources and tools prior
     - [The Class description view](#class-description)
 - [Use GitHub: make pull requests](#pr)
 - [Understand ontology design patterns](#pattern)
-- [Use templates: ROBOT, DOSDP](template) (_under development_)
-- [Basics of OWL](owl)
+- [Use templates: ROBOT, DOSDP](#template) (_under development_)
+- [Basics of OWL](#owl)
   - [Logic and debugging](#logic)
 
 ## Tutorials
