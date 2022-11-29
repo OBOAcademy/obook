@@ -10,7 +10,7 @@ These materials are under construction and incomplete.
 
 ## Preparation
 
-- Review tutorial on [Ontology Term Use](/redesign/01_ontologyTermUse.md)
+- Review tutorial on [Ontology Term Use](../redesign/01_ontologyTermUse.md)
 
 ## What is delivered as part of the course
 
@@ -21,7 +21,7 @@ These materials are under construction and incomplete.
 - [Become aware of the major disease and phenotype ontologies that are available](#major)
 - [Be able to decide which phenotype or disease ontology to use for different use cases](#decision)
 - [Understand how to leverage disease and phenotype ontologies for advanced data analytics](#analytics)
-- [Have a basic understanding of how to integrate other data](integrate)
+- [Have a basic understanding of how to integrate other data](#integrate)
 
 ## Tutorials
 
