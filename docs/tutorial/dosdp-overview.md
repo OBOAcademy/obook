@@ -28,7 +28,7 @@ In the following text, keys and values together are sometimes referred to as 'fi
 
 ### Pattern level keys
 
-[Reference doc](https://github.com/INCATools/dead_simple_owl_design_patterns/blob/master/docs/dosdp_schema.md#properties)
+[Reference doc](https://github.com/INCATools/dead_simple_owl_design_patterns/blob/master/docs/dosdp_schema.md)
 
 A set of fields that specify general information about a pattern: name, description, IRI, contributors, examples etc
 
