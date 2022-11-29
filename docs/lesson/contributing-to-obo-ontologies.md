@@ -204,7 +204,7 @@ Before browsing or searching an ontology, it is useful to run an OWL reasoner fi
 
 ![image](https://user-images.githubusercontent.com/6722114/115822558-9b04ea80-a3b9-11eb-922b-c4c908fd99cc.png)
 
-For more details on why it is important to have the reasoner on when using the editors version of an ontology, see the [Reasoning reference guide](../reference/reasoning/). But for now, you don't need a deeper understanding, just be sure that you always have the reasoner on.
+For more details on why it is important to have the reasoner on when using the editors version of an ontology, see the [Reasoning reference guide](../reference/reasoning.md). But for now, you don't need a deeper understanding, just be sure that you always have the reasoner on.
 
 #### Entities tab
 
