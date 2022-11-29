@@ -204,7 +204,7 @@ Before browsing or searching an ontology, it is useful to run an OWL reasoner fi
 
 ![image](https://user-images.githubusercontent.com/6722114/115822558-9b04ea80-a3b9-11eb-922b-c4c908fd99cc.png)
 
-For more details on why it is important to have the reasoner on when using the editors version of an ontology, see the [Reasoning reference guide](../reference/reasoning/). But for now, you don't need a deeper understanding, just be sure that you always have the reasoner on.
+For more details on why it is important to have the reasoner on when using the editors version of an ontology, see the [Reasoning reference guide](../reference/reasoning.md). But for now, you don't need a deeper understanding, just be sure that you always have the reasoner on.
 
 #### Entities tab
 
@@ -266,7 +266,7 @@ Example 1:
 
 1.  Commit: Add a meaningful message in the Commit field in the lower left, for example: add new class MONDO:0001012 episodic angioedema with eosinophilia
 
-NOTE: You can use the word 'fixes' or 'closes' in the description of the commit message, followed by the corresponding ticket number (in the format #1234) - these are magic words in GitHub; when used in combination with the ticket number, it will automatically close the ticket. Learn more on this GitHub Help Documentation page about [Closing issues via commit messages](https://help.github.com/en/articles/closing-issues-using-keywords).
+NOTE: You can use the word 'fixes' or 'closes' in the description of the commit message, followed by the corresponding ticket number (in the format #1234) - these are magic words in GitHub; when used in combination with the ticket number, it will automatically close the ticket. Learn more on this GitHub Help Documentation page about [Closing issues via commit messages](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue).
 
 1.  Note: 'Fixes' and "Closes' are case-insensitive.
 

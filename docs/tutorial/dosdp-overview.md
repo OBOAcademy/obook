@@ -8,7 +8,7 @@ For another DOSDP tutorial see [here](dosdp-template.md).
 
 ## Anatomy of a DOSDP file:
 
-A DOSDP tempaltes are written in [YAML](<[url](https://en.wikipedia.org/wiki/YAML)>) file, an easily editable format for encoding nested data structures. At the top level of nesting is a set of 'keys', which must match those specified in the DOSDP standard. The various types of key and their function are outlined below. Each key is followed by a colon and then a value, which may be a text string, a list or another set of keys. Lists items are indicated using a '-'. Nesting is achieved via indenting using some standard number of spaces (typically 3 or 4). Here's a little illustration:
+A DOSDP tempaltes are written in [YAML](https://en.wikipedia.org/wiki/YAML)) file, an easily editable format for encoding nested data structures. At the top level of nesting is a set of 'keys', which must match those specified in the DOSDP standard. The various types of key and their function are outlined below. Each key is followed by a colon and then a value, which may be a text string, a list or another set of keys. Lists items are indicated using a '-'. Nesting is achieved via indenting using some standard number of spaces (typically 3 or 4). Here's a little illustration:
 
 ```yaml
 key1: some text
@@ -28,7 +28,7 @@ In the following text, keys and values together are sometimes referred to as 'fi
 
 ### Pattern level keys
 
-[Reference doc](https://github.com/INCATools/dead_simple_owl_design_patterns/blob/master/docs/dosdp_schema.md#properties)
+[Reference doc](https://github.com/INCATools/dead_simple_owl_design_patterns/blob/master/docs/dosdp_schema.md)
 
 A set of fields that specify general information about a pattern: name, description, IRI, contributors, examples etc
 
