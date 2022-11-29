@@ -6,7 +6,7 @@ These materials are under construction and incomplete.
 
 ## Prerequisites
 
-- Install Protege
+- Install Protégé
 
 ## Preparation
 
