@@ -1,4 +1,12 @@
-# Linking across ontologies: Ontology Matching, Mapping, Alignment and Merging
+# Linking across vocabularies: Semantic Entity Matching
+
+## Summary
+
+All across the biomedical domain, we refer to domain entities (such as chemicals or anatomical parts) using identifiers, often from controlled vocabularies.
+
+The decentralised evolution of scientific domains has led to to the emergence of disparate "semantic spaces" with different annotation practices and reference vocabularies and formalisms. To bridge between these spaces, entity mappings have emerged, which link, for example, genes from HGNC to ENSEMBL, diseases between OMIM and Mondo and anatomical entities between FMA and Uberon.
+
+Entity matching is the process of establishing a link between an identifier in one semantic space to an identifier in another. There are many cultures of thought around entity matching, including Ontology Matching, Entity Resolution and 
 
 ## Overview of the terminology
 
@@ -20,10 +28,8 @@ Another gentle overview on Ontology Matching was taught as part of the Knowledge
 
 ## Basic tutorials
 
-1. [Introduction to curating mappings](../tutorial/term-mapping.md)
-1. [Advanced mapping curation with SSSOM](../tutorial/sssom-tutorial.md)
-1. [Ontology matching with AML, LogMap and rdf-matcher](../tutorial/ontology-matching.md)
-1. [Introduction to processing mappings with SSSOM and sssom-py CLI](../tutorial/sssom-py-tutorial.md)
+1. [Mapping curation with SSSOM](../tutorial/sssom-tutorial.md)
+1. [Introduction to processing mappings with SSSOM and sssom-py CLI](../tutorial/sssom-toolkit.md)
 
 ## Introduction to Ontology Mapping
 

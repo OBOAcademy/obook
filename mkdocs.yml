@@ -72,7 +72,7 @@ nav:
       - Mappings and SSSOM:
           - Basic Tutorial: tutorial/sssom-tutorial.md
           - Introduction to the SSSOM Toolkit: tutorial/sssom-toolkit.md
-          - Introduction to Semantic Matching: tutorial/semantic-matching.md
+          - Introduction to Semantic Matching: explanation/semantic-matching.md
       - General Ontology Modelling:
           - Project Ontology Development: tutorial/project-ontology-development.md
           - Family History Knowledge Base (FHKB) tutorial: tutorial/fhkb.md
