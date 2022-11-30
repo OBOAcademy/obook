@@ -36,7 +36,11 @@ This how to guide on [How to be an Open Science Engineer - maximizing impact for
     - Be positive and generous with gratitude and attribution
     - Promote truly open communication: Create public tickets which can be searched and referred to later.
 - [Principle of Upstream Fixing](../howto/open-science-engineer/#principle-of-upstream-fixing)
-
+    - Report an bugs or errors to the source ontology.
+    - Make term requests for any missing terms.
+- [Principle of No Ownership](../https://oboacademy.github.io/obook/howto/open-science-engineer/#principle-of-no-ownership):
+    - Ensure that you see your issues through to the end.
+    - Feel free to nudge ontology curators.
 
 ### Where to find ontology terms and how to chose the right terms
 
