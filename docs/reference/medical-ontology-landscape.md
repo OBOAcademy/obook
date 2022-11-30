@@ -168,7 +168,7 @@ _Compiled by Nicole Vasilevsky. Feel free to make pull requests to suggest edits
 
 **Description:** Describes the biopsychosocial state (i.e., disease, psychological, social, and environmental state) of persons with rare diseases in a holistic way.  
 **Disease area:** Rare disease  
-**Use Cases:** [Rehabilita, Disruptive Technologies for the Rehabilitation of the Future](http://www.gbt.tfo.upm.es/item325), a project that aims to enhance rehabilitation transforming it to a more personalized, ubiquitous and evidence-based rehabilitation.  
+**Use Cases:** [Rehabilita, Disruptive Technologies for the Rehabilitation of the Future](https://pemb.cat/en/strategic-projects/rehabilita__disruptive_technologies_for_the_rehabilitation_of_the_future/53/), a project that aims to enhance rehabilitation transforming it to a more personalized, ubiquitous and evidence-based rehabilitation.  
 **Website:** http://purl.bioontology.org/ontology/HORD  
 **Open:** Yes
 
@@ -400,9 +400,10 @@ _Compiled by Nicole Vasilevsky. Feel free to make pull requests to suggest edits
 
 #### Resource of Asian Primary Immunodeficiency Diseases (RPO)
 
-**Description:** Represents observed phenotypic terms, sequence variations, and messenger RNA and protein expression levels of all genes involved in primary immunodeficiency diseases.  
-**Disease area:** Primary immunodeficiency diseases  
-**Use Cases:** This terminology is used in a freely accessible, dynamic and integrated database for primary immunodeficiency diseases (PID) called Resource of Asian Primary Immunodeficiency Diseases (RAPID), which is available [here](http://rapid.rcai.riken.jp/).  
+**Description:** Represents observed phenotypic terms, sequence variations, and messenger RNA and protein expression levels of all genes involved in primary immunodeficiency diseases.
+**Disease area:** Primary immunodeficiency diseases
+**Use Cases:** This terminology is used in a freely accessible, dynamic and integrated database for primary immunodeficiency diseases (PID) called Resource of Asian Primary Immunodeficiency Diseases (RAPID), which is available [here](http://web16.kazusa.or.jp/rapid/).
+**Publication:** https://academic.oup.com/nar/article/37/suppl_1/D863/1004993
 **Open:** Yes
 
 #### Sickle Cell Disease Ontology (SCDO)
