@@ -324,6 +324,7 @@ For the impatient reader, there is a convenience snapshot of the ontology includ
 the raw individuals available at http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial
 ```
 
+![noteiconsmall](../images/FHKB%20figures/images/NoteIconSmall.png)
 ```
 If you are working with Protégé, you may want to look at the Matrix plugin for
 Protégé at this point. The plugin allows you to add individuals quickly in the
@@ -360,13 +361,13 @@ We have also encountered some important principles:
 - Upon reasoning we get the inverses of properties between named individuals for free.
 - Lots is still open. For example, we do not know the sex of individuals and what other children, other than those described, people in the FHKB may have.
 
-<img src="../images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
+![noteiconsmall](../images/FHKB%20figures/images/NoteIconSmall.png)
 
 ```
 The FHKB ontology at this stage of the tutorial has an expressivity of ALHI.
 ```
 
-<img src="../images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
+![noteiconsmall](../images/FHKB%20figures/images/NoteIconSmall.png)
 
 ```
 The time to reason with the FHKB at this point (in Protégé) on a typical desktop
@@ -487,13 +488,13 @@ We made `hasAncestor` transitive. This means that my ancestor’s ancestors are 
 
 In OWL 2, we can also trace ‘paths’ around objects. Again, think of the objects involved in the path of properties that link objects together. We have done simple paths so far – Robert linked to David via `hasParent` and David linked to William via `hasFather` implies the link between Robert and William of `hasGrandfather`. If this is true for all cases (for which you have to use your domain knowledge), one can capture this implication in the property hierarchy. Again, we are making our work easier by adding no new explicit facts, but making use of the implication that the reasoner works out for us.
 
-<img src="../images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
+![noteiconsmall](../images/FHKB%20figures/images/NoteIconSmall.png)
 
 ```
 The FHKB ontology at this stage of the tutorial has an expressivity ofALRI+.
 ```
 
-<img src="../images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
+![noteiconsmall](../images/FHKB%20figures/images/NoteIconSmall.png)
 
 ```
 The time to reason with the FHKB at this point (in Protégé) on a typical desktop
@@ -669,6 +670,7 @@ Do the following:
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | <ol><li> Make sure the appropriate `Person`, `Man` and `Woman` are domains and ranges for `hasFather`, `hasMother` and `hasParent`. </li><li> Run the reasoner and look at the property hierarchy. </li><li> Also look at the properties `hasAncestor`, `hasGrandparent`, `hasUncle` and so on; look to see what domains and ranges are found. Add any domains and ranges explicitly as necessary.</li></ol> |
 
+![warnicon](../images/FHKB%20figures/images/WarningIcon.png)
 ```
 Protégé for example in its current version (November 2015) does not visualise
 inherited domains and ranges in the same way as it shows inferred inverse relations.
@@ -731,7 +733,7 @@ Here are some things that should now be understood upon completing this chapter:
 
 Finally, we looked at some defined classes. We inferred equivalence between some classes where the extents of the classes were inferred to be the same – in this case the extents of `Person` and `Descendant` are the same. That is, all the objects that can appear in `Person` will also be members of `Descendant`. We can check this implication intuitively – all people are descendants of someone. Perhaps not the most profound inference of all time, but we did no real work to place this observation in the FHKB.
 
-<img src="../images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
+![noteiconsmall](../images/FHKB%20figures/images/NoteIconSmall.png)
 
 ```
 This last point is a good general observation. We can make the reasoner do work
@@ -1053,13 +1055,13 @@ Siblings have revealed several things for us:
 - OWL 2 cannot do half-siblings;
 - However, we can get close enough and we can start inferring lots of facts via sub-property chains using the sibling relationships.
 
-<img src="../images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
+![noteiconsmall](../images/FHKB%20figures/images/NoteIconSmall.png)
 
 ```
 The FHKB ontology at this stage of the tutorial has an expressivity ofSRIF.
 ```
 
-<img src="../images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
+![noteiconsmall](../images/FHKB%20figures/images/NoteIconSmall.png)
 
 ```
 The time to reason with the FHKB at this point (in Protégé) on a typical desktop
@@ -1159,13 +1161,13 @@ us most of what we need, but has a little less negative impact on the reasoning
 time.
 ```
 
-<img src="../images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
+![noteiconsmall](../images/FHKB%20figures/images/NoteIconSmall.png)
 
 ```
 The FHKB ontology at this stage of the tutorial has an expressivity of SROIQ.
 ```
 
-<img src="../images/FHKB%20figures/images/NoteIconSmall.png" alt="note" width="50"/>
+![noteiconsmall](../images/FHKB%20figures/images/NoteIconSmall.png)
 
 ```
 The time to reason with the FHKB at this point (in Protégé) on a typical desktop
