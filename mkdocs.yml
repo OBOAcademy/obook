@@ -113,6 +113,7 @@ nav:
           - Change a pull request: howto/change-files-pull-request.md
           - Fixing conflicts: howto/fixing-conflicts.md
           - Github actions to automate tasks: howto/github-actions.md
+          - Revert a commit: howto/revert-commit.md
       - Quality control:
           - Deploy a custom OBO-Dashboard: howto/deploy-custom-obo-dashboard.md
       - Command line:
@@ -147,6 +148,7 @@ nav:
       - Common Errors in GitHub actions: reference/gh-actions-errors.md
       - Other useful resources: reference/other-resources.md
       - Medical Ontology landscape: reference/medical-ontology-landscape.md
+      - OBOOK Maturity Indicator: reference/obook-maturity-indicator.md
   - Explanations:
       - Introduction to Ontologies: explanation/intro-to-ontologies.md
       - Logical axiomatization of classes & use of reasoning: explanation/logical-axiomatization.md
@@ -159,6 +161,7 @@ nav:
   - OBOOK Editors:
       - Getting started for OBOOK editors: getting-started-obook.md
       - How to add images: images/index.md
+      - How to embed videos: howto/embed-video.md
       - New lesson template: config/template.md
       - Case studies for teaching: teaching/case-studies.md
   - Outreach:

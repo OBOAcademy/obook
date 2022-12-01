@@ -1,5 +1,8 @@
 # Contributing to OBO ontologies
 
+<a href="../reference/obook-maturity-indicator"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FOBOAcademy%2Fobook%2Fmaster%2Fdocs%2Fresources%2Fobook-badge-draft.json" /></a>
+
+
 ## Prerequisites
 
 Participants will need to have access to the following resources and tools prior to the training:
@@ -39,7 +42,15 @@ Participants will need to have access to the following resources and tools prior
 
 ## Tutorials
 
-- N/A
+### Monarch OBO training Tutorials
+
+#### Contributing to Ontologies Part 1 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_z8-KGDzZ6U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+#### Contributing to Ontologies Part 2
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YBvMKMoCCrQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Additional materials and resources
 

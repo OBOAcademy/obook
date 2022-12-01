@@ -24,7 +24,7 @@ _Note_: We are in the process of transforming the documentation accordingly, so 
 - _James Overton_, Knocean Inc. James has been a developer of software to support ontology development in and around the OBO sphere for more than a decade and delivers services to the OBO community through his company, Knocean Inc.
 - _Becky Jackson_, Bend Informatics. Becky has been a Semantic Software developer and Ontology Pipeline specialist since 2016, now working as an independent consultant.
 - _Nicole Vasilevsky_, Monarch Initiative. Nicole is a Visiting Associate Research Professor at University of Colorado Anschutz Medical Campus and is an Ontology Curator for ontologies such as Mondo Disease Ontology, the Human Phenotype Ontology, Uberon Anatomy Ontology, and Cell Ontology.
-- _Nicolas Matentzoglu_, Semanticly Ltd. Nico is an Ontology Engineer and Ontology Pipeline Specialist, being the Principal Ontology Pipeline Developer for the Monarch Initiative.
+- _Nicolas Matentzoglu_, Semanticly, Athens, Greece. Nico is an Ontology Engineer and Ontology Pipeline Specialist, being the Principal Ontology Pipeline Developer for the Monarch Initiative.
 - _Shawn Tan_, EMBL-EBI. Shawn is an Ontology Curator for The Brain Data Standards project.
 - _Bradley Varner_, EMBL-EBI. Bradley is an Ontology Curator for the Cell Annotation Platform.
 
