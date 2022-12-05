@@ -11,7 +11,24 @@ In this tutorial, we will learn to use a very basic lexical matching tool (OAK L
 ## Tutorial
 
 - [Setting up OAK, preparing the ontology](#prepare): You will learn how to install OAK into a new Python environment, and create a simple `Makefile` to prepare your input ontology with ROBOT.
-- [Introduction to lexmatch](#run):  
+- [Introduction to lexical matching with OAK lexmatch](#run):  You will run lexmatch on the input and learn to interpret the results.
 
+<a id="prepare"></a>
 
 ### Setting up OAK, preparing the ontology
+
+
+```
+....
+```
+
+<a id="run"></a>
+
+### Introduction to lexical matching with OAK lexmatch
+
+Method:
+
+1. Extract ontology subsets and merge
+2. Generate the matches
+3. Curate the matches
+
