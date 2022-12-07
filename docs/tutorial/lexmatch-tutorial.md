@@ -49,11 +49,11 @@ Method:
         robot merge -i fruit_juice_food_foodon.owl -i juice_wd.owl -o foodon_wd.owl
     ```
 3. #### Generate the matches
-   - We first run `oak`'s `lexmatch` command to generate lexical matches between the contents of the merged file.
-    ```
-        runoak -i sqlite:foodon_wd.owl lexmatch -o foodon_wd_lexmatch.tsv
-    ```
-    This will generate an SSSOM tsv file with the mapped contents as shown below:
+- We first run `oak`'s `lexmatch` command to generate lexical matches between the contents of the merged file.
+ ```
+     runoak -i sqlite:foodon_wd.owl lexmatch -o foodon_wd_lexmatch.tsv
+ ```
+ This will generate an SSSOM tsv file with the mapped contents as shown below:
 ```
 # curie_map:
 #   FOODON: http://purl.obolibrary.org/obo/FOODON_
