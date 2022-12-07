@@ -76,11 +76,11 @@ Method:
 | wikidata:Q15823640 | cherry juice     | skos:closeMatch | wikidata:Q62030277 | cherry juice     | semapv:LexicalMatching | oaklib       | 0.5        | rdfs:label          | rdfs:label         | cherry juice     |
 | wikidata:Q18201657 | must             | skos:closeMatch | wikidata:Q278818   | must             | semapv:LexicalMatching | oaklib       | 0.5        | rdfs:label          | rdfs:label         | must             |
 
-    - Next we map them with a set of rules `matcher_rules.yaml`
-    ```
-        runoak -i sqlite:foodon_wd.owl lexmatch -R matcher_rules.yaml -o foodon_wd_lexmatch_with_rules.tsv 
-    ```
-    This will also generate an SSSOM tsv file with the mapped contents but you'll notice a few more matches than the previous output as seen below:
+  - Next we map them with a set of rules `matcher_rules.yaml`
+  ```
+      runoak -i sqlite:foodon_wd.owl lexmatch -R matcher_rules.yaml -o foodon_wd_lexmatch_with_rules.tsv 
+  ```
+  This will also generate an SSSOM tsv file with the mapped contents but you'll notice a few more matches than the previous output as seen below:
 ```
 # curie_map:
 #   FOODON: http://purl.obolibrary.org/obo/FOODON_
