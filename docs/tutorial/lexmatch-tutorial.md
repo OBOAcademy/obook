@@ -35,20 +35,20 @@ Method:
         wget http://purl.obolibrary.org/obo/foodon.owl
     ```
 2. #### Extract ontology subsets and merge.
-   - In this step, we extract everything between `fruit juice food product` as the `upper-term` and fruit juices (`apple juice`, `orange juice` and `grapefruit juice`) as the `lower-term` of the `FOODON` subset.
-    ```
-        robot extract --method MIREOT --input foodon.owl --upper-term "FOODON:00001140" --lower-term "FOODON:00001277" --lower-term "FOODON:00001059" --lower-term "FOODON:03306174 " --output fruit_juice_food_foodon.owl
-    ```
-    - In this step, we get descendants of `juice` from `wikidata` using `oak`, store it in a `ttl` file and using `ROBOT` convert it into an `owl` file.
-    ```
-        runoak -i wikidata: descendants wikidata:Q8492 -p i,p -o juice_wd.ttl -O rdf
-        robot convert -i juice_wd.ttl  -o juice_wd.owl
-    ```
-    - The last step is merging the two subsets using `ROBOT`
-    ```
-        robot merge -i fruit_juice_food_foodon.owl -i juice_wd.owl -o foodon_wd.owl
-    ```
-3. #### Generate the matches
+- In this step, we extract everything between `fruit juice food product` as the `upper-term` and fruit juices (`apple juice`, `orange juice` and `grapefruit juice`) as the `lower-term` of the `FOODON` subset.
+ ```
+     robot extract --method MIREOT --input foodon.owl --upper-term "FOODON:00001140" --lower-term "FOODON:00001277" --lower-term "FOODON:00001059" --lower-term "FOODON:03306174 " --output fruit_juice_food_foodon.owl
+ ```
+ - In this step, we get descendants of `juice` from `wikidata` using `oak`, store it in a `ttl` file and using `ROBOT` convert it into an `owl` file.
+ ```
+     runoak -i wikidata: descendants wikidata:Q8492 -p i,p -o juice_wd.ttl -O rdf
+     robot convert -i juice_wd.ttl  -o juice_wd.owl
+ ```
+ - The last step is merging the two subsets using `ROBOT`
+ ```
+     robot merge -i fruit_juice_food_foodon.owl -i juice_wd.owl -o foodon_wd.owl
+ ```
+1. #### Generate the matches
 - We first run `oak`'s `lexmatch` command to generate lexical matches between the contents of the merged file.
  ```
      runoak -i sqlite:foodon_wd.owl lexmatch -o foodon_wd_lexmatch.tsv
