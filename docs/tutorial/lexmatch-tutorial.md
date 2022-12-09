@@ -28,6 +28,7 @@ This tutorial requires OAK version 0.1.59 or higher.
 Note that if you are using the [ODK docker image](../howto/odk-setup.md), `oaklib` is already installed. In the following, we will use the ODK wrapper to ensure that everyone has a consistent experience. If you want to use the local (non-docker) setup, you have to follow the instructions above before continuing _and ignore the `sh odk.sh` part of the commands_.
 
 <hr>
+
 ### IMPORTANT for users of ODK < 1.3.2:
 
 ODK 1.3.1, the version still active on the 8th December 2022, does not have the latest dependencies of OAK installed. 
