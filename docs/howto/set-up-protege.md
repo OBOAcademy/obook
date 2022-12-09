@@ -31,13 +31,39 @@ Some Mac users might find that the edits need to be applied to `/Applications/Pr
 
 ### PC Instructions
 
-_adapted from [Memory Management with Protégé](https://www.michaeldebellis.com/post/memory-management-with-prot%C3%A9g%C3%A9) by Michael DeBellis_
+_Taken in part from [Memory Management with Protégé](https://www.michaeldebellis.com/post/memory-management-with-prot%C3%A9g%C3%A9) by Michael DeBellis_
 
-1. Navigate to folder where Protege is installed (likely c:/programfiles/protege or open explorer and search protege.exe and find the location of file)
-1. Open Protege.l4j.ini. This file is what Protege looks at when it starts up to determine how much memory Java can allocate. If you edit that file in Notepad or some other lightweight text processor it should currently look like this: -Xms200M -Xmx500M -Xss16M
-1. Xmx is the one you want to edit (it is recommended that you make a copy of the original file first). That specifies the maximum amount of memory Protege can use. Xms is the initial memory that will be allocated and Xss defines the increments used when allocating more memory.
-1. Change -Xmx500M to Xmx12G
-1. Save and reopen Protege.
+_The following instructions will probably not work if Protégé was installed from the **platform independent version**, which does not include the Java Runtime Environment or a Windows .exe launcher._
+
+- Visit https://protege.stanford.edu/
+- Click orange **DOWNLOAD NOW** button
+- Click gray **Download for Windows** button on subsequent page
+- Register if desired, or skip registration 
+- Find `Protege-<version>-win.zip`
+  - most likely in your Downloads directory
+  - current version is Protege-5.5.0-win.zip
+- Unzip the downloaded file with your favorite file compression utility
+- You will get get a `Protege-<version>` directory, possibly inside of a `Protege-<version>-win` directory, which will most likely be inside of your Downloads directory, unless you specified something else
+- You should find `Protege.exe` inside the `Protege-<version>` directory. Double clicking that file will launch the Protégé application. Adding Protégé to the Desktop or Start Menu is not addressed here.
+- It might take a minute before Protégé  is ready to use. Whether or not to update or add plugins is not addressed here
+- The fonts used by Protégé may be very small, especially on some high resolution monitors. That is not addressed here.
+- Exit Protégé after confirming that it can be launched.
+- There should be a `Protege.l4j.ini` in the same directory as `Protege.exe`. Opening large ontologies like MONDO will require an increase to Protege's default maximum Java heap size, which is symbolized as `-Xmx<size>`. 4GB is usually adequate for opening MONDO, as long as 4GB of free memory is really available on your system before you launch Protégé! Allocating even more memory will improve some tasks, like reasoning. You can check your available memory by launching the Windows Task Manager, clicking on the **More details** button on the bottom of the window and then checking the Performance tab at the top of the window.
+  - It's recommended to make a backup of `Protege.l4j.ini` before editing
+
+Open `Protege.l4j.ini` with a lightweight text editor like Atom or Sublime. Using notepad.exe instead might work, but may change character encodings or the character(s) used to represent End of Line.  
+
+After increasing the memory available to Protégé, `Protege.l4j.ini` might look like this. 
+
+```
+-Xms200M
+-Xmx4G
+-Xss16M
+```
+
+Note that there is no whitespace between `-Xmx`, the numerical amount of memory, and the Megabytes/Gigabytes suffix. Don't forget to save. 
+
+Taking advantage of the memory increase requires that Protégé is shut down and relaunched, if applicable. The methods discussed here may not apply if Protégé  is launched through any method other than double clicking `Protege.exe` from the folder where the edited `Protege.l4j.ini` resides.
 
 ### Note on increasing memory
 
