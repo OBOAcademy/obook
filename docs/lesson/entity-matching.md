@@ -31,6 +31,7 @@ Another gentle overview on Ontology Matching was taught as part of the Knowledge
 1. [Mapping curation with SSSOM](../tutorial/sssom-tutorial.md)
 1. [Introduction to processing mappings with SSSOM and sssom-py CLI](../tutorial/sssom-toolkit.md)
 
+
 ## Introduction to Ontology Mapping
 
 In this lesson we will take a look at ontology mappings in general and how you 

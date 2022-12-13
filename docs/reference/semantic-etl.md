@@ -1,5 +1,7 @@
 # The 3 phases of Semantic Data Engineering / ETL
 
+<a href="../reference/obook-maturity-indicator"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FOBOAcademy%2Fobook%2Fmaster%2Fdocs%2Fresources%2Fobook-badge-development.json" /></a>
+
 Semantic Data Engineering or Semantic Extract-Transform-Load (ETL) is an engineering discipline that is concerned with extracting information from a variety of sources, linking it together into a knowledge graph and enabling a range of semantic analyses for downstream users such as data scientists or researchers.
 
 1. Getting Data
