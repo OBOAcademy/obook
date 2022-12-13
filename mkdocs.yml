@@ -33,7 +33,9 @@ nav:
       - Modelling with Object Properties: lesson/modelling-with-object-properties.md
       - Ontology Term Use: lesson/ontology-term-use.md
       - RDF Fundamentals: lesson/rdf.md
+      - Semantic Entity Matching: lesson/entity-matching.md
       - Disease and Phenotype Ontologies: lesson/using-disease-and-phenotype-ontologies.md
+      - Hacking the OBOOK: lesson/hackathon.md
   - Lessons In Development:
       - Developing an Application Ontology: lesson/developing-application-ontologies.md
       - Ontology Development: lesson/ontology-development.md
@@ -69,7 +71,9 @@ nav:
           - Basic introduction to CLI 1: tutorial/intro-cli-1.md
           - Basic introduction to CLI 2: tutorial/intro-cli-2.md
       - Mappings and SSSOM:
-          - Basic Tutorial: tutorial/sssom-manual.md
+          - Basic Tutorial: tutorial/sssom-tutorial.md
+          - Lexical Matching with OAK Lexmatch: tutorial/lexmatch-tutorial.md
+          - Introduction to the SSSOM Toolkit: tutorial/sssom-toolkit.md
       - General Ontology Modelling:
           - Project Ontology Development: tutorial/project-ontology-development.md
           - Family History Knowledge Base (FHKB) tutorial: tutorial/fhkb.md
@@ -116,12 +120,15 @@ nav:
       - Command line:
           - How to filter a file based on another file: howto/filter-text-file.md
   - Reference:
+      - Tools: reference/glossary.md
       - Glossary of Terms: reference/glossary-of-terms.md
       - Frequently used ODK commands: reference/frequently-used-odk-commands.md
       - Protege Interface: reference/protege-interface.md
       - Protege FAQ: reference/protege-faq.md
       - Formatting your ontology annotations correctly: reference/formatting-license.md
       - OBO-style term annotation: reference/go-style-annotation-property-practice.md
+      - Ontology Matching:
+          - Semantic ETL: reference/semantic-etl.md
       - Git:
           - Intro to GitHub: reference/github-intro.md
           - GitHub Desktop: reference/github-desktop.md
@@ -150,6 +157,7 @@ nav:
       - Term Comments: explanation/term-comments.md
       - Introduction to Annotation Properties: explanation/annotation-properties.md
       - Writing good issues: explanation/writing-good-issues.md
+      - Ontology Matching: explanation/ontology-matching.md
       - Which biomedical ontologies should we use?: explanation/which-ontology-to-use.md
       - OWL, OBO, JSON? Base, simple, full, basic? What should you use, and why?: explanation/owl-format-variants.md
       - What are taxon constraints?: explanation/taxon-constraints-explainer.md
