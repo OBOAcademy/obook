@@ -72,10 +72,10 @@ The label itself is not necessarily a term - it could change, for example to "Fr
 - "`Friedreich's Ataxia`" (example on the left) may be a term in my controlled vocabulary which I understand to correspond to that respective disease (not all controlled vocabularies have IDs for their terms). 
 This happens for example in clinical data models that do not use formal identifiers to refer to the values of slots in their data model, like "MARRIED" in /datamodel/marital_status.
 - Examples of entities: 
-  - IDs of classes in an ontology
-  - elements of a clinical value set
-  - elements of clinical terminologies such as [Z63.1](https://www.icd10data.com/ICD10CM/Codes/Z00-Z99/Z55-Z65/Z63-/Z63.1)
-  - Elements of a schema
+    - IDs of classes in an ontology
+    - elements of a clinical value set
+    - elements of clinical terminologies such as [Z63.1](https://www.icd10data.com/ICD10CM/Codes/Z00-Z99/Z55-Z65/Z63-/Z63.1)
+    - Elements of a schema
 - TLDR: entities are symbols that correspond to things in the world, and that correspondence is _not subject to change_. 
 Labels of such entities _can change without changing the meaning of the entity_.
 
