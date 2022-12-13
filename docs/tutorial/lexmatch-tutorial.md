@@ -74,7 +74,7 @@ sh odk.sh robot extract --method MIREOT --input foodon.owl --upper-term "FOODON:
 
 If you open `fruit_juice_food_foodon.owl` in Protege, you will see something similar to:
 
-![dockermemory](../images/lexmatch/foodon.png)
+![foodon hierarchy](../images/lexmatch/foodon.png)
 
 Next, we use OAK to extract juices and their labels from wikidata by selecting the descendants of `juice` from `wikidata`, store the result as a `ttl` file and then convert it to `OWL` using `ROBOT`.
 
@@ -240,18 +240,14 @@ This will generate an SSSOM tsv file with a few more matches than the previous o
 | wikidata:Q15823640 | cherry juice                 | skos:exactMatch | wikidata:Q62030277 | cherry juice                 | semapv:LexicalMatching | oaklib       | 0.8497788951776651 | rdfs:label          | rdfs:label         | cherry juice         |                                     |                                     |
 | wikidata:Q18201657 | must                         | skos:exactMatch | wikidata:Q278818   | must                         | semapv:LexicalMatching | oaklib       | 0.8497788951776651 | rdfs:label          | rdfs:label         | must                 |                                     |                                     |
 
-<a id="prepare"></a>
+<a id="curate"></a>
 
-#### Curating the matches
+#### Curate 
 
-It is important to remember that matching in its raw form should **not** be understood to _result in semantic mappings_. The process of _matching_, in particular lexical or fuzzy semantic matching is error prone and usually better treated as resulting in _candidates for mappings_. This means that when we calculate the effort of a mapping project, we should always factor in the often considerable effort required by a human to _verify the correctness of a candidate mapping_. There are many tools that can help with this process, for example by filtering out conflicting lower-confidence mappings, but in the end the reality is this: due to the fact that source and target do not share the same semantics, mappings will always be a bit wobbly. There are two important kinds of review which are very different:
+As we have described in detail [in our introduction to Semantic Matching](../lesson/entity-matching.md#collection), it is important to remember that matching in its raw form should **not** be understood to _result in semantic mappings_: they are better understood as mapping candidates. Therefore, it is always to plan for a review of false positives and false negatives:
 
-1. False positive review (wrong mappings). The goal here is to identify mappings that do not work for our use case, or do not use the correct semantic mapping relation. If you look carefully through the matched files, you'll notice that manual intervention is definitely required for the matches to be accurate. For e.g. `orange juice [wikidata:Q219059]` and `orange juice (unpasteurized) [FOODON:00001277]` may not be considered as the same thing in the sense of `skos:exactMatch`. 
-1. False negative review (missing mappings). The goal here is to understand if we can do anything to improve the matching process by tuning it. For very simple matchers like `oak lexmatch` this usually involves hacking labels and synonyms by removing or replacing words. More sophisticated matchers like [Agreement Maker Light (AML)](https://github.com/AgreementMakerLight/AML-Project) have many more tuning options, and it requires patience and expertise to find the right ones. 
-
-```
-Tip: always keep a clear visible list of unmapped classes around to sanity check how good your mapping has been so far.
-```
+1. False positive review (wrong mappings). The goal here is to identify mappings that do not work for our use case, or do not use the correct semantic mapping relation. If you look carefully through the matched files, you'll notice that manual intervention is definitely required for the matches to be accurate. For example, `orange juice [wikidata:Q219059]` and `orange juice (unpasteurized) [FOODON:00001277]` may not be considered as the same thing in the sense of `skos:exactMatch`. 
+1. False negative review (missing mappings). The goal here is to understand if we can do anything to improve the matching process by tuning it. Here, we did a little bit of that earlier when we were looking at the labels of the wikidata and FOODON juice hierarchies.
 
 For a more detailed introduction into manual mapping curation with SSSOM we recommend following this tutorial: https://mapping-commons.github.io/sssom/tutorial/.
 
