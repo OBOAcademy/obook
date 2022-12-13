@@ -6,7 +6,7 @@ In this tutorial, we will learn to use a very basic lexical matching tool (OAK L
 
 ## Pre-requisites
 
-- [Introduction to mapping curation with SSSOM](../explanation/semantic-matching.md)
+- [Introduction to mapping curation with SSSOM](../tutorial/sssom-tutorial.md)
 - [ROBOT tutorial (extract)](../tutorial/robot-tutorial-1/#extract)
 - [ROBOT tutorial (merge)](../tutorial/robot-tutorial-2/#merge)
 
@@ -134,7 +134,7 @@ This will generate an SSSOM tsv file with the mapped contents as shown below:
 | wikidata:Q18201657 | must             | skos:closeMatch | wikidata:Q278818   | must             | semapv:LexicalMatching | oaklib       | 0.5        | rdfs:label          | rdfs:label         | must             |
 
 
-This is great - we get a few mappings without much work. If you need some help interpreting this table, please refer to the [SSSOM tutorials](../tutorials/sssom-tutorial.md) for details.
+This is great - we get a few mappings without much work. If you need some help interpreting this table, please refer to the [SSSOM tutorials](../tutorial/sssom-tutorial.md) for details.
 
 Just eyeballing the labels in our ontology with OAK:
 

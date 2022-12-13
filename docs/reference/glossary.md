@@ -1,5 +1,11 @@
 # Glossary for concepts in and around OBO
 
+```
+IMPORTANT NOTE TO EDITORS, MERGE THIS WITH glossary.md.
+```
+
+[New OBOOK Glossary](../reference/glossary-of-terms.md)
+
 ## Tools
 
 | Term                                         | Definition                                                                                            | Type     | Docs                                                                |

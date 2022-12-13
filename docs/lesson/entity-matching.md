@@ -104,7 +104,7 @@ The main trade-off for mappings is very simple:
 --> The key for any given mapping project is to determine the _highest acceptable error rate_, and then distribute the workload between human and automated matching approaches. We will discuss all three ways of collecting mappings in the following.
 
 Aside from the main tradeoff above, there are other issues to keep in mind:
-- Manually curated mappings are far from perfect. Most of the cost of mapping review lies in the decision _how thorough_ a mapping should be reviewed. For example, a human reviewer may be tasked with reviewing 1000 mappings. If the acceptable error rate is quite high, the review may simply involve the comparison of labels (see [here](../tutorial/term-mapping.md)), which may take around 20 seconds. A tireless reviewer could possibly accept or dismiss 1000 mappings just based on the label in around 6 hours. Note that this is hardly better than what most automated approaches could do nowadays.
+- Manually curated mappings are far from perfect. Most of the cost of mapping review lies in the decision _how thorough_ a mapping should be reviewed. For example, a human reviewer may be tasked with reviewing 1000 mappings. If the acceptable error rate is quite high, the review may simply involve the comparison of labels (see [here](../tutorial/sssom-tutorial.md)), which may take around 20 seconds. A tireless reviewer could possibly accept or dismiss 1000 mappings just based on the label in around 6 hours. Note that this is hardly better than what most automated approaches could do nowadays.
 - Some use cases involve so much data that manual curation is nearly out of the question.
 
 ### Human curated mappings
