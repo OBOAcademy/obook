@@ -26,6 +26,8 @@ The goal of this course is to provide ongoing training for the OBO community. As
 
 | Date       | Lesson                                                                                                                  | Notes                                                                                                                                                                                                                                                                                                                | Recordings                                                           |
 | ---------- | ----------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| 2022/12/27 | _No Meeting_ | Enjoy the Holidays! |
+| 2022/12/13 | Introduction to Semantic Entity Matching |  |
 | 2022/11/29 | [OBO Academy hackathon](../lesson/hackathon.md) | Work on open tickets together.  |
 | 2022/11/15 | [Contributing to OBO ontologies](../lesson/contributing-to-obo-ontologies.md) - Part 2 | | [Here](https://youtu.be/YBvMKMoCCrQ)
 | 2022/11/01 | [Contributing to OBO ontologies](../lesson/contributing-to-obo-ontologies.md) - Part 1 | | [Here](https://youtu.be/_z8-KGDzZ6U)
@@ -67,9 +69,7 @@ The goal of this course is to provide ongoing training for the OBO community. As
 _Note: this is tentative and subject to change_
 
 | Date | Lesson  
-| --- | --- 
-| 2022/12/13 | Fundamentals of matching 
-| 2022/12/27 | _No meeting_: Celebrate the holidays
+| --- | ---  
 | 2023/01/10 | Taxon constraints
 
 ## Notes
