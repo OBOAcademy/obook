@@ -28,7 +28,7 @@ The goal of this course is to provide ongoing training for the OBO community. As
 | ---------- | ----------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
 | 2022/01/10 | Modelling with taxon constraints | Jim Balhoff tutorial |
 | 2022/12/27 | _No Meeting_ | Enjoy the Holidays! |
-| 2022/12/13 | [Introduction to Semantic Entity Matching](../lesson/entity-matching.md) |  |
+| 2022/12/13 | [Introduction to Semantic Entity Matching](../lesson/entity-matching.md) | [slides](https://bit.ly/obo-academy-semantic-matching) |
 | 2022/11/29 | [OBO Academy hackathon](../lesson/hackathon.md) | Work on open tickets together.  |
 | 2022/11/15 | [Contributing to OBO ontologies](../lesson/contributing-to-obo-ontologies.md) - Part 2 | | [Here](https://youtu.be/YBvMKMoCCrQ)
 | 2022/11/01 | [Contributing to OBO ontologies](../lesson/contributing-to-obo-ontologies.md) - Part 1 | | [Here](https://youtu.be/_z8-KGDzZ6U)
