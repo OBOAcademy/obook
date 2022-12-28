@@ -63,6 +63,12 @@ import_group:
     - id: pato
     - id: omo
 robot_java_args: "-Xmx8G"
+robot_report:
+  use_labels: TRUE
+  fail_on: ERROR
+  custom_profile: TRUE
+  report_on:
+    - edit
 ```
 
 Safe this config file as in your temporary directory, e.g. `~/odk_tutorial/cato-odk.yaml`.
@@ -127,6 +133,24 @@ robot_java_args: '-Xmx8G'
 ```
 
 Here we say that we allow ROBOT to consume up to 8GB of memory. Make sure that your docker is set up to permit at least ~20% more memory than that, i.e. 9GB or 10GB, otherwise, some cryptic Docker errors may come up.
+
+#### ROBOT Report:
+
+```
+robot_report:
+  use_labels: TRUE
+  fail_on: ERROR
+  custom_profile: TRUE
+  report_on:
+    - edit
+```
+
+- `use_labels`: allows switching labels on and off in the ROBOT report
+- `fail_on`: the report will fail if there is an ERROR-level violation
+- `custom_profile`: allows switching on custom profiles, see [here](http://robot.obolibrary.org/report#profiles)
+- `report_on`: specify which files to run the report over.
+
+With this configuration, we tell ODK we want to run a report to check the quality of the ontology. Check [here](http://robot.obolibrary.org/report_queries/) the complete list of report queries.
 
 ## Generate the repo
 
