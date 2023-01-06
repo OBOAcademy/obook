@@ -33,8 +33,12 @@ There are, in essence, three categories of taxon-specific knowledge we use acros
 
 
 1. The ALL-IN restriction: "C in_taxon T"
-2. The NOT-IN restriction: "C never_in_taxon T"
-3. The SOME-IN restriction: "C present_in_taxon T"
+  - "Hair is found only in Mammals"
+3. The NOT-IN restriction: "C never_in_taxon T"
+  - "Hair is never found in Birds"
+5. The SOME-IN restriction: "C present_in_taxon T"
+  - "Hair is found in Skunks"
+  - "Hair is found in Whales"
 
 #### The ALL-IN restriction: "C in_taxon T"
 
@@ -62,12 +66,13 @@ There are, in essence, three categories of taxon-specific knowledge we use acros
    - Canonical shortcut: AnnotationAssertion: `C never_in_taxon T` # Editors use this
 - _Editor guidance_: Editors use the canonical shortcut (annotation axiom). For `never_in_taxon` annotations, the taxon should be as broad as possible for the maximum utility, but it must be the case that a `C` is never found in any subclass of that taxon.
 
-#### The SOME-IN restriction: "a ClassAssertion: `C` and in-taxon some `T`"
+#### The SOME-IN restriction: "a ClassAssertion: `C` and in_taxon some `T`"
 
 - _Meaning_: "_At least one specific_ instance of `C` is in taxon `T`". 
-- _Canonical logical representation_: `IND:a Type: C and in-taxon some T`
+- _Canonical logical representation_: `IND:a Type: C and (in_taxon some T)`
 - _Alternative representations_:
-   - Canonical shortcut: AnnotationAssertion: `C present-in-taxon T` # Editors use this
+   - Generated subclass for QC purposes: `C_in_T SubClassOf (C and (in_taxon some T)` (`C_in_T` will be unsatisifiable if violates taxon constraints)
+   - Canonical shortcut: AnnotationAssertion: `C present_in_taxon T` # Editors use this
 - _Editor guidance_: Editors use the canonical shorcut (annotation axiom).  The taxon should be as specific as possible, ideally a species.
 
 ## How to add taxon restrictions:
