@@ -83,7 +83,7 @@ As stated above, one of the major applications for taxon restrictions in OBO is 
 
 It can be helpful to think informally about how taxon restrictions propagate over the class hierarchy. It's different for all three types:
 
-- ALL-IN restrictions (`in_taxon`) include all _superclasses_ of the taxon, and all _subclasses_ of the subject term.
+- ALL-IN restrictions (`in_taxon`) include all _superclasses_ of the taxon, and all _subclasses_ of the subject term:
   ```mermaid
      graph BT;
        n1(hair) ;
@@ -101,7 +101,7 @@ It can be helpful to think informally about how taxon restrictions propagate ove
        style n1 stroke-width:4px ;
        style n3 stroke-width:4px ;
    ```
-- NOT-IN restrictions (`never_in_taxon`) include all _subclasses_ of the taxon, and all _subclasses_ of the subject term.
+- NOT-IN restrictions (`never_in_taxon`) include all _subclasses_ of the taxon, and all _subclasses_ of the subject term:
   ```mermaid
      graph BT;
        n1(facial whisker) ;
@@ -119,7 +119,7 @@ It can be helpful to think informally about how taxon restrictions propagate ove
        style n2 stroke-width:4px ;
        style n4 stroke-width:4px ;
    ```
-- SOME-IN restrictions (`present_in_taxon`) include all _superclasses_ of the taxon, and all _superclasses_ of the subject term.
+- SOME-IN restrictions (`present_in_taxon`) include all _superclasses_ of the taxon, and all _superclasses_ of the subject term:
   ```mermaid
      graph BT;
        n1(hair) ;
