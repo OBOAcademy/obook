@@ -2,7 +2,7 @@
 
 ## What are taxon restrictions?
 
-Taxon restrictions are a formalised way to record what species a term applies to—something crucial in multi-species ontologies.
+Taxon restrictions (or, "taxon constraints") are a formalised way to record what species a term applies to—something crucial in multi-species ontologies.
 
 Even species neutral ontologies (e.g., GO) have classes that have implicit taxon restriction.
 
@@ -12,7 +12,7 @@ GO:0007595 ! Lactation - defined as “The secretion of milk by the mammary glan
 
 ## Uses for taxon restrictions
 
-1. **Finding inconsistencies.** Taxon restrictions use terms from the NCBI Taxonomy Ontology, which asserts pairwise disjointness between sibling taxa (e.g., nothing can be both an insect and a rodent). When terms have taxon constraints, a reasoner can check for inconsistencies.
+1. **Finding inconsistencies.** Taxon restrictions use terms from the NCBI Taxonomy Ontology, which asserts pairwise disjointness between sibling taxa (e.g., nothing can be both an insect and a rodent). When terms have taxon restrictions, a reasoner can check for inconsistencies.
 
     _When GO implemented taxon restrictions, [they found 5874 errors](https://pubmed.ncbi.nlm.nih.gov/20973947/)!_
 
@@ -32,26 +32,35 @@ GO:0007595 ! Lactation - defined as “The secretion of milk by the mammary glan
 There are, in essence, three categories of taxon-specific knowledge we use across OBO ontologies. Given a class `C`, which could be anything from an anatomical entity to a biological process, we have the following categories:
 
 
-1. The ALL-IN restriction: "C in-taxon T"
-2. The NOT-IN restriction: "C never-in-taxon T"
-3. The SOME-IN restriction: "C present-in-taxon T"
+1. The ALL-IN restriction: "C in_taxon T"
+2. The NOT-IN restriction: "C never_in_taxon T"
+3. The SOME-IN restriction: "C present_in_taxon T"
 
-#### The ALL-IN restriction: "in-taxon some T"
+#### The ALL-IN restriction: "C in_taxon T"
 
-- _Meaning_: "_All_ instances of `C` are in taxon `T`"
-- _Canonical logical representation_: `C SubClassOf: in-taxon some T` 
-   - Comment: no need for only-in-taxon if in-taxon is functional
+- _Meaning_: "_All_ instances of `C` are in some instance of taxon `T`"
+  - As this is a relation between instances, it may have been more correct to give this property a label such as "in organism".
+- _Canonical logical representation_:
+  ```
+  C SubClassOf (in_taxon some T)
+  
+  ```
+   - Comment: Ideally `in_taxon` would be declared to be an OWL functional property, meaning that something can only be `in_taxon` a single organism. However, this is prevented by some limitations of OWL (interactions with property chains).
 - _Alternative representations_: None
-- _Editor guidance_:  Editors use the Cannonical logical representation in subClassOf or simple (non-nested) EquivalentClass axioms.
+- _Editor guidance_:  Editors use the canonical logical representation in a SubClassOf axiom to add a taxon restriction, or in a simple (non-nested) EquivalentClass axiom to define a taxon-specific subclass (which will also imply the taxon restriction). When used in a SubClassOf axiom, the taxon should be as specific as possible for the maximum utility, but may still need to be quite broad, as it applies to _every_ instance of `C`.
 
-#### The NOT-IN restriction: "C SubClassOf: not (in_taxon some T)"
+#### The NOT-IN restriction: "C SubClassOf (not (in_taxon some T))"
 
 - _Meaning_: "_No_ instances of `C` are in taxon `T`"
-- _Canonical logical representation_: `C SubClassOf: not (in_taxon some T)` 
+- _Canonical logical representation_:
+  ```
+  C SubClassOf (not (in_taxon some T))`
+  ```
 - _Alternative representations_:
-   - Alternative EL logical representation: `C disjointWith in-taxon some T`
-   - Canonical Shortcut: AnnotationAssertion: `C never-in-taxon T` # Editors use this
-- _Editor guidance_: Editors use the canonical shorcut (annotation axiom). 
+   - Alternative EL logical representation: `C DisjointWith (in_taxon some T)`
+   - EL helper axiom: `C SubClassOf (in_taxon some (not T))`
+   - Canonical shortcut: AnnotationAssertion: `C never_in_taxon T` # Editors use this
+- _Editor guidance_: Editors use the canonical shortcut (annotation axiom). For `never_in_taxon` annotations, the taxon should be as broad as possible for the maximum utility, but it must be the case that a `C` is never found in any subclass of that taxon.
 
 #### The SOME-IN restriction: "a ClassAssertion: `C` and in-taxon some `T`"
 
