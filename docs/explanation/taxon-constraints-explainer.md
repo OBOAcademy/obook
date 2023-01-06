@@ -77,6 +77,28 @@ There are, in essence, three categories of taxon-specific knowledge we use acros
    - Canonical shortcut: AnnotationAssertion: `C present_in_taxon T` # Editors use this
 - _Editor guidance_: Editors use the canonical shorcut (annotation axiom).  The taxon should be as specific as possible, ideally a species.
 
+## Using taxon restrictions for Quality Control
+
+As stated above, one of the major applications for taxon restrictions in OBO is for quality control (QC), by finding logical inconsistencies. Many OBO ontologies consist of a complex web of term relationships, often crossing ontology boundaries (e.g., GO biological process terms referencing Uberon anatomical structures or CHEBI chemical entities). If particular terms are only defined to apply to certain taxa, it is critical to know that a chain of logic implies that the term must exist in some other taxon which should be impossible. Propagating taxon restrictions via logical relationships greatly expands their effectiveness (the GO term above may acquire a taxon restriction via the type of anatomical structure in which it occurs).
+
+It can be helpful to think informally about how taxon restrictions propagate over the class hierarchy. It's different for all three types:
+
+- ALL-IN restrictions (`in_taxon`) include all _superclasses_ of the taxon, and all _subclasses_ of the subject term.
+  - 'hair' in_taxon 'Mammalia' implies:
+    - 'hair' in_taxon 'Tetrapoda'
+    - 'whisker' in_taxon 'Mammalia'
+    - 'whisker' in_taxon 'Tetrapoda'
+- NOT-IN restrictions (`never_in_taxon`) include all _subclasses_ of the taxon, and all _subclasses_ of the subject term.
+  - 'whisker' never_in_taxon 'Hominidae' implies:
+    - 'whisker' never_in_taxon 'Homo sapiens'
+    - 'facial whisker' never_in_taxon 'Hominidae'
+    - 'facial whisker' never_in_taxon 'Homo sapiens'
+- SOME-IN restrictions (`present_in_taxon`) include all _superclasses_ of the taxon, and all _superclasses_ of the subject term.
+  - 'whisker' present_in_taxon 'Felis' implies:
+    - 'hair' present_in_taxon 'Felis'
+    - 'whisker' present_in_taxon 'Carnivora'
+    - 'hair' present_in_taxon 'Carnivora'
+
 ## How to add taxon restrictions:
 
 Please see how-to guide on [adding taxon restrictions](../howto/add-taxon-restrictions.md)
