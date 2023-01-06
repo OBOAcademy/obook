@@ -84,20 +84,59 @@ As stated above, one of the major applications for taxon restrictions in OBO is 
 It can be helpful to think informally about how taxon restrictions propagate over the class hierarchy. It's different for all three types:
 
 - ALL-IN restrictions (`in_taxon`) include all _superclasses_ of the taxon, and all _subclasses_ of the subject term.
-  - 'hair' in_taxon 'Mammalia' implies:
-    - 'hair' in_taxon 'Tetrapoda'
-    - 'whisker' in_taxon 'Mammalia'
-    - 'whisker' in_taxon 'Tetrapoda'
+  ```mermaid
+     graph BT;
+       n1(hair) ;
+       n2(whisker) ;
+       n3(Mammalia) ;
+       n4(Tetrapoda) ;
+       n2--is_a-->n1 ;
+       n3--is_a-->n4 ;
+       n1==in_taxon==>n3 ;
+       n1-.in_taxon.->n4 ;
+       n2-.in_taxon.->n3 ;
+       n2-.in_taxon.->n4 ;
+       linkStyle 0 stroke:#999 ;
+       linkStyle 1 stroke:#999 ;
+       style n1 stroke-width:4px ;
+       style n3 stroke-width:4px ;
+   ```
 - NOT-IN restrictions (`never_in_taxon`) include all _subclasses_ of the taxon, and all _subclasses_ of the subject term.
-  - 'whisker' never_in_taxon 'Hominidae' implies:
-    - 'whisker' never_in_taxon 'Homo sapiens'
-    - 'facial whisker' never_in_taxon 'Hominidae'
-    - 'facial whisker' never_in_taxon 'Homo sapiens'
+  ```mermaid
+     graph BT;
+       n1(facial whisker) ;
+       n2(whisker) ;
+       n3(Homo sapiens) ;
+       n4(Hominidae) ;
+       n1--is_a-->n2 ;
+       n3--is_a-->n4 ;
+       n2==never_in_taxon==>n4 ;
+       n2-.never_in_taxon.->n3 ;
+       n1-.never_in_taxon.->n4 ;
+       n1-.never_in_taxon.->n3 ;
+       linkStyle 0 stroke:#999 ;
+       linkStyle 1 stroke:#999 ;
+       style n2 stroke-width:4px ;
+       style n4 stroke-width:4px ;
+   ```
 - SOME-IN restrictions (`present_in_taxon`) include all _superclasses_ of the taxon, and all _superclasses_ of the subject term.
-  - 'whisker' present_in_taxon 'Felis' implies:
-    - 'hair' present_in_taxon 'Felis'
-    - 'whisker' present_in_taxon 'Carnivora'
-    - 'hair' present_in_taxon 'Carnivora'
+  ```mermaid
+     graph BT;
+       n1(hair) ;
+       n2(whisker) ;
+       n3(Felis) ;
+       n4(Carnivora) ;
+       n2--is_a-->n1 ;
+       n3--is_a-->n4 ;
+       n2==present_in_taxon==>n3 ;
+       n1-.present_in_taxon.->n3 ;
+       n2-.present_in_taxon.->n4 ;
+       n1-.present_in_taxon.->n4 ;
+       linkStyle 0 stroke:#999 ;
+       linkStyle 1 stroke:#999 ;
+       style n2 stroke-width:4px ;
+       style n3 stroke-width:4px ;
+   ```
 
 ## How to add taxon restrictions:
 
