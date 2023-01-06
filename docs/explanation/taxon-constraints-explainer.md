@@ -2,25 +2,30 @@
 
 ## What are taxon restrictions?
 
-Taxon restrictions are a formalised way of to record what species a term applies to - something crucial in multi-species ontologies.
+Taxon restrictions are a formalised way to record what species a term applies to—something crucial in multi-species ontologies.
 
-Even species neutral ontologies (eg GO) have classes that have implicit taxon restriction.
+Even species neutral ontologies (e.g., GO) have classes that have implicit taxon restriction.
 
-`Eg GO:0007595 ! Lactation - defined as “The secretion of milk by the mammary gland.”`
+```
+GO:0007595 ! Lactation - defined as “The secretion of milk by the mammary gland.”
+```
 
-## Why restrict taxon?
+## Uses for taxon restrictions
 
-1. Finding inconsistencies
-   Taxon restriction use NCBITaxon which have pairwise disjointness between species (eg Nothing is both an insect and a rodent and a primate)
-   When addint taxon constraints, a reasoner can check for inconsistencies.
+1. **Finding inconsistencies.** Taxon restrictions use terms from the NCBI Taxonomy Ontology, which asserts pairwise disjointness between sibling taxa (e.g., nothing can be both an insect and a rodent). When terms have taxon constraints, a reasoner can check for inconsistencies.
 
-E.g. when GO implemented taxon restrictions, they found 5874 errors [PMID:20973947](https://pubmed.ncbi.nlm.nih.gov/20973947/)
+    _When GO implemented taxon restrictions, [they found 5874 errors](https://pubmed.ncbi.nlm.nih.gov/20973947/)!_
 
-2. Creating SLIMs
-   Allows for use of reasoner to generate taxon related SLIMs
+2. **Defining taxon-specific subclasses.** You can define a taxon-specific subclass of a broader concept, e.g., 'human clavicle'. This allows you, for example, to assert relationships for the new term that don't apply to all instances of the broader concept:
 
-3. Querying
-   E.g. in Brain Data Standards, in_taxon axioms that allow faceting cell types by species. (note: there are limitations on this and may be incomplete)
+    ```
+    'human clavicle' EquivalentTo 'clavicle bone' and ('in taxon' some 'Homo sapiens')
+    'human clavicle' SubClassOf 'connected to' some sternum
+    ```
+
+3. **Creating SLIMs.** Use a reasoner to generate ontology subsets containing only those terms that are logically allowed within a given taxon.
+
+4. **Querying.** Facet terms by taxon. E.g., in Brain Data Standards, in_taxon axioms allow faceting cell types by species. (note: there are limitations on this and may be incomplete).
       
 ## Types of Taxon Restrictions 
 
