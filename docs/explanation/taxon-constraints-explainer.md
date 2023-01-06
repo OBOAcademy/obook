@@ -19,8 +19,8 @@ GO:0007595 ! Lactation - defined as “The secretion of milk by the mammary glan
 2. **Defining taxon-specific subclasses.** You can define a taxon-specific subclass of a broader concept, e.g., 'human clavicle'. This allows you, for example, to assert relationships for the new term that don't apply to all instances of the broader concept:
 
     ```
-    'human clavicle' EquivalentTo 'clavicle bone' and ('in taxon' some 'Homo sapiens')
-    'human clavicle' SubClassOf 'connected to' some sternum
+    'human clavicle' EquivalentTo ('clavicle bone' and ('in taxon' some 'Homo sapiens'))
+    'human clavicle' SubClassOf ('connected to' some sternum)
     ```
 
 3. **Creating SLIMs.** Use a reasoner to generate ontology subsets containing only those terms that are logically allowed within a given taxon.
@@ -32,13 +32,13 @@ GO:0007595 ! Lactation - defined as “The secretion of milk by the mammary glan
 There are, in essence, three categories of taxon-specific knowledge we use across OBO ontologies. Given a class `C`, which could be anything from an anatomical entity to a biological process, we have the following categories:
 
 
-1. The ALL-IN restriction: "C in_taxon T"
-  - "Hair is found only in Mammals"
-3. The NOT-IN restriction: "C never_in_taxon T"
-  - "Hair is never found in Birds"
-5. The SOME-IN restriction: "C present_in_taxon T"
-  - "Hair is found in Skunks"
-  - "Hair is found in Whales"
+1. The ALL-IN restriction: "C [in_taxon](http://purl.obolibrary.org/obo/RO_0002162) T"
+   - "Hair is found only in Mammals"
+3. The NOT-IN restriction: "C [never_in_taxon](http://purl.obolibrary.org/obo/RO_0002161) T"
+   - "Hair is never found in Birds"
+5. The SOME-IN restriction: "C [present_in_taxon](http://purl.obolibrary.org/obo/RO_0002175) T"
+   - "Hair is found in Skunks"
+   - "Hair is found in Whales"
 
 #### The ALL-IN restriction: "C in_taxon T"
 
@@ -47,7 +47,6 @@ There are, in essence, three categories of taxon-specific knowledge we use acros
 - _Canonical logical representation_:
   ```
   C SubClassOf (in_taxon some T)
-  
   ```
    - Comment: Ideally `in_taxon` would be declared to be an OWL functional property, meaning that something can only be `in_taxon` a single organism. However, this is prevented by some limitations of OWL (interactions with property chains).
 - _Alternative representations_: None
@@ -69,7 +68,10 @@ There are, in essence, three categories of taxon-specific knowledge we use acros
 #### The SOME-IN restriction: "a ClassAssertion: `C` and in_taxon some `T`"
 
 - _Meaning_: "_At least one specific_ instance of `C` is in taxon `T`". 
-- _Canonical logical representation_: `IND:a Type: C and (in_taxon some T)`
+- _Canonical logical representation_:
+  ```
+  IND:a Type (C and (in_taxon some T))`
+  ```
 - _Alternative representations_:
    - Generated subclass for QC purposes: `C_in_T SubClassOf (C and (in_taxon some T)` (`C_in_T` will be unsatisifiable if violates taxon constraints)
    - Canonical shortcut: AnnotationAssertion: `C present_in_taxon T` # Editors use this
