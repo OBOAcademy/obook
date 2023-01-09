@@ -138,6 +138,37 @@ It can be helpful to think informally about how taxon restrictions propagate ove
        style n3 stroke-width:4px ;
    ```
 
+The Relation Ontology defines number of property chains for the `in_taxon` property. This allows taxon constraints to propagate over other relationships. For example, the `part_of o in_taxon -> in_taxon` chain implies that if a muscle is part of a whisker, the muscle must be in a mammal, and not in a human, since we know these things about whiskers:
+
+```mermaid
+     graph BT;
+       n1(hair) ;
+       n2(whisker) ;
+       n3(Mammalia) ;
+       n4(Homo sapiens) ;
+       n5(Hominidae) ;
+       n6(whisker muscle) ;
+       n2--is_a-->n1 ;
+       n5--is_a-->n3 ;
+       n4--is_a-->n5 ;
+       n6--part_of-->n2 ;
+       n1==in_taxon==>n3 ;
+       n2==never_in_taxon==>n5 ;
+       n2-.in_taxon.->n3 ;
+       n6-.in_taxon.->n3 ;
+       n6-.never_in_taxon.->n4 ;
+       n2-.never_in_taxon.->n4 ;
+       n6-.never_in_taxon.->n5 ;
+       linkStyle 0 stroke:#999 ;
+       linkStyle 1 stroke:#999 ;
+       linkStyle 2 stroke:#999 ;
+       linkStyle 3 stroke:#008080 ;
+       style n6 stroke-width:4px ;
+   ```
+
+
+The graph depictions in the preceding illustrations are informal; in practice `never_in_taxon` and `present_in_taxon` annotations are implemented via more complex logical constructions using the `in_taxon` object property, described in the next section. These logical constructs allow the OWL reasoner to determine that a class is unsatisfiable when there are conflicts between taxon restriction inferences. 
+
 ## How to add taxon restrictions:
 
 Please see how-to guide on [adding taxon restrictions](../howto/add-taxon-restrictions.md)
