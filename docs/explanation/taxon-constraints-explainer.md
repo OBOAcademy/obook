@@ -170,6 +170,57 @@ Property chains are the most common way in which taxon restrictions propagate ac
 
 The graph depictions in the preceding illustrations are informal; in practice `never_in_taxon` and `present_in_taxon` annotations are implemented via more complex logical constructions using the `in_taxon` object property, described in the next section. These logical constructs allow the OWL reasoner to determine that a class is unsatisfiable when there are conflicts between taxon restriction inferences. 
 
+## Implementation and reasoning with taxon restrictions
+
+The OWL axioms required to derive the desired entailments for taxon restrictions are somewhat more complicated than one might expect. Most of the complication is the result of workarounds to limitations dictated by the [OWL EL profile](https://www.w3.org/TR/owl2-profiles/#OWL_2_EL). Because of the size and complexity of many of the ontologies in the OBO Library, particularly those heavily using taxon restrictions, we primarily rely on the ELK reasoner, which is fast and scalable since it implements OWL EL rather than the complete OWL language. In the following we discuss the particular kinds of axioms required in order for taxon restrictions to work with ELK, with some comments about how it could work with HermiT (which implements the complete OWL language but is much less scalable). We will focus on this example ontology:
+
+```mermaid
+     graph BT;
+       n1(hair) ;
+       n2(whisker) ;
+       n3(muscle) ;
+       n4(whisker muscle) ;
+       n5(whisker muscle in human) ;
+       n6(whisker in catfish) ;
+       n7(whisker in human) ;
+       n8(life) ;
+       n9(Teleostei) ;
+       n10(Siluriformes) ;
+       n11(Tetrapoda) ;
+       n12(Mammalia) ;
+       n13(Hominidae) ;
+       n14(Homo sapiens) ;
+       n2--is_a-->n1 ;
+       n4--is_a-->n3 ;
+       n9--is_a-->n8 ;
+       n10--is_a-->n9 ;
+       n11--is_a-->n8 ;
+       n12--is_a-->n11 ;
+       n13--is_a-->n12 ;
+       n14--is_a-->n13 ;
+       n5--is_a-->n4 ;
+       n6--is_a-->n2 ;
+       n7--is_a-->n2 ;
+       n4--part_of-->n2 ;
+       n11 --disjoint_with--- n9 ;
+       n1==in_taxon==>n12 ;
+       n2==never_in_taxon==>n13 ;
+       linkStyle 0 stroke:#999 ;
+       linkStyle 1 stroke:#999 ;
+       linkStyle 2 stroke:#999 ;
+       linkStyle 3 stroke:#999 ;
+       linkStyle 4 stroke:#999 ;
+       linkStyle 5 stroke:#999 ;
+       linkStyle 6 stroke:#999 ;
+       linkStyle 7 stroke:#999 ;
+       linkStyle 8 stroke:#999 ;
+       linkStyle 9 stroke:#999 ;
+       linkStyle 10 stroke:#999 ;
+       linkStyle 11 stroke:#008080 ;
+       linkStyle 12 stroke:red ;
+   ```
+
+
 ## How to add taxon restrictions:
 
 Please see how-to guide on [adding taxon restrictions](../howto/add-taxon-restrictions.md)
