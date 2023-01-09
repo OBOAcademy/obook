@@ -166,6 +166,7 @@ The Relation Ontology defines number of property chains for the `in_taxon` prope
        style n6 stroke-width:4px ;
    ```
 
+Property chains are the most common way in which taxon restrictions propagate across ontology boundaries. For example, Gene Ontology uses various subproperties of [results in developmental progression of](http://purl.obolibrary.org/obo/RO_0002295) to connect biological process to Uberon anatomical entities. Any taxonomic restrictions which hold for the anatomical entity will propagate to the biological process via this property.
 
 The graph depictions in the preceding illustrations are informal; in practice `never_in_taxon` and `present_in_taxon` annotations are implemented via more complex logical constructions using the `in_taxon` object property, described in the next section. These logical constructs allow the OWL reasoner to determine that a class is unsatisfiable when there are conflicts between taxon restriction inferences. 
 
