@@ -138,7 +138,7 @@ It can be helpful to think informally about how taxon restrictions propagate ove
        style n3 stroke-width:4px ;
    ```
 
-The Relation Ontology defines number of property chains for the `in_taxon` property. This allows taxon restrictions to propagate over other relationships. For example, the `part_of o in_taxon -> in_taxon` chain implies that if a muscle is part of a whisker, the muscle must be in a mammal, and not in a human, since we know these things about whiskers:
+The Relation Ontology defines number of property chains for the `in_taxon` property. This allows taxon restrictions to propagate over other relationships. For example, the `part_of o in_taxon -> in_taxon` chain implies that if a muscle is part of a whisker, then the muscle must be in a mammal, but not in a human, since we know both of these things about whiskers:
 
 ```mermaid
      graph BT;
