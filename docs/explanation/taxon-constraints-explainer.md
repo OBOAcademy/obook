@@ -251,7 +251,7 @@ This would be sufficient for HermiT to detect the unsatisfiability of 'whisker i
 
 - `(in_taxon some 'Tetrapoda') DisjointWith (in_taxon some 'Teleostei')`
 
-The addition of these axioms is sufficient to detect the unsatisfiability of 'whisker in catfish' in both HermiT and ELK. This is the explanation:
+The addition of axioms like that is sufficient to detect the unsatisfiability of 'whisker in catfish' in both HermiT and ELK. This is the explanation:
 
 - `'whisker in catfish' EquivalentTo ('whisker' and (in_taxon some 'Siluriformes'))`
 - `'whisker' SubClassOf 'hair'`
