@@ -238,16 +238,16 @@ We can start by modeling the two taxon restrictions in the ontology like so:
 - 'hair' 'in_taxon' 'Mammalia': `'hair' SubClassOf (in_taxon some 'Mammalia')`
 - 'whisker' 'never_in_taxon' 'Mammalia': `'whisker' SubClassOf (not (in_taxon some 'Hominidae'))`
 
-Relying on the fact that all sibling taxa are asserted to be disjoint in the taxonomy ontology, both HermiT and ELK can derive that 'whisker in human' is unsatisfiable. This is the explanation:
+Both HermiT and ELK can derive that 'whisker in human' is unsatisfiable. This is the explanation:
 - `'human whisker' EquivalentTo ('whisker' and (in_taxon some 'Homo sapiens'))`
 - `'Homo sapiens' SubClassOf 'Hominidae'`
 - `'whisker' SubClassOf (not ('in_taxon' some 'Hominidae'))`
 
-Unfortunately, neither reasoner detects the other two problems. We'll address the 'whisker in catfish' first. The reasoner infers that this class is `in_taxon` both 'Mammalia' and 'Siluriformes'. While these are disjoint classes, there is nothing in the ontology stating that something can only be in one taxon at a time. The most intuitive solution to this problem would be to assert that `in_taxon` is a functional property. However, due to limitations of OWL, can't be used in combination with property chains. Furthermore, functional properties aren't part of OWL EL. There is one solution that works for HermiT, but not ELK. We could add an axiom like the following to every "always in taxon" restriction:
+Unfortunately, neither reasoner detects the other two problems. We'll address the 'whisker in catfish' first. The reasoner infers that this class is `in_taxon` both 'Mammalia' and 'Siluriformes'. While these are disjoint classes (all sibling taxa are asserted to be disjoint in the taxonomy ontology), there is nothing in the ontology stating that something can only be in one taxon at a time. The most intuitive solution to this problem would be to assert that `in_taxon` is a functional property. However, due to limitations of OWL, can't be used in combination with property chains. Furthermore, functional properties aren't part of OWL EL. There is one solution that works for HermiT, but not ELK. We could add an axiom like the following to every "always in taxon" restriction:
 
 - `'hair' SubClassOf (in_taxon only 'Mammalia')`
 
-This would be sufficient for HermiT to detect the unsatisfiability of 'whisker in catfish'. Unfortunately, `only` restrictions are not part of OWL EL. Instead of adding the `only` restrictions, we can generate an extra disjointness axiom for every taxon disjointness in the taxonomy ontology, e.g.:
+This would be sufficient for HermiT to detect the unsatisfiability of 'whisker in catfish' (assuming taxon sibling disjointness). Unfortunately, `only` restrictions are not part of OWL EL. Instead of adding the `only` restrictions, we can generate an extra disjointness axiom for every taxon disjointness in the taxonomy ontology, e.g.:
 
 - `(in_taxon some 'Tetrapoda') DisjointWith (in_taxon some 'Teleostei')`
 
@@ -264,7 +264,7 @@ While we can now detect two of the unsatisfiable classes, sadly neither HermiT n
 
 - `(in_taxon some Hominidae) DisjointWith (in_taxon some (not Hominidae))`
 
-We also need to add another axiom to each never_in_taxon assertion, e.g.,:
+We also need to add another axiom to the translation of each never_in_taxon assertion, e.g.,:
 
 - `in_taxon some (not 'Hominidae')`
 
