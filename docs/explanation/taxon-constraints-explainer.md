@@ -260,7 +260,7 @@ The addition of axioms like that is sufficient to detect the unsatisfiability of
 - `'Siluriformes' SubClassOf 'Teleostei'`
 - `(in_taxon some 'Teleostei') DisjointWith (in_taxon some 'Tetrapoda')`
 
-While we can now detect two of the unsatisfiable classes, sadly neither HermiT nor ELK yet finds 'whisker muscle in human' to be unsatisfiable, which requires handling the interaction of a "never" assertion with a property chain. If we were able to make `in_taxon` a functional property, HermiT should be able to detect the problem; but as we said before, OWL doesn't allow us to combine functional properties with property chains. The solution for HermiT also works for ELK (in combination with the extra disjointness we added in the previous case); we need to add even more generated disjointness axioms, one for each taxon, e.g.,:
+While we can now detect two of the unsatisfiable classes, sadly neither HermiT nor ELK yet finds 'whisker muscle in human' to be unsatisfiable, which requires handling the interaction of a "never" assertion with a property chain. If we were able to make `in_taxon` a functional property, HermiT should be able to detect the problem; but as we said before, OWL doesn't allow us to combine functional properties with property chains. The solution is to add even more generated disjointness axioms, one for each taxon (in combination with the extra disjointness we added in the previous case), e.g.,:
 
 - `(in_taxon some Hominidae) DisjointWith (in_taxon some (not Hominidae))`
 
