@@ -168,7 +168,7 @@ The Relation Ontology defines number of property chains for the `in_taxon` prope
 
 Property chains are the most common way in which taxon restrictions propagate across ontology boundaries. For example, Gene Ontology uses various subproperties of [results in developmental progression of](http://purl.obolibrary.org/obo/RO_0002295) to connect biological processes to Uberon anatomical entities. Any taxonomic restrictions which hold for the anatomical entity will propagate to the biological process via this property.
 
-The graph depictions in the preceding illustrations are informal; in practice `never_in_taxon` and `present_in_taxon` annotations are implemented via more complex logical constructions using the `in_taxon` object property, described in the next section. These logical constructs allow the OWL reasoner to determine that a class is unsatisfiable when there are conflicts between taxon restriction inferences. 
+The graph depictions in the preceding illustrations are informal; in practice `never_in_taxon` and `present_in_taxon` annotations are translated into more complex logical constructions using the `in_taxon` object property, described in the next section. These logical constructs allow the OWL reasoner to determine that a class is unsatisfiable when there are conflicts between taxon restriction inferences. 
 
 ## Implementation and reasoning with taxon restrictions
 
@@ -228,9 +228,9 @@ The OWL axioms required to derive the desired entailments for taxon restrictions
 
 There are three classes outlined in red which were created mistakenly; the asserted taxon for each of these conflicts with taxon restrictions in the rest of the ontology:
 
-- **'whisker in human'** — We expect this to be unsatisfiable since it is a subclass of 'whisker', which has a 'never in Hominidae' restriction. 'Whisker in human' is asserted to be in a subclass of 'Hominidae'.
-- **'whisker in catfish'** — We expect this to be unsatisfiable since it is a subclass of 'whisker', and thus a subclass of 'hair'. 'Hair' has an 'only in Mammalia' restriction. 'Whisker in catfish' is asserted to be in 'Siluriformes' (catfish), which is a subclass of Teleostei and thus disjoint from 'Mammalia'.
-- **'whisker muscle in human'** — We expect this to be unsatisfiable since it is a 'whisker muscle' and thus part of a 'whisker', and thus inherits the 'never in Hominidae' restriction from 'whisker' via the property chain `part_of o in_taxon -> in_taxon`. This conflicts with its asserted taxon 'Homo sapiens', a subclass of 'Hominidae'.
+- **'whisker in human'** — We expect this to be unsatisfiable since it is a subclass of 'whisker', which has a 'never in Hominidae' restriction. 'Whisker in human' is asserted to be in_taxon 'Homo sapiens', a subclass of 'Hominidae'.
+- **'whisker in catfish'** — We expect this to be unsatisfiable since it is a subclass of 'whisker', and thus a subclass of 'hair'. 'Hair' has an 'only in Mammalia' restriction. 'Whisker in catfish' is asserted to be in_taxon 'Siluriformes' (catfish), which is a subclass of Teleostei and thus disjoint from 'Mammalia'.
+- **'whisker muscle in human'** — We expect this to be unsatisfiable since it is a 'whisker muscle' and thus part of a 'whisker', and thus inherits the 'never in Hominidae' restriction from 'whisker' via the property chain `part_of o in_taxon -> in_taxon`. This conflicts with its asserted in_taxon 'Homo sapiens', a subclass of 'Hominidae'.
 
 ### Taxon restriction modeling
 
@@ -259,6 +259,23 @@ The addition of axioms like that is sufficient to detect the unsatisfiability of
 - `'Mammalia' SubClassOf 'Tetrapoda'`
 - `'Siluriformes' SubClassOf 'Teleostei'`
 - `(in_taxon some 'Teleostei') DisjointWith (in_taxon some 'Tetrapoda')`
+
+While we can now detect two of the unsatisfiable classes, sadly neither HermiT nor ELK yet finds 'whisker muscle in human' to be unsatisfiable, which requires handling the interaction of a "never" assertion with a property chain. If we were able to make `in_taxon` a functional property, HermiT should be able to detect the problem; but as we said before, OWL doesn't allow us to combine functional properties with property chains. The solution for HermiT also works for ELK (in combination with the extra disjointness we added in the previous case); we need to add even more generated disjointness axioms, one for each taxon, e.g.,:
+
+- `(in_taxon some Hominidae) DisjointWith (in_taxon some (not Hominidae))`
+
+We also need to add another axiom to each never_in_taxon assertion, e.g.,:
+
+- `in_taxon some (not 'Hominidae')`
+
+Now both HermiT and ELK can find 'whisker muscle in human' to be unsatisfiable. This is the explanation:
+
+- `'whisker muscle in human' EquivalentTo ('whisker muscle' and (in_taxon some 'Homo sapiens'))`
+- `'Homo sapiens' SubClassOf 'Hominidae'`
+- `'whisker muscle' SubClassOf (part_of some 'whisker')`
+- `'whisker' SubClassOf (in_taxon some ('not 'Hominidae'))`
+- `part_of o in_taxon SubPropertyOf in_taxon`
+- `(in_taxon some 'Hominidae') DisjointWith (in_taxon some (not 'Hominidae'))`
 
 ## How to add taxon restrictions:
 
