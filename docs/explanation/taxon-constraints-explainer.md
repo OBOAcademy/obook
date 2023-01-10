@@ -172,7 +172,7 @@ The graph depictions in the preceding illustrations are informal; in practice `n
 
 ## Implementation and reasoning with taxon restrictions
 
-The OWL axioms required to derive the desired entailments for taxon restrictions are somewhat more complicated than one might expect. Most of the complication is the result of workarounds to limitations dictated by the [OWL EL profile](https://www.w3.org/TR/owl2-profiles/#OWL_2_EL). Because of the size and complexity of many of the ontologies in the OBO Library, particularly those heavily using taxon restrictions, we primarily rely on the ELK reasoner, which is fast and scalable since it implements OWL EL rather than the complete OWL language. In the following we discuss the particular kinds of axioms required in order for taxon restrictions to work with ELK, with some comments about how it could work with HermiT (which implements the complete OWL language but is much less scalable). We will focus on this example ontology:
+The OWL axioms required to derive the desired entailments for taxon restrictions are somewhat more complicated than one might expect. Much of the complication is the result of workarounds to limitations dictated by the [OWL EL profile](https://www.w3.org/TR/owl2-profiles/#OWL_2_EL). Because of the size and complexity of many of the ontologies in the OBO Library, particularly those heavily using taxon restrictions, we primarily rely on the ELK reasoner, which is fast and scalable since it implements OWL EL rather than the complete OWL language. In the following we discuss the particular kinds of axioms required in order for taxon restrictions to work with ELK, with some comments about how it could work with HermiT (which implements the complete OWL language but is much less scalable). We will focus on this example ontology:
 
 ```mermaid
      graph BT;
@@ -221,8 +221,16 @@ The OWL axioms required to derive the desired entailments for taxon restrictions
        linkStyle 10 stroke:#999 ;
        linkStyle 11 stroke:#008080 ;
        linkStyle 12 stroke:red ;
+       style n5 stroke-width:4px,stroke:red ;
+       style n6 stroke-width:4px,stroke:red ;
+       style n7 stroke-width:4px,stroke:red ;
    ```
 
+There are three classes outlined in red which were created mistakenly; the asserted taxon for each of these conflicts with taxon restrictions in the rest of the ontology:
+
+- **'whisker in human'** — We expect this to be unsatisfiable since it is a subclass of 'whisker', which has a 'never in Hominidae' restriction. 'Whisker in human' is asserted to be in a subclass of 'Hominidae'.
+- **'whisker in catfish'** — We expect this to be unsatisfiable since it is a subclass of 'whisker', and thus a subclass of 'hair'. 'Hair' has an 'only in Mammalia' restriction. 'Whisker in catfish' is asserted to be in 'Siluriformes' (catfish), which is a subclass of Teleostei and thus disjoint from 'Mammalia'.
+- **'whisker muscle in human'** — We expect this to be unsatisfiable since it is a 'whisker muscle' and thus part of a 'whisker', and thus inherits the 'never in Hominidae' restriction from 'whisker' via the property chain `part_of o in_taxon -> in_taxon`. This conflicts with its asserted taxon 'Homo sapiens', a subclass of 'Hominidae'.
 
 ## How to add taxon restrictions:
 
