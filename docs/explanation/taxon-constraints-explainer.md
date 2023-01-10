@@ -290,13 +290,19 @@ Now both HermiT and ELK can find 'whisker muscle in human' to be unsatisfiable. 
   - `C SubClassOf (not (in_taxon some X))`
   - `C SubClassOf (in_taxon some (not X))`
 
+## Exploring taxon restrictions in Protégé
+
+Using the DL Query panel and a running reasoner, it is straightforward to check whether a particular taxon restriction holds for a term (such as when someone has requested one be added to your ontology). Given some term of interest, e.g., 'whisker', submit a DL Query such as `'whisker' and (in_taxon some Mammalia)`. Check the query results:
+- If `Equivalent classes` includes `owl:Nothing`, then a never_in_taxon is implied for that taxon.
+- If `Equivalent classes` includes the term of interest itself (and not `owl:Nothing`), then an in_taxon is implied for that taxon.
+- If `Superclasses` includes the term of interest (and the query isn't equivalent to `owl:Nothing`), then there is no particular taxon restriction involving that taxon.
+
+### OBO taxon constraints plugin for Protégé
+
+To quickly see exactly which taxon restrictions are in effect for a selected term, install the [OBO taxon constraints plugin for Protégé](https://github.com/geneontology/protege-taxon-constraints). Once you have the plugin installed, you can add it to your Protégé window by going to the menu `Window > Views > OBO views > Taxon constraints`, and then clicking the location to place the panel. The plugin will show the taxon constraints in effect for the selected OWL class. When a reasoner is running, any inferred taxon constraints will be shown along with directly asserted ones. The plugin executes many reasoner queries behind the scenes, so there may be a delay before the user interface is updated.
+
+<img width="1648" alt="image" src="https://user-images.githubusercontent.com/210210/211460355-262c637e-dfd7-4dc3-b301-04d80ee47ddf.png">
+
 ## How to add taxon restrictions:
 
 Please see how-to guide on [adding taxon restrictions](../howto/add-taxon-restrictions.md)
-
-## Why annotation for some taxon restrictions?
-
-Annotations for taxon restrictions are used as a shortcut. These are used to more simply represent complex description.
-Shortcuts work as a macro that is expanded out (see [this document](http://owlcollab.github.io/oboformat/doc/obo-syntax.html#7) for technical details):
-
-`Eg C never_in_taxon T -> C disjointWith in-taxon some T`
