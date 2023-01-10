@@ -290,6 +290,18 @@ Now both HermiT and ELK can find 'whisker muscle in human' to be unsatisfiable. 
   - `C SubClassOf (not (in_taxon some X))`
   - `C SubClassOf (in_taxon some (not X))`
 
+### Employing taxon restrictions in your QC pipeline
+
+If you are checking an ontology for coherency in a QC pipeline (such as by running ROBOT within the ODK), you will need to have the required constructs from the previous section present in your import chain:
+- Relation Ontology
+  — import as usual
+- NCBI Taxonomy Ontology
+  - import the main taxonomy (`http://purl.obolibrary.org/obo/ncbitaxon.owl`)
+  - import `http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim-disjoint-over-in-taxon.owl` (or implement a way to generate the needed disjointness axioms)
+    - Note: that file only covers a subset of the taxonomy, and is missing `(in_taxon some X) DisjointWith (in_taxon some (not X))`. You may need to implement a way to generate the needed disjointness axioms until this is corrected.
+- Your own taxon restrictions within your ontology:
+  - ALL-IN taxon restrictions require no expansion. If you are using the `never_in_taxon` and `present_in_taxon` shortcut annotation properties, you can expand these into the logical forms using [`robot expand`](http://robot.obolibrary.org/expand).
+
 ## Exploring taxon restrictions in Protégé
 
 Using the DL Query panel and a running reasoner, it is straightforward to check whether a particular taxon restriction holds for a term (such as when someone has requested one be added to your ontology). Given some term of interest, e.g., 'whisker', submit a DL Query such as `'whisker' and (in_taxon some Mammalia)`. Check the query results:
