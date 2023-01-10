@@ -205,6 +205,9 @@ The OWL axioms required to derive the desired entailments for taxon restrictions
        n11 --disjoint_with--- n9 ;
        n1==in_taxon==>n12 ;
        n2==never_in_taxon==>n13 ;
+       n5==in_taxon==>n14 ;
+       n7==in_taxon==>n14 ;
+       n6==in_taxon==>n10 ;
        linkStyle 0 stroke:#999 ;
        linkStyle 1 stroke:#999 ;
        linkStyle 2 stroke:#999 ;
