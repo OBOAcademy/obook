@@ -234,7 +234,7 @@ There are three classes outlined in red which were created mistakenly; the asser
 
 ### Taxon restriction modeling
 
-We can start by adding the two taxon restrictions to the ontology, like so:
+We can start by modeling the two taxon restrictions in the ontology like so:
 - 'hair' 'in_taxon' 'Mammalia': `'hair' SubClassOf (in_taxon some 'Mammalia')`
 - 'whisker' 'never_in_taxon' 'Mammalia': `'whisker' SubClassOf (not (in_taxon some 'Hominidae'))`
 
@@ -243,7 +243,22 @@ Relying on the fact that all sibling taxa are asserted to be disjoint in the tax
 - `'Homo sapiens' SubClassOf 'Hominidae'`
 - `'whisker' SubClassOf (not ('in_taxon' some 'Hominidae'))`
 
-Unfortunately, neither reasoner detects the other two problems.
+Unfortunately, neither reasoner detects the other two problems. We'll address the 'whisker in catfish' first. The reasoner infers that this class is `in_taxon` both 'Mammalia' and 'Siluriformes'. While these are disjoint classes, there is nothing in the ontology stating that something can only be in one taxon at a time. The most intuitive solution to this problem would be to assert that `in_taxon` is a functional property. However, due to limitations of OWL, can't be used in combination with property chains. Furthermore, functional properties aren't part of OWL EL. There is one solution that works for HermiT, but not ELK. We could add an axiom like the following to every "always in taxon" restriction:
+
+- `'hair' SubClassOf (in_taxon only 'Mammalia')`
+
+This would be sufficient for HermiT to detect the unsatisfiability of 'whisker in catfish'. Unfortunately, `only` restrictions are not part of OWL EL. Instead of adding the `only` restrictions, we can generate an extra disjointness axiom for every taxon disjointness in the taxonomy ontology, e.g.:
+
+- `(in_taxon some 'Tetrapoda') DisjointWith (in_taxon some 'Teleostei')`
+
+The addition of these axioms is sufficient to detect the unsatisfiability of 'whisker in catfish' in both HermiT and ELK. This is the explanation:
+
+- `'whisker in catfish' EquivalentTo ('whisker' and (in_taxon some 'Siluriformes'))`
+- `'whisker' SubClassOf 'hair'`
+- `'hair' SubClassOf (in_taxon some 'Mammalia')`
+- `'Mammalia' SubClassOf 'Tetrapoda'`
+- `'Siluriformes' SubClassOf 'Teleostei'`
+- `(in_taxon some 'Teleostei') DisjointWith (in_taxon some 'Tetrapoda')`
 
 ## How to add taxon restrictions:
 
