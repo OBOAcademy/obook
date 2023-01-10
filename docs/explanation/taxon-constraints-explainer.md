@@ -277,7 +277,7 @@ Now both HermiT and ELK can find 'whisker muscle in human' to be unsatisfiable. 
 - `part_of o in_taxon SubPropertyOf in_taxon`
 - `(in_taxon some 'Hominidae') DisjointWith (in_taxon some (not 'Hominidae'))`
 
-**In summary, the follow constructs are all needed for QC using taxon restrictions:**
+**In summary, the following constructs are all needed for QC using taxon restrictions:**
 - Relation Ontology
   - `in_taxon` property chains for relations which should propagate `in_taxon` inferences
 - NCBI Taxonomy Ontology
