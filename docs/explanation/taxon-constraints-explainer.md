@@ -232,6 +232,19 @@ There are three classes outlined in red which were created mistakenly; the asser
 - **'whisker in catfish'** — We expect this to be unsatisfiable since it is a subclass of 'whisker', and thus a subclass of 'hair'. 'Hair' has an 'only in Mammalia' restriction. 'Whisker in catfish' is asserted to be in 'Siluriformes' (catfish), which is a subclass of Teleostei and thus disjoint from 'Mammalia'.
 - **'whisker muscle in human'** — We expect this to be unsatisfiable since it is a 'whisker muscle' and thus part of a 'whisker', and thus inherits the 'never in Hominidae' restriction from 'whisker' via the property chain `part_of o in_taxon -> in_taxon`. This conflicts with its asserted taxon 'Homo sapiens', a subclass of 'Hominidae'.
 
+### Taxon restriction modeling
+
+We can start by adding the two taxon restrictions to the ontology, like so:
+- 'hair' 'in_taxon' 'Mammalia': `'hair' SubClassOf (in_taxon some 'Mammalia')`
+- 'whisker' 'never_in_taxon' 'Mammalia': `'whisker' SubClassOf (not (in_taxon some 'Hominidae'))`
+
+Relying on the fact that all sibling taxa are asserted to be disjoint in the taxonomy ontology, both HermiT and ELK can derive that 'whisker in human' is unsatisfiable. This is the explanation:
+- `'human whisker' EquivalentTo ('whisker' and (in_taxon some 'Homo sapiens'))`
+- `'Homo sapiens' SubClassOf 'Hominidae'`
+- `'whisker' SubClassOf (not ('in_taxon' some 'Hominidae'))`
+
+Unfortunately, neither reasoner detects the other two problems.
+
 ## How to add taxon restrictions:
 
 Please see how-to guide on [adding taxon restrictions](../howto/add-taxon-restrictions.md)
