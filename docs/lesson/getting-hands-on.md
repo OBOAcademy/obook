@@ -52,6 +52,11 @@ See [How to guide on Make term requests to existing ontologies](https://oboacade
 
 ### Exercise
 
+1. Sign up for a GitHub account if you do not already have one. (Some of the exercises can be done without being signed into GitHub).
+2. **Search for an ontology term in OLS**: 
+    - Search for 'exhaust exposure'. Note how many results you get. Do you have a sense of how to select the appropriate term for your annotations?
+3. **Make a new term request for a missing term**:
+    - Suppose you want a more general term than already exists. Using the instructions in [How to guide on Make term requests to existing ontologies](https://oboacademy.github.io/obook/howto/term-request), make a new term request to an appropriate GitHub repository for an ontology. (Note, since this is just for practice, please do not submit the ticket.)
 
 ## Contributors
 
