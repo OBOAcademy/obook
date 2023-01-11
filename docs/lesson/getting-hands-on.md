@@ -16,7 +16,7 @@ _Optional_: If you are unfamiliar with ontologies, this [introduction to ontolog
 ### Learning objectives
 
 - Understand open source ontology community development
-- Identify the best ontology or ontologies for annotation of biomedical data.
+- Identify the best ontology or ontologies for annotation of biomedical data
 - Find ontology terms and chose the best ontology term
 - Make new term requests
 
@@ -33,7 +33,7 @@ This how to guide on [How to be an Open Science Engineer - maximizing impact for
     - The OBO Academy has a lot of self-paced learning material, if you are inclined to learn how to contribute directly to ontologies.
     - Join Slack channels and email lists.
     - Reduce work for others as much as possible by communicating clearly.
-    - Be positive and generous with gratitude and attribution
+    - Be positive and generous with gratitude and attribution.
     - Promote truly open communication: Create public tickets which can be searched and referred to later.
 - [Principle of Upstream Fixing](../howto/open-science-engineer/#principle-of-upstream-fixing)
     - Report an bugs or errors to the source ontology.
@@ -46,13 +46,11 @@ This how to guide on [How to be an Open Science Engineer - maximizing impact for
 
 See lesson on [Using Ontologies and Ontology Terms](https://oboacademy.github.io/obook/lesson/ontology-term-use/)
 
-#### Exercise
-
 ### How to make new term requests
 
 See [How to guide on Make term requests to existing ontologies](https://oboacademy.github.io/obook/howto/term-request)
 
-#### Exercise
+### Exercise
 
 
 ## Contributors
