@@ -36,6 +36,7 @@ nav:
       - Semantic Entity Matching: lesson/entity-matching.md
       - Disease and Phenotype Ontologies: lesson/using-disease-and-phenotype-ontologies.md
       - Hacking the OBOOK: lesson/hackathon.md
+      - Getting Hands on with Ontologies: lesson/getting-hands-on.md
   - Lessons In Development:
       - Developing an Application Ontology: lesson/developing-application-ontologies.md
       - Ontology Development: lesson/ontology-development.md
