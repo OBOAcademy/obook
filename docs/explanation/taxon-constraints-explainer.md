@@ -77,6 +77,10 @@ There are, in essence, three categories of taxon-specific knowledge we use acros
    - Canonical shortcut: AnnotationAssertion: `C present_in_taxon T` # Editors use this
 - _Editor guidance_: Editors use the canonical shorcut (annotation axiom).  The taxon should be as specific as possible, ideally a species.
 
+## How to add taxon restrictions:
+
+Please see how-to guide on [adding taxon restrictions](../howto/add-taxon-restrictions.md)
+
 ## Using taxon restrictions for Quality Control
 
 As stated above, one of the major applications for taxon restrictions in OBO is for quality control (QC), by finding logical inconsistencies. Many OBO ontologies consist of a complex web of term relationships, often crossing ontology boundaries (e.g., GO biological process terms referencing Uberon anatomical structures or CHEBI chemical entities). If particular terms are only defined to apply to certain taxa, it is critical to know that a chain of logic implies that the term must exist in some other taxon which should be impossible. Propagating taxon restrictions via logical relationships greatly expands their effectiveness (the GO term above may acquire a taxon restriction via the type of anatomical structure in which it occurs).
@@ -277,6 +281,17 @@ Now both HermiT and ELK can find 'whisker muscle in human' to be unsatisfiable. 
 - `part_of o in_taxon SubPropertyOf in_taxon`
 - `(in_taxon some 'Hominidae') DisjointWith (in_taxon some (not 'Hominidae'))`
 
+#### Modeling present_in_taxon
+
+The above example didn't incorporate any present_in_taxon (SOME-IN) assertions. These work much the same as ALL-IN in_taxon assertions. However, instead of stating that all instances of a given class are in a taxon (`C SubClassOf (in_taxon some X)`), we either state that there exists an individual of that class in that taxon, or that there is some subclass of that class whose instances are in that taxon:
+
+1. `<generated individual IRI> Type (C and (in_taxon some X))` — violations involving this assertion will make the ontology logically inconsistent.
+   
+   or
+2. `<generated class IRI> SubClassOf (C and (in_taxon some X))` — violations involving this assertion will make the ontology logically incoherent, i.e., a named class is unsatisfiable (here, `<generated class IRI>`).
+
+Incoherency is easier to debug than inconsistency, so option 2 is the default expansion for `present_in_taxon`.
+
 **In summary, the following constructs are all needed for QC using taxon restrictions:**
 - Relation Ontology
   - `in_taxon` property chains for relations which should propagate `in_taxon` inferences
@@ -289,6 +304,8 @@ Now both HermiT and ELK can find 'whisker muscle in human' to be unsatisfiable. 
 - Each NOT-IN taxon restriction `C never_in_taxon X`
   - `C SubClassOf (not (in_taxon some X))`
   - `C SubClassOf (in_taxon some (not X))`
+- Each SOME-IN taxon restriction `C present_in_taxon X`)
+  - `<generated class IRI> SubClassOf (C and (in_taxon some X))`
 
 ### Employing taxon restrictions in your QC pipeline
 
@@ -301,6 +318,7 @@ If you are checking an ontology for coherency in a QC pipeline (such as by runni
     - Note: that file only covers a subset of the taxonomy, and is missing `(in_taxon some X) DisjointWith (in_taxon some (not X))`. You may need to implement a way to generate the needed disjointness axioms until this is corrected.
 - Your own taxon restrictions within your ontology:
   - ALL-IN taxon restrictions require no expansion. If you are using the `never_in_taxon` and `present_in_taxon` shortcut annotation properties, you can expand these into the logical forms using [`robot expand`](http://robot.obolibrary.org/expand).
+  - Because `present_in_taxon` expansions add named classes to your ontology, you will probably want to organize your pipeline in such a way that this expansion only happens in a QC check, and the output is not included in your published ontology.
 
 ## Exploring taxon restrictions in Protégé
 
@@ -314,7 +332,3 @@ Using the DL Query panel and a running reasoner, it is straightforward to check 
 To quickly see exactly which taxon restrictions are in effect for a selected term, install the [OBO taxon constraints plugin for Protégé](https://github.com/geneontology/protege-taxon-constraints). Once you have the plugin installed, you can add it to your Protégé window by going to the menu `Window > Views > OBO views > Taxon constraints`, and then clicking the location to place the panel. The plugin will show the taxon constraints in effect for the selected OWL class. When a reasoner is running, any inferred taxon constraints will be shown along with directly asserted ones. The plugin executes many reasoner queries behind the scenes, so there may be a delay before the user interface is updated.
 
 <img width="1648" alt="image" src="https://user-images.githubusercontent.com/210210/211460355-262c637e-dfd7-4dc3-b301-04d80ee47ddf.png">
-
-## How to add taxon restrictions:
-
-Please see how-to guide on [adding taxon restrictions](../howto/add-taxon-restrictions.md)
