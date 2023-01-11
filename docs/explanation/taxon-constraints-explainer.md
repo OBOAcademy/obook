@@ -48,7 +48,6 @@ There are, in essence, three categories of taxon-specific knowledge we use acros
   ```
   C SubClassOf (in_taxon some T)
   ```
-   - Comment: Ideally `in_taxon` would be declared to be an OWL functional property, meaning that something can only be `in_taxon` a single organism. However, this is prevented by some limitations of OWL (interactions with property chains).
 - _Alternative representations_: None
 - _Editor guidance_:  Editors use the canonical logical representation in a SubClassOf axiom to add a taxon restriction, or in a simple (non-nested) EquivalentClass axiom to define a taxon-specific subclass (which will also imply the taxon restriction). When used in a SubClassOf axiom, the taxon should be as specific as possible for the maximum utility, but may still need to be quite broad, as it applies to _every_ instance of `C`.
 
@@ -192,7 +191,7 @@ The OWL axioms required to derive the desired entailments for taxon restrictions
        n5(whisker muscle in human) ;
        n6(whisker in catfish) ;
        n7(whisker in human) ;
-       n8(life) ;
+       n8(Vertebrata) ;
        n9(Teleostei) ;
        n10(Siluriformes) ;
        n11(Tetrapoda) ;
