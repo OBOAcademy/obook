@@ -89,6 +89,7 @@ It can be helpful to think informally about how taxon restrictions propagate ove
 
 - ALL-IN restrictions (`in_taxon`) include all _superclasses_ of the taxon, and all _subclasses_ of the subject term:
   ```mermaid
+     %% Future editors, note that link styles are applied according to the link index, so be careful if adding or removing links.
      graph BT;
        n1(hair) ;
        n2(whisker) ;
@@ -107,6 +108,7 @@ It can be helpful to think informally about how taxon restrictions propagate ove
    ```
 - NOT-IN restrictions (`never_in_taxon`) include all _subclasses_ of the taxon, and all _subclasses_ of the subject term:
   ```mermaid
+     %% Future editors, note that link styles are applied according to the link index, so be careful if adding or removing links.
      graph BT;
        n1(facial whisker) ;
        n2(whisker) ;
@@ -125,6 +127,7 @@ It can be helpful to think informally about how taxon restrictions propagate ove
    ```
 - SOME-IN restrictions (`present_in_taxon`) include all _superclasses_ of the taxon, and all _superclasses_ of the subject term:
   ```mermaid
+     %% Future editors, note that link styles are applied according to the link index, so be careful if adding or removing links.
      graph BT;
        n1(hair) ;
        n2(whisker) ;
@@ -145,6 +148,7 @@ It can be helpful to think informally about how taxon restrictions propagate ove
 The Relation Ontology defines number of property chains for the `in_taxon` property. This allows taxon restrictions to propagate over other relationships. For example, the `part_of o in_taxon -> in_taxon` chain implies that if a muscle is part of a whisker, then the muscle must be in a mammal, but not in a human, since we know both of these things about whiskers:
 
 ```mermaid
+     %% Future editors, note that link styles are applied according to the link index, so be careful if adding or removing links.
      graph BT;
        n1(hair) ;
        n2(whisker) ;
@@ -179,6 +183,7 @@ The graph depictions in the preceding illustrations are informal; in practice `n
 The OWL axioms required to derive the desired entailments for taxon restrictions are somewhat more complicated than one might expect. Much of the complication is the result of workarounds to limitations dictated by the [OWL EL profile](https://www.w3.org/TR/owl2-profiles/#OWL_2_EL). Because of the size and complexity of many of the ontologies in the OBO Library, particularly those heavily using taxon restrictions, we primarily rely on the ELK reasoner, which is fast and scalable since it implements OWL EL rather than the complete OWL language. In the following we discuss the particular kinds of axioms required in order for taxon restrictions to work with ELK, with some comments about how it could work with HermiT (which implements the complete OWL language but is much less scalable). We will focus on this example ontology:
 
 ```mermaid
+     %% Future editors, note that link styles are applied according to the link index, so be careful if adding or removing links.
      graph BT;
        n1(hair) ;
        n2(whisker) ;
