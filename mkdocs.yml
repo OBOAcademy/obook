@@ -65,6 +65,7 @@ nav:
           - ODK - Managing imports: tutorial/managing-dynamic-imports-odk.md
           - ODK - Managing ontology releases: tutorial/managing-ontology-releases-odk.md
           - ODK - Migrating to ODK: tutorial/migrating-ontology-to-odk.md
+          - ODK - Using the ODK Toolbox: tutorial/odk-toolbox.md
       - Templates:
           - Getting started with DOSDP templates: tutorial/dosdp-overview.md
           - DOSDP Templates Basic Tutorial: tutorial/dosdp-template.md
