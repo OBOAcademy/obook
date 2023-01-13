@@ -14,29 +14,28 @@ GO:0007595 ! Lactation - defined as “The secretion of milk by the mammary glan
 
 1. **Finding inconsistencies.** Taxon restrictions use terms from the NCBI Taxonomy Ontology, which asserts pairwise disjointness between sibling taxa (e.g., nothing can be both an insect and a rodent). When terms have taxon restrictions, a reasoner can check for inconsistencies.
 
-    _When GO implemented taxon restrictions, [they found 5874 errors](https://pubmed.ncbi.nlm.nih.gov/20973947/)!_
+   _When GO implemented taxon restrictions, [they found 5874 errors](https://pubmed.ncbi.nlm.nih.gov/20973947/)!_
 
 2. **Defining taxon-specific subclasses.** You can define a taxon-specific subclass of a broader concept, e.g., 'human clavicle'. This allows you, for example, to assert relationships for the new term that don't apply to all instances of the broader concept:
 
-    ```
-    'human clavicle' EquivalentTo ('clavicle bone' and ('in taxon' some 'Homo sapiens'))
-    'human clavicle' SubClassOf ('connected to' some sternum)
-    ```
+   ```
+   'human clavicle' EquivalentTo ('clavicle bone' and ('in taxon' some 'Homo sapiens'))
+   'human clavicle' SubClassOf ('connected to' some sternum)
+   ```
 
 3. **Creating SLIMs.** Use a reasoner to generate ontology subsets containing only those terms that are logically allowed within a given taxon.
 
 4. **Querying.** Facet terms by taxon. E.g., in Brain Data Standards, in_taxon axioms allow faceting cell types by species. (note: there are limitations on this and may be incomplete).
-      
-## Types of Taxon Restrictions 
+
+## Types of Taxon Restrictions
 
 There are, in essence, three categories of taxon-specific knowledge we use across OBO ontologies. Given a class `C`, which could be anything from an anatomical entity to a biological process, we have the following categories:
 
-
 1. The ALL-IN restriction: "C [in_taxon](http://purl.obolibrary.org/obo/RO_0002162) T"
    - "Hair is found only in Mammals"
-3. The NOT-IN restriction: "C [never_in_taxon](http://purl.obolibrary.org/obo/RO_0002161) T"
+2. The NOT-IN restriction: "C [never_in_taxon](http://purl.obolibrary.org/obo/RO_0002161) T"
    - "Hair is never found in Birds"
-5. The SOME-IN restriction: "C [present_in_taxon](http://purl.obolibrary.org/obo/RO_0002175) T"
+3. The SOME-IN restriction: "C [present_in_taxon](http://purl.obolibrary.org/obo/RO_0002175) T"
    - "Hair is found in Skunks"
    - "Hair is found in Whales"
 
@@ -49,7 +48,7 @@ There are, in essence, three categories of taxon-specific knowledge we use acros
   C SubClassOf (in_taxon some T)
   ```
 - _Alternative representations_: None
-- _Editor guidance_:  Editors use the canonical logical representation in a SubClassOf axiom to add a taxon restriction, or in a simple (non-nested) EquivalentClass axiom to define a taxon-specific subclass (which will also imply the taxon restriction). When used in a SubClassOf axiom, the taxon should be as specific as possible for the maximum utility, but may still need to be quite broad, as it applies to _every_ instance of `C`.
+- _Editor guidance_: Editors use the canonical logical representation in a SubClassOf axiom to add a taxon restriction, or in a simple (non-nested) EquivalentClass axiom to define a taxon-specific subclass (which will also imply the taxon restriction). When used in a SubClassOf axiom, the taxon should be as specific as possible for the maximum utility, but may still need to be quite broad, as it applies to _every_ instance of `C`.
 
 #### The NOT-IN restriction: "C SubClassOf (not (in_taxon some T))"
 
@@ -59,22 +58,22 @@ There are, in essence, three categories of taxon-specific knowledge we use acros
   C SubClassOf (not (in_taxon some T))`
   ```
 - _Alternative representations_:
-   - Alternative EL logical representation: `C DisjointWith (in_taxon some T)`
-   - EL helper axiom: `C SubClassOf (in_taxon some (not T))`
-   - Canonical shortcut: AnnotationAssertion: `C never_in_taxon T` # Editors use this
+  - Alternative EL logical representation: `C DisjointWith (in_taxon some T)`
+  - EL helper axiom: `C SubClassOf (in_taxon some (not T))`
+  - Canonical shortcut: AnnotationAssertion: `C never_in_taxon T` # Editors use this
 - _Editor guidance_: Editors use the canonical shortcut (annotation axiom). For `never_in_taxon` annotations, the taxon should be as broad as possible for the maximum utility, but it must be the case that a `C` is never found in any subclass of that taxon.
 
 #### The SOME-IN restriction: "a ClassAssertion: `C` and in_taxon some `T`"
 
-- _Meaning_: "_At least one specific_ instance of `C` is in taxon `T`". 
+- _Meaning_: "_At least one specific_ instance of `C` is in taxon `T`".
 - _Canonical logical representation_:
   ```
   IND:a Type (C and (in_taxon some T))`
   ```
 - _Alternative representations_:
-   - Generated subclass for QC purposes: `C_in_T SubClassOf (C and (in_taxon some T)` (`C_in_T` will be unsatisifiable if violates taxon constraints)
-   - Canonical shortcut: AnnotationAssertion: `C present_in_taxon T` # Editors use this
-- _Editor guidance_: Editors use the canonical shorcut (annotation axiom).  The taxon should be as specific as possible, ideally a species.
+  - Generated subclass for QC purposes: `C_in_T SubClassOf (C and (in_taxon some T)` (`C_in_T` will be unsatisifiable if violates taxon constraints)
+  - Canonical shortcut: AnnotationAssertion: `C present_in_taxon T` # Editors use this
+- _Editor guidance_: Editors use the canonical shorcut (annotation axiom). The taxon should be as specific as possible, ideally a species.
 
 ## How to add taxon restrictions:
 
@@ -104,7 +103,7 @@ It can be helpful to think informally about how taxon restrictions propagate ove
        linkStyle 1 stroke:#999 ;
        style n1 stroke-width:4px ;
        style n3 stroke-width:4px ;
-   ```
+  ```
 - NOT-IN restrictions (`never_in_taxon`) include all _subclasses_ of the taxon, and all _subclasses_ of the subject term:
   ```mermaid
      %% Future editors, note that link styles are applied according to the link index, so be careful if adding or removing links.
@@ -123,7 +122,7 @@ It can be helpful to think informally about how taxon restrictions propagate ove
        linkStyle 1 stroke:#999 ;
        style n2 stroke-width:4px ;
        style n4 stroke-width:4px ;
-   ```
+  ```
 - SOME-IN restrictions (`present_in_taxon`) include all _superclasses_ of the taxon, and all _superclasses_ of the subject term:
   ```mermaid
      %% Future editors, note that link styles are applied according to the link index, so be careful if adding or removing links.
@@ -142,7 +141,7 @@ It can be helpful to think informally about how taxon restrictions propagate ove
        linkStyle 1 stroke:#999 ;
        style n2 stroke-width:4px ;
        style n3 stroke-width:4px ;
-   ```
+  ```
 
 The Relation Ontology defines number of property chains for the `in_taxon` property. This allows taxon restrictions to propagate over other relationships. For example, the `part_of o in_taxon -> in_taxon` chain implies that if a muscle is part of a whisker, then the muscle must be in a mammal, but not in a human, since we know both of these things about whiskers:
 
@@ -171,11 +170,11 @@ The Relation Ontology defines number of property chains for the `in_taxon` prope
        linkStyle 2 stroke:#999 ;
        linkStyle 3 stroke:#008080 ;
        style n6 stroke-width:4px ;
-   ```
+```
 
 Property chains are the most common way in which taxon restrictions propagate across ontology boundaries. For example, Gene Ontology uses various subproperties of [results in developmental progression of](http://purl.obolibrary.org/obo/RO_0002295) to connect biological processes to Uberon anatomical entities. Any taxonomic restrictions which hold for the anatomical entity will propagate to the biological process via this property.
 
-The graph depictions in the preceding illustrations are informal; in practice `never_in_taxon` and `present_in_taxon` annotations are translated into more complex logical constructions using the `in_taxon` object property, described in the next section. These logical constructs allow the OWL reasoner to determine that a class is unsatisfiable when there are conflicts between taxon restriction inferences. 
+The graph depictions in the preceding illustrations are informal; in practice `never_in_taxon` and `present_in_taxon` annotations are translated into more complex logical constructions using the `in_taxon` object property, described in the next section. These logical constructs allow the OWL reasoner to determine that a class is unsatisfiable when there are conflicts between taxon restriction inferences.
 
 ## Implementation and reasoning with taxon restrictions
 
@@ -232,7 +231,7 @@ The OWL axioms required to derive the desired entailments for taxon restrictions
        style n5 stroke-width:4px,stroke:red ;
        style n6 stroke-width:4px,stroke:red ;
        style n7 stroke-width:4px,stroke:red ;
-   ```
+```
 
 There are three classes outlined in red which were created mistakenly; the asserted taxon for each of these conflicts with taxon restrictions in the rest of the ontology:
 
@@ -243,10 +242,12 @@ There are three classes outlined in red which were created mistakenly; the asser
 ### Taxon restriction modeling
 
 We can start by modeling the two taxon restrictions in the ontology like so:
+
 - 'hair' 'in_taxon' 'Mammalia': `'hair' SubClassOf (in_taxon some 'Mammalia')`
 - 'whisker' 'never_in_taxon' 'Mammalia': `'whisker' SubClassOf (not (in_taxon some 'Hominidae'))`
 
 Both HermiT and ELK can derive that 'whisker in human' is unsatisfiable. This is the explanation:
+
 - `'human whisker' EquivalentTo ('whisker' and (in_taxon some 'Homo sapiens'))`
 - `'Homo sapiens' SubClassOf 'Hominidae'`
 - `'whisker' SubClassOf (not ('in_taxon' some 'Hominidae'))`
@@ -290,13 +291,15 @@ Now both HermiT and ELK can find 'whisker muscle in human' to be unsatisfiable. 
 The above example didn't incorporate any present_in_taxon (SOME-IN) assertions. These work much the same as ALL-IN in_taxon assertions. However, instead of stating that all instances of a given class are in a taxon (`C SubClassOf (in_taxon some X)`), we either state that there exists an individual of that class in that taxon, or that there is some subclass of that class whose instances are in that taxon:
 
 1. `<generated individual IRI> Type (C and (in_taxon some X))` — violations involving this assertion will make the ontology logically inconsistent.
-   
+
    or
+
 2. `<generated class IRI> SubClassOf (C and (in_taxon some X))` — violations involving this assertion will make the ontology logically incoherent, i.e., a named class is unsatisfiable (here, `<generated class IRI>`).
 
 Incoherency is easier to debug than inconsistency, so option 2 is the default expansion for `present_in_taxon`.
 
 **In summary, the following constructs are all needed for QC using taxon restrictions:**
+
 - Relation Ontology
   - `in_taxon` property chains for relations which should propagate `in_taxon` inferences
 - NCBI Taxonomy Ontology
@@ -314,6 +317,7 @@ Incoherency is easier to debug than inconsistency, so option 2 is the default ex
 ### Employing taxon restrictions in your QC pipeline
 
 If you are checking an ontology for coherency in a QC pipeline (such as by running ROBOT within the ODK), you will need to have the required constructs from the previous section present in your import chain:
+
 - Relation Ontology
   — import as usual
 - NCBI Taxonomy Ontology
@@ -327,6 +331,7 @@ If you are checking an ontology for coherency in a QC pipeline (such as by runni
 ## Exploring taxon restrictions in Protégé
 
 Using the DL Query panel and a running reasoner, it is straightforward to check whether a particular taxon restriction holds for a term (such as when someone has requested one be added to your ontology). Given some term of interest, e.g., 'whisker', submit a DL Query such as `'whisker' and (in_taxon some Mammalia)`. Check the query results:
+
 - If `Equivalent classes` includes `owl:Nothing`, then a never_in_taxon is implied for that taxon.
 - If `Equivalent classes` includes the term of interest itself (and not `owl:Nothing`), then an in_taxon is implied for that taxon.
 - If `Superclasses` includes the term of interest (and the query isn't equivalent to `owl:Nothing`), then there is no particular taxon restriction involving that taxon.

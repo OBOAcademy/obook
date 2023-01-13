@@ -4,6 +4,15 @@ theme:
 markdown_extensions:
   - toc:
       permalink: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_div_format
+
+extra_javascript:
+  - https://unpkg.com/mermaid@8.5.1/dist/mermaid.min.js
+
 nav:
   - About the course: index.md
   - Getting started with learning: getting-started.md
