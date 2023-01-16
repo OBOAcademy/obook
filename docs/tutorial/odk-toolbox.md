@@ -235,6 +235,11 @@ you could use:
 ./run.sh robot convert -i fbbt.obo -f ofn -o fbbt.ofn
 ```
 
+If you want to use the ODK toolbox with ontologies that are _not_ managed by
+the ODK (so, where a `run.sh` script is not readily available), you can set up
+an independent wrapper script, as explained in the [Setting up the
+ODK](../howto/odk-setup.md#for-maclinux) tutorial.
+
 
 ## Running a shell session within the container
 
