@@ -5,11 +5,18 @@ It is not geared at explaining individual steps in detail. For a much more detai
 
 ## Tutorial
 
+1. [Background](#background)
 1. [Seeding a new ontology repo](#seeding)
 1. [Import workflow](#import)
 1. [Integration Testing](#testing)
 1. [Release workflow](#release)
 1. [Customisable documentation](#documentation)
+
+## Background
+
+This is some useful background from the ICBO 2022 OBO Tutorial:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/I2UhVs5CDuc?start=7056" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 <a id="seeding"></a>
 
