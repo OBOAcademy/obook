@@ -25,6 +25,12 @@ We discuss how to best utilise social workflows to achieve positive impact. We w
 - [Principle of Upstream fixing](#upstream)
 - [Principle of No-ownership](#noownership)
 
+## ICBO 2022 presentation
+
+For a quick 10 minute overview:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/I2UhVs5CDuc?start=9424" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 <a id="collaboration"></a>
 
 ## Principle of Collaboration
