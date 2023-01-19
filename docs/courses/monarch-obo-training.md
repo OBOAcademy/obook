@@ -26,9 +26,14 @@ The goal of this course is to provide ongoing training for the OBO community. As
 
 | Date       | Lesson                                                                                                                  | Notes                                                                                                                                                                                                                                                                                                                | Recordings                                                           |
 | ---------- | ----------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| 2023/03/21 | Introduction to Wikidata | Tutorial by experts in the field Andra Waagmeester and Tiago Lubiana  | |
+| 2023/03/07 | OBO Academy Clinic | Bring your ontology issues and questions to discuss with Sabrina and Nico! | |
+| 2023/02/21 | OBO Academy Clinic | Bring your ontology issues and questions to discuss with Sabrina and Nico! | |
+| 2023/02/07 | Querying the Monarch KG using Neo4J | Kevin Schaper Tutorial | |
+| 2023/01/24 | OBO Academy Clinic | Bring your ontology issues and questions to discuss with Sabrina and Nico! | |
 | 2023/01/10 | [Modeling with taxon constraints](https://oboacademy.github.io/obook/explanation/taxon-constraints-explainer/) | Jim Balhoff tutorial |
 | 2022/12/27 | _No Meeting_ | Enjoy the Holidays! |
-| 2022/12/13 | [Introduction to Semantic Entity Matching](../lesson/entity-matching.md) | [slides](https://bit.ly/obo-academy-semantic-matching) |
+| 2022/12/13 | [Introduction to Semantic Entity Matching](../lesson/entity-matching.md) | [Slides](https://bit.ly/obo-academy-semantic-matching) | [Here](https://youtu.be/RN2hYxKYSUw) 
 | 2022/11/29 | [OBO Academy hackathon](../lesson/hackathon.md) | Work on open tickets together.  |
 | 2022/11/15 | [Contributing to OBO ontologies](../lesson/contributing-to-obo-ontologies.md) - Part 2 | | [Here](https://youtu.be/YBvMKMoCCrQ)
 | 2022/11/01 | [Contributing to OBO ontologies](../lesson/contributing-to-obo-ontologies.md) - Part 1 | | [Here](https://youtu.be/_z8-KGDzZ6U)
