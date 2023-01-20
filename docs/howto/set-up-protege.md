@@ -2,21 +2,21 @@
 
 (This was adopted from the [Gene Ontology editors guide](http://wiki.geneontology.org/index.php/Protege5_5_setup_for_GO_Eds) and [Mondo documentation](https://mondo.readthedocs.io/en/latest/editors-guide/a-protege-setup/)). _Updated 2023-01-20 by Nicole Vasilevsky_
 
-### Mac Instructions
+## Mac Instructions
 
 These instructions are for Mac OS
 
-## Protege version
+### Protege version
 
 As of July 2022, OBO ontology editors are using `Protege version 5.5.0`. A new [beta version](https://github.com/protegeproject/protege-distribution/releases/tag/v5.6.0-beta-2) is currently out and available for testing.
 
-## Download and install Protege
+### Download and install Protege
 
 - Get Protege from [protege.stanford.edu](https://protege.stanford.edu/)
 - Unzip and move the Protege app to your Applications folder.
 - See [Install_Protege5_Mac](https://protegewiki.stanford.edu/wiki/Install_Protege5_Mac) for more instructions and troubleshooting common problems.
 
-## Increase memory in Protege
+### Increase memory in Protege
 
 Protege needs at least 4G of RAM to cope with Mondo, ideally use 12G or 16G if your machine can handle it. Edits to the Protege configuration files will not take effect until Protege is restarted.
 
@@ -26,10 +26,9 @@ Protege needs at least 4G of RAM to cope with Mondo, ideally use 12G or 16G if y
 
 Some Mac users might find that the edits need to be applied to `/Applications/Protégé.app/Contents/Info.plist`.
 
+## PC Instructions
 
-### PC Instructions
-
-_Taken in part from [Memory Management with Protégé](https://www.michaeldebellis.com/post/memory-management-with-prot%C3%A9g%C3%A9) by Michael DeBellis_
+_Taken in part from [Memory Management with Protégé](https://www.michaeldebellis.com/post/memory-management-with-prot%C3%A9g%C3%A9) by Michael DeBellis. Updated by Nicole Vasilevsky._
 
 _The following instructions will probably not work if Protégé was installed from the **platform independent version**, which does not include the Java Runtime Environment or a Windows .exe launcher._
 
@@ -38,12 +37,11 @@ _The following instructions will probably not work if Protégé was installed fr
 - Click gray **Download for Windows** button on subsequent page
 - Register if desired, or skip registration 
 - Find `Protege-<version>-win.zip`
-  - most likely in your Downloads directory
+  - most likely in your Downloads directory (or in This PC directory)
   - current version is Protege-5.5.0-win.zip
 - Unzip the downloaded file with your favorite file compression utility
-- You will get get a `Protege-<version>` directory, possibly inside of a `Protege-<version>-win` directory, which will most likely be inside of your Downloads directory, unless you specified something else
-- You should find `Protege.exe` inside the `Protege-<version>` directory. Double clicking that file will launch the Protégé application. Adding Protégé to the Desktop or Start Menu is not addressed here.
-- It might take a minute before Protégé  is ready to use. Whether or not to update or add plugins is not addressed here
+- You should see the Protege application and a file called 'run'
+- To open Protege, double-click the 'run' file. This will open cmd.exe and it will take a bit to open the file.
 - The fonts used by Protégé may be very small, especially on some high resolution monitors. That is not addressed here.
 - Exit Protégé after confirming that it can be launched.
 - There should be a `Protege.l4j.ini` in the same directory as `Protege.exe`. Opening large ontologies like MONDO will require an increase to Protege's default maximum Java heap size, which is symbolized as `-Xmx<size>`. 4GB is usually adequate for opening MONDO, as long as 4GB of free memory is really available on your system before you launch Protégé! Allocating even more memory will improve some tasks, like reasoning. You can check your available memory by launching the Windows Task Manager, clicking on the **More details** button on the bottom of the window and then checking the Performance tab at the top of the window.
