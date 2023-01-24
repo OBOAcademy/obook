@@ -42,7 +42,7 @@ _The following instructions will probably not work if Protégé was installed fr
 - Unzip the downloaded file with your favorite file compression utility
 - You should see the Protege application and a file called 'run'
 - To open Protege, double-click the 'run' file. This will open cmd.exe and it will take a bit to open the file.
-- The fonts used by Protégé may be very small, especially on some high resolution monitors. That is not addressed here.
+- The fonts used by Protégé may be very small, especially on some high resolution monitors. To increase the font size, go to  File -> Preferences -> Renderer -> Font size.
 - Exit Protégé after confirming that it can be launched.
 - There should be a `Protege.l4j.ini` in the same directory as `Protege.exe`. Opening large ontologies like MONDO will require an increase to Protege's default maximum Java heap size, which is symbolized as `-Xmx<size>`. 4GB is usually adequate for opening MONDO, as long as 4GB of free memory is really available on your system before you launch Protégé! Allocating even more memory will improve some tasks, like reasoning. You can check your available memory by launching the Windows Task Manager, clicking on the **More details** button on the bottom of the window and then checking the Performance tab at the top of the window.
   - It's recommended to make a backup of `Protege.l4j.ini` before editing
