@@ -182,3 +182,5 @@ nav:
   - Outreach:
       - Outreach materials: reference/outreach.md
 repo_url: https://github.com/OBOAcademy/obook/
+site_url: https://oboacademy.github.io/obook/
+edit_uri: "edit/master/docs/"
