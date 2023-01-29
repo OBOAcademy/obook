@@ -117,7 +117,7 @@ Some criteria that can be applied to determine the quality of an ontology includ
 
 ## 5. Mapping local terminology to ontology terms
 
-Data can mapped to ontology terms manually, using spreadsheets, or via curation tools such as:
+Data can be mapped to ontology terms manually, using spreadsheets, or via curation tools such as:
 
 - [Zooma](https://bio.tools/zooma)
 - [BioPortal Annotator](https://bioportal.bioontology.org/annotator)
