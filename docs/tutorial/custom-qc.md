@@ -122,3 +122,8 @@ sh run.sh make test
 
 ## How to choose between Custom SPARQL or Custom ROBOT report
 
+- If your test can return the exact three variables `entity`, `property` and `value` -> ROBOT report
+- If you need to return more detailed information -> Custom SPARQL
+- If you want the results of your custom tests in the ROBOT report file -> ROBOT report
+
+Keep in mind that after changing the `profile.txt`, you won't get any upcoming updates, and you need to update manually.
