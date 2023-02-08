@@ -16,7 +16,7 @@ Giving a broad overview of the key OBO methodologies and tools to the general on
 | ---- | ---- | ---- | ---- |
 | 2023/01/25 | Introduction to COB | Chris Mungall | TBD |
 | 2023/02/01 | Introduction to ROBOT | James Overton | TBD |
-| 2023/02/08 | Managing the Ontology Life Cycle with the Ontology Development Kit  | Anita Caron, Damien Goutte-Gattat, Philip Stroemert, Nicolas Matentzoglu | <ul><li>09:00am: Introduction and use cases and workflows</li><li>09:15am: Overview of the ODK toolbox</li><li>09:30am: Setting up your own repo</li><li>10:00am: Advanced customisation, adding a custom SPARQL check</li><li>10:15am: Advanced customisation, adding a custom import module with ont.Makefile</li><ul>
+| 2023/02/08 | Managing the Ontology Life Cycle with the Ontology Development Kit  | Anita Caron, Damien Goutte-Gattat, Philip Stroemert, Nicolas Matentzoglu | <ul><li>09:00am: [Introduction and use cases and workflows]([url](https://docs.google.com/presentation/d/1dN66zlX32a_WBYxpMPqk_43RGEZv5s0A8avxVOths0I/edit#slide=id.g14b555591c2_0_57))</li><li>09:15am: Overview of the ODK toolbox</li><li>09:30am: Setting up your own repo</li><li>10:00am: Advanced customisation, adding a custom SPARQL check</li><li>10:15am: Advanced customisation, adding a custom import module with ont.Makefile</li><ul>
 | 2023/02/15 | Using Dashboards to monitor OBO ontologies | Charlie Hoyt, Nicolas Matentzoglu |
 | 2023/02/02 | Using OBO Ontologies: Ubergraph and other applications | Jim Balhoff |
 
