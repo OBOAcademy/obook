@@ -69,14 +69,14 @@ Any controlled vocabulary that is arranged in a hierarchy.
 ### Example using wines (Taxonomy of wine)
 
 - Red
-  - Merlot
-  - Zinfandel
-  - Cabernet
-  - Pinot Noir
+    - Merlot
+    - Zinfandel
+    - Cabernet
+    - Pinot Noir
 - White
-  - Chardonnay
-  - Pinot Gris
-  - Riesling
+    - Chardonnay
+    - Pinot Gris
+    - Riesling
 
 Taxonomy describes a hierarchical CV in which hierarchy equals classification. E.g., 'Merlot' is classified as a 'Red' (wine). Not all hierchical CVs are classifications. For example, anatomical atlases often have hierarchical CVs representing "parthood". The femur is a part of the leg, but it is not 'a leg'.
 
@@ -123,11 +123,11 @@ Definitions of ontologies can be controversial. Rather than attempting a compreh
 
 - Terms are richly annotated:
 
-  - Textual definitions
-  - References
-  - Synonyms
-  - Links
-  - Cross-references
+    - Textual definitions
+    - References
+    - Synonyms
+    - Links
+    - Cross-references
 
 - Relationships between terms are defined, allowing logical inference and sophisticated queries as well as graph representations.
 
@@ -226,14 +226,22 @@ There are many ways to classify things. For example, a neuron can be classified 
 Problems with maintaining multiple inheritance classifications by hand
 
 - Doesn’t scale
-  - When adding a new class, how are human editors to know
-    - all of the relevant classifications to add?
-    - how to rearrange the existing class hierarchy?
+
+    - When adding a new class, how are human editors to know
+
+        - all of the relevant classifications to add?
+
+        - how to rearrange the existing class hierarchy?
+
 - It is bad for consistency
-  - Reasons for existing classifications often opaque
-  - Hard to check for consistency with distant superclasses
+
+    - Reasons for existing classifications often opaque
+
+    - Hard to check for consistency with distant superclasses
+
 - Doesn’t allow for querying
-  - A formalized ontology can be queried for classes with arbitrary sets of properties. A manual classification can not.
+
+    - A formalized ontology can be queried for classes with arbitrary sets of properties. A manual classification can not.
 
 #### Automated Classifications
 
