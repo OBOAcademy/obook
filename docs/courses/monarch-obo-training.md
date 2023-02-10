@@ -28,8 +28,8 @@ The goal of this course is to provide ongoing training for the OBO community. As
 | ---------- | ----------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
 | 2023/04/04 | Introduction to Exomiser | Tutorial by Valentina, Yasemin and Carlo from QMUL.  | |
 | 2023/03/21 | Introduction to Wikidata | Tutorial by experts in the field Andra Waagmeester and Tiago Lubiana  | |
-| 2023/03/07 | OBO Academy Clinic | Bring your ontology issues and questions to discuss with Sabrina and Nico! | |
-| 2023/02/21 | OBO Academy Clinic | Bring your ontology issues and questions to discuss with Sabrina and Nico! | |
+| 2023/03/07 | OBO Academy Clinic | Bring your ontology issues and questions to discuss with Sabrina and Nico! Attend the [Ontology Summit Seminars](https://oboacademy.github.io/obook/courses/ontology-summit-2023/) instead! | |
+| 2023/02/21 | OBO Academy Clinic | Bring your ontology issues and questions to discuss with Sabrina and Nico! Attend the [Ontology Summit Seminars](https://oboacademy.github.io/obook/courses/ontology-summit-2023/) instead! | |
 | 2023/02/07 | Querying the Monarch KG using Neo4J | Kevin Schaper Tutorial | |
 | 2023/01/24 | OBO Academy Clinic | Bring your ontology issues and questions to discuss with Sabrina and Nico! | |
 | 2023/01/10 | [Modeling with taxon constraints](https://oboacademy.github.io/obook/explanation/taxon-constraints-explainer/) | Jim Balhoff tutorial |
