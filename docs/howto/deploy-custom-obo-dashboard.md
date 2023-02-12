@@ -4,7 +4,7 @@
 
 We developed a completely automated variant of the Custom OBO Dashboard Workflow, which does not require any local installation.
 
-<img width="1125" alt="image" src="https://user-images.githubusercontent.com/7070631/192291201-ab2ea488-ec15-4894-ae6b-85655a9e3e75.png">
+![deploy-custom-obo-dashboard workflow](../images/howtoguides/deploy-custom-dashboard-workflow.png)
 
 1. Create a repository using the [Dashboard template repository](https://github.com/OBOFoundry/dashboard-template). ([How to create a repository from a template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template))
 1. Modify the `dashboard-config.yml` file, in particular the `ontologies` section:
