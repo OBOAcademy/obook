@@ -6,13 +6,13 @@ We developed a completely automated variant of the Custom OBO Dashboard Workflow
 
 <img width="1125" alt="image" src="https://user-images.githubusercontent.com/7070631/192291201-ab2ea488-ec15-4894-ae6b-85655a9e3e75.png">
 
-1. Fork https://github.com/OBOFoundry/obo-nor.github.io or make a copy ([how to make a copy quickly](https://gist.github.com/natedana/cc71d496b611e70673cab5e8f5a78485)) (probably better to make a copy)
+1. Create a repository using the [Dashboard template repository](https://github.com/OBOFoundry/dashboard-template). ([How to create a repository from a template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template))
 1. Modify the `dashboard-config.yml` file, in particular the `ontologies` section:
-   1. Important: Add your ontology ID to the ID 'id' field
-   2. Add the path to your ontology to the `mirror_from` field.
+    1. Important: Add your ontology ID to the ID 'id' field
+    2. Add the path to your ontology to the `mirror_from` field.
 1. Optional: use the `profile` section to overwrite the custom robot report profile and add custom checks!
 
-   ```
+   ```yaml
    profile:
      baseprofile: "https://raw.githubusercontent.com/ontodev/robot/master/robot-core/src/main/resources/report_profile.txt"
      custom:
