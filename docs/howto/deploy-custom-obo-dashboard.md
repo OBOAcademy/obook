@@ -35,15 +35,15 @@ We developed a completely automated variant of the Custom OBO Dashboard Workflow
 
 `Failed: make dashboard ROBOT_JAR=/tools/robot.jar ROBOT=robot  -B with return code 2`
 
-There is a known bug at the moment requiring at least one ontology with a warning, error, info and pass, see https://github.com/OBOFoundry/OBO-Dashboard/issues/85. See issue for workaround. 
+There is a known bug at the moment requiring at least one ontology with a warning, error, info and pass, see https://github.com/OBOFoundry/OBO-Dashboard/issues/85. 
 
-1. In your `dashboard-config.yml`, add two other ontologies part of OBO Foundry, for example, Relation Ontology (RO) and Core Ontology for Biology and Biomedicine (COB).
+1. In your `dashboard-config.yml`, add a temporary ontology we created to make this work. This is already in the Dashboard template repository. 
 
 ```yaml
 ontologies:
   custom:
-    - id: ro
-    - id: cob
+    - id: tmp
+      mirror_from: "https://raw.githubusercontent.com/monarch-ebi-dev/robot_tests/master/custom-dashboard.owl"
 ```
 
 ### Error on GitHub Action - Create Pull Request section
