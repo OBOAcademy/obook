@@ -35,7 +35,7 @@ We developed a completely automated variant of the Custom OBO Dashboard Workflow
 
 `Failed: make dashboard ROBOT_JAR=/tools/robot.jar ROBOT=robot  -B with return code 2`
 
-If there's only one ontology configured to run the dashboard, this may be causing the issue. Unfortunately, the dashboard expects at least three ontologies to complete the pipeline. We're working to fix this issue.
+There is a known bug at the moment requiring at least one ontology with a warning, error, info and pass, see https://github.com/OBOFoundry/OBO-Dashboard/issues/85. See issue for workaround. 
 
 1. In your `dashboard-config.yml`, add two other ontologies part of OBO Foundry, for example, Relation Ontology (RO) and Core Ontology for Biology and Biomedicine (COB).
 
