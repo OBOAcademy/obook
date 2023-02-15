@@ -16,3 +16,14 @@ If this option is greyed out, it means that - you don't have edit rights on the 
 
 - Do the edits, and then commit changes, usually to the same branch
   ![changepr](../images/changing_pr_commit.png)
+
+## Using GitHub Desktop
+
+1. On the pull request in GitHub, click the copy button next to the branch name (see example below)
+1. In GitHub Desktop, click the branch switcher button and paste in branch name (or you can type it in).
+1. Now you are on the branch, you can open the files to be edited and make your intended changes and push via the usual workflow.
+
+### If the branch is on a fork
+
+1. If a user forked the repository and created a branch, you can find that branch by going to the branch switcher button in GitHub Desktop and looking for that pull request
+1. Select that pull request and edit the appropriate files as needed and push via the usual workflow.
