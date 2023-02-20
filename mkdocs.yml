@@ -99,6 +99,7 @@ nav:
           - Create Screenshot and paste into an issue: howto/screenshot.md
           - Set-up docker: howto/setup-docker.md
       - Protege:
+          - Install Protégé: howto/install-protege.md
           - Setup Protege 5.5: howto/set-up-protege.md
           - Installing ELK in Protege: howto/installing-elk-in-protege.md
           - Setting up your ID range: howto/idrange.md
