@@ -1,4 +1,4 @@
-# On becoming an OBO Semantic Engineerf
+# On becoming an OBO Semantic Engineer
 
 Welcome to the OBOOK and our OBO Semantic Engineering Training!
 
