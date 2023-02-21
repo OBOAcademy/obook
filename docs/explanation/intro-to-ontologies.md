@@ -261,6 +261,14 @@ If we then have an entity `nose` that is subClassOf `sensory organ` and `capable
 
 ![](../images/discussions/intro-to-ontologies/nose-classification.png)
 
+##### How to interpret an 'and' or an 'or'
+
+In the case where a class has 'and' in the label, such as MONDO:0017411 'neonatal inflammatory skin and bowel disease', this should be interpreted as someone with this disease has both neonatal inflammatory skin disease and bowel disease at the same time. This class should be classified as a child of 'bowel disease' and 'neonatal inflammatory skin disease'. 
+
+Having different statements in the SubClass Of means that the instance of the class is a combination of all the SubClass Of statements. For example, if 'neonatal inflammatory skin and bowel disease' is a subclass of 'bowel disease' and 'neonatal inflammatory skin disease', then an individual with this disease has 'bowel disease' and 'neonatal inflammatory skin disease'.
+
+If there were a class called 'neonatal inflammatory skin **or** bowel disease', then it would be interpreted that an individual with this disease has _either_ bowel disease _or_ neonatal inflammatory skin disease _or_ both. It would not be accurate to classify this class as a child of bowel disease and neonatal inflammatory skin disease.
+
 ## Acknowledgements
 
 - David Osumi-Sutherland (original creator of slides)
