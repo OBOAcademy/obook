@@ -261,11 +261,33 @@ If we then have an entity `nose` that is subClassOf `sensory organ` and `capable
 
 ![](../images/discussions/intro-to-ontologies/nose-classification.png)
 
+##### How to interpret an 'and' or an 'or'
+
+Many classes, especially in the domains of disease and phenotype, describe combinations of multiple classes - but it is very important to carefully distinguish whether this combination follows "disjunctive" logic ("or") or "conjunctive" logic ("and"). Both mean something entirely different. Usually where a class has 'and' in the label, such as 'neonatal inflammatory skin and bowel disease' (MONDO:0017411), the class follows a conjunctive logic (as expected), and should be interpreted in a way that someone that presents with this disease has both neonatal inflammatory skin disease and bowel disease _at once_. This class should be classified as a child of 'bowel disease' and 'neonatal inflammatory skin disease'.  Note, however, that naming in many ontologies is not consistent with this logic, and you need to be careful to distinguish wether the interpretation is supposed to be conjunctive or disjunctive (i.e. "and" could actually mean "or", which is especially often the case for clinical terminologies).
+
+Having asserted multiple SubClassOf axioms means that an instance of the class is a combination of all the SubClass Of statements (conjunctive interpretation, see above). For example, if 'neonatal inflammatory skin and bowel disease' is a subclass of both 'bowel disease' and 'neonatal inflammatory skin disease', then an individual with this disease has 'bowel disease' and 'neonatal inflammatory skin disease'.
+
+<img width="424" alt="image" src="https://user-images.githubusercontent.com/6722114/220412425-3585f922-f1db-4d77-8ee3-48350ff5f55c.png">
+
+If there were a class 'neonatal inflammatory skin **or** bowel disease', the intention is usually that this class follows disjunctive logic. A class following this logic would be interpreted in a way that an individual with this disease has _either_ bowel disease _or_ neonatal inflammatory skin disease _or_ both. It would not be accurate to classify this class as a child of bowel disease and neonatal inflammatory skin disease. This type of class is often called a "grouping class", and is used to aggregate related diseases in a way useful to users, like "disease" and "sequelae of disease".
+
+<img width="411" alt="image" src="https://user-images.githubusercontent.com/6722114/220412305-ab32a7bf-20bd-455a-b141-c02bf8834778.png">
+
+
 ## Acknowledgements
 
 - David Osumi-Sutherland (original creator of slides)
-- Nicole Vasilevsky (Critical Path Institute), Alex Diehl (Buffalo), Nico Matentzoglu, Matt Brush, Matt Yoder, Carlo Toriniai, Simon Jupp
-- Chris Mungall (LNBL), Melissa Haendal (University of Colorado Anschutz Medical Campus), Jim Balhoff (RENCI), James Overton - slides, ideas & discussions
+- Nicole Vasilevsky (Critical Path Institute)
+- Alex Diehl (Buffalo)
+- Nico Matentzoglu
+- Matt Brush
+- Matt Yoder 
+- Carlo Toriniai
+- Simon Jupp
+- Chris Mungall (LNBL)
+- Melissa Haendal (University of Colorado Anschutz Medical Campus)
+- Jim Balhoff (RENCI)
+- James Overton - slides, ideas & discussions
 - Terry Meehan - who edited CL more than anyone
 - Helen Parkinson (EBI)
 - Michael Ashburner
