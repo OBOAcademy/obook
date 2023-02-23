@@ -263,7 +263,7 @@ If we then have an entity `nose` that is subClassOf `sensory organ` and `capable
 
 ##### How to interpret an 'and' or an 'or'
 
-Many classes, especially in the domains of disease and phenotype, describe combinations of multiple classes - but it is very important to carefully distinguish wether this combination follows "disjunctive" logic ("or") or "conjunctive" logic ("and"). Both mean something entirely different. Usually where a class has 'and' in the label, such as 'neonatal inflammatory skin and bowel disease' (MONDO:0017411), the class follows a conjunctive logic (as expected), and should be interpreted in a way that someone that presents with this disease has both neonatal inflammatory skin disease and bowel disease _at once_. This class should be classified as a child of 'bowel disease' and 'neonatal inflammatory skin disease'.  Note, however, that naming in many ontologies is not consistent with this logic, and you need to be careful to distinguish wether the interpretation is supposed to be conjunctive or disjunctive (i.e. "and" could actually mean "or", which is especially often the case for clinical terminologies).
+Many classes, especially in the domains of disease and phenotype, describe combinations of multiple classes - but it is very important to carefully distinguish whether this combination follows "disjunctive" logic ("or") or "conjunctive" logic ("and"). Both mean something entirely different. Usually where a class has 'and' in the label, such as 'neonatal inflammatory skin and bowel disease' (MONDO:0017411), the class follows a conjunctive logic (as expected), and should be interpreted in a way that someone that presents with this disease has both neonatal inflammatory skin disease and bowel disease _at once_. This class should be classified as a child of 'bowel disease' and 'neonatal inflammatory skin disease'.  Note, however, that naming in many ontologies is not consistent with this logic, and you need to be careful to distinguish wether the interpretation is supposed to be conjunctive or disjunctive (i.e. "and" could actually mean "or", which is especially often the case for clinical terminologies).
 
 Having asserted multiple SubClassOf axioms means that an instance of the class is a combination of all the SubClass Of statements (conjunctive interpretation, see above). For example, if 'neonatal inflammatory skin and bowel disease' is a subclass of both 'bowel disease' and 'neonatal inflammatory skin disease', then an individual with this disease has 'bowel disease' and 'neonatal inflammatory skin disease'.
 
@@ -277,8 +277,17 @@ If there were a class 'neonatal inflammatory skin **or** bowel disease', the int
 ## Acknowledgements
 
 - David Osumi-Sutherland (original creator of slides)
-- Nicole Vasilevsky (Critical Path Institute), Alex Diehl (Buffalo), Nico Matentzoglu, Matt Brush, Matt Yoder, Carlo Toriniai, Simon Jupp
-- Chris Mungall (LNBL), Melissa Haendal (University of Colorado Anschutz Medical Campus), Jim Balhoff (RENCI), James Overton - slides, ideas & discussions
+- Nicole Vasilevsky (Critical Path Institute)
+- Alex Diehl (Buffalo)
+- Nico Matentzoglu
+- Matt Brush
+- Matt Yoder 
+- Carlo Toriniai
+- Simon Jupp
+- Chris Mungall (LNBL)
+- Melissa Haendal (University of Colorado Anschutz Medical Campus)
+- Jim Balhoff (RENCI)
+- James Overton - slides, ideas & discussions
 - Terry Meehan - who edited CL more than anyone
 - Helen Parkinson (EBI)
 - Michael Ashburner
