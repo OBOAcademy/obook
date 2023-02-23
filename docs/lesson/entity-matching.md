@@ -115,6 +115,12 @@ There are a lot of use cases for synonyms so we will name just a few here that a
 ### Entity-entity mappings / ontology mappings
 Entity-entity mappings relate a entity (or identifier), for example a class in an ontology, to another entity, usually from another ontology or database. The entity-entity case of mappings is what most people in the ontology domain would understand when they hear "ontology mappings". This is also what most people understand when they here "Entity Resolution" in the database world - the task of determining whether, in essence, two rows in a database correspond to the same thing (as an example of a tool doing ER see [deepmatcher](https://github.com/anhaidgroup/deepmatcher), or [py-entitymatcher](https://pypi.org/project/py-entitymatching/)). For a list standard entity matching toolkit outside the ontology sphere see [here](https://www.biggorilla.org/software_cat/entity-matching/index.html). 
 
+### Monarch OBO Training Tutorials 
+
+#### Introduction to Semantic Entity Matching
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RN2hYxKYSUw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 <a id="collection"></a>
 
 ## How are mappings collected in practice?
