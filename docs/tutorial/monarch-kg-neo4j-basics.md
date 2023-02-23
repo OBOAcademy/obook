@@ -58,6 +58,14 @@ NEO4JLABS_PLUGINS=\[\"apoc\", \"graph-data-science\"\]
 </p>
 </details>
 
+## Tutorials
+
+### Monarch OBO training Tutorials
+
+#### Querying the Monarch KG using Neo4J
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_Sx-1WaV4zY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ## Start Neo4j
 
 On the command line, from the root of the monarch-neo4j repository you can launch the neo4j with:
