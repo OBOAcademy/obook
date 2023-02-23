@@ -269,7 +269,7 @@ Having asserted multiple SubClassOf axioms means that an instance of the class i
 
 <img width="424" alt="image" src="https://user-images.githubusercontent.com/6722114/220412425-3585f922-f1db-4d77-8ee3-48350ff5f55c.png">
 
-If there were a class called 'neonatal inflammatory skin **or** bowel disease', then it would be interpreted that an individual with this disease has _either_ bowel disease _or_ neonatal inflammatory skin disease _or_ both. It would not be accurate to classify this class as a child of bowel disease and neonatal inflammatory skin disease.
+If there were a class 'neonatal inflammatory skin **or** bowel disease', the intention is usually that this class follows disjunctive logic. A class following this logic would be interpreted in a way that an individual with this disease has _either_ bowel disease _or_ neonatal inflammatory skin disease _or_ both. It would not be accurate to classify this class as a child of bowel disease and neonatal inflammatory skin disease. This type of class is often called a "grouping class", and is used to aggregate related diseases in a way useful to users, like "disease" and "sequelae of disease".
 
 <img width="411" alt="image" src="https://user-images.githubusercontent.com/6722114/220412305-ab32a7bf-20bd-455a-b141-c02bf8834778.png">
 
