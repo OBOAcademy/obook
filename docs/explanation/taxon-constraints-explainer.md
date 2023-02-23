@@ -1,5 +1,13 @@
 # Guide to Taxon Restrictions
 
+## Tutorials
+
+### Monarch OBO training Tutorial
+
+#### Modeling with Taxon Constraints
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZNbn_JYzuvA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ## What are taxon restrictions?
 
 Taxon restrictions (or, "taxon constraints") are a formalised way to record what species a term applies to—something crucial in multi-species ontologies.
