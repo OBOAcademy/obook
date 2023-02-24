@@ -32,6 +32,18 @@ Participants will need to have access to the following resources and tools prior
 - [Nicole Vasilevsky](https://orcid.org/0000-0001-5208-3432)
 - [Nico Matentzoglu](https://orcid.org/0000-0002-7356-1779)
 
+## Tutorials
+
+### Monarch OBO training Tutorials
+
+#### Pull Requests Part 1
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zg6B9KFfnac" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+#### Pull Requests Part 2
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dO5hvR_gZcI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ## How to create a really good pull request
 
 ### What is a Pull Request?
