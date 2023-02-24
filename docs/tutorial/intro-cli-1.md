@@ -24,6 +24,12 @@ You have:
 - a Mac or Linux Operating system
 - alternatively, you have the [Ontology Development Kit installed](../howto/odk-setup.md) and learned how to ["get inside a running container"](../howto/odk-setup.md).
 
+## Monarch OBO Training Tutorial
+
+Intro to Command Lind Interface Part 1
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/22VAjt7JG3o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ## Tutorial
 
 1. [Baby steps: whoami, ls and cd](#baby)
