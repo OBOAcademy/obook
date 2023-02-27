@@ -8,7 +8,7 @@ These instructions are for Mac OS
 
 ### Protege version
 
-As of July 2022, OBO ontology editors are using `Protege version 5.5.0`. A new [beta version](https://github.com/protegeproject/protege-distribution/releases/tag/v5.6.0-beta-2) is currently out and available for testing.
+As of February 2023, OBO ontology editors are using [Protege version 5.6.1](https://github.com/protegeproject/protege-distribution/releases).
 
 ### Download and install Protege
 
@@ -20,7 +20,7 @@ As of July 2022, OBO ontology editors are using `Protege version 5.5.0`. A new [
 
 Protege needs at least 4G of RAM to cope with Mondo, ideally use 12G or 16G if your machine can handle it. Edits to the Protege configuration files will not take effect until Protege is restarted.
 
-1. If running from Protege.app on a Mac, open the /Applications/Protege-5.5.0/Protégé.app/Contents/info.plist file
+1. If running from Protege.app on a Mac, open the /Applications/Protege-5.6.1/Protégé.app/Contents/info.plist file
 1. Below the line: `<string>-Xss16M</string>`
 1. Insert another line: `<string>-Xmx12G</string>`
 
