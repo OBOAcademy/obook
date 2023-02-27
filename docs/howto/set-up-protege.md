@@ -1,6 +1,6 @@
 # Setup Protege 5.5
 
-(This was adopted from the [Gene Ontology editors guide](http://wiki.geneontology.org/index.php/Protege5_5_setup_for_GO_Eds) and [Mondo documentation](https://mondo.readthedocs.io/en/latest/editors-guide/a-protege-setup/)). _Updated 2023-01-20 by Nicole Vasilevsky_
+(This was adopted from the [Gene Ontology editors guide](http://wiki.geneontology.org/index.php/Protege5_5_setup_for_GO_Eds) and [Mondo documentation](https://mondo.readthedocs.io/en/latest/editors-guide/a-protege-setup/)). _Updated 2023-02-27 by Nicole Vasilevsky_
 
 ## Mac Instructions
 
@@ -8,7 +8,7 @@ These instructions are for Mac OS
 
 ### Protege version
 
-As of July 2022, OBO ontology editors are using `Protege version 5.5.0`. A new [beta version](https://github.com/protegeproject/protege-distribution/releases/tag/v5.6.0-beta-2) is currently out and available for testing.
+As of February 2023, OBO ontology editors are using [Protege version 5.6.1](https://github.com/protegeproject/protege-distribution/releases).
 
 ### Download and install Protege
 
@@ -16,11 +16,15 @@ As of July 2022, OBO ontology editors are using `Protege version 5.5.0`. A new [
 - Unzip and move the Protege app to your Applications folder.
 - See [Install_Protege5_Mac](https://protegewiki.stanford.edu/wiki/Install_Protege5_Mac) for more instructions and troubleshooting common problems.
 
-### Increase memory in Protege
+### Increase memory in Protege 5.6.1
+Protege needs at least 4G of RAM to cope with large ontologie like Mondo, ideally use 12G or 16G if your machine can handle it. Edits to the Protege configuration files will not take effect until Protege is restarted.
 
-Protege needs at least 4G of RAM to cope with Mondo, ideally use 12G or 16G if your machine can handle it. Edits to the Protege configuration files will not take effect until Protege is restarted.
+1. If running from Protege.app on a Mac, open the /Applications/Protege-5.6.1/Protégé.app/Contents/conf file
+1. set the heap size to 12G: max_heap_size=12G
 
-1. If running from Protege.app on a Mac, open the /Applications/Protege-5.5.0/Protégé.app/Contents/info.plist file
+### Increase memory in Protege 5.5.0
+
+1. If running from Protege.app on a Mac, open the /Applications/Protege-5.6.1/Protégé.app/Contents/info.plist file
 1. Below the line: `<string>-Xss16M</string>`
 1. Insert another line: `<string>-Xmx12G</string>`
 
