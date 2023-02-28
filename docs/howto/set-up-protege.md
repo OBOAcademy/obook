@@ -19,7 +19,7 @@ As of February 2023, OBO ontology editors are using [Protege version 5.6.1](http
 ### Increase memory in Protege 5.6.1
 Protege needs at least 4G of RAM to cope with large ontologie like Mondo, ideally use 12G or 16G if your machine can handle it. Edits to the Protege configuration files will not take effect until Protege is restarted.
 
-1. If running from Protege.app on a Mac, open the /Applications/Protege-5.6.1/Protégé.app/Contents/conf file
+1. If running from Protege.app on a Mac, open the /Applications/Protege-5.6.1/Protégé.app/Contents/conf/jvm.conf file
 1. set the heap size to 12G: max_heap_size=12G
 
 ### Increase memory in Protege 5.5.0
