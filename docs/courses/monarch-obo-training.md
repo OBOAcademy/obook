@@ -29,9 +29,9 @@ The goal of this course is to provide ongoing training for the OBO community. As
 | 2023/04/18 | Overview of Protege 5.6 - the latest features | Tutorial by Damien Goutte-Gattat  | |
 | 2023/04/04 | Introduction to Exomiser | Tutorial by Valentina, Yasemin and Carlo from QMUL.  | |
 | 2023/03/21 | Introduction to Wikidata | Tutorial by experts in the field Andra Waagmeester and Tiago Lubiana  | |
-| 2023/03/07 | OBO Academy Clinic | Bring your ontology issues and questions to discuss with Sabrina and Nico! Attend the [Ontology Summit Seminars](https://oboacademy.github.io/obook/courses/ontology-summit-2023/) instead! | |
+| 2023/03/07 | OAK for the Ontology Engineering community | Chris Mungall tutorial | |
 | 2023/02/21 | OBO Academy Clinic | Bring your ontology issues and questions to discuss with Sabrina and Nico! Attend the [Ontology Summit Seminars](https://oboacademy.github.io/obook/courses/ontology-summit-2023/) instead! | |
-| 2023/02/07 | [Querying the Monarch KG using Neo4J](https://oboacademy.github.io/obook/tutorial/monarch-kg-neo4j-basics/) | Kevin Schaper Tutorial | [Here](https://youtu.be/_Sx-1WaV4zY)|
+| 2023/02/07 | [Querying the Monarch KG using Neo4J](https://oboacademy.github.io/obook/tutorial/monarch-kg-neo4j-basics/) | Kevin Schaper tutorial | [Here](https://youtu.be/_Sx-1WaV4zY)|
 | 2023/01/24 | OBO Academy Clinic | Bring your ontology issues and questions to discuss with Sabrina and Nico! | |
 | 2023/01/10 | [Modeling with taxon constraints](https://oboacademy.github.io/obook/explanation/taxon-constraints-explainer/) | Jim Balhoff tutorial | [Here](https://youtu.be/ZNbn_JYzuvA)
 | 2022/12/27 | _No Meeting_ | Enjoy the Holidays! |
