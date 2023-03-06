@@ -13,11 +13,12 @@ The goal of this course is to provide ongoing training for the OBO community. As
 - Make detailed issues on our [issue tracker](https://github.com/jamesaoverton/obook/issues) when materials are broken, hard to follow or need more details - that is really important as we rely on you to help to improve our materials continuously.
 - Request new course units from us using the issue tracker.
 
-## We (Tutors)
+## We (Tutors and Organisers)
 
-- [Nicole Vasilevsky](https://orcid.org/0000-0001-5208-3432), University of Colorado Anschutz Medical Campus
-- [Nico Matentzoglu](https://orcid.org/0000-0002-7356-1779), Semanticly Ltd
+- [Nicole Vasilevsky](https://orcid.org/0000-0001-5208-3432), Critical Path Institute
+- [Nico Matentzoglu](https://orcid.org/0000-0002-7356-1779), Semanticly, Athens, Greece
 - [Sabrina Toro](https://tislab.org/members/sabrina-toro.html), University of Colorado Anschutz Medical Campus
+- [Sarah Gehrke](https://orcid.org/0000-0003-3245-2880), University of Colorado Anschutz Medical Campus
 - Prepare the materials for each lesson and provide schedules
 - Build new training materials where needed
 - Organise the course and rooms
