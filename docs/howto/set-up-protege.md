@@ -24,7 +24,7 @@ Protege needs at least 4G of RAM to cope with large ontologie like Mondo, ideall
 
 ### Increase memory in Protege 5.5.0
 
-1. If running from Protege.app on a Mac, open the /Applications/Protege-5.6.1/Protégé.app/Contents/info.plist file
+1. If running from Protege.app on a Mac, open the /Applications/Protege-5.5.0/Protégé.app/Contents/info.plist file
 1. Below the line: `<string>-Xss16M</string>`
 1. Insert another line: `<string>-Xmx12G</string>`
 
@@ -71,7 +71,7 @@ If you have issues opening Protege, then reduce the memory, try 10G (or lower) i
 
 ## Add ELK reasoner
 
-See [instructions here](https://oboacademy.github.io/obook/howto/installing-elk-in-protege/).
+See [instructions here](https://oboacademy.github.io/obook/howto/installing-elk-in-protege/). Note: Protege 5.6.1 has the ELK reasoner installed.
 
 ## Instructions for new Protege users
 
