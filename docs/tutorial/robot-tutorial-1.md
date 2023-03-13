@@ -1,6 +1,6 @@
 # ROBOT Mini-Tutorial 1: Convert, Extract and Template
 
-This tutorial covers three new ROBOT commands:
+This tutorial covers three ROBOT commands:
 
 - Convert
 - Extract
