@@ -2,6 +2,8 @@
 
 This explainer requires understanding of ontology classifications. Please see "an ontology as a classification" section of the [introduction to ontologies documentation](../explanation/intro-to-ontologies.md) if you are unfamiliar with these concepts.
 
+You can watch [this video](https://youtu.be/jXbeDOb4dkc) about an introduction to Logical Description.
+
 ## What are logical axioms
 
 Logical axioms are relational information about classes that are primarily aimed at machines. This is opposed to annotations like textual definitions which are primarily aimed at humans. These logical axioms allow reasoners to assist in and verify classification, lessening the development burden and enabling expressive queries.
