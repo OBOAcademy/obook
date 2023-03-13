@@ -1,6 +1,6 @@
-# Setup Protege 5.5
+# Setup Protege 5.6.1
 
-(This was adopted from the [Gene Ontology editors guide](http://wiki.geneontology.org/index.php/Protege5_5_setup_for_GO_Eds) and [Mondo documentation](https://mondo.readthedocs.io/en/latest/editors-guide/a-protege-setup/)). _Updated 2023-02-27 by Nicole Vasilevsky_
+(This was adopted from the [Gene Ontology editors guide](http://wiki.geneontology.org/index.php/Protege5_5_setup_for_GO_Eds) and [Mondo documentation](https://mondo.readthedocs.io/en/latest/editors-guide/a-protege-setup/)). _Updated 2023-03-13 by Nicole Vasilevsky_
 
 ## Mac Instructions
 
