@@ -52,6 +52,7 @@ This is the current implementation of the recommended base technical specificati
 $(ONT)-base.owl:
 	robot merge -i $(SRC) -i $(OTHER_SRC) -i $(ALL_IMPORTS) \
 	reason --reasoner ELK --equivalent-classes-allowed asserted-only --exclude-tautologies structural \
+	materialize $(patsub %, --term %, $(OBJECT_PROPERTIES_OF_INTEREST)) \
 	relax \
 	reduce -r ELK \
 	remove --base-iri $(URIBASE)/OBA --axioms external --preserve-structure false --trim false \
@@ -63,6 +64,7 @@ _This is a breakdown of the sub-processes:_
 
 - `robot merge -i $(SRC) -i $(OTHER_SRC) -i $(ALL_IMPORTS)`:  Merge the ontology with all its dependencies together.
 - `reason --reasoner {REASONER} --equivalent-classes-allowed asserted-only --exclude-tautologies structural`: Add all inferred `rdfs:subClassOf` axioms.
+- `materialize $(patsub %, --term %, $(OBJECT_PROPERTIES_OF_INTEREST))`: Add all inferred subclass of R some B restrictions, where R is an "object property of interest".
 - `relax`: break down all `owl:equivalentClass` axioms into `rdfs:subClassOf` axioms where the subject is a "base entity"
 - `reduce -r {REASONER}`: remove all redundant `rdfs:subClassOf` axioms
 - `remove --base-iri {BASEIRI} --axioms external --preserve-structure false --trim false`: remove all axioms where the subject is not a "base entity"
@@ -97,6 +99,7 @@ Examples of axioms that _do not have `?x` as a subject_:
 - An assertion of the form `ObjectPropertyRange(?y, ?x)` (where `?x` is the range of an object property `?y`)
 - A GCI axiom of the form `SomeValuesFrom(?object_property, ?x) rdfs:subClassOf ?y`
 - A GCI axiom of the form `?y rdfs:subClassOf SomeValuesFrom(?object_property, ?x)`
+- A GCI axiom of the form `SomeValuesFrom(?x, ?y) rdfs:subClassOf ?z`
 
 <a id="no-modification"></a>
 
