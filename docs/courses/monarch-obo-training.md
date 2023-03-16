@@ -24,13 +24,14 @@ The goal of this course is to provide ongoing training for the OBO community. As
 - Organise the course and rooms
 
 ## Schedule
+_Note: this is tentative and subject to change_
 
 | Date       | Lesson                                                                                                                  | Notes                                                                                                                                                                                                                                                                                                                | Recordings                                                           |
 | ---------- | ----------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
 | 2023/04/18 | Overview of Protege 5.6 - the latest features | Tutorial by Damien Goutte-Gattat  | |
 | 2023/04/04 | Introduction to Exomiser | Tutorial by Valentina, Yasemin and Carlo from QMUL.  | |
 | 2023/03/21 | Introduction to Wikidata | Tutorial by experts in the field Andra Waagmeester and Tiago Lubiana  | |
-| 2023/03/07 | OAK for the Ontology Engineering community | Chris Mungall tutorial | |
+| 2023/03/07 | OAK for the Ontology Engineering community | Chris Mungall tutorial | [Here](https://youtu.be/zO6tS7gZtvw) |
 | 2023/02/21 | OBO Academy Clinic | Bring your ontology issues and questions to discuss with Sabrina and Nico! Attend the [Ontology Summit Seminars](https://oboacademy.github.io/obook/courses/ontology-summit-2023/) instead! | |
 | 2023/02/07 | [Querying the Monarch KG using Neo4J](https://oboacademy.github.io/obook/tutorial/monarch-kg-neo4j-basics/) | Kevin Schaper tutorial | [Here](https://youtu.be/_Sx-1WaV4zY)|
 | 2023/01/24 | OBO Academy Clinic | Bring your ontology issues and questions to discuss with Sabrina and Nico! | |
@@ -73,13 +74,6 @@ The goal of this course is to provide ongoing training for the OBO community. As
 | 2021/08/24 | [Contributing to OBO ontologies 2](../lesson/contributing-to-obo-ontologies.md)                                         |                                                                                                                                                                                                                                                                                                                      | [Here](https://www.youtube.com/watch?v=kAw4N2tYyco)                  |
 | 2021/08/17 | [Contributing to OBO ontologies](../lesson/contributing-to-obo-ontologies.md)                                           |                                                                                                                                                                                                                                                                                                                      |
 
-## Upcoming courses
-
-_Note: this is tentative and subject to change_
-
-| Date | Lesson  
-| --- | ---  
-| 2023/01/10 | Taxon constraints
 
 ## Notes
 
