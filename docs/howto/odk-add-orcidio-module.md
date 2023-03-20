@@ -79,6 +79,8 @@ $(IMPORTDIR)/orcidio_terms_combined.txt: $(SRCMERGED)
 	cat $@.tmp | sort | uniq >  $@
 ```
 
+  For your specific use-case, it may be necessary to tweak this SPARQL query, for example if your ORCIDs are used on axiom annotation level rather than entity annotation level.
+
 #### 5. Updating Config and ORCIDIO
 
 Now run to apply your ODK changes:
