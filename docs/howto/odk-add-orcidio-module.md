@@ -7,7 +7,7 @@ ORCID URIs (e.g., https://orcid.org/0000-0003-4423-4370) can therefore be used t
 
 #### 1. Include ORCIDIO as an import into the ODK config file
 
-In your ODK config (e.g. `src/ontology/myont-odk.yaml`), add the following to the `import_group`:
+In your ODK configuration (e.g. `src/ontology/myont-odk.yaml`), add the following to the `import_group`:
 
 ```yaml
 import_group:
@@ -28,26 +28,29 @@ The list of annotation properties, in particular `dc:source`, is important for t
 
 #### 2. Update your catalog
 
+TODO: "as usual" should be re-written to cross-link to another guide about updating the catalog (or don't say as usual to keep this more self-contained)
 As usual, add a statement into your catalog (`src/ontology/catalog-v001.xml`):
 
 ```xml
  <uri name="http://purl.obolibrary.org/obo/ro/imports/orcidio_import.owl" uri="imports/orcidio_import.owl"/>
- ```
+```
  
 #### 3. Update the edit file
- 
+
+TODO: "as usual" should be re-written to cross-link to another guide about updating the edit file (or don't say as usual to keep this more self-contained)
 As usual, add an imports declaration to your edit file (`src/ontology/myont-edit.owl`):
- 
+
 ```
 Import(<http://purl.obolibrary.org/obo/ro/imports/orcidio_import.owl>)
 ```
- 
+
+TODO: link to explanation of base merging strategy
 Note: This is not necessary when using the `base merging` strategy (you will know what this means when you do use it).
- 
+
 #### 4. Configure your _seed_:
- 
+
 Add a new SPARQL query: `src/sparql/orcids.sparql`. This is used to query for all ORCIDs used in your ontology.
- 
+
 ```sparql
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix owl: <http://www.w3.org/2002/07/owl#>
@@ -63,15 +66,15 @@ WHERE {
   FILTER(isIRI(?term))
 }
 ```
- 
+
 Next, overwrite your ORCID seed generation to using this query by adding the following to your `src/ontology/myont.Makefile` (not `Makefile`!):
- 
+
 ```make
 $(IMPORTDIR)/orcidio_terms_combined.txt: $(SRCMERGED)
 	$(ROBOT) query -f csv -i $< --query ../sparql/orcids.sparql $@.tmp &&\
 	cat $@.tmp | sort | uniq >  $@
- ```
-  
+```
+
 #### 5. Updating Config and ORCIDIO
 
 Now run to apply your ODK changes:
