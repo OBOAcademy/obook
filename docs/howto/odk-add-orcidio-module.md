@@ -1,10 +1,9 @@
 ## Adding an ORCIDIO import to your ontology with ODK
 
-[ORCIDIO](https://github.com/cthoyt/orcidio) is an ontology that integrates ORCIDs with basic metadata such as the indentified individuals names.
+The [Open Researcher and Contributor Identifier (ORCID)](https://orcid.org/) is a global, unambiguous way to identify a researcher.
+ORCID URIs (e.g., https://orcid.org/0000-0003-4423-4370) can therefore be used to unambigously and actionably attribute various aspects of ontology terms in combination with DC Terms or IAO predicates. However, URIs themselves are opaque and it is difficult to disambiguate to which person an ORCID corresponds when browsing an ontology (e.g., in Protégé).
 
-When attributing a term to an individual using their ORCID, one of the problems is that it is not immediately obvious which ORCID belongs to which person.
-ORCIDIO solves this issue by labelling each ORCID using the identified individuals names. Tools like Protege will then display that name to 
-the user rather than the ORCID itself, which makes it immediately more readable. Here we discuss how to add ORCIDO to your ODK setup.
+[ORCIDIO](https://github.com/cthoyt/orcidio) is an ontology that declares ORCID URIs as named individuals and associates basic metadata (e.g., name, description) to each such that tools like Protégé can display a human-readable label rather than the URI itself. Here, we discuss how to add ORCIDO to your ODK setup.
 
 #### 1. Include ORCIDIO as an import into the ODK config file
 
@@ -54,13 +53,18 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix owl: <http://www.w3.org/2002/07/owl#>
 SELECT DISTINCT ?orcid
 WHERE {
-  VALUES ?property { <http://purl.org/dc/elements/1.1/creator>  <http://purl.org/dc/elements/1.1/contributor> <http://purl.org/dc/terms/creator> <http://purl.org/dc/terms/contributor> }
+  VALUES ?property {
+    <http://purl.org/dc/elements/1.1/creator>
+    <http://purl.org/dc/elements/1.1/contributor>
+    <http://purl.org/dc/terms/creator>
+    <http://purl.org/dc/terms/contributor> 
+  }
   ?term ?property ?orcid . 
   FILTER(isIRI(?term))
 }
 ```
  
-Now overwrite your ORCID seed generation to using this query by adding the following to your `src/ontology/myont.Makefile` (not `Makefile`!):
+Next, overwrite your ORCID seed generation to using this query by adding the following to your `src/ontology/myont.Makefile` (not `Makefile`!):
  
 ```make
 $(IMPORTDIR)/orcidio_terms_combined.txt: $(SRCMERGED)
@@ -84,4 +88,4 @@ Lastly, update your ORCIDIO import to apply the changes:
 sh run.sh make refresh-orcidio
 ```
 
-Commit all the changes to a branch, wait for QC to finish and enjoy your new ORCIDIO import module.
+Commit all the changes to a branch, wait for continuous integration to finish, and enjoy your new ORCIDIO import module.
