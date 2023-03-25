@@ -166,6 +166,7 @@ nav:
       - Common Errors in GitHub actions: reference/gh-actions-errors.md
       - Other useful resources: reference/other-resources.md
       - Medical Ontology landscape: reference/medical-ontology-landscape.md
+      - A reference guide to Wikidata: reference/wikidata.md
       - OBOOK Maturity Indicator: reference/obook-maturity-indicator.md
   - Explanations:
       - Introduction to Ontologies: explanation/intro-to-ontologies.md
