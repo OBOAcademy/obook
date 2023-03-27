@@ -25,14 +25,18 @@ For this tutorial, you only need to download the Exomiser phenotype data and the
 ## Overview
 
 - [Installation](#installation)
-- [Running Exomiser](#running exomiser)
-- [Results](#running exomiser)
+  - [Docker install](#docker-install)
+  - [Windows install](#windows-install)
+  - [Linux install](#linux-install)
+
+- [Running Exomiser](#running-exomiser)
+- [Results](#results)
 
 ## Installation
 
-### Prebuilt binaries
+### Docker install
 
-> **_NOTE:_**  This is the recommended way of installing for normal users when running on a local machine.
+### Prebuilt binaries
 
 Pre-built binaries are available from the [Exomiser](https://github.com/exomiser/Exomiser/releases/download/13.2.0/exomiser-cli-13.2.0-distribution.zip) repository on GitHub or [Monarch](https://data.monarchinitiative.org/exomiser/latest)
 
@@ -53,7 +57,6 @@ wget https://data.monarchinitiative.org/exomiser/latest/exomiser-cli-13.1.0-dist
 unzip exomiser-cli-13.1.0-distribution.zip
 ```
 
-### Docker install
  
 ### Configuring the application.properties
 
