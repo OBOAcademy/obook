@@ -9,11 +9,12 @@ Check out the GitHub repo here: https://github.com/exomiser/Exomiser
 ## Prerequisites
 You have: 
 
-- Docker installed and running on your machine.
+- Docker installed and running on your machine. <- DOCKER INSTALL FOR DOCKER DESKTOP
 
 You know:
 
 - how to use a command line interface.
+
 ## Preparation
 
 In preparation for this tutorial we ***highly*** recommend downloading the Exomiser data files prior to the tutorial in order to follow along. The data required to run Exomiser is ~80GB and will take a while to download and unpack.
@@ -24,35 +25,39 @@ For this tutorial, you only need to download the Exomiser phenotype data and the
 
 ## Overview
 
-- [Installation](#installation)
-  - [Docker install](#docker-install)
-  - [Windows install](#windows-install)
-  - [Linux install](#linux-install)
+- [Exomiser Installation](#exomiser-installation)
+  - [via Docker](#via-docker)
+  - [via Windows](#via-windows)
+  - [via Linux](#via-linux)
 
 - [Running Exomiser](#running-exomiser)
 - [Results](#results)
 
-## Installation
+## Exomiser Installation
 
-### Docker install
+### via Docker
+
+```shell
+docker pull
+```
 
 ### Prebuilt binaries
 
 Pre-built binaries are available from the [Exomiser](https://github.com/exomiser/Exomiser/releases/download/13.2.0/exomiser-cli-13.2.0-distribution.zip) repository on GitHub or [Monarch](https://data.monarchinitiative.org/exomiser/latest)
 
-### Windows install
+### via Windows
 
 1. Install [7-Zip](http://www.7-zip.org/) for unzipping the archive files. The built-in archiving software has issues extracting the zip files.
-2. Download the distribution file from either [Exomiser](https://github.com/exomiser/Exomiser/releases/download/13.1.0/exomiser-cli-13.1.0-distribution.zip) or [Monarch](https://data.monarchinitiative.org/exomiser/latest).
+2. Download the distribution file from either [Exomiser](https://github.com/exomiser/Exomiser/releases/download/13.2.0/exomiser-cli-13.2.0-distribution.zip) or [Monarch](https://data.monarchinitiative.org/exomiser/latest).
 3. Extract the distribution files by right-clicking exomiser-cli-13.1.0-distribution.zip and selecting 7-Zip > Extract Here
 
-### Linux install
+### via Linux
 
 The following shell script should work:
 
 ```sh
 # download the distribution (won't take long)
-wget https://data.monarchinitiative.org/exomiser/latest/exomiser-cli-13.1.0-distribution.zip
+wget https://data.monarchinitiative.org/exomiser/latest/exomiser-cli-13.2.0-distribution.zip
 # unzip the distribution- this will create a directory called 'exomiser-cli-13.1.0' in the current working directory
 unzip exomiser-cli-13.1.0-distribution.zip
 ```
