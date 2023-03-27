@@ -9,22 +9,34 @@ Check out the GitHub repo here: https://github.com/exomiser/Exomiser
 ## Prerequisites
 You have: 
 
-- Docker installed and running on your machine. <- DOCKER INSTALL FOR DOCKER DESKTOP
+- Docker installed and running on your machine.
 
 You know:
 
 - how to use a command line interface.
 
-## Preparation
 
 In preparation for this tutorial we ***highly*** recommend downloading the Exomiser data files prior to the tutorial in order to follow along. The data required to run Exomiser is ~80GB and will take a while to download and unpack.
 
 For this tutorial, you only need to download the Exomiser phenotype data and the data for the hg19 assembly. If you have your own samples to run with Exomiser and the VCF files are built on the hg38 build then you will need to download these data files as well.
 
+To download from the terminal:
+
+```shell
+$ wget https://data.monarchinitiative.org/exomiser/latest/2302_phenotype.zip # for the phenotype database
+$ wget https://data.monarchinitiative.org/exomiser/latest/2302_hg19.zip # for the hg19 variant database
+```
+
+Other-wise visit the links:
+
+[2302 phenotype database](https://data.monarchinitiative.org/exomiser/latest/2302_phenotype.zip)
+
+[2302 hg19 variant database](https://data.monarchinitiative.org/exomiser/latest/2302_hg19.zip)
 
 
-## Overview
+## Start of the Tutorial
 
+- [Exomiser Overview](#exomiser-overview)
 - [Exomiser Installation](#exomiser-installation)
   - [via Docker](#via-docker)
   - [via Windows](#via-windows)
@@ -33,23 +45,24 @@ For this tutorial, you only need to download the Exomiser phenotype data and the
 - [Running Exomiser](#running-exomiser)
 - [Results](#results)
 
+## Exomiser Overview
+
+For a quick overview of Exomiser take a look at the slides [here](#link to google drive address).
+
 ## Exomiser Installation
 
 ### via Docker
 
 ```shell
-docker pull
+docker pull exomiser/exomiser-cli:13.2.0 # NEEDS TO CHANGE
 ```
-
-### Prebuilt binaries
-
-Pre-built binaries are available from the [Exomiser](https://github.com/exomiser/Exomiser/releases/download/13.2.0/exomiser-cli-13.2.0-distribution.zip) repository on GitHub or [Monarch](https://data.monarchinitiative.org/exomiser/latest)
 
 ### via Windows
 
 1. Install [7-Zip](http://www.7-zip.org/) for unzipping the archive files. The built-in archiving software has issues extracting the zip files.
-2. Download the distribution file from either [Exomiser](https://github.com/exomiser/Exomiser/releases/download/13.2.0/exomiser-cli-13.2.0-distribution.zip) or [Monarch](https://data.monarchinitiative.org/exomiser/latest).
-3. Extract the distribution files by right-clicking exomiser-cli-13.1.0-distribution.zip and selecting 7-Zip > Extract Here
+2. Download the data and distribution files from https://data.monarchinitiative.org/exomiser/latest
+3. Extract the distribution files by right-clicking exomiser-cli-13.2.0-distribution.zip and selecting 7-Zip > Extract Here
+4. Extract the data files (e.g. 2302_phenotype.zip, 2302_hg19.zip) by right-clicking the archive and selecting 7-Zip > Extract files… into the exomiser data directory. By default exomiser expects this to be ‘exomiser-cli-13.2.0/data’, but this can be changed in the application.properties
 
 ### via Linux
 
@@ -58,10 +71,17 @@ The following shell script should work:
 ```sh
 # download the distribution (won't take long)
 wget https://data.monarchinitiative.org/exomiser/latest/exomiser-cli-13.2.0-distribution.zip
-# unzip the distribution- this will create a directory called 'exomiser-cli-13.1.0' in the current working directory
-unzip exomiser-cli-13.1.0-distribution.zip
+# download the data (this is ~80GB and will take a while). If you only require a single assembly, only download the relevant file.
+wget https://data.monarchinitiative.org/exomiser/latest/2302_hg19.zip
+wget https://data.monarchinitiative.org/exomiser/latest/2302_phenotype.zip
+# unzip the distribution and data files - this will create a directory called 'exomiser-cli-13.2.0' in the current working directory
+unzip exomiser-cli-13.2.0-distribution.zip
+unzip '2302_*.zip' -d exomiser-cli-13.2.0/data
+# Check the application.properties are pointing to the correct versions
+# exomiser.hg19.data-version=2302
+# exomiser.hg38.data-version=2302
+# exomiser.phenotype.data-version=2302
 ```
-
  
 ### Configuring the application.properties
 
