@@ -7,9 +7,13 @@ The complete Exomiser documentation can be found here: https://exomiser.readthed
 
 Check out the GitHub repo here: https://github.com/exomiser/Exomiser
 ## Prerequisites
-You have: 
+You have:
 
-- Docker installed and running on your machine.
+- Docker installed and running on your machine. Therefore we prepared a simple guide to setup [Docker for Windows](#docker-windows)
+  or [Docker for Mac](#docker-mac)
+
+- [Exomiser-Tutorial files](https://drive.google.com/drive/u/2/folders/1DynxpvOTecvAXv3uYtJ0d2-A4NjQyyfN) downloaded from our GoogleDrive.
+  The `Exomiser-Tutorial`  contains `exomiser-config` (anlysis files) and an empty `exomiser-results` directory.
 
 You know:
 
@@ -23,16 +27,31 @@ For this tutorial, you only need to download the Exomiser phenotype data and the
 To download from the terminal:
 
 ```shell
-$ wget https://data.monarchinitiative.org/exomiser/latest/2302_phenotype.zip # for the phenotype database
-$ wget https://data.monarchinitiative.org/exomiser/latest/2302_hg19.zip # for the hg19 variant database
+# create an empty directory for exomiser-data
+mkdir exomiser-data
+cd exomiser-data
+wget https://data.monarchinitiative.org/exomiser/latest/2302_phenotype.zip # for the phenotype database
+wget https://data.monarchinitiative.org/exomiser/latest/2302_hg19.zip # for the hg19 variant database
+```
+```shell
+# unzip the distribution and data files - this will create a directory called 'exomiser-cli-13.1.0' in the current working directory
+unzip "2302_*.zip" 
 ```
 
-Other-wise visit the links:
+Otherwise visit the links and put the data in your own `exomiser-data` directory:
 
 [2302 phenotype database](https://data.monarchinitiative.org/exomiser/latest/2302_phenotype.zip)
 
 [2302 hg19 variant database](https://data.monarchinitiative.org/exomiser/latest/2302_hg19.zip)
 
+Your `Exomiser-Tutorial` directory should now be structured like this:
+
+```
+Exomiser-Tutorial
+├── exomiser-config
+├── exomiser-data
+├── exomiser-results
+```
 
 ## Start of the Tutorial
 
@@ -456,3 +475,97 @@ The `INFO` field with the ID=Exomiser describes the internal format of this subf
 6   132203615       .       G       A       922.98  PASS    AC=1;AF=0.50;AN=2;BaseQRankSum=-0.671;DP=94;Dels=0.00;Exomiser={2|6-132203615-G-A_AD|ENPP1|5167|AD|0.0049|0.8690|0.5773|0.9996|0.9996|1|0|splice_donor_variant|ENPP1:ENST00000360971.2:c.2230+1G>A:p.?|UNCERTAIN_SIGNIFICANCE|PVS1_Strong|OMIM:615522|"Cole disease"};FS=0.805;HRun=0;HaplotypeScore=3.5646;MQ=56.63;MQ0=0;MQRankSum=1.807;QD=9.82;ReadPosRankSum=-0.900;set=variant2   GT:AD:DP:GQ:PL  0/1:53,41:94:99:953,0,1075
 ```
 
+## <a id="docker-mac"></a>Docker for Mac
+
+Follow this [link](https://docs.docker.com/desktop/install/mac-install/) and download the Docker.dmg for your operating system.
+
+<img src="./../tutorial/resources/exomiser_tutorial_images/1_mac.jpg" alt="Step 1" width="50%" height="50%">
+
+The Docker.dmg will be found in your `/Downloads` directory.
+
+<img src="./../tutorial/resources/exomiser_tutorial_images/2_mac.jpg" alt="Step 2" width="50%" height="50%">
+
+After double clicking on the Docker.dmg a new window will come up:
+
+<img src="./../tutorial/resources/exomiser_tutorial_images/3_mac.jpg" alt="Step 3" width="50%" height="50%">
+
+Drag and drop the Docker app into you `/Applications` folder.
+
+<img src="./../tutorial/resources/exomiser_tutorial_images/4_mac.jpg" alt="Step 4" width="50%" height="50%">
+
+Double click on the Docker symbol.
+
+<img src="./../tutorial/resources/exomiser_tutorial_images/5_mac.jpg" alt="Step 5n" width="50%" height="50%">
+
+Docker Desktop will start in the background, after you allow it to be opened.
+
+<img src="./../tutorial/resources/exomiser_tutorial_images/6_mac.jpg" alt="Step 6" width="50%" height="50%">
+
+Additionaly, this window will come up to agree the Docker subscription service agreement.
+
+<img src="./../tutorial/resources/exomiser_tutorial_images/7_mac.jpg" alt="Step 7" width="50%" height="50%">
+
+After running the installation **restart** your terminal and check the Docker installation again from insisde your terminal with:
+```shell
+docker --version
+```
+If the output gives you a version and no error you are ready to go. If you have not already restarted your terminal do this now,
+and the error should be fixed.
+
+In case you get an error message like this, please ensure you have downloaded the correct `docker.dmg`.
+
+<img src="./../tutorial/resources/exomiser_tutorial_images/8_mac.jpg" alt="Step 8" width="50%" height="50%">
+
+Now, whenever you want to pull images make sure that Docker is running in the background. Otherwise you may get an
+error stating its not able to connect to the Docker deamon.
+
+## <a id="docker-windows"></a>Docker for Windows
+
+Follow this [link](https://docs.docker.com/desktop/install/windows-install/) and download the Docker installer for Windows.
+
+Inside your `/Downloads` directory, search for the Installer and double-click.
+
+<img src="./../tutorial/resources/exomiser_tutorial_images/1_windows.jpg" alt="Step 1" width="50%" height="50%">
+
+To run on Windows Docker requires a virtual machine. Docker recommends using WSL2.
+[More information on this can be found here](https://docs.docker.com/desktop/install/windows-install/).
+
+<img src="./../tutorial/resources/exomiser_tutorial_images/2_windows.jpg" alt="Step 2" width="50%" height="50%">
+
+Click “Ok” and wait a bit.
+
+<img src="./../tutorial/resources/exomiser_tutorial_images/3_windows.jpg" alt="Step 3n" width="50%" height="50%">
+
+Now you will have to restart your computer.
+
+<img src="./../tutorial/resources/exomiser_tutorial_images/4_windows.jpg" alt="Step 4" width="50%" height="50%">
+
+After restarting, Docker should start automatically and the Service Agreement will come up, which you will have to agree to use Docker:
+
+<img src="./../tutorial/resources/exomiser_tutorial_images/5_windows.jpg" alt="Step 5" width="50%" height="50%">
+
+If the Docker desktop app is showing this warning upon start, do not click “Restart”, yet. Instead, follow the link and install the kernel update.
+
+<img src="./../tutorial/resources/exomiser_tutorial_images/6_windows.jpg" alt="Step 6" width="50%" height="50%">
+
+The link should point you to an address with a seperate download link.
+
+<img src="./../tutorial/resources/exomiser_tutorial_images/7_windows.jpg" alt="Step 7" width="50%" height="50%">
+
+Start and finish the installation for WSL.
+
+<img src="./../tutorial/resources/exomiser_tutorial_images/8_windows.jpg" alt="Step 8" width="50%" height="50%">
+
+If you still have the Docker Desktop dialog window open in the background, click on Restart. Otherwise, just restart your computer as you normally do.
+
+<img src="./../tutorial/resources/exomiser_tutorial_images/9_windows.jpg" alt="Step 9" width="50%" height="50%">
+
+If Docker Desktop did not start on its own, simply open it from the shortcut on your Desktop. You can do the initial orientation by clicking "Start".
+
+<img src="./../tutorial/resources/exomiser_tutorial_images/10_windows.jpg" alt="Step 10" width="50%" height="50%">
+
+After this, your Docker Desktop screen should look like this.
+
+<img src="./../tutorial/resources/exomiser_tutorial_images/11_windows.jpg" alt="Step 11" width="50%" height="50%">
+
+Now, whenever you want to pull images make sure that Docker is running in the background.
