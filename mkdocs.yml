@@ -91,6 +91,8 @@ nav:
       - General Ontology Modelling:
           - Project Ontology Development: tutorial/project-ontology-development.md
           - Family History Knowledge Base (FHKB) tutorial: tutorial/fhkb.md
+      - Exomiser:
+          - Introduction to Exomiser: tutorial/exomiser-tutorial.md
   - How-to guides:
       - General:
           - Maximising impact as an open science engineer: howto/open-science-engineer.md
