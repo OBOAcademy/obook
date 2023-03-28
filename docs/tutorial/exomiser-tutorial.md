@@ -3,9 +3,9 @@ The Exomiser is a Java program that finds potential disease-causing variants fro
 
 In this tutorial we will learn how to install and run Exomiser with Docker, and how to examine the results in various output formats detailing the predicted causative genes and variants.
 
-The complete Exomiser documentation can be found here: https://exomiser.readthedocs.io/en/latest/
+The complete Exomiser documentation can be found [here](https://exomiser.readthedocs.io/en/latest/)
 
-Check out the GitHub repo here: https://github.com/exomiser/Exomiser
+Check out the GitHub repo [here](https://github.com/exomiser/Exomiser)
 ## Prerequisites
 You have:
 
@@ -479,31 +479,31 @@ The `INFO` field with the ID=Exomiser describes the internal format of this subf
 
 Follow this [link](https://docs.docker.com/desktop/install/mac-install/) and download the Docker.dmg for your operating system.
 
-<img src="./../tutorial/resources/exomiser_tutorial_images/1_mac.jpg" alt="Step 1" width="50%" height="50%">
+![Mac Image One ](./resources/exomiser_tutorial_images/1_mac.jpg)
 
 The Docker.dmg will be found in your `/Downloads` directory.
 
-<img src="./../tutorial/resources/exomiser_tutorial_images/2_mac.jpg" alt="Step 2" width="50%" height="50%">
+![Mac Image Two ](./resources/exomiser_tutorial_images/2_mac.jpg)
 
-After double clicking on the Docker.dmg a new window will come up:
+After double-clicking on the Docker.dmg a new window will come up:
 
-<img src="./../tutorial/resources/exomiser_tutorial_images/3_mac.jpg" alt="Step 3" width="50%" height="50%">
+![Mac Image Three ](./resources/exomiser_tutorial_images/3_mac.jpg)
 
 Drag and drop the Docker app into you `/Applications` folder.
 
-<img src="./../tutorial/resources/exomiser_tutorial_images/4_mac.jpg" alt="Step 4" width="50%" height="50%">
+![Mac Image Four ](./resources/exomiser_tutorial_images/4_mac.jpg)
 
 Double click on the Docker symbol.
 
-<img src="./../tutorial/resources/exomiser_tutorial_images/5_mac.jpg" alt="Step 5n" width="50%" height="50%">
+![Mac Image Five ](./resources/exomiser_tutorial_images/5_mac.jpg)
 
 Docker Desktop will start in the background, after you allow it to be opened.
 
-<img src="./../tutorial/resources/exomiser_tutorial_images/6_mac.jpg" alt="Step 6" width="50%" height="50%">
+![Mac Image Six ](./resources/exomiser_tutorial_images/6_mac.jpg)
 
 Additionally, this window will come up to agree the Docker subscription service agreement.
 
-<img src="./../tutorial/resources/exomiser_tutorial_images/7_mac.jpg" alt="Step 7" width="50%" height="50%">
+![Mac Image Seven ](./resources/exomiser_tutorial_images/7_mac.jpg)
 
 After running the installation **restart** your terminal and check the Docker installation again from inside your terminal with:
 ```shell
@@ -514,7 +514,7 @@ and the error should be fixed.
 
 In case you get an error message like this, please ensure you have downloaded the correct `docker.dmg`.
 
-<img src="./../tutorial/resources/exomiser_tutorial_images/8_mac.jpg" alt="Step 8" width="50%" height="50%">
+![Mac Image Eight ](./resources/exomiser_tutorial_images/8_mac.jpg)
 
 Now, whenever you want to pull images make sure that Docker is running in the background. Otherwise you may get an
 error stating its not able to connect to the Docker deamon.
@@ -525,47 +525,47 @@ Follow this [link](https://docs.docker.com/desktop/install/windows-install/) and
 
 Inside your `/Downloads` directory, search for the Installer and double-click.
 
-<img src="./../tutorial/resources/exomiser_tutorial_images/1_windows.jpg" alt="Step 1" width="50%" height="50%">
+![Windows Image One ](./resources/exomiser_tutorial_images/1_windows.jpg)
 
 To run on Windows Docker requires a virtual machine. Docker recommends using WSL2.
 [More information on this can be found here](https://docs.docker.com/desktop/install/windows-install/).
 
-<img src="./../tutorial/resources/exomiser_tutorial_images/2_windows.jpg" alt="Step 2" width="50%" height="50%">
+![Windows Image Two ](./resources/exomiser_tutorial_images/2_windows.jpg)
 
 Click “Ok” and wait a bit.
 
-<img src="./../tutorial/resources/exomiser_tutorial_images/3_windows.jpg" alt="Step 3n" width="50%" height="50%">
+![Windows Image Three ](./resources/exomiser_tutorial_images/3_windows.jpg)
 
 Now you will have to restart your computer.
 
-<img src="./../tutorial/resources/exomiser_tutorial_images/4_windows.jpg" alt="Step 4" width="50%" height="50%">
+![Windows Image Four ](./resources/exomiser_tutorial_images/4_windows.jpg)
 
 After restarting, Docker should start automatically and the Service Agreement will come up, which you will have to agree to use Docker:
 
-<img src="./../tutorial/resources/exomiser_tutorial_images/5_windows.jpg" alt="Step 5" width="50%" height="50%">
+![Windows Image Five ](./resources/exomiser_tutorial_images/5_windows.jpg)
 
 If the Docker desktop app is showing this warning upon start, do not click “Restart”, yet. Instead, follow the link and install the kernel update.
 
-<img src="./../tutorial/resources/exomiser_tutorial_images/6_windows.jpg" alt="Step 6" width="50%" height="50%">
+![Windows Image Six ](./resources/exomiser_tutorial_images/6_windows.jpg)
 
 The link should point you to an address with a separate download link.
 
-<img src="./../tutorial/resources/exomiser_tutorial_images/7_windows.jpg" alt="Step 7" width="50%" height="50%">
+![Windows Image Seven ](./resources/exomiser_tutorial_images/7_windows.jpg)
 
 Start and finish the installation for WSL.
 
-<img src="./../tutorial/resources/exomiser_tutorial_images/8_windows.jpg" alt="Step 8" width="50%" height="50%">
+![Windows Image Eight ](./resources/exomiser_tutorial_images/8_windows.jpg)
 
 If you still have the Docker Desktop dialog window open in the background, click on Restart. Otherwise, just restart your computer as you normally do.
 
-<img src="./../tutorial/resources/exomiser_tutorial_images/9_windows.jpg" alt="Step 9" width="50%" height="50%">
+![Windows Image Nine ](./resources/exomiser_tutorial_images/9_windows.jpg)
 
 If Docker Desktop did not start on its own, simply open it from the shortcut on your Desktop. You can do the initial orientation by clicking "Start".
 
-<img src="./../tutorial/resources/exomiser_tutorial_images/10_windows.jpg" alt="Step 10" width="50%" height="50%">
+![Windows Image Ten ](./resources/exomiser_tutorial_images/10_windows.jpg)
 
 After this, your Docker Desktop screen should look like this.
 
-<img src="./../tutorial/resources/exomiser_tutorial_images/11_windows.jpg" alt="Step 11" width="50%" height="50%">
+![Windows Image Eleven ](./resources/exomiser_tutorial_images/11_windows.jpg)
 
 Now, whenever you want to pull images make sure that Docker is running in the background.
