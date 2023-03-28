@@ -489,11 +489,11 @@ After double-clicking on the Docker.dmg a new window will come up:
 
 ![Mac Image Three ](./resources/exomiser_tutorial_images/3_mac.jpg)
 
-Drag and drop the Docker app into you `/Applications` folder.
+Drag and drop the Docker app into your `/Applications` folder.
 
 ![Mac Image Four ](./resources/exomiser_tutorial_images/4_mac.jpg)
 
-Double click on the Docker symbol.
+Double-click on the Docker symbol.
 
 ![Mac Image Five ](./resources/exomiser_tutorial_images/5_mac.jpg)
 
@@ -564,7 +564,7 @@ If Docker Desktop did not start on its own, simply open it from the shortcut on 
 
 ![Windows Image Ten ](./resources/exomiser_tutorial_images/10_windows.jpg)
 
-After this, your Docker Desktop screen should look like this.
+After this, your Docker Desktop screen should look like this:
 
 ![Windows Image Eleven ](./resources/exomiser_tutorial_images/11_windows.jpg)
 
