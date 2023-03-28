@@ -9,11 +9,11 @@ Check out the GitHub repo here: https://github.com/exomiser/Exomiser
 ## Prerequisites
 You have:
 
-- Docker installed and running on your machine. Therefore we prepared a simple guide to setup [Docker for Windows](#docker-windows)
+- Docker installed and running on your machine. Therefore, we prepared a simple guide to set up [Docker for Windows](#docker-windows)
   or [Docker for Mac](#docker-mac)
 
 - [Exomiser-Tutorial files](https://drive.google.com/drive/u/2/folders/1DynxpvOTecvAXv3uYtJ0d2-A4NjQyyfN) downloaded from our GoogleDrive.
-  The `Exomiser-Tutorial`  contains `exomiser-config` (anlysis files) and an empty `exomiser-results` directory.
+  The `Exomiser-Tutorial`  contains `exomiser-config` (analysis files) and an empty `exomiser-results` directory.
 
 You know:
 
@@ -38,7 +38,7 @@ wget https://data.monarchinitiative.org/exomiser/latest/2302_hg19.zip # for the 
 unzip "2302_*.zip" 
 ```
 
-Otherwise visit the links and put the data in your own `exomiser-data` directory:
+Otherwise, visit the links and put the data in your own `exomiser-data` directory:
 
 [2302 phenotype database](https://data.monarchinitiative.org/exomiser/latest/2302_phenotype.zip)
 
@@ -81,7 +81,7 @@ docker pull exomiser/exomiser-cli:13.2.0 # NEEDS TO CHANGE
 1. Install [7-Zip](http://www.7-zip.org/) for unzipping the archive files. The built-in archiving software has issues extracting the zip files.
 2. Download the data and distribution files from https://data.monarchinitiative.org/exomiser/latest
 3. Extract the distribution files by right-clicking exomiser-cli-13.2.0-distribution.zip and selecting 7-Zip > Extract Here
-4. Extract the data files (e.g. 2302_phenotype.zip, 2302_hg19.zip) by right-clicking the archive and selecting 7-Zip > Extract files… into the exomiser data directory. By default exomiser expects this to be ‘exomiser-cli-13.2.0/data’, but this can be changed in the application.properties
+4. Extract the data files (e.g. 2302_phenotype.zip, 2302_hg19.zip) by right-clicking the archive and selecting 7-Zip > Extract files… into the exomiser data directory. By default, exomiser expects this to be ‘exomiser-cli-13.2.0/data’, but this can be changed in the application.properties
 
 ### via Linux
 
@@ -446,7 +446,7 @@ In the genes.tsv file it is possible for a gene to appear multiple times, depend
 ```
 ### TSV VARIANTS
 
-In the variants.tsv file it is possible for a variant, like a gene, to appear multiple times, depending on the MOI it is compatible with. For example in the example below MUC6 has two variants ranked 7th under the AD model and two ranked 8th under an AR (compound heterozygous) model. In the AD case the CONTRIBUTING_VARIANT column indicates whether the variant was (1) or wasn’t (0) used for calculating the EXOMISER_GENE_COMBINED_SCORE and EXOMISER_GENE_VARIANT_SCORE.
+In the variants.tsv file it is possible for a variant, like a gene, to appear multiple times, depending on the MOI it is compatible with. For example in the example below MUC6 has two variants ranked 7th under the AD model and two ranked 8th under an AR (compound heterozygous) model. In the AD case the CONTRIBUTING_VARIANT column indicates whether the variant was (1) or wasn't (0) used for calculating the EXOMISER_GENE_COMBINED_SCORE and EXOMISER_GENE_VARIANT_SCORE.
 
 ```
 #RANK       ID      GENE_SYMBOL     ENTREZ_GENE_ID  MOI     P-VALUE EXOMISER_GENE_COMBINED_SCORE    EXOMISER_GENE_PHENO_SCORE       EXOMISER_GENE_VARIANT_SCORE     EXOMISER_VARIANT_SCORE  CONTRIBUTING_VARIANT    WHITELIST_VARIANT       VCF_ID  RS_ID   CONTIG  START   END     REF     ALT     CHANGE_LENGTH   QUAL    FILTER  GENOTYPE        FUNCTIONAL_CLASS        HGVS    EXOMISER_ACMG_CLASSIFICATION    EXOMISER_ACMG_EVIDENCE  EXOMISER_ACMG_DISEASE_ID        EXOMISER_ACMG_DISEASE_NAME      CLINVAR_ALLELE_ID       CLINVAR_PRIMARY_INTERPRETATION  CLINVAR_STAR_RATING     GENE_CONSTRAINT_LOEUF   GENE_CONSTRAINT_LOEUF_LOWER     GENE_CONSTRAINT_LOEUF_UPPER     MAX_FREQ_SOURCE MAX_FREQ        ALL_FREQ        MAX_PATH_SOURCE MAX_PATH        ALL_PATH
@@ -462,7 +462,7 @@ In the variants.tsv file it is possible for a variant, like a gene, to appear mu
 
 In the VCF file it is possible for a variant, like a gene, to appear multiple times, depending on the MOI it is compatible with. 
 
-For example in the example below MUC6 has two variants ranked 7th under the AD model and two ranked 8th under an AR (compound heterozygous) model. In the AD case the CONTRIBUTING_VARIANT column indicates whether the variant was (1) or wasn’t (0) used for calculating the EXOMISER_GENE_COMBINED_SCORE and EXOMISER_GENE_VARIANT_SCORE. 
+For example in the example below MUC6 has two variants ranked 7th under the AD model and two ranked 8th under an AR (compound heterozygous) model. In the AD case the CONTRIBUTING_VARIANT column indicates whether the variant was (1) or wasn't (0) used for calculating the EXOMISER_GENE_COMBINED_SCORE and EXOMISER_GENE_VARIANT_SCORE. 
 
 The `INFO` field with the ID=Exomiser describes the internal format of this subfield. Be aware that for multi-allelic sites, Exomiser will decompose and trim them for the proband sample and this is what will be displayed in the Exomiser ID sub-field e.g. `11-1018088-TG-T_AD`.
 
@@ -501,11 +501,11 @@ Docker Desktop will start in the background, after you allow it to be opened.
 
 <img src="./../tutorial/resources/exomiser_tutorial_images/6_mac.jpg" alt="Step 6" width="50%" height="50%">
 
-Additionaly, this window will come up to agree the Docker subscription service agreement.
+Additionally, this window will come up to agree the Docker subscription service agreement.
 
 <img src="./../tutorial/resources/exomiser_tutorial_images/7_mac.jpg" alt="Step 7" width="50%" height="50%">
 
-After running the installation **restart** your terminal and check the Docker installation again from insisde your terminal with:
+After running the installation **restart** your terminal and check the Docker installation again from inside your terminal with:
 ```shell
 docker --version
 ```
@@ -548,7 +548,7 @@ If the Docker desktop app is showing this warning upon start, do not click “Re
 
 <img src="./../tutorial/resources/exomiser_tutorial_images/6_windows.jpg" alt="Step 6" width="50%" height="50%">
 
-The link should point you to an address with a seperate download link.
+The link should point you to an address with a separate download link.
 
 <img src="./../tutorial/resources/exomiser_tutorial_images/7_windows.jpg" alt="Step 7" width="50%" height="50%">
 
