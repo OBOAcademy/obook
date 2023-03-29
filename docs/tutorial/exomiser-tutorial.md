@@ -20,26 +20,20 @@ You have:
 - [Exomiser-Tutorial files](https://drive.google.com/drive/u/2/folders/1DynxpvOTecvAXv3uYtJ0d2-A4NjQyyfN) downloaded from our GoogleDrive.
   The `Exomiser-Tutorial` folder contains a directory called `exomiser-config` (analysis files) and an empty `exomiser-results` directory.
 
-- Importantly, we ***highly*** recommend downloading the Exomiser data prior to the tutorial in order to follow along. The data required to run Exomiser is ~80GB and will take a while to download and unpack.
-
-For this tutorial, you only need to download the Exomiser phenotype data and the variant data for the hg19 assembly. If you have your own samples to run with Exomiser and the VCF files are built on the hg38 build, then you will need to download the hg38 variant data as well.
-
-The current data version that will use in this tutorial is 2302 (Feb 2023). This will change in the future. Always make sure that you use the latest data version available.
-
-To download the Exomiser data from the terminal:
+- Importantly, we ***highly*** recommend downloading the Exomiser data prior to the tutorial in order to follow along. The data required to run Exomiser is ~80GB and will take a while to download and unpack. For this tutorial, you only need to download the Exomiser phenotype data and the variant data for the hg19 assembly. If you have your own samples to run with Exomiser and the VCF files are built on the hg38 build, then you will need to download the hg38 variant data as well. The current data version that will use in this tutorial is 2302 (Feb 2023). This will change in the future. Always make sure that you use the latest data version available. To download the Exomiser data from the terminal:
 
 ```shell
 # create an empty directory for exomiser-data within the Exomiser-Tutorial folder:
+cd /path/to/Exomiser-Tutorial/
 mkdir exomiser-data
-
 cd exomiser-data
+# download the data
 wget https://data.monarchinitiative.org/exomiser/latest/2302_phenotype.zip # for the phenotype database
 wget https://data.monarchinitiative.org/exomiser/latest/2302_hg19.zip # for the hg19 variant database
-```
-```shell
-# unzip the data files
+# unzip the data
 unzip "2302_*.zip"
 ```
+
 
 Otherwise, visit the links, download the data in your own `exomiser-data` directory and unzip them:
 
@@ -50,13 +44,18 @@ Otherwise, visit the links, download the data in your own `exomiser-data` direct
 Your `Exomiser-Tutorial` directory should now be structured as follows:
 
 ```
-Exomiser-Tutorial
-├── exomiser-config
-├── exomiser-data
-├── exomiser-results
+.
+└── Exomiser-Tutorial
+    ├── exomiser-config
+    ├── exomiser-results
+    ├── exomiser-data
+    │ ├── 2302_hg19
+    │ └── 2302_phenotype
+    └── exomiser-overview
+      └── exomiser-tutorial-slides
 ```
 
-## Start of the Tutorial
+## Outline of the Tutorial
 
 - [Exomiser Overview](#exomiser-overview)
 - [Exomiser Installation](#exomiser-installation)
@@ -69,22 +68,24 @@ Exomiser-Tutorial
 
 ## Exomiser Overview
 
-For a quick overview of Exomiser take a look at the slides [here](#link to google drive address).
+For a quick overview of Exomiser take a look at the slides located in the [Google Drive](https://drive.google.com/drive/u/2/folders/1DynxpvOTecvAXv3uYtJ0d2-A4NjQyyfN).
 
 ## Exomiser Installation
 
 ### via Docker
 
 ```shell
-docker pull exomiser/exomiser-cli:13.2.0 # NEEDS TO CHANGE
+docker pull exomiser/exomiser-cli:latest
+docker pull exomisertutorial/exomiser-cli:latest # IF NOT CHANGED BY JULES
 ```
 
 ### via Windows
 
 1. Install [7-Zip](http://www.7-zip.org/) for unzipping the archive files. The built-in archiving software has issues extracting the zip files.
-2. Download the data and distribution files from https://data.monarchinitiative.org/exomiser/latest
-3. Extract the distribution files by right-clicking exomiser-cli-13.2.0-distribution.zip and selecting 7-Zip > Extract Here
-4. Extract the data files (e.g. 2302_phenotype.zip, 2302_hg19.zip) by right-clicking the archive and selecting 7-Zip > Extract files… into the exomiser data directory. By default, exomiser expects this to be ‘exomiser-cli-13.2.0/data’, but this can be changed in the application.properties
+2. Download the distribution from the [GitHub](https://github.com/exomiser/Exomiser/releases/tag/13.2.0)
+3. Download the data files from [Monarch](https://data.monarchinitiative.org/exomiser/latest)
+4. Extract the distribution files by right-clicking exomiser-cli-13.2.0-distribution.zip and selecting 7-Zip > Extract Here
+5. Extract the data files (e.g. 2302_phenotype.zip, 2302_hg19.zip) by right-clicking the archive and selecting 7-Zip > Extract files… into the exomiser data directory. By default, exomiser expects this to be ‘exomiser-cli-13.2.0/data’, but this can be changed in the application.properties
 
 ### via Linux
 
