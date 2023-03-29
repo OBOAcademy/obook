@@ -1,30 +1,32 @@
 ## Tutorial: An introduction to Exomiser
-The Exomiser is a Java program that finds potential disease-causing variants from whole-exome or whole-genome sequencing data. Starting from a VCF file and a set of phenotypes encoded using the Human Phenotype Ontology (HPO) it will annotate, filter and prioritise likely causative variants. The program does this based on user-defined criteria such as a variant's predicted pathogenicity, frequency of occurrence in a population and also how closely the given phenotype matches the known phenotype of diseased genes from human and model organism data.
+The Exomiser is a Java program that ranks potential rare Mendelian disease-causing variants from whole-exome or whole-genome sequencing data. Starting from a patient's VCF file and a set of phenotypes encoded using the Human Phenotype Ontology (HPO), it will annotate, filter and prioritise likely causative variants. The program does this based on user-defined criteria such as a variant's predicted pathogenicity, frequency of occurrence in a population and also how closely the given patient's phenotype matches the known phenotype of diseased genes from human and model organism data.
 
-In this tutorial we will learn how to install and run Exomiser with Docker, and how to examine the results in various output formats detailing the predicted causative genes and variants.
+In this tutorial, we will learn how to install and run Exomiser with Docker, and how to examine the results in various output formats detailing the predicted causative genes and variants.
 
 The complete Exomiser documentation can be found [here](https://exomiser.readthedocs.io/en/latest/)
 
 Check out the GitHub repo [here](https://github.com/exomiser/Exomiser)
+
 ## Prerequisites
+You know:
+
+- how to use a command line interface.
+
 You have:
 
-- Docker installed and running on your machine. Therefore, we prepared a simple guide to set up [Docker for Windows](#docker-windows)
+- Docker installed and running on your machine. Check out this simple guide to set up [Docker for Windows](#docker-windows)
   or [Docker for Mac](#docker-mac)
 
 - [Exomiser-Tutorial files](https://drive.google.com/drive/u/2/folders/1DynxpvOTecvAXv3uYtJ0d2-A4NjQyyfN) downloaded from our GoogleDrive.
   The `Exomiser-Tutorial`  contains `exomiser-config` (analysis files) and an empty `exomiser-results` directory.
 
-You know:
+- Importantly, we ***highly*** recommend downloading the Exomiser data prior to the tutorial in order to follow along. The data required to run Exomiser is ~80GB and will take a while to download and unpack.
 
-- how to use a command line interface.
+For this tutorial, you only need to download the Exomiser phenotype data and the variant data for the hg19 assembly. If you have your own samples to run with Exomiser and the VCF files are built on the hg38 build, then you will need to download the hg38 variant data as well.
 
+The current data version that will use in this tutorial is 2302 (Feb 2023). This will change in the future. Always make sure that you use the latest data version available.
 
-In preparation for this tutorial we ***highly*** recommend downloading the Exomiser data files prior to the tutorial in order to follow along. The data required to run Exomiser is ~80GB and will take a while to download and unpack.
-
-For this tutorial, you only need to download the Exomiser phenotype data and the data for the hg19 assembly. If you have your own samples to run with Exomiser and the VCF files are built on the hg38 build then you will need to download these data files as well.
-
-To download from the terminal:
+To download the Exomser data from the terminal:
 
 ```shell
 # create an empty directory for exomiser-data
@@ -34,17 +36,17 @@ wget https://data.monarchinitiative.org/exomiser/latest/2302_phenotype.zip # for
 wget https://data.monarchinitiative.org/exomiser/latest/2302_hg19.zip # for the hg19 variant database
 ```
 ```shell
-# unzip the distribution and data files - this will create a directory called 'exomiser-cli-13.1.0' in the current working directory
-unzip "2302_*.zip" 
+# unzip the data files
+unzip "2302_*.zip"
 ```
 
-Otherwise, visit the links and put the data in your own `exomiser-data` directory:
+Otherwise, visit the links, download the data in your own `exomiser-data` directory and unzip them:
 
 [2302 phenotype database](https://data.monarchinitiative.org/exomiser/latest/2302_phenotype.zip)
 
 [2302 hg19 variant database](https://data.monarchinitiative.org/exomiser/latest/2302_hg19.zip)
 
-Your `Exomiser-Tutorial` directory should now be structured like this:
+Your `Exomiser-Tutorial` directory should now be structured as follows:
 
 ```
 Exomiser-Tutorial
@@ -101,7 +103,7 @@ unzip '2302_*.zip' -d exomiser-cli-13.2.0/data
 # exomiser.hg38.data-version=2302
 # exomiser.phenotype.data-version=2302
 ```
- 
+
 ### Configuring the application.properties
 
 ## Running Exomiser
@@ -166,11 +168,11 @@ $ docker
 $ java -jar exomiser-cli-13.2.0.jar --sample examples/pfeiffer-phenopacket.yml --vcf examples/Pfeiffer.vcf.gz --assembly hg19
 ```
 
-### YAML job files 
+### YAML job files
 
 Exomiser can also accept the input of YAML job files, where the filtering and all possible options for running Exomiser is included:
 
-e.g. 
+e.g.
 
 ```yaml
 ## Exomiser Analysis Template.
@@ -295,7 +297,7 @@ analysis:
         #Other prioritisers: Only combine omimPrioritiser with one of these.
         #Don't include any if you only want to filter the variants.
         hiPhivePrioritiser: {},
-        # or run hiPhive in benchmarking mode: 
+        # or run hiPhive in benchmarking mode:
         #hiPhivePrioritiser: {runParams: 'mouse'},
         #phivePrioritiser: {}
         #phenixPrioritiser: {}
@@ -460,9 +462,9 @@ In the variants.tsv file it is possible for a variant, like a gene, to appear mu
 ```
 ### VCF
 
-In the VCF file it is possible for a variant, like a gene, to appear multiple times, depending on the MOI it is compatible with. 
+In the VCF file it is possible for a variant, like a gene, to appear multiple times, depending on the MOI it is compatible with.
 
-For example in the example below MUC6 has two variants ranked 7th under the AD model and two ranked 8th under an AR (compound heterozygous) model. In the AD case the CONTRIBUTING_VARIANT column indicates whether the variant was (1) or wasn't (0) used for calculating the EXOMISER_GENE_COMBINED_SCORE and EXOMISER_GENE_VARIANT_SCORE. 
+For example in the example below MUC6 has two variants ranked 7th under the AD model and two ranked 8th under an AR (compound heterozygous) model. In the AD case the CONTRIBUTING_VARIANT column indicates whether the variant was (1) or wasn't (0) used for calculating the EXOMISER_GENE_COMBINED_SCORE and EXOMISER_GENE_VARIANT_SCORE.
 
 The `INFO` field with the ID=Exomiser describes the internal format of this subfield. Be aware that for multi-allelic sites, Exomiser will decompose and trim them for the proband sample and this is what will be displayed in the Exomiser ID sub-field e.g. `11-1018088-TG-T_AD`.
 
