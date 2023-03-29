@@ -59,10 +59,9 @@ Your `Exomiser-Tutorial` directory should now be structured as follows:
 
 - [Exomiser Overview](#exomiser-overview)
 - [Exomiser Installation](#exomiser-installation)
-  - [via Docker](#via-docker)
-  - [via Windows](#via-windows)
-  - [via Linux](#via-linux)
-
+    - [via Docker](#via-docker)
+    - [via Windows](#via-windows)
+    - [via Linux](#via-linux)
 - [Running Exomiser](#running-exomiser)
 - [Results](#results)
 
