@@ -18,7 +18,7 @@ You have:
   or [Docker for Mac](#docker-mac)
 
 - [Exomiser-Tutorial files](https://drive.google.com/drive/u/2/folders/1DynxpvOTecvAXv3uYtJ0d2-A4NjQyyfN) downloaded from our GoogleDrive.
-  The `Exomiser-Tutorial`  contains `exomiser-config` (analysis files) and an empty `exomiser-results` directory.
+  The `Exomiser-Tutorial` folder contains a directory called `exomiser-config` (analysis files) and an empty `exomiser-results` directory.
 
 - Importantly, we ***highly*** recommend downloading the Exomiser data prior to the tutorial in order to follow along. The data required to run Exomiser is ~80GB and will take a while to download and unpack.
 
@@ -26,11 +26,12 @@ For this tutorial, you only need to download the Exomiser phenotype data and the
 
 The current data version that will use in this tutorial is 2302 (Feb 2023). This will change in the future. Always make sure that you use the latest data version available.
 
-To download the Exomser data from the terminal:
+To download the Exomiser data from the terminal:
 
 ```shell
-# create an empty directory for exomiser-data
+# create an empty directory for exomiser-data within the Exomiser-Tutorial folder:
 mkdir exomiser-data
+
 cd exomiser-data
 wget https://data.monarchinitiative.org/exomiser/latest/2302_phenotype.zip # for the phenotype database
 wget https://data.monarchinitiative.org/exomiser/latest/2302_hg19.zip # for the hg19 variant database
