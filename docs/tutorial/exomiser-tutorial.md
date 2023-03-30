@@ -79,11 +79,11 @@ Exomiser-Tutorial
     - [TSV VARIANTS](#tsv-variants)
     - [TSV GENES](#tsv-genes)
 
-## Exomiser Overview
+## Exomiser overview
 
 For a quick overview of Exomiser take a look at the slides located in the [Google Drive](https://drive.google.com/drive/u/2/folders/1DynxpvOTecvAXv3uYtJ0d2-A4NjQyyfN) or [GITHUB REPO](add link...).
 
-## Exomiser Installation
+## Exomiser installation
 
 ### via Docker
 
