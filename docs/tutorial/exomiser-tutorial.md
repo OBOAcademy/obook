@@ -46,7 +46,6 @@ Your `Exomiser-Tutorial` directory should now be structured as follows:
 ```
 Exomiser-Tutorial
     ├── exomiser-config
-    ├── exomiser-results
     ├── exomiser-data
     │ ├── 2302_hg19
     │ └── 2302_phenotype
@@ -429,7 +428,7 @@ docker run -it -v '/path/to/Exomiser-Tutorial/exomiser-data:/exomiser-data' \
 exomisertutorial/exomiser-cli:13.2.0 \
 --sample /exomiser/more-examples/pfeiffer-family.yml \
 --ped /exomiser/more-examples/pfeiffer-quartet.ped \
---spring.config.location=/exomiser/application.properties 
+--spring.config.location=/exomiser/application.properties
 ```
 
 #### CLI Command
@@ -452,14 +451,14 @@ docker run -it -v '/path/to/Exomiser-Tutorial/exomiser-data:/exomiser-data' \
 exomisertutorial/exomiser-cli:13.2.0 \
 --sample /exomiser/more-examples/pfeiffer-family.yml \
 --ped /exomiser/more-examples/pfeiffer-quartet.ped \
---spring.config.location=/exomiser/application.properties 
+--spring.config.location=/exomiser/application.properties
 ```
 
 #### CLI Command
 
 ```shell
 $ java -jar exomiser-cli-13.2.0.jar --sample /path/to/Exomiser-Tutorial/exomiser-config/pfeiffer-family.yml \
- --ped /path/to/Exomiser-Tutorial/exomiser-config/Pfeiffer-quartet.ped 
+ --ped /path/to/Exomiser-Tutorial/exomiser-config/Pfeiffer-quartet.ped
 ```
 
 
@@ -480,7 +479,7 @@ docker run -it -v '/path/to/Exomiser-Tutorial/exomiser-data:/exomiser-data' \
 -v '/path/to/Exomiser-Tutorial/exomiser-batch-files:/batch-files' \
 exomisertutorial/exomiser-cli:13.2.0 \
 -batch /batch-files/test-analysis-batch-commands.txt
---spring.config.location=/exomiser/application.properties 
+--spring.config.location=/exomiser/application.properties
 ```
 
 #### CLI Command
