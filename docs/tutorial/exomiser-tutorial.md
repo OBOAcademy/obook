@@ -1,5 +1,5 @@
 ## Tutorial: An introduction to Exomiser
-The Exomiser is a Java program that ranks potential rare Mendelian disease-causing variants from whole-exome or whole-genome sequencing data. Starting from a patient's VCF file and a set of phenotypes encoded using the Human Phenotype Ontology (HPO), it will annotate, filter and prioritise likely causative variants. The program does this based on user-defined criteria such as a variant's predicted pathogenicity, frequency of occurrence in a population and also how closely the given patient's phenotype matches the known phenotype of diseased genes from human and model organism data.
+Exomiser is a Java program that ranks potential rare Mendelian disease-causing variants from whole-exome or whole-genome sequencing data. Starting from a patient's VCF file and a set of phenotypes encoded using the Human Phenotype Ontology (HPO), it will annotate, filter and prioritise likely causative variants. The program does this based on user-defined criteria such as a variant's predicted pathogenicity, frequency of occurrence in a population and also how closely the given patient's phenotype matches the known phenotype of diseased genes from human and model organism data.
 
 In this tutorial, we will learn how to install and run Exomiser with Docker, and how to examine the results in various output formats detailing the predicted causative genes and variants. If you prefer to working locally, instructions are also provided below for Windows and Linux/Mac users.  
 
@@ -64,8 +64,11 @@ Exomiser-Tutorial
 - [Exomiser Installation](#exomiser-installation)
     - [via Docker](#via-docker)
     - [via Windows](#via-windows)
-    - [via Linux](#via-linux)
+    - [via Linux/Mac](#via-linux)
 - [Running Exomiser](#running-exomiser)
+    - [Using phenopackets](#using-phenopackets)
+    - [Analysis settings](#analysis-settings)
+
 - [Results](#results)
 
 ## Exomiser Overview
@@ -310,7 +313,7 @@ exomisertutorial/exomiser-cli:13.2.0 \
 --spring.config.location=/exomiser/application.properties
 ```
 
-#### Running locally
+### Running locally
 Assuming that you are within the `exomiser-cli-13.2.0` distribution folder:
 
 ```shell
@@ -318,7 +321,7 @@ java -jar exomiser-cli-13.2.0.jar --sample examples/pfeiffer-phenopacket.yml \
 --analysis examples/exome-analysis.yml --output examples/output-options.yml  
 ```
 
-#### Analysing multi-sample VCF files
+### Analysing multi-sample VCF files
 
 When analysing a multi-sample VCF file, you must detail the pedigree information in a phenopacket describing a Family object:
 
