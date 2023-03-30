@@ -166,7 +166,7 @@ metaData:
 > **_NOTE:_** This is an example of a v1.0 phenopacket, there is a more recent release of v2.0. Exomiser can run phenopackets built with either v1.0 or v2.0 schema. You can find out more about the v2.0 phenopacket schema and how to build one with Python or Java [here](https://phenopacket-schema.readthedocs.io/en/latest/). To convert a phenopacket v1.0 to v2.0, you can use [phenopacket-tools](https://github.com/phenopackets/phenopacket-tools).
 
 ### Analyisis settings
-Below are the default analysis settings that we will use in our tutorial:
+Below are the default analysis settings from `pfeiffer-analysis.yml` that we will use in our tutorial:
 
 ```yaml
 # These are the default settings, with values representing the maximum minor allele frequency in percent (%) permitted for an
@@ -298,7 +298,8 @@ outputFileName: Pfeiffer-hiphive-exome-PASS_ONLY
 outputFormats: [HTML, JSON, TSV_GENE, TSV_VARIANT]
 ```
 
-#### Docker command
+### Running via Docker
+
 ```shell
 docker run -it -v "/path/to/Exomiser-Tutorial/exomiser-data:/exomiser-data" \
 -v "/path/to/Exomiser-Tutorial/exomiser-config/:/exomiser" \
@@ -309,29 +310,13 @@ exomisertutorial/exomiser-cli:13.2.0 \
 --spring.config.location=/exomiser/application.properties
 ```
 
-or
-
-```shell
-docker run -it -v "/path/to/Exomiser-Tutorial/exomiser-data:/exomiser-data" \
--v "/path/to/Exomiser-Tutorial/exomiser-config/:/exomiser" \
--v "/path/to/Exomiser-Tutorial/exomiser-results:/results" \
-exomisertutorial/exomiser-cli:13.2.0 \
---analysis /exomiser/pfeiffer-job-phenopacket.yml \
---spring.config.location=/exomiser/application.properties
-```
-
-#### CLI command
+#### Running locally
 
 ```shell
 java -jar exomiser-cli-13.2.0.jar --sample /path/to/Exomiser-Tutorial/exomiser-config/pfeiffer-phenopacket.yml \
 --analysis /path/to/Exomiser-Tutorial/exomiser-config/pfeiffer-analysis.yml
 ```
 
-or (combine, *phenopacket*, *analysis* and *outputoptions* in one `pfeiffer-job-phenopacket.yml`)
-
-```shell
-java -jar exomiser-cli-13.2.0.jar --analysis /path/to/Exomiser-Tutorial/exomiser-config/peiffer-job-phenopacket.yml
-```
 
 ### YAML job files
 
