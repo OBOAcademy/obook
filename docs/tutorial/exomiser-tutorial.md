@@ -317,10 +317,11 @@ Assuming that you are within the `exomiser-cli-13.2.0` distribution folder:
 java -jar exomiser-cli-13.2.0.jar --sample examples/pfeiffer-phenopacket.yml \
 --analysis examples/exome-analysis.yml --output examples/output-options.yml  
 ```
+If you do not specify any `--analysis` and `output` options, Exomiser will apply default settings. 
 
-#### Running on multi-sample VCFs
+#### Analysing multi-sample VCF files
 
-When analysing a multi-sample VCF file, a PED file is required. Alternatively, you can detail the PED file contents in a phenopacket describing a Family object:
+When analysing a multi-sample VCF file, you must detail the pedigree information in a phenopacket describing a Family object:
 
 e.g.
 
@@ -368,7 +369,7 @@ pedigree:
       sex: FEMALE
       affectedStatus: UNAFFECTED
 htsFiles:
-  - uri: examples/Pfeiffer-quartet.vcf.gz
+  - uri: exomiser/Pfeiffer-quartet.vcf.gz
     htsFormat: VCF
     genomeAssembly: GRCh37
 metaData:
@@ -384,7 +385,7 @@ metaData:
   phenopacketSchemaVersion: 1.0
 ```
 
-#### Docker command
+Running via Docker:
 
 ```shell
 docker run -it -v '/path/to/Exomiser-Tutorial/exomiser-data:/exomiser-data' \
@@ -395,12 +396,12 @@ exomisertutorial/exomiser-cli:13.2.0 \
 --spring.config.location=/exomiser/application.properties
 ```
 
-#### CLI Command
+Running locally:
 
-With a phenopacket containing PED data:
+Assuming that you are within the `exomiser-cli-13.2.0` distribution folder
 
 ```shell
-java -jar exomiser-cli-13.2.0.jar --sample /path/to/Exomiser-Tutorial/exomiser-config/pfeiffer-family.yml
+java -jar exomiser-cli-13.2.0.jar --sample examples/pfeiffer-family.yml --analysis examples/exome-analysis.yml --output examples/output-options.yml
 ```
 
 With a PED file:
