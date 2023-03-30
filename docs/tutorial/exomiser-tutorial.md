@@ -116,7 +116,7 @@ Also you want to make sure to edit the file to use the correct data version (cur
 
 ## Running Exomiser
 
-For this tutorial, we will focus on running Exomiser on a single whole-exome sample. Additional instructions for running Exomiser on multi-sample data and large jobs are also provided below.
+For this tutorial, we will focus on running Exomiser on a single-sample whole-exome VCF file. Additional instructions for running Exomiser on multi-sample VCF data and large jobs are also provided below.
 
 ### Using phenopackets
 
@@ -147,7 +147,7 @@ phenotypicFeatures:
       id: HP:0000244
       label: Brachyturricephaly
 htsFiles:
-  - uri: exomiser/Pfeiffer.vcf
+  - uri: exomiser/Pfeiffer.vcf.gz
     htsFormat: VCF
     genomeAssembly: hg19
 metaData:
@@ -163,7 +163,7 @@ metaData:
   phenopacketSchemaVersion: 1.0
 ```
 
-> **_NOTE:_** This is an example of a v1.0 phenopacket, there is a more recent release of v2.0. Exomiser can run phenopackets built with either v1.0 or v2.0 schema. You can find out more about the v2.0 phenopacket schema and how to build one with Python or Java [here](https://phenopacket-schema.readthedocs.io/en/latest/). To convert a phenopacket v1.0 to v2.0 you can use [phenopacket-tools](https://github.com/phenopackets/phenopacket-tools).
+> **_NOTE:_** This is an example of a v1.0 phenopacket, there is a more recent release of v2.0. Exomiser can run phenopackets built with either v1.0 or v2.0 schema. You can find out more about the v2.0 phenopacket schema and how to build one with Python or Java [here](https://phenopacket-schema.readthedocs.io/en/latest/). To convert a phenopacket v1.0 to v2.0, you can use [phenopacket-tools](https://github.com/phenopackets/phenopacket-tools).
 
 #### Docker command
 ```shell
