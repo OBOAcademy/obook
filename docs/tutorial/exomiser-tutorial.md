@@ -572,13 +572,7 @@ After double-clicking on the Docker.dmg a new window will come up:
 ![Mac Image Three ](./resources/exomiser_tutorial_images/3_mac.jpg)
 
 Drag and drop the Docker app into your `/Applications` folder.
-
-[//]: # ([Mac Image Four ](./resources/exomiser_tutorial_images/4_mac.jpg))
-
 Double-click on the Docker symbol.
-
-![Mac Image Five ](./resources/exomiser_tutorial_images/5_mac.jpg)
-
 Docker Desktop will start in the background, after you allow it to be opened.
 
 ![Mac Image Six ](./resources/exomiser_tutorial_images/6_mac.jpg)
