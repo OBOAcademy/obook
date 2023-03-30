@@ -1,4 +1,4 @@
-_## Tutorial: An introduction to Exomiser
+## Tutorial: An introduction to Exomiser
 The Exomiser is a Java program that ranks potential rare Mendelian disease-causing variants from whole-exome or whole-genome sequencing data. Starting from a patient's VCF file and a set of phenotypes encoded using the Human Phenotype Ontology (HPO), it will annotate, filter and prioritise likely causative variants. The program does this based on user-defined criteria such as a variant's predicted pathogenicity, frequency of occurrence in a population and also how closely the given patient's phenotype matches the known phenotype of diseased genes from human and model organism data.
 
 In this tutorial, we will learn how to install and run Exomiser with Docker, and how to examine the results in various output formats detailing the predicted causative genes and variants.
@@ -100,12 +100,22 @@ unzip '2302_*.zip' -d exomiser-cli-13.2.0/data
 
 ```
 
-### Configuring the application.properties
+### Configuring the application.properties 
+
+The application.properties has to be updated to point to the correct location of the data. For the purpose of this tutorial 
+this is already pointing to the mounted directory inside the docker container. (`exomiser.data-directory=/exomiser-data`)
+
+Also you want to make sure to edit the file to use the right data versions.
+```shell
 # Check the application.properties are pointing to the correct versions
-# exomiser.hg19.data-version=2302
-# exomiser.hg38.data-version=2302
-# exomiser.phenotype.data-version=2302
+
+ exomiser.hg19.data-version=2302
+ exomiser.hg38.data-version=2302
+ exomiser.phenotype.data-version=2302
+```
+
 ## Running Exomiser
+
 
 ### Phenopackets
 
@@ -181,14 +191,14 @@ exomisertutorial/exomiser-cli:13.2.0 \
 #### CLI command
 
 ```shell
-$ java -jar exomiser-cli-13.2.0.jar --sample /path/to/Exomiser-Tutorial/exomiser-config/pfeiffer-phenopacket.yml \
+java -jar exomiser-cli-13.2.0.jar --sample /path/to/Exomiser-Tutorial/exomiser-config/pfeiffer-phenopacket.yml \
 --analysis /path/to/Exomiser-Tutorial/exomiser-config/pfeiffer-analysis.yml
 ```
 
 or (combine, *phenopacket*, *analysis* and *outputoptions* in one `pfeiffer-job-phenopacket.yml`)
 
 ```shell
-$ java -jar exomiser-cli-13.2.0.jar --analysis /path/to/Exomiser-Tutorial/exomiser-config/peiffer-job-phenopacket.yml
+java -jar exomiser-cli-13.2.0.jar --analysis /path/to/Exomiser-Tutorial/exomiser-config/peiffer-job-phenopacket.yml
 ```
 
 ### YAML job files
@@ -350,7 +360,7 @@ exomiser/exomiser-cli:13.2.0  \
 
 #### CLI command
 ```shell
-$ java -jar exomiser-cli-13.2.0.jar --analysis /path/to/Exomiser-Tutorial/exomiser-config/test-analysis-exome.yml
+ java -jar exomiser-cli-13.2.0.jar --analysis /path/to/Exomiser-Tutorial/exomiser-config/test-analysis-exome.yml
 ```
 
 ### Multi-sample VCFs
@@ -431,12 +441,11 @@ exomisertutorial/exomiser-cli:13.2.0 \
 ```
 
 #### CLI Command
-[//]: # (1.: If we are using all those other files. We should provide them in GoogleDrive examples and show the full path)
 
 With a phenopacket containing PED data:
 
 ```shell
-$ java -jar exomiser-cli-13.2.0.jar --sample /path/to/Exomiser-Tutorial/exomiser-config/pfeiffer-family.yml
+java -jar exomiser-cli-13.2.0.jar --sample /path/to/Exomiser-Tutorial/exomiser-config/pfeiffer-family.yml
 ```
 
 With a PED file:
@@ -456,7 +465,7 @@ exomisertutorial/exomiser-cli:13.2.0 \
 #### CLI Command
 
 ```shell
-$ java -jar exomiser-cli-13.2.0.jar --sample /path/to/Exomiser-Tutorial/exomiser-config/pfeiffer-family.yml \
+java -jar exomiser-cli-13.2.0.jar --sample /path/to/Exomiser-Tutorial/exomiser-config/pfeiffer-family.yml \
  --ped /path/to/Exomiser-Tutorial/exomiser-config/Pfeiffer-quartet.ped
 ```
 
@@ -464,7 +473,6 @@ $ java -jar exomiser-cli-13.2.0.jar --sample /path/to/Exomiser-Tutorial/exomiser
 ### Running large jobs
 #### Batch Jobs
 
-[//]: # (1.: If we are using all those other files. We should provide them in GoogleDrive examples and show the full path)
 
 The above commands can be added to a batch file for example in the file `Exomiser-Tutorial/exomiser-config/test-analysis-batch-commands.txt`
 Using it with docker we recommend creating a new directory for the batch files and mounting that to the docker container.
@@ -486,7 +494,7 @@ exomisertutorial/exomiser-cli:13.2.0 \
 using the `--batch` command:
 
 ```shell
-$ java -jar exomiser-cli-13.2.0.jar --batch Exomiser-Tutorial/exomiser-config/test-analysis-batch-commands.txt
+java -jar exomiser-cli-13.2.0.jar --batch Exomiser-Tutorial/exomiser-config/test-analysis-batch-commands.txt
 ```
 The advantage of this is that a single command will be able to analyse many samples in far less time than starting a new JVM for each as there will be no start-up penalty after the initial start and the Java JIT compiler will be able to take advantage of a longer-running process to optimise the runtime code. For maximum throughput on a cluster consider splitting your batch jobs over multiple nodes.
 
