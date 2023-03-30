@@ -17,8 +17,11 @@ You have:
 - Docker installed and running on your machine. Check out this simple guide to set up [Docker for Windows](#docker-windows)
   or [Docker for Mac](#docker-mac)
 
-- [Exomiser-Tutorial files](https://drive.google.com/drive/u/2/folders/1DynxpvOTecvAXv3uYtJ0d2-A4NjQyyfN) downloaded from our GoogleDrive.
-  The `Exomiser-Tutorial` folder contains a directory called `exomiser-config` (analysis files) and `exomiser-overview` (overview slides).
+- [Exomiser-Tutorial files](https://drive.google.com/drive/u/2/folders/1DynxpvOTecvAXv3uYtJ0d2-A4NjQyyfN) downloaded from our GoogleDrive. Alternatively:
+```shell
+wget ADD REPO LINK
+```
+  The `Exomiser-Tutorial` folder contains a directory called `exomiser-config` (with all the analysis files) and `exomiser-overview` (with some introductory slides).
 
 - Importantly, we ***highly*** recommend downloading the Exomiser data prior to the tutorial in order to follow along. The data required to run Exomiser is ~80GB and will take a while to download and unpack. For this tutorial, you only need to download the Exomiser phenotype data and the variant data for the hg19 assembly. If you have your own samples to run with Exomiser and the VCF files are built on the hg38 build, then you will need to download the hg38 variant data as well. The current data version that will use in this tutorial is 2302 (Feb 2023). This will change in the future. Always make sure that you use the latest data version available. To download the Exomiser data from the terminal:
 
