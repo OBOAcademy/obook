@@ -113,7 +113,7 @@ unzip '2302_*.zip' -d exomiser-cli-13.2.0/data
 
 ### Configuring the application.properties
 
-The application.properties has to be updated to point to the correct location of the Exomiser data. For the purpose of this tutorial, this is already sorted, pointing to the mounted directory inside the docker container `exomiser.data-directory=/exomiser-data`.
+The application.properties has to be updated to point to the correct location of the Exomiser data. For the purpose of this tutorial, this is already sorted, pointing to the mounted directory inside the Docker container `exomiser.data-directory=/exomiser-data`.
 
 Also you want to make sure to edit the file to use the correct data version (currently 2302):
 ```shell
@@ -413,7 +413,7 @@ java -jar exomiser-cli-13.2.0.jar --sample examples/pfeiffer-family.yml --analys
 
 ### Running large jobs (batch)
 
-The above commands can be added to a batch file for example in the file `Exomiser-Tutorial/exomiser-config/test-analysis-batch-commands.txt`. Using it with Docker we recommend creating a new directory for the batch files and mounting that to the docker container.
+The above commands can be added to a batch file for example in the file `Exomiser-Tutorial/exomiser-config/test-analysis-batch-commands.txt`. Using it with Docker we recommend creating a new directory for the batch files and mounting that to the Docker container.
 
 Running via Docker:
 
@@ -566,4 +566,4 @@ After this, your Docker Desktop screen should look like this:
 
 ![Windows Image Eleven ](./resources/exomiser_tutorial_images/11_windows.jpg)
 
-Now, whenever you want to pull images make sure that Docker is running in the background._
+Now, whenever you want to pull images make sure that Docker is running in the background.
