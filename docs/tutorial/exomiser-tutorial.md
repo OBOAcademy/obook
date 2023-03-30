@@ -311,12 +311,12 @@ exomisertutorial/exomiser-cli:13.2.0 \
 ```
 
 #### Running locally
+Assuming that you are within the `exomiser-cli-13.2.0` distribution folder:
 
 ```shell
-java -jar exomiser-cli-13.2.0.jar --sample /path/to/Exomiser-Tutorial/exomiser-config/pfeiffer-phenopacket.yml \
---analysis /path/to/Exomiser-Tutorial/exomiser-config/pfeiffer-analysis.yml
+java -jar exomiser-cli-13.2.0.jar --sample examples/pfeiffer-phenopacket.yml \
+--analysis examples/exome-analysis.yml --output examples/output-options.yml  
 ```
-
 
 ### YAML job files
 
