@@ -425,14 +425,9 @@ Running locally:
 Assuming that you are within the `exomiser-cli-13.2.0` distribution folder
 
 ```shell
-java -jar exomiser-cli-13.2.0.jar --sample examples/pfeiffer-family.yml --analysis examples/exome-analysis.yml --output examples/output-options.yml
-`
-
-using the `--batch` command:
-
-```shell
 java -jar exomiser-cli-13.2.0.jar --batch examples/test-analysis-batch-commands.txt
 ```
+
 The advantage of this is that a single command will be able to analyse many samples in far less time than starting a new JVM for each as there will be no start-up penalty after the initial start and the Java JIT compiler will be able to take advantage of a longer-running process to optimise the runtime code. For maximum throughput on a cluster consider splitting your batch jobs over multiple nodes.
 
 
