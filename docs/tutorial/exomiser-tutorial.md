@@ -44,8 +44,7 @@ Otherwise, visit the links, download the data in your own `exomiser-data` direct
 Your `Exomiser-Tutorial` directory should now be structured as follows:
 
 ```
-.
-└── Exomiser-Tutorial
+Exomiser-Tutorial
     ├── exomiser-config
     ├── exomiser-results
     ├── exomiser-data
@@ -160,13 +159,37 @@ metaData:
 
 #### Docker command
 ```shell
-$ docker
+docker run -it -v "/path/to/Exomiser-Tutorial/exomiser-data:/exomiser-data" \
+-v "/path/to/Exomiser-Tutorial/exomiser-config/:/exomiser" \
+-v "/path/to/Exomiser-Tutorial/exomiser-results:/results" \
+exomisertutorial/exomiser-cli:13.2.0 \
+--sample /exomiser/pfeiffer-phenopacket.yml \
+--analysis /exomiser/pfeiffer-analysis.yml \
+--spring.config.location=/exomiser/application.properties
+```
+
+or
+
+```shell
+docker run -it -v "/path/to/Exomiser-Tutorial/exomiser-data:/exomiser-data" \
+-v "/path/to/Exomiser-Tutorial/exomiser-config/:/exomiser" \
+-v "/path/to/Exomiser-Tutorial/exomiser-results:/results" \
+exomisertutorial/exomiser-cli:13.2.0 \
+--analysis /exomiser/pfeiffer-job-phenopacket.yml \
+--spring.config.location=/exomiser/application.properties
 ```
 
 #### CLI command
 
 ```shell
-$ java -jar exomiser-cli-13.2.0.jar --sample examples/pfeiffer-phenopacket.yml --vcf examples/Pfeiffer.vcf.gz --assembly hg19
+$ java -jar exomiser-cli-13.2.0.jar --sample /path/to/Exomiser-Tutorial/exomiser-config/pfeiffer-phenopacket.yml \
+--analysis /path/to/Exomiser-Tutorial/exomiser-config/pfeiffer-analysis.yml
+```
+
+or (combine, *phenopacket*, *analysis* and *outputoptions* in one `pfeiffer-job-phenopacket.yml`)
+
+```shell
+$ java -jar exomiser-cli-13.2.0.jar --analysis /path/to/Exomiser-Tutorial/exomiser-config/peiffer-job-phenopacket.yml
 ```
 
 ### YAML job files
@@ -318,11 +341,17 @@ outputOptions:
 
 #### Docker command
 ```shell
-docker
+docker run -it -v '/path/to/Exomiser-Tutorial/exomiser-data:/exomiser-data' \
+-v '/path/to/Exomiser-Tutorial/exomiser-config/:/exomiser' \
+-v '/path/to/Exomiser-Tutorial/exomiser-results:/results' \
+exomiser/exomiser-cli:13.2.0  \
+--analysis /exomiser/test-analysis-exome.yml \
+--spring.config.location=/exomiser/application.properties
 ```
+
 #### CLI command
 ```shell
-$ java -jar exomiser-cli-13.2.0.jar --analysis examples/test-analysis-exome.yml
+$ java -jar exomiser-cli-13.2.0.jar --analysis /path/to/Exomiser-Tutorial/exomiser-config/test-analysis-exome.yml
 ```
 
 ### Multi-sample VCFs
@@ -393,29 +422,73 @@ metaData:
 
 #### Docker command
 
+```shell
+docker run -it -v '/path/to/Exomiser-Tutorial/exomiser-data:/exomiser-data' \
+-v '/path/to/Exomiser-Tutorial/exomiser-config/:/exomiser' \
+-v '/path/to/Exomiser-Tutorial/exomiser-results:/results' \
+exomisertutorial/exomiser-cli:13.2.0 \
+--sample /exomiser/more-examples/pfeiffer-family.yml \
+--ped /exomiser/more-examples/pfeiffer-quartet.ped \
+--spring.config.location=/exomiser/application.properties 
+```
+
 #### CLI Command
+[//]: # (1.: If we are using all those other files. We should provide them in GoogleDrive examples and show the full path)
 
 With a phenopacket containing PED data:
 
 ```shell
-$ java -jar exomiser-cli-13.2.0.jar --sample examples/pfeiffer-family.yml --vcf examples/Pfeiffer-quartet.vcf.gz --assembly hg19
+$ java -jar exomiser-cli-13.2.0.jar --sample /path/to/Exomiser-Tutorial/exomiser-config/pfeiffer-family.yml
 ```
 
 With a PED file:
+
+#### Docker command
+
 ```shell
-$ java -jar exomiser-cli-13.2.0.jar --sample examples/pfeiffer-family.yml --ped examples/Pfeiffer-quartet.ped --vcf examples/Pfeiffer-quartet.vcf.gz --assembly hg19
+docker run -it -v '/path/to/Exomiser-Tutorial/exomiser-data:/exomiser-data' \
+-v '/path/to/Exomiser-Tutorial/exomiser-config/:/exomiser' \
+-v '/path/to/Exomiser-Tutorial/exomiser-results:/results' \
+exomisertutorial/exomiser-cli:13.2.0 \
+--sample /exomiser/more-examples/pfeiffer-family.yml \
+--ped /exomiser/more-examples/pfeiffer-quartet.ped \
+--spring.config.location=/exomiser/application.properties 
+```
+
+#### CLI Command
+
+```shell
+$ java -jar exomiser-cli-13.2.0.jar --sample /path/to/Exomiser-Tutorial/exomiser-config/pfeiffer-family.yml \
+ --ped /path/to/Exomiser-Tutorial/exomiser-config/Pfeiffer-quartet.ped 
 ```
 
 
 ### Running large jobs
 #### Batch Jobs
 
-The above commands can be added to a batch file for example in the file exomiser-cli-13.2.0/examples/test-analysis-batch-commands.txt
+[//]: # (1.: If we are using all those other files. We should provide them in GoogleDrive examples and show the full path)
 
-then run using the --batch command:
+The above commands can be added to a batch file for example in the file `Exomiser-Tutorial/exomiser-config/test-analysis-batch-commands.txt`
+Using it with docker we recommend creating a new directory for the batch files and mounting that to the docker container.
+
+#### Docker Command
 
 ```shell
-$ java -jar exomiser-cli-13.2.0.jar --batch path/to/exomiser-cli-13.1.0/examples/test-analysis-batch-commands.txt
+docker run -it -v '/path/to/Exomiser-Tutorial/exomiser-data:/exomiser-data' \
+-v '/path/to/Exomiser-Tutorial/exomiser-config/:/exomiser' \
+-v '/path/to/Exomiser-Tutorial/exomiser-results:/results' \
+-v '/path/to/Exomiser-Tutorial/exomiser-batch-files:/batch-files' \
+exomisertutorial/exomiser-cli:13.2.0 \
+-batch /batch-files/test-analysis-batch-commands.txt
+--spring.config.location=/exomiser/application.properties 
+```
+
+#### CLI Command
+
+using the `--batch` command:
+
+```shell
+$ java -jar exomiser-cli-13.2.0.jar --batch Exomiser-Tutorial/exomiser-config/test-analysis-batch-commands.txt
 ```
 The advantage of this is that a single command will be able to analyse many samples in far less time than starting a new JVM for each as there will be no start-up penalty after the initial start and the Java JIT compiler will be able to take advantage of a longer-running process to optimise the runtime code. For maximum throughput on a cluster consider splitting your batch jobs over multiple nodes.
 
