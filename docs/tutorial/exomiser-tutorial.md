@@ -100,9 +100,9 @@ unzip '2302_*.zip' -d exomiser-cli-13.2.0/data
 
 ```
 
-### Configuring the application.properties 
+### Configuring the application.properties
 
-The application.properties has to be updated to point to the correct location of the data. For the purpose of this tutorial 
+The application.properties has to be updated to point to the correct location of the data. For the purpose of this tutorial
 this is already pointing to the mounted directory inside the docker container. (`exomiser.data-directory=/exomiser-data`)
 
 Also you want to make sure to edit the file to use the right data versions.
@@ -573,7 +573,7 @@ After double-clicking on the Docker.dmg a new window will come up:
 
 Drag and drop the Docker app into your `/Applications` folder.
 
-![Mac Image Four ](./resources/exomiser_tutorial_images/4_mac.jpg)
+[//]: # ([Mac Image Four ](./resources/exomiser_tutorial_images/4_mac.jpg))
 
 Double-click on the Docker symbol.
 
