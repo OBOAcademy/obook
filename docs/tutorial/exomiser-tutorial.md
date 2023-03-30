@@ -60,15 +60,19 @@ Exomiser-Tutorial
 
 ## Outline of the Tutorial
 
-- [Exomiser Overview](#exomiser-overview)
-- [Exomiser Installation](#exomiser-installation)
+- [Exomiser overview](#exomiser-overview)
+- [Exomiser installation](#exomiser-installation)
     - [via Docker](#via-docker)
     - [via Windows](#via-windows)
     - [via Linux/Mac](#via-linux)
+    - [Configuring the application.properties](#application-properties)
 - [Running Exomiser](#running-exomiser)
     - [Using phenopackets](#using-phenopackets)
     - [Analysis settings](#analysis-settings)
-
+    - [Running via Docker](#run-docker)
+    - [Running locally](#run-local)
+    - [Analysing multi-sample VCF files](#multi-sample)
+    - [Running large jobs (batch)](#large-jobs)
 - [Results](#results)
 
 ## Exomiser Overview
