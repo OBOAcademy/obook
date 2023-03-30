@@ -72,7 +72,7 @@ Exomiser-Tutorial
     - [Running via Docker](#running-via-docker)
     - [Running locally](#running-locally)
     - [Analysing multi-sample VCF files](#analysing-multi-sample-vcf-files)
-    - [Running large jobs (batch)](#running-large-jobsbatch)
+    - [Running large jobs (batch)](#running-large-jobs-batch)
 - [Results](#results)
 
 ## Exomiser Overview
