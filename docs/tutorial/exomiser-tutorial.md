@@ -392,6 +392,7 @@ docker run -it -v '/path/to/Exomiser-Tutorial/exomiser-data:/exomiser-data' \
 -v '/path/to/Exomiser-Tutorial/exomiser-results:/results' \
 exomisertutorial/exomiser-cli:13.2.0 \
 --sample /exomiser/pfeiffer-family.yml \
+--analysis /exomiser/pfeiffer-analysis.yml \
 --spring.config.location=/exomiser/application.properties
 ```
 
@@ -403,36 +404,11 @@ Assuming that you are within the `exomiser-cli-13.2.0` distribution folder
 java -jar exomiser-cli-13.2.0.jar --sample examples/pfeiffer-family.yml --analysis examples/exome-analysis.yml --output examples/output-options.yml
 ```
 
-With a PED file:
+### Running large jobs (batch)
 
-#### Docker command
+The above commands can be added to a batch file for example in the file `Exomiser-Tutorial/exomiser-config/test-analysis-batch-commands.txt`. Using it with Docker we recommend creating a new directory for the batch files and mounting that to the docker container.
 
-```shell
-docker run -it -v '/path/to/Exomiser-Tutorial/exomiser-data:/exomiser-data' \
--v '/path/to/Exomiser-Tutorial/exomiser-config/:/exomiser' \
--v '/path/to/Exomiser-Tutorial/exomiser-results:/results' \
-exomisertutorial/exomiser-cli:13.2.0 \
---sample /exomiser/pfeiffer-family.yml \
---ped /exomiser/pfeiffer-quartet.ped \
---spring.config.location=/exomiser/application.properties
-```
-
-#### CLI Command
-
-```shell
-java -jar exomiser-cli-13.2.0.jar --sample /path/to/Exomiser-Tutorial/exomiser-config/pfeiffer-family.yml \
- --ped /path/to/Exomiser-Tutorial/exomiser-config/Pfeiffer-quartet.ped
-```
-
-
-### Running large jobs
-#### Batch Jobs
-
-
-The above commands can be added to a batch file for example in the file `Exomiser-Tutorial/exomiser-config/test-analysis-batch-commands.txt`
-Using it with docker we recommend creating a new directory for the batch files and mounting that to the docker container.
-
-#### Docker Command
+Running via Docker:
 
 ```shell
 docker run -it -v '/path/to/Exomiser-Tutorial/exomiser-data:/exomiser-data' \
@@ -440,20 +416,25 @@ docker run -it -v '/path/to/Exomiser-Tutorial/exomiser-data:/exomiser-data' \
 -v '/path/to/Exomiser-Tutorial/exomiser-results:/results' \
 -v '/path/to/Exomiser-Tutorial/exomiser-batch-files:/batch-files' \
 exomisertutorial/exomiser-cli:13.2.0 \
--batch /batch-files/test-analysis-batch-commands.txt
+--batch /batch-files/test-analysis-batch-commands.txt
 --spring.config.location=/exomiser/application.properties
 ```
 
-#### CLI Command
+Running locally:
+
+Assuming that you are within the `exomiser-cli-13.2.0` distribution folder
+
+```shell
+java -jar exomiser-cli-13.2.0.jar --sample examples/pfeiffer-family.yml --analysis examples/exome-analysis.yml --output examples/output-options.yml
+`
 
 using the `--batch` command:
 
 ```shell
-java -jar exomiser-cli-13.2.0.jar --batch Exomiser-Tutorial/exomiser-config/test-analysis-batch-commands.txt
+java -jar exomiser-cli-13.2.0.jar --batch examples/test-analysis-batch-commands.txt
 ```
 The advantage of this is that a single command will be able to analyse many samples in far less time than starting a new JVM for each as there will be no start-up penalty after the initial start and the Java JIT compiler will be able to take advantage of a longer-running process to optimise the runtime code. For maximum throughput on a cluster consider splitting your batch jobs over multiple nodes.
 
-#### Running as an array
 
 ## Results
 
