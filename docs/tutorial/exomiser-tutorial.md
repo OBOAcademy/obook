@@ -317,7 +317,6 @@ Assuming that you are within the `exomiser-cli-13.2.0` distribution folder:
 java -jar exomiser-cli-13.2.0.jar --sample examples/pfeiffer-phenopacket.yml \
 --analysis examples/exome-analysis.yml --output examples/output-options.yml  
 ```
-If you do not specify any `--analysis` and `output` options, Exomiser will apply default settings. 
 
 #### Analysing multi-sample VCF files
 
