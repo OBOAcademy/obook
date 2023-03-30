@@ -88,7 +88,7 @@ docker pull exomisertutorial/exomiser-cli:latest # IF NOT CHANGED BY JULES
 
 The following shell script should work:
 
-```sh
+```shell
 # download the distribution (won't take long)
 wget https://data.monarchinitiative.org/exomiser/latest/exomiser-cli-13.2.0-distribution.zip
 # download the data (this is ~80GB and will take a while). If you only require a single assembly, only download the relevant file.
@@ -97,14 +97,14 @@ wget https://data.monarchinitiative.org/exomiser/latest/2302_phenotype.zip
 # unzip the distribution and data files - this will create a directory called 'exomiser-cli-13.2.0' in the current working directory
 unzip exomiser-cli-13.2.0-distribution.zip
 unzip '2302_*.zip' -d exomiser-cli-13.2.0/data
+
+```
+
+### Configuring the application.properties
 # Check the application.properties are pointing to the correct versions
 # exomiser.hg19.data-version=2302
 # exomiser.hg38.data-version=2302
 # exomiser.phenotype.data-version=2302
-```
-
-### Configuring the application.properties
-
 ## Running Exomiser
 
 ### Phenopackets
