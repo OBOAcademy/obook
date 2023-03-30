@@ -1,11 +1,13 @@
 ## Tutorial: An introduction to Exomiser
 The Exomiser is a Java program that ranks potential rare Mendelian disease-causing variants from whole-exome or whole-genome sequencing data. Starting from a patient's VCF file and a set of phenotypes encoded using the Human Phenotype Ontology (HPO), it will annotate, filter and prioritise likely causative variants. The program does this based on user-defined criteria such as a variant's predicted pathogenicity, frequency of occurrence in a population and also how closely the given patient's phenotype matches the known phenotype of diseased genes from human and model organism data.
 
-In this tutorial, we will learn how to install and run Exomiser with Docker, and how to examine the results in various output formats detailing the predicted causative genes and variants.
+In this tutorial, we will learn how to install and run Exomiser with Docker, and how to examine the results in various output formats detailing the predicted causative genes and variants. If you prefer to working locally, instructions are also provided below for Windows and Linux/Mac users.  
 
 The complete Exomiser documentation can be found [here](https://exomiser.readthedocs.io/en/latest/)
 
 Check out the GitHub repo [here](https://github.com/exomiser/Exomiser)
+
+Please note this tutorial is up to date with the current latest release 13.2.0 and data version up to 2302 (Feb 2023).
 
 ## Prerequisites
 You know:
@@ -68,36 +70,35 @@ Exomiser-Tutorial
 
 ## Exomiser Overview
 
-For a quick overview of Exomiser take a look at the slides located in the [Google Drive](https://drive.google.com/drive/u/2/folders/1DynxpvOTecvAXv3uYtJ0d2-A4NjQyyfN).
+For a quick overview of Exomiser take a look at the slides located in the [Google Drive](https://drive.google.com/drive/u/2/folders/1DynxpvOTecvAXv3uYtJ0d2-A4NjQyyfN) or [GITHUB REPO](add link...).
 
 ## Exomiser Installation
 
 ### via Docker
 
 ```shell
-docker pull exomiser/exomiser-cli:latest
-docker pull exomisertutorial/exomiser-cli:latest # IF NOT CHANGED BY JULES
+docker pull exomiser/exomiser-cli:13.2.0
 ```
 
 ### via Windows
 
 1. Install [7-Zip](http://www.7-zip.org/) for unzipping the archive files. The built-in archiving software has issues extracting the zip files.
-2. Download the distribution from the [GitHub](https://github.com/exomiser/Exomiser/releases/tag/13.2.0)
-3. Download the data files from [Monarch](https://data.monarchinitiative.org/exomiser/latest)
+2. Download the distribution from [GitHub](https://github.com/exomiser/Exomiser/releases/download/13.2.0/exomiser-cli-13.2.0-distribution.zip)
+3. Download the variant and phenotype data files from [Monarch](https://data.monarchinitiative.org/exomiser/latest)
 4. Extract the distribution files by right-clicking exomiser-cli-13.2.0-distribution.zip and selecting 7-Zip > Extract Here
 5. Extract the data files (e.g. 2302_phenotype.zip, 2302_hg19.zip) by right-clicking the archive and selecting 7-Zip > Extract files… into the exomiser data directory. By default, exomiser expects this to be ‘exomiser-cli-13.2.0/data’, but this can be changed in the application.properties
 
-### via Linux
+### via Linux/Mac
 
 The following shell script should work:
 
 ```shell
 # download the distribution (won't take long)
-wget https://data.monarchinitiative.org/exomiser/latest/exomiser-cli-13.2.0-distribution.zip
-# download the data (this is ~80GB and will take a while). If you only require a single assembly, only download the relevant file.
+wget https://github.com/exomiser/Exomiser/releases/download/13.2.0/exomiser-cli-13.2.0-distribution.zip
+# download the data (this is ~80GB and will take a while). If you only require a single assembly, only download the relevant files.
 wget https://data.monarchinitiative.org/exomiser/latest/2302_hg19.zip
 wget https://data.monarchinitiative.org/exomiser/latest/2302_phenotype.zip
-# unzip the distribution and data files - this will create a directory called 'exomiser-cli-13.2.0' in the current working directory
+# unzip the distribution and data files - this will create a directory called 'exomiser-cli-13.2.0' in the current working directory (with examples and application.properties)
 unzip exomiser-cli-13.2.0-distribution.zip
 unzip '2302_*.zip' -d exomiser-cli-13.2.0/data
 
@@ -105,13 +106,10 @@ unzip '2302_*.zip' -d exomiser-cli-13.2.0/data
 
 ### Configuring the application.properties
 
-The application.properties has to be updated to point to the correct location of the data. For the purpose of this tutorial
-this is already pointing to the mounted directory inside the docker container. (`exomiser.data-directory=/exomiser-data`)
+The application.properties has to be updated to point to the correct location of the Exomiser data. For the purpose of this tutorial, this is already sorted, pointing to the mounted directory inside the docker container `exomiser.data-directory=/exomiser-data`.
 
-Also you want to make sure to edit the file to use the right data versions.
+Also you want to make sure to edit the file to use the correct data version (currently 2302):
 ```shell
-# Check the application.properties are pointing to the correct versions
-
  exomiser.hg19.data-version=2302
  exomiser.hg38.data-version=2302
  exomiser.phenotype.data-version=2302
@@ -119,7 +117,7 @@ Also you want to make sure to edit the file to use the right data versions.
 
 ## Running Exomiser
 
-
+For this tutorial, we will focus on running Exomiser on a single sample VCF file with 
 ### Phenopackets
 
 It is recommended to provide Exomiser with the input sample as a Phenopacket. Exomiser will accept this in either JSON or YAML format.
