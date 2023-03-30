@@ -172,7 +172,7 @@ metaData:
 
 > **_NOTE:_** This is an example of a v1.0 phenopacket, there is a more recent release of v2.0. Exomiser can run phenopackets built with either v1.0 or v2.0 schema. You can find out more about the v2.0 phenopacket schema and how to build one with Python or Java [here](https://phenopacket-schema.readthedocs.io/en/latest/). To convert a phenopacket v1.0 to v2.0, you can use [phenopacket-tools](https://github.com/phenopackets/phenopacket-tools).
 
-### Analyisis settings
+### Analysis settings
 Below are the default analysis settings from `pfeiffer-analysis.yml` that we will use in our tutorial:
 
 ```yaml
