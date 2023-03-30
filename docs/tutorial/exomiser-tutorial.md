@@ -1,4 +1,4 @@
-## Tutorial: An introduction to Exomiser
+## Tutorial: an introduction to Exomiser
 Exomiser is a Java program that ranks potential rare Mendelian disease-causing variants from whole-exome or whole-genome sequencing data. Starting from a patient's VCF file and a set of phenotypes encoded using the Human Phenotype Ontology (HPO), it will annotate, filter and prioritise likely causative variants. The program does this based on user-defined criteria such as a variant's predicted pathogenicity, frequency of occurrence in a population and also how closely the given patient's phenotype matches the known phenotype of diseased genes from human and model organism data.
 
 In this tutorial, we will learn how to install and run Exomiser with Docker, and how to examine the results in various output formats detailing the predicted causative genes and variants. If you prefer to working locally, instructions are also provided below for Windows and Linux/Mac users.  
@@ -58,7 +58,7 @@ Exomiser-Tutorial
       └── exomiser-tutorial-slides
 ```
 
-## Outline of the Tutorial
+## Outline of the tutorial
 
 - [Exomiser overview](#exomiser-overview)
 - [Exomiser installation](#exomiser-installation)
