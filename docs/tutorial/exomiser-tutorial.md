@@ -111,18 +111,16 @@ The application.properties has to be updated to point to the correct location of
 Also you want to make sure to edit the file to use the correct data version (currently 2302):
 ```shell
  exomiser.hg19.data-version=2302
- exomiser.hg38.data-version=2302
  exomiser.phenotype.data-version=2302
 ```
 
 ## Running Exomiser
 
-For this tutorial, we will focus on running Exomiser on a single sample VCF file with 
-### Phenopackets
+For this tutorial, we will focus on running Exomiser on a single whole-exome sample. Additional instructions for running Exomiser on multi-sample data and large jobs are also provided below.
 
-It is recommended to provide Exomiser with the input sample as a Phenopacket. Exomiser will accept this in either JSON or YAML format.
+### Using phenopackets
 
-e.g.
+It is recommended to provide Exomiser with the input sample as a Phenopacket. Exomiser will accept this in either JSON or YAML format. We will use the example `pfeiffer-phenopacket.yml` below:
 
 ```yaml
 id: manuel
@@ -149,7 +147,7 @@ phenotypicFeatures:
       id: HP:0000244
       label: Brachyturricephaly
 htsFiles:
-  - uri: examples/Pfeiffer.vcf
+  - uri: exomiser/Pfeiffer.vcf
     htsFormat: VCF
     genomeAssembly: hg19
 metaData:
