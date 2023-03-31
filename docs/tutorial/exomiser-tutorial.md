@@ -7,14 +7,14 @@ criteria such as a variant's predicted pathogenicity, frequency of occurrence in
 given patient's phenotype matches the known phenotype of diseased genes from human and model organism data.
 
 In this tutorial, we will learn how to install and run Exomiser with Docker, and how to examine the results in various
-output formats detailing the predicted causative genes and variants. If you prefer to working locally, instructions are
+output formats detailing the predicted causative genes and variants. If you prefer to work locally, instructions are
 also provided below for Windows and Linux/Mac users.
 
 The complete Exomiser documentation can be found [here](https://exomiser.readthedocs.io/en/latest/)
 
 Check out the GitHub repo [here](https://github.com/exomiser/Exomiser)
 
-Please note this tutorial is up to date with the current latest release 13.2.0 and data version up to 2302 (Feb 2023).
+Please note this tutorial is up-to-date with the current latest release 13.2.0 and data version up to 2302 (Feb 2023).
 
 ## Prerequisites
 
@@ -618,8 +618,8 @@ In case you get an error message like this, please ensure you have downloaded th
 
 ![Mac Image Eight ](../images/exomiser_tutorial_images/8_mac.jpg)
 
-Now, whenever you want to pull images make sure that Docker is running in the background. Otherwise you may get an
-error stating its not able to connect to the Docker deamon.
+Now, whenever you want to pull images make sure that Docker is running in the background. Otherwise, you may get an
+error stating it's not able to connect to the Docker deamon.
 
 ## <a id="docker-windows"></a>Docker for Windows
 
