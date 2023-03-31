@@ -28,7 +28,23 @@ docker pull exomiser/exomiser-cli:13.2.0
   from our GoogleDrive. Alternatively:
 
 ```shell
-wget https://github.com/iQuxLE/Exomiser-Tutorial/blob/main/Exomiser-Tutorial.zip
+# download the data via
+wget https://github.com/iQuxLE/Exomiser-Tutorial/raw/main/Exomiser-Tutorial.zip
+# OR clone the repository
+git clone https://github.com/iQuxLE/Exomiser-Tutorial.git
+
+# unzip
+unzip Exomiser-Tutorial.zip
+```
+
+
+Since the VCF files for parts of the example data are a bit larger, you need to download the following seperately and put it into the Exomiser-Tutorial folder.
+
+```shell
+# download 
+wget https://github.com/iQuxLE/Exomiser-Tutorial/raw/main/pfeiffer-family-vcf.zip
+# unzip
+unzip pfeiffer-family-vcf.zip -d Exomiser-Tutorial/exomiser-config/
 ```
 
 The `Exomiser-Tutorial` folder contains a directory called `exomiser-config` (with all the analysis files)
