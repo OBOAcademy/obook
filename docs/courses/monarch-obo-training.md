@@ -33,7 +33,7 @@ _Note: this is tentative and subject to change_
 | 2023/05/16 | Cancelled (Monarch-Cpath workshop) | | |
 | 2023/05/02 | Cancelled (No meeting week) |   | |
 | 2023/04/18 | Overview of Protege 5.6 - the latest features | Tutorial by Damien Goutte-Gattat  | |
-| 2023/04/04 | Introduction to Exomiser | Tutorial by Valentina, Yasemin and Carlo from QMUL.  | |
+| 2023/04/04 | [Introduction to Exomiser](../tutorial/exomiser-tutorial.md) | Tutorial by Valentina, Yasemin and Carlo from QMUL.  | |
 | 2023/03/21 | Introduction to Wikidata | Tutorial by experts in the field Andra Waagmeester and Tiago Lubiana  | [Here](https://youtu.be/KonJqKquUSU) |
 | 2023/03/07 | OAK for the Ontology Engineering community | Chris Mungall tutorial | [Here](https://youtu.be/zO6tS7gZtvw) |
 | 2023/02/21 | OBO Academy Clinic | Bring your ontology issues and questions to discuss with Sabrina and Nico! Attend the [Ontology Summit Seminars](https://oboacademy.github.io/obook/courses/ontology-summit-2023/) instead! | |
