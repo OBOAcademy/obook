@@ -112,13 +112,10 @@ docker pull exomiser/exomiser-cli:13.2.0
 ### via Windows
 
 1. Install [7-Zip](http://www.7-zip.org/) for unzipping the archive files. The built-in archiving software has issues extracting the zip files.
-2. Download the `exomiser-cli-13.2.0-distribution.zip` distribution from [Monarch](https://data.monarchinitiative.org/exomiser/latest/exomiser-cli-13.2.0-distribution.zip)
-3. Download the variant `2302_hg19.zip` and phenotype `2302_phenotype.zip` data files from [Monarch](https://data.monarchinitiative.org/exomiser/latest)
-4. Extract the distribution files by right-clicking exomiser-cli-13.2.0-distribution.zip and selecting 7-Zip > Extract
-   Here
-5. Extract the data files (e.g. 2302_phenotype.zip, 2302_hg19.zip) by right-clicking the archive and selecting 7-Zip >
-   Extract files… into the exomiser data directory. By default, exomiser expects this to be ‘exomiser-cli-13.2.0/data’,
-   but this can be changed in the application.properties
+2. Download the `exomiser-cli-13.2.0-distribution.zip` distribution from [Monarch](https://data.monarchinitiative.org/exomiser/latest/exomiser-cli-13.2.0-distribution.zip).
+3. Download the variant `2302_hg19.zip` and phenotype `2302_phenotype.zip` data files from [Monarch](https://data.monarchinitiative.org/exomiser/latest).
+4. Extract the distribution files by right-clicking `exomiser-cli-13.2.0-distribution.zip` and selecting 7-Zip > Extract Here
+5. Extract the data files (e.g. `2302_phenotype.zip`, `2302_hg19.zip`) by right-clicking the archive and selecting 7-Zip > Extract files… into the exomiser data directory. By default, exomiser expects this to be ‘exomiser-cli-13.2.0/data’, but this can be changed in the application.properties.
 
 ### via Linux/Mac
 
