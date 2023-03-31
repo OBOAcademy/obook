@@ -16,9 +16,7 @@ You know:
 
 You have:
 
-- Docker installed and running on your machine. Check out this simple guide to set
-  up [Docker for Windows](#docker-windows)
-  or [Docker for Mac](#docker-mac)
+- Docker installed and running on your machine. Check out this simple guide to set up [Docker for Windows](#docker-windows) or [Docker for Mac](#docker-mac).
 
 - We recommend to have Exomiser installed via Docker prior to the tutorial. Open a terminal and run the command below:
 
