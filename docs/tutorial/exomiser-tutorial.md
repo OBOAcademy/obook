@@ -492,7 +492,7 @@ In our tutorial, we requested HTML, JSON, TSV_VARIANT and TSV_GENE output format
 
 ### JSON
 
-The JSON file represents the most accurate representation of the data, as it is referenced internally by Exomiser. As
+The JSON file represents the most accurate representation of the results, as it is referenced internally by Exomiser. As
 such, we don’t provide a schema for this, but it has been pretty stable and breaking changes will only occur with major
 version changes to the software. Minor additions are to be expected for minor releases, as per the SemVer specification.
 
@@ -528,8 +528,8 @@ for result in exomiser_result:
 
 ### TSV VARIANTS
 
-In the variants.tsv file it is possible for a variant, like a gene, to appear multiple times, depending on the MOI it is
-compatible with. For example in the example below MUC6 has two variants ranked 7th under the AD model and two ranked 8th
+In the `Pfeiffer-hiphive-exome-PASS_ONLY.variants.tsv` file it is possible for a variant, like a gene, to appear multiple times, depending on the MOI it is
+compatible with. For example, in the excerpt of the file below, MUC6 has two variants ranked 7th under the AD model and two ranked 8th
 under an AR (compound heterozygous) model. In the AD case the CONTRIBUTING_VARIANT column indicates whether the variant
 was (1) or wasn't (0) used for calculating the EXOMISER_GENE_COMBINED_SCORE and EXOMISER_GENE_VARIANT_SCORE.
 
