@@ -37,7 +37,7 @@ docker pull exomiser/exomiser-cli:13.2.0
   from our GoogleDrive. Alternatively:
 
 ```shell
-wget ADD REPO LINK
+wget https://github.com/iQuxLE/Exomiser-Tutorial/blob/main/Exomiser-Tutorial.zip
 ```
 
 The `Exomiser-Tutorial` folder contains a directory called `exomiser-config` (with all the analysis files)
@@ -106,7 +106,7 @@ Exomiser-Tutorial
 
 For a quick overview of Exomiser take a look at the slides located in
 the [Google Drive](https://drive.google.com/drive/u/2/folders/1DynxpvOTecvAXv3uYtJ0d2-A4NjQyyfN)
-or [GITHUB REPO](add link...).
+or [GITHUB REPO](https://github.com/iQuxLE/Exomiser-Tutorial).
 
 ## Exomiser installation
 
