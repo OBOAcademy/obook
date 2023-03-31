@@ -24,8 +24,7 @@ You have:
 docker pull exomiser/exomiser-cli:13.2.0
 ```
 
-- [Exomiser-Tutorial files](https://drive.google.com/drive/u/2/folders/1DynxpvOTecvAXv3uYtJ0d2-A4NjQyyfN) downloaded
-  from our GoogleDrive. Alternatively:
+- [Exomiser-Tutorial files](https://drive.google.com/drive/u/2/folders/1DynxpvOTecvAXv3uYtJ0d2-A4NjQyyfN) downloaded from our GoogleDrive. Alternatively:
 
 ```shell
 # download the data via
@@ -36,9 +35,7 @@ git clone https://github.com/iQuxLE/Exomiser-Tutorial.git
 # unzip
 unzip Exomiser-Tutorial.zip
 ```
-
-
-Since the VCF files for parts of the example data are a bit larger, you need to download the following separately and put it into the `Exomiser-Tutorial` folder.
+Since the VCF files for parts of the example data are relatively large, you need to download the following separately and put it into the `Exomiser-Tutorial` folder.
 
 ```shell
 # download
@@ -47,7 +44,7 @@ wget https://github.com/iQuxLE/Exomiser-Tutorial/raw/main/pfeiffer-family-vcf.zi
 unzip pfeiffer-family-vcf.zip -d Exomiser-Tutorial/exomiser-config/
 ```
 
-The `Exomiser-Tutorial` folder contains a directory called `exomiser-config` (with all the analysis files)
+The `Exomiser-Tutorial` folder contains a directory called `exomiser-config` (with all the VCF and analysis files)
 and `exomiser-overview` (with some introductory slides).
 
 - Importantly, we ***highly*** recommend downloading the Exomiser data prior to the tutorial in order to follow along.
