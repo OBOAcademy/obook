@@ -113,12 +113,8 @@ docker pull exomiser/exomiser-cli:13.2.0
 
 ### via Windows
 
-<<<<<<< HEAD
 1. Install [7-Zip](http://www.7-zip.org/) for unzipping the archive files. The built-in archiving software has issues extracting the zip files.
 2. Download the distribution from [Monarch](https://data.monarchinitiative.org/exomiser/latest/exomiser-cli-13.2.0-distribution.zip)
-1. Install [7-Zip](http://www.7-zip.org/) for unzipping the archive files. The built-in archiving software has issues
-   from [GitHub](https://github.com/exomiser/Exomiser/releases/download/13.2.0/exomiser-cli-13.2.0-distribution.zip)
->>>>>>> d7673225b26b9f98eec887a3abd0205fde6e2d1f
 3. Download the variant and phenotype data files from [Monarch](https://data.monarchinitiative.org/exomiser/latest)
 4. Extract the distribution files by right-clicking exomiser-cli-13.2.0-distribution.zip and selecting 7-Zip > Extract
    Here
@@ -501,7 +497,7 @@ Depending on the output options provided, Exomiser will write out at least an HT
 
 As a general rule, all output files contain a ranked list of genes and variants with the top-ranked gene/variant displayed first. The exception being the VCF output (if requested in the output options) which, since version 13.1.0, is sorted according to VCF convention and tabix indexed.
 
-In our tutorial, we requested HTML, JSON, TSV_VARIANT and TSV_GENE output formats which are briefly outlined below. 
+In our tutorial, we requested HTML, JSON, TSV_VARIANT and TSV_GENE output formats which are briefly outlined below.
 =======
 Depending on the output options provided, Exomiser will write out at least an HTML and JSON results file in the results
 subdirectory of the Exomiser installation.
@@ -544,12 +540,12 @@ for result in exomiser_result:
   for moi in result["geneScores"]:  # iterating over all modes of inheritance
     if "contributingVariants" in moi:  #  checking if there is evidence of contributing variants
         for cv in moi["contributingVariants"]:  # iterating over all contributing variants
-          variant_results.append({"chromosome": cv["contigName"], 
+          variant_results.append({"chromosome": cv["contigName"],
                                   "start_pos": cv["start"],
                                   "end_pos": cv["end"],
                                   "ref_allele": cv["ref"],
                                   "alt_allele": cv["alt"]})
-    
+
 ```
 
 ### TSV VARIANTS
