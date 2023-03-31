@@ -140,18 +140,10 @@ unzip '2302_*.zip' -d exomiser-cli-13.2.0/data
 
 ### Configuring the application.properties
 
-<<<<<<< HEAD
 The application.properties file needs to be updated to point to the correct location of the Exomiser data. For the purpose of this tutorial, this is already sorted, pointing to the mounted directory inside the Docker container `exomiser.data-directory=/exomiser-data`.
 
 Also, you want to make sure to edit the file to use the correct data version (currently 2302):
-=======
-The application.properties has to be updated to point to the correct location of the Exomiser data. For the purpose of
-this tutorial, this is already sorted, pointing to the mounted directory inside the Docker
-container `exomiser.data-directory=/exomiser-data`.
 
-Also you want to make sure to edit the file to use the correct data version (currently 2302):
-
->>>>>>> d7673225b26b9f98eec887a3abd0205fde6e2d1f
 ```shell
  exomiser.hg19.data-version=2302
  exomiser.phenotype.data-version=2302
@@ -159,12 +151,7 @@ Also you want to make sure to edit the file to use the correct data version (cur
 
 ## Running Exomiser
 
-<<<<<<< HEAD
 For this tutorial, we will focus on running Exomiser on a single-sample (whole-exome) VCF file. Additional instructions for running Exomiser on multi-sample VCF data and large jobs are also provided below.
-=======
-For this tutorial, we will focus on running Exomiser on a single-sample whole-exome VCF file. Additional instructions
-for running Exomiser on multi-sample VCF data and large jobs are also provided below.
->>>>>>> d7673225b26b9f98eec887a3abd0205fde6e2d1f
 
 ### Using phenopackets
 
