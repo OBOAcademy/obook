@@ -489,25 +489,25 @@ In the genes.tsv file it is possible for a gene to appear multiple times, depend
 
 Follow this [link](https://docs.docker.com/desktop/install/mac-install/) and download the Docker.dmg for your operating system.
 
-![Mac Image One ](./resources/exomiser_tutorial_images/1_mac.jpg)
+![Mac Image One ](../images/exomiser_tutorial_images/1_mac.jpg)
 
 The Docker.dmg will be found in your `/Downloads` directory.
 
-![Mac Image Two ](./resources/exomiser_tutorial_images/2_mac.jpg)
+![Mac Image Two ](../images/exomiser_tutorial_images/2_mac.jpg)
 
 After double-clicking on the Docker.dmg a new window will come up:
 
-![Mac Image Three ](./resources/exomiser_tutorial_images/3_mac.jpg)
+![Mac Image Three ](../images/exomiser_tutorial_images/3_mac.jpg)
 
 Drag and drop the Docker app into your `/Applications` folder.
 Double-click on the Docker symbol.
 Docker Desktop will start in the background, after you allow it to be opened.
 
-![Mac Image Six ](./resources/exomiser_tutorial_images/6_mac.jpg)
+![Mac Image Six ](../images/exomiser_tutorial_images/6_mac.jpg)
 
 Additionally, this window will come up to agree the Docker subscription service agreement.
 
-![Mac Image Seven ](./resources/exomiser_tutorial_images/7_mac.jpg)
+![Mac Image Seven ](../images/exomiser_tutorial_images/7_mac.jpg)
 
 After running the installation **restart** your terminal and check the Docker installation again from inside your terminal with:
 ```shell
@@ -518,7 +518,7 @@ and the error should be fixed.
 
 In case you get an error message like this, please ensure you have downloaded the correct `docker.dmg`.
 
-![Mac Image Eight ](./resources/exomiser_tutorial_images/8_mac.jpg)
+![Mac Image Eight ](../images/exomiser_tutorial_images/8_mac.jpg)
 
 Now, whenever you want to pull images make sure that Docker is running in the background. Otherwise you may get an
 error stating its not able to connect to the Docker deamon.
@@ -529,47 +529,47 @@ Follow this [link](https://docs.docker.com/desktop/install/windows-install/) and
 
 Inside your `/Downloads` directory, search for the Installer and double-click.
 
-![Windows Image One ](./resources/exomiser_tutorial_images/1_windows.jpg)
+![Windows Image One ](../images/exomiser_tutorial_images/1_windows.jpg)
 
 To run on Windows Docker requires a virtual machine. Docker recommends using WSL2.
 [More information on this can be found here](https://docs.docker.com/desktop/install/windows-install/).
 
-![Windows Image Two ](./resources/exomiser_tutorial_images/2_windows.jpg)
+![Windows Image Two ](../images/exomiser_tutorial_images/2_windows.jpg)
 
 Click “Ok” and wait a bit.
 
-![Windows Image Three ](./resources/exomiser_tutorial_images/3_windows.jpg)
+![Windows Image Three ](../images/exomiser_tutorial_images/3_windows.jpg)
 
 Now you will have to restart your computer.
 
-![Windows Image Four ](./resources/exomiser_tutorial_images/4_windows.jpg)
+![Windows Image Four ](../images/exomiser_tutorial_images/4_windows.jpg)
 
 After restarting, Docker should start automatically and the Service Agreement will come up, which you will have to agree to use Docker:
 
-![Windows Image Five ](./resources/exomiser_tutorial_images/5_windows.jpg)
+![Windows Image Five ](../images/exomiser_tutorial_images/5_windows.jpg)
 
 If the Docker desktop app is showing this warning upon start, do not click “Restart”, yet. Instead, follow the link and install the kernel update.
 
-![Windows Image Six ](./resources/exomiser_tutorial_images/6_windows.jpg)
+![Windows Image Six ](../images/exomiser_tutorial_images/6_windows.jpg)
 
 The link should point you to an address with a separate download link.
 
-![Windows Image Seven ](./resources/exomiser_tutorial_images/7_windows.jpg)
+![Windows Image Seven ](../images/exomiser_tutorial_images/7_windows.jpg)
 
 Start and finish the installation for WSL.
 
-![Windows Image Eight ](./resources/exomiser_tutorial_images/8_windows.jpg)
+![Windows Image Eight ](../images/exomiser_tutorial_images/8_windows.jpg)
 
 If you still have the Docker Desktop dialog window open in the background, click on Restart. Otherwise, just restart your computer as you normally do.
 
-![Windows Image Nine ](./resources/exomiser_tutorial_images/9_windows.jpg)
+![Windows Image Nine ](../images/exomiser_tutorial_images/9_windows.jpg)
 
 If Docker Desktop did not start on its own, simply open it from the shortcut on your Desktop. You can do the initial orientation by clicking "Start".
 
-![Windows Image Ten ](./resources/exomiser_tutorial_images/10_windows.jpg)
+![Windows Image Ten ](../images/exomiser_tutorial_images/10_windows.jpg)
 
 After this, your Docker Desktop screen should look like this:
 
-![Windows Image Eleven ](./resources/exomiser_tutorial_images/11_windows.jpg)
+![Windows Image Eleven ](../images/exomiser_tutorial_images/11_windows.jpg)
 
 Now, whenever you want to pull images make sure that Docker is running in the background.
