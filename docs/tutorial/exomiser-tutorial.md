@@ -24,7 +24,9 @@ You have:
 docker pull exomiser/exomiser-cli:13.2.0
 ```
 
-- [Exomiser-Tutorial files](https://drive.google.com/drive/u/2/folders/1DynxpvOTecvAXv3uYtJ0d2-A4NjQyyfN) downloaded from our GoogleDrive. Alternatively:
+- [Exomiser-Tutorial files](https://drive.google.com/drive/u/2/folders/1DynxpvOTecvAXv3uYtJ0d2-A4NjQyyfN) downloaded from our GoogleDrive.
+
+Alternatively:
 
 ```shell
 # download the data via
@@ -47,13 +49,7 @@ unzip pfeiffer-family-vcf.zip -d Exomiser-Tutorial/exomiser-config/
 The `Exomiser-Tutorial` folder contains a directory called `exomiser-config` (with all the VCF and analysis files)
 and `exomiser-overview` (with some introductory slides).
 
-- Importantly, we ***highly*** recommend downloading the Exomiser data prior to the tutorial in order to follow along.
-  The data required to run Exomiser is ~80GB and will take a while to download and unpack (depending on your internet connection, it may take a few hours). For this tutorial, you only
-  need to download the Exomiser phenotype data and the variant data for the hg19 assembly. If you have your own samples
-  to run with Exomiser and the VCF files are built on the hg38 build, then you will need to download the hg38 variant
-  data as well. The current data version that will use in this tutorial is 2302 (Feb 2023). This will change in the
-  future. Always make sure that you use the latest data version available. To download the Exomiser data from the
-  terminal:
+- Importantly, we ***highly*** recommend downloading the Exomiser data prior to the tutorial in order to follow along. The data required to run Exomiser is ~80GB and will take a while to download and unpack (depending on your internet connection, it may take a few hours). For this tutorial, you only need to download the Exomiser phenotype data and the variant data for the hg19 assembly. If you have your own samples to run with Exomiser and the VCF files are built on the hg38 build, then you will need to download the hg38 variant data as well. The current data version that will use in this tutorial is 2302 (Feb 2023). This will change in the future. Always make sure that you use the latest data version available. To download the Exomiser data from the terminal:
 
 ```shell
 # create an empty directory for exomiser-data within the Exomiser-Tutorial folder:
