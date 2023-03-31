@@ -97,7 +97,7 @@ Exomiser-Tutorial
 
 For a quick overview of Exomiser take a look at the slides located in
 the [Google Drive](https://drive.google.com/drive/u/2/folders/1DynxpvOTecvAXv3uYtJ0d2-A4NjQyyfN)
-or [GITHUB REPO](https://github.com/iQuxLE/Exomiser-Tutorial).
+or [GitHub repo](https://github.com/iQuxLE/Exomiser-Tutorial).
 
 ## Exomiser installation
 
