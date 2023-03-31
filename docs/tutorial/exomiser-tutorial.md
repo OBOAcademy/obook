@@ -1,21 +1,14 @@
 ## Tutorial: an introduction to Exomiser
 
-Exomiser is a Java program that ranks potential rare Mendelian disease-causing variants from whole-exome or whole-genome
-sequencing data. Starting from a patient's VCF file and a set of phenotypes encoded using the [Human Phenotype Ontology](https://hpo.jax.org/app/) (HPO), it will annotate, filter and prioritise likely causative variants. The program does this based on user-defined
-criteria such as a variant's predicted pathogenicity, frequency of occurrence in a population and also how closely the
-given patient's phenotype matches the known phenotype of diseased genes from human and model organism data.
+Exomiser is a Java program that ranks potential rare Mendelian disease-causing variants from whole-exome or whole-genome sequencing data. Starting from a patient's VCF file and a set of phenotypes encoded using the [Human Phenotype Ontology](https://hpo.jax.org/app/) (HPO), it will annotate, filter and prioritise likely causative variants. The program does this based on user-defined criteria such as a variant's predicted pathogenicity, frequency of occurrence in a population and also how closely the given patient's phenotype matches any known phenotype of genes from human disease and model organism data.
 
-In this tutorial, we will learn how to install and run Exomiser with Docker, and how to examine the results in various
-output formats detailing the predicted causative genes and variants. If you prefer to work locally, instructions are
-also provided below for Windows and Linux/Mac users.
+In this tutorial, we will learn how to install and run Exomiser with Docker, and how to interpret the results in various output formats detailing the predicted causative genes and variants. If you prefer to work locally, instructions are also provided below for Windows and Linux/Mac users.
 
-The complete Exomiser documentation can be found [here](https://exomiser.readthedocs.io/en/latest/)
+The complete Exomiser documentation can be found [here](https://exomiser.readthedocs.io/en/latest/) and the GitHub repository [here](https://github.com/exomiser/Exomiser).
 
-Check out the GitHub repo [here](https://github.com/exomiser/Exomiser)
+Please note that this tutorial is up-to-date with the current latest release 13.2.0 and data version up to 2302 (Feb 2023).
 
-Please note this tutorial is up-to-date with the current latest release 13.2.0 and data version up to 2302 (Feb 2023).
-
-## Prerequisites
+## PREREQUISITES
 
 You know:
 
