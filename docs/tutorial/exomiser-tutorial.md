@@ -116,10 +116,7 @@ docker pull exomiser/exomiser-cli:13.2.0
 <<<<<<< HEAD
 1. Install [7-Zip](http://www.7-zip.org/) for unzipping the archive files. The built-in archiving software has issues extracting the zip files.
 2. Download the distribution from [Monarch](https://data.monarchinitiative.org/exomiser/latest/exomiser-cli-13.2.0-distribution.zip)
-=======
 1. Install [7-Zip](http://www.7-zip.org/) for unzipping the archive files. The built-in archiving software has issues
-   extracting the zip files.
-2. Download the distribution
    from [GitHub](https://github.com/exomiser/Exomiser/releases/download/13.2.0/exomiser-cli-13.2.0-distribution.zip)
 >>>>>>> d7673225b26b9f98eec887a3abd0205fde6e2d1f
 3. Download the variant and phenotype data files from [Monarch](https://data.monarchinitiative.org/exomiser/latest)
