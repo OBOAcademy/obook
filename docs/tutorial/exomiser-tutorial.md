@@ -113,10 +113,8 @@ docker pull exomiser/exomiser-cli:13.2.0
 
 ### via Windows
 
-1. Install [7-Zip](http://www.7-zip.org/) for unzipping the archive files. The built-in archiving software has issues
-   extracting the zip files.
-2. Download the distribution
-   from [GitHub](https://github.com/exomiser/Exomiser/releases/download/13.2.0/exomiser-cli-13.2.0-distribution.zip)
+1. Install [7-Zip](http://www.7-zip.org/) for unzipping the archive files. The built-in archiving software has issues extracting the zip files.
+2. Download the distribution from [Monarch](https://data.monarchinitiative.org/exomiser/latest/exomiser-cli-13.2.0-distribution.zip)
 3. Download the variant and phenotype data files from [Monarch](https://data.monarchinitiative.org/exomiser/latest)
 4. Extract the distribution files by right-clicking exomiser-cli-13.2.0-distribution.zip and selecting 7-Zip > Extract
    Here
@@ -130,7 +128,7 @@ The following shell script should work:
 
 ```shell
 # download the distribution (won't take long)
-wget https://github.com/exomiser/Exomiser/releases/download/13.2.0/exomiser-cli-13.2.0-distribution.zip
+wget https://data.monarchinitiative.org/exomiser/latest/exomiser-cli-13.2.0-distribution.zip
 # download the data (this is ~80GB and will take a while). If you only require a single assembly, only download the relevant files.
 wget https://data.monarchinitiative.org/exomiser/latest/2302_hg19.zip
 wget https://data.monarchinitiative.org/exomiser/latest/2302_phenotype.zip
@@ -142,11 +140,9 @@ unzip '2302_*.zip' -d exomiser-cli-13.2.0/data
 
 ### Configuring the application.properties
 
-The application.properties has to be updated to point to the correct location of the Exomiser data. For the purpose of
-this tutorial, this is already sorted, pointing to the mounted directory inside the Docker
-container `exomiser.data-directory=/exomiser-data`.
+The application.properties file needs to be updated to point to the correct location of the Exomiser data. For the purpose of this tutorial, this is already sorted, pointing to the mounted directory inside the Docker container `exomiser.data-directory=/exomiser-data`.
 
-Also you want to make sure to edit the file to use the correct data version (currently 2302):
+Also, you want to make sure to edit the file to use the correct data version (currently 2302):
 
 ```shell
  exomiser.hg19.data-version=2302
@@ -155,8 +151,7 @@ Also you want to make sure to edit the file to use the correct data version (cur
 
 ## Running Exomiser
 
-For this tutorial, we will focus on running Exomiser on a single-sample whole-exome VCF file. Additional instructions
-for running Exomiser on multi-sample VCF data and large jobs are also provided below.
+For this tutorial, we will focus on running Exomiser on a single-sample (whole-exome) VCF file. Additional instructions for running Exomiser on multi-sample VCF data and large jobs are also provided below.
 
 ### Using phenopackets
 
@@ -484,12 +479,11 @@ splitting your batch jobs over multiple nodes.
 
 ## Results
 
-Depending on the output options provided, Exomiser will write out at least an HTML and JSON results file in the results
-subdirectory of the Exomiser installation.
+Depending on the output options provided, Exomiser will write out at least an HTML and JSON output file in the `results` subdirectory of the Exomiser installation (by default) or a user-defined results directory as indicated in the output options.
 
-As a general rule all output files contain a ranked list of genes and/or variants with the top-ranked gene/variant
-displayed first. The exception being the VCF output which, since version 13.1.0, is sorted according to VCF convention
-and tabix indexed.
+As a general rule, all output files contain a ranked list of genes and variants with the top-ranked gene/variant displayed first. The exception being the VCF output (if requested in the output options) which, since version 13.1.0, is sorted according to VCF convention and tabix indexed.
+
+In our tutorial, we requested HTML, JSON, TSV_VARIANT and TSV_GENE output formats which are briefly outlined below.
 
 ### HTML
 
@@ -498,7 +492,7 @@ and tabix indexed.
 
 ### JSON
 
-The JSON file represents the most accurate representation of the data, as it is referenced internally by Exomiser. As
+The JSON file represents the most accurate representation of the results, as it is referenced internally by Exomiser. As
 such, we don’t provide a schema for this, but it has been pretty stable and breaking changes will only occur with major
 version changes to the software. Minor additions are to be expected for minor releases, as per the SemVer specification.
 
@@ -524,18 +518,18 @@ for result in exomiser_result:
   for moi in result["geneScores"]:  # iterating over all modes of inheritance
     if "contributingVariants" in moi:  #  checking if there is evidence of contributing variants
         for cv in moi["contributingVariants"]:  # iterating over all contributing variants
-          variant_results.append({"chromosome": cv["contigName"], 
+          variant_results.append({"chromosome": cv["contigName"],
                                   "start_pos": cv["start"],
                                   "end_pos": cv["end"],
                                   "ref_allele": cv["ref"],
                                   "alt_allele": cv["alt"]})
-    
+
 ```
 
 ### TSV VARIANTS
 
-In the variants.tsv file it is possible for a variant, like a gene, to appear multiple times, depending on the MOI it is
-compatible with. For example in the example below MUC6 has two variants ranked 7th under the AD model and two ranked 8th
+In the `Pfeiffer-hiphive-exome-PASS_ONLY.variants.tsv` file it is possible for a variant, like a gene, to appear multiple times, depending on the MOI it is
+compatible with. For example, in the excerpt of the file below, MUC6 has two variants ranked 7th under the AD model and two ranked 8th
 under an AR (compound heterozygous) model. In the AD case the CONTRIBUTING_VARIANT column indicates whether the variant
 was (1) or wasn't (0) used for calculating the EXOMISER_GENE_COMBINED_SCORE and EXOMISER_GENE_VARIANT_SCORE.
 
