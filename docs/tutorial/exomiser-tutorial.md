@@ -28,6 +28,12 @@ You have:
   up [Docker for Windows](#docker-windows)
   or [Docker for Mac](#docker-mac)
 
+- We recommend to have Exomiser installed via Docker prior to the tutorial. Open a terminal and run the command below:
+
+```shell
+docker pull exomiser/exomiser-cli:13.2.0
+```
+
 - [Exomiser-Tutorial files](https://drive.google.com/drive/u/2/folders/1DynxpvOTecvAXv3uYtJ0d2-A4NjQyyfN) downloaded
   from our GoogleDrive. Alternatively:
 
@@ -106,6 +112,8 @@ or [GITHUB REPO](add link...).
 ## Exomiser installation
 
 ### via Docker
+
+(recommended to be installed prior to the tutorial)
 
 ```shell
 docker pull exomiser/exomiser-cli:13.2.0
@@ -344,7 +352,7 @@ outputFormats: [ HTML, JSON, TSV_GENE, TSV_VARIANT ]
 docker run -it -v "/path/to/Exomiser-Tutorial/exomiser-data:/exomiser-data" \
 -v "/path/to/Exomiser-Tutorial/exomiser-config/:/exomiser" \
 -v "/path/to/Exomiser-Tutorial/exomiser-results:/results" \
-exomisertutorial/exomiser-cli:13.2.0 \
+exomiser/exomiser-cli:13.2.0 \
 --sample /exomiser/pfeiffer-phenopacket.yml \
 --analysis /exomiser/pfeiffer-analysis.yml \
 --spring.config.location=/exomiser/application.properties
