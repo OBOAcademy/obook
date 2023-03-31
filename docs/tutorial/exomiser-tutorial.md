@@ -327,7 +327,7 @@ numGenes: 0
 # Path to the desired output directory. Will default to the 'results' subdirectory of the exomiser install directory
 outputDirectory: results
 # Filename for the output files. Will default to {input-vcf-filename}-exomiser
-outputFileName: Pfeiffer-hiphive-exome-PASS_ONLY
+outputFileName: Pfeiffer-HIPHIVE-exome
 #out-format options: HTML, JSON, TSV_GENE, TSV_VARIANT, VCF (default: HTML)
 outputFormats: [ HTML, JSON, TSV_GENE, TSV_VARIANT ]
 ```
