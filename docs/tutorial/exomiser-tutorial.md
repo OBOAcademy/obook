@@ -1,7 +1,14 @@
 ## Tutorial: an introduction to Exomiser
-Exomiser is a Java program that ranks potential rare Mendelian disease-causing variants from whole-exome or whole-genome sequencing data. Starting from a patient's VCF file and a set of phenotypes encoded using the Human Phenotype Ontology (HPO), it will annotate, filter and prioritise likely causative variants. The program does this based on user-defined criteria such as a variant's predicted pathogenicity, frequency of occurrence in a population and also how closely the given patient's phenotype matches the known phenotype of diseased genes from human and model organism data.
 
-In this tutorial, we will learn how to install and run Exomiser with Docker, and how to examine the results in various output formats detailing the predicted causative genes and variants. If you prefer to working locally, instructions are also provided below for Windows and Linux/Mac users.  
+Exomiser is a Java program that ranks potential rare Mendelian disease-causing variants from whole-exome or whole-genome
+sequencing data. Starting from a patient's VCF file and a set of phenotypes encoded using the Human Phenotype Ontology (
+HPO), it will annotate, filter and prioritise likely causative variants. The program does this based on user-defined
+criteria such as a variant's predicted pathogenicity, frequency of occurrence in a population and also how closely the
+given patient's phenotype matches the known phenotype of diseased genes from human and model organism data.
+
+In this tutorial, we will learn how to install and run Exomiser with Docker, and how to examine the results in various
+output formats detailing the predicted causative genes and variants. If you prefer to working locally, instructions are
+also provided below for Windows and Linux/Mac users.
 
 The complete Exomiser documentation can be found [here](https://exomiser.readthedocs.io/en/latest/)
 
@@ -10,22 +17,34 @@ Check out the GitHub repo [here](https://github.com/exomiser/Exomiser)
 Please note this tutorial is up to date with the current latest release 13.2.0 and data version up to 2302 (Feb 2023).
 
 ## Prerequisites
+
 You know:
 
 - how to use a command line interface.
 
 You have:
 
-- Docker installed and running on your machine. Check out this simple guide to set up [Docker for Windows](#docker-windows)
+- Docker installed and running on your machine. Check out this simple guide to set
+  up [Docker for Windows](#docker-windows)
   or [Docker for Mac](#docker-mac)
 
-- [Exomiser-Tutorial files](https://drive.google.com/drive/u/2/folders/1DynxpvOTecvAXv3uYtJ0d2-A4NjQyyfN) downloaded from our GoogleDrive. Alternatively:
+- [Exomiser-Tutorial files](https://drive.google.com/drive/u/2/folders/1DynxpvOTecvAXv3uYtJ0d2-A4NjQyyfN) downloaded
+  from our GoogleDrive. Alternatively:
+
 ```shell
 wget ADD REPO LINK
 ```
-  The `Exomiser-Tutorial` folder contains a directory called `exomiser-config` (with all the analysis files) and `exomiser-overview` (with some introductory slides).
 
-- Importantly, we ***highly*** recommend downloading the Exomiser data prior to the tutorial in order to follow along. The data required to run Exomiser is ~80GB and will take a while to download and unpack. For this tutorial, you only need to download the Exomiser phenotype data and the variant data for the hg19 assembly. If you have your own samples to run with Exomiser and the VCF files are built on the hg38 build, then you will need to download the hg38 variant data as well. The current data version that will use in this tutorial is 2302 (Feb 2023). This will change in the future. Always make sure that you use the latest data version available. To download the Exomiser data from the terminal:
+The `Exomiser-Tutorial` folder contains a directory called `exomiser-config` (with all the analysis files)
+and `exomiser-overview` (with some introductory slides).
+
+- Importantly, we ***highly*** recommend downloading the Exomiser data prior to the tutorial in order to follow along.
+  The data required to run Exomiser is ~80GB and will take a while to download and unpack. For this tutorial, you only
+  need to download the Exomiser phenotype data and the variant data for the hg19 assembly. If you have your own samples
+  to run with Exomiser and the VCF files are built on the hg38 build, then you will need to download the hg38 variant
+  data as well. The current data version that will use in this tutorial is 2302 (Feb 2023). This will change in the
+  future. Always make sure that you use the latest data version available. To download the Exomiser data from the
+  terminal:
 
 ```shell
 # create an empty directory for exomiser-data within the Exomiser-Tutorial folder:
@@ -38,7 +57,6 @@ wget https://data.monarchinitiative.org/exomiser/latest/2302_hg19.zip # for the 
 # unzip the data
 unzip "2302_*.zip"
 ```
-
 
 Otherwise, visit the links, download the data in your own `exomiser-data` directory and unzip them:
 
@@ -81,7 +99,9 @@ Exomiser-Tutorial
 
 ## Exomiser overview
 
-For a quick overview of Exomiser take a look at the slides located in the [Google Drive](https://drive.google.com/drive/u/2/folders/1DynxpvOTecvAXv3uYtJ0d2-A4NjQyyfN) or [GITHUB REPO](add link...).
+For a quick overview of Exomiser take a look at the slides located in
+the [Google Drive](https://drive.google.com/drive/u/2/folders/1DynxpvOTecvAXv3uYtJ0d2-A4NjQyyfN)
+or [GITHUB REPO](add link...).
 
 ## Exomiser installation
 
@@ -93,11 +113,16 @@ docker pull exomiser/exomiser-cli:13.2.0
 
 ### via Windows
 
-1. Install [7-Zip](http://www.7-zip.org/) for unzipping the archive files. The built-in archiving software has issues extracting the zip files.
-2. Download the distribution from [GitHub](https://github.com/exomiser/Exomiser/releases/download/13.2.0/exomiser-cli-13.2.0-distribution.zip)
+1. Install [7-Zip](http://www.7-zip.org/) for unzipping the archive files. The built-in archiving software has issues
+   extracting the zip files.
+2. Download the distribution
+   from [GitHub](https://github.com/exomiser/Exomiser/releases/download/13.2.0/exomiser-cli-13.2.0-distribution.zip)
 3. Download the variant and phenotype data files from [Monarch](https://data.monarchinitiative.org/exomiser/latest)
-4. Extract the distribution files by right-clicking exomiser-cli-13.2.0-distribution.zip and selecting 7-Zip > Extract Here
-5. Extract the data files (e.g. 2302_phenotype.zip, 2302_hg19.zip) by right-clicking the archive and selecting 7-Zip > Extract files… into the exomiser data directory. By default, exomiser expects this to be ‘exomiser-cli-13.2.0/data’, but this can be changed in the application.properties
+4. Extract the distribution files by right-clicking exomiser-cli-13.2.0-distribution.zip and selecting 7-Zip > Extract
+   Here
+5. Extract the data files (e.g. 2302_phenotype.zip, 2302_hg19.zip) by right-clicking the archive and selecting 7-Zip >
+   Extract files… into the exomiser data directory. By default, exomiser expects this to be ‘exomiser-cli-13.2.0/data’,
+   but this can be changed in the application.properties
 
 ### via Linux/Mac
 
@@ -117,9 +142,12 @@ unzip '2302_*.zip' -d exomiser-cli-13.2.0/data
 
 ### Configuring the application.properties
 
-The application.properties has to be updated to point to the correct location of the Exomiser data. For the purpose of this tutorial, this is already sorted, pointing to the mounted directory inside the Docker container `exomiser.data-directory=/exomiser-data`.
+The application.properties has to be updated to point to the correct location of the Exomiser data. For the purpose of
+this tutorial, this is already sorted, pointing to the mounted directory inside the Docker
+container `exomiser.data-directory=/exomiser-data`.
 
 Also you want to make sure to edit the file to use the correct data version (currently 2302):
+
 ```shell
  exomiser.hg19.data-version=2302
  exomiser.phenotype.data-version=2302
@@ -127,11 +155,13 @@ Also you want to make sure to edit the file to use the correct data version (cur
 
 ## Running Exomiser
 
-For this tutorial, we will focus on running Exomiser on a single-sample whole-exome VCF file. Additional instructions for running Exomiser on multi-sample VCF data and large jobs are also provided below.
+For this tutorial, we will focus on running Exomiser on a single-sample whole-exome VCF file. Additional instructions
+for running Exomiser on multi-sample VCF data and large jobs are also provided below.
 
 ### Using phenopackets
 
-It is recommended to provide Exomiser with the input sample as a Phenopacket. Exomiser will accept this in either JSON or YAML format. We will use the example `pfeiffer-phenopacket.yml` below:
+It is recommended to provide Exomiser with the input sample as a Phenopacket. Exomiser will accept this in either JSON
+or YAML format. We will use the example `pfeiffer-phenopacket.yml` below:
 
 ```yaml
 id: manuel
@@ -174,9 +204,13 @@ metaData:
   phenopacketSchemaVersion: 1.0
 ```
 
-> **_NOTE:_** This is an example of a v1.0 phenopacket, there is a more recent release of v2.0. Exomiser can run phenopackets built with either v1.0 or v2.0 schema. You can find out more about the v2.0 phenopacket schema and how to build one with Python or Java [here](https://phenopacket-schema.readthedocs.io/en/latest/). To convert a phenopacket v1.0 to v2.0, you can use [phenopacket-tools](https://github.com/phenopackets/phenopacket-tools).
+> **_NOTE:_** This is an example of a v1.0 phenopacket, there is a more recent release of v2.0. Exomiser can run
+> phenopackets built with either v1.0 or v2.0 schema. You can find out more about the v2.0 phenopacket schema and how to
+> build one with Python or Java [here](https://phenopacket-schema.readthedocs.io/en/latest/). To convert a phenopacket
+> v1.0 to v2.0, you can use [phenopacket-tools](https://github.com/phenopackets/phenopacket-tools).
 
 ### Analysis settings
+
 Below are the default analysis settings from `pfeiffer-analysis.yml` that we will use in our tutorial:
 
 ```yaml
@@ -219,34 +253,34 @@ analysisMode: PASS_ONLY
 #   EXAC_OTHER
 # gnomAD - http://gnomad.broadinstitute.org/ (GNOMAD_E, GNOMAD_G)
 frequencySources: [
-    THOUSAND_GENOMES,
-    TOPMED,
-    UK10K,
+  THOUSAND_GENOMES,
+  TOPMED,
+  UK10K,
 
-    ESP_AFRICAN_AMERICAN, ESP_EUROPEAN_AMERICAN, ESP_ALL,
+  ESP_AFRICAN_AMERICAN, ESP_EUROPEAN_AMERICAN, ESP_ALL,
 
-    EXAC_AFRICAN_INC_AFRICAN_AMERICAN, EXAC_AMERICAN,
-    EXAC_SOUTH_ASIAN, EXAC_EAST_ASIAN,
-    EXAC_FINNISH, EXAC_NON_FINNISH_EUROPEAN,
-    EXAC_OTHER,
+  EXAC_AFRICAN_INC_AFRICAN_AMERICAN, EXAC_AMERICAN,
+  EXAC_SOUTH_ASIAN, EXAC_EAST_ASIAN,
+  EXAC_FINNISH, EXAC_NON_FINNISH_EUROPEAN,
+  EXAC_OTHER,
 
-    GNOMAD_E_AFR,
-    GNOMAD_E_AMR,
-#        GNOMAD_E_ASJ,
-    GNOMAD_E_EAS,
-    GNOMAD_E_FIN,
-    GNOMAD_E_NFE,
-    GNOMAD_E_OTH,
-    GNOMAD_E_SAS,
+  GNOMAD_E_AFR,
+  GNOMAD_E_AMR,
+  #        GNOMAD_E_ASJ,
+  GNOMAD_E_EAS,
+  GNOMAD_E_FIN,
+  GNOMAD_E_NFE,
+  GNOMAD_E_OTH,
+  GNOMAD_E_SAS,
 
-    GNOMAD_G_AFR,
-    GNOMAD_G_AMR,
+  GNOMAD_G_AFR,
+  GNOMAD_G_AMR,
   #        GNOMAD_G_ASJ,
-    GNOMAD_G_EAS,
-    GNOMAD_G_FIN,
-    GNOMAD_G_NFE,
-    GNOMAD_G_OTH,
-    GNOMAD_G_SAS
+  GNOMAD_G_EAS,
+  GNOMAD_G_FIN,
+  GNOMAD_G_NFE,
+  GNOMAD_G_OTH,
+  GNOMAD_G_SAS
 ]
 # Possible pathogenicitySources: (POLYPHEN, MUTATION_TASTER, SIFT), (REVEL, MVP), CADD, REMM
 # REMM is trained on non-coding regulatory regions
@@ -262,40 +296,40 @@ steps: [
   # or using a BED file - NOTE this should be 0-based, Exomiser otherwise uses 1-based coordinates in line with VCF
   #intervalFilter: {bed: /full/path/to/bed_file.bed},
   #genePanelFilter: {geneSymbols: ['FGFR1','FGFR2']},
-    failedVariantFilter: { },
+  failedVariantFilter: { },
   #qualityFilter: {minQuality: 50.0},
-    variantEffectFilter: {
-      remove: [
-          FIVE_PRIME_UTR_EXON_VARIANT,
-          FIVE_PRIME_UTR_INTRON_VARIANT,
-          THREE_PRIME_UTR_EXON_VARIANT,
-          THREE_PRIME_UTR_INTRON_VARIANT,
-          NON_CODING_TRANSCRIPT_EXON_VARIANT,
-          NON_CODING_TRANSCRIPT_INTRON_VARIANT,
-          CODING_TRANSCRIPT_INTRON_VARIANT,
-            UPSTREAM_GENE_VARIANT,
-            DOWNSTREAM_GENE_VARIANT,
-            INTERGENIC_VARIANT,
-            REGULATORY_REGION_VARIANT
-        ]
-    },
-    #knownVariantFilter: {}, #removes variants represented in the database
-    frequencyFilter: {maxFrequency: 2.0},
-    pathogenicityFilter: {keepNonPathogenic: true},
-    #inheritanceFilter and omimPrioritiser should always run AFTER all other filters have completed
-    #they will analyse genes according to the specified modeOfInheritance above- UNDEFINED will not be analysed.
-    inheritanceFilter: {},
-    #omimPrioritiser isn't mandatory.
-    omimPrioritiser: {},
-    #priorityScoreFilter: {minPriorityScore: 0.4},
-    #Other prioritisers: Only combine omimPrioritiser with one of these.
-    #Don't include any if you only want to filter the variants.
-    hiPhivePrioritiser: {},
-    # or run hiPhive in benchmarking mode:
-    #hiPhivePrioritiser: {runParams: 'mouse'},
-    #phivePrioritiser: {}
-    #phenixPrioritiser: {}
-    #exomeWalkerPrioritiser: {seedGeneIds: [11111, 22222, 33333]}
+  variantEffectFilter: {
+    remove: [
+      FIVE_PRIME_UTR_EXON_VARIANT,
+      FIVE_PRIME_UTR_INTRON_VARIANT,
+      THREE_PRIME_UTR_EXON_VARIANT,
+      THREE_PRIME_UTR_INTRON_VARIANT,
+      NON_CODING_TRANSCRIPT_EXON_VARIANT,
+      NON_CODING_TRANSCRIPT_INTRON_VARIANT,
+      CODING_TRANSCRIPT_INTRON_VARIANT,
+      UPSTREAM_GENE_VARIANT,
+      DOWNSTREAM_GENE_VARIANT,
+      INTERGENIC_VARIANT,
+      REGULATORY_REGION_VARIANT
+    ]
+  },
+  #knownVariantFilter: {}, #removes variants represented in the database
+  frequencyFilter: { maxFrequency: 2.0 },
+  pathogenicityFilter: { keepNonPathogenic: true },
+  #inheritanceFilter and omimPrioritiser should always run AFTER all other filters have completed
+  #they will analyse genes according to the specified modeOfInheritance above- UNDEFINED will not be analysed.
+  inheritanceFilter: { },
+  #omimPrioritiser isn't mandatory.
+  omimPrioritiser: { },
+  #priorityScoreFilter: {minPriorityScore: 0.4},
+  #Other prioritisers: Only combine omimPrioritiser with one of these.
+  #Don't include any if you only want to filter the variants.
+  hiPhivePrioritiser: { },
+  # or run hiPhive in benchmarking mode:
+  #hiPhivePrioritiser: {runParams: 'mouse'},
+  #phivePrioritiser: {}
+  #phenixPrioritiser: {}
+  #exomeWalkerPrioritiser: {seedGeneIds: [11111, 22222, 33333]}
 ]
 outputOptions:
 outputContributingVariantsOnly: false
@@ -306,7 +340,7 @@ outputDirectory: results
 # Filename for the output files. Will default to {input-vcf-filename}-exomiser
 outputFileName: Pfeiffer-hiphive-exome-PASS_ONLY
 #out-format options: HTML, JSON, TSV_GENE, TSV_VARIANT, VCF (default: HTML)
-outputFormats: [HTML, JSON, TSV_GENE, TSV_VARIANT]
+outputFormats: [ HTML, JSON, TSV_GENE, TSV_VARIANT ]
 ```
 
 ### Running via Docker
@@ -322,6 +356,7 @@ exomisertutorial/exomiser-cli:13.2.0 \
 ```
 
 ### Running locally
+
 Assuming that you are within the `exomiser-cli-13.2.0` distribution folder:
 
 ```shell
@@ -331,7 +366,8 @@ java -jar exomiser-cli-13.2.0.jar --sample examples/pfeiffer-phenopacket.yml \
 
 ### Analysing multi-sample VCF files
 
-When analysing a multi-sample VCF file, you must detail the pedigree information in a phenopacket describing a Family object:
+When analysing a multi-sample VCF file, you must detail the pedigree information in a phenopacket describing a Family
+object:
 
 e.g.
 
@@ -417,7 +453,9 @@ java -jar exomiser-cli-13.2.0.jar --sample examples/pfeiffer-family.yml --analys
 
 ### Running large jobs (batch)
 
-The above commands can be added to a batch file for example in the file `Exomiser-Tutorial/exomiser-config/test-analysis-batch-commands.txt`. Using it with Docker we recommend creating a new directory for the batch files and mounting that to the Docker container.
+The above commands can be added to a batch file for example in the
+file `Exomiser-Tutorial/exomiser-config/test-analysis-batch-commands.txt`. Using it with Docker we recommend creating a
+new directory for the batch files and mounting that to the Docker container.
 
 Running via Docker:
 
@@ -439,14 +477,19 @@ Assuming that you are within the `exomiser-cli-13.2.0` distribution folder
 java -jar exomiser-cli-13.2.0.jar --batch examples/test-analysis-batch-commands.txt
 ```
 
-The advantage of this is that a single command will be able to analyse many samples in far less time than starting a new JVM for each as there will be no start-up penalty after the initial start and the Java JIT compiler will be able to take advantage of a longer-running process to optimise the runtime code. For maximum throughput on a cluster consider splitting your batch jobs over multiple nodes.
-
+The advantage of this is that a single command will be able to analyse many samples in far less time than starting a new
+JVM for each as there will be no start-up penalty after the initial start and the Java JIT compiler will be able to take
+advantage of a longer-running process to optimise the runtime code. For maximum throughput on a cluster consider
+splitting your batch jobs over multiple nodes.
 
 ## Results
 
-Depending on the output options provided, Exomiser will write out at least an HTML and JSON results file in the results subdirectory of the Exomiser installation.
+Depending on the output options provided, Exomiser will write out at least an HTML and JSON results file in the results
+subdirectory of the Exomiser installation.
 
-As a general rule all output files contain a ranked list of genes and/or variants with the top-ranked gene/variant displayed first. The exception being the VCF output which, since version 13.1.0, is sorted according to VCF convention and tabix indexed.
+As a general rule all output files contain a ranked list of genes and/or variants with the top-ranked gene/variant
+displayed first. The exception being the VCF output which, since version 13.1.0, is sorted according to VCF convention
+and tabix indexed.
 
 ### HTML
 
@@ -454,13 +497,47 @@ As a general rule all output files contain a ranked list of genes and/or variant
 ![image](https://cdn.rawgit.com/exomiser/Exomiser/development/docs/images/exomiser-html-description-2.svg?sanitize=true)
 
 ### JSON
-The JSON file represents the most accurate representation of the data, as it is referenced internally by Exomiser. As such, we don’t provide a schema for this, but it has been pretty stable and breaking changes will only occur with major version changes to the software. Minor additions are to be expected for minor releases, as per the SemVer specification.
 
-We recommend using Python or JQ to extract data from this file.
+The JSON file represents the most accurate representation of the data, as it is referenced internally by Exomiser. As
+such, we don’t provide a schema for this, but it has been pretty stable and breaking changes will only occur with major
+version changes to the software. Minor additions are to be expected for minor releases, as per the SemVer specification.
+
+We recommend using Python or JQ to extract data from this file. To give you an idea of how you can extract some data with Python, we have provided examples of how you can iterate over the results below. However, there is a lot more information content that you can pull out from the JSON results file, this only provides a snippet of what you can do.
+
+```python
+# import json library
+import json
+
+# to load in the exomiser json result
+with open("path/to/Exomiser-Tutorial/Pfeiffer-HIPHIVE-exome.json") as exomiser_json_result:
+    exomiser_result = json.load(exomiser_json_result)
+exomiser_json_result.close()
+
+# to retrieve all predicted genes and corresponding identifier (ENSEMBL)
+gene_results = []
+for result in exomiser_result:
+    gene_results.append({result["geneSymbol"]: result["geneIdentifier"]["geneId"]})
+
+# to retrieve all predicted variants
+variant_results = []
+for result in exomiser_result:
+  for moi in result["geneScores"]:  # iterating over all modes of inheritance
+    if "contributingVariants" in moi:  #  checking if there is evidence of contributing variants
+        for cv in moi["contributingVariants"]:  # iterating over all contributing variants
+          variant_results.append({"chromosome": cv["contigName"], 
+                                  "start_pos": cv["start"],
+                                  "end_pos": cv["end"],
+                                  "ref_allele": cv["ref"],
+                                  "alt_allele": cv["alt"]})
+    
+```
 
 ### TSV VARIANTS
 
-In the variants.tsv file it is possible for a variant, like a gene, to appear multiple times, depending on the MOI it is compatible with. For example in the example below MUC6 has two variants ranked 7th under the AD model and two ranked 8th under an AR (compound heterozygous) model. In the AD case the CONTRIBUTING_VARIANT column indicates whether the variant was (1) or wasn't (0) used for calculating the EXOMISER_GENE_COMBINED_SCORE and EXOMISER_GENE_VARIANT_SCORE.
+In the variants.tsv file it is possible for a variant, like a gene, to appear multiple times, depending on the MOI it is
+compatible with. For example in the example below MUC6 has two variants ranked 7th under the AD model and two ranked 8th
+under an AR (compound heterozygous) model. In the AD case the CONTRIBUTING_VARIANT column indicates whether the variant
+was (1) or wasn't (0) used for calculating the EXOMISER_GENE_COMBINED_SCORE and EXOMISER_GENE_VARIANT_SCORE.
 
 ```
 #RANK       ID      GENE_SYMBOL     ENTREZ_GENE_ID  MOI     P-VALUE EXOMISER_GENE_COMBINED_SCORE    EXOMISER_GENE_PHENO_SCORE       EXOMISER_GENE_VARIANT_SCORE     EXOMISER_VARIANT_SCORE  CONTRIBUTING_VARIANT    WHITELIST_VARIANT       VCF_ID  RS_ID   CONTIG  START   END     REF     ALT     CHANGE_LENGTH   QUAL    FILTER  GENOTYPE        FUNCTIONAL_CLASS        HGVS    EXOMISER_ACMG_CLASSIFICATION    EXOMISER_ACMG_EVIDENCE  EXOMISER_ACMG_DISEASE_ID        EXOMISER_ACMG_DISEASE_NAME      CLINVAR_ALLELE_ID       CLINVAR_PRIMARY_INTERPRETATION  CLINVAR_STAR_RATING     GENE_CONSTRAINT_LOEUF   GENE_CONSTRAINT_LOEUF_LOWER     GENE_CONSTRAINT_LOEUF_UPPER     MAX_FREQ_SOURCE MAX_FREQ        ALL_FREQ        MAX_PATH_SOURCE MAX_PATH        ALL_PATH
@@ -474,7 +551,10 @@ In the variants.tsv file it is possible for a variant, like a gene, to appear mu
 ```
 
 ### TSV GENES
-In the genes.tsv file it is possible for a gene to appear multiple times, depending on the MOI it is compatible with, given the filtered variants. For example in the example below MUC6 is ranked 7th under the AD model and 8th under an AR model.
+
+In the genes.tsv file it is possible for a gene to appear multiple times, depending on the MOI it is compatible with,
+given the filtered variants. For example in the example below MUC6 is ranked 7th under the AD model and 8th under an AR
+model.
 
 ```
 #RANK       ID      GENE_SYMBOL     ENTREZ_GENE_ID  MOI     P-VALUE EXOMISER_GENE_COMBINED_SCORE    EXOMISER_GENE_PHENO_SCORE       EXOMISER_GENE_VARIANT_SCORE     HUMAN_PHENO_SCORE       MOUSE_PHENO_SCORE       FISH_PHENO_SCORE        WALKER_SCORE    PHIVE_ALL_SPECIES_SCORE OMIM_SCORE      MATCHES_CANDIDATE_GENE  HUMAN_PHENO_EVIDENCE    MOUSE_PHENO_EVIDENCE    FISH_PHENO_EVIDENCE     HUMAN_PPI_EVIDENCE      MOUSE_PPI_EVIDENCE      FISH_PPI_EVIDENCE
@@ -487,7 +567,8 @@ In the genes.tsv file it is possible for a gene to appear multiple times, depend
 
 ## <a id="docker-mac"></a>Docker for Mac
 
-Follow this [link](https://docs.docker.com/desktop/install/mac-install/) and download the Docker.dmg for your operating system.
+Follow this [link](https://docs.docker.com/desktop/install/mac-install/) and download the Docker.dmg for your operating
+system.
 
 ![Mac Image One ](../images/exomiser_tutorial_images/1_mac.jpg)
 
@@ -509,11 +590,15 @@ Additionally, this window will come up to agree the Docker subscription service 
 
 ![Mac Image Seven ](../images/exomiser_tutorial_images/7_mac.jpg)
 
-After running the installation **restart** your terminal and check the Docker installation again from inside your terminal with:
+After running the installation **restart** your terminal and check the Docker installation again from inside your
+terminal with:
+
 ```shell
 docker --version
 ```
-If the output gives you a version and no error you are ready to go. If you have not already restarted your terminal do this now,
+
+If the output gives you a version and no error you are ready to go. If you have not already restarted your terminal do
+this now,
 and the error should be fixed.
 
 In case you get an error message like this, please ensure you have downloaded the correct `docker.dmg`.
@@ -525,7 +610,8 @@ error stating its not able to connect to the Docker deamon.
 
 ## <a id="docker-windows"></a>Docker for Windows
 
-Follow this [link](https://docs.docker.com/desktop/install/windows-install/) and download the Docker installer for Windows.
+Follow this [link](https://docs.docker.com/desktop/install/windows-install/) and download the Docker installer for
+Windows.
 
 Inside your `/Downloads` directory, search for the Installer and double-click.
 
@@ -544,11 +630,13 @@ Now you will have to restart your computer.
 
 ![Windows Image Four ](../images/exomiser_tutorial_images/4_windows.jpg)
 
-After restarting, Docker should start automatically and the Service Agreement will come up, which you will have to agree to use Docker:
+After restarting, Docker should start automatically and the Service Agreement will come up, which you will have to agree
+to use Docker:
 
 ![Windows Image Five ](../images/exomiser_tutorial_images/5_windows.jpg)
 
-If the Docker desktop app is showing this warning upon start, do not click “Restart”, yet. Instead, follow the link and install the kernel update.
+If the Docker desktop app is showing this warning upon start, do not click “Restart”, yet. Instead, follow the link and
+install the kernel update.
 
 ![Windows Image Six ](../images/exomiser_tutorial_images/6_windows.jpg)
 
@@ -560,11 +648,13 @@ Start and finish the installation for WSL.
 
 ![Windows Image Eight ](../images/exomiser_tutorial_images/8_windows.jpg)
 
-If you still have the Docker Desktop dialog window open in the background, click on Restart. Otherwise, just restart your computer as you normally do.
+If you still have the Docker Desktop dialog window open in the background, click on Restart. Otherwise, just restart
+your computer as you normally do.
 
 ![Windows Image Nine ](../images/exomiser_tutorial_images/9_windows.jpg)
 
-If Docker Desktop did not start on its own, simply open it from the shortcut on your Desktop. You can do the initial orientation by clicking "Start".
+If Docker Desktop did not start on its own, simply open it from the shortcut on your Desktop. You can do the initial
+orientation by clicking "Start".
 
 ![Windows Image Ten ](../images/exomiser_tutorial_images/10_windows.jpg)
 
