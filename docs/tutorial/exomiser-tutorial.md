@@ -546,7 +546,7 @@ was (1) or wasn't (0) used for calculating the EXOMISER_GENE_COMBINED_SCORE and 
 
 ### TSV GENES
 
-In the genes.tsv file it is possible for a gene to appear multiple times, depending on the MOI it is compatible with,
+In the `Pfeiffer-hiphive-exome-PASS_ONLY.genes.tsv` file it is possible for a gene to appear multiple times, depending on the MOI it is compatible with,
 given the filtered variants. For example in the example below MUC6 is ranked 7th under the AD model and 8th under an AR
 model.
 
