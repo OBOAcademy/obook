@@ -38,7 +38,7 @@ unzip Exomiser-Tutorial.zip
 ```
 
 
-Since the VCF files for parts of the example data are a bit larger, you need to download the following seperately and put it into the Exomiser-Tutorial folder.
+Since the VCF files for parts of the example data are a bit larger, you need to download the following seperately and put it into the `Exomiser-Tutorial` folder.
 
 ```shell
 # download
