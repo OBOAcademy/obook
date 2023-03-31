@@ -320,7 +320,6 @@ steps: [
   frequencyFilter: { maxFrequency: 2.0 },
   pathogenicityFilter: { keepNonPathogenic: true },
   #inheritanceFilter and omimPrioritiser should always run AFTER all other filters have completed
-  #they will analyse genes according to the specified modeOfInheritance above- UNDEFINED will not be analysed.
   inheritanceFilter: { },
   #omimPrioritiser isn't mandatory.
   omimPrioritiser: { },
@@ -372,7 +371,7 @@ java -jar exomiser-cli-13.2.0.jar --sample examples/pfeiffer-phenopacket.yml \
 When analysing a multi-sample VCF file, you must detail the pedigree information in a phenopacket describing a Family
 object:
 
-e.g.
+e.g. `Exomiser-Tutorial/exomiser-config/pfeiffer-family.yml`
 
 ```yaml
 id: ISDBM322017-family
