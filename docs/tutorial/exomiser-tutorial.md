@@ -41,7 +41,7 @@ unzip Exomiser-Tutorial.zip
 Since the VCF files for parts of the example data are a bit larger, you need to download the following seperately and put it into the Exomiser-Tutorial folder.
 
 ```shell
-# download 
+# download
 wget https://github.com/iQuxLE/Exomiser-Tutorial/raw/main/pfeiffer-family-vcf.zip
 # unzip
 unzip pfeiffer-family-vcf.zip -d Exomiser-Tutorial/exomiser-config/
@@ -343,7 +343,7 @@ numGenes: 0
 # Path to the desired output directory. Will default to the 'results' subdirectory of the exomiser install directory
 outputDirectory: results
 # Filename for the output files. Will default to {input-vcf-filename}-exomiser
-outputFileName: Pfeiffer-HIPHIVE-exome
+outputFileName: Pfeiffer-hiphive-exome-PASS_ONLY
 #out-format options: HTML, JSON, TSV_GENE, TSV_VARIANT, VCF (default: HTML)
 outputFormats: [ HTML, JSON, TSV_GENE, TSV_VARIANT ]
 ```
