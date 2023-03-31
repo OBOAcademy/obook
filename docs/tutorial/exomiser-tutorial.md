@@ -439,7 +439,7 @@ Running via Docker:
 docker run -it -v '/path/to/Exomiser-Tutorial/exomiser-data:/exomiser-data' \
 -v '/path/to/Exomiser-Tutorial/exomiser-config/:/exomiser' \
 -v '/path/to/Exomiser-Tutorial/exomiser-results:/results' \
-exomisertutorial/exomiser-cli:13.2.0 \
+exomiser/exomiser-cli:13.2.0 \
 --sample /exomiser/pfeiffer-family.yml \
 --analysis /exomiser/pfeiffer-analysis.yml \
 --spring.config.location=/exomiser/application.properties
@@ -466,7 +466,7 @@ docker run -it -v '/path/to/Exomiser-Tutorial/exomiser-data:/exomiser-data' \
 -v '/path/to/Exomiser-Tutorial/exomiser-config/:/exomiser' \
 -v '/path/to/Exomiser-Tutorial/exomiser-results:/results' \
 -v '/path/to/Exomiser-Tutorial/exomiser-batch-files:/batch-files' \
-exomisertutorial/exomiser-cli:13.2.0 \
+exomiser/exomiser-cli:13.2.0 \
 --batch /batch-files/test-analysis-batch-commands.txt
 --spring.config.location=/exomiser/application.properties
 ```
