@@ -503,8 +503,9 @@ In our tutorial, we requested HTML, JSON, TSV_VARIANT and TSV_GENE output format
 
 ### HTML
 
-![image](https://cdn.rawgit.com/exomiser/Exomiser/development/docs/images/exomiser-html-description-1.svg?sanitize=true)
-![image](https://cdn.rawgit.com/exomiser/Exomiser/development/docs/images/exomiser-html-description-2.svg?sanitize=true)
+![HTML annotation 1](../images/exomiser_tutorial_images/HTML_annotation_part1.png)
+![HTML annotation 2](../images/exomiser_tutorial_images/HTML_annotation_part2.png)
+![HTML annotation 3](../images/exomiser_tutorial_images/HTML_annotation_part3.png)
 
 ### JSON
 
