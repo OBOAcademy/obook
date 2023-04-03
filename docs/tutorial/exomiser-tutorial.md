@@ -117,7 +117,7 @@ or [GitHub repo](https://github.com/iQuxLE/Exomiser-Tutorial).
 
 ### via Docker
 
-(recommended to be installed prior to the tutorial)
+(recommended to be installed prior to the tutorial; if you run the command below again, you should receive the message "Image is up to date for exomiser/exomiser-cli:13.2.0")
 
 ```shell
 docker pull exomiser/exomiser-cli:13.2.0
