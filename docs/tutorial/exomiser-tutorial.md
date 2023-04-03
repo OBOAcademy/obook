@@ -65,11 +65,14 @@ wget https://data.monarchinitiative.org/exomiser/latest/2302_hg19.zip # for the 
 unzip "2302_*.zip"
 ```
 
-Otherwise, visit the links, download the data in your own `exomiser-data` directory and unzip them:
+Otherwise, visit the links and download the data in your own `exomiser-data` directory:
 
 [2302 phenotype database](https://data.monarchinitiative.org/exomiser/latest/2302_phenotype.zip)
 
 [2302 hg19 variant database](https://data.monarchinitiative.org/exomiser/latest/2302_hg19.zip)
+
+Install [7-Zip](http://www.7-zip.org/) for unzipping the database files. The built-in archiving software has issues extracting the zip files. Extract the database files (e.g. `2302_phenotype.zip`, `2302_hg19.zip`) by right-clicking the archive and selecting 7-Zip > Extract files… into the `exomiser-data` directory.
+
 
 Your `Exomiser-Tutorial` directory should now be structured as follows:
 
@@ -563,10 +566,7 @@ was (1) or wasn't (0) used for calculating the EXOMISER_GENE_COMBINED_SCORE and 
 
 ### TSV GENES
 
-In the `Pfeiffer-hiphive-exome-PASS_ONLY.genes.tsv` file it is possible for a gene to appear multiple times, depending on the MOI it is compatible with,
-given the filtered variants. For example in the example below MUC6 is ranked 7th under the AD model and 8th under an AR
-model.
-
+In the `Pfeiffer-hiphive-exome-PASS_ONLY.genes.tsv` file, all the various phenotypic scores and HPO matches from the HUMAN, MOUSE, FISH and PPI comparisons are reported per each gene. It is possible for a gene to appear multiple times, depending on the MOI it is compatible with, given the filtered variants. For example in the example below MUC6 is ranked 7th under the AD model and 8th under an AR model.
 ```
 #RANK   ID      GENE_SYMBOL     ENTREZ_GENE_ID  MOI     P-VALUE EXOMISER_GENE_COMBINED_SCORE    EXOMISER_GENE_PHENO_SCORE       EXOMISER_GENE_VARIANT_SCORE     HUMAN_PHENO_SCORE       MOUSE_PHENO_SCORE       FISH_PHENO_SCORE        WALKER_SCORE    PHIVE_ALL_SPECIES_SCORE OMIM_SCORE      MATCHES_CANDIDATE_GENE  HUMAN_PHENO_EVIDENCE    MOUSE_PHENO_EVIDENCE    FISH_PHENO_EVIDENCE     HUMAN_PPI_EVIDENCE      MOUSE_PPI_EVIDENCE      FISH_PPI_EVIDENCE
 1       FGFR2_AD        FGFR2   2263    AD      0.0000  0.9957  0.9187  1.0000  0.8671  0.9187  0.0000  0.5057  0.9187  1.0000  0       Apert syndrome (ORPHA:87): Syndactyly (HP:0001159)-Toe syndactyly (HP:0001770), Strabismus (HP:0000486)-Strabismus (HP:0000486), Hypoplasia of the maxilla (HP:0000327)-Hypoplasia of the maxilla (HP:0000327), Proptosis (HP:0000520)-Proptosis (HP:0000520), Hypertelorism (HP:0000316)-Hypertelorism (HP:0000316), Brachyturricephaly (HP:0000244)-Brachyturricephaly (HP:0000244),  Strabismus (HP:0000486)-ocular hypertelorism (MP:0001300), Hypoplasia of the maxilla (HP:0000327)-short maxilla (MP:0000097), Proptosis (HP:0000520)-exophthalmos (MP:0002750), Hypertelorism (HP:0000316)-ocular hypertelorism (MP:0001300), Brachyturricephaly (HP:0000244)-abnormal frontal bone morphology (MP:0000107),                    Proximity to FGF18 Syndactyly (HP:0001159)-abnormal metatarsal bone morphology (MP:0003072), Strabismus (HP:0000486)-abnormal neurocranium morphology (MP:0000074), Hypoplasia of the maxilla (HP:0000327)-maxilla hypoplasia (MP:0000457), Proptosis (HP:0000520)-abnormal neurocranium morphology (MP:0000074), Hypertelorism (HP:0000316)-abnormal neurocranium morphology (MP:0000074), Brachyturricephaly (HP:0000244)-abnormal neurocranium morphology (MP:0000074),
