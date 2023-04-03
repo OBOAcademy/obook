@@ -504,7 +504,9 @@ In our tutorial, we requested HTML, JSON, TSV_VARIANT and TSV_GENE output format
 ### HTML
 
 ![HTML annotation 1](../images/exomiser_tutorial_images/HTML_annotation_part1.png)
+
 ![HTML annotation 2](../images/exomiser_tutorial_images/HTML_annotation_part2.png)
+
 ![HTML annotation 3](../images/exomiser_tutorial_images/HTML_annotation_part3.png)
 
 ### JSON
@@ -545,10 +547,7 @@ for result in exomiser_result:
 
 ### TSV VARIANTS
 
-In the `Pfeiffer-HIPHIVE-exome.variants.tsv` file it is possible for a variant, like a gene, to appear multiple times, depending on the MOI it is
-compatible with. For example, in the excerpt of the file below, MUC6 has two variants ranked 7th under the AD model and two ranked 8th
-under an AR (compound heterozygous) model. In the AD case the CONTRIBUTING_VARIANT column indicates whether the variant
-was (1) or wasn't (0) used for calculating the EXOMISER_GENE_COMBINED_SCORE and EXOMISER_GENE_VARIANT_SCORE.
+In the `Pfeiffer-HIPHIVE-exome.variants.tsv` file it is possible for a variant to appear multiple times, depending on the MOI it is compatible with. For example, in the excerpt of the file below, MUC6 has two variants ranked 7th under the AD model and two ranked 8th under an AR (compound heterozygous) model. In the AD case the CONTRIBUTING_VARIANT column indicates whether the variant was (1) or wasn't (0) used for calculating the EXOMISER_GENE_COMBINED_SCORE and EXOMISER_GENE_VARIANT_SCORE.
 
 ```
 #RANK   ID      GENE_SYMBOL     ENTREZ_GENE_ID  MOI     P-VALUE EXOMISER_GENE_COMBINED_SCORE    EXOMISER_GENE_PHENO_SCORE       EXOMISER_GENE_VARIANT_SCORE     EXOMISER_VARIANT_SCORE  CONTRIBUTING_VARIANT    WHITELIST_VARIANT       VCF_ID  RS_ID   CONTIG  START   END     REF     ALT     CHANGE_LENGTH   QUAL    FILTER  GENOTYPE        FUNCTIONAL_CLASS        HGVS    EXOMISER_ACMG_CLASSIFICATION    EXOMISER_ACMG_EVIDENCE  EXOMISER_ACMG_DISEASE_ID        EXOMISER_ACMG_DISEASE_NAME      CLINVAR_ALLELE_ID       CLINVAR_PRIMARY_INTERPRETATION  CLINVAR_STAR_RATING     GENE_CONSTRAINT_LOEUF   GENE_CONSTRAINT_LOEUF_LOWER     GENE_CONSTRAINT_LOEUF_UPPER     MAX_FREQ_SOURCE MAX_FREQ        ALL_FREQ        MAX_PATH_SOURCE MAX_PATH        ALL_PATH
@@ -565,7 +564,6 @@ was (1) or wasn't (0) used for calculating the EXOMISER_GENE_COMBINED_SCORE and 
 9       7-44610376-G-A_AD       DDX56   54606   AD      0.0091  0.7545  0.5036  0.9992  0.9992  1       0               rs774566321     7       44610376        44610376        G       A       0       586.6600        PASS    0/1     stop_gained     DDX56:ENST00000258772.5:c.991C>T:p.(Arg331*)    UNCERTAIN_SIGNIFICANCE                                  NOT_PROVIDED    0       0.56071 0.379   0.852   EXAC_SOUTH_ASIAN        0.006114712     EXAC_SOUTH_ASIAN=0.006114712,GNOMAD_E_SAS=0.0032509754
 10      14-96730313-G-A_AD      BDKRB1  623     AD      0.0093  0.7525  0.5018  1.0000  1.0000  1       0                       14      96730313        96730313        G       A       0       378.2200        PASS    0/1     stop_gained     BDKRB1:ENST00000216629.6:c.294G>A:p.(Trp98*)    UNCERTAIN_SIGNIFICANCE                                  NOT_PROVIDED    0       0.52212 0.272   1.097                                        
 ```
-
 
 ### TSV GENES
 
