@@ -6,7 +6,7 @@ Exomiser is a Java program that ranks potential rare Mendelian disease-causing v
 
 In this tutorial, we will learn how to install and run Exomiser with Docker, and how to interpret the results in various output formats detailing the predicted causative genes and variants. If you prefer to work locally, instructions are also provided below for Windows and Linux/Mac users.
 
-The complete Exomiser documentation can be found [here](https://exomiser.readthedocs.io/en/latest/) and the GitHub repository [here](https://github.com/exomiser/Exomiser).
+The complete Exomiser documentation can be found [here](https://exomiser.readthedocs.io/en/latest/), including some relevant references [here](https://exomiser.readthedocs.io/en/latest/publications.html) and the GitHub repository [here](https://github.com/exomiser/Exomiser).
 
 Please note that this tutorial is up-to-date with the current latest release 13.2.0 and data version up to 2302 (Feb 2023).
 
