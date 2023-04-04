@@ -6,7 +6,7 @@ Exomiser is a Java program that ranks potential rare Mendelian disease-causing v
 
 In this tutorial, we will learn how to install and run Exomiser with Docker, and how to interpret the results in various output formats detailing the predicted causative genes and variants. If you prefer to work locally, instructions are also provided below for Windows and Linux/Mac users.
 
-The complete Exomiser documentation can be found [here](https://exomiser.readthedocs.io/en/latest/) and the GitHub repository [here](https://github.com/exomiser/Exomiser).
+The complete Exomiser documentation can be found [here](https://exomiser.readthedocs.io/en/latest/), including some relevant references [here](https://exomiser.readthedocs.io/en/latest/publications.html), and the Exomiser GitHub repository [here](https://github.com/exomiser/Exomiser).
 
 Please note that this tutorial is up-to-date with the current latest release 13.2.0 and data version up to 2302 (Feb 2023).
 
@@ -51,7 +51,7 @@ unzip pfeiffer-family-vcf.zip -d Exomiser-Tutorial/exomiser-config/
 The `Exomiser-Tutorial` folder contains a directory called `exomiser-config` (with all the VCF and analysis files)
 and `exomiser-overview` (with some introductory slides).
 
-- Importantly, we ***highly*** recommend downloading the Exomiser data prior to the tutorial in order to follow along. The data required to run Exomiser is ~80GB and will take a while to download and unpack (depending on your internet connection, it may take a few hours). For this tutorial, you only need to download the Exomiser phenotype data and the variant data for the hg19 assembly. If you have your own samples to run with Exomiser and the VCF files are built on the hg38 build, then you will need to download the hg38 variant data as well. The current data version that will use in this tutorial is 2302 (Feb 2023). This will change in the future. Always make sure that you use the latest data version available. To download the Exomiser data from the terminal:
+- Importantly, we ***highly*** recommend downloading the Exomiser data prior to the tutorial in order to follow along. The data required to run Exomiser is ~80GB and will take a while to download and unpack (depending on your internet connection, it may take a few hours). For this tutorial, you only need to download the Exomiser phenotype data and the variant data for the hg19 assembly. If you have your own samples to run with Exomiser and the VCF files are built on the hg38 build, then you will need to download the hg38 variant data as well. The current data version that we will use in this tutorial is 2302 (Feb 2023). This will change in the future. Always make sure that you use the latest data version available. To download the Exomiser data from the terminal:
 
 ```shell
 # create an empty directory for exomiser-data within the Exomiser-Tutorial folder:
@@ -65,11 +65,14 @@ wget https://data.monarchinitiative.org/exomiser/latest/2302_hg19.zip # for the 
 unzip "2302_*.zip"
 ```
 
-Otherwise, visit the links, download the data in your own `exomiser-data` directory and unzip them:
+Otherwise, visit the links and download the data in your own `exomiser-data` directory:
 
 [2302 phenotype database](https://data.monarchinitiative.org/exomiser/latest/2302_phenotype.zip)
 
 [2302 hg19 variant database](https://data.monarchinitiative.org/exomiser/latest/2302_hg19.zip)
+
+Install [7-Zip](http://www.7-zip.org/) for unzipping the database files. The built-in archiving software has issues extracting the zip files. Extract the database files (`2302_phenotype.zip`, `2302_hg19.zip`) by right-clicking the archive and selecting 7-Zip > Extract files… into the `exomiser-data` directory.
+
 
 Your `Exomiser-Tutorial` directory should now be structured as follows:
 
@@ -114,7 +117,7 @@ or [GitHub repo](https://github.com/iQuxLE/Exomiser-Tutorial).
 
 ### via Docker
 
-(recommended to be installed prior to the tutorial)
+(recommended to be installed prior to the tutorial; if you run the command below again, you should receive the message "Image is up to date for exomiser/exomiser-cli:13.2.0")
 
 ```shell
 docker pull exomiser/exomiser-cli:13.2.0
@@ -361,6 +364,8 @@ exomiser/exomiser-cli:13.2.0 \
 --spring.config.location=/exomiser/application.properties
 ```
 
+This command will produce `Pfeiffer-HIPHIVE-exome.html`, `Pfeiffer-HIPHIVE-exome.json`, `Pfeiffer-HIPHIVE-exome.genes.tsv` and `Pfeiffer-HIPHIVE-exome.variants.tsv` in your `exomiser-results` directory.
+
 ### Running locally
 
 Assuming that you are within the `exomiser-cli-13.2.0` distribution folder:
@@ -492,14 +497,16 @@ splitting your batch jobs over multiple nodes.
 
 Depending on the output options provided, Exomiser will write out at least an HTML and JSON output file in the `results` subdirectory of the Exomiser installation (by default) or a user-defined results directory as indicated in the output options.
 
-As a general rule, all output files contain a ranked list of genes and variants with the top-ranked gene/variant displayed first. The exception being the VCF output (if requested in the output options) which, since version 13.1.0, is sorted according to VCF convention and tabix indexed.
+As a general rule, all output files contain a ranked list of genes and variants with the top-ranked gene/variant displayed first. The exception being the VCF output (if requested in the output options; not requested in this tutorial) which, since version 13.1.0, is sorted according to VCF convention and tabix indexed.
 
 In our tutorial, we requested HTML, JSON, TSV_VARIANT and TSV_GENE output formats which are briefly outlined below.
 
 ### HTML
 
-![image](https://cdn.rawgit.com/exomiser/Exomiser/development/docs/images/exomiser-html-description-1.svg?sanitize=true)
-![image](https://cdn.rawgit.com/exomiser/Exomiser/development/docs/images/exomiser-html-description-2.svg?sanitize=true)
+A few relevant screenshots from `Pfeiffer-HIPHIVE-exome.html`:
+![HTML annotation 1](../images/exomiser_tutorial_images/HTML_annotation_part1.png)
+![HTML annotation 2](../images/exomiser_tutorial_images/HTML_annotated_part2.jpg)
+![HTML annotation 3](../images/exomiser_tutorial_images/HTML_annotated_part3.jpg)
 
 ### JSON
 
@@ -539,10 +546,7 @@ for result in exomiser_result:
 
 ### TSV VARIANTS
 
-In the `Pfeiffer-hiphive-exome-PASS_ONLY.variants.tsv` file it is possible for a variant, like a gene, to appear multiple times, depending on the MOI it is
-compatible with. For example, in the excerpt of the file below, MUC6 has two variants ranked 7th under the AD model and two ranked 8th
-under an AR (compound heterozygous) model. In the AD case the CONTRIBUTING_VARIANT column indicates whether the variant
-was (1) or wasn't (0) used for calculating the EXOMISER_GENE_COMBINED_SCORE and EXOMISER_GENE_VARIANT_SCORE.
+In the `Pfeiffer-HIPHIVE-exome.variants.tsv` file it is possible for a variant to appear multiple times, depending on the MOI it is compatible with. For example, in the excerpt of the file below, MUC6 has two variants ranked 7th under the AD model and two ranked 8th under an AR (compound heterozygous) model. In the AD case the CONTRIBUTING_VARIANT column indicates whether the variant was (1) or wasn't (0) used for calculating the EXOMISER_GENE_COMBINED_SCORE and EXOMISER_GENE_VARIANT_SCORE.
 
 ```
 #RANK   ID      GENE_SYMBOL     ENTREZ_GENE_ID  MOI     P-VALUE EXOMISER_GENE_COMBINED_SCORE    EXOMISER_GENE_PHENO_SCORE       EXOMISER_GENE_VARIANT_SCORE     EXOMISER_VARIANT_SCORE  CONTRIBUTING_VARIANT    WHITELIST_VARIANT       VCF_ID  RS_ID   CONTIG  START   END     REF     ALT     CHANGE_LENGTH   QUAL    FILTER  GENOTYPE        FUNCTIONAL_CLASS        HGVS    EXOMISER_ACMG_CLASSIFICATION    EXOMISER_ACMG_EVIDENCE  EXOMISER_ACMG_DISEASE_ID        EXOMISER_ACMG_DISEASE_NAME      CLINVAR_ALLELE_ID       CLINVAR_PRIMARY_INTERPRETATION  CLINVAR_STAR_RATING     GENE_CONSTRAINT_LOEUF   GENE_CONSTRAINT_LOEUF_LOWER     GENE_CONSTRAINT_LOEUF_UPPER     MAX_FREQ_SOURCE MAX_FREQ        ALL_FREQ        MAX_PATH_SOURCE MAX_PATH        ALL_PATH
@@ -560,13 +564,9 @@ was (1) or wasn't (0) used for calculating the EXOMISER_GENE_COMBINED_SCORE and 
 10      14-96730313-G-A_AD      BDKRB1  623     AD      0.0093  0.7525  0.5018  1.0000  1.0000  1       0                       14      96730313        96730313        G       A       0       378.2200        PASS    0/1     stop_gained     BDKRB1:ENST00000216629.6:c.294G>A:p.(Trp98*)    UNCERTAIN_SIGNIFICANCE                                  NOT_PROVIDED    0       0.52212 0.272   1.097                                        
 ```
 
-
 ### TSV GENES
 
-In the `Pfeiffer-hiphive-exome-PASS_ONLY.genes.tsv` file it is possible for a gene to appear multiple times, depending on the MOI it is compatible with,
-given the filtered variants. For example in the example below MUC6 is ranked 7th under the AD model and 8th under an AR
-model.
-
+In the `Pfeiffer-HIPHIVE-exome.genes.tsv` file, all the various phenotypic scores and HPO matches from the HUMAN, MOUSE, FISH and PPI comparisons are reported per each gene. It is possible for a gene to appear multiple times, depending on the MOI it is compatible with, given the filtered variants. For example in the example below MUC6 is ranked 7th under the AD model and 8th under an AR model.
 ```
 #RANK   ID      GENE_SYMBOL     ENTREZ_GENE_ID  MOI     P-VALUE EXOMISER_GENE_COMBINED_SCORE    EXOMISER_GENE_PHENO_SCORE       EXOMISER_GENE_VARIANT_SCORE     HUMAN_PHENO_SCORE       MOUSE_PHENO_SCORE       FISH_PHENO_SCORE        WALKER_SCORE    PHIVE_ALL_SPECIES_SCORE OMIM_SCORE      MATCHES_CANDIDATE_GENE  HUMAN_PHENO_EVIDENCE    MOUSE_PHENO_EVIDENCE    FISH_PHENO_EVIDENCE     HUMAN_PPI_EVIDENCE      MOUSE_PPI_EVIDENCE      FISH_PPI_EVIDENCE
 1       FGFR2_AD        FGFR2   2263    AD      0.0000  0.9957  0.9187  1.0000  0.8671  0.9187  0.0000  0.5057  0.9187  1.0000  0       Apert syndrome (ORPHA:87): Syndactyly (HP:0001159)-Toe syndactyly (HP:0001770), Strabismus (HP:0000486)-Strabismus (HP:0000486), Hypoplasia of the maxilla (HP:0000327)-Hypoplasia of the maxilla (HP:0000327), Proptosis (HP:0000520)-Proptosis (HP:0000520), Hypertelorism (HP:0000316)-Hypertelorism (HP:0000316), Brachyturricephaly (HP:0000244)-Brachyturricephaly (HP:0000244),  Strabismus (HP:0000486)-ocular hypertelorism (MP:0001300), Hypoplasia of the maxilla (HP:0000327)-short maxilla (MP:0000097), Proptosis (HP:0000520)-exophthalmos (MP:0002750), Hypertelorism (HP:0000316)-ocular hypertelorism (MP:0001300), Brachyturricephaly (HP:0000244)-abnormal frontal bone morphology (MP:0000107),                    Proximity to FGF18 Syndactyly (HP:0001159)-abnormal metatarsal bone morphology (MP:0003072), Strabismus (HP:0000486)-abnormal neurocranium morphology (MP:0000074), Hypoplasia of the maxilla (HP:0000327)-maxilla hypoplasia (MP:0000457), Proptosis (HP:0000520)-abnormal neurocranium morphology (MP:0000074), Hypertelorism (HP:0000316)-abnormal neurocranium morphology (MP:0000074), Brachyturricephaly (HP:0000244)-abnormal neurocranium morphology (MP:0000074),
