@@ -503,6 +503,8 @@ In our tutorial, we requested HTML, JSON, TSV_VARIANT and TSV_GENE output format
 
 ### HTML
 
+Pfeiffer-HIPHIVE-exome.json
+
 ![HTML annotation 1](../images/exomiser_tutorial_images/HTML_annotation_part1.png)
 ![HTML annotation 2](../images/exomiser_tutorial_images/HTML_annotated_part2.jpg)
 ![HTML annotation 3](../images/exomiser_tutorial_images/HTML_annotated_part3.jpg)
