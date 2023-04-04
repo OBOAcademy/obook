@@ -47,3 +47,6 @@ See [Daily Curator Workflow](daily-curator-workflow.md) for creating branches an
 5. Click on the ‘Entity IRI’ tab.
 
 6. Search for the slim label under "Entity IRI". In the pop-up that appears, double-click on the desired slim. Ensure that a sub property of `subset_property` is selected. Click OK.
+
+
+See [Daily Curator Workflow](daily-curator-workflow.md) section for commit, push and merge instructions.
