@@ -364,7 +364,7 @@ exomiser/exomiser-cli:13.2.0 \
 --spring.config.location=/exomiser/application.properties
 ```
 
-This command will produce `Pfeiffer-HIPHIVE-exome.html`, `Pfeiffer-HIPHIVE-exome.json`, `Pfeiffer-HIPHIVE-exome.genes.tsv` and `Pfeiffer-HIPHIVE-exome.variants.tsv` in your `exomiser-results`.
+This command will produce `Pfeiffer-HIPHIVE-exome.html`, `Pfeiffer-HIPHIVE-exome.json`, `Pfeiffer-HIPHIVE-exome.genes.tsv` and `Pfeiffer-HIPHIVE-exome.variants.tsv` in your `exomiser-results` directory.
 
 ### Running locally
 
