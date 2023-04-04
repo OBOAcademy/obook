@@ -497,14 +497,13 @@ splitting your batch jobs over multiple nodes.
 
 Depending on the output options provided, Exomiser will write out at least an HTML and JSON output file in the `results` subdirectory of the Exomiser installation (by default) or a user-defined results directory as indicated in the output options.
 
-As a general rule, all output files contain a ranked list of genes and variants with the top-ranked gene/variant displayed first. The exception being the VCF output (if requested in the output options) which, since version 13.1.0, is sorted according to VCF convention and tabix indexed.
+As a general rule, all output files contain a ranked list of genes and variants with the top-ranked gene/variant displayed first. The exception being the VCF output (if requested in the output options; not requested in this tutorial) which, since version 13.1.0, is sorted according to VCF convention and tabix indexed.
 
 In our tutorial, we requested HTML, JSON, TSV_VARIANT and TSV_GENE output formats which are briefly outlined below.
 
 ### HTML
 
-Pfeiffer-HIPHIVE-exome.json
-
+`Pfeiffer-HIPHIVE-exome.json`:
 ![HTML annotation 1](../images/exomiser_tutorial_images/HTML_annotation_part1.png)
 ![HTML annotation 2](../images/exomiser_tutorial_images/HTML_annotated_part2.jpg)
 ![HTML annotation 3](../images/exomiser_tutorial_images/HTML_annotated_part3.jpg)
