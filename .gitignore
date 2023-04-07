@@ -5,3 +5,4 @@ site/
 docs/resources/fhkb.zip
 docs/tutorial/project-ontology
 .env
+tutorial/*
