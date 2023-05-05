@@ -1,6 +1,11 @@
 site_name: OBO Semantic Engineering Training
 theme:
   name: material
+  icon:
+    edit: material/pencil 
+  features:
+    - content.action.edit
+
 markdown_extensions:
   - toc:
       permalink: true
