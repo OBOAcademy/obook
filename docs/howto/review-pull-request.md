@@ -1,5 +1,12 @@
 # How to review a pull request
 
+One key aspect of reviewing pull requests (aka code review, ontology change review) is that the purpose is not just to improve the quality of
+the proposed change. It is as much about that as about _building shared coding habits and practices_ and improving that habit for all engineers (ontology and software) inside the whole organisation.
+
+It is very important to think of reviewing of a skill and an aspect of open science and engineering culture that need to be learned and developed. In the long term, this habit will have an effect on the growth and impact of our tools and ontologies comparable to the engineering itself.
+
+It is _central_ to open science work that we review other peoples work _outside our direct mandate_. We recommend to select a few people you agree to mutually review your work as a high order of importance - wether you develpo ontologies, code or both.
+
 ## Overarching workflow
 
 1. **Understand the Context**: First, read the description of the pull request (PR). It should explain what changes have been made and why. Understand the linked issue or task related to this PR. This will help you understand the context of the changes.
