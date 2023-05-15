@@ -31,7 +31,9 @@ It is _central_ to open science work that we review other peoples work _outside 
 
 ## How to review the code / ontology changes properly
 
+1. **Ensure that the PR has a related issue that explains the context of the PR**. If there is no issue, request for a short issue to be created to motivate the change in the PR (gently - accept if the answer is negative).
 1. **Understand the Context**: Begin by familiarizing yourself with the purpose of the changes. Read the description of the pull request, any linked issues or tasks, and understand the feature or bug that the pull request is addressing.
+1. **Ensure that all changes in the PR are intentional**. Changes should be small. If there are a lot of unrelated changes, in particular line ending changes, serialisation changes in ontology (e.g. a lot of added `xsd:string` declarations), request before doing a review to reduce the changes to only the changes pertaining to the specific issue at hand.
 1. **Review the Code Structure**: Look at the overall structure of the code. Check if the code is organized logically and consistently, follows the project's coding conventions, and whether the changes are made in the right place.
     * For Software, really think about stuff like wether the code is in an approporiate location (files, modules). If there are no specific coding standards, suggest to create one.
     * For ontologies, the key is that the change is to the right file (edit file, DOSDP patterns, ROBOT templates etc).  
@@ -46,7 +48,8 @@ It is _central_ to open science work that we review other peoples work _outside 
 
 In many cases, we may not have the time to perform a proper code review. In this case, try at least to achieve this:
 
-1. **Quick Contextual Understanding**: Glance through the pull request description and associated issues or tickets to grasp the context of the changes. The goal is not deep understanding, but a basic awareness of the purpose of the changes.
+1. **Ensure that the PR has a related issue that explains the context of the PR**. If there is no issue, request for a short issue to be created to motivate the change in the PR (gently - accept if the answer is negative).
+1. **Ensure that all changes in the PR are intentional**. Changes should be small. If there are a lot of unrelated changes, in particular line ending changes, serialisation changes in ontology (e.g. a lot of added `xsd:string` declarations), request before doing a review to reduce the changes to only the changes pertaining to the specific issue at hand.
 1. **File and Structure Overview**: Scan through the files and directories that have been modified. Note the overall structure of the changes, and look for any unusual modifications (e.g., changes in areas not related to the stated purpose of the pull request, large diffs that are not explained by the PR description).
 1. **Random Code Sampling**: Instead of trying to read every line, pick a few sections of code at random to review. Pay attention to the cleanliness of the code, and see if there are any glaring issues or departures from the project's coding conventions.
 1. **Check Automated Tests and Results**: Review the tests that have been added or modified. Check the results of the tests and automated build processes, if available. Even in a quick review, the status of the tests can provide useful information about the quality of the changes.
