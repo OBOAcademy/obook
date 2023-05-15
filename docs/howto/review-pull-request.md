@@ -5,7 +5,7 @@ the proposed change. It is as much about that as about _building shared coding h
 
 It is very important to think of reviewing of a skill and an aspect of open science and engineering culture that need to be learned and developed. In the long term, this habit will have an effect on the growth and impact of our tools and ontologies comparable to the engineering itself.
 
-It is _central_ to open science work that we review other peoples work _outside our direct mandate_. We recommend to select a few people you agree to mutually review your work as a high order of importance - wether you develpo ontologies, code or both.
+It is _central_ to open science work that we review other peoples work _outside our direct mandate_. We recommend to select a few people you agree to mutually review your work as a high order of importance - wether you develpo ontologies, code or both. It is of great importance that **pull requests are addressed in a timely manner**, ideally within 24 hours of the request. The requestor is likely in the headspace of being receptive to changes and working hard to get the code fixed when they ask for a code review.
 
 ## Overarching workflow
 
@@ -17,7 +17,7 @@ It is _central_ to open science work that we review other peoples work _outside 
 
 1. **Check the Tests**: The PR should include tests that cover the new functionality or changes. Make sure the tests are meaningful, and they pass. If the project has a continuous integration (CI) system, all tests should pass in the CI environment.
 
-1. **Manual Testing**: Depending on the change, it may be a good idea to check out the PR branch and test the changes manually. This can help catch issues that are not covered by automated tests.
+1. **Manual Testing (use with care)**: Depending on the change, it may be a good idea to check out the PR branch and test the changes manually. This can help catch issues that are not covered by automated tests, or may be necessary if the diff is too large for a normal review. Note that this is an instance of [Guru Testing](https://wiki.c2.com/?GuruChecksOutput) and should only be used when there is a sense that automated testing is incomplete. If at all possible, an automated test should be recommended immedidately after the manual review is done. Examples of where this kind of manual review may be appropriate are cases where, for exampe, a lot of the class hierarchy of an ontology as affected by a change. Eye-balling may catch certain issues like missing super classes which are hard to capture through automated testing.
 
 1. **Check the Documentation**: If the PR introduces new functionality, it should also update the documentation accordingly. Even for smaller changes, make sure that comments in the code are updated.
 
