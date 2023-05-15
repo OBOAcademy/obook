@@ -1,7 +1,7 @@
 # How to review a pull request
 
 One key aspect of reviewing pull requests (aka code review, ontology change review) is that the purpose is not just to improve the quality of
-the proposed change. It is as much about that as about _building shared coding habits and practices_ and improving that habit for all engineers (ontology and software) inside the whole organisation.
+the proposed change. It is as much about that as about _building shared coding habits and practices_ and improving that habit for all engineers (ontology and software) inside the whole organisation (effectively building the breadth of project knowledge of the developers and reducing the amount of code that needs a guru). 
 
 It is very important to think of reviewing of a skill and an aspect of open science and engineering culture that need to be learned and developed. In the long term, this habit will have an effect on the growth and impact of our tools and ontologies comparable to the engineering itself.
 
