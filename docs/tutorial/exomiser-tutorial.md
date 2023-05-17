@@ -158,6 +158,12 @@ Also, you want to make sure to edit the file to use the correct data version (cu
  exomiser.phenotype.data-version=2302
 ```
 
+## Tutorials
+
+### Monarch OBO Training Tutorial
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/tzwvWkb3s8A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ## Running Exomiser
 
 For this tutorial, we will focus on running Exomiser on a single-sample (whole-exome) VCF file. Additional instructions for running Exomiser on multi-sample VCF data and large jobs are also provided below.
