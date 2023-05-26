@@ -29,7 +29,7 @@ _Note: this is tentative and subject to change_
 | Date       | Lesson                                                                                                                  | Notes                                                                                                                                                                                                                                                                                                                | Recordings                                                           |
 | ---------- | ----------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
 | 2023/06/13 | Modelling with Subclass and Equivalent class statements | Tutorial by [Henriette Harmse](https://henrietteharmse.com/about/) | Final date not confirmed |
-| 2023/05/30 | Idea: Leveraging ChatGPT during ontology curation | TBD | |
+| 2023/05/30 | First steps with ChatGPT for semantic engineers and curators |  | |
 | 2023/05/16 | Cancelled (Monarch/C-Path workshop) | | |
 | 2023/05/02 | Cancelled (No meeting week) |   | |
 | 2023/04/18 | Overview of Protege 5.6 - the latest features | Tutorial by Damien Goutte-Gattat ([slides](https://docs.google.com/presentation/d/1fScxL59EL4YOYe6uNJnR9TCy72kOAkIxLH-HHDfRTKw/edit?usp=sharing))  | [Here](https://youtu.be/QXcdP_zM2LU) |
