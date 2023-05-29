@@ -63,34 +63,34 @@ Replies are given in normal text form. All text after the table of contents, apa
 
 ### Lesson
 
-- [What are the central points of discussion around LLMs?](#discussion-points)
+- [What are some of the basic concepts around LLMs?](#llms)
 - [What is Prompt Engineering?](#prompt-engineering)
 - [Applications of LLMs and ChatGPT around ontology development](#applications)
 - [How can we, concretely, enhance the ontology curation process?](#applications-curation)
 - [Using ChatGPT for ontology mappings](#mappings)
 - [Generating pre-coordinated expressions and schema instances](#expressions)
 
-<a id="discussion-points"></a>
+<a id="llms"></a>
 
-### What are the central points of discussion around LLMs?
-
-> ![](../images/prompt-icon.png)
+> ![](../images/prompt-icon.png): Note this question was asked to [Open Assistant](https://open-assistant.io/chat/) instead of ChatGPT.
 >
-> What are the central points of discussion around LLMs, including issues like alignment problem, prompt engineering, hallucinations etc?
+> Can you explain in 3 simple sentences what an LLM is and how it works?
 
-Large Language Models (LLMs) like GPT-4 have generated significant interest and debate in the fields of artificial intelligence and natural language processing. The central points of discussion around LLMs include:
 
-- Alignment problem: Ensuring that LLMs understand and follow human values is crucial. The alignment problem refers to the challenge of designing AI systems that reliably act in the best interest of humans, even as they become increasingly intelligent.
-- Prompt engineering: Prompt engineering involves crafting input prompts in a way that encourages LLMs to generate useful and relevant responses. This is an ongoing area of research and development, as well-crafted prompts can help mitigate some of the issues related to biases, incomplete knowledge, and misleading responses.
-- Hallucinations: LLMs sometimes generate outputs that seem coherent but are factually incorrect or nonsensical. These "hallucinations" can be problematic, particularly when users rely on the model's output for decision-making. Researchers are working to understand and address the causes of hallucinations in LLMs.
-- Bias and fairness: LLMs are trained on massive text datasets that may contain societal biases. As a result, these biases can be unintentionally amplified in the model's responses. Addressing bias and fairness is an important topic of discussion, with researchers focusing on developing methods to reduce and mitigate these biases.
-- Controllability: Controlling the behavior of LLMs in a fine-grained manner is challenging. As these models become more powerful, it becomes increasingly important to ensure that they can be used safely and responsibly, without producing harmful or undesirable outputs.
-- Environmental impact: Training LLMs requires significant computational resources, which can lead to high energy consumption and carbon emissions. This has raised concerns about the environmental impact of developing and deploying these models.
-- Economic impact: The widespread adoption of LLMs could lead to economic shifts, with potential job displacement in areas like content generation, translation, and customer support. Balancing the benefits and potential negative consequences of LLMs on the workforce is an important point of discussion.
-- Security and misuse: Powerful LLMs can potentially be used maliciously, such as for generating misinformation, deepfake content, or automated spam. Ensuring that these models are used responsibly and developing countermeasures against malicious use is a significant concern.
-- Regulation and governance: As LLMs become more prevalent, there is increasing discussion around the appropriate regulatory and governance frameworks to ensure their safe, ethical, and responsible use.
+An LLM (Langauge Modell) is a AI model that can be trained to perform specific tasks such as speech recognition, text generation or machine translation. It's called a "model" because it is being trained on large sets of data to predict the next step based on previously learned relationships between inputs and outputs.
+LLMs are designed to recognize patterns in human language by processing input data through multiple layers of artificial neural networks that simulate the way neurons communicate in the brain. The training process involves feeding vast amounts of text into the model so that it can learn to identify underlying structures within the language itself. This allows the model to make predictions about likely next words or phrases given previous context. By continually adjusting its internal weights and biases using gradient descent techniques, the LLM becomes increasingly proficient at generating coherent text based on statistical probabilities derived from its knowledge of the language.
 
-These points of discussion highlight the need for ongoing research and collaboration among various stakeholders, including AI researchers, ethicists, policymakers, and the public, to ensure the responsible development and deployment of LLMs.
+> ![](../images/comment.png)
+>
+> What is interesting here: the LLM actually made a typo, or rather, three: `Langauge Modell` - missing the first L (large), Langauge instead of Language and Modell with double L (which is German). Note that both words are spellied correctly later in the text.
+
+> What are the 5 core concepts relevant for end-users to understand LLMs?
+
+1. Language Understanding and Generation: LLMs can understand human language inputs and generate text-based responses, allowing for interactive conversations.
+1. Contextual Understanding: LLMs consider the context of the conversation to provide relevant and coherent responses, taking into account previous messages or prompts.
+1. Pretraining: LLMs learn from vast amounts of text data during pretraining, which helps them acquire a general understanding of language, grammar, and context.
+1. Limitations and Potential Bias: LLMs may provide incorrect or biased information as they generate responses based on patterns learned from training data. Users should be mindful of these limitations and critically evaluate the information provided.
+1. Responsible Use and Privacy: Users should use LLMs responsibly, following platform guidelines and being cautious when sharing personal or sensitive information during interactions. Data privacy should be considered while engaging with LLMs.
 
 <a id="prompt-engineering"></a>
 
@@ -111,11 +111,12 @@ By focusing on the art and science of prompt engineering, researchers and practi
 ### What are some basic tips for writing good prompts for ChatGPT?
 
 
-
 > In the excellent 60 minute [OpenAI, Deeplearning.ai course on Prompt Engineering](https://learn.deeplearning.ai/chatgpt-prompt-eng/lesson/1/introduction), we learn that we should be (1) writing clear an specific instructions and (2) give ChatGPT "time to think".
 
-TODO
-
+- Talking to a LLM is like talking to a teenager
+- Give clear and specific instructions.
+- Use different words to get better results the second time.
+- Give the LLM time to think.
 
 <a id="applications"></a>
 
@@ -423,6 +424,8 @@ A lot of blog posts have circulated recently on Twitter and LinkedIn explored th
 
 ### Some more thoughts on hallucinations
 
+Update 27 May 2023: It seems that complaints wrt to hallucinations, the chat part of ChatGPT is a bit more sensitive to database like queries:
+
 ![](../images/chatgpt_more_hallucination_aware.png)
 
 ### Cool applications the authors of this tutorial used
@@ -435,7 +438,10 @@ A lot of blog posts have circulated recently on Twitter and LinkedIn explored th
 - Find a good human-readable name for a cluster in ML clustering
 - Named entity recognition and knowledge extraction
 - Career planning and discovering stuff you didnt know about at all
-- ChatGPT 
+- ChatGPT for contextualising work and writing use cases
+- Using it for curation research - but doing it right
+   - Don't ask it to do the curation for you, get it to help you find arguments for and against a modelling decision ("I will always have to recurate anyways, so what is the point?")
+   - Always remember that ChatGPT is _not a database_. It hallucinates and changes its mind all the time. Get it to generate text for you that could be useful in your work.
 
 
 ### Additional materials
