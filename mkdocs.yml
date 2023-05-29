@@ -53,6 +53,7 @@ nav:
       - Disease and Phenotype Ontologies: lesson/using-disease-and-phenotype-ontologies.md
       - Hacking the OBOOK: lesson/hackathon.md
       - Getting Hands on with Ontologies: lesson/getting-hands-on.md
+      - Leveraging ChatGPT for ontology curation: lesson/chatgpt-ontology-curation.md
   - Lessons In Development:
       - Developing an Application Ontology: lesson/developing-application-ontologies.md
       - Ontology Development: lesson/ontology-development.md
@@ -83,6 +84,9 @@ nav:
           - GitHub Issue for OBO Engineers: tutorial/github-issues.md
           - Managing OBO ontology projects: tutorial/managing-ontology-project.md
           - Pull requests: tutorial/pull-requests.md
+      - ChatGPT:
+          - Leveraging ChatGPT for ontology curation: lessons/chatgpt-ontology-curation.md
+          - OntoGPT: tutorial/ontogpt.md
       - Dealing with Semantic Data:
           - From Tables to Linked Data: tutorial/linking-data.md
           - Basic SPARQL for OBO Engineers: tutorial/sparql.md
@@ -177,6 +181,8 @@ nav:
       - Medical Ontology landscape: reference/medical-ontology-landscape.md
       - A reference guide to Wikidata: reference/wikidata.md
       - OBOOK Maturity Indicator: reference/obook-maturity-indicator.md
+      - ChatGPT:
+          - Leveraging ChatGPT for ontology curation: reference/chatgpt-prompts-for-ontology-development.md
   - Explanations:
       - Introduction to Ontologies: explanation/intro-to-ontologies.md
       - Logical axiomatization of classes & use of reasoning: explanation/logical-axiomatization.md
