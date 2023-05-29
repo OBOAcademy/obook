@@ -1,6 +1,11 @@
 site_name: OBO Semantic Engineering Training
 theme:
   name: material
+  icon:
+    edit: material/pencil 
+  features:
+    - content.action.edit
+
 markdown_extensions:
   - toc:
       permalink: true
@@ -21,6 +26,7 @@ nav:
   - Courses:
       - ICBO 2021 Tutorial: courses/icbo2021.md
       - ICBO 2022 Tutorial: courses/icbo2022.md
+      - ICBO 2023 Tutorial: courses/icbo2023.md
       - Monarch Ontology Training: courses/monarch-obo-training.md
       - Ontology Summit 2023: courses/ontology-summit-2023.md
   - Pathways:
@@ -137,6 +143,7 @@ nav:
           - Fixing conflicts: howto/fixing-conflicts.md
           - Github actions to automate tasks: howto/github-actions.md
           - Revert a commit: howto/revert-commit.md
+          - Review pull request: howto/review-pull-request.md
       - Quality control:
           - Deploy a custom OBO-Dashboard: howto/deploy-custom-obo-dashboard.md
       - Command line:
