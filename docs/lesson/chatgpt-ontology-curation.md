@@ -72,9 +72,9 @@ Replies are given in normal text form. All text after the table of contents, apa
 
 <a id="llms"></a>
 
-> ![](../images/prompt-icon.png): Note this question was asked to [Open Assistant](https://open-assistant.io/chat/) instead of ChatGPT.
+> ![](../images/prompt-icon.png)
 >
-> Can you explain in 3 simple sentences what an LLM is and how it works?
+> Can you explain in 3 simple sentences what an LLM is and how it works? `[Note this question was asked to [Open Assistant](https://open-assistant.io/chat/) instead of ChatGPT.]`
 
 
 An LLM (Langauge Modell) is a AI model that can be trained to perform specific tasks such as speech recognition, text generation or machine translation. It's called a "model" because it is being trained on large sets of data to predict the next step based on previously learned relationships between inputs and outputs.
@@ -84,6 +84,8 @@ LLMs are designed to recognize patterns in human language by processing input da
 >
 > What is interesting here: the LLM actually made a typo, or rather, three: `Langauge Modell` - missing the first L (large), Langauge instead of Language and Modell with double L (which is German). Note that both words are spellied correctly later in the text.
 
+> ![](../images/prompt-icon.png)
+>
 > What are the 5 core concepts relevant for end-users to understand LLMs?
 
 1. Language Understanding and Generation: LLMs can understand human language inputs and generate text-based responses, allowing for interactive conversations.
