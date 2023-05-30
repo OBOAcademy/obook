@@ -23,15 +23,17 @@ Note:
 
 ### Contributors
 
-- Sierra Moxon
-- Chris Mungall
+- [Sierra Moxon](https://orcid.org/0000-0002-8719-7760)
+- [Chris Mungall](https://orcid.org/0000-0002-6601-2165)
 - [Nico Matentzoglu](https://orcid.org/0000-0002-7356-1779)
 
 ### Skills you will learn in this lesson
 
-- Write basic prompts for ChatGPT
+- Write basic prompts for ChatGPT and similar LLM-based chatbots
+- Understand the basic principles of text in -> text out of LLM-based programs
 - Understand practically the risks of hallucination
-- Lower your own bar for starting to work with generative AI which is likely here to stay
+- Motivate yourself to explore the question: "How, if at all, can I use this technology to become more efficient/effective in my work? (there is no general answer to that yet!)"
+
 ### Conventions
 
 _Prompts_
@@ -63,7 +65,7 @@ Replies are given in normal text form. All text after the table of contents, apa
 
 ### Lesson
 
-- [What are some of the basic concepts around LLMs?](#llms)
+- [Basic concepts and why should you care?](#llms)
 - [What is Prompt Engineering?](#prompt-engineering)
 - [Applications of LLMs and ChatGPT around ontology development](#applications)
 - [How can we, concretely, enhance the ontology curation process?](#applications-curation)
@@ -72,10 +74,43 @@ Replies are given in normal text form. All text after the table of contents, apa
 
 <a id="llms"></a>
 
+> ![](../images/comment.png)
+>
+> None of the text in this section is generated with ChatGPT.
+
+In essence, an LLM takes as an input a piece of text, and returns text as an output. A "prompt" is a 
+piece of text that is written by an agent. This can be a human, or a software tool, or a combination of the two. In most cases, a human agent will pass the prompt to a specialised tool that pre-processes the prompt in certain ways (like translating it, adding examples, structuring it and more) before passing it to the large language model (LLM). For example, a when a chatbot tool like ChatGPT receives a prompt, it processes the prompt in certain ways, than leveraging the trained LLM to generate the text, which is (probably postprocessed) and passed back to the human agent. 
+
+![](../images/llm_basic.png)
+
+There are an infinite number of possible tools you can imagine following this rough paradigm. Monarch's own [ontogpt](https://github.com/monarch-initiative/ontogpt), for example, receives the prompt from the human agent, then augments the prompts in a certain way (by adding additional instructions to it) before passing the augmentd prompt to an LLM like gpt3.5 (or lately even gpt4), which generates an _instance of a curation schema_. This is a great example for an LLM generating not only human readable text, but _structured_ text. Another example for this is to ask an LLM to generate, for example, a [SPARQL query to obtain publications from Wikidata](https://finnaarupnielsen.wordpress.com/2023/03/31/wikidata-and-chatgpt/).
+
+Given the wide range of applications LLMs can serve, it is important to get a mental model of how these can be leveraged to improve our ontology and data curation workflows. It makes sense for hour domain to distinguish four basic models of interacting with LLMs (which are technically not much different):
+
+1. Using LLM-based tools as advisors (endpoint human)
+1. Using LLM-based tools as assistants (endpoint humans)
+1. Using LLM-based tools to extract information for automated processing (endpoint application)
+
+Using LLMs as advisors has a huge number of creative applications. An advisor in this sense is a machine that "knows a lot" and helps you with your own understanding of the world. 
+Large language models trained on a wide range of inputs are particularly interesting in this regard because of the immense breadth of their knowledge (rather than depth), which is something that can be difficult to get from human advisors.
+For example the authors of this article have used ChatGPT and other LLM-based chatbots to help with understanding different domains, and how they might relate to knowledge management, to give career advice and to prepare for scientific panel discussions. For curators, LLMs can be used to generate arguments for a certain classification decision (like a disease classification) or even [suggest a mapping](#mappings).
+
+Using LLMs as assistants is probably the most important use of LLM-based tools at the moment, which includes aspects like summarising texts, generating sometimes boring, yet important, creative work (documentation pages, tutorials, blog-posts etc).
+
+Using LLMs to extract information, similar to "LLM as assistants", is also about automating certain tasks, but the endpoint is not a human. It is the most important basic model for curators to understand, because it is, in essence, the one that threatens our current work-life the most: What happens if LLMs become better at extracting structured knowledge from papers than us? It is important that this thought is not ignored out of fear, but approached with a practical and positive mindset.
+
+Apart from the fact that LLMs take text as an input and return text as an output, it is important to be aware how they are trained.
+
+![](../images/llm_learn.png)
+
+The basic technique for trainig is called "next token prediction". In essence, tokens in the text
+such as words or phrases are masked out by the training function and the LLM is trained to correctly predict these masked out phrases given the previous words in the sentence (or paragraph).
+The corpus used for this training ranges from specialised databases all the way to a large chunk of the publicly accessible textual information on the internet.
+Again, it is important to realise that text does not have to be composed of natural language sentences - learning how to generate programming code and structured data works much the same way.
+
 > ![](../images/prompt-icon.png)
 >
 > Can you explain in 3 simple sentences what an LLM is and how it works? `[Note this question was asked to [Open Assistant](https://open-assistant.io/chat/) instead of ChatGPT.]`
-
 
 An LLM (Langauge Modell) is a AI model that can be trained to perform specific tasks such as speech recognition, text generation or machine translation. It's called a "model" because it is being trained on large sets of data to predict the next step based on previously learned relationships between inputs and outputs.
 LLMs are designed to recognize patterns in human language by processing input data through multiple layers of artificial neural networks that simulate the way neurons communicate in the brain. The training process involves feeding vast amounts of text into the model so that it can learn to identify underlying structures within the language itself. This allows the model to make predictions about likely next words or phrases given previous context. By continually adjusting its internal weights and biases using gradient descent techniques, the LLM becomes increasingly proficient at generating coherent text based on statistical probabilities derived from its knowledge of the language.
