@@ -29,17 +29,17 @@ _Note: this is tentative and subject to change_
 | Date       | Lesson                                                                                                                  | Notes                                                                                                                                                                                                                                                                                                                | Recordings                                                           |
 | ---------- | ----------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
 | 2023/06/13 | Modelling with Subclass and Equivalent class statements | Tutorial by [Henriette Harmse](https://henrietteharmse.com/about/) | Final date not confirmed |
-| 2023/05/30 | First steps with ChatGPT for semantic engineers and curators |  | |
+| 2023/05/30 | [First steps with ChatGPT for semantic engineers and curators](https://oboacademy.github.io/obook/lesson/chatgpt-ontology-curation/) | Led by Sierra Moxon and Nico Matentzoglu | N/A |
 | 2023/05/16 | Cancelled (Monarch/C-Path workshop) | | |
 | 2023/05/02 | Cancelled (No meeting week) |   | |
 | 2023/04/18 | Overview of Protege 5.6 - the latest features | Tutorial by Damien Goutte-Gattat ([slides](https://docs.google.com/presentation/d/1fScxL59EL4YOYe6uNJnR9TCy72kOAkIxLH-HHDfRTKw/edit?usp=sharing))  | [Here](https://youtu.be/QXcdP_zM2LU) |
 | 2023/04/04 | [Introduction to Exomiser](../tutorial/exomiser-tutorial.md) | Tutorial by Valentina, Yasemin and Carlo from QMUL.  | [Here](https://youtu.be/tzwvWkb3s8A)|
 | 2023/03/21 | Introduction to Wikidata | Tutorial by experts in the field Andra Waagmeester and Tiago Lubiana  | [Here](https://youtu.be/KonJqKquUSU) |
-| 2023/03/07 | OAK for the Ontology Engineering community | Chris Mungall tutorial | [Here](https://youtu.be/zO6tS7gZtvw) |
+| 2023/03/07 | OAK for the Ontology Engineering community | Tutorial by Chris Mungall | [Here](https://youtu.be/zO6tS7gZtvw) |
 | 2023/02/21 | OBO Academy Clinic | Bring your ontology issues and questions to discuss with Sabrina and Nico! Attend the [Ontology Summit Seminars](https://oboacademy.github.io/obook/courses/ontology-summit-2023/) instead! | |
-| 2023/02/07 | [Querying the Monarch KG using Neo4J](https://oboacademy.github.io/obook/tutorial/monarch-kg-neo4j-basics/) | Kevin Schaper tutorial | [Here](https://youtu.be/_Sx-1WaV4zY)|
+| 2023/02/07 | [Querying the Monarch KG using Neo4J](https://oboacademy.github.io/obook/tutorial/monarch-kg-neo4j-basics/) | Tutorial by Kevin Schaper | [Here](https://youtu.be/_Sx-1WaV4zY)|
 | 2023/01/24 | OBO Academy Clinic | Bring your ontology issues and questions to discuss with Sabrina and Nico! | |
-| 2023/01/10 | [Modeling with taxon constraints](https://oboacademy.github.io/obook/explanation/taxon-constraints-explainer/) | Jim Balhoff tutorial | [Here](https://youtu.be/ZNbn_JYzuvA)
+| 2023/01/10 | [Modeling with taxon constraints](https://oboacademy.github.io/obook/explanation/taxon-constraints-explainer/) | Tutorial by Jim Balhoff | [Here](https://youtu.be/ZNbn_JYzuvA)
 | 2022/12/27 | _No Meeting_ | Enjoy the Holidays! |
 | 2022/12/13 | [Introduction to Semantic Entity Matching](../lesson/entity-matching.md) | [Slides](https://bit.ly/obo-academy-semantic-matching) | [Here](https://youtu.be/RN2hYxKYSUw) 
 | 2022/11/29 | [OBO Academy hackathon](../lesson/hackathon.md) | Work on open tickets together.  |
