@@ -79,27 +79,27 @@ Replies are given in normal text form. All text after the table of contents, apa
 > None of the text in this section is generated with ChatGPT.
 
 In essence, an LLM takes as an input a piece of text, and returns text as an output. A "prompt" is a 
-piece of text that is written by an agent. This can be a human, or a software tool, or a combination of the two. In most cases, a human agent will pass the prompt to a specialised tool that pre-processes the prompt in certain ways (like translating it, adding examples, structuring it and more) before passing it to the large language model (LLM). For example, a when a chatbot tool like ChatGPT receives a prompt, it processes the prompt in certain ways, than leveraging the trained LLM to generate the text, which is (probably postprocessed) and passed back to the human agent. 
+piece of text that is written by an agent. This can be a human, or a software tool, or a combination of the two. In most cases, a human agent will pass the prompt to a specialised tool that pre-processes the prompt in certain ways (like translating it, adding examples, structuring it and more) before passing it to the large language model (LLM). For example, a when a chatbot tool like ChatGPT receives a prompt, it processes the prompt in certain ways, than leveraging the trained LLM to generate the text (which is probably postprocessed) and passed back to the human agent.
 
 ![](../images/llm_basic.png)
 
-There are an infinite number of possible tools you can imagine following this rough paradigm. Monarch's own [ontogpt](https://github.com/monarch-initiative/ontogpt), for example, receives the prompt from the human agent, then augments the prompts in a certain way (by adding additional instructions to it) before passing the augmentd prompt to an LLM like gpt3.5 (or lately even gpt4), which generates an _instance of a curation schema_. This is a great example for an LLM generating not only human readable text, but _structured_ text. Another example for this is to ask an LLM to generate, for example, a [SPARQL query to obtain publications from Wikidata](https://finnaarupnielsen.wordpress.com/2023/03/31/wikidata-and-chatgpt/).
+There are an infinite number of possible tools you can imagine following this rough paradigm. Monarch's own [ontogpt](https://github.com/monarch-initiative/ontogpt), for example, receives the prompt from the human agent, then augments the prompt in a certain way (by adding additional instructions to it) before passing the augmentd prompt to an LLM like gpt3.5 (or lately even gpt4), which generates an _instance of a curation schema_. This is a great example for an LLM generating not only human readable text, but _structured_ text. Another example for this is to ask an LLM to generate, for example, a [SPARQL query to obtain publications from Wikidata](https://finnaarupnielsen.wordpress.com/2023/03/31/wikidata-and-chatgpt/).
 
-Given the wide range of applications LLMs can serve, it is important to get a mental model of how these can be leveraged to improve our ontology and data curation workflows. It makes sense for hour domain to distinguish four basic models of interacting with LLMs (which are technically not much different):
+Given the wide range of applications LLMs can serve, it is important to get a mental model of how these can be leveraged to improve our ontology and data curation workflows. It makes sense for our domain (semantic engineering and curation) to distinguish four basic models of interacting with LLMs (which are technically not much different):
 
-1. Using LLM-based tools as advisors (endpoint human)
+1. Using LLM-based tools as advisors (endpoint humans)
 1. Using LLM-based tools as assistants (endpoint humans)
 1. Using LLM-based tools to extract information for automated processing (endpoint application)
 
 Using LLMs as advisors has a huge number of creative applications. An advisor in this sense is a machine that "knows a lot" and helps you with your own understanding of the world. 
 Large language models trained on a wide range of inputs are particularly interesting in this regard because of the immense breadth of their knowledge (rather than depth), which is something that can be difficult to get from human advisors.
-For example the authors of this article have used ChatGPT and other LLM-based chatbots to help with understanding different domains, and how they might relate to knowledge management, to give career advice and to prepare for scientific panel discussions. For curators, LLMs can be used to generate arguments for a certain classification decision (like a disease classification) or even [suggest a mapping](#mappings).
+For example, the authors of this article have used ChatGPT and other LLM-based chatbots to help with understanding different domains, and how they might relate to knowledge management and ontologies in order to give specific career advice or to prepare for scientific panel discussions. For ontology curators, LLMs can be used to generate arguments for certain classification decisions (like a disease classification) or even [suggest a mapping](#mappings).
 
-Using LLMs as assistants is probably the most important use of LLM-based tools at the moment, which includes aspects like summarising texts, generating sometimes boring, yet important, creative work (documentation pages, tutorials, blog-posts etc).
+Using LLMs as assistants is probably the most important use of LLM-based tools at the moment, which includes aspects like summarising texts, generating sometimes boring, yet important, creative work (documentation pages, tutorials, blog-posts etc). It is probably not a good idea, at least as of May 2023, to defer to LLM-based tools to classify a term in an ontology, for example because of its tendency to hallucinate. Despite many arguments to the contrary [LLMs are _not databases_](https://www.youtube.com/watch?v=WqYBx2gB6vA). They are programs to generate text.
 
-Using LLMs to extract information, similar to "LLM as assistants", is also about automating certain tasks, but the endpoint is not a human. It is the most important basic model for curators to understand, because it is, in essence, the one that threatens our current work-life the most: What happens if LLMs become better at extracting structured knowledge from papers than us? It is important that this thought is not ignored out of fear, but approached with a practical and positive mindset.
+Using LLMs to extract information, similar to "LLMs as assistants", is, similar to the above, also about automating certain tasks, but the endpoint is not a software program rather than a human. It is the most important basic model of LLMs for us curators and software engineers to understand, because it is, in essence, the one that threatens our current work-life the most: What happens if LLMs become better at extracting structured knowledge from papers (or similarly generate software codes for user stories) than us? It is important that this thought is not ignored out of fear, but approached with a realistic and positive mindset.
 
-Apart from the fact that LLMs take text as an input and return text as an output, it is important to be aware how they are trained.
+_Training_. Apart from the fact that LLMs take text as an input and return text as an output, it is important to be aware how they are trained.
 
 ![](../images/llm_learn.png)
 
@@ -107,6 +107,10 @@ The basic technique for trainig is called "next token prediction". In essence, t
 such as words or phrases are masked out by the training function and the LLM is trained to correctly predict these masked out phrases given the previous words in the sentence (or paragraph).
 The corpus used for this training ranges from specialised databases all the way to a large chunk of the publicly accessible textual information on the internet.
 Again, it is important to realise that text does not have to be composed of natural language sentences - learning how to generate programming code and structured data works much the same way.
+
+In the following, we will ask ChatGPT or Open Assistant a few questions that are relevant to this lesson, which allows us to make certain points. The main point is that a lot of the work for preparing a useful tutorial can be deferred to ChatGPT is an assistant! 
+Many of the questions explore how these tools _could_ relate to us biocurators and semantic engineers in particular, but non of this should be viewed as written in stone.
+The most important take away from this lesson is that you should play with these tools yourself!
 
 > ![](../images/prompt-icon.png)
 >
@@ -146,7 +150,6 @@ By focusing on the art and science of prompt engineering, researchers and practi
 > Providing an effective prompt to ChatGPT is an art form, and as resources like [learnprompting.org](https://learnprompting.org/) testify, one that requires cultivation and care. The better you become at writing prompts, the more value you will draw from ChatGPT for your daily ontology curation tasks. How effective our prompts are depends on the exact language models used in ChatGPT (at the moment 3.5 or 4), which means that this lesson will keep evolving.
 
 ### What are some basic tips for writing good prompts for ChatGPT?
-
 
 > In the excellent 60 minute [OpenAI, Deeplearning.ai course on Prompt Engineering](https://learn.deeplearning.ai/chatgpt-prompt-eng/lesson/1/introduction), we learn that we should be (1) writing clear an specific instructions and (2) give ChatGPT "time to think".
 
