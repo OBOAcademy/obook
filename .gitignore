@@ -6,3 +6,4 @@ docs/resources/fhkb.zip
 docs/tutorial/project-ontology
 .env
 tutorial/*
+.idea/
