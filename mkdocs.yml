@@ -193,6 +193,10 @@ nav:
       - Which biomedical ontologies should we use?: explanation/which-ontology-to-use.md
       - OWL, OBO, JSON? Base, simple, full, basic? What should you use, and why?: explanation/owl-format-variants.md
       - What are taxon constraints?: explanation/taxon-constraints-explainer.md
+      - The logical building blocks of OWL: explanation/owl-building-blocks.md
+      - SubClassOf versus EquivalentTo: explanation/subClassOf-vs-equivalentTo.md
+      - Existential restrictions: explanation/existential-restrictions.md
+
   - OBOOK Editors:
       - Getting started for OBOOK editors: getting-started-obook.md
       - How to add images: images/index.md
