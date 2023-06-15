@@ -33,6 +33,11 @@ which as a Venn diagram will look as follows:
 ![](../images/tutorials/subClassOf-vs-equivalentTo/CsubClassOfDExample.png)
 
 ### Guidance
+#### When to use
+`SubClassOf` is typically used when you want to define a hierarchy from the most general to the most specific. I.e., it 
+is what you often see in taxonomies.
+
+#### When *not* to use
 There are at least 2 scenarios which at first glance may seem like `C SubClassOf D` holds, but it does not hold, or 
 using `C EquivalentTo D` may be a better option.
 
@@ -45,7 +50,7 @@ scanario and you should **not** be using `C SubClassOf D`.
 
 
 2. When you have determined that (1) does not hold, you may deal with the scenario where not only is every individual of
-`C` in `D`, but also every individual in `D` is in `C`. This means `C` and `D` are equivalent. In the case you rather want 
+`C` in `D` but also every individual in `D` is in `C`. This means `C` and `D` are equivalent. In the case you rather want 
 to make use of `EquivalentTo`.
 
 ![](../images/tutorials/subClassOf-vs-equivalentTo/EquivalentTo.png)
@@ -84,6 +89,10 @@ and as a Venn diagram:
 ![](../images/tutorials/subClassOf-vs-equivalentTo/EquivalentToExample.png)
 
 ### Guidance
+#### When to use
+`EquivalentTo` is used for definitions. That is when you want to state the necessary and sufficient conditions for a concept.
+
+#### When *not* to use 
 When do you not want to use `EquivalentTo`? 
 
 1. When there is an individual of `C` that is not in `D`.
