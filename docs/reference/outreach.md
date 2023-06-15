@@ -10,7 +10,6 @@ Available [here](https://docs.google.com/presentation/d/1pZLAsd5tXiXLEISYXYwQ05D
 
 ## Presentations
 
-- Nicole Vasilevsky, James Overton, Rebecca Jackson, Sabrina Toro, Shawn Tan, David Osumi-Sutherland, Nicolas Matentzoglu. “OBO Academy: Training materials for Bio-ontologists.” [Virtual Presentation](https://docs.google.com/presentation/d/10kF9OE56UTf21cm52OJhJw8cw8VXaEdTGUalTXDwQjM/edit#slide=id.p1), OntoCommons, Oslo, Sweden. June 14, 2023. 
 - Nicole Vasilevsky, James Overton, Rebecca Jackson, Sabrina Toro, Shawn Tan, David Osumi-Sutherland, Nicolas Matentzoglu. "OBO Academy: 
 Training materials for Bio-ontologists". [Presentation](https://docs.google.com/presentation/d/10kF9OE56UTf21cm52OJhJw8cw8VXaEdTGUalTXDwQjM/edit#slide=id.p1) at OntoCommons, Virtual. June 14, 2023.
 - Nicole Vasilevsky and Nico Matentzoglu. Panel discussion at [Knowledge Graph Conference 2023](https://www.knowledgegraph.tech/). May 08, 2023.
