@@ -28,6 +28,7 @@ _Note: this is tentative and subject to change_
 
 | Date | Lesson | Notes | Recordings |
 | --- | --- | --- | --- |
+| 2023/10/03 | [Units modelling in and around OBO](https://github.com/OBOAcademy/obook/issues/421) | James Overton | |
 | 2023/09/19 | TBD | TBD | |
 | 2023/09/05 | TBD | TBD | |
 | 2023/08/22 | TBD| TBD | |
