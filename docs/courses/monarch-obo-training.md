@@ -26,9 +26,14 @@ The goal of this course is to provide ongoing training for the OBO community. As
 ## Schedule
 _Note: this is tentative and subject to change_
 
-| Date       | Lesson                                                                                                                  | Notes                                                                                                                                                                                                                                                                                                                | Recordings                                                           |
-| ---------- | ----------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| Date | Lesson | Notes | Recordings |
+| --- | --- | --- | --- |
+| 2023/09/19 | TBD | TBD | |
+| 2023/09/05 | TBD | TBD | |
+| 2023/08/22 | TBD| TBD | |
 | 2023/08/08 | [TBD](https://github.com/OBOAcademy/obook/issues/416) | TBD | |
+| July 2023 | Cancelled: Summer break | | |
+| 2023/06/27 | [Cancelled](https://github.com/OBOAcademy/obook/issues/415) | | |
 | 2023/06/13 | [Modelling with Subclass and Equivalent class statements](https://oboacademy.github.io/obook/explanation/subClassOf-vs-equivalentTo/) | Tutorial by [Henriette Harmse](https://henrietteharmse.com/about/) | [slides](https://drive.google.com/file/d/1lU-2TsmMqIsIjTvwM4n875BymikOdjTF/view?usp=sharing) |
 | 2023/05/30 | [First steps with ChatGPT for semantic engineers and curators](https://oboacademy.github.io/obook/lesson/chatgpt-ontology-curation/) | Led by Sierra Moxon and Nico Matentzoglu | N/A |
 | 2023/05/16 | Cancelled (Monarch/C-Path workshop) | | |
