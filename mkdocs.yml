@@ -134,16 +134,16 @@ nav:
           - Dealing with Large Ontologies: howto/deal-with-large-ontologies.md
           - Updating Imports with ODK: howto/update-import.md
           - Import ORCIDIO: howto/odk-add-orcidio-module.md
-      - Git and Github:
+      - Git and GitHub:
           - Make term requests to existing ontologies: howto/term-request.md
           - Clone a repository: howto/clone-mondo-repo.md
           - Fork an ontology for editing: howto/github-create-fork.md
-          - Creating an GitHub Pull Request: howto/github-create-pull-request.md
+          - Create a GitHub Pull Request: howto/github-create-pull-request.md
           - Change a pull request: howto/change-files-pull-request.md
-          - Fixing conflicts: howto/fixing-conflicts.md
-          - Github actions to automate tasks: howto/github-actions.md
+          - Fix conflicts: howto/fixing-conflicts.md
+          - Automate tasks with GitHub actions: howto/github-actions.md
           - Revert a commit: howto/revert-commit.md
-          - Review pull request: howto/review-pull-request.md
+          - Review a pull request: howto/review-pull-request.md
       - Quality control:
           - Deploy a custom OBO-Dashboard: howto/deploy-custom-obo-dashboard.md
       - Command line:
