@@ -1,6 +1,6 @@
 # How to review a pull request
 
-Pull Requests are GitHub's mechanism for allowing one person to propose changes to a file (which could be a chunk of code, documentation, or an ontology) and enabling others to comment on (review) the proposed changes. You can learn more about creating Pull Requests (PRs) [here](/howto/github-create-pull-request/); this document is about reviewing other people's PRs.
+Pull Requests are GitHub's mechanism for allowing one person to propose changes to a file (which could be a chunk of code, documentation, or an ontology) and enabling others to comment on (review) the proposed changes. You can learn more about creating Pull Requests (PRs) [here](../howto/github-create-pull-request.md); this document is about reviewing other people's PRs.
 
 One key aspect of reviewing pull requests (aka code review or ontology change review) is that the purpose is not just to improve the quality of
 the proposed change. It is also about _building shared coding habits and practices_ and improving those practices for all engineers (ontology and software) across a whole organisation (effectively building the breadth of project knowledge of the developers and reducing the amount of hard-to-understand code). 
