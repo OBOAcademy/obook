@@ -1,4 +1,4 @@
-![image](https://github.com/OBOAcademy/obook/assets/6722114/7402dfc7-d6ba-4ff1-aad6-40b595a3dc8c)# Early Career Data Scientist
+# Early Career Data Scientist
 
 **Description:** A collection of videos, tutorials, training materials, and exercises targeted towards any entry-level, early-career person interested in learning basic skills in data science.
 
