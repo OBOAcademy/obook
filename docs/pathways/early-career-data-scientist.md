@@ -25,12 +25,13 @@
 **Tutorials**  
 
 1. [GitHub fundamentals](https://oboacademy.github.io/obook/tutorial/github-fundamentals/)
-2. [GitHub issues](https://oboacademy.github.io/obook/tutorial/github-issues/)
+2. [Learn Markdown syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+3. [GitHub issues](https://oboacademy.github.io/obook/tutorial/github-issues/)
 
 **Exercises**  
 
 1. Make edits to this OBO Academy documentation and make a pull request. (For example, find typos to fix, add or revise content to this document, etc.)
-2. Create a GitHub website by forking this repository: https://github.com/laderast/academic_site_workshop
+2. Create a GitHub website by forking this repository: [https://github.com/laderast/academic_site_workshop](https://github.com/laderast/academic_site_workshop)
 
 ## 4. Learn command line
 
