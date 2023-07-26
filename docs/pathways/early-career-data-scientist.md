@@ -36,7 +36,7 @@
 
 **Exercises**  
 
-1. Make edits to this OBO Academy documentation and make a pull request. (For example, find typos to fix, add or revise content to this document, etc.)
+1. Help improve this pathway! Make edits to this OBO Academy page and make a pull request. (For example, find typos to fix, add or revise content to this document, etc.)
 2. Create a GitHub website by forking this repository: [https://github.com/laderast/academic_site_workshop](https://github.com/laderast/academic_site_workshop)
 
 ## 4. Learn command line
