@@ -1,6 +1,6 @@
 # Early Career Data Scientist
 
-**Description:** These guidelines are targeted towards any entry-level, early career person who is interested in learning basic skills in data science.
+**Description:** A collection of videos, tutorials, training materials, and exercises targeted towards any entry-level, early-career person interested in learning basic skills in data science.
 
 ## 1. Data Science Ethics
 
