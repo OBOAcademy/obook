@@ -31,6 +31,7 @@ nav:
       - Ontology Summit 2023: courses/ontology-summit-2023.md
   - Pathways:
       - What is a pathway?: pathways/pathways.md
+      - Early Career Data Scientist: pathways/early-career-data-scientist.md
       - Ontology Curator: pathways/ontology-curator.md
       - Ontology Curator GO-style: pathways/ontology-curator-go-style.md
       - Ontology Curator OBI-style: pathways/ontology-curator-obi-style.md
