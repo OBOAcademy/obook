@@ -23,10 +23,16 @@
 2. Download and install [GitHub Desktop](https://desktop.github.com/)
 
 **Tutorials**  
+
+### Introduction to GitHub
 1. [GitHub getting started guide](https://docs.github.com/en/get-started/quickstart/hello-world)
+2. [Git 101: Git and GitHub for Beginners](https://www.slideshare.net/HubSpot/git-101-git-and-github-for-beginners)
 1. [GitHub fundamentals](https://oboacademy.github.io/obook/tutorial/github-fundamentals/)
+
+### GitHub Issues
 2. [Learn Markdown syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 3. [GitHub issues](https://oboacademy.github.io/obook/tutorial/github-issues/)
+4. [About issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues)
 
 **Exercises**  
 
