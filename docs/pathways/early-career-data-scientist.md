@@ -79,7 +79,7 @@ Note: for the tutorials below PC users need to install ODK (instructions are lin
 
 ### Videos 
 
-1. [https://dmice.ohsu.edu/bd2k/demo/BDK12-1/presentation_html5.html](https://dmice.ohsu.edu/bd2k/demo/BDK12-1/presentation_html5.html)
+1. [Data Preparation and Planning](https://dmice.ohsu.edu/bd2k/demo/BDK12-1/presentation_html5.html)
 2. [https://dmice.ohsu.edu/bd2k/demo/BDK12-2/presentation_html5.html](https://dmice.ohsu.edu/bd2k/demo/BDK12-2/presentation_html5.html)
 3. [https://dmice.ohsu.edu/bd2k/demo/BDK12-3/presentation_html5.html](https://dmice.ohsu.edu/bd2k/demo/BDK12-3/presentation_html5.html)
 4. [Data sharing snafu: Data Sharing and Management Snafu in 3 Short Acts](https://github.com/OBOAcademy/obook/assets/6722114/49eed749-c4bd-427c-8db9-9e2334348cee)
