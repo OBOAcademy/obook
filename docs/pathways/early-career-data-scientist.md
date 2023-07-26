@@ -17,10 +17,11 @@
 ## 3. Learn command line
 
 
-1. [Codecaemy Learn the Command Line](https://www.codecademy.com/learn/learn-the-command-line)
+1. [Codecademy Learn the Command Line](https://www.codecademy.com/learn/learn-the-command-line)
 2. [Course: The Shell](https://missing.csail.mit.edu/2020/course-shell/)
 3. [Course: Shell Tools and Scripting](https://missing.csail.mit.edu/2020/shell-tools/)
 
-Note: for the tutorials below PC users need to install ODK (instructions are linked from the tutorial)
+Note: for the tutorials below PC users need to install ODK (instructions are linked from the tutorial)  
+
 4. [Tutorial: Very (!) short introduction to the command line for ontology curators and semantic engineers: Part 1](https://oboacademy.github.io/obook/tutorial/intro-cli-1/)
 5. [Tutorial: Very (!) short introduction to the command line for ontology curators and semantic engineers: Part 2](https://oboacademy.github.io/obook/tutorial/intro-cli-2/)
