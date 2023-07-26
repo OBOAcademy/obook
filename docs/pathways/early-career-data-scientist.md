@@ -6,44 +6,46 @@
 
 **Description:** Introductory data science ethics videos hosted by Northeat Big Data Innovation Hub.
 
+### Videos
+
 **6 videos** [available here](https://nebigdatahub.org/nsdc/nsdc-video-library/#data-ethics)
 
 ## 2. Overview: What is Data Science
 
-**Videos**  
+## Videos 
 
 1. [IBM OpenDS4All What is Data Science? with Yucen Wang - Part I](https://www.youtube.com/watch?v=BLgjJvPAaqc&list=PLNs9ZO9jGtUBLCoyYNmRqz8FM3aUdJ6xD)  
 2. [IBM OpenDS4All What is Data Science? with Yucen Wang - Part II](https://www.youtube.com/watch?v=OderbEVWDDU&list=PLNs9ZO9jGtUBLCoyYNmRqz8FM3aUdJ6xD&index=3)  
 
 ## 3. Learn GitHub
 
-**Getting started**
+### Getting started
 
 1. Create a GitHub account, see [https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account](https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account)
 2. Download and install [GitHub Desktop](https://desktop.github.com/)
 
-**Tutorials**  
+### Tutorials
 
-### Introduction to GitHub  
+#### Introduction to GitHub  
 
 1. [GitHub getting started guide](https://docs.github.com/en/get-started/quickstart/hello-world)
 2. [Git 101: Git and GitHub for Beginners](https://www.slideshare.net/HubSpot/git-101-git-and-github-for-beginners)
 1. [GitHub fundamentals](https://oboacademy.github.io/obook/tutorial/github-fundamentals/)
 
-### GitHub Issues
+#### GitHub Issues
 1. [Learn Markdown syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 1. [GitHub issues](https://oboacademy.github.io/obook/tutorial/github-issues/)
 1. [About issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues)
 1. [Intro to managing and tracking issues in GitHub](https://data2health.github.io/mtip-tutorial/lessons/Lesson6.html)
 
-**Exercises**  
+### Exercises
 
 1. Help improve this pathway! Make edits to this OBO Academy page and make a pull request. (For example, find typos to fix, add or revise content to this document, etc.)
 2. Create a GitHub website by forking this repository: [https://github.com/laderast/academic_site_workshop](https://github.com/laderast/academic_site_workshop)
 
 ## 4. Learn command line
 
-**Tutorials**  
+### Tutorials
 
 1. [Codecademy Learn the Command Line](https://www.codecademy.com/learn/learn-the-command-line)
 2. [Course: The Shell](https://missing.csail.mit.edu/2020/course-shell/)
@@ -56,6 +58,6 @@ Note: for the tutorials below PC users need to install ODK (instructions are lin
 
 ## Communication
 
-**Tutorial**  
+### Tutorials 
 
 [Survival strategies for team communication](https://data2health.github.io/mtip-tutorial/lessons/Lesson4.html)
