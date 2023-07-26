@@ -19,11 +19,11 @@
 
 **Getting started**
 
-1. Create a GitHub account at [www.github.com](www.github.com)
+1. Create a GitHub account, see [https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account](https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account)
 2. Download and install [GitHub Desktop](https://desktop.github.com/)
 
 **Tutorials**  
-
+1. [GitHub getting started guide](https://docs.github.com/en/get-started/quickstart/hello-world)
 1. [GitHub fundamentals](https://oboacademy.github.io/obook/tutorial/github-fundamentals/)
 2. [Learn Markdown syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 3. [GitHub issues](https://oboacademy.github.io/obook/tutorial/github-issues/)
@@ -45,3 +45,9 @@ Note: for the tutorials below PC users need to install ODK (instructions are lin
 
 4. [Tutorial: Very (!) short introduction to the command line for ontology curators and semantic engineers: Part 1](https://oboacademy.github.io/obook/tutorial/intro-cli-1/)
 5. [Tutorial: Very (!) short introduction to the command line for ontology curators and semantic engineers: Part 2](https://oboacademy.github.io/obook/tutorial/intro-cli-2/)
+
+## Communication
+
+**Tutorial**  
+
+[Survival strategies for team communication](https://data2health.github.io/mtip-tutorial/lessons/Lesson4.html)
