@@ -58,10 +58,6 @@ Note: for the tutorials below PC users need to install ODK (instructions are lin
 
 ## 5. Introduction to Ontologies
 
-### Tutorial  
-
-1. [Introduction to ontologies](https://oboacademy.github.io/obook/explanation/intro-to-ontologies/)
-
 ### Articles to read  
 
 1. [Ontology 101 by D. McGuiness](https://protege.stanford.edu/publications/ontology_development/ontology101-noy-mcguinness.html)
@@ -72,14 +68,14 @@ Note: for the tutorials below PC users need to install ODK (instructions are lin
 1. [An Introduction to Ontologies](https://www.youtube.com/watch?v=PrLY3Gzj6w4) by Mark Musen, Stanford University (~15 min)
 2. [Introduction to Biomedical Ontologies #1:  What is an Ontology?](https://www.youtube.com/watch?v=3EUaurjK7u8) (~15 min)
 3. [Using ontologies to standardize rare disease data collection](https://www.youtube.com/watch?v=vinZvwXqd_k) Nicole Vasilevsky, C-Path (1 hr)
-			vi. Article: https://ontogenesis.knowledgeblog.org/50/
-			vii. CPONT paper: CPONT_ICBO_2023
-			viii. More advanced
-				1) https://oboacademy.github.io/obook/lesson/ontology-fundamentals/
-https://oboacademy.github.io/obook/lesson/contributing-to-obo-ontologies/ 
 
+### Tutorial  
 
-## Communication
+1. [Introduction to ontologies](https://oboacademy.github.io/obook/explanation/intro-to-ontologies/)
+2. [Ontology fundamentals](https://oboacademy.github.io/obook/lesson/ontology-fundamentals/)
+3. [Contributig to ontologies(]https://oboacademy.github.io/obook/lesson/contributing-to-obo-ontologies/ )
+
+## Effective Communication in Data Science
 
 ### Tutorials 
 
