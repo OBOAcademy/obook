@@ -24,7 +24,8 @@
 
 **Tutorials**  
 
-### Introduction to GitHub
+### Introduction to GitHub  
+
 1. [GitHub getting started guide](https://docs.github.com/en/get-started/quickstart/hello-world)
 2. [Git 101: Git and GitHub for Beginners](https://www.slideshare.net/HubSpot/git-101-git-and-github-for-beginners)
 1. [GitHub fundamentals](https://oboacademy.github.io/obook/tutorial/github-fundamentals/)
