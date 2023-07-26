@@ -17,6 +17,11 @@
 
 ## 3. Learn GitHub
 
+**Getting started**
+
+1. Create a GitHub account at [www.github.com](www.github.com)
+2. Download and install [GitHub Desktop](https://desktop.github.com/)
+
 **Tutorials**  
 
 1. [GitHub fundamentals](https://oboacademy.github.io/obook/tutorial/github-fundamentals/)
