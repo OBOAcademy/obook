@@ -1,4 +1,4 @@
-# Early Career Data Scientist
+![image](https://github.com/OBOAcademy/obook/assets/6722114/7402dfc7-d6ba-4ff1-aad6-40b595a3dc8c)# Early Career Data Scientist
 
 **Description:** A collection of videos, tutorials, training materials, and exercises targeted towards any entry-level, early-career person interested in learning basic skills in data science.
 
@@ -55,6 +55,29 @@ Note: for the tutorials below PC users need to install ODK (instructions are lin
 
 4. [Tutorial: Very (!) short introduction to the command line for ontology curators and semantic engineers: Part 1](https://oboacademy.github.io/obook/tutorial/intro-cli-1/)
 5. [Tutorial: Very (!) short introduction to the command line for ontology curators and semantic engineers: Part 2](https://oboacademy.github.io/obook/tutorial/intro-cli-2/)
+
+## 5. Introduction to Ontologies
+
+### Tutorial  
+
+1. [Introduction to ontologies](https://oboacademy.github.io/obook/explanation/intro-to-ontologies/)
+
+### Articles to read  
+
+1. [Ontology 101 by D. McGuiness](https://protege.stanford.edu/publications/ontology_development/ontology101-noy-mcguinness.html)
+2. [Ontological Annotation of Data](https://ontogenesis.knowledgeblog.org/50/)
+
+### Videos  
+
+1. [An Introduction to Ontologies](https://www.youtube.com/watch?v=PrLY3Gzj6w4) by Mark Musen, Stanford University (~15 min)
+2. [Introduction to Biomedical Ontologies #1:  What is an Ontology?](https://www.youtube.com/watch?v=3EUaurjK7u8) (~15 min)
+3. [Using ontologies to standardize rare disease data collection](https://www.youtube.com/watch?v=vinZvwXqd_k) Nicole Vasilevsky, C-Path (1 hr)
+			vi. Article: https://ontogenesis.knowledgeblog.org/50/
+			vii. CPONT paper: CPONT_ICBO_2023
+			viii. More advanced
+				1) https://oboacademy.github.io/obook/lesson/ontology-fundamentals/
+https://oboacademy.github.io/obook/lesson/contributing-to-obo-ontologies/ 
+
 
 ## Communication
 
