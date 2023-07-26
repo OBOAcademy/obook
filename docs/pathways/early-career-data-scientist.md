@@ -31,9 +31,10 @@
 1. [GitHub fundamentals](https://oboacademy.github.io/obook/tutorial/github-fundamentals/)
 
 ### GitHub Issues
-2. [Learn Markdown syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
-3. [GitHub issues](https://oboacademy.github.io/obook/tutorial/github-issues/)
-4. [About issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues)
+1. [Learn Markdown syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+1. [GitHub issues](https://oboacademy.github.io/obook/tutorial/github-issues/)
+1. [About issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues)
+1. [Intro to managing and tracking issues in GitHub](https://data2health.github.io/mtip-tutorial/lessons/Lesson6.html)
 
 **Exercises**  
 
