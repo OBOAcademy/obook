@@ -67,7 +67,7 @@ Note: for the tutorials below PC users need to install ODK (instructions are lin
 
 1. [An Introduction to Ontologies](https://www.youtube.com/watch?v=PrLY3Gzj6w4) by Mark Musen, Stanford University (~15 min)
 2. [Introduction to Biomedical Ontologies #1:  What is an Ontology?](https://www.youtube.com/watch?v=3EUaurjK7u8) (~15 min)
-3. [Using ontologies to standardize rare disease data collection](https://www.youtube.com/watch?v=vinZvwXqd_k) Nicole Vasilevsky, C-Path (1 hr)
+3. [Using ontologies to standardize rare disease data collection](https://www.youtube.com/watch?v=vinZvwXqd_k), by Nicole Vasilevsky, C-Path (1 hr)
 
 ### Tutorial  
 
