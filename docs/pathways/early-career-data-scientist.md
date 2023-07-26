@@ -69,11 +69,23 @@ Note: for the tutorials below PC users need to install ODK (instructions are lin
 2. [Introduction to Biomedical Ontologies #1:  What is an Ontology?](https://www.youtube.com/watch?v=3EUaurjK7u8), by Jennifer Smith, Rat Genome Database (~15 min)
 3. [Using ontologies to standardize rare disease data collection](https://www.youtube.com/watch?v=vinZvwXqd_k), by Nicole Vasilevsky, C-Path (1 hr)
 
-### Tutorial  
+### Tutorials
 
 1. [Introduction to ontologies](https://oboacademy.github.io/obook/explanation/intro-to-ontologies/)
 2. [Ontology fundamentals](https://oboacademy.github.io/obook/lesson/ontology-fundamentals/)
 3. [Contributig to ontologies](https://oboacademy.github.io/obook/lesson/contributing-to-obo-ontologies/)
+
+## 6. Basic Data Management
+
+### Videos 
+
+1. [https://dmice.ohsu.edu/bd2k/demo/BDK12-1/presentation_html5.html](https://dmice.ohsu.edu/bd2k/demo/BDK12-1/presentation_html5.html)
+2. [https://dmice.ohsu.edu/bd2k/demo/BDK12-2/presentation_html5.html](https://dmice.ohsu.edu/bd2k/demo/BDK12-2/presentation_html5.html)
+3. [https://dmice.ohsu.edu/bd2k/demo/BDK12-3/presentation_html5.html](https://dmice.ohsu.edu/bd2k/demo/BDK12-3/presentation_html5.html)
+4. [Data sharing snafu: Data Sharing and Management Snafu in 3 Short Acts](https://github.com/OBOAcademy/obook/assets/6722114/49eed749-c4bd-427c-8db9-9e2334348cee)
+
+
+
 
 ## Effective Communication in Data Science
 
