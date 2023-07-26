@@ -73,7 +73,7 @@ Note: for the tutorials below PC users need to install ODK (instructions are lin
 
 1. [Introduction to ontologies](https://oboacademy.github.io/obook/explanation/intro-to-ontologies/)
 2. [Ontology fundamentals](https://oboacademy.github.io/obook/lesson/ontology-fundamentals/)
-3. [Contributig to ontologies(]https://oboacademy.github.io/obook/lesson/contributing-to-obo-ontologies/ )
+3. [Contributig to ontologies)[https://oboacademy.github.io/obook/lesson/contributing-to-obo-ontologies/ )
 
 ## Effective Communication in Data Science
 
