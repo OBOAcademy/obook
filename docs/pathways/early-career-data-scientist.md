@@ -17,7 +17,7 @@
 
 # 3. Understand and Appreciate Open and FAIR Data
 
-### Article
+### Article to read
 
 1. [The FAIR Guiding Principles for scientific data management and stewardship](https://www.nature.com/articles/sdata201618)
 
@@ -94,7 +94,8 @@ Note: for the tutorials below PC users need to install ODK (instructions are lin
 3. [https://dmice.ohsu.edu/bd2k/demo/BDK12-3/presentation_html5.html](https://dmice.ohsu.edu/bd2k/demo/BDK12-3/presentation_html5.html)
 4. [Data sharing snafu: Data Sharing and Management Snafu in 3 Short Acts](https://github.com/OBOAcademy/obook/assets/6722114/49eed749-c4bd-427c-8db9-9e2334348cee)
 
-### Articles
+### Article to read
+
 1. [10 Simple Rules for the Care and Feeding of Scientific Data](https://arxiv.org/pdf/1401.2134v1.pdf)
 2. [Big Data: The Future of Biocuration](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2819144/)
 3. [A primer on data sharing](https://doi.org/10.1371/journal.pbio.1002235)
