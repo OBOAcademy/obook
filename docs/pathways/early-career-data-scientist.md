@@ -106,7 +106,7 @@ Note: for the tutorials below PC users need to install ODK (instructions are lin
 
 [Data Management 101](https://drive.google.com/drive/folders/1blhHuwno0n-kZmYNei7RSIIexvTKIysY)
 
-# 8. Preparing your CV and Tracking Your Contributions
+## 8. Preparing your CV and Tracking Your Contributions
 
 ### Video 
 
@@ -116,7 +116,7 @@ Note: for the tutorials below PC users need to install ODK (instructions are lin
 
 [Is authorship sufficient for today’s collaborative research? A call for contributor roles](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7736357/)
 
-## Effective Communication in Data Science
+## 9. Effective Communication in Data Science
 
 ### Tutorials 
 
