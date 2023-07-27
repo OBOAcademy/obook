@@ -82,7 +82,16 @@ Note: for the tutorials below PC users need to install ODK (instructions are lin
 3. [https://dmice.ohsu.edu/bd2k/demo/BDK12-3/presentation_html5.html](https://dmice.ohsu.edu/bd2k/demo/BDK12-3/presentation_html5.html)
 4. [Data sharing snafu: Data Sharing and Management Snafu in 3 Short Acts](https://github.com/OBOAcademy/obook/assets/6722114/49eed749-c4bd-427c-8db9-9e2334348cee)
 
+### Articles
+1. [10 Simple Rules for the Care and Feeding of Scientific Data](https://arxiv.org/pdf/1401.2134v1.pdf)
+2. [Big Data: The Future of Biocuration](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2819144/)
+3. [A primer on data sharing](https://doi.org/10.1371/journal.pbio.1002235)
+4. [Identifiers for the 21st century: How to design, provision, and reuse persistent identifiers to maximize utility and impact of life science data](https://doi.org/10.1371/journal.pbio.2001414 )
+5. [Reproducible and reusable research: Are journal data sharing policies meeting the mark?](https://peerj.com/articles/3208/)
 
+### Exercise
+
+[Data Management 101](https://drive.google.com/drive/folders/1blhHuwno0n-kZmYNei7RSIIexvTKIysY)
 
 
 ## Effective Communication in Data Science
