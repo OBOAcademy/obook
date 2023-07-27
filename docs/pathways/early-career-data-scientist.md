@@ -10,12 +10,24 @@
 
 ## 2. Overview: What is Data Science
 
-## Videos 
+### Videos 
 
 1. [IBM OpenDS4All What is Data Science? with Yucen Wang - Part I](https://www.youtube.com/watch?v=BLgjJvPAaqc&list=PLNs9ZO9jGtUBLCoyYNmRqz8FM3aUdJ6xD)  
 2. [IBM OpenDS4All What is Data Science? with Yucen Wang - Part II](https://www.youtube.com/watch?v=OderbEVWDDU&list=PLNs9ZO9jGtUBLCoyYNmRqz8FM3aUdJ6xD&index=3)  
 
-## 3. Learn GitHub
+# 3. Understand and Appreciate Open and FAIR Data
+
+### Article
+
+1. [The FAIR Guiding Principles for scientific data management and stewardship](https://www.nature.com/articles/sdata201618)
+
+### Exercises
+
+1. Create an [ORCID](https://orcid.org/)
+2. Create wikidata entry about yourself and link to other projects if applicable
+3. Share past work on FigShare/Zenodo, etc
+
+## 4. Learn GitHub
 
 ### Getting started
 
@@ -41,7 +53,7 @@
 1. Help improve this pathway! Make edits to this OBO Academy page and make a pull request. (For example, find typos to fix, add or revise content to this document, etc.)
 2. Create a GitHub website by forking this repository: [https://github.com/laderast/academic_site_workshop](https://github.com/laderast/academic_site_workshop)
 
-## 4. Learn command line
+## 5. Learn command line
 
 ### Tutorials
 
@@ -54,7 +66,7 @@ Note: for the tutorials below PC users need to install ODK (instructions are lin
 4. [Tutorial: Very (!) short introduction to the command line for ontology curators and semantic engineers: Part 1](https://oboacademy.github.io/obook/tutorial/intro-cli-1/)
 5. [Tutorial: Very (!) short introduction to the command line for ontology curators and semantic engineers: Part 2](https://oboacademy.github.io/obook/tutorial/intro-cli-2/)
 
-## 5. Introduction to Ontologies
+## 6. Introduction to Ontologies
 
 ### Articles to read  
 
@@ -73,7 +85,7 @@ Note: for the tutorials below PC users need to install ODK (instructions are lin
 2. [Ontology fundamentals](https://oboacademy.github.io/obook/lesson/ontology-fundamentals/)
 3. [Contributig to ontologies](https://oboacademy.github.io/obook/lesson/contributing-to-obo-ontologies/)
 
-## 6. Basic Data Management
+## 7. Basic Data Management
 
 ### Videos 
 
@@ -93,6 +105,15 @@ Note: for the tutorials below PC users need to install ODK (instructions are lin
 
 [Data Management 101](https://drive.google.com/drive/folders/1blhHuwno0n-kZmYNei7RSIIexvTKIysY)
 
+# 8. Preparing your CV and Tracking Your Contributions
+
+### Video 
+
+[Workshop from Biocuration: Workshop - Careers In Biocuration](https://github.com/OBOAcademy/obook/assets/6722114/c9981552-ee4f-44d7-9ad8-ce21f9782bc0)
+
+### Articles
+
+[Is authorship sufficient for today’s collaborative research? A call for contributor roles](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7736357/)
 
 ## Effective Communication in Data Science
 
