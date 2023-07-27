@@ -58,8 +58,6 @@
 ### Tutorials
 
 1. [Codecademy Learn the Command Line](https://www.codecademy.com/learn/learn-the-command-line)
-2. [Course: The Shell](https://missing.csail.mit.edu/2020/course-shell/)
-3. [Course: Shell Tools and Scripting](https://missing.csail.mit.edu/2020/shell-tools/)
 
 Note: for the tutorials below PC users need to install ODK (instructions are linked from the tutorial)   
 
