@@ -15,7 +15,7 @@
 1. [IBM OpenDS4All What is Data Science? with Yucen Wang - Part I](https://www.youtube.com/watch?v=BLgjJvPAaqc&list=PLNs9ZO9jGtUBLCoyYNmRqz8FM3aUdJ6xD)  
 2. [IBM OpenDS4All What is Data Science? with Yucen Wang - Part II](https://www.youtube.com/watch?v=OderbEVWDDU&list=PLNs9ZO9jGtUBLCoyYNmRqz8FM3aUdJ6xD&index=3)  
 
-# 3. Understand and Appreciate Open and FAIR Data
+## 3. Understand and Appreciate Open and FAIR Data
 
 ### Article to read
 
