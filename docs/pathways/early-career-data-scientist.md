@@ -24,7 +24,7 @@
 ### Exercises
 
 1. Create an [ORCID](https://orcid.org/)
-2. Create wikidata entry about yourself and link to other projects if applicable
+2. Create [wikidata](https://www.wikidata.org/wiki/Wikidata:Main_Page) entry about yourself and link to other projects if applicable
 3. Share past work on FigShare/Zenodo, etc
 
 ## 4. Learn GitHub
