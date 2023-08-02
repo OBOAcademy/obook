@@ -10,8 +10,6 @@
 
 4. If you have only just set up this repository, modify the idranges file and add yourself or other editors.
 
-
-
 ## Manually setting ID ranges in Protege
 
 **Note**: Protégé 5.6 can now automatically set up the ID range for a given user by exploiting the -idranges.owl file, if it exists. If you are using Protege 5.5.0 or below, the ID ranges will need to be manually set.
