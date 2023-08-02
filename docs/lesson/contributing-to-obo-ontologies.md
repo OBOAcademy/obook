@@ -320,7 +320,7 @@ Be sure to change "Your Name" to your actual name! And note that this value shou
 
 create a pull request and add matentzn or nicolevasilevsky as a reviewer
 
-proceed to settting up as below:
+proceed to setting up as below:
 
 ![image](https://user-images.githubusercontent.com/6722114/115964257-6a67a280-a4d8-11eb-8dcd-768b51d75720.png)
 
