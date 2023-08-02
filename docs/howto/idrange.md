@@ -10,7 +10,7 @@
 
 4. If you have only just set up this repository, modify the idranges file and add yourself or other editors.
 
-## Setting ID ranges in Protege
+## Manually setting ID ranges in Protege
 
 1. Once you have your assigned ID range, you need to configure Protege so that your ID range is recorded in the Preferences menu. Protege does not read the idranges file.
 
