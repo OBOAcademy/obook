@@ -18,6 +18,8 @@ Protégé 5.6 can now automatically set up the ID range for a given user by expl
 
 This Protege version looks at the ID range file and matches your user name in Protege to the names in the file to automatically set up your ID range. Thus as long as this information matches you no longer need to manually set the ID range. You will get a message if your user name does not match one in the file asking you to pick an ID range.
 
+**Note**: If you are switching from an old Protege version to Protege 5.6, you may need to reset your range to the last used ID rather than just the full range or Protege would try to fill in gaps in the range.
+
 ### Protege 5.5.0 or below
 
 ID ranges need to be manually set in Protege 5.6.0 or below, as described below.
