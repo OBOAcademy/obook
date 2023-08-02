@@ -8,8 +8,7 @@
 Participants will need to have access to the following resources and tools prior to the training:
 
 - **GitHub account** - register for a free GitHub account [here](https://github.com/join?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home)
-- **Protege** - Install Protege 5.5, download it [here](https://protege.stanford.edu/)
-- **[Install ELK 0.5](../howto/installing-elk-in-protege.md)**
+- **Protege** - Install Protege 5.6, download it [here](https://protege.stanford.edu/)
 - **Install GitHub Desktop** Please make sure you have some kind of git client installed on your machine. If you are new to Git, please install [GitHub Desktop](https://desktop.github.com/)
 
 ## Preparation
