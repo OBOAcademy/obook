@@ -14,7 +14,7 @@
 
 ### Protege 5.6
 
-Protégé 5.6 can now automatically set up the ID range for a given user by exploiting the `idranges.owl` file, if it exists. 
+Protégé 5.6 can now automatically set up the ID range for a given user by exploiting the `ONT-idranges.owl` file, if it exists. ONT is the name of the ontology you are editing (for example, in UBERON, the file is named `uberon-idranges.owl`).  The file is automatically created by the ODK, so that users shouldn’t need worry about it.
 
 This Protege version looks at the ID range file and matches your user name in Protege to the names in the file to automatically set up your ID range. Thus as long as this information matches you no longer need to manually set the ID range. You will get a message if your user name does not match one in the file asking you to pick an ID range.
 
