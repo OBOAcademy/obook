@@ -2,6 +2,8 @@
 
 By: [Nicole Vasilevsky](https://orcid.org/0000-0001-5208-3432)
 
+**Note**: This applies to Protege 5.5.0 and below. Protege 5.6 manages [ID ranges](idrange.md) for you automatically and these instructions are not needed.
+
 ## Description
 
 When you edit an ontology, you need to make sure you are using the correct prefix and your assigned ID range for that on ontology. Protege (unfortunately) does
