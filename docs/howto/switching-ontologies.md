@@ -2,7 +2,7 @@
 
 By: [Nicole Vasilevsky](https://orcid.org/0000-0001-5208-3432)
 
-**Note**: This applies to Protege 5.5.0 and below. Protege 5.6 manages [ID ranges](idranges.md) for you automatically and these instructions are not needed.
+**Note**: This applies to Protege 5.5.0 and below. Protege 5.6 manages [ID ranges](idrange.md) for you automatically and these instructions are not needed.
 
 ## Description
 
