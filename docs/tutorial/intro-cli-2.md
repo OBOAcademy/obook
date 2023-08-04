@@ -13,6 +13,12 @@ You have:
 - Completed the [first CLI tutorial](intro-cli-1.md)
 - (Optional) installed the amazing [ohmyzsh! - advanced CLI](#ohmyzsh) for managing your ZSH profile. **Important**: Before installing ohmyzsh, back up you `~/.zshrc` file in case you have had any previous customisations you wish to preserve.
 
+## Monarch OBO Training Tutorial
+
+Introduction to Command Line Interface Part 2 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OCoN4TE8Vqc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ## Preparation
 
 - Install https://ohmyz.sh/ (optional)

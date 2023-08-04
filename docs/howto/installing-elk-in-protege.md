@@ -1,5 +1,7 @@
 # Install Elk 0.5 in Protege
 
+**Note**: This is only needed for Protege 5.5.0 or below. Protege 5.6 has ELK already installed.
+
 - Click here to get the latest [Protege Plugin latest build](https://oss.sonatype.org/service/local/artifact/maven/content?r=snapshots&g=org.semanticweb.elk&a=elk-distribution-protege&e=zip&v=LATEST) (this is available on the bottom of [ELK pages](https://github.com/liveontologies/elk-reasoner/wiki/GettingElk). This will download a zipped file.)
 
 - When downloaded, unzip and copy puli and elk jars (two .jar files) in the unpacked directory.

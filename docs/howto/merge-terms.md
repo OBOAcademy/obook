@@ -11,42 +11,32 @@ See [Daily Workflow](daily-curator-workflow.md) for creating branches and basic 
 ## Manual Workflow
 
 1. **Find the ID of the term in which the obsoleted term will be merged**
-   - Navigate to 'winning' term using the Search box. **Copy the ID of the winning term somewhere.**
-2. **Duplicate annotations from the obsoleted terms**
-
-   - Navigate to the term to be obsoleted.
-   - Right click on it and select `Duplicate class` then OK in the pop up window. This should create a class with the exact same name.
-   - On the duplicated class (you can see this by (CL:XXXX) within your range added), right click and select `Change IRI (Rename)`
-   - Copy the ID of the winning term (obtained in Step 1).
-   - Be sure to use the underscore `_` in the identifier instead of the colon `:`, for example: `GO_1234567`. Make sure that the 'change all entities with this URI' box is checked.
-   - Navigate to the winning term IRI, all annotations should be merged.
-
-3. **Change obsoleted term label to a synonym**
-
-   - In the annotations box of the winning term there are now two terms with labels 'rdfs:label'. Click the `o` to change the label of the obsoleted term.
-   - In the resulting pop-up window, select the appropriate synonym label from the list on the left:
-     1. `has_broad_synonym`
-     2. `has_exact_synonym`
-     3. `has_narrow_synonym`
-     4. `has_related_synonym` (if unsure, this is the safest choice)
-
-4. **Remove duplicated or inappropriate annotations**
-
-   - Check the definition, if there are multiple entries, remove the obsoleted one by clicking on the `x` on the right.
-   - Check the subclasses and remove inappropriate/duplciated ones by clicking on the `x` on the right.
-   - Check list of synonyms and remove inappropriate/duplciated ones by clicking on the `x` on the right.
-   - Note down the created_by and created_date (there can only be one value per term for each of these fields; this will be useful if you need to pick one after the merge is done).
-
-5. **Obsolete old term**
-   - Oobsolete the old term by following instructions found in [obsoletion how to guide.](obsolete-term.md).
-   - Ensure that you add a `rdfs:comment` that states that term was duplicated and to refer to the new new.
-   - Ensure that you add a `term replaced by` annotations as per the instructions and add the winning merged term.
-6. **Synchronize the reasoner** and make sure there are no terms that have identical definitions as a result of the merge. These are displayed with an 'equivalent' sign `≡` in the class hierarchy view on the left hand panel.
-
-7. **Add alt_id to the winning term**.
-   - Navigate to the winning term and add the annotation hasAlternativeId with the ID (eg CL:0000000) of the losing term in the Literal tab.
-   - **Note**: any `id` annotation with value = the OBO ID of the losing term should be deleted. Failure to do this breaks OBO<->OWL conversion.
-8. Save changes.
+    - Navigate to 'winning' term using the Search box. **Copy the ID of the winning term somewhere.**
+1. **Duplicate annotations from the obsoleted terms**
+    - Navigate to the term to be obsoleted.
+    - Right click on it and select `Duplicate class` then OK in the pop up window. This should create a class with the exact same name.
+    - On the duplicated class (you can see this by (CL:XXXX) within your range added), right click and select `Change IRI (Rename)`
+    - Copy the ID of the winning term (obtained in Step 1).
+    - Be sure to use the underscore `_` in the identifier instead of the colon `:`, for example: `GO_1234567`. Make sure that the 'change all entities with this URI' box is checked.
+    - Navigate to the winning term IRI, all annotations should be merged.
+1. **Change obsoleted term label to a synonym**
+    - In the annotations box of the winning term there are now two terms with labels 'rdfs:label'. Click the `o` to change the label of the obsoleted term.
+    - In the resulting pop-up window, select the appropriate synonym label from the list on the left:
+        1. `has_broad_synonym`
+        2. `has_exact_synonym`
+        3. `has_narrow_synonym`
+        4. `has_related_synonym` (if unsure, this is the safest choice)
+ 1. **Remove duplicated or inappropriate annotations**
+     - Check the definition, if there are multiple entries, remove the obsoleted one by clicking on the `x` on the right.
+     - Check the subclasses and remove inappropriate/duplciated ones by clicking on the `x` on the right.
+     - Check list of synonyms and remove inappropriate/duplciated ones by clicking on the `x` on the right.
+     - Note down the created_by and created_date (there can only be one value per term for each of these fields; this will be useful if you need to pick one after the merge is done).
+1. **Obsolete old term**
+    - Obsolete the old term by following instructions found in [obsoletion how to guide.](obsolete-term.md).
+    - Ensure that you add a `rdfs:comment` that states that term was duplicated and to refer to the new new.
+    - Ensure that you add a `term replaced by` annotations as per the instructions and add the winning merged term.
+1. **Synchronize the reasoner** and make sure there are no terms that have identical definitions as a result of the merge. These are displayed with an 'equivalent' sign `≡` in the class hierarchy view on the left hand panel.
+1. Save changes.
 
 See [Daily Workflow](daily-curator-workflow.md) section for commit, push and merge instructions.
 

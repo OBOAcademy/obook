@@ -10,7 +10,21 @@
 
 4. If you have only just set up this repository, modify the idranges file and add yourself or other editors.
 
-## Setting ID ranges in Protege
+## Setting ID ranges
+
+### Protege 5.6
+
+Protégé 5.6 can now automatically set up the ID range for a given user by exploiting the `ONT-idranges.owl` file, if it exists. ONT is the name of the ontology you are editing (for example, in UBERON, the file is named `uberon-idranges.owl`).  The file is automatically created by the ODK, so that users shouldn’t need worry about it.
+
+This Protege version looks at the ID range file and matches your user name in Protege to the names in the file to automatically set up your ID range. Thus as long as this information matches you no longer need to manually set the ID range. You will get a message if your user name does not match one in the file asking you to pick an ID range.
+
+**Note**: If you are switching from an old Protege version to Protege 5.6, you may need to reset your range to the last used ID rather than just the full range or Protege would try to fill in gaps in the range.
+
+### Protege 5.5.0 or below
+
+ID ranges need to be manually set in Protege 5.6.0 or below, as described below.
+
+#### Setting ID ranges in Protege in Protege 5.5.0 or below
 
 1. Once you have your assigned ID range, you need to configure Protege so that your ID range is recorded in the Preferences menu. Protege does not read the idranges file.
 

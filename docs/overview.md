@@ -5,7 +5,7 @@
 ### [Using Ontologies and Ontology Terms](lesson/ontology-term-use.md)
 
 - Target [roles](getting-started.md#oboroles): Database Curators
-- skills
+- Skills:
   - know what ontologies are good for
   - find good ontologies: ontology repositories, OBO
   - find good terms: ontology browsers
@@ -70,7 +70,7 @@
 
 - Builds on:
   - Ontology Development
-- skills
+- Skills:
   - advanced term mapping
   - ontology terms in SQL
   - terminology table JOINs, constraints

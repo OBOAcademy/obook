@@ -18,3 +18,6 @@ deploy_site:
 
 build_site:
 	mkdocs build --config-file mkdocs.yml
+
+install:
+	pip install mkdocs mkdocs-material

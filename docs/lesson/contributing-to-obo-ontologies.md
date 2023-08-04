@@ -1,12 +1,14 @@
 # Contributing to OBO ontologies
 
+<a href="https://oboacademy.github.io/obook/reference/obook-maturity-indicator/"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FOBOAcademy%2Fobook%2Fmaster%2Fdocs%2Fresources%2Fobook-badge-draft.json" /></a>
+
+
 ## Prerequisites
 
 Participants will need to have access to the following resources and tools prior to the training:
 
 - **GitHub account** - register for a free GitHub account [here](https://github.com/join?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home)
-- **Protege** - Install Protege 5.5, download it [here](https://protege.stanford.edu/)
-- **[Install ELK 0.5](../howto/installing-elk-in-protege.md)**
+- **Protege** - Install the latest version of Protege, download it [from the GitHub repository here](https://github.com/protegeproject/protege-distribution/releases)
 - **Install GitHub Desktop** Please make sure you have some kind of git client installed on your machine. If you are new to Git, please install [GitHub Desktop](https://desktop.github.com/)
 
 ## Preparation
@@ -39,7 +41,15 @@ Participants will need to have access to the following resources and tools prior
 
 ## Tutorials
 
-- N/A
+### Monarch OBO training Tutorials
+
+#### Contributing to Ontologies Part 1 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_z8-KGDzZ6U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+#### Contributing to Ontologies Part 2
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YBvMKMoCCrQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Additional materials and resources
 
@@ -310,7 +320,7 @@ Be sure to change "Your Name" to your actual name! And note that this value shou
 
 create a pull request and add matentzn or nicolevasilevsky as a reviewer
 
-proceed to settting up as below:
+proceed to setting up as below:
 
 ![image](https://user-images.githubusercontent.com/6722114/115964257-6a67a280-a4d8-11eb-8dcd-768b51d75720.png)
 

@@ -4,28 +4,63 @@
 
 We developed a completely automated variant of the Custom OBO Dashboard Workflow, which does not require any local installation.
 
-<img width="1125" alt="image" src="https://user-images.githubusercontent.com/7070631/192291201-ab2ea488-ec15-4894-ae6b-85655a9e3e75.png">
+![deploy-custom-obo-dashboard workflow](../images/howtoguides/deploy-custom-dashboard-workflow.png)
 
-1. Fork https://github.com/OBOFoundry/obo-nor.github.io or make a copy ([how to make a copy quickly](](https://gist.github.com/natedana/cc71d496b611e70673cab5e8f5a78485))) (probably better to make a copy)
+1. Create a repository using the [Dashboard template repository](https://github.com/OBOFoundry/dashboard-template). ([How to create a repository from a template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template))
 1. Modify the `dashboard-config.yml` file, in particular the `ontologies` section:
-   1. Important: Add your ontology ID to the ID 'id' field
-   2. Add the path to your ontology to the `mirror_from` field.
+    1. Important: Add your ontology ID to the ID 'id' field
+    2. Add the path to your ontology to the `mirror_from` field.
 1. Optional: use the `profile` section to overwrite the custom robot report profile and add custom checks!
 
-   ```
+   ```yaml
    profile:
      baseprofile: "https://raw.githubusercontent.com/ontodev/robot/master/robot-core/src/main/resources/report_profile.txt"
      custom:
        - "WARN\tfile:./sparql/missing_xrefs.sparql"
     ```
 
- 1. Click on "Settings" > "Pages" to configure the `GitHub pages`. Set the `Source` to deploy from branch, and `Branch` to build from `main` (or `master` if you are still using the old default) and `/(root)` as directory. Hit `Save`.
+ 1. Click on `Settings` > `Pages` to configure the `GitHub pages`. Set the `Source` to deploy from branch, and `Branch` to build from `main` (or `master` if you are still using the old default) and `/(root)` as directory. Hit `Save`.
+
      <img width="322" alt="image" src="https://user-images.githubusercontent.com/7070631/192293973-891b400d-c9f1-46d8-aff1-4bc3e6083c43.png">
+     
  1. Click on the `Actions` tab in your repo. On the left, select the `Run dashboard` workflow and click on the `Run workflow` button. This action will rebuild the dashboard and make a pull request with the changes.
  1. Review and merge the pull request. Once it is merged, GitHub will automatically rebuild your dashboard website.
  1. After 5 minutes, click on "Settings" > "Pages" again. You should now a new section with information where your site is deployed: 
      <img width="840" alt="image" src="https://user-images.githubusercontent.com/7070631/192295512-4ebf505c-c6e1-4448-9b22-735df8317eef.png">
  1. Click on `Visit site` and you should find your new shiny dashboard page!
+
+## Troubloushooting
+
+### Error on GitHub Action - Run dashboard section
+
+`Failed: make dashboard ROBOT_JAR=/tools/robot.jar ROBOT=robot  -B with return code 2`
+
+There is a known bug at the moment requiring at least one ontology with a warning, error, info and pass, see https://github.com/OBOFoundry/OBO-Dashboard/issues/85. 
+
+1. In your `dashboard-config.yml`, add a temporary ontology we created to make this work. This is already in the Dashboard template repository. 
+
+```yaml
+ontologies:
+  custom:
+    - id: tmp
+      mirror_from: "https://raw.githubusercontent.com/monarch-ebi-dev/robot_tests/master/custom-dashboard.owl"
+```
+
+### Error on GitHub Action - Create Pull Request section
+
+`remote: Permission to <name of the user or organization>/<name of the repository>.git denied to github-actions[bot].`
+
+You need to update the workflow permission for the repository.
+
+1. Click on `Settings`, then `Actions` on the left menu, then `General`.
+1. Scroll down to the 'Workflow permissions section. Select the option 'Read and write permissions'. Save.
+
+`Error: GitHub Actions is not permitted to create or approve pull requests.`
+
+You need to enable GitHub Actions to create pull requests.
+
+1. Click on `Settings`, then `Actions` on the left menu, then `General`.
+1. Scroll down to the 'Workflow permissions section. Click on the 'Allow GitHub Actions to create and approve pull requests' checkbox.
 
  
 ## 2021 Edition

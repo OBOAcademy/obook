@@ -1,9 +1,23 @@
 site_name: OBO Semantic Engineering Training
 theme:
   name: material
+  icon:
+    edit: material/pencil 
+  features:
+    - content.action.edit
+
 markdown_extensions:
   - toc:
       permalink: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_div_format
+
+extra_javascript:
+  - https://unpkg.com/mermaid@8.5.1/dist/mermaid.min.js
+
 nav:
   - About the course: index.md
   - Getting started with learning: getting-started.md
@@ -12,9 +26,12 @@ nav:
   - Courses:
       - ICBO 2021 Tutorial: courses/icbo2021.md
       - ICBO 2022 Tutorial: courses/icbo2022.md
+      - ICBO 2023 Tutorial: courses/icbo2023.md
       - Monarch Ontology Training: courses/monarch-obo-training.md
+      - Ontology Summit 2023: courses/ontology-summit-2023.md
   - Pathways:
       - What is a pathway?: pathways/pathways.md
+      - Early Career Data Scientist: pathways/early-career-data-scientist.md
       - Ontology Curator: pathways/ontology-curator.md
       - Ontology Curator GO-style: pathways/ontology-curator-go-style.md
       - Ontology Curator OBI-style: pathways/ontology-curator-obi-style.md
@@ -33,7 +50,11 @@ nav:
       - Modelling with Object Properties: lesson/modelling-with-object-properties.md
       - Ontology Term Use: lesson/ontology-term-use.md
       - RDF Fundamentals: lesson/rdf.md
+      - Semantic Entity Matching: lesson/entity-matching.md
       - Disease and Phenotype Ontologies: lesson/using-disease-and-phenotype-ontologies.md
+      - Hacking the OBOOK: lesson/hackathon.md
+      - Getting Hands on with Ontologies: lesson/getting-hands-on.md
+      - Leveraging ChatGPT for ontology curation: lesson/chatgpt-ontology-curation.md
   - Lessons In Development:
       - Developing an Application Ontology: lesson/developing-application-ontologies.md
       - Ontology Development: lesson/ontology-development.md
@@ -50,9 +71,11 @@ nav:
           - ODK - Adding SPARQL table reports: tutorial/sparql-report-odk.md
           - ODK - Getting started with your own repo: tutorial/setting-up-project-odk.md
           - ODK - 20 minute complete walk-through: tutorial/odk-tutorial-2.md
+          - ODK - Adding custom Quality Check: tutorial/custom-qc.md
           - ODK - Managing imports: tutorial/managing-dynamic-imports-odk.md
           - ODK - Managing ontology releases: tutorial/managing-ontology-releases-odk.md
           - ODK - Migrating to ODK: tutorial/migrating-ontology-to-odk.md
+          - ODK - Using the ODK Toolbox: tutorial/odk-toolbox.md
       - Templates:
           - Getting started with DOSDP templates: tutorial/dosdp-overview.md
           - DOSDP Templates Basic Tutorial: tutorial/dosdp-template.md
@@ -62,17 +85,25 @@ nav:
           - GitHub Issue for OBO Engineers: tutorial/github-issues.md
           - Managing OBO ontology projects: tutorial/managing-ontology-project.md
           - Pull requests: tutorial/pull-requests.md
+      - ChatGPT:
+          - Leveraging ChatGPT for ontology curation: lessons/chatgpt-ontology-curation.md
+          - OntoGPT: tutorial/ontogpt.md
       - Dealing with Semantic Data:
           - From Tables to Linked Data: tutorial/linking-data.md
           - Basic SPARQL for OBO Engineers: tutorial/sparql.md
+          - Basic cypher on the Monarch Neo4j graph: tutorial/monarch-kg-neo4j-basics.md
       - Command line:
           - Basic introduction to CLI 1: tutorial/intro-cli-1.md
           - Basic introduction to CLI 2: tutorial/intro-cli-2.md
       - Mappings and SSSOM:
-          - Basic Tutorial: tutorial/sssom-manual.md
+          - Basic Tutorial: tutorial/sssom-tutorial.md
+          - Lexical Matching with OAK Lexmatch: tutorial/lexmatch-tutorial.md
+          - Introduction to the SSSOM Toolkit: tutorial/sssom-toolkit.md
       - General Ontology Modelling:
           - Project Ontology Development: tutorial/project-ontology-development.md
           - Family History Knowledge Base (FHKB) tutorial: tutorial/fhkb.md
+      - Exomiser:
+          - Introduction to Exomiser: tutorial/exomiser-tutorial.md
   - How-to guides:
       - General:
           - Maximising impact as an open science engineer: howto/open-science-engineer.md
@@ -82,6 +113,7 @@ nav:
           - Create Screenshot and paste into an issue: howto/screenshot.md
           - Set-up docker: howto/setup-docker.md
       - Protege:
+          - Install Protégé: howto/install-protege.md
           - Setup Protege 5.5: howto/set-up-protege.md
           - Installing ELK in Protege: howto/installing-elk-in-protege.md
           - Setting up your ID range: howto/idrange.md
@@ -102,25 +134,31 @@ nav:
           - Creating a Repo with ODK: howto/odk-create-repo.md
           - Dealing with Large Ontologies: howto/deal-with-large-ontologies.md
           - Updating Imports with ODK: howto/update-import.md
-      - Git and Github:
+          - Import ORCIDIO: howto/odk-add-orcidio-module.md
+      - Git and GitHub:
           - Make term requests to existing ontologies: howto/term-request.md
           - Clone a repository: howto/clone-mondo-repo.md
           - Fork an ontology for editing: howto/github-create-fork.md
-          - Creating an GitHub Pull Request: howto/github-create-pull-request.md
+          - Create a GitHub Pull Request: howto/github-create-pull-request.md
           - Change a pull request: howto/change-files-pull-request.md
-          - Fixing conflicts: howto/fixing-conflicts.md
-          - Github actions to automate tasks: howto/github-actions.md
+          - Fix conflicts: howto/fixing-conflicts.md
+          - Automate tasks with GitHub actions: howto/github-actions.md
+          - Revert a commit: howto/revert-commit.md
+          - Review a pull request: howto/review-pull-request.md
       - Quality control:
           - Deploy a custom OBO-Dashboard: howto/deploy-custom-obo-dashboard.md
       - Command line:
           - How to filter a file based on another file: howto/filter-text-file.md
   - Reference:
+      - Tools: reference/glossary.md
       - Glossary of Terms: reference/glossary-of-terms.md
       - Frequently used ODK commands: reference/frequently-used-odk-commands.md
       - Protege Interface: reference/protege-interface.md
       - Protege FAQ: reference/protege-faq.md
       - Formatting your ontology annotations correctly: reference/formatting-license.md
       - OBO-style term annotation: reference/go-style-annotation-property-practice.md
+      - Ontology Matching:
+          - Semantic ETL: reference/semantic-etl.md
       - Git:
           - Intro to GitHub: reference/github-intro.md
           - GitHub Desktop: reference/github-desktop.md
@@ -142,20 +180,32 @@ nav:
       - Common Errors in GitHub actions: reference/gh-actions-errors.md
       - Other useful resources: reference/other-resources.md
       - Medical Ontology landscape: reference/medical-ontology-landscape.md
+      - A reference guide to Wikidata: reference/wikidata.md
+      - OBOOK Maturity Indicator: reference/obook-maturity-indicator.md
+      - ChatGPT:
+          - Leveraging ChatGPT for ontology curation: reference/chatgpt-prompts-for-ontology-development.md
   - Explanations:
       - Introduction to Ontologies: explanation/intro-to-ontologies.md
       - Logical axiomatization of classes & use of reasoning: explanation/logical-axiomatization.md
       - Term Comments: explanation/term-comments.md
       - Introduction to Annotation Properties: explanation/annotation-properties.md
       - Writing good issues: explanation/writing-good-issues.md
+      - Ontology Matching: explanation/ontology-matching.md
       - Which biomedical ontologies should we use?: explanation/which-ontology-to-use.md
       - OWL, OBO, JSON? Base, simple, full, basic? What should you use, and why?: explanation/owl-format-variants.md
       - What are taxon constraints?: explanation/taxon-constraints-explainer.md
+      - The logical building blocks of OWL: explanation/owl-building-blocks.md
+      - SubClassOf versus EquivalentTo: explanation/subClassOf-vs-equivalentTo.md
+      - Existential restrictions: explanation/existential-restrictions.md
+
   - OBOOK Editors:
       - Getting started for OBOOK editors: getting-started-obook.md
       - How to add images: images/index.md
+      - How to embed videos: howto/embed-video.md
       - New lesson template: config/template.md
       - Case studies for teaching: teaching/case-studies.md
   - Outreach:
       - Outreach materials: reference/outreach.md
 repo_url: https://github.com/OBOAcademy/obook/
+site_url: https://oboacademy.github.io/obook/
+edit_uri: edit/master/docs/
