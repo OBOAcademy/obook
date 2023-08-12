@@ -2,6 +2,8 @@
 
 **Description:** A collection of videos, tutorials, training materials, and exercises targeted towards any entry-level, early-career trainee interested in learning basic skills in data science.
 
+**Preparation**: no advance preparation is required.
+
 ## 1. Data Science Ethics
 
 ### Videos
