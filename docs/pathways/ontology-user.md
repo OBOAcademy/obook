@@ -20,17 +20,17 @@ Description: This pathway includes resources on ontology use, such as how to use
 
 ## Disease Ontology Specific Applications
 
-#### Clinical Applications of the Human Disease Ontology 
+#### Clinical Applications of the Human Disease Ontology (DO)
 
 A [video library](https://www.youtube.com/playlist?list=PLYM0tkKvhlX6smyZ4R_OKbi-Mn0_WDjeq) is available that covers:
-1. Clinical applications of the Human Disease Ontology
-1. How is the Human Disease Ontology FAIR?
-1. Searching the Human Disease Ontology website
-1. What is an ontology?
-1. Mining disease information via imports: Connecting disease-related information
-1. How the Human Disease Ontology is used for drug studies
-1. Cancer resources and tools utilizing the Human Disease Ontology
-1. Advanced searches of the DO website using relation axioms
+- Clinical applications of the Human Disease Ontology
+- How is the Human Disease Ontology FAIR?
+- Searching the Human Disease Ontology website
+- What is an ontology?
+- Mining disease information via imports: Connecting disease-related information
+- How the Human Disease Ontology is used for drug studies
+- Cancer resources and tools utilizing the Human Disease Ontology
+- Advanced searches of the DO website using relation axioms
 
 #### Using the Mondo Disease Ontology for Disease Data Curation
 
@@ -39,7 +39,7 @@ A [video library](https://www.youtube.com/playlist?list=PLYM0tkKvhlX6smyZ4R_OKbi
 
 #### Using ontologies to standardize rare disease data collection 
 
-[Webinar](https://www.youtube.com/watch?v=vinZvwXqd_k): Using ontologies to standardize rare disease data collection
+[Video of webinar](https://www.youtube.com/watch?v=vinZvwXqd_k): Using ontologies to standardize rare disease data collection
 
 ## Project Specific Applications
 
