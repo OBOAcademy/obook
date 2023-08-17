@@ -32,3 +32,9 @@ A [video library](https://www.youtube.com/playlist?list=PLYM0tkKvhlX6smyZ4R_OKbi
 ## Introduction to ontology semantics and reasoning
 
 [Introduction to ontology semantics and reasoning](https://henrietteharmse.com/2023/02/17/introduction-to-ontology-semantics-and-reasoning/)
+
+## Contributors
+- [Nicole Vasilevsky](https://orcid.org/0000-0001-5208-3432)
+- [Sue Bello](https://orcid.org/0000-0003-4606-0597)
+- [Sierra Moxon](https://orcid.org/0000-0002-8719-7760)
+- [Shawn Tan](https://orcid.org/0000-0001-7258-9596)
