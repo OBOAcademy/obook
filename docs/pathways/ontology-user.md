@@ -4,7 +4,7 @@ Description: This pathway includes resources on ontology use, such as how to use
 
 **Preparation**: A basic understanding of what ontologies are is helpful. Some introductory resources are below:
 
-- [Introduction to Ontologies](/explanation/intro-to-ontologies.md)
+- [Introduction to Ontologies](../explanation/intro-to-ontologies.md)
 - [Introduction to ontology semantics and reasoning](https://henrietteharmse.com/2023/02/17/introduction-to-ontology-semantics-and-reasoning/) by Henriette Harmse
 
 ## Biological ontology use guidelines
