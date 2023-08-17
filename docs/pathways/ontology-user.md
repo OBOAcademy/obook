@@ -10,6 +10,8 @@ Description: This pathway includes resources on ontology use, such as how to use
 ## General Ontology Use Guidelines
 
 - OBO Academy [Using Ontologies and Ontology Terms](../lesson/ontology-term-use.md)
+- Elixir's [Selecting terminologies and ontologies](https://faircookbook.elixir-europe.org/content/recipes/interoperability/selecting-ontologies.html)
+- Elixir's [Ontology mapping with Ontology Xref Service (OxO)](https://faircookbook.elixir-europe.org/content/recipes/interoperability/ontology-alignment-oxo.html)
 - [Biological ontology use guidelines](https://henrietteharmse.com/2022/02/02/biological-ontology-use-guidelines/) by Henriette Harmse
 
 ## Gene Ontology curation
