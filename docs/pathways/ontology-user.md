@@ -16,11 +16,11 @@ Description: This pathway includes resources on ontology use, such as how to use
 
 ## Gene Ontology curation
 
-- [Curating and browsing with Gene Ontology (GO)](http://geneontology.org/)
+[Curating and browsing with Gene Ontology (GO)](http://geneontology.org/)
 
 ## Disease Ontology Specific Applications
 
-### 1. Clinical Applications of the Human Disease Ontology 
+#### Clinical Applications of the Human Disease Ontology 
 
 A [video library](https://www.youtube.com/playlist?list=PLYM0tkKvhlX6smyZ4R_OKbi-Mn0_WDjeq) is available that covers:
 1. Clinical applications of the Human Disease Ontology
@@ -32,18 +32,18 @@ A [video library](https://www.youtube.com/playlist?list=PLYM0tkKvhlX6smyZ4R_OKbi
 1. Cancer resources and tools utilizing the Human Disease Ontology
 1. Advanced searches of the DO website using relation axioms
 
-### 2. Using the Mondo Disease Ontology for Disease Data Curation
+#### Using the Mondo Disease Ontology for Disease Data Curation
 
 - [Slides](https://docs.google.com/presentation/d/1lRnASIv9zmrnmqJvCFRwnpYRPCL8tI4ImCmAXbQIJUc/edit) on Using the Mondo Disease Ontology for Disease Data Curation
 - [User guide](https://mondo.readthedocs.io/en/latest/editors-guide/using-mondo-for-curation/) for the Mondo Disease ontology
 
-### 3. Using ontologies to standardize rare disease data collection 
+#### Using ontologies to standardize rare disease data collection 
 
 [Webinar](https://www.youtube.com/watch?v=vinZvwXqd_k): Using ontologies to standardize rare disease data collection
 
-## Project Specific applications
+## Project Specific Applications
 
-- [Ontology application and use at the ENCODE DCC](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4360730/)
+[Ontology application and use at the ENCODE DCC](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4360730/)
 
 ## Contributors
 - [Nicole Vasilevsky](https://orcid.org/0000-0001-5208-3432)
