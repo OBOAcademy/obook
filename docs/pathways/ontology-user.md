@@ -38,3 +38,4 @@ A [video library](https://www.youtube.com/playlist?list=PLYM0tkKvhlX6smyZ4R_OKbi
 - [Sue Bello](https://orcid.org/0000-0003-4606-0597)
 - [Sierra Moxon](https://orcid.org/0000-0002-8719-7760)
 - [Shawn Tan](https://orcid.org/0000-0001-7258-9596)
+- Danielle Welter
