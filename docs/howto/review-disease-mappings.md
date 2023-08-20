@@ -6,6 +6,8 @@ This guide provides guidelines on how to rapidly review large scale efforts to c
 
 Mapping can be created using tools like OAK to generate a bunch of mapping candidates. A reviewer then needs to determines whether the mapping is correct or not. 
 
+Refer to [Are these two entities the same? A guide.](../howto/review-disease-mappings.md) for a comprehensive guide on determining a specific mapping.
+
 ## Guidelines
 1. Depending on the format of the table you are reviewing, it is recommended that you open the table in a google spreadsheet, to allow for collaborative work and to allow yourself to add notes in a new column, or add formatting or color coding.
 1. Hide any columns that are not relevant, to make it easier to quickly compare the mappings. For example, in the table below, you may want to hide the mapping_justification column, mapping_tool. You can also move the columns around so the labels are next to each other. 

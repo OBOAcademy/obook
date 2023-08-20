@@ -149,6 +149,9 @@ nav:
           - Deploy a custom OBO-Dashboard: howto/deploy-custom-obo-dashboard.md
       - Command line:
           - How to filter a file based on another file: howto/filter-text-file.md
+      - Mappings:
+          - Are these two entities the same? A guide.: howto/are-two-entities-the-same.md
+          - How to review disease mappings: howto/review-disease-mappings.md
   - Reference:
       - Tools: reference/glossary.md
       - Glossary of Terms: reference/glossary-of-terms.md
