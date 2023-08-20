@@ -20,7 +20,7 @@ The following steps are designed to give you a basic framework for designing you
 
 1. [Understand the underlying conceptual models of the semantic spaces](#conceptual-model)
 2. [Document the use case for the mapping](#use-case)
-3. [Document the basic premise of the mapping](#premise)
+3. [Document the basic curation rules for the mapping](#curationrule)
 4. [Gathering evidence for the mapping](#evidence)
 
 <a id="conceptual-model"></a>
@@ -92,40 +92,52 @@ Closely related to this knowledge graph integration use case is the need for cou
 
 ![](../images/mapping-usecase-counting.png)
 
-<a id="premise"></a>
+<a id="curationrule"></a>
 
-### Document the basic premise of the mapping
+### Document the basic curation rules for the mapping
 
-Once you have determined the conceptual models of the subject and object source (or a good approximation of it), you will have to lay some ground rules of the mappings. These ground rules are going to be dictated by your target use case.
+Once you have determined the conceptual models of the subject and object source (or a good approximation of it), you will have to lay some ground (curation) rules of the mappings. These ground rules are going to be dictated by your target use case.
 
-#### Checklist for defining the basic premise of the mapping
+#### Checklist for defining the basic curation rules for the mapping
 
 1. Document the **primary categories** you seek to map to each other.
 1. If the **primary categories** are different across subject and object source, e.g. you want to map genes in one resources to protein-products of genes in another, you document a **conflation decision**. "Conflation" is the conscious act of pretending two things are the same even if they commit to a different **conceptual model** (see checklist above)
 1. If the **primary categories** are the same across subject and object source, determine if the conceptual model is the same. If it is, fine, if not, document, again, if you wish to "conflate" these for the sake of this mapping (document in this sense means: write it down and add it to the mapping set description or documentation later). For example, if you map (1) analogous entities across different species (e.g. human diseases to animal diseases), or (2) chemical entities from a structural hierarchical model to ones defined in terms of function, or (3) diseases from a phenomenologically driven perspective to ones that are defined from a etiological perspective, you write it down. (Note that for cross-species mappings, you do not necessarily have to conflate, as we [developed a specialised cross-species mapping vocabulary](https://mapping-commons.github.io/semantic-mapping-vocabulary/)).
-1. Determine the **mapping predicates**. If you decided to conflate, pick the set of [standard mapping predicates](https://mapping-commons.github.io/sssom/mapping-predicates/) you wish to curate. Usually, this should be mapping relations from the SKOS vocabulary. If you decided not to conflate, pick the appropriate mapping relationship from another vocabulary, such as [SEMPAV](https://mapping-commons.github.io/semantic-mapping-vocabulary/), or even [the Relation Ontology](https://oborel.github.io/).
+1. Determine the **mapping predicates**. If you decided to conflate, pick the set of [standard mapping predicates](https://mapping-commons.github.io/sssom/mapping-predicates/) you wish to curate. Usually, this should be mapping relations from the SKOS vocabulary. If you decided not to conflate, pick the appropriate mapping relationship from another vocabulary, such as [SEMAPV](https://mapping-commons.github.io/semantic-mapping-vocabulary/), or even [the Relation Ontology](https://oborel.github.io/).
+1. Document the **minimal levels of evidence** required for each mapping. This step is discussed in detail, separately, in the next section.
 
-#### Example for determining the basic premise of the mapping
+#### Example for documenting the basic curation rules for the mapping
 
 1. **Which primary categories?** In this case we only want to map diseases in ICD10CM to diseases in Mondo, and ignore everything else. However, we recognise that occassionally, a term classified in ICD10CM as a "sign or symptom" may appear in Mondo as a disease, so we keep our minds open about that possibility.
 1. **Conflation accross different categories?** We are open to the possibility (based on our experience with disease mappings) that some conditions are represented in ICD 10 as signs or symptoms, while Mondo represents them as diseases. This is a murky area of disease data integration, so we choose to conflate diseases (disorders), sign and symptoms (clinical findings). SNOMED views, for example, disorders as subclasses for findings that are _always abnormal_. To support our **use case** (integrating all disease knowledge in a knowledge graph), we decide it is better to conflate the two. Not conflating would mean missing out on a potentially huge number of interesting associations in the data.
 1. **Conflation within the same primary category**. ICD 10 does not explicitly commit to a specific definition or model of disease, and even through literature review it is hard to pin down what they mean by a disease (e.g. phenomenological vs etiological viewpoints). We accept that ambiguity and explicitly acknowledge that we conflate the disease models of ICD10 and Mondo for the sake of this mapping (same arguments as above).
 1. **Mapping predicates**. Due to our conflation decisions we determine that the SKOS vocabulary is appropriate to represent our mapping predicates. (Note: if we had decided not to conflated, it would not have automatically meant that we could not map at all: we would, however, have to resort to much less useful mapping relations like skos:relatedMatch and skos:closeMatch, which are considerably harder, but not impossible, to use by data scientists. These mapping predicates are entirely unsuited for our use case, as the primary goal is "providing one node in the graph per medical condition")
+1. **Minimal levels of evidence?** We decide that for our purposes, noise is acceptable and we trust the same label = same disease assumption (while this, as we will see later is not always quite right). If the the label is not the same, we also trust a combination of a synonym exact match combined with a threshold on lexical similarity of 90% (levenshtein). If neither can be achieved, we require either a combination of proxy mapping with a non-domain-expert review (biocurator) or a full expert review (see next section).
 
-#### Other Examples
-
-##### Conflation on primary category, disorder vs clinical finding
+##### Conflation on primary category, phenotypic abnormality vs clinical finding
 
 SNOMED cleanly [separates between "clinical findings" and "disorder"](https://confluence.ihtsdotools.org/display/DOCEG/Clinical+Finding+and+Disorder). While the SNOMED defines findings as "normal or abnormal observations, judgments, or assessments of patients", and disorders as "always and necessarily an abnormal clinical state".
 Strictly speaking, the presence of a finding term like SCTID:300444006 (Large kidney (finding)) does not imply any kind of level of abnormality, while all the corresponding term in HPO, HP:0000105 (Enlarged kidney) does. Now this is clearly a consequence of the weird way "abnormal" is defined in the world. Sometimes it is intended to mean "outside the normal range", and sometimes it is taken to mean "deviating from the mean". These are clearly different. None-the-less, the fact SNOMED does not imply "abnormality" means that we are conflating when we map the two.
+
+##### The difficulty of deciding what level of confidence is "enough"
+
+MONDO:0000022 (Nocturnal Enuresis) is currently defined as "urination during sleep", and classified under psychiatric disorders.
+
+ICD10CM:N39.44 (Nocturnal enuresis) is classified as an urological disease (organic, rather than psychiatric, disorder), where a urinary incontinence not due to a substance or known physiological condition is explicitly _excluded_.
+
+Regardless of whether we believe that Mondo is misclassifying the disease (it should also be a urinary disease), either we are interpreting here the exact same disease/syndrome differently between Mondo and ICD10 (assigning different etiologies), or two etiologically different diseases have been assigned the exact same name.
+
+Again, we have a few options here. (1) we decide we dont care about the difference. A rough mapping seems to be good enough, and most our applications (data aggregation, analysis) wont care if both concepts are merged into the same. If this is _generally_ the case for diseases with the exact same or very similary names, we just decide that the confidence given to us by "same name" is 99 or even 100%. (2) we decide they are different. In this case, we _must_ have every single mapping reviewed by a clinical specialist, unless we have access to all properties of the conceptual model (full etiology, phenotypic profile, etc).
 
 <a id="evidence"></a>
 
 ### Gathering evidence for a mapping
 
-Only after you understood the conceptual model underlying the subject and object sources you seek to map, and defining the basic premises of the mapping, are you ready to gather evidence for and against the mapping. **The goal of evidence gathering is to _increase confidence_ in a mapping.** A single piece of evidence is [called a justification](https://mapping-commons.github.io/sssom/mapping-justifications/). The confidence gained by multiple justifications can add up or be mutually exclusive. For example: a lexical match and match on a shared mapping are cumulative pieces of evidence. The confidence provided by multiple manual curators does not add up (usually the maximum or mean confidence is used). Every mapping project defines its own confidence levels.
+Only after you understood the conceptual model underlying the subject and object sources you seek to map, and defining the basic curation rules for the mapping, are you ready to gather evidence for and against the mapping. **The goal of evidence gathering is to _increase confidence_ in a mapping.** A single piece of evidence is [called a justification](https://mapping-commons.github.io/sssom/mapping-justifications/). The confidence gained by multiple justifications can add up or be mutually exclusive. For example: a lexical match and match on a shared mapping are cumulative pieces of evidence. The confidence provided by multiple manual curators does not add up (usually the maximum or mean confidence is used). Every mapping project defines its own confidence levels.
 
-**Remember:** You can _never_ determine the correctness of a mapping. You can only gather evidence for or against a mapping and then, depending on your particular use case, decide which level of evidence is sufficient. "Correctness" in this context means "under the premises defined for the mapping (previous section), the subject and object of the mappings relate to the same "conceptual entity" (disease, chemical entity) in the way specified by the mapping predicate" (e.g. we can use skos:exactMatch if both subject and entity correspond exactly to the concept of "atom" under the premises we defined).
+![warnicon](../images/FHKB%20figures/images/WarningIcon.png)
+
+**Remember:** You can _never_ determine the correctness of a mapping. This is a direct consequence of our inability to assign a semantic space with an explicit, fully defined semantic model. You can only gather evidence for or against a mapping under the premises defined by your curation rules, and then, depending on your particular use case, decide which level of evidence is sufficient. "Correctness" in this context means "under the curation rules defined for the mapping (previous section), the subject and object of the mappings relate to the same "conceptual entity" (disease, chemical entity) in the way specified by the mapping predicate" (e.g. we can use skos:exactMatch if both subject and entity correspond exactly to the concept of "atom" under the curation rules we defined).
 
 #### Checklist: Levels of Evidence
 
@@ -166,28 +178,26 @@ Instead of giving some arbitrary numbers for confidence, we just distinguish bet
         - Are `s` and `o` the same **kind*** of entity? (High level branch analysis)
         - Do `s` and `o` have the same/similar set of ancestors? (requires all ancestors to be mapped)
         - Do `s` and `o` have the same/similar set of decendants? (requires all descendants to be mapped)
+        - Advanced: `s` and `o` are linked to similar feature sets (phenotypes, average weight, number of carbon atoms, etc). Shared references to the same scientific publications could count here as well.
     - Level of confidence gained on average: MEDIUM
     - Note: the **primary organising relationship** structures of two semantic spaces rarely exactly correspond to each other - a failing hierarchical comparison is not a strong evidence against a mapping.
     - Cost: MEDIUM to HIGH (this check can be automated to some degree, but due to the cost of needing ancestors mapped already, is probably executed better by a human)
     - Is the acquired confidence sufficient at this stage? If `yes`, move to the next mapping canidate. If `no`, move on.
-1. Domain expert review of definitions (comparing only the textual definitions provided by both sources and determining whether they refer to the same concept under the mapping premises defined)
+1. Domain expert review of definitions (comparing only the textual definitions provided by both sources and determining whether they refer to the same concept under the mapping curation rules defined). Note that this is only possible if both resources in question provide "formal definitions" - definitions that fully define the concept, rather than merely "describe" it.
     - Level of confidence gained on overage: MEDIUM to HIGH (this depends on the domain expertise _and_ the semantic engineering expertise of the mapping author)
     - Preprocessing: Avoid (could affect interpretation).
     - Cost: HIGH (Expert curation is the highest level of cost and should only be used if no other justification or combination of justifications can be employed to attain the target level of confidence).
     - Is the acquired confidence sufficient at this stage? If `yes`, move to the next mapping canidate. If `no`, move on.
-1. Full domain expert review (expert aggregates evidence from within the resource (hierarchial structures, logical axioms, definitions, etc) and outside to determine if the subject and the object entity refer to the same concept)
+1. Full domain expert review (expert aggregates evidence from within the resource (hierarchial structures, logical axioms, definitions, etc) and outside to determine if the subject and the object entity refer to the same concept). This may involve reviewing papers, links to websites, databases with additional information about the entities, and other sources.
     - Level of confidence gained on overage: MEDIUM to HIGH (this depends on the domain expertise _and_ the semantic engineering expertise of the mapping author)
     - Preprocessing: Avoid (could affect interpretation).
     - Cost: VERY HIGH (Expert curation is the highest level of cost and should only be used if no other justification or combination of justifications can be employed to attain the target level of confidence).
 
 #### Examples for levels of evidence
 
-##### The difficulty of deciding what level of confidence is "enough"
+- To determine if two rare genetic diseases as defined by OMIM and Orphanet are same is difficult because we often do not have exactly the same name documented. To avoid the costly review of a rare disease expert (in the absence of proxy mappings), we can leverage disease to gene assocations to determine very similar diseases according to their genotypic profile.
+  We can furthermore bolster our evidence by comparing the phenotypic profiles. Techniques for doing so range from simple Jaccard (overlap of the associated phenotypic profile of both diseases) to complex methods such as [phenodigm](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3649640/) that take the ontology semantics into account, or even modern LLM embeddings.
 
-MONDO:0000022 (Nocturnal Enuresis) is currently defined as "urination during sleep", and classified under psychiatric disorders. 
+### Summary
 
-ICD10CM:N39.44 (Nocturnal enuresis) is classified as an urological disease (organic, rather than psychiatric, disorder), where a urinary incontinence not due to a substance or known physiological condition is explicitly _excluded_. 
-
-Regardless of whether we believe that Mondo is misclassifying the disease (it should also be a urinary disease), either we are interpreting here the exact same disease/syndrome differently between Mondo and ICD10 (assigning different etiologies), or two etiologically different diseases have been assigned the exact same name.
-
-Again, we have a few options here. (1) we decide we dont care about the difference. A rough mapping seems to be good enough, and most our applications (data aggregation, analysis) wont care if both concepts are merged into the same. If this is _generally_ the case for diseases with the exact same or very similary names, we just decide that the confidence given to us by "same name" is 99 or even 100%. (2) we decide they are different. In this case, we _must_ have every single mapping reviewed by a clinical specialist, unless we have access to all properties of the conceptual model (full etiology, phenotypic profile, etc).
+You can never determine if two entities are truly the same. You can only collect evidence for and against a mapping under a specific set of curation rules. To do so, you first determine the conceptual model of the semantic spaces defining the entities you seek to map. Then you define, depending on your use case, your specific curation rules. These rules determine which mapping predicates you use to curate, and which level of evidence you require for asserting a specific entity mapping. While mappings are, therefore, inherently connected to a use case, the goal of SSSOM and other mapping standardisation efforts is to make mappings usable across use cases.
