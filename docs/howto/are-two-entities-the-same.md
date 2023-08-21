@@ -137,7 +137,9 @@ Only after you understood the conceptual model underlying the subject and object
 
 ![warnicon](../images/FHKB%20figures/images/WarningIcon.png)
 
-**Remember:** You can _never_ determine the correctness of a mapping. This is a direct consequence of our inability to assign a semantic space with an explicit, fully defined semantic model. You can only gather evidence for or against a mapping under the premises defined by your curation rules, and then, depending on your particular use case, decide which level of evidence is sufficient. "Correctness" in this context means "under the curation rules defined for the mapping (previous section), the subject and object of the mappings relate to the same "conceptual entity" (disease, chemical entity) in the way specified by the mapping predicate" (e.g. we can use skos:exactMatch if both subject and entity correspond exactly to the concept of "atom" under the curation rules we defined).
+**Remember:** You can _never_ determine the correctness of a mapping. This is a direct consequence of our inability to assign a semantic space with an explicit, fully defined semantic model. You can only gather evidence for or against a mapping under the premises defined by your curation rules, and then, depending on your particular use case, decide which level of evidence is sufficient. "Correctness" in this context means "under the curation rules defined for the mapping (previous section), the subject and object of the mappings relate to the same "conceptual entity" (disease, chemical entity) in the way specified by the mapping predicate" (e.g. we can use skos:exactMatch if both subject and entity correspond exactly to the same concept of "atom" under the curation rules we defined).
+
+![](../images/entity-mappings.png)
 
 #### Checklist: Levels of Evidence
 
@@ -201,3 +203,7 @@ Instead of giving some arbitrary numbers for confidence, we just distinguish bet
 ### Summary
 
 You can never determine if two entities are truly the same. You can only collect evidence for and against a mapping under a specific set of curation rules. To do so, you first determine the conceptual model of the semantic spaces defining the entities you seek to map. Then you define, depending on your use case, your specific curation rules. These rules determine which mapping predicates you use to curate, and which level of evidence you require for asserting a specific entity mapping. While mappings are, therefore, inherently connected to a use case, the goal of SSSOM and other mapping standardisation efforts is to make mappings usable across use cases.
+
+### Out of context: a reminder of how mapping predicates work
+
+![](../images/mapping-predicates-cheatsheet.png)
