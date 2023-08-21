@@ -110,7 +110,7 @@ Note: for the tutorials below PC users need to install ODK (instructions are lin
 
 ### Video 
 
-[Workshop from Biocuration: Workshop - Careers In Biocuration](https://github.com/OBOAcademy/obook/assets/6722114/c9981552-ee4f-44d7-9ad8-ce21f9782bc0)
+[Workshop from Biocuration: Workshop - Careers In Biocuration](https://www.youtube.com/watch?v=A00GbhoVYtI&t=1s)
 
 ### Articles
 
