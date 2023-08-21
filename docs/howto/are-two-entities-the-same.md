@@ -139,6 +139,8 @@ Only after you understood the conceptual model underlying the subject and object
 
 **Remember:** You can _never_ determine the correctness of a mapping. This is a direct consequence of our inability to assign a semantic space with an explicit, fully defined semantic model. You can only gather evidence for or against a mapping under the premises defined by your curation rules, and then, depending on your particular use case, decide which level of evidence is sufficient. "Correctness" in this context means "under the curation rules defined for the mapping (previous section), the subject and object of the mappings relate to the same "conceptual entity" (disease, chemical entity) in the way specified by the mapping predicate" (e.g. we can use skos:exactMatch if both subject and entity correspond exactly to the same concept of "atom" under the curation rules we defined).
 
+![](../images/entity-mappings.png)
+
 #### Checklist: Levels of Evidence
 
 This checklist assumes a specific mapping candidate `{s,p,o,c}`, with `s` the subject, `p` the mapping predicate, `o` the object and `c` the confidence, initially 0, as a starting point. The goal of the checklist is to increase the confidence of the mapping to an acceptable degree. The required level of confidence should be set by the mapping authors.
