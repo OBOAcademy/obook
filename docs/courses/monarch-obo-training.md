@@ -28,6 +28,7 @@ _Note: this is tentative and subject to change_
 
 | Date | Lesson | Notes | Recordings |
 | --- | --- | --- | --- |
+| 2023/10/17 | Using ontologies for data annotation and consequences of ontology development | Sabrina Toro | |
 | 2023/10/03 | [Units modelling in and around OBO](https://github.com/OBOAcademy/obook/issues/421) | James Overton | |
 | 2023/09/19 | Improving ontology interoperability with Biomappings | Charlie Hoyt | |
 | 2023/09/05 | Modern prefix management with Bioregistry and `curies` | Charlie Hoyt | |
