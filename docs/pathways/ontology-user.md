@@ -16,7 +16,8 @@ Description: This pathway includes resources on ontology use, such as how to use
 
 ## Gene Ontology curation
 
-[Curating and browsing with Gene Ontology (GO)](http://geneontology.org/)
+- [Curating and browsing with Gene Ontology (GO)](http://geneontology.org/)
+- [Gene Ontology handbook](https://link.springer.com/book/10.1007/978-1-4939-3743-1)
 
 ## Disease Ontology Specific Applications
 
@@ -52,4 +53,5 @@ A [video library](https://www.youtube.com/playlist?list=PLYM0tkKvhlX6smyZ4R_OKbi
 - [Shawn Tan](https://orcid.org/0000-0001-7258-9596)
 - Danielle Welter
 - [Núria Queralt Rosinach](https://orcid.org/0000-0003-0169-8159)
+- [Marc Robinson-Rechavi](https://orcid.org/0000-0002-3437-3329)
  
