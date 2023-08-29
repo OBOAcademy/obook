@@ -56,7 +56,7 @@ nav:
       - Hacking the OBOOK: lesson/hackathon.md
       - Getting Hands on with Ontologies: lesson/getting-hands-on.md
       - Leveraging ChatGPT for ontology curation: lesson/chatgpt-ontology-curation.md
-      - Using Ontologies in Practice: LinkML can help!: lesson/linkml-helps-with-ontology-use.md
+      - Using Ontologies in Practice--LinkML can help: lesson/linkml-helps-with-ontology-use.md
   - Lessons In Development:
       - Developing an Application Ontology: lesson/developing-application-ontologies.md
       - Ontology Development: lesson/ontology-development.md
