@@ -7,7 +7,7 @@ Most researchers have heard of ontologies, but that may be where their familiari
 
 Researchers often ask these sorts of questions:
 
-![alt_text](images/linkml1.png "image_tooltip")
+![](../../images/linkml1.png)
 
 
 An ontology is a sophisticated, organized hierarchical controlled vocabulary that categorizes and defines relationships between concepts.
