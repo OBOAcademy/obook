@@ -1,6 +1,5 @@
 # Using Ontologies in Practice - LinkML can help!
 
-
 ## What *are* ontologies, anyway?
 
 Most researchers have heard of ontologies, but that may be where their familiarity ends. What exactly are ontologies, and how are they used in practice? What do you gain by using ontologies? Do you have to be an ontologist to use ontologies?? Read on to find out!
@@ -159,7 +158,7 @@ Data models, or schemas, further complement ontologies by providing a standardiz
 This collaborative relationship between ontologies and data models transforms complex information into a well-organized and accessible resource across scientific domains.
 
 
-# Further Reading
+## Further Reading
 
 To understand the LinkML syntax and semantics in more depth, please check out the LinkML tutorial, and in particular, the guide for using ontologies in your LinkML schema, which includes many more examples:
 
