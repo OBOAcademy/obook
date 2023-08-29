@@ -9,7 +9,6 @@ Researchers often ask these sorts of questions:
 
 ![](../../images/linkml1.png)
 
-
 An ontology is a sophisticated, organized hierarchical controlled vocabulary that categorizes and defines relationships between concepts.
 Ontologies are used to organize and share data in many fields of science and beyond; they are a valuable tool for making datasets generated in the field or at the bench usable and reproducible by others..
 Ontologies provide the following key features:
@@ -31,8 +30,7 @@ For our example, let’s say that Researcher A is taking samples from Lake Alber
 Each researcher wants to record the depth where their sample was collected, and the types of bacteria they find in each sample.
 Researcher D is a data scientist who wants to use each of the three resulting datasets to answer some specific questions about bacterial compositions of water samples in Oregon.
 
-![alt_text](images/linkml2.png "image_tooltip")
-
+![](../../images/linkml2.png)
 
 Researchers A, B, and C collect their data using spreadsheets. They make up labels for each column in their spreadsheets, record their data, and summarize their findings in a lab notebook. 
 
@@ -40,8 +38,7 @@ To combine these three datasets and make use of their content together, Research
 The first thing Researcher D has to do is to convert information from the titles of the spreadsheets into data about each sample (in this case,
 whether the source of the sample is a lake or an ocean, because we know that lakes and oceans have very different bacterial compositions). 
 
-![alt_text](images/linkml3.png "image_tooltip")
-
+![](../../images/linkml3.png)
 
 ### Ontologies provide standardized ways to describe data
 
@@ -60,8 +57,7 @@ The figure below shows a portion of the ENVO ontology that describes types of bo
 The top-level term, “water body”, has child classes “marine water body” (the Pacific Ocean, for example, would fall into that class) and “lake”.
 One type of lake is “saline lake” (there are also other types of lakes, including “freshwater lake”, that are not shown in this small subset of ENVO).
 
-![alt_text](images/linkml4.png "image_tooltip")
-
+![](../../images/linkml4.png)
 
 ### Ontologies harmonize datasets
 
@@ -87,8 +83,7 @@ there is no easy way for Researcher D to combine the data without going through 
 This manual standardization step isn’t a big deal when you only have three tiny spreadsheets as in our example, but imagine having to do that with dozens of spreadsheets,
 each with hundreds or even thousands of lines--that would be no fun at all!
 
-![alt_text](images/linkml5.png "image_tooltip")
-
+![](../../images/linkml5.png)
 
 Furthermore, because there isn’t an explicit definition of each column in a spreadsheet (e.g. we expect integer values in centimeters in the depth column, we expect ENVO terms in the type column),
 different datasets could become uncombinable even within the same group or lab.
@@ -122,7 +117,7 @@ for example, what values are allowed in the depth column (should they all be cen
 Can the bacteria column include more than one thing? Is the comma a delimiter between different bacteria identifiers, or do some bacteria have commas in their name?, etc.)
 Below, we show how this spreadsheet data model would look if we used LinkML, with its explicit syntax, to describe it:
 
-![alt_text](images/linkml.png "image_tooltip")
+![](../../images/linkml6.png)
 
 
 ### LinkML lets you describe classes, instances and attributes
