@@ -168,3 +168,9 @@ To understand the LinkML syntax and semantics in more depth, please check out th
 For more information on how other researchers have used ontologies, please see the main ontology-user pathway in the OBOOK (Open Biological and Biomedical Ontologies Organized Knowledge):
 
 * [https://oboacademy.github.io/obook/pathways/ontology-user/](https://oboacademy.github.io/obook/pathways/ontology-user/)
+
+### Contributors
+* Lead author: Sierra Moxon
+* Editor: Nomi Harris
+* PI: Chris Mungall
+* Images: adapted from figures by Julie McMurray
