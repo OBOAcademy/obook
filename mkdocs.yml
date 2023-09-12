@@ -37,7 +37,6 @@ nav:
       - Ontology Curator OBI-style: pathways/ontology-curator-obi-style.md
       - Ontology Engineer/Developer: pathways/ontology-engineer.md
       - Ontology Contributor: pathways/ontology-contributor.md
-      - Ontology User: pathways/ontology-user.md
   - Lessons:
       - Contributing to OBO ontologies: lesson/contributing-to-obo-ontologies.md
       - Ontology Pipelines with ROBOT: lesson/ontology-pipelines.md
@@ -189,7 +188,8 @@ nav:
       - OBOOK Maturity Indicator: reference/obook-maturity-indicator.md
       - ChatGPT:
           - Leveraging ChatGPT for ontology curation: reference/chatgpt-prompts-for-ontology-development.md
-  - Explanations:
+      - Ontology User references: reference/ontology-user.md 
+  Explanations:
       - Introduction to Ontologies: explanation/intro-to-ontologies.md
       - Logical axiomatization of classes & use of reasoning: explanation/logical-axiomatization.md
       - Term Comments: explanation/term-comments.md
