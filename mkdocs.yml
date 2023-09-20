@@ -189,7 +189,7 @@ nav:
       - ChatGPT:
           - Leveraging ChatGPT for ontology curation: reference/chatgpt-prompts-for-ontology-development.md
       - Ontology User references: reference/ontology-user.md 
-  Explanations:
+  - Explanations:
       - Introduction to Ontologies: explanation/intro-to-ontologies.md
       - Logical axiomatization of classes & use of reasoning: explanation/logical-axiomatization.md
       - Term Comments: explanation/term-comments.md
