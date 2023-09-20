@@ -1,6 +1,6 @@
-# Ontology User Pathway
+# Ontology User References
 
-Description: This pathway includes resources on ontology use, such as how to use ontologies when annotating data, how to use ontologies for search and data analysis, and specific use cases.
+Description: This reference guide includes resources on ontology use, such as how to use ontologies when annotating data, how to use ontologies for search and data analysis, and specific use cases.
 
 **Preparation**: A basic understanding of what ontologies are is helpful. Some introductory resources are below:
 
