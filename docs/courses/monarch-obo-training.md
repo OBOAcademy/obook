@@ -32,7 +32,7 @@ _Note: this is tentative and subject to change_
 | 2023/10/03 | [Units modelling in and around OBO](https://github.com/OBOAcademy/obook/issues/421) | James Overton | |
 | 2023/09/19 | Improving ontology interoperability with Biomappings | Charlie Hoyt | |
 | 2023/09/05 | Modern prefix management with Bioregistry and `curies` | Charlie Hoyt | [Here](https://youtu.be/WTTHCZW4ubs?feature=shared) |
-| 2023/08/22 | [How to determine if two entities are the same?](https://github.com/OBOAcademy/obook/issues/424) | Nico | [Here](https://youtu.be/v5hjLgr54Zs?feature=shared) |
+| 2023/08/22 | [How to determine if two entities are the same?](../howto/are-two-entities-the-same) | Nico | [Here](https://youtu.be/v5hjLgr54Zs?feature=shared) |
 | 2023/08/08 | Cancelled: Summer break |  |  |
 | July 2023 | Cancelled: Summer break | | |
 | 2023/06/27 | [Cancelled](https://github.com/OBOAcademy/obook/issues/415) | | |
