@@ -91,6 +91,7 @@ nav:
           - OntoGPT: tutorial/ontogpt.md
       - Dealing with Semantic Data:
           - From Tables to Linked Data: tutorial/linking-data.md
+          - Units of Measurement: tutorial/units.md
           - Basic SPARQL for OBO Engineers: tutorial/sparql.md
           - Basic cypher on the Monarch Neo4j graph: tutorial/monarch-kg-neo4j-basics.md
       - Command line:
