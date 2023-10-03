@@ -18,19 +18,19 @@ The biggest advantage of separating out the numeric part is that we can do numer
 
 ## A Number of Problems
 
-Even the number part of a quantitative value is not quite as simple as it seems.
+Even the number part of a quantitative value is not quite as simple as it seems. Mathematicians, computer hardware and software designers, and scientists all have different perspectives and techniques for working with numbers, and sometimes these do not line up.
 
 There's more than one kind of number. Most quantitative values can be represented by real numbers, but some just need integers. It took mathematicians a few thousand years to provide really clear rules for integers and real numbers.
 
-There's a "countably infinite" number of integers and an "uncountably infinite" number of real numbers, but our computers are finite. Our programs limit the numbers that they can represent to strict types that can be represented in binary, e.g. 32 bit signed integer, 64 bit unsigned integer, double precision floating point number. Computer scientists and hardware designers put a lot of work into the theory and practice of how computers crunch numbers. When moving data between programming languages, databases, data formats, you sometimes do need to be careful about how numbers are converted from one format to another. When running calculations, the rules of specific numeric types and floating point arithmetic can ruin your day.
+There's a "countably infinite" number of integers and an "uncountably infinite" number of real numbers, but our computers are finite. Our programs limit the numbers that they can represent to strict types that can be represented in binary, e.g. 32 bit signed integer, 64 bit unsigned integer, double precision floating point number. Computer scientists and hardware designers put a lot of work into the theory and practice of how computers crunch numbers. When moving data between programming languages, databases, or data formats, you sometimes do need to be careful about how numbers are converted from one format to another. When running calculations, the rules of specific numeric types and floating point arithmetic can ruin your day.
 
-Not only do mathematicians and programmers have different ideas about how numbers need to work, but scientists also have special rules about how numbers are used for measurements. High-school science students are taught rules about significant digits. Publications and plots include uncertainty values and error bars. By default, most software systems do not account for these, and this can be particularly problematic when converting from one system of units to another.
+Not only do mathematicians and programmers have different ideas about how numbers need to work, but scientists also have special rules about how numbers are used for measurements and for representing uncertainty. High-school science students are taught rules about significant digits. Publications and plots include uncertainty values and error bars. By default, most software systems do not account for these, and this can be particularly problematic when converting from one system of units to another.
 
 Some databases and software tools support numeric ranges, with closed or open bounds, and operators to make use of them. This provides another layer of power and complexity, which may help to handle quantitative values, or just confuse things further.
 
-Above we recommended using pairs of numbers and units to represent quantitative values, but that separation leaves us open to mistakes where we sort or search by the numeric part and forget to account for differences in units.
+Above we recommended using pairs of numbers and units to represent quantitative values, but that separation leaves us open to mistakes where we sort or search by the numeric part and forget to account for differences in units. Bugs in unit conversion have been known to crash very expensive spacecraft.
 
-Most of the time you don't need anything fancy from your numbers, but when you do, be very careful.
+Most of the time you don't need anything fancy from your numbers, but when you do, be careful and check your work.
 
 
 ## Sorts of Units
@@ -58,24 +58,24 @@ Other fields may have units beyond these three groups, but this is already enoug
 
 We're used to writing down units as short codes. These codes have their own rules that we need to keep in mind.
 
-Let's start by stipulating that there are some "base units", such as "m" for meter, "s" for second, foot, pound, "nm" for nautical mile, etc.
+Let's start by stipulating that there are some "base units", such as "m" for metre, "s" for second, foot, pound, "nm" for nautical mile, etc.
 
-We can often compose these units using multiplication or division, and "m/s" get meters per second, or foot pounds (of torque). We can compose units with themselves and then use exponent notation, e.g. "m/s2" for meters per second squared. Division can be expressed by negative exponents, so "m.s-2" can also express meters per second squared -- the `.` indicates multiplication when this is not otherwise clear. Now we have two ways of writing the same composed unit.
+We can often compose these units using multiplication or division, and "m/s" get metres per second, or foot pounds (of torque). We can compose units with themselves and then use exponent notation, e.g. "m/s²" for metres per second squared. Superscripts are often difficult to use with software or programming languages, so some systems do not bother with them: `m/s2`. Division can be expressed by negative exponents, so `m.s-2` can also express metres per second squared -- the `.` indicates multiplication, avoiding ambiguity with `ms` for milliseconds. Now we have two ways of writing the same composed unit: division and multiplication with negative exponents. Multiplication is associative, so in theory the order of the units can vary, allowing for more ways to write the same thing.
 
 Then there are the familiar prefixes for indicating powers of ten: "m" milli, "k" kilo, "M" mega, etc. These are an essential part of the metric system, but also used in other systems.
 
-These simple rules can generate an infinite number of possible units, and while there is no practical use for the vast majority of all the *possible* units, in practice it's hard to set a reasonable boundary on the set of units that someone might want to use.
+These simple rules can generate an infinite number of possible units, and while there is no practical use for the vast majority of all the *possible* units, in practice it's hard to draw a reasonable boundary around the set of units that someone might want to use.
 
-The metric system has clear rules for base units, prefixes, and composition. When it comes to historical units, the Unified Code for Units of Measure (UCUM, <https://ucum.org>) combines metric and many historical units into a combined system that allows for prefixes and exponents. Like the metric system, in principle this allows for an unlimited number of possible units.
+The metric system has clear rules for base units, prefixes, and composition. When it comes to historical units, the Unified Code for Units of Measure (UCUM, <https://ucum.org>) combines metric and many historical units into a combined system that extends these rules. Like the metric system, in principle this allows for an unlimited number of possible units.
 
-What about the biomedical units we care about? UCUM provides a system for "non-units" indicated by curly brackets `{}` that allows arbitrary extension, e.g. `[cell]/ml` for cells per millilitre.
+What about the biomedical units we care about? UCUM provides a system for "non-units" indicated by curly brackets `{}` that allows arbitrary extension, e.g. `{cell}/ml` for cells per millilitre.
 
 UCUM has good coverage of metric and historical units, and the non-units provide a flexible way to include the "biomedical" group. The next two concerns are:
 
 1. the UCUM license <https://ucum.org/license>
 2. using UCUM on the semantic web
 
-For 2 we would like to have standard URLs that resolve to more information about units, but UCUM does not provide them. This would have to work for the unlimited number of complex unit that the UCUM system can generate.
+For 2 we would like to have standard URLs that resolve to more information about units, but UCUM does not provide them. This would have to work for the unlimited number of complex units that the UCUM system can generate.
 
 
 ## Unit Ontologies
@@ -83,6 +83,8 @@ For 2 we would like to have standard URLs that resolve to more information about
 Several ontologies have been developed to help use units of measurement with RDF, OWL, linked data, and the semantic web.
 
 - [QUDT](https://www.qudt.org) grew out of NASA to provide units for science and engineering. It's coverage of these is thorough, but it does not include historical or biological units
+
+- [OBOE](https://github.com/NCEAS/oboe) Extensible Observation Ontology is a standard that grew out of the ecology domain, and includes units from all three groups
 
 - [OM](https://github.com/HajoRijgersberg/OM), the Ontology for Units of Measure, includes all three sorts of units we are interested in
 
@@ -92,11 +94,11 @@ Some of these ontologies include UCUM codes, which will be relevant in a moment.
 
 Unfortunately there are some problems here:
 
-1. No one of these ontologies provides complete coverage of all the metric, historical, and biomedical units that we need.
+1. No one of these ontologies provides complete coverage of all the metric, historical, and biomedical units that we need
 2. All these projects model units of measurement in different ways
-3. The unlimited composition of complex units is a problem for any unit ontology build with OWL.
+3. The unlimited composition of complex units is a problem for any unit ontology build with OWL
 
-While QUDT has the widest support, it has the narrowest scrope. OM and UO have wider scope but much narrower community support. UCUM has the widest scope and the widest support, but does not integrate with the semantic web.
+While QUDT has the widest support, it has the narrowest scope. OM and UO have wider scope but much narrower community support, with OBOE somewhere in the middle. UCUM has the widest scope and the widest support, but does not integrate with the semantic web.
 
 
 ## UoM
@@ -105,11 +107,10 @@ While QUDT has the widest support, it has the narrowest scrope. OM and UO have w
 
 The UoM project aims to provide URLs for UCUM codes that resolve to linked data web pages. These pages link to RDF/OWL representations, and to other unit ontologies when they are available. The bridge to these other ontologies is the annotations with UCUM codes that they provide. UoM implements a UCUM parser that can handle the unlimited combinations that UCUM allows -- although there are, of course, practical limitations to the system.
 
-For example, [`m.s-1`](https://units-of-measurement.org/m.s-1):
+For example, [`m.s-2`](https://units-of-measurement.org/m.s-2):
 
 ```turtle
 @prefix NERC_P06: <http://vocab.nerc.ac.uk/collection/P06/current/> .
-@prefix OBOE: <http://ecoinformatics.org/oboe/oboe.1.2/oboe-standards.owl#> .
 @prefix OM: <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
 @prefix QUDT: <http://qudt.org/vocab/unit/> .
 @prefix UO: <http://purl.obolibrary.org/obo/UO_> .
@@ -124,18 +125,17 @@ unit:SI_code a owl:AnnotationProperty ;
 unit:UCUM_code a owl:AnnotationProperty ;
     rdfs:label "UCUM code" .
 
-unit:m.s-1 a owl:NamedIndividual ;
-    rdfs:label "metre per second"@en ;
-    skos:altLabel "meter per second"@en ;
-    skos:definition "A unit which is equal to 1 metre per 1 second."@en ;
-    skos:exactMatch OBOE:MeterPerSecond,
-        UO:0000094,
-        QUDT:M-PER-SEC,
-        NERC_P06:UVAA,
-        OM:metrePerSecond-Time ;
-    unit:SI_code "m s-1" ;
-    unit:UCUM_code "m.s-1",
-        "m/s" .
+unit:m.s-2 a owl:NamedIndividual ;
+    rdfs:label "metre per square second"@en ;
+    skos:altLabel "meter per square second"@en ;
+    skos:definition "A unit which is equal to 1 metre per 1 square second."@en ;
+    skos:exactMatch UO:0000077,
+        QUDT:M-PER-SEC2,
+        NERC_P06:MPS2,
+        OM:metrePerSecond-TimeSquared ;
+    unit:SI_code "m s-2" ;
+    unit:UCUM_code "m.s-2",
+        "m/s2" .
 ```
 
 The first step to providing URLs for UCUM codes is to "URL escape" (i.e. "percent encode") any characters that are excluded from URLs or have special meanings, especially `/`.
@@ -149,20 +149,23 @@ The UoM system is still a work in progress. It likely contains some bugs, and UC
 
 ## Units in Practice
 
-1. If you only use metric units, stick to metric units, otherwise use UCUM.
+1. If you only use metric units, stick to metric units, otherwise use UCUM
 
-2. Store your units as the pair of a unit and a metric or UCUM code
-  - an 2-tuple or array of length 2: [12, "m"]
-  - two columns in a database
-  - two keys in an dictionary/object
-  - a subject with two triples in RDF
-    - xsd:decimal
-    - 
-  - be careful with your numeric types
+2. If you need a UCUM non-unit, try to use an OBO ontology label
 
-3. If you need a UCUM non-unit, try to use an OBO ontology label
+3. Treat your units as the pair of a unit and a metric or UCUM code:
+    - an 2-tuple or array of length 2: `[12, "m"]`
+    - two columns in a database
+    - two keys in a dictionary/object
+    - a subject with two triples in RDF
 
-4. If you need URLs for UCUM, use units-of-measurement.org
+4. If your units never change, consider building the unit part into the column name, dictionary key, RDF predicate, or OWL property, e.g. "height in m"
+
+5. Be careful with your numeric types
+
+6. If you need URLs for UCUM, use units-of-measurement.org
+
+7. Consider using LinkML and one of these patterns for ['How to model quantities and measurements'](https://linkml.io/linkml/howtos/model-measurements.html)
 
 
 ## Are We There Yet?
