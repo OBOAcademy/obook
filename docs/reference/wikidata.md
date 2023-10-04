@@ -13,6 +13,7 @@
 * [Related wikidata OBO properties](https://w.wiki/5nov)
 * [Wikidata OBO properties and curation catalogs](https://w.wiki/6TpZ)
 * [Related wikidata OBO items](https://w.wiki/6T4v)
+* [A mapping from OBO Foundry prefixes to Wikidata properties](https://bioregistry.io/api/metaregistry/obofoundry/mapping/wikidata)
 
 ### Licenses
 
