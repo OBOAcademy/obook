@@ -48,6 +48,11 @@ An [OWL entity](#OWL-entity) that formally represents something that can be inst
 
 A CURIE is a compact [URI](#URI). For example, `CL:0000001` expands to http://purl.obolibrary.org/obo/CL_0000001. For more information, please see https://www.w3.org/TR/curie/. 
 
+### `curies`
+
+[`curies`](https://github.com/cthoyt/curies/) is a Python package for working with [prefix maps](#Prefix-Map) and 
+[extended prefix maps](#Extended-Prefix-Map) and converting between [CURIEs](#CURIE) and [URIs](#URI).
+
 #### Data Model
 
 An abstract model that organizes elements of data and standardizes how they relate to one another.
