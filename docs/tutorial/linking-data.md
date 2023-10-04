@@ -492,7 +492,7 @@ The next thing is to tackle the terminology.
 First I'll just make a list of the terms I'm using
 from the relevant columns in `build/term.tsv`:
 
-```sh #collect
+```sh
 $ sqlite3 build/data.db << EOF > build/term.tsv
 SELECT investigator FROM data
 UNION SELECT species FROM data
@@ -580,14 +580,14 @@ CREATE TABLE data(
   disease TEXT,
   qualifier TEXT,
   comment TEXT,
-  FOREIGN KEY(investigator) REFERENCES term(investigator),
-  FOREIGN KEY(species) REFERENCES term(species),
-  FOREIGN KEY(strain) REFERENCES term(strain),
-  FOREIGN KEY(sex) REFERENCES term(sex),
-  FOREIGN KEY(protocol) REFERENCES term(protocol),
-  FOREIGN KEY(organ) REFERENCES term(organ),
-  FOREIGN KEY(disease) REFERENCES term(disease),
-  FOREIGN KEY(qualifier) REFERENCES term(qualifier)
+  FOREIGN KEY(investigator) REFERENCES term(id),
+  FOREIGN KEY(species) REFERENCES term(id),
+  FOREIGN KEY(strain) REFERENCES term(id),
+  FOREIGN KEY(sex) REFERENCES term(id),
+  FOREIGN KEY(protocol) REFERENCES term(id),
+  FOREIGN KEY(organ) REFERENCES term(id),
+  FOREIGN KEY(disease) REFERENCES term(id),
+  FOREIGN KEY(qualifier) REFERENCES term(id)
 );
 
 -- copy from data_csv to data
