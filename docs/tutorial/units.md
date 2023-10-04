@@ -149,11 +149,13 @@ The UoM system is still a work in progress. It likely contains some bugs, and UC
 
 ## Units in Practice
 
+Here's my practical advice:
+
 1. If you only use metric units, stick to metric units, otherwise use UCUM
 
 2. If you need a UCUM non-unit, try to use an OBO ontology label
 
-3. Treat your units as the pair of a unit and a metric or UCUM code:
+3. Treat your quantitative values as the pair of a unit and a metric or UCUM code:
     - an 2-tuple or array of length 2: `[12, "m"]`
     - two columns in a database
     - two keys in a dictionary/object
