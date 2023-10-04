@@ -224,7 +224,17 @@ Examples:
 
 #### Prefix Map
 
-TODO
+A prefix map is a dictionary data structure where keys represent CURIE prefixes and their associated values represent
+URI prefixes. Ideally, these are constrained to be bijective (i.e., no duplicate keys, no duplicate values), but this is
+not always done in practice. Here’s an abbreviated example prefix map describing OBO Foundry ontologies:
+
+```json
+{
+  "CHEBI": "http://purl.obolibrary.org/obo/CHEBI_",
+  "MONDO": "http://purl.obolibrary.org/obo/MONDO_",
+  "GO": "http://purl.obolibrary.org/obo/GO_"
+}
+```
 
 #### Project Ontology
 
