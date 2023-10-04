@@ -84,6 +84,10 @@ Where an [API](#API) interfaces with the ontology.
 
 A relationship between two classes, A R (some) B, that states that all individuals of class A stand in relation R to at least one individual of class B. For example, `neuron has_part some dendrite` states that all instances of neuron have at least one individual of type dentrite as a part. In Manchester syntax, the keyword 'some' is used to denote existential restrictions and is interpreted as "there exists", "there is at least one", or "some". See [documentation on classifications](../explanation/intro-to-ontologies/#an-ontology-as-a-classification) for more details.
 
+#### Extended Prefix Map
+
+TODO
+
 #### Functional Syntax
 
 An official syntax of OWL (others are RDF-XML and OWL-XML) in which each line represents and axiom (although things get a little more complex with axiom annotations, and axioms use prefix syntax (order = relation (subject, object)). This is in contrast to in-fix syntax (e.g. Manchester syntax) (order = subject relation object). Functional syntax is the preferred syntax for editor files maintained on GitHub, because it can be safely diff'd and (somewhat) human readable.
@@ -217,6 +221,10 @@ Examples:
 
 - is-a
 - part-of (BFO:0000050)
+
+#### Prefix Map
+
+TODO
 
 #### Project Ontology
 
