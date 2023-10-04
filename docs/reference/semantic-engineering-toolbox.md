@@ -22,6 +22,7 @@
 **Ontology access and query tools:**
 
 - [Ontology Access Kit (OAK)](https://incatools.github.io/ontology-access-kit/introduction.html)
+- [PyOBO](https://github.com/pyobo/pyobo)
 - [Yasgui](https://yasgui.triply.cc/#)
 - [ROBOT query](http://robot.obolibrary.org/query)
 
