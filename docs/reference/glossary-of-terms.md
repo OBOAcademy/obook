@@ -46,7 +46,7 @@ An [OWL entity](#OWL-entity) that formally represents something that can be inst
 
 #### CURIE
 
-A CURIE is a compact [URI](#URI). For example, `CL:0000001` expands to http:purl.obolibrary.org/obo/CL_0000001. For more information, please see https://www.w3.org/TR/curie/. 
+A CURIE is a compact [URI](#URI). For example, `CL:0000001` expands to http://purl.obolibrary.org/obo/CL_0000001. For more information, please see https://www.w3.org/TR/curie/. 
 
 #### Data Model
 
@@ -86,7 +86,22 @@ A relationship between two classes, A R (some) B, that states that all individua
 
 #### Extended Prefix Map
 
-TODO
+Extended prefix maps (EPMs) address the limitations in expressiveness of [prefix maps](#Prefix-Map) by including
+explicit fields for CURIE prefix synonyms and URI prefix synonyms in addition to explicit fields for the preferred
+CURIE prefix and URI prefix. An abbreviated example (just containing an entry for ChEBI) looks like:
+
+```json
+[
+    {
+        "prefix": "CHEBI",
+        "uri_prefix": "http://purl.obolibrary.org/obo/CHEBI_",
+        "prefix_synonyms": ["chebi"],
+        "uri_prefix_synonyms": [
+            "https://identifiers.org/chebi:"
+        ]
+    }
+]
+```
 
 #### Functional Syntax
 
