@@ -1,4 +1,4 @@
-# Named Entity Normalization
+# Grounding
 
 Named Entity Normalization (NEN), also called _grounding_ or _entity resolution_, is the process of identifying the
 appropriate ontology term for a given text string. For example, _apoptotic process_ grounds to
@@ -151,10 +151,46 @@ In both examples, `"context"` can be used as an additional key to invoke disambi
 
 ## Data Science Application
 
-3. Show programmatic usage
-4. Show application to pandas dataframe
+In the tutorial [From Tables to Linked Data](linking-data.md), a table is presented that has
+several columns with free text, and in the course of the tutorial, the groundings are given. This table begins
+as the following:
+
+| datetime        | investigator | subject | species | strain  | sex    | group | protocol       | organ          | disease        | qualifier | comment |
+|-----------------|--------------|---------|---------|---------|--------|-------|----------------|----------------|----------------|-----------|---------|
+| 1/1/14 10:21 AM | JAO          | 12      | RAT     | F 344/N | FEMALE | 1     | HISTOPATHOLOGY | LUNG           | ADENOCARCINOMA | SEVERE    |         |
+| 1/1/14 10:30 AM | JO           | 31      | MOUSE   | B6C3F1  | MALE   | 2     | HISTOPATHOLOGY | NOSE           | INFLAMMATION   | MILD      |         |
+| 1/1/14 10:45 AM | JAO          | 45      | RAT     | F 344/N | MALE   | 1     | HISTOPATHOLOGY | ADRENAL CORTEX | NECROSIS       | MODERATE  |         |
+
+Here, we show how to use Gilda to accomplish this in practice.
+
+```python
+import pandas as pd
+import gilda
+
+url = "https://raw.githubusercontent.com/OBOAcademy/obook/master/docs/tutorial/linking_data/data.csv"
+df = pd.read_csv(url)
+gilda.ground_df(df, source_column="disease", target_column="disease_curie")
+print(df.to_markdown(index=False))
+```
+
+This results in the following:
+
+| datetime        | investigator | subject | species | strain  | sex    | group | protocol       | organ          | disease        | qualifier | comment | disease_curie |
+|:----------------|:-------------|--------:|:--------|:--------|:-------|------:|:---------------|:---------------|:---------------|:----------|--------:|:--------------|
+| 1/1/14 10:21 AM | JAO          |      12 | RAT     | F 344/N | FEMALE |     1 | HISTOPATHOLOGY | LUNG           | ADENOCARCINOMA | SEVERE    |     nan | mesh:D000230  |
+| 1/1/14 10:30 AM | JAO          |      31 | MOUSE   | B6C3F1  | MALE   |     2 | HISTOPATHOLOGY | NOSE           | INFLAMMATION   | MILD      |     nan | GO:0006954    |
+| 1/1/14 10:45 AM | JAO          |      45 | RAT     | F 344/N | MALE   |     1 | HISTOPATHOLOGY | ADRENAL CORTEX | NECROSIS       | MODERATE  |     nan | GO:0070265    |
 
 ## Custom Index
 
-5. Show custom terms w/ Bioontologies, PyOBO, etc.
+A custom index "grounder" object, which exposes all the previously demonstrated functionality, can be created using
+PyOBO with:
 
+```python
+from pyobo.gilda_utils import get_grounder
+
+grounder = get_grounder(["mesh", "cvx"])
+```
+
+A custom index can be created by instantiating `gilda.Term` objects and instantiating
+a [`gilda.Grounder`](https://gilda.readthedocs.io/en/latest/modules/index.html#gilda.grounder.Grounder) object.
