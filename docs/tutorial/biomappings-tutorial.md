@@ -32,6 +32,44 @@ semantic mappings curation workflow using [Biomappings](https://github.com/biopr
 
 ## Using the Curation Interface
 
+Biomappings implements a simple web-based interface. This tutorial covers the most important feature to get you
+curating. It already has predictions built in - each has provenance on how it was generated and is assigned
+a numerical confidence (though the meaning varies based on how it was generated).
+
+### Navigating and Curating
+
+The curation interface shows a set of mappings. There are buttons to curate each as:
+
+1. Exact
+2. Narrow
+3. Broad
+4. Incorrect
+5. Unsure
+
+![](resources/biomappings/1-front.png)
+
+If you click the "summarize" button, it gives a breakdown of the source/target prefix pairs. This can be helpful for
+focusing curation.
+
+![](resources/biomappings/2-summarize.png)
+
+The search bar can be used to search the CURIE or name for either the subject or target. In the following example,
+"gene" was searched.
+
+![](resources/biomappings/3-search.png)
+
+After you do some curations, a "Commit and Push" button will appear. This automates interacting with Git in the
+background.
+
+![](resources/biomappings/4-commit.png)
+
+> **Warning**
+> You're also free to interact with Git on your own, but make sure that you stay consistent with how
+> you interact with the files. Biomappings keeps track of line numbers, so if they change externally,
+> be sure to restart the curation web application.
+
+When you're done, you can close the web application with <kbd>control</kbd> + <kbd>c</kbd>.
+
 ## Contributing Upstream
 
 After curating, committing, and pushing, you can make a pull request back to the upstream Biomappings
@@ -117,7 +155,7 @@ append_gilda_predictions("chebi", "mesh", provenance=provenance)
 All generated mappings in Biomapping should point to the script that generated
 them. `provenance = get_script_url(__file__)` is a sneaky function that uses `__file__` to get the name of the
 current file and `get_script_url()` to generate a URI, assuming that this is in the `scripts/` directory of the
-Biomapping repository.
+Biomappings repository.
 
 The hard work is done by `append_gilda_predictions("chebi", "mesh", provenance=provenance)`. Under the hood, this
 does the following:
