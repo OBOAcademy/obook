@@ -1,4 +1,4 @@
-# Grounding
+# Named Entity Normalization
 
 Named Entity Normalization (NEN), also called _grounding_ or _entity resolution_, is the process of identifying the
 appropriate ontology term for a given text string. For example, _apoptotic process_ grounds to
@@ -183,7 +183,8 @@ This results in the following (truncated):
 | RAT     | ADRENAL CORTEX | NECROSIS       | [mesh:D051381](https://bioregistry.io/mesh:D051381) | [mesh:D000302](https://bioregistry.io/mesh:D000302) | [GO:0070265](https://bioregistry.io/go:0070265)     |
 
 Note that MeSH terms may appear instead of OBO ontology terms because the highest scored is given. This can be changed
-by a `namespaces` argument to `gilda.ground_df`.
+by a `namespaces` argument to `gilda.ground_df`. Typically, the results from named entity normalization are used
+in conjunction with [named entity standardization](named-entity-standardization.md).
 
 ## Custom Index
 
@@ -194,6 +195,7 @@ PyOBO with:
 from pyobo.gilda_utils import get_grounder
 
 grounder = get_grounder(["mesh", "cvx"])
+grounder.ground("inflammation")
 ```
 
 A custom index can be created by instantiating `gilda.Term` objects and instantiating
