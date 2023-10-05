@@ -1,22 +1,64 @@
 # Curating Semantic Mappings with Biomappings
 
-Background:
+There are many partially overlapping ontologies and controlled vocabularies. Many ontologies
+curate semantic mappings such as database cross-references to support downstream users who might
+need to merge information, but these are often missing or incomplete.
 
-1. There are lots of partially overlapping ontologies and semantic spaces
-2. Many resources curate semantic mappings, but they are often incomplete
+Curating these mappings by hand is time-consuming, so this tutorial presents a semi-automated
+semantic mappings curation workflow using [Biomappings](https://github.com/biopragmatics/biomappings).
 
-Mappings provided by first party resources are often incomplete
-Predicted mappings usually don't get persisted
-Need curation tool for predicted mappings
-Need to re-incorporate/contribute curations upstream
-Ontology Alignment Evaluation Initiative has used the same task of aligning the Foundational Model of Anatomy Ontology
-and SNOMED-CT for more than 15 years (see Bodenreider and Zhang (2006) and Wang and Hu (2022)). We could be done with
-this and move on!
-Need to do this all in an open code / open data / open infrastructure (O3) way
+<img width="650" src="https://raw.githubusercontent.com/biopragmatics/biomappings/master/docs/img/biomappings-curation-cycle.svg" alt="Biomappings Curation Cycle" />
 
-![Biomappings Curation Cycle](https://raw.githubusercontent.com/biopragmatics/biomappings/master/docs/img/biomappings-curation-cycle.svg)
+## Installing and Running Biomappings
 
-## Running Biomappings
+1. Fork the [upstream Biomappings repository](https://github.com/biopragmatics/biomappings)
+2. Clone your fork, make a branch, and install it.
+
+   ```shell
+   $ git clone git+https://github.com/biopragmatics/biomappings.git
+   $ cd biomappings
+   $ git checkout -b your-branch-name
+   $ pip install -e .[web]
+   ```
+3. Run the curation interface with
+
+   ```shell
+   biomappings web
+   ```
+
+   It can be accessed by navigating to http://localhost:5000/ in your browser. After you do some curations, the web
+   application takes care of interacting with the git repository from which you installed biomappings via the "commit
+   and push" button.
+
+## Using the Curation Interface
+
+## Contributing Upstream
+
+After curating, committing, and pushing, you can make a pull request back to the upstream Biomappings
+repository. All content in Biomappings is licensed under CC0, meaning that it can be freely reused. Further,
+several summaries and exports are automatically generated following all pull requests containing curation:
+
+Prominently, this includes the following exports in
+the [Simple Standard for Sharing Ontological Mappings (SSSOM)](https://w3id.org/sssom) format:
+
+| Artifact     | Description                                             | PURL                                                                    |
+|--------------|---------------------------------------------------------|-------------------------------------------------------------------------|
+| TSV          | Mappings (predicted and curated, positive and negative) | https://w3id.org/biopragmatics/biomappings/sssom/biomappings.sssom.tsv  |
+| Metadata YML | Metadata (extended prefix map, license, etc) for TSV    | https://w3id.org/biopragmatics/biomappings/sssom/biomappings.sssom.yml  |
+| JSON         | Mappings in JSON                                        | https://w3id.org/biopragmatics/biomappings/sssom/biomappings.sssom.json |
+| OWL          | Mappings as an ontology                                 | https://w3id.org/biopragmatics/biomappings/sssom/biomappings.sssom.owl  |
+
+These files can be directly pulled by
+the [Ontology Development Kit (ODK)](https://github.com/INCATools/ontology-development-kit/) to be incorporated in
+ontologies. Similarly, Biomappings includes some experimental scripts for contributing them directly into upstream
+ontology files. For example, to contribute UBERON mappings upstream, do the following:
+
+```shell
+python -m biomappings.contribute.obo --prefix uberon --path ~/dev/uberon/src/ontology/uberon-edit.obo
+```
+
+Note that this assumes you have UBERON cloned in a certain place. You can edit this to your needs, then ultimately
+make a commit.
 
 ## Predicting Mappings
 
@@ -105,4 +147,23 @@ Finally, you can run the web curation interface like normal and search for your 
 
 ```shell
 biomappings web
+```
+
+## Custom Biomappings
+
+If you're a company that wants to use Biomappings internally, it's possible to specify the path
+to the predictions and curations files used by the web interface. See the options below:
+
+```shell
+$ biomappings web --help
+Usage: biomappings web [OPTIONS]
+
+  Run the biomappings web app.
+
+Options:
+  --predictions-path PATH  A predictions TSV file path
+  --positives-path PATH    A positives curation TSV file path
+  --negatives-path PATH    A negatives curation TSV file path
+  --unsure-path PATH       An unsure curation TSV file path
+  --help                   Show this message and exit.
 ```
