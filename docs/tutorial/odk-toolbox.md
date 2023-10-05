@@ -301,5 +301,7 @@ suggest that the tool be added in a future ODK release!
 - [Apache Jena](https://github.com/apache/jena)
 - [Soufflé](https://github.com/souffle-lang/souffle)
 - [Konclude](https://github.com/konclude/Konclude)
-- [Sssom-py](https://github.com/mapping-commons/sssom)
+- [SSSOM-py](https://github.com/mapping-commons/sssom)
 - [SPARQLProg](https://github.com/cmungall/sparqlprog)
+- [curies](https://github.com/cthoyt/curies)
+- [Bioregistry](https://github.com/biopragmatics/bioregistry)
