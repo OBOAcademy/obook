@@ -176,11 +176,11 @@ print(df.to_markdown(index=False))
 
 This results in the following (truncated):
 
-| species | organ          | disease        | species_curie                                       | organ_curie                                        | disease_curie                                       |
-|:--------|:---------------|:---------------|:----------------------------------------------------|:---------------------------------------------------|:----------------------------------------------------|
-| RAT     | LUNG           | ADENOCARCINOMA | [mesh:D051381](https://bioregistry.io/mesh:D051381) | [mesh:D008168](https://bioregistry.io/mesh:D008168 | [mesh:D000230](https://bioregistry.io/mesh:D000230) |
-| MOUSE   | NOSE           | INFLAMMATION   | [mesh:D051379](https://bioregistry.io/mesh:D051379) | [mesh:D009666](https://bioregistry.io/mesh:D009666 | [GO:0006954](https://bioregistry.io/go:0006954)     |
-| RAT     | ADRENAL CORTEX | NECROSIS       | [mesh:D051381](https://bioregistry.io/mesh:D051381) | [mesh:D000302](https://bioregistry.io/mesh:D000302 | [GO:0070265](https://bioregistry.io/go:0070265)     |
+| species | organ          | disease        | species_curie                                       | organ_curie                                         | disease_curie                                       |
+|:--------|:---------------|:---------------|:----------------------------------------------------|:----------------------------------------------------|:----------------------------------------------------|
+| RAT     | LUNG           | ADENOCARCINOMA | [mesh:D051381](https://bioregistry.io/mesh:D051381) | [mesh:D008168](https://bioregistry.io/mesh:D008168) | [mesh:D000230](https://bioregistry.io/mesh:D000230) |
+| MOUSE   | NOSE           | INFLAMMATION   | [mesh:D051379](https://bioregistry.io/mesh:D051379) | [mesh:D009666](https://bioregistry.io/mesh:D009666) | [GO:0006954](https://bioregistry.io/go:0006954)     |
+| RAT     | ADRENAL CORTEX | NECROSIS       | [mesh:D051381](https://bioregistry.io/mesh:D051381) | [mesh:D000302](https://bioregistry.io/mesh:D000302) | [GO:0070265](https://bioregistry.io/go:0070265)     |
 
 Note that MeSH terms may appear instead of OBO ontology terms because the highest scored is given. This can be changed
 by a `namespaces` argument to `gilda.ground_df`.
