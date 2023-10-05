@@ -91,6 +91,7 @@ nav:
           - OntoGPT: tutorial/ontogpt.md
       - Dealing with Semantic Data:
           - From Tables to Linked Data: tutorial/linking-data.md
+          - Standardizing Prefixes, CURIEs, and URIs: tutorial/curies.md
           - Units of Measurement: tutorial/units.md
           - Basic SPARQL for OBO Engineers: tutorial/sparql.md
           - Basic cypher on the Monarch Neo4j graph: tutorial/monarch-kg-neo4j-basics.md
@@ -101,11 +102,16 @@ nav:
           - Basic Tutorial: tutorial/sssom-tutorial.md
           - Lexical Matching with OAK Lexmatch: tutorial/lexmatch-tutorial.md
           - Introduction to the SSSOM Toolkit: tutorial/sssom-toolkit.md
+          - Curating Mappings with Biomappings: tutorial/biomappings.md
       - General Ontology Modelling:
           - Project Ontology Development: tutorial/project-ontology-development.md
           - Family History Knowledge Base (FHKB) tutorial: tutorial/fhkb.md
       - Exomiser:
           - Introduction to Exomiser: tutorial/exomiser-tutorial.md
+      - Information Extraction:
+          - Named Entity Recognition: tutorial/named-entity-recognition.md
+          - Named Entity Normalization: tutorial/named-entity-normalization.md
+          - Named Entity Standardization: tutorial/named-entity-standardization.md
   - How-to guides:
       - General:
           - Maximising impact as an open science engineer: howto/open-science-engineer.md
