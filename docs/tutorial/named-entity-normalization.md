@@ -83,62 +83,6 @@ curl:
 curl -X POST -H "Content-Type: application/json" -d '{"text": "kras"}' http://grounding.indra.bio/ground
 ```
 
-This results in the following JSON, which includes lots of detail we skipped before.
-
-```json
-[
-  {
-    "match": {
-      "cap_combos": [
-        [
-          "all_lower",
-          "all_caps"
-        ]
-      ],
-      "dash_mismatches": [],
-      "exact": false,
-      "query": "kras",
-      "ref": "KRAS",
-      "space_mismatch": false
-    },
-    "score": 0.984539270253556,
-    "subsumed_terms": [
-      {
-        "db": "HGNC",
-        "entry_name": "KRAS",
-        "id": "6407",
-        "norm_text": "kras",
-        "organism": "9606",
-        "source": "famplex",
-        "status": "curated",
-        "text": "Kras"
-      },
-      {
-        "db": "HGNC",
-        "entry_name": "KRAS",
-        "id": "6407",
-        "norm_text": "kras",
-        "organism": "9606",
-        "source": "famplex",
-        "status": "curated",
-        "text": "K-Ras"
-      }
-    ],
-    "term": {
-      "db": "HGNC",
-      "entry_name": "KRAS",
-      "id": "6407",
-      "norm_text": "kras",
-      "organism": "9606",
-      "source": "famplex",
-      "status": "curated",
-      "text": "KRAS"
-    },
-    "url": "https://identifiers.org/hgnc:6407"
-  }
-]
-```
-
 The same request using Python's request package would be as follows:
 
 ```python
