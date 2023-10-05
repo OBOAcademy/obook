@@ -7,13 +7,6 @@ to [HGNC:6407](https://bioregistry.io/hgnc:6407). In this tutorial, we show how 
 use [Gilda](https://github.com/gyorilab/gilda) to apply named entity normalization both in an interactive and
 a programmatic setting.
 
-1. Background
-1. Show web interface
-2. Show API usage
-3. Show programmatic usage
-4. Show application to pandas dataframe
-5. Show custom terms w/ Bioontologies, PyOBO, etc.
-
 ## Interactive Grounding
 
 In order to introduce grounding, we refer to the web-based deployment of Gilda at
@@ -30,9 +23,10 @@ of several reasons:
 2. There are multiple different concepts that share the same name or synonyms
 
 > **Warning**
-> Gilda's pre-build index is primarly targeted towards supporting biomedical relation extraction.
+> Gilda's pre-build index is primarily targeted towards supporting biomedical relation extraction.
 > This means it does not index all ontologies, so don't be alarmed if you get no results when
-> trying to ground a potentially common entity label. Later, we describe how to build a custom Gilda index.
+> trying to ground a potentially common entity label. Later, we describe how
+> to [build a custom Gilda index](#Custom-Index).
 
 ![The Gilda results page after grounding "K-RAS"](resources/gilda/2-web-results.png)
 
@@ -50,20 +44,99 @@ this result was scored the highest.
 
 ## Programmatic Grounding
 
-Gilda can be installed with `pip install gilda` and used similarly to the 
-
-[Gilda](https://github.com/gyorilab/gilda).
+Gilda can be installed with `pip install gilda` and exposes a high-level interface similar to the web interface.
+_k-ras_ can be grounded in the same way as before:
 
 ```python
 import gilda
 
-scored_matches = gilda.ground("kras")
+scored_matches = gilda.ground("k-ras")
+
+rows = [
+    (
+        scored_match.term.db + ":" + scored_match.term.id,
+        scored_match.term.entry_name,
+        scored_match.score,
+    )
+    for scored_match in scored_matches
+]
 ```
 
-Below is an example request using curl:
+| CURIE                                         | Name |  Score |
+|-----------------------------------------------|------|-------:|
+| [HGNC:6407](https://bioregistry.io/hgnc:6407) | KRAS | 0.9936 |
+
+Disambiguation can be run by adding the `context` argument.
+
+```python
+import gilda
+
+scored_matches = gilda.ground("ER", context="Calcium is released from the ER.")
+```
+
+### Remote Grounding
+
+The following two examples show how to run grounding by invoking the web service. Below is an example request using
+curl:
 
 ```shell
 curl -X POST -H "Content-Type: application/json" -d '{"text": "kras"}' http://grounding.indra.bio/ground
+```
+
+This results in the following JSON, which includes lots of detail we skipped before.
+
+```json
+[
+  {
+    "match": {
+      "cap_combos": [
+        [
+          "all_lower",
+          "all_caps"
+        ]
+      ],
+      "dash_mismatches": [],
+      "exact": false,
+      "query": "kras",
+      "ref": "KRAS",
+      "space_mismatch": false
+    },
+    "score": 0.984539270253556,
+    "subsumed_terms": [
+      {
+        "db": "HGNC",
+        "entry_name": "KRAS",
+        "id": "6407",
+        "norm_text": "kras",
+        "organism": "9606",
+        "source": "famplex",
+        "status": "curated",
+        "text": "Kras"
+      },
+      {
+        "db": "HGNC",
+        "entry_name": "KRAS",
+        "id": "6407",
+        "norm_text": "kras",
+        "organism": "9606",
+        "source": "famplex",
+        "status": "curated",
+        "text": "K-Ras"
+      }
+    ],
+    "term": {
+      "db": "HGNC",
+      "entry_name": "KRAS",
+      "id": "6407",
+      "norm_text": "kras",
+      "organism": "9606",
+      "source": "famplex",
+      "status": "curated",
+      "text": "KRAS"
+    },
+    "url": "https://identifiers.org/hgnc:6407"
+  }
+]
 ```
 
 The same request using Python's request package would be as follows:
@@ -71,14 +144,17 @@ The same request using Python's request package would be as follows:
 ```python
 import requests
 
-requests.post('http://grounding.indra.bio/ground', json={'text': 'kras'})
+res = requests.post("http://grounding.indra.bio/ground", json={"text": "kras"})
 ```
 
-## Disambiguation
+In both examples, `"context"` can be used as an additional key to invoke disambiguation.
 
-```python
-import gilda
+## Data Science Application
 
-scored_matches = gilda.ground('ER', context='Calcium is released from the ER.')
-```
+3. Show programmatic usage
+4. Show application to pandas dataframe
+
+## Custom Index
+
+5. Show custom terms w/ Bioontologies, PyOBO, etc.
 
