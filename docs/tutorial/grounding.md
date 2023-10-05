@@ -152,14 +152,14 @@ In both examples, `"context"` can be used as an additional key to invoke disambi
 ## Data Science Application
 
 In the tutorial [From Tables to Linked Data](linking-data.md), a table is presented that has
-several columns with free text, and in the course of the tutorial, the groundings are given. This table begins
-as the following:
+several columns with free text, and in the course of the tutorial, the groundings are given. This table (truncated)
+begins as the following:
 
-| datetime        | investigator | subject | species | strain  | sex    | group | protocol       | organ          | disease        | qualifier | comment |
-|-----------------|--------------|---------|---------|---------|--------|-------|----------------|----------------|----------------|-----------|---------|
-| 1/1/14 10:21 AM | JAO          | 12      | RAT     | F 344/N | FEMALE | 1     | HISTOPATHOLOGY | LUNG           | ADENOCARCINOMA | SEVERE    |         |
-| 1/1/14 10:30 AM | JO           | 31      | MOUSE   | B6C3F1  | MALE   | 2     | HISTOPATHOLOGY | NOSE           | INFLAMMATION   | MILD      |         |
-| 1/1/14 10:45 AM | JAO          | 45      | RAT     | F 344/N | MALE   | 1     | HISTOPATHOLOGY | ADRENAL CORTEX | NECROSIS       | MODERATE  |         |
+| species | organ          | disease        |
+|:--------|:---------------|:---------------|
+| RAT     | LUNG           | ADENOCARCINOMA |
+| MOUSE   | NOSE           | INFLAMMATION   |
+| RAT     | ADRENAL CORTEX | NECROSIS       |
 
 Here, we show how to use Gilda to accomplish this in practice.
 
@@ -169,17 +169,21 @@ import gilda
 
 url = "https://raw.githubusercontent.com/OBOAcademy/obook/master/docs/tutorial/linking_data/data.csv"
 df = pd.read_csv(url)
-gilda.ground_df(df, source_column="disease", target_column="disease_curie")
+for column in ["species", "organ", "disease"]:
+    gilda.ground_df(df, source_column=column, target_column=f"{column}_curie")
 print(df.to_markdown(index=False))
 ```
 
-This results in the following:
+This results in the following (truncated):
 
-| datetime        | investigator | subject | species | strain  | sex    | group | protocol       | organ          | disease        | qualifier | comment | disease_curie |
-|:----------------|:-------------|--------:|:--------|:--------|:-------|------:|:---------------|:---------------|:---------------|:----------|--------:|:--------------|
-| 1/1/14 10:21 AM | JAO          |      12 | RAT     | F 344/N | FEMALE |     1 | HISTOPATHOLOGY | LUNG           | ADENOCARCINOMA | SEVERE    |     nan | mesh:D000230  |
-| 1/1/14 10:30 AM | JAO          |      31 | MOUSE   | B6C3F1  | MALE   |     2 | HISTOPATHOLOGY | NOSE           | INFLAMMATION   | MILD      |     nan | GO:0006954    |
-| 1/1/14 10:45 AM | JAO          |      45 | RAT     | F 344/N | MALE   |     1 | HISTOPATHOLOGY | ADRENAL CORTEX | NECROSIS       | MODERATE  |     nan | GO:0070265    |
+| species | organ          | disease        | species_curie                                       | organ_curie                                        | disease_curie                                       |
+|:--------|:---------------|:---------------|:----------------------------------------------------|:---------------------------------------------------|:----------------------------------------------------|
+| RAT     | LUNG           | ADENOCARCINOMA | [mesh:D051381](https://bioregistry.io/mesh:D051381) | [mesh:D008168](https://bioregistry.io/mesh:D008168 | [mesh:D000230](https://bioregistry.io/mesh:D000230) |
+| MOUSE   | NOSE           | INFLAMMATION   | [mesh:D051379](https://bioregistry.io/mesh:D051379) | [mesh:D009666](https://bioregistry.io/mesh:D009666 | [GO:0006954](https://bioregistry.io/go:0006954)     |
+| RAT     | ADRENAL CORTEX | NECROSIS       | [mesh:D051381](https://bioregistry.io/mesh:D051381) | [mesh:D000302](https://bioregistry.io/mesh:D000302 | [GO:0070265](https://bioregistry.io/go:0070265)     |
+
+Note that MeSH terms may appear instead of OBO ontology terms because the highest scored is given. This can be changed
+by a `namespaces` argument to `gilda.ground_df`.
 
 ## Custom Index
 
