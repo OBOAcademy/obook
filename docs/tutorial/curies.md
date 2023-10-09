@@ -1,4 +1,4 @@
-# CURIEs
+# Standardizing Prefixes, CURIEs, and URIs with the `curies` package
 
 Uniform resource identifiers (URIs) and compact URIs (CURIEs) have become the predominant syntaxes for identifying
 concepts in linked data applications. Therefore, efficient, faultless, and idiomatic conversion between them is a
