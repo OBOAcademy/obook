@@ -1,5 +1,7 @@
 # Named Entity Standardization
 
+<a href="https://oboacademy.github.io/obook/reference/obook-maturity-indicator/"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FOBOAcademy%2Fobook%2Fmaster%2Fdocs%2Fresources%2Fobook-badge-development.json" /></a>
+
 Named entity standardization (NES) is the process of identifying the preferred ontology (or database) term
 for a concept from many equivalent concepts. This process typically relies on the existence of high quality
 semantic mappings such as equivalence relationships and some usage of inference tools.
