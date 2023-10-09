@@ -1,4 +1,4 @@
-# Named Entity Recognition
+# Named Entity Recognition with Gilda
 
 Named entity recognition (NER) is the process of identifying spans of text that correspond to concepts.
 Often, named entity recognition is paired with [named entity normalization (NEN)](named-entity-normalization.md) to
