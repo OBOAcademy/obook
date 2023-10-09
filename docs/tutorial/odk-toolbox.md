@@ -304,4 +304,3 @@ suggest that the tool be added in a future ODK release!
 - [SSSOM-py](https://github.com/mapping-commons/sssom)
 - [SPARQLProg](https://github.com/cmungall/sparqlprog)
 - [curies](https://github.com/cthoyt/curies)
-- [Bioregistry](https://github.com/biopragmatics/bioregistry)
