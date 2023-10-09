@@ -109,7 +109,7 @@ nav:
       - Exomiser:
           - Introduction to Exomiser: tutorial/exomiser-tutorial.md
       - Information Extraction:
-          - Named Entity Recognition: tutorial/named-entity-recognition.md
+          - Named Entity Recognition with Gilda: tutorial/named-entity-recognition.md
           - Named Entity Normalization: tutorial/named-entity-normalization.md
           - Named Entity Standardization: tutorial/named-entity-standardization.md
   - How-to guides:
