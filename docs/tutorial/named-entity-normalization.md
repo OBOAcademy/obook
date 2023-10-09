@@ -1,4 +1,4 @@
-# Named Entity Normalization
+# Named Entity Normalization with Gilda
 
 Named Entity Normalization (NEN), also called _grounding_ or _entity resolution_, is the process of identifying the
 appropriate ontology term for a given text string. For example, _apoptotic process_ grounds to
