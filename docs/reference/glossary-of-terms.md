@@ -46,7 +46,12 @@ An [OWL entity](#OWL-entity) that formally represents something that can be inst
 
 #### CURIE
 
-A CURIE is a compact [URI](#URI). For example, `CL:0000001` expands to http:purl.obolibrary.org/obo/CL_0000001. For more information, please see https://www.w3.org/TR/curie/. 
+A CURIE is a compact [URI](#URI). For example, `CL:0000001` expands to http://purl.obolibrary.org/obo/CL_0000001. For more information, please see https://www.w3.org/TR/curie/. 
+
+### `curies`
+
+[`curies`](https://github.com/cthoyt/curies/) is a Python package for working with [prefix maps](#Prefix-Map) and 
+[extended prefix maps](#Extended-Prefix-Map) and converting between [CURIEs](#CURIE) and [URIs](#URI).
 
 #### Data Model
 
@@ -83,6 +88,25 @@ Where an [API](#API) interfaces with the ontology.
 #### Existential Restriction
 
 A relationship between two classes, A R (some) B, that states that all individuals of class A stand in relation R to at least one individual of class B. For example, `neuron has_part some dendrite` states that all instances of neuron have at least one individual of type dentrite as a part. In Manchester syntax, the keyword 'some' is used to denote existential restrictions and is interpreted as "there exists", "there is at least one", or "some". See [documentation on classifications](../explanation/intro-to-ontologies/#an-ontology-as-a-classification) for more details.
+
+#### Extended Prefix Map
+
+Extended prefix maps (EPMs) address the limitations in expressiveness of [prefix maps](#Prefix-Map) by including
+explicit fields for CURIE prefix synonyms and URI prefix synonyms in addition to explicit fields for the preferred
+CURIE prefix and URI prefix. An abbreviated example (just containing an entry for ChEBI) looks like:
+
+```json
+[
+    {
+        "prefix": "CHEBI",
+        "uri_prefix": "http://purl.obolibrary.org/obo/CHEBI_",
+        "prefix_synonyms": ["chebi"],
+        "uri_prefix_synonyms": [
+            "https://identifiers.org/chebi:"
+        ]
+    }
+]
+```
 
 #### Functional Syntax
 
@@ -217,6 +241,20 @@ Examples:
 
 - is-a
 - part-of (BFO:0000050)
+
+#### Prefix Map
+
+A prefix map is a dictionary data structure where keys represent CURIE prefixes and their associated values represent
+URI prefixes. Ideally, these are constrained to be bijective (i.e., no duplicate keys, no duplicate values), but this is
+not always done in practice. Here’s an abbreviated example prefix map describing OBO Foundry ontologies:
+
+```json
+{
+  "CHEBI": "http://purl.obolibrary.org/obo/CHEBI_",
+  "MONDO": "http://purl.obolibrary.org/obo/MONDO_",
+  "GO": "http://purl.obolibrary.org/obo/GO_"
+}
+```
 
 #### Project Ontology
 

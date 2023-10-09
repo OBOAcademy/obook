@@ -62,6 +62,8 @@ And then categorise them according to some predefined categories:
 As in the Phenotype[X-linked] [Nettleship-Falls] form of Disease[ocular albinism] (300500), the patients showed Phenotype[reduced visual acuity], Phenotype[photophobia], Phenotype[nystagmus], Phenotype[translucent irides], Phenotype[strabismus], Phenotype[hypermetropic refractive errors], and Phenotype[albinotic fundus] with Phenotype[foveal hypoplasia].
 ```
 
+See the [NER with Gilda](../tutorial/named-entity-recognition.md) tutorial.
+
 _Interesting sources for further reading:_
 
 - [Using Uberon for text mining](https://github.com/obophenotype/uberon/wiki/Using-uberon-for-text-mining)
@@ -77,6 +79,7 @@ _Interesting sources for further reading:_
 
 - http://nlpprogress.com/english/relationship_extraction.html
 - https://github.com/roomylee/awesome-relation-extraction
+- https://www.indra.bio/
 
 ### Other data sources and in-house curation efforts
 
@@ -94,7 +97,7 @@ There is a huge amount of literature and tutorials on the topic of integrating d
 
 ### Entity Resolution (ER):
 
-Entity resolution (ER), sometimes called "record linking", is the task of disambiguating records that correspond to real world entities across and within datasets. This task as many dimensions, but for us, the most important one is mapping a string, for example the one that was matched by our Named Entity Recognition pipeline, to ontology terms.
+Entity resolution (ER), sometimes called "record linking", "grounding", or named entity normalization (NEN), is the task of disambiguating records that correspond to real world entities across and within datasets. This task as many dimensions, but for us, the most important one is mapping a string, for example the one that was matched by our Named Entity Recognition pipeline, to ontology terms.
 
 Given our example:
 
@@ -104,9 +107,12 @@ As in the Phenotype[X-linked] Nettleship-Falls form of Phenotype[ocular albinism
 
 We could end up, for example, resolving ocular albinism to [HP:0001107](https://monarchinitiative.org/phenotype/HP:0001107).
 
+See the [NEN with Gilda](../tutorial/named-entity-normalization.md) tutorial.
+
 There are a lot of materials about Entity Resolution in general:
 - https://www.districtdatalabs.com/basics-of-entity-resolution
 - https://www.sciencedirect.com/topics/computer-science/entity-resolution
+- https://github.com/gyorilab/gilda
 
 In effect the term _Ontology Mapping_, which is the focus of this lesson, is _Entity Resolution_ for ontologies - usually we don't have problem to use the two terms synonymously, although you may find that the literature typically favours one or the other.
 
