@@ -24,6 +24,7 @@ Description: This reference guide includes resources on ontology use, such as ho
 #### Clinical Applications of the Human Disease Ontology (DO)
 
 A [video library](https://www.youtube.com/playlist?list=PLYM0tkKvhlX6smyZ4R_OKbi-Mn0_WDjeq) is available that covers:
+
 - Clinical applications of the Human Disease Ontology
 - How is the Human Disease Ontology FAIR?
 - Searching the Human Disease Ontology website
