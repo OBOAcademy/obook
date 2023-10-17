@@ -70,15 +70,17 @@ There are several ways to load a converter:
 
 1. From a pre-defined context, like the OBO Foundry, Bioregistry, Monarch, or others
 2. From a prefix map
-   ```python
 
-    import curies
-    
-    prefix_map = {
-        "CHEBI": "http://purl.obolibrary.org/obo/CHEBI_",
-    }
-    converter = curies.load_prefix_map(prefix_map)
-    ```
+```python
+
+import curies
+
+prefix_map = {
+    "CHEBI": "http://purl.obolibrary.org/obo/CHEBI_",
+}
+converter = curies.load_prefix_map(prefix_map)
+```
+
 3. From an _extended_ prefix map. This is the preferred format since it supports synonyms for CURIE prefixes and URI
    prefixes. See [here](https://curies.readthedocs.io/en/latest/tutorial.html#loading-extended-prefix-maps).
 4. From a JSON-LD context
