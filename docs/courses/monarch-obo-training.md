@@ -32,9 +32,8 @@ _Note: this is tentative and subject to change_
 | 2023/11/18 | Standardising metadata in OBO ontologies: from definitions and contribution to synonym types. Best practices. | Anita Caron | |
 | 2023/11/14 | [TBD](https://github.com/OBOAcademy/obook/issues/450) | TBD | |
 | 2023/10/17 | [Using ontologies for data annotation and consequences of ontology development](https://docs.google.com/presentation/d/16Bd1szeJ-gaSuKWJhVJRHYrwdZ4LtjIAPSIqP9OveFc/edit?usp=sharing) | Sabrina Toro | |
-| 2023/10/17 | [Using ontologies for data annotation and consequences of ontology development](https://docs.google.com/presentation/d/16Bd1szeJ-gaSuKWJhVJRHYrwdZ4LtjIAPSIqP9OveFc/edit?usp=sharing) | Sabrina Toro | |
-| 2023/10/03 | [Units modeling in and around OBO](https://oboacademy.github.io/obook/tutorial/units/) | James Overton | |
-| 2023/09/19 | [Improving ontology interoperability with Biomappings](https://docs.google.com/presentation/d/1s9QNQQoRuQUWWJoIJklMHrqPowvBKU4Y638w54xP1t0/edit) | Charlie Hoyt | |
+| 2023/10/03 | [Units modeling in and around OBO](https://oboacademy.github.io/obook/tutorial/units/) | James Overton | [Here](https://youtu.be/W4IQk-tft0I?feature=shared) |
+| 2023/09/19 | [Improving ontology interoperability with Biomappings](https://docs.google.com/presentation/d/1s9QNQQoRuQUWWJoIJklMHrqPowvBKU4Y638w54xP1t0/edit) | Charlie Hoyt | [Here](https://youtu.be/_gAdGShZReo?feature=shared) |
 | 2023/09/05 | [Modern prefix management with Bioregistry and `curies`](https://docs.google.com/presentation/d/1Hyi9t_wwoMAFskWtDBMHGpAw7ZwTQx-3RKrFdTFYB88/edit) | Charlie Hoyt | [Here](https://youtu.be/WTTHCZW4ubs?feature=shared) |
 | 2023/08/22 | [How to determine if two entities are the same?](../howto/are-two-entities-the-same) | Nico | [Here](https://youtu.be/v5hjLgr54Zs?feature=shared) |
 | 2023/08/08 | Cancelled: Summer break |  |  |
