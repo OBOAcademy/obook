@@ -28,6 +28,9 @@ _Note: this is tentative and subject to change_
 
 | Date | Lesson | Notes | Recordings |
 | --- | --- | --- | --- |
+| 2024/01/23 | TBD | Propose in chat | |
+| 2024/01/09 | Cancelled: Winter break | No one (or everyone) | |
+| 2023/12/26 | Cancelled: Winter break | No one | |
 | 2023/12/12 | Introduction to DOSDP pattern design and workflows | Ray Stefancsik | |
 | 2023/11/18 | Standardising metadata in OBO ontologies: from definitions and contribution to synonym types. Best practices. | Anita Caron | |
 | 2023/11/14 | Enhancing curation workflows with CurateGPT | Chris Mungall | |
