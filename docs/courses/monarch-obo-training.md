@@ -28,9 +28,9 @@ _Note: this is tentative and subject to change_
 
 | Date | Lesson | Notes | Recordings |
 | --- | --- | --- | --- |
-| 2023/12/12 | Potential: How can I just get the grouping classes for my diseases and genes? A survey of approaches to metaclasses in OBO | Chris Mungall (unconfirmed) | |
+| 2023/12/12 | Introduction to DOSDP pattern design and workflows | Ray Stefancsik | |
 | 2023/11/18 | Standardising metadata in OBO ontologies: from definitions and contribution to synonym types. Best practices. | Anita Caron | |
-| 2023/11/14 | [TBD](https://github.com/OBOAcademy/obook/issues/450) | TBD | |
+| 2023/11/14 | Enhancing curation workflows with CurateGPT | Chris Mungall | |
 | 2023/10/17 | [Using ontologies for data annotation and consequences of ontology development](https://docs.google.com/presentation/d/16Bd1szeJ-gaSuKWJhVJRHYrwdZ4LtjIAPSIqP9OveFc/edit?usp=sharing) | Sabrina Toro | |
 | 2023/10/03 | [Units modeling in and around OBO](https://oboacademy.github.io/obook/tutorial/units/) | James Overton | [Here](https://youtu.be/W4IQk-tft0I?feature=shared) |
 | 2023/09/19 | [Improving ontology interoperability with Biomappings](https://docs.google.com/presentation/d/1s9QNQQoRuQUWWJoIJklMHrqPowvBKU4Y638w54xP1t0/edit) | Charlie Hoyt | [Here](https://youtu.be/_gAdGShZReo?feature=shared) |
