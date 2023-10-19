@@ -32,7 +32,7 @@ _Note: this is tentative and subject to change_
 | 2024/01/09 | Cancelled: Winter break | No one (or everyone) | |
 | 2023/12/26 | Cancelled: Winter break | No one | |
 | 2023/12/12 | Introduction to DOSDP pattern design and workflows | Ray Stefancsik | |
-| 2023/11/18 | Standardising metadata in OBO ontologies: from definitions and contribution to synonym types. Best practices. | Anita Caron | |
+| 2023/11/28 | Standardising metadata in OBO ontologies: from definitions and contribution to synonym types. Best practices. | Anita Caron | |
 | 2023/11/14 | Enhancing curation workflows with CurateGPT | Chris Mungall | |
 | 2023/10/31 | Cancelled: No meeting week | No one | |
 | 2023/10/17 | [Using ontologies for data annotation and consequences of ontology development](https://docs.google.com/presentation/d/16Bd1szeJ-gaSuKWJhVJRHYrwdZ4LtjIAPSIqP9OveFc/edit?usp=sharing) | Sabrina Toro | |
