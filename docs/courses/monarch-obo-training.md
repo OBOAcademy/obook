@@ -28,7 +28,7 @@ _Note: this is tentative and subject to change_
 
 | Date | Lesson | Notes | Recordings |
 | --- | --- | --- | --- |
-| 2024/01/23 | TBD | Propose in chat | |
+| 2024/01/23 | [Proposal: Synonym Type curation - a deep dive](https://github.com/OBOAcademy/obook/issues/450) | TBD | |
 | 2024/01/09 | Cancelled: Winter break | No one (or everyone) | |
 | 2023/12/26 | Cancelled: Winter break | No one | |
 | 2023/12/12 | Introduction to DOSDP pattern design and workflows | Ray Stefancsik | |
