@@ -143,6 +143,7 @@ nav:
           - Dealing with Large Ontologies: howto/deal-with-large-ontologies.md
           - Updating Imports with ODK: howto/update-import.md
           - Import ORCIDIO: howto/odk-add-orcidio-module.md
+          - Running ODK with podman: howto/run-odk-with-podman.md
       - Git and GitHub:
           - Make term requests to existing ontologies: howto/term-request.md
           - Clone a repository: howto/clone-mondo-repo.md
