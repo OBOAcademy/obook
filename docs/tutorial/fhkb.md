@@ -140,6 +140,8 @@ all the information.
 
 [**A FHKB Family Data**](#fhkb-family-data)
 
+[**All FHKB owl files for download**](#fhkb-owl)
+
 ## Preamble
 
 ### 0.1 Licencing
@@ -317,12 +319,11 @@ Facts: hasFather mr_plinth, hasMother mrs_plinth
 
 ![camera](../images/FHKB%20figures/images/black_camera.png)
 
-```
-While asserting facts about all individuals in the FHKB will be a bit tedious at
+
+> While asserting facts about all individuals in the FHKB will be a bit tedious at
 times, it might be useful to at least do the task for a subset of the family members.
 For the impatient reader, there is a convenience snapshot of the ontology including
-the raw individuals available at http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial
-```
+the raw individuals available [below](#fhkb-owl).
 
 ![noteiconsmall](../images/FHKB%20figures/images/NoteIconSmall.png)
 ```
@@ -391,9 +392,7 @@ In this Chapter you will:
 
 ![camera](../images/FHKB%20figures/images/black_camera.png)
 
-```
-Find a snapshot of the ontology at this stage at http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial.
-```
+> Find a snapshot of the ontology at this stage  [below](#fhkb-owl).
 
 ## 3.1 Ancestors and Descendants
 
@@ -770,10 +769,7 @@ In this chapter you will:
 
 ![camera](../images/FHKB%20figures/images/black_camera.png)
 
-```
-There is a snapshot of the ontology as required at this point in the tutorial available
-at http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial
-```
+> Find a snapshot of the ontology at this stage  [below](#fhkb-owl).
 
 ### 5.1 Blood relations
 
@@ -1083,10 +1079,7 @@ In this chapter you will:
 
 ![camera](../images/FHKB%20figures/images/black_camera.png)
 
-```
-There is a snapshot of the ontology as required at this point in the tutorial available
-at http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial
-```
+> Find a snapshot of the ontology at this stage  [below](#fhkb-owl).
 
 ### 6.1 Richard and Robert’s Parents and Ancestors
 
@@ -1190,10 +1183,7 @@ We now have some individuals with some basic object properties between individua
 
 ![camera](../images/FHKB%20figures/images/black_camera.png)
 
-```
-There is a snapshot of the ontology as required at this point in the tutorial available
-at http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial.
-```
+> Find a snapshot of the ontology at this stage  [below](#fhkb-owl).
 
 ### 7.1 Adding Some Data Properties for Event Years
 
@@ -1209,10 +1199,8 @@ We can have dates for birth, death and (eventually) marriage (see Chapter 9) and
 
 ![camera](../images/FHKB%20figures/images/black_camera.png)
 
-```
-Again, asserting birth years for all individuals can be a bit tedious. The reader
-can find a convenience snapshot of the ontology at this stage at http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial
-```
+> Again, asserting birth years for all individuals can be a bit tedious.  Find a snapshot of the ontology at this stage [below](#fhkb-owl).
+
 
 We now have an ABox with individuals with fact assertions to data indicating a birth year. We can, if we wish, also add a class restriction to the `Person` class saying that each and every instance of the class `Person` holds a data property to an integer and that this property is called ‘hasBirthYear’. As usual when deciding whether to place such a restriction upon a class, ask whether it is true that each and every instance of the class holds that property; this is exactly the same as we did for the object properties in Chapter 4. Everyone does have a birth year, even if it is not known.
 
@@ -1363,10 +1351,7 @@ In this Chapter you will
 
 ![camera](../images/FHKB%20figures/images/black_camera.png)
 
-```
-There is a snapshot of the ontology as required at this point in the tutorial available
-at http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial
-```
+> Find a snapshot of the ontology at this stage  [below](#fhkb-owl).
 
 ![dragon](../images/FHKB%20figures/dragon.png)
 
@@ -1515,10 +1500,7 @@ In this chapter you will:
 
 ![camera](../images/FHKB%20figures/images/black_camera.png)
 
-```
-There is a snapshot of the ontology as required at this point in the tutorial available
-at http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial
-```
+> Find a snapshot of the ontology at this stage  [below](#fhkb-owl).
 
 ![warnicon](../images/FHKB%20figures/images/WarningIcon.png)
 
@@ -1681,10 +1663,7 @@ In this chapter you will:
 
 ![camera](../images/FHKB%20figures/images/black_camera.png)
 
-```
-There is a snapshot of the ontology as required at this point in the tutorial available
-at http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial
-```
+> Find a snapshot of the ontology at this stage [below](#fhkb-owl).
 
 ### 10.1 Adding Defined Classes
 
@@ -1822,6 +1801,22 @@ OWL 2 on its own and using it in this style, really does not work for family his
 | William Bright 1970                 | William          | none              | Bright      | 1970          | Joyce Gosport                 | John Bright 1930            |
 | William George Bright 1901          | William          | George            | Bright      | 1901          | Charlotte Hewett 1863         | Henry Edmund Bright 1862    |
 | William Rever 1870                  | William          | none              | Rever       | 1870          | not specified                 | not specified               |
+
+<a id="fhkb-owl"></a>
+
+# FHKB OWL Files for Download
+
+| Chapter | FHKB snapshot       |
+|---------|---------------------|
+|       2 | [download](../resources/fhkb/fhkb_chapter_2.owl)  |
+|       3 | [download](../resources/fhkb/fhkb_chapter_3.owl)  |
+|       4 | [download](../resources/fhkb/fhkb_chapter_4.owl)  |
+|       5 | [download](../resources/fhkb/fhkb_chapter_5.owl)  |
+|       6 | [download](../resources/fhkb/fhkb_chapter_6.owl)  |
+|       7 | [download](../resources/fhkb/fhkb_chapter_7.owl)  |
+|       8 | [download](../resources/fhkb/fhkb_chapter_8.owl)  |
+|       9 | [download](../resources/fhkb/fhkb_chapter_9.owl)  |
+|      10 | [download](../resources/fhkb/fhkb_chapter_10.owl) |
 
 # Bibliography
 

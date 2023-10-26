@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_6.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_6.owl">
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Import>http://mowl-power.cs.man.ac.uk/fhkbtutorial/1.1/ontology/fhkb_chapter_5.owl</Import>
+    <Declaration>
+        <Class IRI="#GrandparentOfRichard"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GrandparentOfRobert"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ParentOfRichard"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ParentOfRichardAndRobert"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ParentOfRobert"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#GrandparentOfRichard"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_4.owl#Person"/>
+            <ObjectHasValue>
+                <ObjectProperty IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_3.owl#isGrandparentOf"/>
+                <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#Robert_David_Bright_1965"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#GrandparentOfRobert"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_4.owl#Person"/>
+            <ObjectHasValue>
+                <ObjectProperty IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_3.owl#isGrandparentOf"/>
+                <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#Richard_John_Bright_1962"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ParentOfRichard"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_4.owl#Person"/>
+            <ObjectHasValue>
+                <ObjectProperty IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#isParentOf"/>
+                <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#Richard_John_Bright_1962"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ParentOfRichardAndRobert"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_4.owl#Person"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#isParentOf"/>
+                <ObjectOneOf>
+                    <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#Robert_David_Bright_1965"/>
+                    <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#Richard_John_Bright_1962"/>
+                </ObjectOneOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ParentOfRobert"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_4.owl#Person"/>
+            <ObjectHasValue>
+                <ObjectProperty IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#isParentOf"/>
+                <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#Robert_David_Bright_1965"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_4.owl#Person"/>
+        <ObjectMaxCardinality cardinality="2">
+            <ObjectProperty IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#hasParent"/>
+            <Class IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_4.owl#Person"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GrandparentOfRichard"/>
+        <Class IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_4.owl#Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GrandparentOfRobert"/>
+        <Class IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_4.owl#Person"/>
+    </SubClassOf>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+
