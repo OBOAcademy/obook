@@ -140,7 +140,7 @@ all the information.
 
 [**A FHKB Family Data**](#fhkb-family-data)
 
-[**All FHKB owl files for download**](#fhkb-owl)
+[**All FHKB owl files for download**](#fhkb-owl-files-for-download)
 
 ### Preamble
 
@@ -323,7 +323,7 @@ Facts: hasFather mr_plinth, hasMother mrs_plinth
 > While asserting facts about all individuals in the FHKB will be a bit tedious at
 times, it might be useful to at least do the task for a subset of the family members.
 For the impatient reader, there is a convenience snapshot of the ontology including
-the raw individuals available [below](#fhkb-owl).
+the raw individuals available [below](#fhkb-owl-files-for-download).
 
 ![noteiconsmall](../images/FHKB%20figures/images/NoteIconSmall.png)
 ```
@@ -392,7 +392,7 @@ In this Chapter you will:
 
 ![camera](../images/FHKB%20figures/images/black_camera.png)
 
-> Find a snapshot of the ontology at this stage  [below](#fhkb-owl).
+> Find a snapshot of the ontology at this stage  [below](#fhkb-owl-files-for-download).
 
 ### 3.1 Ancestors and Descendants
 
@@ -769,7 +769,7 @@ In this chapter you will:
 
 ![camera](../images/FHKB%20figures/images/black_camera.png)
 
-> Find a snapshot of the ontology at this stage  [below](#fhkb-owl).
+> Find a snapshot of the ontology at this stage  [below](#fhkb-owl-files-for-download).
 
 #### 5.1 Blood relations
 
@@ -1079,7 +1079,7 @@ In this chapter you will:
 
 ![camera](../images/FHKB%20figures/images/black_camera.png)
 
-> Find a snapshot of the ontology at this stage  [below](#fhkb-owl).
+> Find a snapshot of the ontology at this stage  [below](#fhkb-owl-files-for-download).
 
 #### 6.1 Richard and Robert’s Parents and Ancestors
 
@@ -1183,7 +1183,7 @@ We now have some individuals with some basic object properties between individua
 
 ![camera](../images/FHKB%20figures/images/black_camera.png)
 
-> Find a snapshot of the ontology at this stage  [below](#fhkb-owl).
+> Find a snapshot of the ontology at this stage  [below](#fhkb-owl-files-for-download).
 
 #### 7.1 Adding Some Data Properties for Event Years
 
@@ -1199,7 +1199,7 @@ We can have dates for birth, death and (eventually) marriage (see Chapter 9) and
 
 ![camera](../images/FHKB%20figures/images/black_camera.png)
 
-> Again, asserting birth years for all individuals can be a bit tedious.  Find a snapshot of the ontology at this stage [below](#fhkb-owl).
+> Again, asserting birth years for all individuals can be a bit tedious.  Find a snapshot of the ontology at this stage [below](#fhkb-owl-files-for-download).
 
 
 We now have an ABox with individuals with fact assertions to data indicating a birth year. We can, if we wish, also add a class restriction to the `Person` class saying that each and every instance of the class `Person` holds a data property to an integer and that this property is called ‘hasBirthYear’. As usual when deciding whether to place such a restriction upon a class, ask whether it is true that each and every instance of the class holds that property; this is exactly the same as we did for the object properties in Chapter 4. Everyone does have a birth year, even if it is not known.
@@ -1351,7 +1351,7 @@ In this Chapter you will
 
 ![camera](../images/FHKB%20figures/images/black_camera.png)
 
-> Find a snapshot of the ontology at this stage  [below](#fhkb-owl).
+> Find a snapshot of the ontology at this stage  [below](#fhkb-owl-files-for-download).
 
 ![dragon](../images/FHKB%20figures/dragon.png)
 
@@ -1500,7 +1500,7 @@ In this chapter you will:
 
 ![camera](../images/FHKB%20figures/images/black_camera.png)
 
-> Find a snapshot of the ontology at this stage  [below](#fhkb-owl).
+> Find a snapshot of the ontology at this stage  [below](#fhkb-owl-files-for-download).
 
 ![warnicon](../images/FHKB%20figures/images/WarningIcon.png)
 
@@ -1663,7 +1663,7 @@ In this chapter you will:
 
 ![camera](../images/FHKB%20figures/images/black_camera.png)
 
-> Find a snapshot of the ontology at this stage [below](#fhkb-owl).
+> Find a snapshot of the ontology at this stage [below](#fhkb-owl-files-for-download).
 
 #### 10.1 Adding Defined Classes
 
