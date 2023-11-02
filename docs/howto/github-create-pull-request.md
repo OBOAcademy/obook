@@ -1,5 +1,7 @@
 # Create a Pull Request in GitHub
 
+This how-to gives guidance on *how* to make a Pull Request (PR). For more on PRs, and guidelines on what makes a good PR, see the [GitHub 10 tips on Pull Requests guide](https://blog.mergify.com/github-pull-requests-10-tips-to-know/).
+
 ## Overview
 
 ### GitHub workflows
