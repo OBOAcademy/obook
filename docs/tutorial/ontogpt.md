@@ -12,8 +12,8 @@ More info about OntoGPT:
 - Documentation: <https://monarch-initiative.github.io/ontogpt/>
 - Source: <https://github.com/monarch-initiative/ontogpt>
 - Preprints:
-   - Caufield JH, Hegde H, Emonet V, Harris NL, Joachimiak MP, Matentzoglu N, et al. Structured prompt interrogation and recursive extraction of semantics (SPIRES): A method for populating knowledge bases using zero-shot learning. <http://arxiv.org/abs/2304.02711>
-   - Joachimiak MP, Caufield JH, Harris NL, Kim H, Mungall CJ. Gene Set Summarization using Large Language Models. <http://arxiv.org/abs/2305.13338>
+    - Caufield JH, Hegde H, Emonet V, Harris NL, Joachimiak MP, Matentzoglu N, et al. Structured prompt interrogation and recursive extraction of semantics (SPIRES): A method for populating knowledge bases using zero-shot learning. <http://arxiv.org/abs/2304.02711>
+    - Joachimiak MP, Caufield JH, Harris NL, Kim H, Mungall CJ. Gene Set Summarization using Large Language Models. <http://arxiv.org/abs/2305.13338>
 
 We are also working on a curation-specific tool, [CurateGPT](https://github.com/monarch-initiative/curate-gpt),
 a prototype web application and framework for performing general-purpose AI-guided curation and curation-related operations over collections of objects.
