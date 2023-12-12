@@ -28,10 +28,12 @@ _Note: this is tentative and subject to change_
 
 | Date | Lesson | Notes | Recordings |
 | --- | --- | --- | --- |
+| 2024/02/20 | Metadata Standardisation | Tutorial by Anita Caron |
+| 2024/02/06 | TBD | |
 | 2024/01/23 | [Proposal: Synonym Type curation - a deep dive](https://github.com/OBOAcademy/obook/issues/450) | TBD | |
 | 2024/01/09 | _No Meeting_ | Enjoy Winter break! | |
 | 2023/12/26 | _No Meeting_ | Enjoy Winter break!  | |
-| 2023/12/12 | Introduction to DOSDP pattern design and workflows | Tutorial by Ray Stefancsik | |
+| 2023/12/12 | Introduction to DOSDP pattern design and workflows | Tutorial by Ray Stefancsik [Slides](https://docs.google.com/presentation/d/1ep-J7h-PZoZuVboCen8W6ZCX5iD4-TK0C2f057vp_Po/edit?usp=sharing) | |
 | 2023/11/28 | _No Meeting_ | | |
 | 2023/11/14 | Enhancing curation workflows with CurateGPT | Tutorial by Chris Mungall | [Here](https://youtu.be/p6j3WwzIv40?feature=shared) |
 | 2023/10/31 | _No Meeting_ | | |
