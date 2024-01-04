@@ -100,6 +100,7 @@ Examples of axioms that _do not have `?x` as a subject_:
 - A GCI axiom of the form `SomeValuesFrom(?object_property, ?x) rdfs:subClassOf ?y`
 - A GCI axiom of the form `?y rdfs:subClassOf SomeValuesFrom(?object_property, ?x)`
 - A GCI axiom of the form `SomeValuesFrom(?x, ?y) rdfs:subClassOf ?z`
+- IMPORTANT NOTE: Handling of GCIs is still work in progress. It is not straight forward to define which is the defining entity. For now, unless all entities on the left are in the ontology for which we are making a base, GCIs are never in the base. This is being reviewed and may change in the future. 
 
 <a id="no-modification"></a>
 
