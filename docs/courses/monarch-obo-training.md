@@ -26,11 +26,19 @@ The goal of this course is to provide ongoing training for the OBO community. As
 ## Schedule
 _Note: this is tentative and subject to change_
 
+2024/03/19	NO MEETING WEEK
+2024/04/02	 (Trish Whetzel, CU, CONFIRMED)
+2024/04/16	 (Chris Mungall, LBNL)
+
 | Date | Lesson | Notes | Recordings |
 | --- | --- | --- | --- |
-| 2024/02/20 | Metadata Standardisation | Tutorial by Anita Caron |
-| 2024/02/06 | TBD | |
-| 2024/01/23 | [Proposal: Synonym Type curation - a deep dive](https://github.com/OBOAcademy/obook/issues/450) | TBD | |
+| 2024/04/16 | AI-assisted ontology editing workflows 2 | Chris Mungall (unconfirmed) |
+| 2024/04/02 | Synonym Type curation - a deep dive | Trish Whetzel, CU |
+| 2024/03/19 | _No Meeting_ |  |
+| 2024/03/05 | Bridge2AI data standards: a practical introduction | Harry Caufield, LBNL |
+| 2024/02/20 | Ontology Metadata Standardisation | Anita Caron, EBI |
+| 2024/02/06 | Introduction to Open Source licenses | Seth Carbon, LBNL |
+| 2024/01/23 | AI-assisted ontology editing workflows 1 | Chris Mungall (unconfirmed) | |
 | 2024/01/09 | _No Meeting_ | Enjoy Winter break! | |
 | 2023/12/26 | _No Meeting_ | Enjoy Winter break!  | |
 | 2023/12/12 | Introduction to DOSDP pattern design and workflows | Tutorial by Ray Stefancsik ([Slides](https://docs.google.com/presentation/d/1ep-J7h-PZoZuVboCen8W6ZCX5iD4-TK0C2f057vp_Po/edit?usp=sharing)) | [Here](https://youtu.be/a2Mc9oLEiwk?feature=shared)|
