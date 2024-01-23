@@ -60,6 +60,7 @@
 ### Tutorials
 
 Note: for the tutorials below PC users need to install ODK (instructions are linked from the tutorial)   
+Alternatively, PC users can download [Git Bash](https://gitforwindows.org/)
 
 1. [Tutorial: Very (!) short introduction to the command line for ontology curators and semantic engineers: Part 1](https://oboacademy.github.io/obook/tutorial/intro-cli-1/)
 1. [Tutorial: Very (!) short introduction to the command line for ontology curators and semantic engineers: Part 2](https://oboacademy.github.io/obook/tutorial/intro-cli-2/)
