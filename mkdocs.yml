@@ -57,6 +57,7 @@ nav:
       - Leveraging ChatGPT for ontology curation: lesson/chatgpt-ontology-curation.md
       - Using Ontologies in Practice--LinkML can help: lesson/linkml-helps-with-ontology-use.md
       - Licensing Data and Software: lesson/licensing-data-and-software.md
+      - Vocabularies for bioinformatics: lesson/vocabularies-for-bioinformatics.md
   - Lessons In Development:
       - Developing an Application Ontology: lesson/developing-application-ontologies.md
       - Ontology Development: lesson/ontology-development.md
