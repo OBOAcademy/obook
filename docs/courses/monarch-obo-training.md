@@ -32,7 +32,7 @@ _Note: this is tentative and subject to change_
 | 2024/04/02 | Synonym Type curation - a deep dive | Trish Whetzel, CU |
 | 2024/03/19 | _No Meeting_ |  |
 | 2024/03/05 | AI-assisted ontology editing workflows 1 | Chris Mungall (unconfirmed) | |
-| 2024/02/20 | Ontology Metadata Standardisation | Anita Caron, EBI |
+| 2024/02/20 | [Ontology Metadata Standardisation](https://docs.google.com/presentation/d/12ig7zQ9R4lQAybuTQKb73gB22pIq5MEaowwbYOl5Ei8/edit?usp=sharing) | Anita Caron, EBI |
 | 2024/02/06 | [Introduction to Open Source licenses](../lesson/licensing-data-and-software.md) | Seth Carbon, LBNL |
 | 2024/01/23 | Bridge2AI data standards: a practical introduction | Harry Caufield, LBNL | [Here](https://youtu.be/zaZtcDbjqTw?feature=shared)
 | 2024/01/09 | _No Meeting_ | Enjoy Winter break! | |
@@ -45,7 +45,7 @@ _Note: this is tentative and subject to change_
 | 2023/10/03 | [Units modeling in and around OBO](https://oboacademy.github.io/obook/tutorial/units/) | Tutorial by James Overton | [Here](https://youtu.be/W4IQk-tft0I?feature=shared) |
 | 2023/09/19 | [Improving ontology interoperability with Biomappings](https://docs.google.com/presentation/d/1s9QNQQoRuQUWWJoIJklMHrqPowvBKU4Y638w54xP1t0/edit) | Tutorial by Charlie Hoyt | [Here](https://youtu.be/_gAdGShZReo?feature=shared) |
 | 2023/09/05 | [Modern prefix management with Bioregistry and `curies`](https://docs.google.com/presentation/d/1Hyi9t_wwoMAFskWtDBMHGpAw7ZwTQx-3RKrFdTFYB88/edit) | Tutorial by Charlie Hoyt | [Here](https://youtu.be/WTTHCZW4ubs?feature=shared) |
-| 2023/08/22 | [How to determine if two entities are the same?](../howto/are-two-entities-the-same) | Tutorial by Nico Matentzoglu | [Here](https://youtu.be/v5hjLgr54Zs?feature=shared) |
+| 2023/08/22 | [How to determine if two entities are the same?](../howto/are-two-entities-the-same.md) | Tutorial by Nico Matentzoglu | [Here](https://youtu.be/v5hjLgr54Zs?feature=shared) |
 | 2023/08/08 | _No Meeting_ | Enjoy Summer break! |  |
 | July 2023 | _No Meeting_ | Enjoy Summer break! | |
 | 2023/06/27 |_No Meeting_ | Enjoy Summer break! | | |
