@@ -33,7 +33,7 @@ _Note: this is tentative and subject to change_
 | 2024/03/19 | _No Meeting_ |  |
 | 2024/03/05 | AI-assisted ontology editing workflows 1 | Chris Mungall (unconfirmed) | |
 | 2024/02/20 | Ontology Metadata Standardisation | Anita Caron, EBI |
-| 2024/02/06 | Introduction to Open Source licenses | Seth Carbon, LBNL |
+| 2024/02/06 | [Introduction to Open Source licenses](../lesson/licensing-data-and-software.md) | Seth Carbon, LBNL |
 | 2024/01/23 | Bridge2AI data standards: a practical introduction | Harry Caufield, LBNL | [Here](https://youtu.be/zaZtcDbjqTw?feature=shared)
 | 2024/01/09 | _No Meeting_ | Enjoy Winter break! | |
 | 2023/12/26 | _No Meeting_ | Enjoy Winter break!  | |

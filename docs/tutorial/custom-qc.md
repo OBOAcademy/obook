@@ -12,19 +12,19 @@ You have completed the tutorials:
 
 ## Custom Quality Checks
 
-1. Identify a quality issue in your ontology. For the sake of this tutorial, we've added the annotation `oboInOwl:creation_date` to the `root_node` in the CAT Ontology.
+1. Identify a quality issue in your ontology. For the sake of this tutorial, we've added the annotation `dcterms:date` to the `root_node` in the CAT Ontology.
 
 ![root node with oboInOwl:creation_date annotation string](../images/custom_qc_example.png)
 
-2. Write the SPARQL query to detect the error you want to check. For example, check the value type for the annotation `oboInOwl:creation_date`. It will return the class with the annotation if it's not of type `xsd:dateTime`.
+2. Write the SPARQL query to detect the error you want to check. For example, check the value type for the annotation `dcterms:date`. It will return the class with the annotation if it's not of type `xsd:dateTime`.
 
 ```sparql
-PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 SELECT ?cls WHERE
 {
-	?cls oboInOwl:creation_date ?date .
+	?cls dcterms:date ?date .
   FILTER(DATATYPE(?date) != xsd:dateTime)
 }
 ```
