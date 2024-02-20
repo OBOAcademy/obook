@@ -14,9 +14,21 @@
 
 ### Learning objectives
 
+#### Competencies
+
 At the end of the course, participants should be able to:
+
 - Describe different types of vocabularies in bioinformatics
 - Understand why vocabularies are essential to data interoperability
+
+#### Learning outcomes
+
+At the end of the course, the participants are expected to:
+
+- List the different types of vocabularies
+- Give examples of commonly used vocabularies
+- Describe uses of vocabularies
+- Find vocabularies
 
 ## Tutorials
 
