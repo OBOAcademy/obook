@@ -21,18 +21,7 @@ We discuss all of them here in detail.
 
 # Release artefact 1: base (required)
 
-The base file contains all and only **native** axioms. No further manipulation is performed, in particular no reasoning, redundancy stripping or relaxation. This release artefact is going to be the new backbone of the OBO strategy to combat incompatible imports and consequent lack of interoperability. (Detailed discussions elsewhere, @balhoff has documentation). Every OBO ontology will contain a mandatory base release (should be in the official OBO recommendations as well).
-
-The ROBOT command generating the base artefact:
-$(SRC): source ontology
-$(OTHER_SRC): set of component ontologies
-
-```
-$(ONT)-base.owl: $(SRC) $(OTHER_SRC)
-	$(ROBOT) remove --input $< --select imports  --trim false \
-		merge $(patsubst %, -i %, $(OTHER_SRC)) \
-		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@
-```
+Base specification defined [here](base-specification.md).
 
 # Release artefact 2: full (required)
 

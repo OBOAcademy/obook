@@ -188,6 +188,7 @@ nav:
           - SPARQL templates: reference/sparql-reference.md
       - Tools for Managing Issues: reference/managing-issues.md
       - Release Artefacts: reference/release-artefacts.md
+      - Base Release: reference/base-specification.md
       - Synonyms: reference/synonyms-obo.md
       - Monkeying around with OWL: reference/mungall-blog-radar.md
       - Ontology Development Kit (ODK): reference/odk.md
