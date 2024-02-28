@@ -1,4 +1,4 @@
-# The Base file Specification
+# The Base File Specification (DRAFT)
 
 The "base file" is a specific _release flavour_ (variant) of an ontology. It reflects the intention of the ontology author for the official (publicly released) representation of the ontologies "base entities". "Base entities" are entities that are defined ("owned") by the ontology. The representation includes the intended public metadata (annotations), and classification (subClassOf hierarchy), including any statements where a base entity is the subject. The purpose of this document is to provide a detailed specification of what a base is, including a technical implementation which reflects best practice.
 
