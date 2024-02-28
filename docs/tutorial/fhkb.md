@@ -1,4 +1,4 @@
-# Manchester Family History Advanced OWL
+## Manchester Family History Advanced OWL
 
 This is a fork of the infamous Manchester Family History Advanced OWL Tutorial version 1.1, located at
 
@@ -7,7 +7,7 @@ http://owl.cs.manchester.ac.uk/publications/talks-and-tutorials/fhkbtutorial/
 The translation to markdown is not without issue, but we are making a start to making the tutorial a bit more accessible.
 This reproduction is done with kind permission by Robert Stevens.
 
-## Original credits (Version 1.1, see [pdf](http://mowl-power.cs.man.ac.uk/fhkbtutorial/resources/FHKB-tutorial_v1_1.pdf)):
+### Original credits (Version 1.1, see [pdf](http://mowl-power.cs.man.ac.uk/fhkbtutorial/resources/FHKB-tutorial_v1_1.pdf)):
 
 Authors:
 
@@ -27,7 +27,7 @@ M13 9PL
 robert.stevens@manchester.ac.uk
 ```
 
-### Contributors
+#### Contributors
 
 - v 1.0 Robert Stevens, Margaret Stevens, Nicolas Matentzoglu and Simon Jupp
 - v 1.1 Robert Stevens, Nicolas Matentzoglu
@@ -39,19 +39,19 @@ Copyright© The University of Manchester
 November 25, 2015
 ```
 
-### Acknowledgements
+#### Acknowledgements
 
 This tutorial was realised as part of the Semantic Web Authoring Tool (SWAT) project (see http://www.swatproject.org),
 which is supported by the UK Engineering and Physical Sciences Research
 Council (EPSRC) grant EP/G032459/1, to the University of Manchester, the University of Sussex and
 the Open University.
 
-### Dedication
+#### Dedication
 
 The Stevens family—all my ancestors were necessary for this to happen. Also, for my Mum who gathered
 all the information.
 
-# Contents
+## Contents
 
 [**Preamble**](#preamble)
 
@@ -140,19 +140,21 @@ all the information.
 
 [**A FHKB Family Data**](#fhkb-family-data)
 
-## Preamble
+[**All FHKB owl files for download**](#fhkb-owl-files-for-download)
 
-### 0.1 Licencing
+### Preamble
+
+#### 0.1 Licencing
 
 The ‘Manchester Family History Advanced OWL Tutorial’ by Robert Stevens, Margaret Stevens, Nicolas
 Matentzoglu, Simon Jupp is licensed under a Creative Commons Attribution-ShareAlike 3.0 Unported
 License.
 
-### 0.2 Reporting Errors
+#### 0.2 Reporting Errors
 
 This manual will almost certainly contain errors, defects and infelicities. Do report them to robert.stevens@manchester.ac.uk supplying chapter, section and some actual context in the form of words will help in fixing any of these issues.
 
-### 0.3 Acknowledgements
+#### 0.3 Acknowledgements
 
 As well as the author list, many people have contributed to this work. Any contribution, such as reporting bugs etc., is rewarded by an acknowledgement of contribution (in alphabetical order) when the authors get around to adding them:
 
@@ -170,15 +172,15 @@ As well as the author list, many people have contributed to this work. Any contr
 - Dmitry Tsarkov;
 - Danielle Welter.
 
-# Chapter 1
+## Chapter 1
 
-## Introduction
+### Introduction
 
 This tutorial introduces the tutee to many of the more advanced features of the Web Ontology Language (OWL). The topic of family history is used to take the tutee through various modelling issues and, in doing so, using many features of OWL 2 to build a Family History Knowledge Base (FHKB). The exercises are designed to maximise inference about family history through the use of an automated reasoner on an OWL knowledge base (KB) containing many members of the Stevens family.
 
 The aim, therefore, is to enable people to learn advanced features of OWL 2 in a setting that involves both classes and individuals, while attempting to maximise the use of inference within the FHKB.
 
-### 1.1 Learning Outcomes
+#### 1.1 Learning Outcomes
 
 By doing this tutorial, a tutee should be able to:
 
@@ -193,7 +195,7 @@ By doing this tutorial, a tutee should be able to:
 8. Use nominals in class expressions;
 9. Appreciate some limits of OWL 2.
 
-### 1.2 Why Family History?
+#### 1.2 Why Family History?
 
 Building an FHKB enables us to meet our learning outcomes through a topic that is accessible to virtually everyone. Family history or genealogy is a good topic for a general tutorial on OWL 2 as it enables us to touch many features of the language and, importantly, it is a field that everyone knows. All people have a family and therefore a family history – even if they do not know their particular family history. A small caveat was put on the topic being accessible to everyone as some cultures differ, for instance, in the description of cousins and labels given to different siblings. Nevertheless, family history remains a topic that everyone can talk about.
 
@@ -227,7 +229,7 @@ At the end of the tutorial, you should be able to produce a property hierarchy a
 
 **Figure 1.1:** A part of the class and property hierarchy of the final FHKB.
 
-### 1.3 How to use this Tutorial
+#### 1.3 How to use this Tutorial
 
 Here are some tips on using this manual to the best advantage:
 
@@ -237,7 +239,7 @@ Here are some tips on using this manual to the best advantage:
 - Use the reasoner in each task; a lot of the FHKB tutorial is about using the reasoner and not doing
   so will detract from the learning outcomes.
 
-### 1.4 FHKB Resources
+#### 1.4 FHKB Resources
 
 The following resources are available at http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial:
 
@@ -247,7 +249,7 @@ The following resources are available at http://owl.cs.manchester.ac.uk/tutorial
 - A set of OWL resources for each stage of the FHKB.
 - Some blogs about the FHKB are at http://robertdavidstevens.wordpress.com.
 
-### 1.5 Conventions used in this Tutorial
+#### 1.5 Conventions used in this Tutorial
 
 - All OWL is written in Manchester Syntax.
 - When we use FHKB entities within text, we use a sans serif typeface.
@@ -264,9 +266,9 @@ The following resources are available at http://owl.cs.manchester.ac.uk/tutorial
 
 <sup>1</sup> The image comes fromhttp://ancienthomeofdragon.homestead.com/May 2012.
 
-# Chapter 2
+## Chapter 2
 
-## Adding some Individuals to the FHKB
+### Adding some Individuals to the FHKB
 
 In this chapter we will start by creating a fresh OWL ontology and adding some individuals that will be
 surrogates for people in the FHKB. In particular you will:
@@ -278,7 +280,7 @@ surrogates for people in the FHKB. In particular you will:
 5. See the reasoner doing some work.
 6. At the moment we will ignore sex; sex will not happen until Chapter 4.
 
-### 2.1 A World of Objects
+#### 2.1 A World of Objects
 
 The ‘world’<sup>2</sup> or field of interest we model in an ontology is made up of objects or individuals. Such objects include, but are not limited to:
 
@@ -292,7 +294,7 @@ The ‘world’<sup>2</sup> or field of interest we model in an ontology is made
 
 We observe these objects, either outside lying around in the world or in our heads. OWL is all about modelling such individuals. Whenever we make a statement in OWL, when we write down an axiom, we are making statements about individuals. When thinking about the axioms in an ontology it is best to think about the individuals involved, even if OWL individuals do not actually appear in the ontology. All through this tutorial we will always be returning to the individuals being described in order to help us understand what we are doing and to help us make decisions about how to do it.
 
-### 2.2 Asserting Parentage Facts
+#### 2.2 Asserting Parentage Facts
 
 Biologically, everyone has parents; a mother and a father<sup>3</sup>. The starting point for family history is parentage; we need to relate the family member objects by object properties. An object property relates two objects, in this case a child object with his or her mother or father object. To do this we need to create three object properties:
 
@@ -317,12 +319,11 @@ Facts: hasFather mr_plinth, hasMother mrs_plinth
 
 ![camera](../images/FHKB%20figures/images/black_camera.png)
 
-```
-While asserting facts about all individuals in the FHKB will be a bit tedious at
+
+> While asserting facts about all individuals in the FHKB will be a bit tedious at
 times, it might be useful to at least do the task for a subset of the family members.
 For the impatient reader, there is a convenience snapshot of the ontology including
-the raw individuals available at http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial
-```
+the raw individuals available [below](#fhkb-owl-files-for-download).
 
 ![noteiconsmall](../images/FHKB%20figures/images/NoteIconSmall.png)
 ```
@@ -350,7 +351,7 @@ Since we have said that `isFatherOf` has an inverse of `hasFather`, and we have 
 
 As we asserted that `Robert_David_Bright_1965 hasFather David_Bright_1934`, we also infer that he `hasParent` `David_Bright_1934`; this is because `hasParent` is the super-property of `hasFather` and the sub-property implies the super-property. This works all the way up the property tree until `topObjectProperty`, so all individuals are related by `topObjectProperty`—this is always true. This implication ‘upwards’ is the way to interpret how the property hierarchies work.
 
-### 2.3 Summary
+#### 2.3 Summary
 
 We have now covered the basics of dealing with individuals in OWL ontologies. We have set up some properties, but without domains, ranges, appropriate characteristics and then arranged them in a hierarchy. From only a few assertions in our FHKB, we can already infer many facts about an individual: Simple exploitation of inverses of properties and super-properties of the asserted properties.
 
@@ -376,9 +377,9 @@ machine by HermiT 1.3.8 is approximately 0.026 sec (0.00001 % of final), by Pell
 sec (0.000 % of final). 0 sec indicates failure or timeout.
 ```
 
-# Chapter 3
+## Chapter 3
 
-## Ancestors and Descendants
+### Ancestors and Descendants
 
 In this Chapter you will:
 
@@ -391,11 +392,9 @@ In this Chapter you will:
 
 ![camera](../images/FHKB%20figures/images/black_camera.png)
 
-```
-Find a snapshot of the ontology at this stage at http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial.
-```
+> Find a snapshot of the ontology at this stage  [below](#fhkb-owl-files-for-download).
 
-## 3.1 Ancestors and Descendants
+### 3.1 Ancestors and Descendants
 
 The FHKB has parents established between individuals and we know that all people have two parents. A parent is an ancestor of its children; a person’s parent’s parents are its ancestors; and so on. So, in our FHKB, Robert’s ancestors are David, Margaret, William, Iris, Charles, Violet, James, another Violet, another William, Sarah and so on. If my parent’s parents are my ancestors, then what we need is a transitive version of the `hasParent` property. Obviously we do not want `hasParent` to be transitive, as Robert’s grandparents (and so on) would become his parents (and that would be wrong).
 
@@ -419,7 +418,7 @@ InverseOf: isAncestorOf
 
 As usual, it is best to think of the objects or individuals involved in the relationships. Consider the three individuals – Robert, David and William. Each has a `hasFather` property, linking Robert to David and then David to William. As `hasFather` implies its super-property `hasParent`, Robert also has a `hasParent` property with David, and David has a `hasParent` relation to William. Similarly, as `hasParent` implies `hasAncestor`, the Robert object has a `hasAncestor` relation to the David object and the David object has one to the William object. As `hasAncestor` is transitive, Robert not only holds this property to the David object, but also to the William object (and so on back through Robert’s ancestors).
 
-### 3.2 Grandparents and Great Grandparents
+#### 3.2 Grandparents and Great Grandparents
 
 We also want to use a sort of restricted transitivity in order to infer grandparents, great grandparents and so on. My grandparents are my parent’s parents; my grandfathers are my parent’s fathers. My great grandparents are my parent’s parent’s parents. My great grandmothers are my parent’s parent’s mothers. This is sort of like transitivity, but we want to make the paths only a certain length and, in the case of grandfathers, we want to move along two relationships – `hasParent` and then `hasFather`.
 
@@ -478,7 +477,7 @@ Again, think of the objects involved. We can take the same three objects as befo
 It is also useful to point out that the inverse of `hasGrandfather` also has the implication of the sub-property chain of the inverses of `hasParent`. That is, three objects linked by a path of two `isParentOf` properties implies that an `isGrandfatherOf` property is established between the first and third object, in
 this case William and Robert. As the inverses of `hasFather` are established by the reasoner, all the inverse implications also hold.
 
-### 3.3 Summary
+#### 3.3 Summary
 
 It is important when dealing with property hierarchies to think in terms of properties between objects and of the implications ‘up the hierarchy’. A sub-property implies its super-property. So, in our FHKB, two person objects holding a `hasParent` property between them, by implication also hold an `hasAncestor`
 property between them. In turn, `hasAncestor` has a super-property `hasRelation` and the two objects in
@@ -503,9 +502,9 @@ machine by HermiT 1.3.8 is approximately 0.262 sec (0.00014 % of final), by Pell
 sec (0.000 % of final). 0 sec indicates failure or timeout.
 ```
 
-# Chapter 4
+## Chapter 4
 
-## Modelling the Person Class
+### Modelling the Person Class
 
 In this Chapter you will:
 
@@ -519,7 +518,7 @@ In this Chapter you will:
 
 These simple classes will form the structure for the whole FHKB.
 
-### 4.1 The Class of Person
+#### 4.1 The Class of Person
 
 For the FHKB, we start by thinking about the objects involved
 
@@ -548,7 +547,7 @@ What do we know about people? All members of the `Person` class have:
 
 There’s a lot more we know about people, but we will not mention it here.
 
-### 4.2 Describing Sex in the FHKB
+#### 4.2 Describing Sex in the FHKB
 
 Each and every person object has a sex. In the FHKB we will take a simple view on sex – a person is either male or female, with no intersex or administrative sex and so on. Each person only has one sex.
 
@@ -591,7 +590,7 @@ SubClassOf: DomainEntity,(hasSex some Sex)
 DisjointWith: Sex
 ```
 
-### 4.3 Defining Man and Woman
+#### 4.3 Defining Man and Woman
 
 We now have some of the foundations for the FHKB. We have the concept of `Person`, but we also need to have the concepts of `Man` and `Woman`. Now we have `Person`, together with `Maleness` and `Femaleness`, we have the necessary components to define `Man` and `Woman`. These two classes can be defined as: Any `Person` object that has a male sex can be recognised to be a man; any `Person` object that has a female sex can be recognised as a member of the class woman. Again, think about what conditions are _sufficient_ for an object to be _recognised_ to be a member of a class; this is how we create defined classes through the use of OWL equivalence axioms.
 
@@ -619,7 +618,7 @@ Class: Woman
 EquivalentTo: Person and (hasSex some Femaleness)
 ```
 
-### 4.4 Describing Parentage in the FHKB
+#### 4.4 Describing Parentage in the FHKB
 
 To finish off the foundations of the FHKB we need to describe a person object’s parentage. We know that each and every person has one mother and each and every person has one father. Here we are talking about biological mothers and fathers. The complexities of adoption and step parents are outside the scope of this FHKB tutorial.
 
@@ -656,11 +655,11 @@ DisjointWith: Sex
 
 The domain and range constraints on our properties have also driven some entailments. We have not asserted that `David_Bright_1934` is a member of `Man`, but the range constraint on `hasFather` (or the inferred domain constraint on the `isFatherOf` relation) has enabled this inference to be made. This goes for any individual that is the right-hand-side (either inferred or asserted) of either `hasFather` or `hasMother` (where the range is that of `Woman`). For Robert David Bright, however, he is only the left-hand-side of an `hasFather` or an `hasMother` property, so we’ve only entailed that this individual is a member of `Person`.
 
-### 4.5 Who has a father?
+#### 4.5 Who has a father?
 
 In our description of the `Person` class we have said that each and every instance of the class `Person` has a father (the same goes for mothers). So, when we ask the query ‘which individuals have a father’, we get all the instances of `Person` back, even though we have said nothing about the specific parentage of each `Person`. We do not know who their mothers and fathers are, but we know that they have one of each. We know all the individuals so far entered are members of the `Person` class; when asserting the type to be either `Man` or `Woman` (each of which is a subclass of `Person`), we infer that each is a person. When asserting the type of each individual via the `hasSex` property, we know each is a `Person`, as the domain of `hasSex` is the `Person` class. As we have also given the right-hand side of `hasSex` as either `Maleness` or `Femaleness`, we have given sufficient information to recognise each of these `Person` instances to be members of either `Man` or `Woman`.
 
-### 4.6 Filling in Domains and Ranges for the FHKB Properties
+#### 4.6 Filling in Domains and Ranges for the FHKB Properties
 
 So far we have not systematically added domains and ranges to the properties in the FHKB. As a reminder, when a property has a domain of `X` any object holding that property will be inferred to be a member of class `X`. A domain doesn’t add a constraint that only members of class `X` hold that property; it is a strong implication of class membership. Similarly, a property holding a range implies that an object acting as right-hand-side to a property will be inferred to be of that class. We have already seen above that we can use domains and ranges to imply the sex of people within the FHKB.
 
@@ -680,7 +679,7 @@ We typically assert more domains and ranges than strictly necessary. For example
 
 In order to remove as many assertions as possible, we may therefore choose to assert as much as we know starting from the top of the hierarchy, and only ever adding a domain if we want to constrain the already inferred domain even further (or range respectively). For example, in our case, we could have chosen to assert `Person` to be the domain of `hasRelation`. Since `hasRelation` is symmetric, it will also infer `Person` to be the range. We do not need to say anything for `hasAncestor` or `hasParent`, and only if we want to constrain the domain or range further (like in the case of `hasFather` by making the range `Man`) do we need to actually assert something. It is worth noting that because we have built the object property hierarchy from the bottom (`hasMother` etc.) we have ended up asserting more than necessary.
 
-### 4.7 Inconsistencies
+#### 4.7 Inconsistencies
 
 From the Pizza Tutorial and other work with OWL you should have seen some _unsatisfiabilities_. In Protégé this is highlighted by classes going ‘red’ and being subclasses ofNothing; that is, they can have no instances in that model.
 
@@ -694,7 +693,7 @@ When we, however, say that `Robert David Bright` has two different mothers, noth
 
 ![dragon](../images/FHKB%20figures/dragon.png)
 
-### 4.8 Adding Some Defined Classes for Ancestors and so on
+#### 4.8 Adding Some Defined Classes for Ancestors and so on
 
 | Task 14: Adding defined classes                                                                                                                                                                                                                |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -721,7 +720,7 @@ The reasoner has used the axioms within the ontology to infer that all the insta
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | <ol><li>Query for `MaleDescendant`. You should get `Man` back - they are equivalent (and this makes sense). </li><li> As an additional exercise, also add in properties for forefathers and foremothers. You will follow the same pattern as for `hasAncestor`, but adding in, for instance, `hasFather` as the sub-property of the transitive super-property of `hasForefather` and setting the domains and ranges appropriately (or working out if they’ll be inferred appropriately). Here we interpret a forefather as one’s father’s father etc. This isn’t quite right, as a forefather is any male ancestor, but we’ll do it that way anyway. You might want to play around with DL queries. Because of the blowup in inferred relationships, we decided to not include this pattern in the tutorial version of the FHKB.</li></ol> |
 
-### 4.9 Summary
+#### 4.9 Summary
 
 Most of what we have done in this chapter is straight-forward OWL, all of which would have been met in the pizza tutorial. It is, however, a useful revision and it sets the stage for refining the FHKB. Figure 4.2 shows the basic set-up we have in the FHKB in terms of classes; we have a class to represent person, man and woman, all set-up with a description of sex, maleness and femaleness. It is important to note, however, the approach we have taken: We have always thought in terms of the objects we are modelling.
 
@@ -756,9 +755,9 @@ machine by HermiT 1.3.8 is approximately 0.884 sec (0.00047 % of final), by Pell
 sec (0.000 % of final). 0 sec indicates failure or timeout.
 ```
 
-# Chapter 5
+## Chapter 5
 
-## Siblings in the FHKB
+### Siblings in the FHKB
 
 In this chapter you will:
 
@@ -770,12 +769,9 @@ In this chapter you will:
 
 ![camera](../images/FHKB%20figures/images/black_camera.png)
 
-```
-There is a snapshot of the ontology as required at this point in the tutorial available
-at http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial
-```
+> Find a snapshot of the ontology at this stage  [below](#fhkb-owl-files-for-download).
 
-### 5.1 Blood relations
+#### 5.1 Blood relations
 
 Do the following first:
 
@@ -785,7 +781,7 @@ Do the following first:
 
 Does a blood relation of Robert have the same relationship to Robert (symmetry)? Is a blood relation of Robert’s blood relation a blood relation of Robert (transitivity)? Think of an aunt by marriage; her children are my cousins and blood relations via my uncle, but my aunt is not my blood relation. My siblings share parents; male siblings are brothers and female siblings are sisters. So far we have asserted parentage facts for the `Person` in our ABox. Remember that our parentage properties have inverses, so if we have added an `hasFather` property between a `Person` and a `Man`, we infer the `isFatherOf` property between that `Man` and that `Person`.
 
-### 5.2 Siblings: Option One
+#### 5.2 Siblings: Option One
 
 We should have enough information within the FHKB to infer siblings. We could use a sub-property chain such as:
 
@@ -840,7 +836,7 @@ Note that the reasoner claims you have an _inconsistent_ ontology (or in some ca
 
 <sup>6</sup> [http://www.w3.org/TR/owl2-syntax/#The_Restrictions_on_the_Axiom_Closure](http://www.w3.org/TR/owl2-syntax/#The_Restrictions_on_the_Axiom_Closure)
 
-#### 5.2.1 Brothers and Sisters
+##### 5.2.1 Brothers and Sisters
 
 We have only done siblings, but we obviously need to account for brothers and sisters. In an analogous way to motherhood, fatherhood and parenthood, we can talk about sex specific sibling relationships implying the sex neutral `hasSibling`; holding either a `hasBrother` or an `isSisterOf` between two objects would imply that a `hasSibling` property is also held between those two objects. This means that we can place these two sex specific sibling properties below `hasSibling` with ease. Note, however, that unlike the `hasSibling` property, the brother and sister properties are not symmetric. Robert `hasBrother` Richard and _vice versa_ , but if Daisy `hasBrother` William, we do not want William to hold an `hasBrother` property with Daisy. Instead, we create an inverse of `hasBrother`, `isBrotherOf`, and the do the same for `isSisterOf`.
 
@@ -916,7 +912,7 @@ causes problems as it does above (Task 18).
 
 ![dragon](../images/FHKB%20figures/dragon.png)
 
-### 5.3 Siblings: Option two
+#### 5.3 Siblings: Option two
 
 Our option one has lots of problems. So, we have an option of asserting the various levels of sibling. We
 can take the same basic structure of sibling properties as before, but just fiddle around a bit and rely on
@@ -951,7 +947,7 @@ We can see some problems with this option as well:
 - With these properties asserted, Richard only has a `hasBrother` property to Robert. We would really like an `isBrotherOf` to Robert to hold.
 - The query `Man` and `hasSibling value Robert` only retrieves Robert himself. Because we only asserted that Robert is a brother of Richard, and the domain of `isBrotherOf` is `Man` we know that Robert is a `Man`, but we do not know anything about the `Sex` of Richard.
 
-#### 5.3.1 Which Modelling Option to Choose for Siblings?
+##### 5.3.1 Which Modelling Option to Choose for Siblings?
 
 Which of the two options gives the worse answers and which is the least effort? Option one is obviously the least effort; we only have to assert the same parentage facts as we already have; then the sub-property chains do the rest. It works OK for `hasSibling`, but we cannot do brothers and sisters adequately; we need `Man` and `hasSibling` ⊐ `isBrotherOf` and we cannot do that implication. This means we cannot ask the questions we need to ask.
 
@@ -961,7 +957,7 @@ So, we do option two, even though it is hard work and is still not perfect for q
 
 We could start again and use the `isSonOfandisDaughterOf` option, with the sub-property chains described above. This still has the problem of everyone being their own sibling. It can get the sex specific sibling relationships, but requires a wholesale re-assertion of parentage facts. We will continue with option two, largely because it highlights some nice problems later on.
 
-### 5.4 Half-Siblings
+#### 5.4 Half-Siblings
 
 In Section 5.2 we briefly talked about half-siblings. So far, we have assumed full-siblings (or, rather, just talked about siblings and made no distinction). Ideally, we would like to accommodate distinctions between full- and half-siblings; here we use half-siblings, where only one parent is in common between two individuals, as the example. The short-answer is, unfortunately, that OWL 2 cannot deal with half-siblings in the way that we want - that is, such that we can infer properties between named individuals indicating full- or half-sibling relationships.
 
@@ -993,7 +989,7 @@ in the FHKB is to find half-brothers between any given pair of individuals.
 Unfortunately we cannot, without rules, ask OWL 2 to distinguish full- and half-siblings – we cannot
 count the number of routes taken between siblings via different distinct intermediate parent objects.
 
-### 5.5 Aunts and Uncles
+#### 5.5 Aunts and Uncles
 
 An uncle is a brother of either my mother or father. An aunt is a sister of either my mother or father. In common practice, wives and husbands of aunts and uncles are usually uncles and aunts respectively. Formally, these aunts and uncles are aunts-in-law and uncles-in-law. Whatever approach we take, we cannot fully account for aunts and uncles until we have information about marriages, which will not have until Chapter 9. We will, however, do the first part now.
 
@@ -1044,7 +1040,7 @@ free through sub-property chains. We just add a new property with its sub-proper
 
 You can now see lots of facts about Robert David Bright, with only a very few actual assertions directly on Robert David Bright.
 
-### 5.6 Summary
+#### 5.6 Summary
 
 Siblings have revealed several things for us:
 
@@ -1070,9 +1066,9 @@ Pellet 2.2.0 0.206 sec (0.00167 % of final) and by FaCT++ 1.6.4 is approximately
 0.039 sec (0.001 % of final). 0 sec indicates failure or timeout.
 ```
 
-# Chapter 6
+## Chapter 6
 
-## Individuals in Class Expressions
+### Individuals in Class Expressions
 
 In this chapter you will:
 
@@ -1083,12 +1079,9 @@ In this chapter you will:
 
 ![camera](../images/FHKB%20figures/images/black_camera.png)
 
-```
-There is a snapshot of the ontology as required at this point in the tutorial available
-at http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial
-```
+> Find a snapshot of the ontology at this stage  [below](#fhkb-owl-files-for-download).
 
-### 6.1 Richard and Robert’s Parents and Ancestors
+#### 6.1 Richard and Robert’s Parents and Ancestors
 
 So far we have only used object properties between unspecified objects. We can, however, specify a specific individual to act at the right-hand-side of a class restriction or type assertion on an individual. The basic syntax for so-called _nominals_ is:
 
@@ -1113,7 +1106,7 @@ The ‘{’ and ‘}’ are a bit of syntax that says ‘here’s a class of ind
 
 We also see that the classes for the parents of Robert David Bright and Richard John Bright have the same members according to the FHKB, but that the two classes are not inferred to be equivalent. Our domain knowledge indicates the two classes have the same extents (members) and thus the classes are equivalent, but the automated reasoner does not make this inference. As usual, this is because the FHKB has not given the automated reasoner enough information to make such an inference.
 
-### 6.2 Closing Down What we Know About Parents and Siblings
+#### 6.2 Closing Down What we Know About Parents and Siblings
 
 The classes describing the parents of Richard and Robert are not equivalent, even though, as humans, we know their classes of parent are the same. We need more constraints so that it is known that the four parents are the only ones that exist. We can try this by closing down what we know about the immediate family of Robert David Bright.
 
@@ -1140,7 +1133,7 @@ EquivalentTo: hasFather or hasMother
 
 but we can’t.
 
-### 6.3 Summary
+#### 6.3 Summary
 
 For practice, do the following:
 
@@ -1176,9 +1169,9 @@ Pellet 2.2.0 0.529 sec (0.00428 % of final) and by FaCT++ 1.6.4 is approximately
 0.147 sec (0.004 % of final). 0 sec indicates failure or timeout.
 ```
 
-# Chapter 7
+## Chapter 7
 
-## Data Properties in the FHKB
+### Data Properties in the FHKB
 
 We now have some individuals with some basic object properties between individuals. OWL 2, however, also has data properties that can relate an object or individual to some item of data. There are data about a `Person`, such as years of events and names etc. So, in this Chapter you will:
 
@@ -1190,12 +1183,9 @@ We now have some individuals with some basic object properties between individua
 
 ![camera](../images/FHKB%20figures/images/black_camera.png)
 
-```
-There is a snapshot of the ontology as required at this point in the tutorial available
-at http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial.
-```
+> Find a snapshot of the ontology at this stage  [below](#fhkb-owl-files-for-download).
 
-### 7.1 Adding Some Data Properties for Event Years
+#### 7.1 Adding Some Data Properties for Event Years
 
 Everyone has a birth year; death year; and some have a marriage year and so on. We can model these simply with data properties and an integer as a filler. OWL 2 has a DateTime datatype, where it is possible to specify a precise time and date down to a second. <sup>7</sup> This proves cumbersome (see http://robertdavidstevens.wordpress.com/2011/05/05/using-the-datetime-data-type-to-describe-birthdays/ for details); all we need is a simple indication of the year in which a person was born. Of course, the integer type has a zero, which the Gregorian calendar for which we use integer as a proxy does not, but integer is sufficient to our needs. Also, there are various ontological treatments of time and information about people (this extends to names etc. as well), but we gloss over that here—that’s another tutorial.
 
@@ -1209,10 +1199,8 @@ We can have dates for birth, death and (eventually) marriage (see Chapter 9) and
 
 ![camera](../images/FHKB%20figures/images/black_camera.png)
 
-```
-Again, asserting birth years for all individuals can be a bit tedious. The reader
-can find a convenience snapshot of the ontology at this stage at http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial
-```
+> Again, asserting birth years for all individuals can be a bit tedious.  Find a snapshot of the ontology at this stage [below](#fhkb-owl-files-for-download).
+
 
 We now have an ABox with individuals with fact assertions to data indicating a birth year. We can, if we wish, also add a class restriction to the `Person` class saying that each and every instance of the class `Person` holds a data property to an integer and that this property is called ‘hasBirthYear’. As usual when deciding whether to place such a restriction upon a class, ask whether it is true that each and every instance of the class holds that property; this is exactly the same as we did for the object properties in Chapter 4. Everyone does have a birth year, even if it is not known.
 
@@ -1230,7 +1218,7 @@ Person and hasBirthYear some int[>= 1960, < 1970]
 
 This kind of interval is known as a facet.
 
-#### 7.1.1 Counting Numbers of Children
+##### 7.1.1 Counting Numbers of Children
 
 The last two queries in the list do not work as expected. We have asked, for instance, for `Person` that have more than three children, but we get no members of `Person` in the answer, though we know that there are some in the FHKB (e.g., `John_Bright_1930`). This is because there is not enough information in the FHKB to tell that this person has more than three **different** people as children. As humans we can look at the four children of John Bright and know that they are different – for instance, they all have different birth years. The automated reasoner, however, does not know that a `Person` can only have one birth year.
 
@@ -1248,7 +1236,7 @@ Of course, making birth year functional is not a reliable way of ensuring that t
 
 From now on, every time you add individuals, make sure the different individuals axiom is updated.
 
-### 7.2 The Open World Assumption
+#### 7.2 The Open World Assumption
 
 We have met again the open world assumption and its importance in the FHKB. In the use of the functional characteristic on the `hasBirthYear` property, we saw one way of constraining the interpretation of numbers of children. We also introduced the ‘different individuals’ axiom as a way of making all individuals in a knowledge base distinct. There are more questions, however, for which we need more ways of closing down the openness of OWL 2.
 
@@ -1292,7 +1280,7 @@ right route.
 
 <sup>9</sup> [http://owlapi.sourceforge.net/](http://owlapi.sourceforge.net/)
 
-### 7.3 Adding Given and Family Names
+#### 7.3 Adding Given and Family Names
 
 We also want to add some other useful data facts to people – their names. We have been putting names as part of labels on individuals, but data fact assertions make sense to separate out family and given names so that we can ask questions such as ‘give me all people with the family name Bright and the first given name of either James or William’. A person’s name is a fact about that person and is more, in this case, than just a label of the representation of that person. So, we want family names and given names. A person may have more than one given name – ‘Robert David’, for instance – and an arbitrary number of given names can be held. For the FHKB, we have simply created two data properties of `hasFirstGivenName` and `hasSecondGivenName`). Ideally, it would be good to have some index on the property to given name position, but OWL has no n-ary relationships. Otherwise, we could reify the `hasGivenName` property into a class of objects, such as the following:
 
@@ -1318,7 +1306,7 @@ Do the following:
 
 The name data property hierarchy and the queries using those properties displays what now should be familiar. Sub-properties that imply the super-property. So, when we ask `hasFirstGivenName` value `"William"` and then the query `hasGivenName value value "William"` we can expect different answers. There are people with ‘William’ as either first or second given name and asking the question with the super-property for given names will collect both first and second given names.
 
-### 7.4 Summary
+#### 7.4 Summary
 
 We have used data properties that link objects to data such as string, integer, floats and Booleans etc. OWL uses the XML data types. We have seen a simple use of data properties to simulate birth years. The full FHKB also uses them to place names (given and family) on individuals as strings. This means one can ask for the `Person` with the given name "James", of which there are many in the FHKB.
 
@@ -1349,9 +1337,9 @@ least is impossibly slow by now. This may be because HermiT does more work
 than the others. For now, we recommend to use either Pellet or FaCT++.
 ```
 
-# Chapter 8
+## Chapter 8
 
-## Cousins in the FHKB
+### Cousins in the FHKB
 
 In this Chapter you will
 
@@ -1363,10 +1351,7 @@ In this Chapter you will
 
 ![camera](../images/FHKB%20figures/images/black_camera.png)
 
-```
-There is a snapshot of the ontology as required at this point in the tutorial available
-at http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial
-```
+> Find a snapshot of the ontology at this stage  [below](#fhkb-owl-files-for-download).
 
 ![dragon](../images/FHKB%20figures/dragon.png)
 
@@ -1375,7 +1360,7 @@ Be warned; from here on the reasoner can start running slowly! Please see warnin
 at the beginning of the last chapter for more information.
 ```
 
-### 8.1 Introducing Cousins
+#### 8.1 Introducing Cousins
 
 Cousins can be confusing, but here is a brief summary:
 
@@ -1386,7 +1371,7 @@ Cousins can be confusing, but here is a brief summary:
 
 Simply, my first cousins are my parent’s sibling’s children. As usual, we can think about the objects and put in place some sub-property chains.
 
-### 8.2 First Cousins
+#### 8.2 First Cousins
 
 ![Figure 8.1](../images/FHKB%20figures/cousin.png)
 
@@ -1428,7 +1413,7 @@ Although the last query for the cousins of Robert David Bright should return the
 same results for every reasoner, we have had experiences where the results differ.
 ```
 
-### 8.3 Other Degrees and Removes of Cousin
+#### 8.3 Other Degrees and Removes of Cousin
 
 Other degrees of cousins follow the same pattern as for first cousins; we go up, along and down. For second cousins we go up from a given individual to children of a great grandparent, along to their siblings and down to their grandchildren. The following object property declaration is for second cousins (note it uses the `isGrandparentOf` and its inverse properties, though the parent properties could be used) :
 
@@ -1456,7 +1441,7 @@ To exercise the cousin properties do the following:
 
 You should see that we see some peculiar inferences about Robert David Bright’ cousins – not only are his brother and himself his own cousins, but so are his father, mother, uncles and so on. This makes sense if we look at the general sibling problem, but also it helps to just trace the paths around. If we go up from one of Robert David Bright’ true first cousins to a grandparent and down one parent relationship, we follow the first cousin once removed path and get to one of Robert David Bright’ parents or uncles. This is not to be expected and we need a tighter definition that goes beyond sub-property chains so that we can exclude some implications from the FHKB.
 
-### 8.4 Doing First Cousins Properly
+#### 8.4 Doing First Cousins Properly
 
 As far as inferring first cousin facts for Robert David Bright, we have failed. More precisely, we have recalled all Robert David Bright’s cousins, but the precision is not what we would desire. What we can do is ask for Robert David Bright’ cousins, but then remove the children of Robert David Bright’ parents. The following DL query achieves this:
 
@@ -1481,7 +1466,7 @@ EquivalentTo: Person that hasFirstCousin some Person
 
 This gives some practice with negation. One is making a class and then ‘taking’ some of it away – ‘these, but not those’.
 
-### 8.5 Summary
+#### 8.5 Summary
 
 We have now expanded the FHKB to include most blood relationships. We have also found that cousins are hard to capture just using object properties and sub-property chains. Our broken sibling inferences mean that we have too many cousins inferred at the instance level. We can get cousins right at the class level by using our inference based cousins, then excluding some using negation. Perhaps not neat, but it works.
 
@@ -1502,9 +1487,9 @@ machine by HermiT 1.3.8 is approximately 0.000 sec (0.00000 % of final), by Pell
 sec (0.024 % of final). 0 sec indicates failure or timeout.
 ```
 
-# Chapter 9
+## Chapter 9
 
-## Marriage in the FHKB
+### Marriage in the FHKB
 
 In this chapter you will:
 
@@ -1515,10 +1500,7 @@ In this chapter you will:
 
 ![camera](../images/FHKB%20figures/images/black_camera.png)
 
-```
-There is a snapshot of the ontology as required at this point in the tutorial available
-at http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial
-```
+> Find a snapshot of the ontology at this stage  [below](#fhkb-owl-files-for-download).
 
 ![warnicon](../images/FHKB%20figures/images/WarningIcon.png)
 
@@ -1530,7 +1512,7 @@ hard. There are also some good questions to ask of the FHKB as a result of addin
 marriages.
 ```
 
-### 9.1 Marriage
+#### 9.1 Marriage
 
 Marriage is a culturally complex situation to model. The FHKB started with a conservative model of a marriage involving only one man and one woman.<sup>10</sup> Later versions are more permissive; a marriage simply has a minimum of two partners. This leaves it open to numbers and sex of the people involved. In fact, ‘marriage’ is probably not the right name for it. Using `BreedingRelationship` as a label (the one favoured by the main author’s mother) may be a little too stark and might be a little exclusive.... In any case, some more generic name is probably better and various subclasses of the FHKB’s `Marriage` class are probably necessary.
 
@@ -1552,7 +1534,7 @@ We have the basic infrastructure for marriages. We can ask the usual kinds of qu
 DL query: Marriage and hasMarriageYear some int[<= 1960]
 ```
 
-#### 9.1.1 Spouses
+##### 9.1.1 Spouses
 
 This marriage infrastructure can be used to infer some slightly more interesting things for actual people. While we want marriage objects so that we can talk about marriage years and even locations, should we want to, we also want to be able to have the straight-forward spouse relationships one would expect. We can use sub-property chains in the usual manner; do the following:
 
@@ -1576,7 +1558,7 @@ and many more. This is really a chance to explore your querying abilities and ma
 nested queries that involve going up and down the hierarchy and tracing routes through the graph of
 relationships between the individuals you’ve inferred.
 
-### 9.2 In-Laws
+#### 9.2 In-Laws
 
 Now we have spouses, we can also have in-laws. The path is simple: `isSpouseOf o hasMother` implies `hasMotherInLaw`. The path involved in mother-in-laws can be seen in Figure 9.2. The following OWL code establishes the sub-property chains for `hasMotherInLaw`:
 
@@ -1599,7 +1581,7 @@ Do the following to make the parent in-law properties:
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | <ol><li> Create `hasParentInLaw` with two sub-properties of `hasMotherInLaw` and `hasFatherInLaw`; </li><li> Create the inverses, but remember to let the reasoner infer the hierarchy on that side of the hierarchy; </li><li> Add the sub-property chains as described in the pattern for `hasMotherInLaw` above; </li><li> Run the reasoner and check that the mother-in-law of Margaret Grace Rever is Iris Ellen Archer.</li></ol> |
 
-### 9.3 Brothers and Sisters In-Law
+#### 9.3 Brothers and Sisters In-Law
 
 Brothers and sisters in law have the interesting addition of having more than one path between objects to establish a sister or brother in law relationship. The OWL code below establishes the relationships for ‘is sister in law of’:
 
@@ -1628,7 +1610,7 @@ on the `Person` class, if you have not done it so far.
 
 **Figure 9.3:** The two routes to being a sister-in-law.
 
-### 9.4 Aunts and Uncles in-Law
+#### 9.4 Aunts and Uncles in-Law
 
 The uncle of Robert David Bright has a wife, but she is not the aunt of Robert David Bright, she is the aunt-in-law. This is another kith relationship, not a kin relationship. The pattern has a familiar feel:
 
@@ -1646,7 +1628,7 @@ SubPropertyChain: isWifeOf o isBrotherOf o isParentOf
 
 **Figure 9.4:** The object property hierarchy after adding the various in-law properties.
 
-### 9.5 Summary
+#### 9.5 Summary
 
 This has really been a revision chapter; nothing new has really been introduced. We have added a lot of new object properties and one new data property. The latest object property hierarchy with the ‘in-law’ branch can be seen in Figure 9.4. Highlights have been:
 
@@ -1670,9 +1652,9 @@ machine by HermiT 1.3.8 is approximately 0.000 sec (0.00000 % of final), by Pell
 sec (0.046 % of final). 0 sec indicates failure or timeout.
 ```
 
-# Chapter 10
+## Chapter 10
 
-## Extending the TBox
+### Extending the TBox
 
 In this chapter you will:
 
@@ -1681,12 +1663,9 @@ In this chapter you will:
 
 ![camera](../images/FHKB%20figures/images/black_camera.png)
 
-```
-There is a snapshot of the ontology as required at this point in the tutorial available
-at http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial
-```
+> Find a snapshot of the ontology at this stage [below](#fhkb-owl-files-for-download).
 
-### 10.1 Adding Defined Classes
+#### 10.1 Adding Defined Classes
 
 Add the following defined classes:
 
@@ -1729,7 +1708,7 @@ David Bright)
 
 If we make the equivalent class for Richard John Bright, apply the reasoner and look at the hierarchy, we see that the two classes are not logically equivalent, even though they have the same extents of William George Bright, Iris Ellen Archer, Charles Herbert Rever and Violet Sylvia Steward. We looked at this example in Section 6.2, where there is an explanation and solutions.
 
-### 10.2 Summary
+#### 10.2 Summary
 
 We can add defined classes based on each property we have put into the object property hierarchy. We see the expected hierarchy; as can be seen from Figure 10.1 it has an obvious symmetry based on sex. We also see a lot of equivalences inferred – all women are daughters, as well as women descendants. Perhaps not the greatest insight ever gained, but it at least makes sense; all women must be daughters. It is instructive to use the explanation feature in Protégé to look at why the reasoner has made these inferences. For example, take a look at the class `hasGrandmother some Woman` – it is instructive to see how many there are.
 
@@ -1756,9 +1735,9 @@ machine by HermiT 1.3.8 is approximately 0.000 sec (0.00000 % of final), by Pell
 sec (1.000 % of final). 0 sec indicates failure or timeout.
 ```
 
-# Chapter 11
+## Chapter 11
 
-## Final remarks
+### Final remarks
 
 ![dragon](../images/FHKB%20figures/dragon.png)
 
@@ -1772,9 +1751,9 @@ We probably do not wish to drive a genealogical application using an FHKB in thi
 
 OWL 2 on its own and using it in this style, really does not work for family history. We have seen that siblings and cousins cause problems. rules in various forms can do this kind of thing easily—it is one of the primary examples for learning about Prolog. Nevertheless, the FHKB does show how much inference between named individuals can be driven from a few fact assertions and a property hierarchy. Assuming a powerful enough reasoner and the ability to deal with many individuals, it would be possible to make a family history application using the FHKB; as long as one hid the long and sometimes complex queries and manipulations that would be necessary to ‘prune’ some of the ‘extra’ facts found about individuals. However, the FHKB does usefully show the power of OWL 2, touch a great deal of the language and demonstrate some of its limitations.
 
-# Appendix A
+## Appendix A
 
-## FHKB Family Data
+### FHKB Family Data
 
 **Table A.1:** The list of individuals in the FHKB
 
@@ -1823,7 +1802,23 @@ OWL 2 on its own and using it in this style, really does not work for family his
 | William George Bright 1901          | William          | George            | Bright      | 1901          | Charlotte Hewett 1863         | Henry Edmund Bright 1862    |
 | William Rever 1870                  | William          | none              | Rever       | 1870          | not specified                 | not specified               |
 
-# Bibliography
+<a id="fhkb-owl"></a>
+
+## FHKB OWL Files for Download
+
+| Chapter | FHKB snapshot       |
+|---------|---------------------|
+|       2 | [download](../resources/fhkb/fhkb_chapter_2.owl)  |
+|       3 | [download](../resources/fhkb/fhkb_chapter_3.owl)  |
+|       4 | [download](../resources/fhkb/fhkb_chapter_4.owl)  |
+|       5 | [download](../resources/fhkb/fhkb_chapter_5.owl)  |
+|       6 | [download](../resources/fhkb/fhkb_chapter_6.owl)  |
+|       7 | [download](../resources/fhkb/fhkb_chapter_7.owl)  |
+|       8 | [download](../resources/fhkb/fhkb_chapter_8.owl)  |
+|       9 | [download](../resources/fhkb/fhkb_chapter_9.owl)  |
+|      10 | [download](../resources/fhkb/fhkb_chapter_10.owl) |
+
+## Bibliography
 
 [1] M. Horridge and S. Bechhofer. The owl api: a java api for working with owl 2 ontologies. _Proc. of
 OWL Experiences and Directions_ , 2009, 2009.

@@ -25,7 +25,9 @@ _Note_: We are in the process of transforming the documentation accordingly, so 
 - _Becky Jackson_, Bend Informatics. Becky has been a Semantic Software developer and Ontology Pipeline specialist since 2016, now working as an independent consultant.
 - _Nicole Vasilevsky_, Critical Path Institute. Nicole is the Associate Director of Data Science and an Ontology Curator for the Mondo Disease Ontology, and contributes to several other ontologies including the Human Phenotype Ontology, Uberon Anatomy Ontology, and Cell Ontology.
 - _Nicolas Matentzoglu_, Semanticly, Athens, Greece. Nico is an Ontology Engineer and Ontology Pipeline Specialist, being the Principal Ontology Pipeline Developer for the Monarch Initiative.
-- _Shawn Tan_, EMBL-EBI. Shawn was an Ontology Curator for The Brain Data Standards project.
+- _Shawn Tan_, Novo Nordisk
+- _David Osumi-Sutherland_, EMBL-EBI
+- _Sabrina Toro_, University of Colorado
 
 If you would like to contribute to this training, please [find out more here](contributing.md).
 

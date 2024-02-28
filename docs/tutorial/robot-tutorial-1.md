@@ -1,6 +1,6 @@
 # ROBOT Mini-Tutorial 1: Convert, Extract and Template
 
-Last week, we were introduced to ROBOT for quality control and generating reports about terms in an ontology. This week, we will learn about three new ROBOT commands:
+This tutorial covers three ROBOT commands:
 
 - Convert
 - Extract

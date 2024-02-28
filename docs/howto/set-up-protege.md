@@ -1,6 +1,6 @@
-# Setup Protege 5.5
+# Setup Protege 5.6.2
 
-(This was adopted from the [Gene Ontology editors guide](http://wiki.geneontology.org/index.php/Protege5_5_setup_for_GO_Eds) and [Mondo documentation](https://mondo.readthedocs.io/en/latest/editors-guide/a-protege-setup/)). _Updated 2023-02-27 by Nicole Vasilevsky_
+(This was adopted from the [Gene Ontology editors guide](http://wiki.geneontology.org/index.php/Protege5_5_setup_for_GO_Eds) and [Mondo documentation](https://mondo.readthedocs.io/en/latest/editors-guide/a-protege-setup/)). _Updated 2023-08-16 by Nicole Vasilevsky_
 
 ## Mac Instructions
 
@@ -8,7 +8,7 @@ These instructions are for Mac OS
 
 ### Protege version
 
-As of February 2023, OBO ontology editors are using [Protege version 5.6.1](https://github.com/protegeproject/protege-distribution/releases).
+As of February 2023, OBO ontology editors are using [Protege version 5.6.2](https://github.com/protegeproject/protege-distribution/releases).
 
 ### Download and install Protege
 
@@ -16,10 +16,10 @@ As of February 2023, OBO ontology editors are using [Protege version 5.6.1](http
 - Unzip and move the Protege app to your Applications folder.
 - See [Install_Protege5_Mac](https://protegewiki.stanford.edu/wiki/Install_Protege5_Mac) for more instructions and troubleshooting common problems.
 
-### Increase memory in Protege 5.6.1
+### Increase memory in Protege 5.6.2
 Protege needs at least 4G of RAM to cope with large ontologie like Mondo, ideally use 12G or 16G if your machine can handle it. Edits to the Protege configuration files will not take effect until Protege is restarted.
 
-1. If running from Protege.app on a Mac, open the /Applications/Protege-5.6.1/Protégé.app/Contents/conf/jvm.conf file
+1. If running from Protege.app on a Mac, open the /Applications/Protege-5.6.2/Protégé.app/Contents/conf/jvm.conf file
 1. set the heap size to 12G: max_heap_size=12G
 
 ### Increase memory in Protege 5.5.0
@@ -89,9 +89,9 @@ See [instructions here](https://oboacademy.github.io/obook/howto/idrange/).
 
 1. In the Protege menu, go to `Preferences` > `New Entities Metadata` tab
 2. Check `Annotate new entities with creator (user)` box
-3. `Creator property` Add http://www.geneontology.org/formats/oboInOwl#created_by
+3. `Creator property` Add http://purl.org/dc/terms/contributor
 4. `Creator value` Select Use ORCID
-5. `Date property` http://purl.org/dc/elements/1.1/date
+5. `Date property` Add http://purl.org/dc/terms/date
 6. `Date value format` Select ISO-8601
 
 ## Install Protege OBO plugin

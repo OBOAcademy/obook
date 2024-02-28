@@ -46,6 +46,8 @@ to help you find an use OBO terms and ontologies.
     is an ontology extraction tool
 - [Bioportal](http://bioportal.bioontology.org)
   provides ontology browsing, search, mapping, etc.
+- [Bioregistry](https://bioregistry.io)
+  provides metadata for ontologies and other semantic resources
 
 ## Tools
 
@@ -73,6 +75,8 @@ This is the suite of open source software that most OBO developers use.
 - [OWLAPI](https://github.com/owlcs/owlapi)
   is a Java library for working with ontologies,
   and is the foundation for Protégé and ROBOT.
+- [`curies`](https://github.com/cthoyt/curies) is a Python library for working with prefix maps
+  and extended prefix maps and converting between CURIEs and URIs.
 - [OBO PURL System](https://github.com/OBOFoundry/purl.obolibrary.org)
   is used to redirect OBO terms from their IRIs to the right resource
   - [String of PURLs – frugal migration and maintenance of persistent identifiers](https://content.iospress.com/articles/data-science/ds190022) (journal article)

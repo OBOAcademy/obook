@@ -19,8 +19,10 @@
 - [Sublime](https://www.sublimetext.com/)
 - [Atom](https://atom.io/)
 
-**SPARQL query tool:**
+**Ontology access and query tools:**
 
+- [Ontology Access Kit (OAK)](https://incatools.github.io/ontology-access-kit/introduction.html)
+- [PyOBO](https://github.com/pyobo/pyobo)
 - [Yasgui](https://yasgui.triply.cc/#)
 - [ROBOT query](http://robot.obolibrary.org/query)
 
@@ -59,16 +61,17 @@
 
 ### Nico's top 10 tools for the Semantic OBO Engineer's Toolbox
 
-1. [ROBOT](http://robot.obolibrary.org)
-2. [Protégé](https://protege.stanford.edu/)
-3. Term browsers ([OLS](https://www.ebi.ac.uk/ols/index), [Ontobee](http://www.ontobee.org/))
-4. [Ontology Development Kit (ODK)](https://github.com/INCATools/ontology-development-kit)
-5. SPARQL (e.g. [ROBOT query](http://robot.obolibrary.org/query) and [Yasgui](https://yasgui.triply.cc/#))
-6. [GNU Make](https://www.gnu.org/software/make/)
-7. Text editor workflows (i.e. [Atom](https://atom.io/), Sublime, VIM): a bit of regex
-8. Basic Shell scripting and pipelining
-9. From tables to ontologies: [DOSDP templates](https://incatools.github.io/dead_simple_owl_design_patterns/) and [ROBOT templates](http://robot.obolibrary.org/template)
-10. [GitHub Actions](https://docs.github.com/en/actions)
+1. [ROBOT](http://robot.obolibrary.org): Manipulating and transforming ontologies: the undeniable Swiss Army Knife for Ontology Engineers. 
+1. [Ontology Access Kit (OAK)](https://incatools.github.io/ontology-access-kit/introduction.html): Accessing ontologies, ontology databases, ontology mapping, text annotation - everything you will ever need for _using_ ontologies.
+1. [Protégé](https://protege.stanford.edu/)
+1. Term browsers ([OLS](https://www.ebi.ac.uk/ols/index), [Ontobee](http://www.ontobee.org/))
+1. [Ontology Development Kit (ODK)](https://github.com/INCATools/ontology-development-kit)
+1. [GNU Make](https://www.gnu.org/software/make/)
+1. Text editor workflows (i.e. [Visual Studio Code]([https://atom.io/](https://code.visualstudio.com/)), Atom, Sublime, VIM), plus a bit of regex. Select your text editor well!
+1. Basic Shell scripting and pipelining
+1. [LinkML](https://linkml.io/): Building semantic datamodels for your data - using ontologies!
+1. SPARQL (e.g. [ROBOT query](http://robot.obolibrary.org/query) and [Yasgui](https://yasgui.triply.cc/#))
+1. From tables to ontologies: [DOSDP templates](https://incatools.github.io/dead_simple_owl_design_patterns/) and [ROBOT templates](http://robot.obolibrary.org/template)
 
 **Other tools in my toolbox**
 

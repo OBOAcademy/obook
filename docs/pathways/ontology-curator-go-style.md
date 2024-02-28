@@ -7,7 +7,7 @@ Note: Work on this document is still in progress, items that are not linked are 
 ## Getting Set-up
 
 1. Download and install [GitHub Desktop](https://desktop.github.com/)
-2. Download and install [Protege](https://protege.stanford.edu/products.php). See instructions on how to set up Protege [here](../howto/set-up-protege.md)
+2. Download and install [Protege](https://protege.stanford.edu/software.php#desktop-protege). See instructions on how to set up Protege [here](../howto/set-up-protege.md)
 3. Install [ELK reasoner in protege](../howto/installing-elk-in-protege.md)
 4. [Setting up your ID range](../howto/idrange.md)
 5. [Setting up ODK](../howto/odk-setup.md)

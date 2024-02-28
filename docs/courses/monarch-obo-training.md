@@ -1,4 +1,4 @@
-# Monarch OBO Training
+# OBO Academy - Monarch Training Series
 
 ## Goal
 
@@ -24,24 +24,50 @@ The goal of this course is to provide ongoing training for the OBO community. As
 - Organise the course and rooms
 
 ## Schedule
+_Note: this is tentative and subject to change_
 
-| Date       | Lesson                                                                                                                  | Notes                                                                                                                                                                                                                                                                                                                | Recordings                                                           |
-| ---------- | ----------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
-| 2023/04/18 | Overview of Protege 5.6 - the latest features | Tutorial by Damien Goutte-Gattat  | |
-| 2023/04/04 | Introduction to Exomiser | Tutorial by Valentina, Yasemin and Carlo from QMUL.  | |
-| 2023/03/21 | Introduction to Wikidata | Tutorial by experts in the field Andra Waagmeester and Tiago Lubiana  | |
-| 2023/03/07 | OAK for the Ontology Engineering community | Chris Mungall tutorial | |
+| Date | Lesson | Notes | Recordings |
+| --- | --- | --- | --- |
+| 2024/04/16 | AI-assisted ontology editing workflows 2 | Chris Mungall (unconfirmed) |
+| 2024/04/02 | Synonym Type curation - a deep dive | Trish Whetzel, CU |
+| 2024/03/19 | _No Meeting_ |  |
+| 2024/03/05 | AI-assisted ontology editing workflows 1 | Chris Mungall (unconfirmed) | |
+| 2024/02/20 | [Ontology Metadata Standardisation](https://docs.google.com/presentation/d/12ig7zQ9R4lQAybuTQKb73gB22pIq5MEaowwbYOl5Ei8/edit?usp=sharing) | Anita Caron, EBI |
+| 2024/02/06 | [Introduction to Open Source licenses](../lesson/licensing-data-and-software.md) | Seth Carbon, LBNL |
+| 2024/01/23 | Bridge2AI data standards: a practical introduction | Harry Caufield, LBNL | [Here](https://youtu.be/zaZtcDbjqTw?feature=shared)
+| 2024/01/09 | _No Meeting_ | Enjoy Winter break! | |
+| 2023/12/26 | _No Meeting_ | Enjoy Winter break!  | |
+| 2023/12/12 | Introduction to DOSDP pattern design and workflows | Tutorial by Ray Stefancsik ([Slides](https://docs.google.com/presentation/d/1ep-J7h-PZoZuVboCen8W6ZCX5iD4-TK0C2f057vp_Po/edit?usp=sharing)) | [Here](https://youtu.be/a2Mc9oLEiwk?feature=shared)|
+| 2023/11/28 | _No Meeting_ | | |
+| 2023/11/14 | Enhancing curation workflows with CurateGPT | Tutorial by Chris Mungall | [Here](https://youtu.be/p6j3WwzIv40?feature=shared) |
+| 2023/10/31 | _No Meeting_ | | |
+| 2023/10/17 | [Using ontologies for data annotation and consequences for ontology development](https://docs.google.com/presentation/d/16Bd1szeJ-gaSuKWJhVJRHYrwdZ4LtjIAPSIqP9OveFc/edit?usp=sharing) | Tutorial by Sabrina Toro | [Here](https://youtu.be/jRB5VTJLOGc?feature=shared)|
+| 2023/10/03 | [Units modeling in and around OBO](https://oboacademy.github.io/obook/tutorial/units/) | Tutorial by James Overton | [Here](https://youtu.be/W4IQk-tft0I?feature=shared) |
+| 2023/09/19 | [Improving ontology interoperability with Biomappings](https://docs.google.com/presentation/d/1s9QNQQoRuQUWWJoIJklMHrqPowvBKU4Y638w54xP1t0/edit) | Tutorial by Charlie Hoyt | [Here](https://youtu.be/_gAdGShZReo?feature=shared) |
+| 2023/09/05 | [Modern prefix management with Bioregistry and `curies`](https://docs.google.com/presentation/d/1Hyi9t_wwoMAFskWtDBMHGpAw7ZwTQx-3RKrFdTFYB88/edit) | Tutorial by Charlie Hoyt | [Here](https://youtu.be/WTTHCZW4ubs?feature=shared) |
+| 2023/08/22 | [How to determine if two entities are the same?](../howto/are-two-entities-the-same.md) | Tutorial by Nico Matentzoglu | [Here](https://youtu.be/v5hjLgr54Zs?feature=shared) |
+| 2023/08/08 | _No Meeting_ | Enjoy Summer break! |  |
+| July 2023 | _No Meeting_ | Enjoy Summer break! | |
+| 2023/06/27 |_No Meeting_ | Enjoy Summer break! | | |
+| 2023/06/13 | [Modelling with Subclass and Equivalent class statements](https://oboacademy.github.io/obook/explanation/subClassOf-vs-equivalentTo/) | Tutorial by [Henriette Harmse](https://henrietteharmse.com/about/) | [slides](https://drive.google.com/file/d/1lU-2TsmMqIsIjTvwM4n875BymikOdjTF/view?usp=sharing) |
+| 2023/05/30 | [First steps with ChatGPT for semantic engineers and curators](https://oboacademy.github.io/obook/lesson/chatgpt-ontology-curation/) | Led by Sierra Moxon and Nico Matentzoglu | N/A |
+| 2023/05/16 | Cancelled: Monarch/C-Path workshop | | |
+| 2023/05/02 | Cancelled: No meeting week |   | |
+| 2023/04/18 | Overview of Protege 5.6 - the latest features | Tutorial by Damien Goutte-Gattat ([slides](https://docs.google.com/presentation/d/1fScxL59EL4YOYe6uNJnR9TCy72kOAkIxLH-HHDfRTKw/edit?usp=sharing))  | [Here](https://youtu.be/QXcdP_zM2LU) |
+| 2023/04/04 | [Introduction to Exomiser](../tutorial/exomiser-tutorial.md) | Tutorial by Valentina, Yasemin and Carlo from QMUL  | [Here](https://youtu.be/tzwvWkb3s8A)|
+| 2023/03/21 | Introduction to Wikidata | Tutorial by Andra Waagmeester and Tiago Lubiana  | [Here](https://youtu.be/KonJqKquUSU) |
+| 2023/03/07 | OAK for the Ontology Engineering community | Tutorial by Chris Mungall | [Here](https://youtu.be/zO6tS7gZtvw) |
 | 2023/02/21 | OBO Academy Clinic | Bring your ontology issues and questions to discuss with Sabrina and Nico! Attend the [Ontology Summit Seminars](https://oboacademy.github.io/obook/courses/ontology-summit-2023/) instead! | |
-| 2023/02/07 | [Querying the Monarch KG using Neo4J](https://oboacademy.github.io/obook/tutorial/monarch-kg-neo4j-basics/) | Kevin Schaper tutorial | [Here](https://youtu.be/_Sx-1WaV4zY)|
+| 2023/02/07 | [Querying the Monarch KG using Neo4J](https://oboacademy.github.io/obook/tutorial/monarch-kg-neo4j-basics/) | Tutorial by Kevin Schaper | [Here](https://youtu.be/_Sx-1WaV4zY)|
 | 2023/01/24 | OBO Academy Clinic | Bring your ontology issues and questions to discuss with Sabrina and Nico! | |
-| 2023/01/10 | [Modeling with taxon constraints](https://oboacademy.github.io/obook/explanation/taxon-constraints-explainer/) | Jim Balhoff tutorial | [Here](https://youtu.be/ZNbn_JYzuvA)
+| 2023/01/10 | [Modeling with taxon constraints](https://oboacademy.github.io/obook/explanation/taxon-constraints-explainer/) | Tutorial by Jim Balhoff | [Here](https://youtu.be/ZNbn_JYzuvA)
 | 2022/12/27 | _No Meeting_ | Enjoy the Holidays! |
 | 2022/12/13 | [Introduction to Semantic Entity Matching](../lesson/entity-matching.md) | [Slides](https://bit.ly/obo-academy-semantic-matching) | [Here](https://youtu.be/RN2hYxKYSUw) 
 | 2022/11/29 | [OBO Academy hackathon](../lesson/hackathon.md) | Work on open tickets together.  |
 | 2022/11/15 | [Contributing to OBO ontologies](../lesson/contributing-to-obo-ontologies.md) - Part 2 | | [Here](https://youtu.be/YBvMKMoCCrQ)
 | 2022/11/01 | [Contributing to OBO ontologies](../lesson/contributing-to-obo-ontologies.md) - Part 1 | | [Here](https://youtu.be/_z8-KGDzZ6U)
 | 2022/10/18 | [Introduction to Medical Action Ontology (MAxO)](https://github.com/monarch-initiative/MAxO) |  | [Here](https://youtu.be/MBUgeNbTngg)
-| 2022/10/04 | _No meeting_ - ISB virtual conference: [register here](https://docs.google.com/forms/d/e/1FAIpQLSeDhec3KJ2JaJyh-OYcEpBMrSEFYIBzL4N8k57RPv09HqnnQg/viewform) |  |
+| 2022/10/04 | _No Meeting_ | ISB virtual conference: [register here](https://docs.google.com/forms/d/e/1FAIpQLSeDhec3KJ2JaJyh-OYcEpBMrSEFYIBzL4N8k57RPv09HqnnQg/viewform) |
 | 2022/09/20 | [How to be an open science ontologist](../howto/open-science-engineer.md)                                           |                                                                                                                                                                                                                                                                                                                      | [Here](https://youtu.be/WNld_e0XdQ8)                                                                     |
 | 2022/09/06 | [Pull Requests: Part 2](../tutorial/pull-requests.md)                                                                   |                                                                                                                                                                                                                                                                                                                      | [Here](https://youtu.be/dO5hvR_gZcI)                                                                   |
 | 2022/07/26 | [Pull Requests: Part 1](../tutorial/pull-requests.md)                                                                   |                                                                                                                                                                                                                                                                                                                      | [Here](https://www.youtube.com/watch?v=zg6B9KFfnac)                  |
@@ -73,13 +99,6 @@ The goal of this course is to provide ongoing training for the OBO community. As
 | 2021/08/24 | [Contributing to OBO ontologies 2](../lesson/contributing-to-obo-ontologies.md)                                         |                                                                                                                                                                                                                                                                                                                      | [Here](https://www.youtube.com/watch?v=kAw4N2tYyco)                  |
 | 2021/08/17 | [Contributing to OBO ontologies](../lesson/contributing-to-obo-ontologies.md)                                           |                                                                                                                                                                                                                                                                                                                      |
 
-## Upcoming courses
-
-_Note: this is tentative and subject to change_
-
-| Date | Lesson  
-| --- | ---  
-| 2023/01/10 | Taxon constraints
 
 ## Notes
 

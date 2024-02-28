@@ -1,5 +1,7 @@
 # Open Biological and Biomedical Ontologies (OBO) Organized Knowledge (OBOOK)
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6955490.svg)](https://doi.org/10.5281/zenodo.6955490)
+
 The OBOOK is the main resource for OBOAcademy training materials for Semantic OBO Engineers.
 
 - To get started with learning: https://oboacademy.github.io/obook/getting-started/
@@ -46,6 +48,14 @@ Go to http://127.0.0.1:8000/, you should see the site.
 ## License
 
 This content is available under the [Creative Commons CC0 Public Domain Dedication](LICENSE).
+
+## Citation
+
+The conference article describing the OBOOK can be cited with the following:
+
+> Nicole Vasilevsky, James Overton, Rebecca Jackson, Sabrina Toro, Shawn Tan, Bradley Varner, David Osumi-Sutherland, & Nicolas Matentzoglu.
+> (2022, August 3). OBO Academy: Training materials for bio-ontologists. 2022 ISMB Bio-Ontologies Community, Madison, WI.
+> https://doi.org/10.5281/zenodo.6955490
 
 ## Acknowledgements
 
