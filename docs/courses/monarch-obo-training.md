@@ -28,11 +28,11 @@ _Note: this is tentative and subject to change_
 
 | Date | Lesson | Notes | Recordings |
 | --- | --- | --- | --- |
-| 2024/04/16 | AI-assisted ontology editing workflows 2 | Chris Mungall (unconfirmed) |
+| 2024/04/16 | AI-assisted ontology editing workflows 2 | Chris Mungall |
 | 2024/04/02 | Synonym Type curation - a deep dive | Trish Whetzel, CU |
 | 2024/03/19 | _No Meeting_ |  |
-| 2024/03/05 | AI-assisted ontology editing workflows 1 | Chris Mungall (unconfirmed) | |
-| 2024/02/20 | [Ontology Metadata Standardisation](https://docs.google.com/presentation/d/12ig7zQ9R4lQAybuTQKb73gB22pIq5MEaowwbYOl5Ei8/edit?usp=sharing) | Anita Caron, EBI |
+| 2024/03/05 | AI-assisted ontology editing workflows 1 | Chris Mungall | |
+| 2024/02/20 | [Ontology Metadata Standardisation](https://docs.google.com/presentation/d/12ig7zQ9R4lQAybuTQKb73gB22pIq5MEaowwbYOl5Ei8/edit?usp=sharing) | Anita Caron, EBI | [Here](https://youtu.be/tso8zawC3Tw?feature=shared)
 | 2024/02/06 | [Introduction to Open Source licenses](../lesson/licensing-data-and-software.md) | Seth Carbon, LBNL |
 | 2024/01/23 | Bridge2AI data standards: a practical introduction | Harry Caufield, LBNL | [Here](https://youtu.be/zaZtcDbjqTw?feature=shared)
 | 2024/01/09 | _No Meeting_ | Enjoy Winter break! | |
