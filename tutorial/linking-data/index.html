@@ -1,0 +1,5002 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://oboacademy.github.io/obook/tutorial/linking-data/">
+      
+      
+        <link rel="prev" href="../ontogpt/">
+      
+      
+        <link rel="next" href="../curies/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.6">
+    
+    
+      
+        <title>From Tables to Linked Data - OBO Semantic Engineering Training</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.558e4712.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tutorial-from-tables-to-linked-data" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="OBO Semantic Engineering Training" class="md-header__button md-logo" aria-label="OBO Semantic Engineering Training" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OBO Semantic Engineering Training
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              From Tables to Linked Data
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/OBOAcademy/obook/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="OBO Semantic Engineering Training" class="md-nav__button md-logo" aria-label="OBO Semantic Engineering Training" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    OBO Semantic Engineering Training
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/OBOAcademy/obook/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        About the course
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/" class="md-nav__link">
+        Getting started with learning
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/" class="md-nav__link">
+        Overview of lessons and tutorials
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/" class="md-nav__link">
+        Contribute to the course
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" tabindex="0" aria-expanded="false">
+          Courses
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Courses" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Courses
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../courses/icbo2024/" class="md-nav__link">
+        ICBO 2024 Tutorial
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../courses/icbo2023/" class="md-nav__link">
+        ICBO 2023 Tutorial
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../courses/icbo2022/" class="md-nav__link">
+        ICBO 2022 Tutorial
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../courses/icbo2021/" class="md-nav__link">
+        ICBO 2021 Tutorial
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../courses/monarch-obo-training/" class="md-nav__link">
+        Monarch Ontology Training
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../courses/ontology-summit-2023/" class="md-nav__link">
+        Ontology Summit 2023
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6" tabindex="0" aria-expanded="false">
+          Pathways
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Pathways" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Pathways
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pathways/pathways/" class="md-nav__link">
+        What is a pathway?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pathways/early-career-data-scientist/" class="md-nav__link">
+        Early Career Data Scientist
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pathways/ontology-curator/" class="md-nav__link">
+        Ontology Curator
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pathways/ontology-curator-go-style/" class="md-nav__link">
+        Ontology Curator GO-style
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pathways/ontology-curator-obi-style/" class="md-nav__link">
+        Ontology Curator OBI-style
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pathways/ontology-engineer/" class="md-nav__link">
+        Ontology Engineer/Developer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pathways/ontology-contributor/" class="md-nav__link">
+        Ontology Contributor
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7" tabindex="0" aria-expanded="false">
+          Lessons
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Lessons" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Lessons
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/contributing-to-obo-ontologies/" class="md-nav__link">
+        Contributing to OBO ontologies
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/ontology-pipelines/" class="md-nav__link">
+        Ontology Pipelines with ROBOT
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project-ontology-development/" class="md-nav__link">
+        Project Ontology Development
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/analysing-linked-data/" class="md-nav__link">
+        Analysing Linked Data
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/automating-ontology-workflows/" class="md-nav__link">
+        Automating Ontology Workflows
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/developing-an-obo-ontology/" class="md-nav__link">
+        Developing an OBO Ontology
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/ontology-design/" class="md-nav__link">
+        Ontology Design
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/templates-for-obo/" class="md-nav__link">
+        Templates for OBO ontologies
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/ontology-fundamentals/" class="md-nav__link">
+        Ontology Fundamentals
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/modelling-with-object-properties/" class="md-nav__link">
+        Modelling with Object Properties
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/ontology-term-use/" class="md-nav__link">
+        Ontology Term Use
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/rdf/" class="md-nav__link">
+        RDF Fundamentals
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/entity-matching/" class="md-nav__link">
+        Semantic Entity Matching
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/using-disease-and-phenotype-ontologies/" class="md-nav__link">
+        Disease and Phenotype Ontologies
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/hackathon/" class="md-nav__link">
+        Hacking the OBOOK
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/getting-hands-on/" class="md-nav__link">
+        Getting Hands on with Ontologies
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/chatgpt-ontology-curation/" class="md-nav__link">
+        Leveraging ChatGPT for ontology curation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/linkml-helps-with-ontology-use/" class="md-nav__link">
+        Using Ontologies in Practice--LinkML can help
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/licensing-data-and-software/" class="md-nav__link">
+        Licensing Data and Software
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/vocabularies-for-bioinformatics/" class="md-nav__link">
+        Vocabularies for bioinformatics
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8" tabindex="0" aria-expanded="false">
+          Lessons In Development
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Lessons In Development" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Lessons In Development
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/developing-application-ontologies/" class="md-nav__link">
+        Developing an Application Ontology
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/ontology-development/" class="md-nav__link">
+        Ontology Development
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/semantic-database-fundamentals/" class="md-nav__link">
+        Semantic Database Fundamentals
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_9" type="checkbox" id="__nav_9" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9" tabindex="0" aria-expanded="true">
+          Tutorials
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tutorials" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Tutorials
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_9_1" type="checkbox" id="__nav_9_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_1" tabindex="0" aria-expanded="false">
+          Protege
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Protege" data-md-level="2">
+        <label class="md-nav__title" for="__nav_9_1">
+          <span class="md-nav__icon md-icon"></span>
+          Protege
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basic-dl-query/" class="md-nav__link">
+        DL queries
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../disjointness/" class="md-nav__link">
+        Disjointness
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_9_2" type="checkbox" id="__nav_9_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_2" tabindex="0" aria-expanded="false">
+          Ontology Pipelines - ODK, ROBOT, etc
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Ontology Pipelines - ODK, ROBOT, etc" data-md-level="2">
+        <label class="md-nav__title" for="__nav_9_2">
+          <span class="md-nav__icon md-icon"></span>
+          Ontology Pipelines - ODK, ROBOT, etc
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../robot-tutorial-1/" class="md-nav__link">
+        ROBOT Mini-Tutorial 1 - Convert, Extract and Template
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../robot-tutorial-2/" class="md-nav__link">
+        ROBOT Mini-Tutorial 2 - Annotate, Merge, Reason and Diff
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../robot-tutorial-qc/" class="md-nav__link">
+        ROBOT Mini-Tutorial QC - Quality Control with report, verify and query
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sparql-report-robot/" class="md-nav__link">
+        ROBOT - Generating SPARQL table reports
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sparql-report-odk/" class="md-nav__link">
+        ODK - Adding SPARQL table reports
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setting-up-project-odk/" class="md-nav__link">
+        ODK - Getting started with your own repo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../odk-tutorial-2/" class="md-nav__link">
+        ODK - 20 minute complete walk-through
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../custom-qc/" class="md-nav__link">
+        ODK - Adding custom Quality Check
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../managing-dynamic-imports-odk/" class="md-nav__link">
+        ODK - Managing imports
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../managing-ontology-releases-odk/" class="md-nav__link">
+        ODK - Managing ontology releases
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../migrating-ontology-to-odk/" class="md-nav__link">
+        ODK - Migrating to ODK
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../odk-toolbox/" class="md-nav__link">
+        ODK - Using the ODK Toolbox
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_9_3" type="checkbox" id="__nav_9_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_3" tabindex="0" aria-expanded="false">
+          Templates
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Templates" data-md-level="2">
+        <label class="md-nav__title" for="__nav_9_3">
+          <span class="md-nav__icon md-icon"></span>
+          Templates
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dosdp-overview/" class="md-nav__link">
+        Getting started with DOSDP templates
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dosdp-template/" class="md-nav__link">
+        DOSDP Templates Basic Tutorial
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dosdp-odk/" class="md-nav__link">
+        Introduction to Managing DOSDP Templates in ODK
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_9_4" type="checkbox" id="__nav_9_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_4" tabindex="0" aria-expanded="false">
+          Git, GitHub and Collaborative Workflows
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Git, GitHub and Collaborative Workflows" data-md-level="2">
+        <label class="md-nav__title" for="__nav_9_4">
+          <span class="md-nav__icon md-icon"></span>
+          Git, GitHub and Collaborative Workflows
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../github-fundamentals/" class="md-nav__link">
+        GitHub Fundamentals for OBO Engineers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../github-issues/" class="md-nav__link">
+        GitHub Issue for OBO Engineers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../managing-ontology-project/" class="md-nav__link">
+        Managing OBO ontology projects
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pull-requests/" class="md-nav__link">
+        Pull requests
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_9_5" type="checkbox" id="__nav_9_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_5" tabindex="0" aria-expanded="false">
+          ChatGPT
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="ChatGPT" data-md-level="2">
+        <label class="md-nav__title" for="__nav_9_5">
+          <span class="md-nav__icon md-icon"></span>
+          ChatGPT
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/chatgpt-ontology-curation/" class="md-nav__link">
+        Leveraging ChatGPT for ontology curation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ontogpt/" class="md-nav__link">
+        OntoGPT
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_9_6" type="checkbox" id="__nav_9_6" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_6" tabindex="0" aria-expanded="true">
+          Dealing with Semantic Data
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Dealing with Semantic Data" data-md-level="2">
+        <label class="md-nav__title" for="__nav_9_6">
+          <span class="md-nav__icon md-icon"></span>
+          Dealing with Semantic Data
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          From Tables to Linked Data
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        From Tables to Linked Data
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#0-before" class="md-nav__link">
+    0. Before
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-getting-organized" class="md-nav__link">
+    1. Getting Organized
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-getting-copies" class="md-nav__link">
+    2. Getting Copies
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-getting-my-bearings" class="md-nav__link">
+    3. Getting My Bearings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-getting-structured" class="md-nav__link">
+    4. Getting Structured
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-getting-clean" class="md-nav__link">
+    5. Getting Clean
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-getting-connected" class="md-nav__link">
+    6. Getting Connected
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-getting-triples" class="md-nav__link">
+    7. Getting Triples
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-getting-linked" class="md-nav__link">
+    8. Getting Linked
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-getting-it-done" class="md-nav__link">
+    9. Getting It Done
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../curies/" class="md-nav__link">
+        Standardizing Prefixes, CURIEs, and URIs with the `curies` package
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../units/" class="md-nav__link">
+        Units of Measurement
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sparql/" class="md-nav__link">
+        Basic SPARQL for OBO Engineers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../monarch-kg-neo4j-basics/" class="md-nav__link">
+        Basic cypher on the Monarch Neo4j graph
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_9_7" type="checkbox" id="__nav_9_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_7" tabindex="0" aria-expanded="false">
+          Command line
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Command line" data-md-level="2">
+        <label class="md-nav__title" for="__nav_9_7">
+          <span class="md-nav__icon md-icon"></span>
+          Command line
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../intro-cli-1/" class="md-nav__link">
+        Basic introduction to CLI 1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../intro-cli-2/" class="md-nav__link">
+        Basic introduction to CLI 2
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_9_8" type="checkbox" id="__nav_9_8" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_8" tabindex="0" aria-expanded="false">
+          Mappings and SSSOM
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Mappings and SSSOM" data-md-level="2">
+        <label class="md-nav__title" for="__nav_9_8">
+          <span class="md-nav__icon md-icon"></span>
+          Mappings and SSSOM
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sssom-tutorial/" class="md-nav__link">
+        Basic Tutorial
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lexmatch-tutorial/" class="md-nav__link">
+        Lexical Matching with OAK Lexmatch
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sssom-toolkit/" class="md-nav__link">
+        Introduction to the SSSOM Toolkit
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../biomappings/" class="md-nav__link">
+        Curating Mappings with Biomappings
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_9_9" type="checkbox" id="__nav_9_9" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_9" tabindex="0" aria-expanded="false">
+          General Ontology Modelling
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="General Ontology Modelling" data-md-level="2">
+        <label class="md-nav__title" for="__nav_9_9">
+          <span class="md-nav__icon md-icon"></span>
+          General Ontology Modelling
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project-ontology-development/" class="md-nav__link">
+        Project Ontology Development
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fhkb/" class="md-nav__link">
+        Family History Knowledge Base (FHKB) tutorial
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_9_10" type="checkbox" id="__nav_9_10" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_10" tabindex="0" aria-expanded="false">
+          Exomiser
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Exomiser" data-md-level="2">
+        <label class="md-nav__title" for="__nav_9_10">
+          <span class="md-nav__icon md-icon"></span>
+          Exomiser
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../exomiser-tutorial/" class="md-nav__link">
+        Introduction to Exomiser
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_9_11" type="checkbox" id="__nav_9_11" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_11" tabindex="0" aria-expanded="false">
+          Information Extraction
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Information Extraction" data-md-level="2">
+        <label class="md-nav__title" for="__nav_9_11">
+          <span class="md-nav__icon md-icon"></span>
+          Information Extraction
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../named-entity-recognition/" class="md-nav__link">
+        Named Entity Recognition with Gilda
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../named-entity-normalization/" class="md-nav__link">
+        Named Entity Normalization
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../named-entity-standardization/" class="md-nav__link">
+        Named Entity Standardization
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10" tabindex="0" aria-expanded="false">
+          How-to guides
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="How-to guides" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          How-to guides
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_10_1" type="checkbox" id="__nav_10_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10_1" tabindex="0" aria-expanded="false">
+          General
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="General" data-md-level="2">
+        <label class="md-nav__title" for="__nav_10_1">
+          <span class="md-nav__icon md-icon"></span>
+          General
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/open-science-engineer/" class="md-nav__link">
+        Maximising impact as an open science engineer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/create-ontology-from-scratch/" class="md-nav__link">
+        Creating an ontology from scratch
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/ontology-overview/" class="md-nav__link">
+        Create an ontology overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/prettify/" class="md-nav__link">
+        Prettify Markdown Files
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/screenshot/" class="md-nav__link">
+        Create Screenshot and paste into an issue
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/setup-docker/" class="md-nav__link">
+        Set-up docker
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_10_2" type="checkbox" id="__nav_10_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10_2" tabindex="0" aria-expanded="false">
+          Protege
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Protege" data-md-level="2">
+        <label class="md-nav__title" for="__nav_10_2">
+          <span class="md-nav__icon md-icon"></span>
+          Protege
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/install-protege/" class="md-nav__link">
+        Install Protégé
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/set-up-protege/" class="md-nav__link">
+        Setup Protege 5.5
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/installing-elk-in-protege/" class="md-nav__link">
+        Installing ELK in Protege
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/idrange/" class="md-nav__link">
+        Setting up your ID range
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/edit-in-protege/" class="md-nav__link">
+        Editing in Protege
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/daily-curator-workflow/" class="md-nav__link">
+        Daily Workflow
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/edit-in-protege/" class="md-nav__link">
+        Edit in Protege
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/switching-ontologies/" class="md-nav__link">
+        Switching Ontologies in Protege
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/protege-browse-search/" class="md-nav__link">
+        Browsing and Searching
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/create-new-term/" class="md-nav__link">
+        Creating New Terms in Protege
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/obsolete-term/" class="md-nav__link">
+        Obsoleting a Term
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/merge-terms/" class="md-nav__link">
+        Merging Terms
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/add-taxon-restrictions/" class="md-nav__link">
+        Adding Taxon Restrictions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/add-new-slim/" class="md-nav__link">
+        Creating a new Slim (under construction)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_10_3" type="checkbox" id="__nav_10_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10_3" tabindex="0" aria-expanded="false">
+          ODK
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="ODK" data-md-level="2">
+        <label class="md-nav__title" for="__nav_10_3">
+          <span class="md-nav__icon md-icon"></span>
+          ODK
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/setup-ontology-development-odk/" class="md-nav__link">
+        Get set up for ODK-based ontology development
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/odk-setup/" class="md-nav__link">
+        Setting up the ODK
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/odk-update/" class="md-nav__link">
+        Update to a newer ODK version
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/odk-create-repo/" class="md-nav__link">
+        Creating a Repo with ODK
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/deal-with-large-ontologies/" class="md-nav__link">
+        Dealing with Large Ontologies
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/update-import/" class="md-nav__link">
+        Updating Imports with ODK
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/odk-add-orcidio-module/" class="md-nav__link">
+        Import ORCIDIO
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/run-odk-with-podman/" class="md-nav__link">
+        Running ODK with podman
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_10_4" type="checkbox" id="__nav_10_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10_4" tabindex="0" aria-expanded="false">
+          Git and GitHub
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Git and GitHub" data-md-level="2">
+        <label class="md-nav__title" for="__nav_10_4">
+          <span class="md-nav__icon md-icon"></span>
+          Git and GitHub
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/term-request/" class="md-nav__link">
+        Make term requests to existing ontologies
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/clone-mondo-repo/" class="md-nav__link">
+        Clone a repository
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/github-create-fork/" class="md-nav__link">
+        Fork an ontology for editing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/github-create-pull-request/" class="md-nav__link">
+        Create a GitHub Pull Request
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/change-files-pull-request/" class="md-nav__link">
+        Change a pull request
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/fixing-conflicts/" class="md-nav__link">
+        Fix conflicts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/github-actions/" class="md-nav__link">
+        Automate tasks with GitHub actions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/revert-commit/" class="md-nav__link">
+        Revert a commit
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/review-pull-request/" class="md-nav__link">
+        Review a pull request
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_10_5" type="checkbox" id="__nav_10_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10_5" tabindex="0" aria-expanded="false">
+          Quality control
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Quality control" data-md-level="2">
+        <label class="md-nav__title" for="__nav_10_5">
+          <span class="md-nav__icon md-icon"></span>
+          Quality control
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/deploy-custom-obo-dashboard/" class="md-nav__link">
+        Deploy a custom OBO-Dashboard
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_10_6" type="checkbox" id="__nav_10_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10_6" tabindex="0" aria-expanded="false">
+          Command line
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Command line" data-md-level="2">
+        <label class="md-nav__title" for="__nav_10_6">
+          <span class="md-nav__icon md-icon"></span>
+          Command line
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/filter-text-file/" class="md-nav__link">
+        How to filter a file based on another file
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_10_7" type="checkbox" id="__nav_10_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10_7" tabindex="0" aria-expanded="false">
+          Mappings
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Mappings" data-md-level="2">
+        <label class="md-nav__title" for="__nav_10_7">
+          <span class="md-nav__icon md-icon"></span>
+          Mappings
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/are-two-entities-the-same/" class="md-nav__link">
+        Are these two entities the same? A guide.
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/review-disease-mappings/" class="md-nav__link">
+        How to review disease mappings
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_11" type="checkbox" id="__nav_11" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11" tabindex="0" aria-expanded="false">
+          Reference
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Reference" data-md-level="1">
+        <label class="md-nav__title" for="__nav_11">
+          <span class="md-nav__icon md-icon"></span>
+          Reference
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/glossary/" class="md-nav__link">
+        Tools
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/glossary-of-terms/" class="md-nav__link">
+        Glossary of Terms
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/frequently-used-odk-commands/" class="md-nav__link">
+        Frequently used ODK commands
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/protege-interface/" class="md-nav__link">
+        Protege Interface
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/protege-faq/" class="md-nav__link">
+        Protege FAQ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/formatting-license/" class="md-nav__link">
+        Formatting your ontology annotations correctly
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/go-style-annotation-property-practice/" class="md-nav__link">
+        OBO-style term annotation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_11_8" type="checkbox" id="__nav_11_8" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_8" tabindex="0" aria-expanded="false">
+          Ontology Matching
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Ontology Matching" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_8">
+          <span class="md-nav__icon md-icon"></span>
+          Ontology Matching
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/semantic-etl/" class="md-nav__link">
+        Semantic ETL
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_11_9" type="checkbox" id="__nav_11_9" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_9" tabindex="0" aria-expanded="false">
+          Git
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Git" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_9">
+          <span class="md-nav__icon md-icon"></span>
+          Git
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/github-intro/" class="md-nav__link">
+        Intro to GitHub
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/github-desktop/" class="md-nav__link">
+        GitHub Desktop
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/git-faq/" class="md-nav__link">
+        Git FAQ
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/semantic-engineering-toolbox/" class="md-nav__link">
+        Semantic Engineering Toolbox
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/tables-and-triples/" class="md-nav__link">
+        Tables and Triples
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/reasoning/" class="md-nav__link">
+        Reasoning
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/ontology-curator/" class="md-nav__link">
+        A day in the life of an ontology curator
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/protege-interface/" class="md-nav__link">
+        Protege interface
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_11_15" type="checkbox" id="__nav_11_15" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_15" tabindex="0" aria-expanded="false">
+          SPARQL
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="SPARQL" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_15">
+          <span class="md-nav__icon md-icon"></span>
+          SPARQL
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/sparql-basics/" class="md-nav__link">
+        SPARQL basics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/sparql-reference/" class="md-nav__link">
+        SPARQL templates
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/managing-issues/" class="md-nav__link">
+        Tools for Managing Issues
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/release-artefacts/" class="md-nav__link">
+        Release Artefacts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/base-specification/" class="md-nav__link">
+        Base Release
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/synonyms-obo/" class="md-nav__link">
+        Synonyms
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/mungall-blog-radar/" class="md-nav__link">
+        Monkeying around with OWL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/odk/" class="md-nav__link">
+        Ontology Development Kit (ODK)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/troublehooting-robot/" class="md-nav__link">
+        Troubleshooting ROBOT
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/gh-actions-errors/" class="md-nav__link">
+        Common Errors in GitHub actions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/other-resources/" class="md-nav__link">
+        Other useful resources
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/medical-ontology-landscape/" class="md-nav__link">
+        Medical Ontology landscape
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/wikidata/" class="md-nav__link">
+        A reference guide to Wikidata
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/obook-maturity-indicator/" class="md-nav__link">
+        OBOOK Maturity Indicator
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_11_28" type="checkbox" id="__nav_11_28" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_28" tabindex="0" aria-expanded="false">
+          ChatGPT
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="ChatGPT" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_28">
+          <span class="md-nav__icon md-icon"></span>
+          ChatGPT
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/chatgpt-prompts-for-ontology-development/" class="md-nav__link">
+        Leveraging ChatGPT for ontology curation
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/ontology-user/" class="md-nav__link">
+        Ontology User references
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_12" type="checkbox" id="__nav_12" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_12" tabindex="0" aria-expanded="false">
+          Explanations
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Explanations" data-md-level="1">
+        <label class="md-nav__title" for="__nav_12">
+          <span class="md-nav__icon md-icon"></span>
+          Explanations
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/intro-to-ontologies/" class="md-nav__link">
+        Introduction to Ontologies
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/logical-axiomatization/" class="md-nav__link">
+        Logical axiomatization of classes & use of reasoning
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/term-comments/" class="md-nav__link">
+        Term Comments
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/annotation-properties/" class="md-nav__link">
+        Introduction to Annotation Properties
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/writing-good-issues/" class="md-nav__link">
+        Writing good issues
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/ontology-matching/" class="md-nav__link">
+        Ontology Matching
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/which-ontology-to-use/" class="md-nav__link">
+        Which biomedical ontologies should we use?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/owl-format-variants/" class="md-nav__link">
+        OWL, OBO, JSON? Base, simple, full, basic? What should you use, and why?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/taxon-constraints-explainer/" class="md-nav__link">
+        What are taxon constraints?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/owl-building-blocks/" class="md-nav__link">
+        The logical building blocks of OWL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/subClassOf-vs-equivalentTo/" class="md-nav__link">
+        SubClassOf versus EquivalentTo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/existential-restrictions/" class="md-nav__link">
+        Existential restrictions
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_13" type="checkbox" id="__nav_13" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_13" tabindex="0" aria-expanded="false">
+          OBOOK Editors
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="OBOOK Editors" data-md-level="1">
+        <label class="md-nav__title" for="__nav_13">
+          <span class="md-nav__icon md-icon"></span>
+          OBOOK Editors
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started-obook/" class="md-nav__link">
+        Getting started for OBOOK editors
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../images/" class="md-nav__link">
+        How to add images
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/embed-video/" class="md-nav__link">
+        How to embed videos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../config/template/" class="md-nav__link">
+        New lesson template
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teaching/case-studies/" class="md-nav__link">
+        Case studies for teaching
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_14" type="checkbox" id="__nav_14" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_14" tabindex="0" aria-expanded="false">
+          Outreach
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Outreach" data-md-level="1">
+        <label class="md-nav__title" for="__nav_14">
+          <span class="md-nav__icon md-icon"></span>
+          Outreach
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/outreach/" class="md-nav__link">
+        Outreach materials
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#0-before" class="md-nav__link">
+    0. Before
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-getting-organized" class="md-nav__link">
+    1. Getting Organized
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-getting-copies" class="md-nav__link">
+    2. Getting Copies
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-getting-my-bearings" class="md-nav__link">
+    3. Getting My Bearings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-getting-structured" class="md-nav__link">
+    4. Getting Structured
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-getting-clean" class="md-nav__link">
+    5. Getting Clean
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-getting-connected" class="md-nav__link">
+    6. Getting Connected
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-getting-triples" class="md-nav__link">
+    7. Getting Triples
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-getting-linked" class="md-nav__link">
+    8. Getting Linked
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-getting-it-done" class="md-nav__link">
+    9. Getting It Done
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/OBOAcademy/obook/edit/master/docs/tutorial/linking-data.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+    </a>
+  
+  
+
+
+
+<h1 id="tutorial-from-tables-to-linked-data">Tutorial: From Tables to Linked Data<a class="headerlink" href="#tutorial-from-tables-to-linked-data" title="Permanent link">&para;</a></h1>
+<p>These are the kinds of things that I do
+when I need to work with a new dataset.
+My goal is to have data that makes good sense
+and that I can integrate with other data
+using standard technologies:
+Linked Data.</p>
+<h2 id="0-before">0. Before<a class="headerlink" href="#0-before" title="Permanent link">&para;</a></h2>
+<p>The boss just sent me this new table to figure out:</p>
+<table>
+<thead>
+<tr>
+<th>datetime</th>
+<th>investigator</th>
+<th>subject</th>
+<th>species</th>
+<th>strain</th>
+<th>sex</th>
+<th>group</th>
+<th>protocol</th>
+<th>organ</th>
+<th>disease</th>
+<th>qualifier</th>
+<th>comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1/1/14 10:21 AM</td>
+<td>JAO</td>
+<td>12</td>
+<td>RAT</td>
+<td>F 344/N</td>
+<td>FEMALE</td>
+<td>1</td>
+<td>HISTOPATHOLOGY</td>
+<td>LUNG</td>
+<td>ADENOCARCINOMA</td>
+<td>SEVERE</td>
+<td></td>
+</tr>
+<tr>
+<td>1/1/14 10:30 AM</td>
+<td>JO</td>
+<td>31</td>
+<td>MOUSE</td>
+<td>B6C3F1</td>
+<td>MALE</td>
+<td>2</td>
+<td>HISTOPATHOLOGY</td>
+<td>NOSE</td>
+<td>INFLAMMATION</td>
+<td>MILD</td>
+<td></td>
+</tr>
+<tr>
+<td>1/1/14 10:45 AM</td>
+<td>JAO</td>
+<td>45</td>
+<td>RAT</td>
+<td>F 344/N</td>
+<td>MALE</td>
+<td>1</td>
+<td>HISTOPATHOLOGY</td>
+<td>ADRENAL CORTEX</td>
+<td>NECROSIS</td>
+<td>MODERATE</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>It doesn't seem too bad,
+but there's lots of stuff that I don't quite understand.
+Where to start?</p>
+<h2 id="1-getting-organized">1. Getting Organized<a class="headerlink" href="#1-getting-organized" title="Permanent link">&para;</a></h2>
+<p>Before I do anything else,
+I'm going to set up a new project for working with this data.
+Maybe I'll change my mind later
+and want to merge the new project with an existing project,
+but it never hurts to start from a nice clean state.</p>
+<p>I'll make a new directory in a sensible place
+with a sensible name.
+In my case I have a <code>~/Repositories/</code> directory,
+with subdirectories for GitHub and various GitLab servers,
+a <code>local</code> directory for projects I don't plan to share,
+and a <code>temp</code> directory for projects that I don't need to keep.
+I'm not sure if I'm going to share this work,
+so it can go in a new subdirectory of <code>local</code>.
+I'll call it "linking-data-tutorial" for now.</p>
+<p>Then I'll run <code>git init</code> to turn that directory into a git repository.
+For now I'm just going to work locally,
+but later I can make a repository on GitHub
+and push my local repository there.</p>
+<p>Next I'll create a <code>README.md</code> file
+where I'll keep notes for myself to read later.
+My preferred editor is <a href="https://kakoune.org">Kakoune</a>.</p>
+<p>So I'll open a terminal and run these commands:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>~/Repositories/local/
+$<span class="w"> </span>mkdir<span class="w"> </span>linking-data-tutorial
+$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>linking-data-tutorial
+$<span class="w"> </span>git<span class="w"> </span>init
+$<span class="w"> </span>kak<span class="w"> </span>README.md
+</code></pre></div>
+<p>In the README I'll start writing something like this:</p>
+<div class="highlight"><pre><span></span><code><span class="gh"># Linking Data Tutorial</span>
+
+An example of how to convert a dataset to Linked Data.
+
+The source data is available from
+&lt;https://github.com/jamesaoverton/obook/tree/master/03-RDF/data.csv&gt;
+</code></pre></div>
+<p>Maybe this information should go somewhere else eventually,
+but the README is a good place to start.</p>
+<p>"Commit early, commit often" they say, so:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>README.md
+$<span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Initial commit&quot;</span>
+</code></pre></div>
+<h2 id="2-getting-copies">2. Getting Copies<a class="headerlink" href="#2-getting-copies" title="Permanent link">&para;</a></h2>
+<p>Data has an annoying tendency to get changed.
+You don't want it changing out from under you
+while you're in the middle of something.
+So the next thing to do is get a copy of the data
+and store it locally.
+If it's big, you can store a compressed copy.
+If it's too big to fit on your local machine,
+well keep the best notes you can of how to get to the data,
+and what operations you're doing on it.</p>
+<p>I'm going to make a <code>cache</code> directory
+and store all my "upstream" data there.
+I'm going to fetch the data and that's it --
+I'm <strong>not</strong> going to edit these files.
+When I want to change the data I'll make copies in another directory.
+I don't want git to track the cached data,
+so I'll add <code>/cache/</code> to <code>.gitignore</code>
+and tell git to track <em>that</em>.
+Then I'll use <code>curl</code> to download the file.</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>mkdir<span class="w"> </span>cache
+$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;/cache/&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>.gitignore
+$<span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>.gitignore
+$<span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Ignore /cache/ directory&quot;</span>
+$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>cache
+$<span class="w"> </span>curl<span class="w"> </span>-LO<span class="w"> </span><span class="s2">&quot;https://github.com/jamesaoverton/obook/raw/master/03-RDF/data.csv&quot;</span>
+$<span class="w"> </span>ls
+data.csv
+$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>..
+$<span class="w"> </span>ls<span class="w"> </span>-a
+.gitignore<span class="w"> </span>data<span class="w"> </span>README.md
+</code></pre></div>
+<h2 id="3-getting-my-bearings">3. Getting My Bearings<a class="headerlink" href="#3-getting-my-bearings" title="Permanent link">&para;</a></h2>
+<p>The first thing to do is look at the data.
+In this case I have just one table in CSV format,
+so I can use any number of tools to open the file and look around.
+I bet the majority of people would reach for Excel.
+My (idiosyncratic) preference is <a href="https://www.visidata.org">VisiData</a>.</p>
+<p>What am I looking for?
+A bunch of different things:</p>
+<ul>
+<li>what do the rows represent?</li>
+<li>what columns do I have?</li>
+<li>for each column, what sorts of values do I have?</li>
+</ul>
+<p>In my README file I'll make a list of the columns
+like this:</p>
+<div class="highlight"><pre><span></span><code><span class="k">-</span><span class="w"> </span>datetime
+<span class="k">-</span><span class="w"> </span>investigator
+<span class="k">-</span><span class="w"> </span>subject
+<span class="k">-</span><span class="w"> </span>species
+<span class="k">-</span><span class="w"> </span>strain
+<span class="k">-</span><span class="w"> </span>sex
+<span class="k">-</span><span class="w"> </span>group
+<span class="k">-</span><span class="w"> </span>protocol
+<span class="k">-</span><span class="w"> </span>organ
+<span class="k">-</span><span class="w"> </span>disease
+<span class="k">-</span><span class="w"> </span>qualifier
+<span class="k">-</span><span class="w"> </span>comment
+</code></pre></div>
+<p>Then I'll make some notes for myself:</p>
+<div class="highlight"><pre><span></span><code><span class="k">-</span><span class="w"> </span>datetime: American-style dates, D/M/Y or M/D/Y?
+<span class="k">-</span><span class="w"> </span>investigator: initials, ORCID?
+<span class="k">-</span><span class="w"> </span>subject: integer ID
+<span class="k">-</span><span class="w"> </span>species: common name for species, NCBITaxon?
+<span class="k">-</span><span class="w"> </span>strain: some sort of code with letters, numbers, spaces, some punctuation
+<span class="k">-</span><span class="w"> </span>sex: string female/male
+<span class="k">-</span><span class="w"> </span>group: integer ID
+<span class="k">-</span><span class="w"> </span>protocol: string, OBI?
+<span class="k">-</span><span class="w"> </span>organ: string, UBERON?
+<span class="k">-</span><span class="w"> </span>disease: string, DO/MONDO?
+<span class="k">-</span><span class="w"> </span>qualifier: string, PATO?
+<span class="k">-</span><span class="w"> </span>comment: ???
+</code></pre></div>
+<p>You can see that I'm trying to figure out what's in each column.
+I'm also thinking ahead to OBO ontologies that I know of
+that may have terms that I can use for each column.</p>
+<h2 id="4-getting-structured">4. Getting Structured<a class="headerlink" href="#4-getting-structured" title="Permanent link">&para;</a></h2>
+<p>In the end, I want to have nice, clean Linked Data.
+But I don't have to get there in one giant leap.
+Instead I'll take a bunch of small, incremental steps.</p>
+<p>There's lots of tools I can use,
+but this time I'll use SQLite.</p>
+<p>First I'll set up some more directories.
+I'll create a <code>build</code> directory
+where I'll store temporary files.
+I don't want git to track this directory,
+so I'll add it to <code>.gitignore</code>.</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>mkdir<span class="w"> </span>build/
+$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;/build/&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>.gitignore
+$<span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>.gitignore
+$<span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Ignore /build/ directory&quot;</span>
+</code></pre></div>
+<p>I'll also add a <code>src</code> directory to store code.
+I do want to track <code>src</code> with git.</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>mkdir<span class="w"> </span>src
+$<span class="w"> </span>kak<span class="w"> </span>src/data.sql
+</code></pre></div>
+<p>In <code>src/data.sql</code> I'll add just enough to import <code>build/data.csv</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">-- import build/data.csv</span>
+<span class="p">.</span><span class="k">mode</span><span class="w"> </span><span class="n">csv</span>
+<span class="p">.</span><span class="n">import</span><span class="w"> </span><span class="n">build</span><span class="o">/</span><span class="k">data</span><span class="p">.</span><span class="n">csv</span><span class="w"> </span><span class="n">data_csv</span>
+</code></pre></div>
+<p>This will create a <code>build/data.db</code> file
+and import <code>build/data.csv</code> into a <code>data_csv</code> table.
+Does it work?</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>sqlite3<span class="w"> </span>build/data.db<span class="w"> </span>&lt;<span class="w"> </span>src/data.sql
+$<span class="w"> </span>sqlite3<span class="w"> </span>build/data.db<span class="w"> </span><span class="o">&lt;&lt;&lt;</span><span class="w"> </span><span class="s2">&quot;SELECT * FROM data_csv LIMIT 1;&quot;</span>
+<span class="m">2014</span>-01-01<span class="w"> </span><span class="m">10</span>:21:00-0500<span class="p">|</span>JAO<span class="p">|</span><span class="m">12</span><span class="p">|</span>RAT<span class="p">|</span>F<span class="w"> </span><span class="m">344</span>/N<span class="p">|</span>FEMALE<span class="p">|</span><span class="m">1</span><span class="p">|</span>HISTOPATHOLOGY<span class="p">|</span>LUNG<span class="p">|</span>ADENOCARCINOMA<span class="p">|</span>SEVERE<span class="p">|</span>
+</code></pre></div>
+<p>Nice!</p>
+<p>Note that I didn't even specify a schema for <code>data_csv</code>.
+It uses the first row as the column names,
+and the type of every column is <code>TEXT</code>.
+Here's the schema I end up with:</p>
+<div class="highlight"><pre><span></span><code><span class="err">$</span><span class="w"> </span><span class="n">sqlite3</span><span class="w"> </span><span class="n">build</span><span class="o">/</span><span class="k">data</span><span class="p">.</span><span class="n">db</span><span class="w"> </span><span class="o">&lt;&lt;&lt;</span><span class="w"> </span><span class="ss">&quot;.schema data_csv&quot;</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">data_csv</span><span class="p">(</span>
+<span class="w">  </span><span class="ss">&quot;datetime&quot;</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">  </span><span class="ss">&quot;investigator&quot;</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">  </span><span class="ss">&quot;subject&quot;</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">  </span><span class="ss">&quot;species&quot;</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">  </span><span class="ss">&quot;strain&quot;</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">  </span><span class="ss">&quot;sex&quot;</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">  </span><span class="ss">&quot;group&quot;</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">  </span><span class="ss">&quot;protocol&quot;</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">  </span><span class="ss">&quot;organ&quot;</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">  </span><span class="ss">&quot;disease&quot;</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">  </span><span class="ss">&quot;qualifier&quot;</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">  </span><span class="ss">&quot;comment&quot;</span><span class="w"> </span><span class="nb">TEXT</span>
+<span class="p">);</span>
+</code></pre></div>
+<p>I'm going to want to update <code>src/data.sql</code>
+then rebuild the database over and over.
+It's small, so this will only take a second.
+If it was big,
+then I would copy a subset into <code>build/data.csv</code> for now
+so that I the script still runs in a second or two
+and I can iterate quickly.
+I'll write a <code>src/build.sh</code> script to make life a little easier:</p>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/sh</span>
+
+rm<span class="w"> </span>-f<span class="w"> </span>build/*
+cp<span class="w"> </span>cache/data.csv<span class="w"> </span>build/data.csv
+sqlite3<span class="w"> </span>build/data.db<span class="w"> </span>&lt;<span class="w"> </span>src/data.sql
+</code></pre></div>
+<p>Does it work?</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>sh<span class="w"> </span>src/build.sh
+</code></pre></div>
+<p>Nice!
+Time to update the README:</p>
+<div class="highlight"><pre><span></span><code><span class="gu">## Requirements</span>
+
+<span class="k">-</span><span class="w"> </span>[<span class="nt">SQLite3</span>](<span class="na">https://sqlite.org/index.html</span>)
+
+<span class="gu">## Usage</span>
+
+Run <span class="sb">`sh src/build.sh`</span>
+</code></pre></div>
+<p>I'll commit my work in progress:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>src/data.sql<span class="w"> </span>src/build.sh
+$<span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>--update
+$<span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Load data.csv into SQLite&quot;</span>
+</code></pre></div>
+<p>Now I have a script
+that executes a SQL file
+that loads the source data into a new database.
+I'll modify the <code>src/data.sql</code> file
+in a series of small steps
+until it has the structure that I want.</p>
+<h2 id="5-getting-clean">5. Getting Clean<a class="headerlink" href="#5-getting-clean" title="Permanent link">&para;</a></h2>
+<p>In the real world, data is always a mess.
+It takes real work to clean it up.
+And really, it's almost never perfectly clean.</p>
+<p>It's important to recognize that cleaning data has diminishing returns.
+There's low hanging fruit:
+easy to clean, often with code, and bringing big benefits.
+Then there's tough stuff
+that requires an expert to work through the details,
+row by row.</p>
+<p>The first thing to do is figure out the schema you want.
+I'll create a new <code>data</code> table
+and start with the default schema from <code>data_csv</code>.
+Notice that in the default schema all the column names are quoted.
+That's kind of annoying.
+But when I remove the quotation marks
+I realize that one of the column names is "datetime",
+but <code>datetime</code> is a keyword in SQLite!
+You can't use it as a column name without quoting.
+I'll rename it to "assay_datetime".
+I have the same problem with "group".
+I'll rename "group" to "group_id"
+and "subject" to "subject_id".
+The rest of the column names seem fine.</p>
+<p>I want "assay_datetime" to be in standard ISO datetime format,
+but SQLite stores these as TEXT.
+The "subject" and "group" columns are currently integers,
+but I plan to make them into URIs to CURIEs.
+So everything will still be TEXT.</p>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">data</span><span class="p">(</span>
+<span class="w">  </span><span class="n">assay_datetime</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">  </span><span class="n">investigator</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">  </span><span class="n">subject_id</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">  </span><span class="n">species</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">  </span><span class="n">strain</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">  </span><span class="n">sex</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">  </span><span class="n">group_id</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">  </span><span class="n">protocol</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">  </span><span class="n">organ</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">  </span><span class="n">disease</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">  </span><span class="n">qualifier</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">  </span><span class="k">comment</span><span class="w"> </span><span class="nb">TEXT</span>
+<span class="p">);</span>
+</code></pre></div>
+<p>The dates currently look like "1/1/14 10:21 AM".
+Say I know that they were done on Eastern Standard Time.
+How do I convert to ISO dates like "2014-01-01 10:21:00-0500"?
+Well SQLite isn't the right tool for this.
+The Unix <code>date</code> command does a nice job, though:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>date<span class="w"> </span>-d<span class="w"> </span><span class="s2">&quot;1/1/14 10:21 AM EST&quot;</span><span class="w"> </span>+<span class="s2">&quot;%Y-%m-%d %H:%M:%S%z&quot;</span>
+<span class="m">2014</span>-01-01<span class="w"> </span><span class="m">10</span>:21:00-0500
+</code></pre></div>
+<p>I can run that over each line of the file using <code>awk</code>.
+So I update the <code>src/build.sh</code>
+to rework the <code>build/data.csv</code> before I import:</p>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/sh</span>
+
+rm<span class="w"> </span>-f<span class="w"> </span>build/*
+
+head<span class="w"> </span>-n1<span class="w"> </span>cache/data.csv<span class="w"> </span>&gt;<span class="w"> </span>build/data.csv
+tail<span class="w"> </span>-n+2<span class="w"> </span>cache/data.csv<span class="w"> </span><span class="se">\</span>
+<span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;BEGIN{FS=&quot;,&quot;; OFS=&quot;,&quot;} {</span>
+<span class="s1">  &quot;date -d \&quot;&quot;$1&quot; EST\&quot; +\&quot;%Y-%m-%d %H:%M:%S%z\&quot;&quot; | getline $1;</span>
+<span class="s1">  print $0</span>
+<span class="s1">}&#39;</span><span class="w"> </span><span class="se">\</span>
+&gt;&gt;<span class="w"> </span>build/data.csv
+
+sqlite3<span class="w"> </span>build/data.db<span class="w"> </span>&lt;<span class="w"> </span>src/data.sql
+</code></pre></div>
+<p>One more problem I could clean up
+is that "JO" should really be "JAO" --
+that's just a typo,
+and they should both refer to James A. Overton.
+I could make that change in <code>src/build.sh</code>,
+but I'll do it in <code>src/data.sql</code> instead.
+I'll write a query to copy all the rows of <code>data_csv</code> into <code>data</code>
+and then I'll update <code>data</code> with some fixes.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">-- copy from data_csv to data</span>
+<span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="k">data</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">data_csv</span><span class="p">;</span>
+
+<span class="c1">-- clean data</span>
+<span class="k">UPDATE</span><span class="w"> </span><span class="k">data</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">investigator</span><span class="o">=</span><span class="ss">&quot;JAO&quot;</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">investigator</span><span class="o">=</span><span class="ss">&quot;JO&quot;</span><span class="p">;</span>
+</code></pre></div>
+<p>Honestly, it took me quite a while to write that <code>awk</code> command.
+It's a very powerful tool,
+but I don't use it enough to remember how it works.
+You might prefer to write yourself a Python script, or some R code.
+You could use that instead of this SQL UPDATE as well.
+I just wanted to show you two of the thousands of ways to do this.
+If there's a lot of replacements like "JO",
+then you might also consider listing them in another table
+that you can read into your script.</p>
+<p>The important part is to <em>automate</em> your cleaning!</p>
+<p>Why didn't I just edit <code>cache/data.csv</code> in Excel?
+In step 2 I saved a copy of the data
+because I didn't want it to change while I was working on it,
+but I <em>do</em> expect it to change!
+By automating the cleaning process,
+I should be able to just update <code>cache/data.csv</code>
+run everything again,
+and the fixes will be applied again.
+I don't want to do all this work manually
+every time the upstream data is updated.</p>
+<p>I'll commit my work in progress:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>--update
+$<span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Start cleaning data&quot;</span>
+</code></pre></div>
+<p>Cleaning can take a lot of work.
+This is example table is pretty clean already.
+The next hard part is sorting out your terminology.</p>
+<h2 id="6-getting-connected">6. Getting Connected<a class="headerlink" href="#6-getting-connected" title="Permanent link">&para;</a></h2>
+<p>It's pretty easy to convert a table <em>structure</em> to triples.
+The hard part is converting the table <em>contents</em>.
+There are some identifiers in the table that would be better as URLs,
+and there's a bunch of terminology that would be better
+if it was linked to an ontology or other system.</p>
+<p>I'll start with the identifiers that are <em>local</em> to this data:
+subject_id and group_id.
+I can convert them to URLs by defining a prefix
+and then just using that prefix.
+I'll use string concatenation to update the table:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">-- update subject and groupd IDs</span>
+<span class="k">UPDATE</span><span class="w"> </span><span class="k">data</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">subject_id</span><span class="o">=</span><span class="s1">&#39;ex:subject-&#39;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">subject_id</span><span class="p">;</span>
+<span class="k">UPDATE</span><span class="w"> </span><span class="k">data</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">group_id</span><span class="o">=</span><span class="s1">&#39;ex:group-&#39;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">group_id</span><span class="p">;</span>
+</code></pre></div>
+<p>Now I'll check my work:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>sqlite3<span class="w"> </span>build/data.db<span class="w"> </span><span class="o">&lt;&lt;&lt;</span><span class="w"> </span><span class="s2">&quot;SELECT * FROM data_csv LIMIT 1;&quot;</span>
+<span class="m">2014</span>-01-01<span class="w"> </span><span class="m">10</span>:21:00-0500<span class="p">|</span>JAO<span class="p">|</span>ex:subject-12<span class="p">|</span>RAT<span class="p">|</span>F<span class="w"> </span><span class="m">344</span>/N<span class="p">|</span>FEMALE<span class="p">|</span>ex:group-1<span class="p">|</span>HISTOPATHOLOGY<span class="p">|</span>LUNG<span class="p">|</span>ADENOCARCINOMA<span class="p">|</span>SEVERE<span class="p">|</span>
+</code></pre></div>
+<p>I should take a moment to tell you,
+that while I was writing the Turtle conversion code later in this essay,
+I had to come back here and change these identifiers.
+The thing is that Turtle is often more strict than I expect
+about identifier syntax.
+Turtle identifiers <em>look</em> like
+<a href="https://en.wikipedia.org/wiki/CURIE">CURIEs</a>,
+but they're actually
+<a href="https://en.wikipedia.org/wiki/QName">QNames</a>.
+CURIEs are pretty much just just URLs shortened with a prefix,
+so almost anything goes.
+QNames come from <a href="https://en.wikipedia.org/wiki/XML">XML</a>,
+and Turtle identifiers have to be valid XML element names.</p>
+<p>I always remember that I need to stick to alphanumeric characters,
+and that I have to replace whitespace and punctuation with a <code>-</code> or <code>_</code>.
+I didn't remember that the local part (aka "suffix", aka "NCName")
+can't start with a digit.
+So I tried to use "subject:12" and "group:1" as my identifiers.
+That worked fine until I generated Turtle.
+The Turtle <em>looked</em> fine,
+so it took me quite a while to figure out why
+it looked very wrong when I converted it into RDXML format.</p>
+<p>This kind of thing happens to me all the time.
+I'm almost always using a mixture of technologies
+based on different sets of assumptions,
+and there are always things that don't line up.
+That's why I like to work in small iterations,
+checking my work as I go
+(preferrably with automated tests),
+and keeping everything in version control.
+When I need to make a change like this one,
+I just circle back and iterate again.</p>
+<p>The next thing is to tackle the terminology.
+First I'll just make a list of the terms I'm using
+from the relevant columns in <code>build/term.tsv</code>:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>sqlite3<span class="w"> </span>build/data.db<span class="w"> </span><span class="s">&lt;&lt; EOF &gt; build/term.tsv</span>
+<span class="s">SELECT investigator FROM data</span>
+<span class="s">UNION SELECT species FROM data</span>
+<span class="s">UNION SELECT strain FROM data</span>
+<span class="s">UNION SELECT strain FROM data</span>
+<span class="s">UNION SELECT sex FROM data</span>
+<span class="s">UNION SELECT protocol FROM data</span>
+<span class="s">UNION SELECT organ FROM data</span>
+<span class="s">UNION SELECT disease FROM data</span>
+<span class="s">UNION SELECT qualifier FROM data;</span>
+<span class="s">EOF</span>
+</code></pre></div>
+<p>It's a lot of work to go through all those terms
+and find good ontology terms.
+I'm going to do that hard work for you
+(just this once!)
+so we can keep moving.
+I'll add this table to <code>src/term.tsv</code></p>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>code</th>
+<th>label</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>obo:NCBITaxon_10116</td>
+<td>RAT</td>
+<td>Rattus norvegicus</td>
+</tr>
+<tr>
+<td>obo:NCBITaxon_10090</td>
+<td>MOUSE</td>
+<td>Mus musculus</td>
+</tr>
+<tr>
+<td>ex:F344N</td>
+<td>F 344/N</td>
+<td>F 344/N</td>
+</tr>
+<tr>
+<td>ex:B6C3F1</td>
+<td>B6C3F1</td>
+<td>B6C3F1</td>
+</tr>
+<tr>
+<td>obo:PATO_0000383</td>
+<td>FEMALE</td>
+<td>female</td>
+</tr>
+<tr>
+<td>obo:PATO_0000384</td>
+<td>MALE</td>
+<td>male</td>
+</tr>
+<tr>
+<td>obo:OBI_0600020</td>
+<td>HISTOPATHOLOGY</td>
+<td>histology</td>
+</tr>
+<tr>
+<td>obo:UBERON_0002048</td>
+<td>LUNG</td>
+<td>lung</td>
+</tr>
+<tr>
+<td>obo:UBERON_0007827</td>
+<td>NOSE</td>
+<td>external nose</td>
+</tr>
+<tr>
+<td>obo:UBERON_0001235</td>
+<td>ADRENAL CORTEX</td>
+<td>adrenal cortex</td>
+</tr>
+<tr>
+<td>obo:MPATH_268</td>
+<td>ADENOCARCINOMA</td>
+<td>adenocarcinoma</td>
+</tr>
+<tr>
+<td>obo:MPATH_212</td>
+<td>INFLAMMATION</td>
+<td>inflammation</td>
+</tr>
+<tr>
+<td>obo:MPATH_4</td>
+<td>NECROSIS</td>
+<td>necrosis</td>
+</tr>
+<tr>
+<td>obo:PATO_0000396</td>
+<td>SEVERE</td>
+<td>severe intensity</td>
+</tr>
+<tr>
+<td>obo:PATO_0000394</td>
+<td>MILD</td>
+<td>mild intensity</td>
+</tr>
+<tr>
+<td>obo:PATO_0000395</td>
+<td>MODERATE</td>
+<td>moderate intensity</td>
+</tr>
+<tr>
+<td>orcid:0000-0001-5139-5557</td>
+<td>JAO</td>
+<td>James A. Overton</td>
+</tr>
+</tbody>
+</table>
+<p>And I'll add these prefixes to <code>src/prefix.tsv</code>:</p>
+<table>
+<thead>
+<tr>
+<th>prefix</th>
+<th>base</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>rdf</td>
+<td>http://www.w3.org/1999/02/22-rdf-syntax-ns#</td>
+</tr>
+<tr>
+<td>rdfs</td>
+<td>http://www.w3.org/2000/01/rdf-schema#</td>
+</tr>
+<tr>
+<td>xsd</td>
+<td>http://www.w3.org/2001/XMLSchema#</td>
+</tr>
+<tr>
+<td>owl</td>
+<td>http://www.w3.org/2002/07/owl#</td>
+</tr>
+<tr>
+<td>obo</td>
+<td>http://purl.obolibrary.org/obo/</td>
+</tr>
+<tr>
+<td>orcid</td>
+<td>http://orcid.org/</td>
+</tr>
+<tr>
+<td>ex</td>
+<td>https://example.com/</td>
+</tr>
+<tr>
+<td>subject</td>
+<td>https://example.com/subject/</td>
+</tr>
+<tr>
+<td>group</td>
+<td>https://example.com/group/</td>
+</tr>
+</tbody>
+</table>
+<p>Now I can import these tables into SQL
+and use the term table as a FOREIGN KEY constraint
+on data:</p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="k">mode</span><span class="w"> </span><span class="n">tabs</span>
+
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">prefix</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="k">prefix</span><span class="w"> </span><span class="nb">TEXT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">  </span><span class="n">base</span><span class="w"> </span><span class="nb">TEXT</span><span class="w"> </span><span class="k">UNIQUE</span>
+<span class="p">);</span>
+<span class="p">.</span><span class="n">import</span><span class="w"> </span><span class="c1">--skip 1 src/prefix.tsv prefix</span>
+
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">term</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="nb">TEXT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">  </span><span class="n">code</span><span class="w"> </span><span class="nb">TEXT</span><span class="w"> </span><span class="k">UNIQUE</span><span class="p">,</span>
+<span class="w">  </span><span class="n">label</span><span class="w"> </span><span class="nb">TEXT</span><span class="w"> </span><span class="k">UNIQUE</span>
+<span class="p">);</span>
+<span class="p">.</span><span class="n">import</span><span class="w"> </span><span class="c1">--skip 1 src/term.tsv term</span>
+
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">data</span><span class="p">(</span>
+<span class="w">  </span><span class="n">assay_datetime</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">  </span><span class="n">investigator</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">  </span><span class="n">subject_id</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">  </span><span class="n">species</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">  </span><span class="n">strain</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">  </span><span class="n">sex</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">  </span><span class="n">group_id</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">  </span><span class="n">protocol</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">  </span><span class="n">organ</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">  </span><span class="n">disease</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">  </span><span class="n">qualifier</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">  </span><span class="k">comment</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">  </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="p">(</span><span class="n">investigator</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">term</span><span class="p">(</span><span class="n">id</span><span class="p">),</span>
+<span class="w">  </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="p">(</span><span class="n">species</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">term</span><span class="p">(</span><span class="n">id</span><span class="p">),</span>
+<span class="w">  </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="p">(</span><span class="n">strain</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">term</span><span class="p">(</span><span class="n">id</span><span class="p">),</span>
+<span class="w">  </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="p">(</span><span class="n">sex</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">term</span><span class="p">(</span><span class="n">id</span><span class="p">),</span>
+<span class="w">  </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="p">(</span><span class="n">protocol</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">term</span><span class="p">(</span><span class="n">id</span><span class="p">),</span>
+<span class="w">  </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="p">(</span><span class="n">organ</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">term</span><span class="p">(</span><span class="n">id</span><span class="p">),</span>
+<span class="w">  </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="p">(</span><span class="n">disease</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">term</span><span class="p">(</span><span class="n">id</span><span class="p">),</span>
+<span class="w">  </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="p">(</span><span class="n">qualifier</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">term</span><span class="p">(</span><span class="n">id</span><span class="p">)</span>
+<span class="p">);</span>
+
+<span class="c1">-- copy from data_csv to data</span>
+<span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="k">data</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">data_csv</span><span class="p">;</span>
+
+<span class="c1">-- clean data</span>
+<span class="k">UPDATE</span><span class="w"> </span><span class="k">data</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">investigator</span><span class="o">=</span><span class="s1">&#39;JAO&#39;</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">investigator</span><span class="o">=</span><span class="s1">&#39;JO&#39;</span><span class="p">;</span>
+
+<span class="c1">-- update subject and groupd IDs</span>
+<span class="k">UPDATE</span><span class="w"> </span><span class="k">data</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">subject_id</span><span class="o">=</span><span class="s1">&#39;ex:subject-&#39;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">subject_id</span><span class="p">;</span>
+<span class="k">UPDATE</span><span class="w"> </span><span class="k">data</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">group_id</span><span class="o">=</span><span class="s1">&#39;ex:group-&#39;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">group_id</span><span class="p">;</span>
+</code></pre></div>
+<p>I'll update the README:</p>
+<div class="highlight"><pre><span></span><code>See <span class="sb">`src/`</span> for:
+
+<span class="k">-</span><span class="w"> </span><span class="sb">`prefix.tsv`</span>: shared prefixes
+<span class="k">-</span><span class="w"> </span><span class="sb">`term.tsv`</span>: terminology
+</code></pre></div>
+<p>I'll commit my work in progress:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>src/prefix.tsv<span class="w"> </span>src/term.tsv
+$<span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>--update
+$<span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Add and apply prefix and term tables&quot;</span>
+</code></pre></div>
+<p>Now all the terms are linked to controlled vocabularies
+of one sort or another.
+If I want to see the IDs for those links instead of the "codes"
+I can define a VIEW:</p>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">VIEW</span><span class="w"> </span><span class="n">linked_data_id</span><span class="w"> </span><span class="k">AS</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">assay_datetime</span><span class="p">,</span>
+<span class="w">  </span><span class="n">investigator_term</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">investigator</span><span class="p">,</span>
+<span class="w">  </span><span class="n">subject_id</span><span class="p">,</span>
+<span class="w">  </span><span class="n">species_term</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">species</span><span class="p">,</span>
+<span class="w">  </span><span class="n">strain_term</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">strain</span><span class="p">,</span>
+<span class="w">  </span><span class="n">sex_term</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">sex</span><span class="p">,</span>
+<span class="w">  </span><span class="n">group_id</span><span class="p">,</span>
+<span class="w">  </span><span class="n">protocol_term</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">protocol</span><span class="p">,</span>
+<span class="w">  </span><span class="n">organ_term</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">organ</span><span class="p">,</span>
+<span class="w">  </span><span class="n">disease_term</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">disease</span><span class="p">,</span>
+<span class="w">  </span><span class="n">qualifier_term</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">qualifier</span>
+<span class="k">FROM</span><span class="w"> </span><span class="k">data</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">term</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">investigator_term</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">data</span><span class="p">.</span><span class="n">investigator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">investigator_term</span><span class="p">.</span><span class="n">code</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">term</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">species_term</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">data</span><span class="p">.</span><span class="n">species</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">species_term</span><span class="p">.</span><span class="n">code</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">term</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">strain_term</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">data</span><span class="p">.</span><span class="n">strain</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">strain_term</span><span class="p">.</span><span class="n">code</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">term</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">sex_term</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">data</span><span class="p">.</span><span class="n">sex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sex_term</span><span class="p">.</span><span class="n">code</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">term</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">protocol_term</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">data</span><span class="p">.</span><span class="n">protocol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">protocol_term</span><span class="p">.</span><span class="n">code</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">term</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">organ_term</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">data</span><span class="p">.</span><span class="n">organ</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">organ_term</span><span class="p">.</span><span class="n">code</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">term</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">disease_term</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">data</span><span class="p">.</span><span class="n">disease</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">disease_term</span><span class="p">.</span><span class="n">code</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">term</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">qualifier_term</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">data</span><span class="p">.</span><span class="n">qualifier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">qualifier_term</span><span class="p">.</span><span class="n">code</span><span class="p">;</span>
+</code></pre></div>
+<p>I'll check:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>sqlite3<span class="w"> </span>build/data.db<span class="w"> </span><span class="o">&lt;&lt;&lt;</span><span class="w"> </span><span class="s2">&quot;SELECT * FROM linked_ids LIMIT 1;&quot;</span>
+<span class="m">2014</span>-01-01<span class="w"> </span><span class="m">10</span>:21:00-0500<span class="p">|</span>orcid:0000-0001-5139-5557<span class="p">|</span>ex:subject-12<span class="p">|</span>obo:NCBITaxon_10116<span class="p">|</span>ex:F344N<span class="p">|</span>obo:PATO_0000383<span class="p">|</span>ex:group-1<span class="p">|</span>obo:OBI_0600020<span class="p">|</span>obo:UBERON_0002048<span class="p">|</span>obo:MPATH_268<span class="p">|</span>obo:PATO_0000396
+</code></pre></div>
+<p>I can also define a similar view for their "official" labels:</p>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">VIEW</span><span class="w"> </span><span class="n">linked_data_label</span><span class="w"> </span><span class="k">AS</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">assay_datetime</span><span class="p">,</span>
+<span class="w">  </span><span class="n">investigator_term</span><span class="p">.</span><span class="n">label</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">investigator</span><span class="p">,</span>
+<span class="w">  </span><span class="n">subject_id</span><span class="p">,</span>
+<span class="w">  </span><span class="n">species_term</span><span class="p">.</span><span class="n">label</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">species</span><span class="p">,</span>
+<span class="w">  </span><span class="n">strain_term</span><span class="p">.</span><span class="n">label</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">strain</span><span class="p">,</span>
+<span class="w">  </span><span class="n">sex_term</span><span class="p">.</span><span class="n">label</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">sex</span><span class="p">,</span>
+<span class="w">  </span><span class="n">group_id</span><span class="p">,</span>
+<span class="w">  </span><span class="n">protocol_term</span><span class="p">.</span><span class="n">label</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">protocol</span><span class="p">,</span>
+<span class="w">  </span><span class="n">organ_term</span><span class="p">.</span><span class="n">label</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">organ</span><span class="p">,</span>
+<span class="w">  </span><span class="n">disease_term</span><span class="p">.</span><span class="n">label</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">disease</span><span class="p">,</span>
+<span class="w">  </span><span class="n">qualifier_term</span><span class="p">.</span><span class="n">label</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">qualifier</span>
+<span class="k">FROM</span><span class="w"> </span><span class="k">data</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">term</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">investigator_term</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">data</span><span class="p">.</span><span class="n">investigator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">investigator_term</span><span class="p">.</span><span class="n">code</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">term</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">species_term</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">data</span><span class="p">.</span><span class="n">species</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">species_term</span><span class="p">.</span><span class="n">code</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">term</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">strain_term</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">data</span><span class="p">.</span><span class="n">strain</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">strain_term</span><span class="p">.</span><span class="n">code</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">term</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">sex_term</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">data</span><span class="p">.</span><span class="n">sex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sex_term</span><span class="p">.</span><span class="n">code</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">term</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">protocol_term</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">data</span><span class="p">.</span><span class="n">protocol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">protocol_term</span><span class="p">.</span><span class="n">code</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">term</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">organ_term</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">data</span><span class="p">.</span><span class="n">organ</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">organ_term</span><span class="p">.</span><span class="n">code</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">term</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">disease_term</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">data</span><span class="p">.</span><span class="n">disease</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">disease_term</span><span class="p">.</span><span class="n">code</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">term</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">qualifier_term</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">data</span><span class="p">.</span><span class="n">qualifier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">qualifier_term</span><span class="p">.</span><span class="n">code</span><span class="p">;</span>
+</code></pre></div>
+<p>I'll check:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>sqlite3<span class="w"> </span>build/data.db<span class="w"> </span><span class="o">&lt;&lt;&lt;</span><span class="w"> </span><span class="s2">&quot;SELECT * FROM linked_data_label LIMIT 1;&quot;</span>
+<span class="m">2014</span>-01-01<span class="w"> </span><span class="m">10</span>:21:00-0500<span class="p">|</span>James<span class="w"> </span>A.<span class="w"> </span>Overton<span class="p">|</span>ex:subject-12<span class="p">|</span>Rattus<span class="w"> </span>norvegicus<span class="p">|</span>F<span class="w"> </span><span class="m">344</span>/N<span class="p">|</span>female<span class="p">|</span>ex:group-1<span class="p">|</span>histology<span class="p">|</span>lung<span class="p">|</span>adenocarcinoma<span class="p">|</span>severe<span class="w"> </span>intensity
+</code></pre></div>
+<p>I'll commit my work in progress:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>--update
+$<span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Add linked_data tables&quot;</span>
+</code></pre></div>
+<p>Now the tables use URLs and is connected to ontologies and stuff.
+But are we Linked yet?</p>
+<h2 id="7-getting-triples">7. Getting Triples<a class="headerlink" href="#7-getting-triples" title="Permanent link">&para;</a></h2>
+<p>SQL tables aren't an official Linked Data format.
+Of all the RDF formats, I prefer Turtle.
+It's tedious but not difficult to get Turtle out of SQL.
+These query do what I need them to do,
+but note that if the literal data contained quotation marks
+(for instance)
+then I'd have to do more work to escape those.
+First I create a triple table:</p>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">triple</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">subject</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">  </span><span class="n">predicate</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">  </span><span class="k">object</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">  </span><span class="n">literal</span><span class="w"> </span><span class="nb">INTEGER</span><span class="w"> </span><span class="c1">-- 0 for object IRI, 1 for object literal</span>
+<span class="p">);</span>
+
+<span class="c1">-- create triples from term table</span>
+<span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">triple</span><span class="p">(</span><span class="n">subject</span><span class="p">,</span><span class="w"> </span><span class="n">predicate</span><span class="p">,</span><span class="w"> </span><span class="k">object</span><span class="p">,</span><span class="w"> </span><span class="n">literal</span><span class="p">)</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;rdfs:label&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">label</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">term</span><span class="p">;</span>
+
+<span class="c1">-- create triples from data table</span>
+<span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">triple</span><span class="p">(</span><span class="n">subject</span><span class="p">,</span><span class="w"> </span><span class="n">predicate</span><span class="p">,</span><span class="w"> </span><span class="k">object</span><span class="p">,</span><span class="w"> </span><span class="n">literal</span><span class="p">)</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="s1">&#39;ex:assay-&#39;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="k">data</span><span class="p">.</span><span class="n">rowid</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;ex:column-assay_datetime&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">assay_datetime</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span>
+<span class="k">FROM</span><span class="w"> </span><span class="k">data</span><span class="p">;</span>
+
+<span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">triple</span><span class="p">(</span><span class="n">subject</span><span class="p">,</span><span class="w"> </span><span class="n">predicate</span><span class="p">,</span><span class="w"> </span><span class="k">object</span><span class="p">,</span><span class="w"> </span><span class="n">literal</span><span class="p">)</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="s1">&#39;ex:assay-&#39;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="k">data</span><span class="p">.</span><span class="n">rowid</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;ex:column-investigator&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">term</span><span class="p">.</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span>
+<span class="k">FROM</span><span class="w"> </span><span class="k">data</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">term</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">term</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">data</span><span class="p">.</span><span class="n">investigator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">term</span><span class="p">.</span><span class="n">code</span><span class="p">;</span>
+
+<span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">triple</span><span class="p">(</span><span class="n">subject</span><span class="p">,</span><span class="w"> </span><span class="n">predicate</span><span class="p">,</span><span class="w"> </span><span class="k">object</span><span class="p">,</span><span class="w"> </span><span class="n">literal</span><span class="p">)</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="s1">&#39;ex:assay-&#39;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="k">data</span><span class="p">.</span><span class="n">rowid</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;ex:column-subject_id&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">subject_id</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span>
+<span class="k">FROM</span><span class="w"> </span><span class="k">data</span><span class="p">;</span>
+
+<span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">triple</span><span class="p">(</span><span class="n">subject</span><span class="p">,</span><span class="w"> </span><span class="n">predicate</span><span class="p">,</span><span class="w"> </span><span class="k">object</span><span class="p">,</span><span class="w"> </span><span class="n">literal</span><span class="p">)</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="s1">&#39;ex:assay-&#39;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="k">data</span><span class="p">.</span><span class="n">rowid</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;ex:column-species&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">term</span><span class="p">.</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span>
+<span class="k">FROM</span><span class="w"> </span><span class="k">data</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">term</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">term</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">data</span><span class="p">.</span><span class="n">species</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">term</span><span class="p">.</span><span class="n">code</span><span class="p">;</span>
+
+<span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">triple</span><span class="p">(</span><span class="n">subject</span><span class="p">,</span><span class="w"> </span><span class="n">predicate</span><span class="p">,</span><span class="w"> </span><span class="k">object</span><span class="p">,</span><span class="w"> </span><span class="n">literal</span><span class="p">)</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="s1">&#39;ex:assay-&#39;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="k">data</span><span class="p">.</span><span class="n">rowid</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;ex:column-strain&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">term</span><span class="p">.</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span>
+<span class="k">FROM</span><span class="w"> </span><span class="k">data</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">term</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">term</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">data</span><span class="p">.</span><span class="n">strain</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">term</span><span class="p">.</span><span class="n">code</span><span class="p">;</span>
+
+<span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">triple</span><span class="p">(</span><span class="n">subject</span><span class="p">,</span><span class="w"> </span><span class="n">predicate</span><span class="p">,</span><span class="w"> </span><span class="k">object</span><span class="p">,</span><span class="w"> </span><span class="n">literal</span><span class="p">)</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="s1">&#39;ex:assay-&#39;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="k">data</span><span class="p">.</span><span class="n">rowid</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;ex:column-sex&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">term</span><span class="p">.</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span>
+<span class="k">FROM</span><span class="w"> </span><span class="k">data</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">term</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">term</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">data</span><span class="p">.</span><span class="n">sex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">term</span><span class="p">.</span><span class="n">code</span><span class="p">;</span>
+
+<span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">triple</span><span class="p">(</span><span class="n">subject</span><span class="p">,</span><span class="w"> </span><span class="n">predicate</span><span class="p">,</span><span class="w"> </span><span class="k">object</span><span class="p">,</span><span class="w"> </span><span class="n">literal</span><span class="p">)</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="s1">&#39;ex:assay-&#39;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="k">data</span><span class="p">.</span><span class="n">rowid</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;ex:column-group_id&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">group_id</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span>
+<span class="k">FROM</span><span class="w"> </span><span class="k">data</span><span class="p">;</span>
+
+<span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">triple</span><span class="p">(</span><span class="n">subject</span><span class="p">,</span><span class="w"> </span><span class="n">predicate</span><span class="p">,</span><span class="w"> </span><span class="k">object</span><span class="p">,</span><span class="w"> </span><span class="n">literal</span><span class="p">)</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="s1">&#39;ex:assay-&#39;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="k">data</span><span class="p">.</span><span class="n">rowid</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;ex:column-protocol&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">term</span><span class="p">.</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span>
+<span class="k">FROM</span><span class="w"> </span><span class="k">data</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">term</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">term</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">data</span><span class="p">.</span><span class="n">protocol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">term</span><span class="p">.</span><span class="n">code</span><span class="p">;</span>
+
+<span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">triple</span><span class="p">(</span><span class="n">subject</span><span class="p">,</span><span class="w"> </span><span class="n">predicate</span><span class="p">,</span><span class="w"> </span><span class="k">object</span><span class="p">,</span><span class="w"> </span><span class="n">literal</span><span class="p">)</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="s1">&#39;ex:assay-&#39;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="k">data</span><span class="p">.</span><span class="n">rowid</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;ex:column-organ&#39;</span><span class="p">,</span><span class="n">term</span><span class="p">.</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span>
+<span class="k">FROM</span><span class="w"> </span><span class="k">data</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">term</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">term</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">data</span><span class="p">.</span><span class="n">organ</span><span class="o">=</span><span class="w"> </span><span class="n">term</span><span class="p">.</span><span class="n">code</span><span class="p">;</span>
+
+<span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">triple</span><span class="p">(</span><span class="n">subject</span><span class="p">,</span><span class="w"> </span><span class="n">predicate</span><span class="p">,</span><span class="w"> </span><span class="k">object</span><span class="p">,</span><span class="w"> </span><span class="n">literal</span><span class="p">)</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="s1">&#39;ex:assay-&#39;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="k">data</span><span class="p">.</span><span class="n">rowid</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;ex:column-disease&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">term</span><span class="p">.</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span>
+<span class="k">FROM</span><span class="w"> </span><span class="k">data</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">term</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">term</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">data</span><span class="p">.</span><span class="n">disease</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">term</span><span class="p">.</span><span class="n">code</span><span class="p">;</span>
+
+<span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">triple</span><span class="p">(</span><span class="n">subject</span><span class="p">,</span><span class="w"> </span><span class="n">predicate</span><span class="p">,</span><span class="w"> </span><span class="k">object</span><span class="p">,</span><span class="w"> </span><span class="n">literal</span><span class="p">)</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="s1">&#39;ex:assay-&#39;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="k">data</span><span class="p">.</span><span class="n">rowid</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;ex:column-qualifier&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">term</span><span class="p">.</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span>
+<span class="k">FROM</span><span class="w"> </span><span class="k">data</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="n">term</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">term</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">data</span><span class="p">.</span><span class="n">qualifier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">term</span><span class="p">.</span><span class="n">code</span><span class="p">;</span>
+</code></pre></div>
+<p>Then I can turn triples into Turtle
+using string concatenation:</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="s1">&#39;@prefix &#39;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="k">prefix</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s1">&#39;: &lt;&#39;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">base</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s1">&#39;&gt; .&#39;</span>
+<span class="k">FROM</span><span class="w"> </span><span class="k">prefix</span>
+<span class="k">UNION</span><span class="w"> </span><span class="k">ALL</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="s1">&#39;&#39;</span>
+<span class="k">UNION</span><span class="w"> </span><span class="k">ALL</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">subject</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s1">&#39; &#39;</span><span class="w"> </span><span class="o">||</span>
+<span class="w">  </span><span class="n">predicate</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s1">&#39; &#39;</span><span class="w"> </span><span class="o">||</span>
+<span class="w">  </span><span class="k">CASE</span><span class="w"> </span><span class="n">literal</span>
+<span class="w">    </span><span class="k">WHEN</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="s1">&#39;&quot;&#39;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="k">object</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s1">&#39;&quot;&#39;</span>
+<span class="w">    </span><span class="k">ELSE</span><span class="w"> </span><span class="k">object</span>
+<span class="w">  </span><span class="k">END</span>
+<span class="w">  </span><span class="o">||</span><span class="w"> </span><span class="s1">&#39; . &#39;</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">triple</span><span class="p">;</span>
+</code></pre></div>
+<p>I can add this to the <code>src/build.sh</code>:</p>
+<div class="highlight"><pre><span></span><code>sqlite3<span class="w"> </span>build/data.db<span class="w"> </span>&lt;<span class="w"> </span>src/turtle.sql<span class="w"> </span>&gt;<span class="w"> </span>build/data.ttl
+</code></pre></div>
+<p>Here's just a bit of that <code>build/data.ttl</code> file:</p>
+<div class="highlight"><pre><span></span><code>@<span class="nv">prefix</span><span class="w"> </span><span class="nv">rdfs</span>:<span class="w"> </span><span class="o">&lt;</span><span class="nv">http</span>:<span class="o">//</span><span class="nv">www</span>.<span class="nv">w3</span>.<span class="nv">org</span><span class="o">/</span><span class="mi">2000</span><span class="o">/</span><span class="mi">01</span><span class="o">/</span><span class="nv">rdf</span><span class="o">-</span><span class="nv">schema</span>#<span class="o">&gt;</span><span class="w"> </span>.
+
+<span class="nv">orcid</span>:<span class="mi">0000</span><span class="o">-</span><span class="mi">0001</span><span class="o">-</span><span class="mi">5139</span><span class="o">-</span><span class="mi">5557</span><span class="w"> </span><span class="nv">rdfs</span>:<span class="nv">label</span><span class="w"> </span><span class="s2">&quot;James A. Overton&quot;</span><span class="w"> </span>.
+<span class="nv">assay</span>:<span class="mi">1</span><span class="w"> </span><span class="nv">column</span>:<span class="nv">assay_datetime</span><span class="w"> </span><span class="s2">&quot;2014-01-01 10:21:00-0500&quot;</span><span class="o">^^</span><span class="nv">xsd</span>:<span class="nv">datetime</span><span class="w"> </span>.
+<span class="nv">assay</span>:<span class="mi">1</span><span class="w"> </span><span class="nv">column</span>:<span class="nv">investigator</span><span class="w"> </span><span class="nv">orcid</span>:<span class="mi">0000</span><span class="o">-</span><span class="mi">0001</span><span class="o">-</span><span class="mi">5139</span><span class="o">-</span><span class="mi">5557</span><span class="w"> </span>.
+</code></pre></div>
+<p>SQL is not a particularly expressive language.
+Building the triple table is straightforward but verbose.
+I could have done the same thing with much less Python code.
+(Or I could have been clever and generated some SQL to execute!)</p>
+<p>I'll commit my work in progress:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>src/turtle.sql
+$<span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>--update
+$<span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Convert to Turtle&quot;</span>
+</code></pre></div>
+<p>So technically I have a Turtle file.
+Linked Data!
+Right?
+Well, it's kind of "flat".
+It still looks more like a table than a graph.</p>
+<h2 id="8-getting-linked">8. Getting Linked<a class="headerlink" href="#8-getting-linked" title="Permanent link">&para;</a></h2>
+<p>The table I started with is very much focused on the data:
+there was some sort of assay done,
+and this is the information that someone recorded about it.
+The Turtle I just ended up with is basically the same.</p>
+<p>Other people may have assay data.
+They may have tables that they converted into Turtle.
+So can I just merge them?
+Technically yes:
+I can put all these triples in one graph together.
+But I'll still just have "flat" chunks of data
+representing rows
+sitting next to other rows,
+without really linking together.</p>
+<p>The next thing I would do with this data
+is reorganized it based on the <em>thing</em> it's talking about.
+I know that:</p>
+<ul>
+<li>there was an assay</li>
+<li>the assay was performed at a certain time,
+  using a certain protocol</li>
+<li>there was a person who performed the assay</li>
+<li>there was a subject animal of some species, strain, and sex</li>
+<li>the subject animal belonged to a study group</li>
+<li>the subject animal had some organs</li>
+<li>the assay resulted in some measurements</li>
+</ul>
+<p>Most of these are things that I could point to in the world,
+or could have pointed to
+if I was in the right place at the right time.</p>
+<p>By thinking about these things,
+I'm stepping beyond what it was convenient for someone to record,
+and thinking about what happened in the world.
+If somebody else has some assay data,
+then they might have recorded it differently
+for whatever reason,
+and so it wouldn't line up with my rows.
+I'm trying my best to use the same terms for the same things.
+I also want to use the same "shapes" for the same things.
+When trying to come to an agreement about what is connected to what,
+life is easier if I can point to the things I want to talk about:
+"See, here is the person, and the mouse came from here, and he did this and this."</p>
+<p>I could model the data in SQL
+by breaking the big table into smaller tables.
+I could have tables for:</p>
+<ul>
+<li>person</li>
+<li>group</li>
+<li>subject: species, strain, sex, group</li>
+<li>assay: date, investigator, subject, protocol</li>
+<li>measurement: assay, organ, disease, qualifier</li>
+</ul>
+<p>Then I would convert each table to triples more carefully.
+That's a good idea.
+Actually it's a better idea than what I'm about to do...</p>
+<p>Since we're getting near the end,
+I'm going to show you how you can do that modelling in SPARQL.
+SPARQL has a CONSTRUCT operation that you use to build triples.
+There's lots of tools that I could use to run SPARQL
+but I'll use <a href="http://robot.obolibrary.org">ROBOT</a>.
+I'll start with the "flat" triples in <code>build/data.ttl</code>,
+select them with my WHERE clause,
+then CONSTRUCT better triples,
+and save them in <code>build/model.ttl</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="k">PREFIX</span> <span class="nn">rdf</span><span class="p">:</span> <span class="nl">&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</span>
+<span class="k">PREFIX</span> <span class="nn">rdfs</span><span class="p">:</span> <span class="nl">&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span>
+<span class="k">PREFIX</span> <span class="nn">xsd</span><span class="p">:</span> <span class="nl">&lt;http://www.w3.org/2001/XMLSchema#&gt;</span>
+<span class="k">PREFIX</span> <span class="nn">owl</span><span class="p">:</span> <span class="nl">&lt;http://www.w3.org/2002/07/owl#&gt;</span>
+<span class="k">PREFIX</span> <span class="nn">obo</span><span class="p">:</span> <span class="nl">&lt;http://purl.obolibrary.org/obo/&gt;</span>
+<span class="k">PREFIX</span> <span class="nn">ex</span><span class="p">:</span> <span class="nl">&lt;https://example.com/&gt;</span>
+
+<span class="k">CONSTRUCT</span> <span class="p">{</span>
+  <span class="nv">?group</span>
+    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span>      <span class="nv">?group_label</span> <span class="p">.</span>
+  <span class="nv">?subject</span>
+    <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span>        <span class="nv">?species</span> <span class="p">;</span>
+    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span>      <span class="nv">?subject_label</span> <span class="p">;</span>
+    <span class="nn">ex</span><span class="p">:</span><span class="nt">strain</span>       <span class="nv">?strain</span> <span class="p">;</span>
+    <span class="nn">obo</span><span class="p">:</span><span class="nt">RO_0000086</span>  <span class="nv">?sex</span> <span class="p">;</span>         <span class="c"># has quality</span>
+    <span class="nn">ex</span><span class="p">:</span><span class="nt">group</span>        <span class="nv">?group</span> <span class="p">.</span>
+  <span class="nv">?sex</span>
+    <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span>        <span class="nv">?sex_type</span> <span class="p">;</span>
+    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span>      <span class="nv">?sex_label</span> <span class="p">.</span>
+  <span class="nv">?organ</span>
+    <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span>        <span class="nv">?organ_type</span> <span class="p">;</span>
+    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span>      <span class="nv">?organ_label</span> <span class="p">;</span>
+    <span class="nn">obo</span><span class="p">:</span><span class="nt">BFO_0000050</span> <span class="nv">?subject</span> <span class="p">.</span>     <span class="c"># part of</span>
+  <span class="nv">?assay</span>
+    <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span>        <span class="nv">?assay_type</span> <span class="p">;</span>
+    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span>      <span class="nv">?assay_label</span> <span class="p">;</span>
+    <span class="nn">obo</span><span class="p">:</span><span class="nt">OBI_0000293</span> <span class="nv">?subject</span> <span class="p">;</span>     <span class="c"># has specified input</span>
+    <span class="nn">obo</span><span class="p">:</span><span class="nt">IAO_0000136</span> <span class="nv">?organ</span> <span class="p">.</span>       <span class="c"># is about</span>
+<span class="p">}</span>
+<span class="k">WHERE</span> <span class="p">{</span>
+  <span class="nv">?subject_row</span>
+    <span class="nn">ex</span><span class="p">:</span><span class="nt">column-assay_datetime</span> <span class="nv">?datetime</span> <span class="p">;</span>
+    <span class="nn">ex</span><span class="p">:</span><span class="nt">column-investigator</span>   <span class="nv">?investigator</span> <span class="p">;</span>
+    <span class="nn">ex</span><span class="p">:</span><span class="nt">column-subject_id</span>     <span class="nv">?subject</span> <span class="p">;</span>
+    <span class="nn">ex</span><span class="p">:</span><span class="nt">column-species</span>        <span class="nv">?species</span> <span class="p">;</span>
+    <span class="nn">ex</span><span class="p">:</span><span class="nt">column-sex</span>            <span class="nv">?sex_type</span> <span class="p">;</span>
+    <span class="nn">ex</span><span class="p">:</span><span class="nt">column-group_id</span>       <span class="nv">?group</span> <span class="p">;</span>
+    <span class="nn">ex</span><span class="p">:</span><span class="nt">column-protocol</span>       <span class="nv">?assay_type</span> <span class="p">;</span>
+    <span class="nn">ex</span><span class="p">:</span><span class="nt">column-organ</span>          <span class="nv">?organ_type</span> <span class="p">;</span>
+    <span class="nn">ex</span><span class="p">:</span><span class="nt">column-disease</span>        <span class="nv">?disease</span> <span class="p">;</span>
+    <span class="nn">ex</span><span class="p">:</span><span class="nt">column-qualifier</span>      <span class="nv">?qualifier</span> <span class="p">.</span>
+
+  <span class="nv">?assay_type</span>
+    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="nv">?assay_type_label</span> <span class="p">.</span>
+  <span class="nv">?sex_type</span>
+    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="nv">?sex_type_label</span> <span class="p">.</span>
+  <span class="nv">?organ_type</span>
+    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="nv">?organ_type_label</span> <span class="p">.</span>
+
+  <span class="k">BIND</span> <span class="p">(</span><span class="nf">URI</span><span class="p">(</span><span class="nf">CONCAT</span><span class="p">(</span><span class="nf">STR</span><span class="p">(</span><span class="nv">?subject</span><span class="p">),</span> <span class="s">&quot;-assay&quot;</span><span class="p">))</span> <span class="k">AS</span> <span class="nv">?assay</span><span class="p">)</span>
+  <span class="k">BIND</span> <span class="p">(</span><span class="nf">URI</span><span class="p">(</span><span class="nf">CONCAT</span><span class="p">(</span><span class="nf">STR</span><span class="p">(</span><span class="nv">?subject</span><span class="p">),</span> <span class="s">&quot;-sex&quot;</span><span class="p">))</span>   <span class="k">AS</span> <span class="nv">?sex</span><span class="p">)</span>
+  <span class="k">BIND</span> <span class="p">(</span><span class="nf">URI</span><span class="p">(</span><span class="nf">CONCAT</span><span class="p">(</span><span class="nf">STR</span><span class="p">(</span><span class="nv">?subject</span><span class="p">),</span> <span class="s">&quot;-organ&quot;</span><span class="p">))</span> <span class="k">AS</span> <span class="nv">?organ</span><span class="p">)</span>
+  <span class="k">BIND</span> <span class="p">(</span><span class="nf">CONCAT</span><span class="p">(</span><span class="s">&quot;subject &quot;</span><span class="p">,</span> <span class="nf">REPLACE</span><span class="p">(</span><span class="nf">STR</span><span class="p">(</span><span class="nv">?subject</span><span class="p">),</span> <span class="s">&quot;^.*-&quot;</span><span class="p">,</span> <span class="s">&quot;&quot;</span><span class="p">))</span> <span class="k">AS</span> <span class="nv">?subject_label</span><span class="p">)</span>
+  <span class="k">BIND</span> <span class="p">(</span><span class="nf">CONCAT</span><span class="p">(</span><span class="s">&quot;group &quot;</span><span class="p">,</span> <span class="nf">REPLACE</span><span class="p">(</span><span class="nf">STR</span><span class="p">(</span><span class="nv">?group</span><span class="p">),</span> <span class="s">&quot;^.*-&quot;</span><span class="p">,</span> <span class="s">&quot;&quot;</span><span class="p">))</span>     <span class="k">AS</span> <span class="nv">?group_label</span><span class="p">)</span>
+  <span class="k">BIND</span> <span class="p">(</span><span class="nf">CONCAT</span><span class="p">(</span><span class="nv">?subject_label</span><span class="p">,</span> <span class="s">&quot; &quot;</span><span class="p">,</span> <span class="nv">?assay_type_label</span><span class="p">)</span>    <span class="k">AS</span> <span class="nv">?assay_label</span><span class="p">)</span>
+  <span class="k">BIND</span> <span class="p">(</span><span class="nf">CONCAT</span><span class="p">(</span><span class="nv">?subject_label</span><span class="p">,</span> <span class="s">&quot; sex: &quot;</span><span class="p">,</span> <span class="nv">?sex_type_label</span><span class="p">)</span> <span class="k">AS</span> <span class="nv">?sex_label</span><span class="p">)</span>
+  <span class="k">BIND</span> <span class="p">(</span><span class="nf">CONCAT</span><span class="p">(</span><span class="nv">?subject_label</span><span class="p">,</span> <span class="s">&quot; &quot;</span><span class="p">,</span> <span class="nv">?organ_type_label</span><span class="p">)</span>    <span class="k">AS</span> <span class="nv">?organ_label</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>I can add this to the <code>src/build.sh</code>:</p>
+<div class="highlight"><pre><span></span><code>java<span class="w"> </span>-jar<span class="w"> </span>robot.jar<span class="w"> </span>query<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--input<span class="w"> </span>build/data.ttl<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--query<span class="w"> </span>src/model.rq<span class="w"> </span>build/model.ttl
+</code></pre></div>
+<p>Then I get <code>build/model.ttl</code> that looks (in part) like this:</p>
+<div class="highlight"><pre><span></span><code><span class="nv">ex</span>:<span class="nv">subject</span><span class="o">-</span><span class="mi">31</span><span class="w">  </span><span class="nv">a</span><span class="w">        </span><span class="nv">obo</span>:<span class="nv">NCBITaxon_10090</span><span class="w"> </span><span class="c1">;</span>
+<span class="w">        </span><span class="nv">rdfs</span>:<span class="nv">label</span><span class="w">      </span><span class="s2">&quot;subject 31&quot;</span><span class="w"> </span><span class="c1">;</span>
+<span class="w">        </span><span class="nv">obo</span>:<span class="nv">RO_0000086</span><span class="w">  </span><span class="nv">ex</span>:<span class="nv">subject</span><span class="o">-</span><span class="mi">31</span><span class="o">-</span><span class="nv">sex</span><span class="w"> </span><span class="c1">;</span>
+<span class="w">        </span><span class="nv">ex</span>:<span class="nv">group</span><span class="w">        </span><span class="nv">ex</span>:<span class="nv">group</span><span class="o">-</span><span class="mi">2</span><span class="w"> </span>.
+
+<span class="nv">ex</span>:<span class="nv">group</span><span class="o">-</span><span class="mi">2</span><span class="w">  </span><span class="nv">rdfs</span>:<span class="nv">label</span><span class="w">  </span><span class="s2">&quot;group 2&quot;</span><span class="w"> </span>.
+</code></pre></div>
+<p>Now that's what I call Linked Data!</p>
+<p>I'll update the README:</p>
+<div class="highlight"><pre><span></span><code><span class="gu">## Modelling</span>
+
+The data refers to:
+
+<span class="k">-</span><span class="w"> </span>investigator
+<span class="k">-</span><span class="w"> </span>subject
+<span class="k">-</span><span class="w"> </span>group
+<span class="k">-</span><span class="w"> </span>assay
+<span class="k">-</span><span class="w"> </span>measurement data
+<span class="w">  </span><span class="k">-</span><span class="w"> </span>subject organ
+<span class="w">  </span><span class="k">-</span><span class="w"> </span>disease
+
+TODO: A pretty diagram.
+</code></pre></div>
+<p>I'll commit my work in progress:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>src/model.rq
+$<span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>--update
+$<span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Build model.ttl&quot;</span>
+</code></pre></div>
+<h2 id="9-getting-it-done">9. Getting It Done<a class="headerlink" href="#9-getting-it-done" title="Permanent link">&para;</a></h2>
+<p>That was a lot of work for a small table.
+And I did all the hard work of mapping
+the terminology to ontology terms for you!</p>
+<p>There's lots more I can do.
+The SPARQL is just one big chunk,
+but it would be better in smaller pieces.
+The modelling isn't all that great yet.
+Before changing that
+I want to run it past the boss
+and see what she thinks.</p>
+<p>It's getting close to the end of the day.
+Before I quit I should update the README,
+clean up anything that's no longer relevant or correct,
+and make any necessary notes to my future self:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>--update
+$<span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Update README&quot;</span>
+$<span class="w"> </span>quit
+</code></pre></div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.action.edit"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.51d95adb.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@8.5.1/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>

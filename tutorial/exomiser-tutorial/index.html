@@ -1,0 +1,4785 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://oboacademy.github.io/obook/tutorial/exomiser-tutorial/">
+      
+      
+        <link rel="prev" href="../fhkb/">
+      
+      
+        <link rel="next" href="../named-entity-recognition/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.6">
+    
+    
+      
+        <title>Introduction to Exomiser - OBO Semantic Engineering Training</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.558e4712.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tutorial-an-introduction-to-exomiser" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="OBO Semantic Engineering Training" class="md-header__button md-logo" aria-label="OBO Semantic Engineering Training" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OBO Semantic Engineering Training
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Introduction to Exomiser
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/OBOAcademy/obook/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="OBO Semantic Engineering Training" class="md-nav__button md-logo" aria-label="OBO Semantic Engineering Training" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    OBO Semantic Engineering Training
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/OBOAcademy/obook/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        About the course
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/" class="md-nav__link">
+        Getting started with learning
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/" class="md-nav__link">
+        Overview of lessons and tutorials
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/" class="md-nav__link">
+        Contribute to the course
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" tabindex="0" aria-expanded="false">
+          Courses
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Courses" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Courses
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../courses/icbo2024/" class="md-nav__link">
+        ICBO 2024 Tutorial
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../courses/icbo2023/" class="md-nav__link">
+        ICBO 2023 Tutorial
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../courses/icbo2022/" class="md-nav__link">
+        ICBO 2022 Tutorial
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../courses/icbo2021/" class="md-nav__link">
+        ICBO 2021 Tutorial
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../courses/monarch-obo-training/" class="md-nav__link">
+        Monarch Ontology Training
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../courses/ontology-summit-2023/" class="md-nav__link">
+        Ontology Summit 2023
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6" tabindex="0" aria-expanded="false">
+          Pathways
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Pathways" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Pathways
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pathways/pathways/" class="md-nav__link">
+        What is a pathway?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pathways/early-career-data-scientist/" class="md-nav__link">
+        Early Career Data Scientist
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pathways/ontology-curator/" class="md-nav__link">
+        Ontology Curator
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pathways/ontology-curator-go-style/" class="md-nav__link">
+        Ontology Curator GO-style
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pathways/ontology-curator-obi-style/" class="md-nav__link">
+        Ontology Curator OBI-style
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pathways/ontology-engineer/" class="md-nav__link">
+        Ontology Engineer/Developer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pathways/ontology-contributor/" class="md-nav__link">
+        Ontology Contributor
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7" tabindex="0" aria-expanded="false">
+          Lessons
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Lessons" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Lessons
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/contributing-to-obo-ontologies/" class="md-nav__link">
+        Contributing to OBO ontologies
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/ontology-pipelines/" class="md-nav__link">
+        Ontology Pipelines with ROBOT
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project-ontology-development/" class="md-nav__link">
+        Project Ontology Development
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/analysing-linked-data/" class="md-nav__link">
+        Analysing Linked Data
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/automating-ontology-workflows/" class="md-nav__link">
+        Automating Ontology Workflows
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/developing-an-obo-ontology/" class="md-nav__link">
+        Developing an OBO Ontology
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/ontology-design/" class="md-nav__link">
+        Ontology Design
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/templates-for-obo/" class="md-nav__link">
+        Templates for OBO ontologies
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/ontology-fundamentals/" class="md-nav__link">
+        Ontology Fundamentals
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/modelling-with-object-properties/" class="md-nav__link">
+        Modelling with Object Properties
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/ontology-term-use/" class="md-nav__link">
+        Ontology Term Use
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/rdf/" class="md-nav__link">
+        RDF Fundamentals
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/entity-matching/" class="md-nav__link">
+        Semantic Entity Matching
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/using-disease-and-phenotype-ontologies/" class="md-nav__link">
+        Disease and Phenotype Ontologies
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/hackathon/" class="md-nav__link">
+        Hacking the OBOOK
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/getting-hands-on/" class="md-nav__link">
+        Getting Hands on with Ontologies
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/chatgpt-ontology-curation/" class="md-nav__link">
+        Leveraging ChatGPT for ontology curation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/linkml-helps-with-ontology-use/" class="md-nav__link">
+        Using Ontologies in Practice--LinkML can help
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/licensing-data-and-software/" class="md-nav__link">
+        Licensing Data and Software
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/vocabularies-for-bioinformatics/" class="md-nav__link">
+        Vocabularies for bioinformatics
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8" tabindex="0" aria-expanded="false">
+          Lessons In Development
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Lessons In Development" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Lessons In Development
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/developing-application-ontologies/" class="md-nav__link">
+        Developing an Application Ontology
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/ontology-development/" class="md-nav__link">
+        Ontology Development
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/semantic-database-fundamentals/" class="md-nav__link">
+        Semantic Database Fundamentals
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_9" type="checkbox" id="__nav_9" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9" tabindex="0" aria-expanded="true">
+          Tutorials
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tutorials" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Tutorials
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_9_1" type="checkbox" id="__nav_9_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_1" tabindex="0" aria-expanded="false">
+          Protege
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Protege" data-md-level="2">
+        <label class="md-nav__title" for="__nav_9_1">
+          <span class="md-nav__icon md-icon"></span>
+          Protege
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basic-dl-query/" class="md-nav__link">
+        DL queries
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../disjointness/" class="md-nav__link">
+        Disjointness
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_9_2" type="checkbox" id="__nav_9_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_2" tabindex="0" aria-expanded="false">
+          Ontology Pipelines - ODK, ROBOT, etc
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Ontology Pipelines - ODK, ROBOT, etc" data-md-level="2">
+        <label class="md-nav__title" for="__nav_9_2">
+          <span class="md-nav__icon md-icon"></span>
+          Ontology Pipelines - ODK, ROBOT, etc
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../robot-tutorial-1/" class="md-nav__link">
+        ROBOT Mini-Tutorial 1 - Convert, Extract and Template
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../robot-tutorial-2/" class="md-nav__link">
+        ROBOT Mini-Tutorial 2 - Annotate, Merge, Reason and Diff
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../robot-tutorial-qc/" class="md-nav__link">
+        ROBOT Mini-Tutorial QC - Quality Control with report, verify and query
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sparql-report-robot/" class="md-nav__link">
+        ROBOT - Generating SPARQL table reports
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sparql-report-odk/" class="md-nav__link">
+        ODK - Adding SPARQL table reports
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setting-up-project-odk/" class="md-nav__link">
+        ODK - Getting started with your own repo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../odk-tutorial-2/" class="md-nav__link">
+        ODK - 20 minute complete walk-through
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../custom-qc/" class="md-nav__link">
+        ODK - Adding custom Quality Check
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../managing-dynamic-imports-odk/" class="md-nav__link">
+        ODK - Managing imports
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../managing-ontology-releases-odk/" class="md-nav__link">
+        ODK - Managing ontology releases
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../migrating-ontology-to-odk/" class="md-nav__link">
+        ODK - Migrating to ODK
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../odk-toolbox/" class="md-nav__link">
+        ODK - Using the ODK Toolbox
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_9_3" type="checkbox" id="__nav_9_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_3" tabindex="0" aria-expanded="false">
+          Templates
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Templates" data-md-level="2">
+        <label class="md-nav__title" for="__nav_9_3">
+          <span class="md-nav__icon md-icon"></span>
+          Templates
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dosdp-overview/" class="md-nav__link">
+        Getting started with DOSDP templates
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dosdp-template/" class="md-nav__link">
+        DOSDP Templates Basic Tutorial
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dosdp-odk/" class="md-nav__link">
+        Introduction to Managing DOSDP Templates in ODK
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_9_4" type="checkbox" id="__nav_9_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_4" tabindex="0" aria-expanded="false">
+          Git, GitHub and Collaborative Workflows
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Git, GitHub and Collaborative Workflows" data-md-level="2">
+        <label class="md-nav__title" for="__nav_9_4">
+          <span class="md-nav__icon md-icon"></span>
+          Git, GitHub and Collaborative Workflows
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../github-fundamentals/" class="md-nav__link">
+        GitHub Fundamentals for OBO Engineers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../github-issues/" class="md-nav__link">
+        GitHub Issue for OBO Engineers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../managing-ontology-project/" class="md-nav__link">
+        Managing OBO ontology projects
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pull-requests/" class="md-nav__link">
+        Pull requests
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_9_5" type="checkbox" id="__nav_9_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_5" tabindex="0" aria-expanded="false">
+          ChatGPT
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="ChatGPT" data-md-level="2">
+        <label class="md-nav__title" for="__nav_9_5">
+          <span class="md-nav__icon md-icon"></span>
+          ChatGPT
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/chatgpt-ontology-curation/" class="md-nav__link">
+        Leveraging ChatGPT for ontology curation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ontogpt/" class="md-nav__link">
+        OntoGPT
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_9_6" type="checkbox" id="__nav_9_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_6" tabindex="0" aria-expanded="false">
+          Dealing with Semantic Data
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Dealing with Semantic Data" data-md-level="2">
+        <label class="md-nav__title" for="__nav_9_6">
+          <span class="md-nav__icon md-icon"></span>
+          Dealing with Semantic Data
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linking-data/" class="md-nav__link">
+        From Tables to Linked Data
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../curies/" class="md-nav__link">
+        Standardizing Prefixes, CURIEs, and URIs with the `curies` package
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../units/" class="md-nav__link">
+        Units of Measurement
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sparql/" class="md-nav__link">
+        Basic SPARQL for OBO Engineers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../monarch-kg-neo4j-basics/" class="md-nav__link">
+        Basic cypher on the Monarch Neo4j graph
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_9_7" type="checkbox" id="__nav_9_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_7" tabindex="0" aria-expanded="false">
+          Command line
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Command line" data-md-level="2">
+        <label class="md-nav__title" for="__nav_9_7">
+          <span class="md-nav__icon md-icon"></span>
+          Command line
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../intro-cli-1/" class="md-nav__link">
+        Basic introduction to CLI 1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../intro-cli-2/" class="md-nav__link">
+        Basic introduction to CLI 2
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_9_8" type="checkbox" id="__nav_9_8" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_8" tabindex="0" aria-expanded="false">
+          Mappings and SSSOM
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Mappings and SSSOM" data-md-level="2">
+        <label class="md-nav__title" for="__nav_9_8">
+          <span class="md-nav__icon md-icon"></span>
+          Mappings and SSSOM
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sssom-tutorial/" class="md-nav__link">
+        Basic Tutorial
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lexmatch-tutorial/" class="md-nav__link">
+        Lexical Matching with OAK Lexmatch
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sssom-toolkit/" class="md-nav__link">
+        Introduction to the SSSOM Toolkit
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../biomappings/" class="md-nav__link">
+        Curating Mappings with Biomappings
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_9_9" type="checkbox" id="__nav_9_9" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_9" tabindex="0" aria-expanded="false">
+          General Ontology Modelling
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="General Ontology Modelling" data-md-level="2">
+        <label class="md-nav__title" for="__nav_9_9">
+          <span class="md-nav__icon md-icon"></span>
+          General Ontology Modelling
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project-ontology-development/" class="md-nav__link">
+        Project Ontology Development
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fhkb/" class="md-nav__link">
+        Family History Knowledge Base (FHKB) tutorial
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_9_10" type="checkbox" id="__nav_9_10" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_10" tabindex="0" aria-expanded="true">
+          Exomiser
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Exomiser" data-md-level="2">
+        <label class="md-nav__title" for="__nav_9_10">
+          <span class="md-nav__icon md-icon"></span>
+          Exomiser
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Introduction to Exomiser
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Introduction to Exomiser
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tutorial-an-introduction-to-exomiser" class="md-nav__link">
+    Tutorial: an introduction to Exomiser
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    PREREQUISITES
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outline-of-the-tutorial" class="md-nav__link">
+    Outline of the tutorial
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exomiser-overview" class="md-nav__link">
+    Exomiser overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exomiser-installation" class="md-nav__link">
+    Exomiser installation
+  </a>
+  
+    <nav class="md-nav" aria-label="Exomiser installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#via-docker" class="md-nav__link">
+    via Docker
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#via-windows" class="md-nav__link">
+    via Windows
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#via-linuxmac" class="md-nav__link">
+    via Linux/Mac
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-the-applicationproperties" class="md-nav__link">
+    Configuring the application.properties
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tutorials" class="md-nav__link">
+    Tutorials
+  </a>
+  
+    <nav class="md-nav" aria-label="Tutorials">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#monarch-obo-training-tutorial" class="md-nav__link">
+    Monarch OBO Training Tutorial
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-exomiser" class="md-nav__link">
+    Running Exomiser
+  </a>
+  
+    <nav class="md-nav" aria-label="Running Exomiser">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-phenopackets" class="md-nav__link">
+    Using phenopackets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analysis-settings" class="md-nav__link">
+    Analysis settings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-via-docker" class="md-nav__link">
+    Running via Docker
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-locally" class="md-nav__link">
+    Running locally
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analysing-multi-sample-vcf-files" class="md-nav__link">
+    Analysing multi-sample VCF files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-large-jobs-batch" class="md-nav__link">
+    Running large jobs (batch)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#results" class="md-nav__link">
+    Results
+  </a>
+  
+    <nav class="md-nav" aria-label="Results">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#html" class="md-nav__link">
+    HTML
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json" class="md-nav__link">
+    JSON
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tsv-variants" class="md-nav__link">
+    TSV VARIANTS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tsv-genes" class="md-nav__link">
+    TSV GENES
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker-for-mac" class="md-nav__link">
+    Docker for Mac
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker-for-windows" class="md-nav__link">
+    Docker for Windows
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_9_11" type="checkbox" id="__nav_9_11" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_11" tabindex="0" aria-expanded="false">
+          Information Extraction
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Information Extraction" data-md-level="2">
+        <label class="md-nav__title" for="__nav_9_11">
+          <span class="md-nav__icon md-icon"></span>
+          Information Extraction
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../named-entity-recognition/" class="md-nav__link">
+        Named Entity Recognition with Gilda
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../named-entity-normalization/" class="md-nav__link">
+        Named Entity Normalization
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../named-entity-standardization/" class="md-nav__link">
+        Named Entity Standardization
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10" tabindex="0" aria-expanded="false">
+          How-to guides
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="How-to guides" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          How-to guides
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_10_1" type="checkbox" id="__nav_10_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10_1" tabindex="0" aria-expanded="false">
+          General
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="General" data-md-level="2">
+        <label class="md-nav__title" for="__nav_10_1">
+          <span class="md-nav__icon md-icon"></span>
+          General
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/open-science-engineer/" class="md-nav__link">
+        Maximising impact as an open science engineer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/create-ontology-from-scratch/" class="md-nav__link">
+        Creating an ontology from scratch
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/ontology-overview/" class="md-nav__link">
+        Create an ontology overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/prettify/" class="md-nav__link">
+        Prettify Markdown Files
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/screenshot/" class="md-nav__link">
+        Create Screenshot and paste into an issue
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/setup-docker/" class="md-nav__link">
+        Set-up docker
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_10_2" type="checkbox" id="__nav_10_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10_2" tabindex="0" aria-expanded="false">
+          Protege
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Protege" data-md-level="2">
+        <label class="md-nav__title" for="__nav_10_2">
+          <span class="md-nav__icon md-icon"></span>
+          Protege
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/install-protege/" class="md-nav__link">
+        Install Protégé
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/set-up-protege/" class="md-nav__link">
+        Setup Protege 5.5
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/installing-elk-in-protege/" class="md-nav__link">
+        Installing ELK in Protege
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/idrange/" class="md-nav__link">
+        Setting up your ID range
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/edit-in-protege/" class="md-nav__link">
+        Editing in Protege
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/daily-curator-workflow/" class="md-nav__link">
+        Daily Workflow
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/edit-in-protege/" class="md-nav__link">
+        Edit in Protege
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/switching-ontologies/" class="md-nav__link">
+        Switching Ontologies in Protege
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/protege-browse-search/" class="md-nav__link">
+        Browsing and Searching
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/create-new-term/" class="md-nav__link">
+        Creating New Terms in Protege
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/obsolete-term/" class="md-nav__link">
+        Obsoleting a Term
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/merge-terms/" class="md-nav__link">
+        Merging Terms
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/add-taxon-restrictions/" class="md-nav__link">
+        Adding Taxon Restrictions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/add-new-slim/" class="md-nav__link">
+        Creating a new Slim (under construction)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_10_3" type="checkbox" id="__nav_10_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10_3" tabindex="0" aria-expanded="false">
+          ODK
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="ODK" data-md-level="2">
+        <label class="md-nav__title" for="__nav_10_3">
+          <span class="md-nav__icon md-icon"></span>
+          ODK
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/setup-ontology-development-odk/" class="md-nav__link">
+        Get set up for ODK-based ontology development
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/odk-setup/" class="md-nav__link">
+        Setting up the ODK
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/odk-update/" class="md-nav__link">
+        Update to a newer ODK version
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/odk-create-repo/" class="md-nav__link">
+        Creating a Repo with ODK
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/deal-with-large-ontologies/" class="md-nav__link">
+        Dealing with Large Ontologies
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/update-import/" class="md-nav__link">
+        Updating Imports with ODK
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/odk-add-orcidio-module/" class="md-nav__link">
+        Import ORCIDIO
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/run-odk-with-podman/" class="md-nav__link">
+        Running ODK with podman
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_10_4" type="checkbox" id="__nav_10_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10_4" tabindex="0" aria-expanded="false">
+          Git and GitHub
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Git and GitHub" data-md-level="2">
+        <label class="md-nav__title" for="__nav_10_4">
+          <span class="md-nav__icon md-icon"></span>
+          Git and GitHub
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/term-request/" class="md-nav__link">
+        Make term requests to existing ontologies
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/clone-mondo-repo/" class="md-nav__link">
+        Clone a repository
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/github-create-fork/" class="md-nav__link">
+        Fork an ontology for editing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/github-create-pull-request/" class="md-nav__link">
+        Create a GitHub Pull Request
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/change-files-pull-request/" class="md-nav__link">
+        Change a pull request
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/fixing-conflicts/" class="md-nav__link">
+        Fix conflicts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/github-actions/" class="md-nav__link">
+        Automate tasks with GitHub actions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/revert-commit/" class="md-nav__link">
+        Revert a commit
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/review-pull-request/" class="md-nav__link">
+        Review a pull request
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_10_5" type="checkbox" id="__nav_10_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10_5" tabindex="0" aria-expanded="false">
+          Quality control
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Quality control" data-md-level="2">
+        <label class="md-nav__title" for="__nav_10_5">
+          <span class="md-nav__icon md-icon"></span>
+          Quality control
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/deploy-custom-obo-dashboard/" class="md-nav__link">
+        Deploy a custom OBO-Dashboard
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_10_6" type="checkbox" id="__nav_10_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10_6" tabindex="0" aria-expanded="false">
+          Command line
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Command line" data-md-level="2">
+        <label class="md-nav__title" for="__nav_10_6">
+          <span class="md-nav__icon md-icon"></span>
+          Command line
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/filter-text-file/" class="md-nav__link">
+        How to filter a file based on another file
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_10_7" type="checkbox" id="__nav_10_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10_7" tabindex="0" aria-expanded="false">
+          Mappings
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Mappings" data-md-level="2">
+        <label class="md-nav__title" for="__nav_10_7">
+          <span class="md-nav__icon md-icon"></span>
+          Mappings
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/are-two-entities-the-same/" class="md-nav__link">
+        Are these two entities the same? A guide.
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/review-disease-mappings/" class="md-nav__link">
+        How to review disease mappings
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_11" type="checkbox" id="__nav_11" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11" tabindex="0" aria-expanded="false">
+          Reference
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Reference" data-md-level="1">
+        <label class="md-nav__title" for="__nav_11">
+          <span class="md-nav__icon md-icon"></span>
+          Reference
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/glossary/" class="md-nav__link">
+        Tools
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/glossary-of-terms/" class="md-nav__link">
+        Glossary of Terms
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/frequently-used-odk-commands/" class="md-nav__link">
+        Frequently used ODK commands
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/protege-interface/" class="md-nav__link">
+        Protege Interface
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/protege-faq/" class="md-nav__link">
+        Protege FAQ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/formatting-license/" class="md-nav__link">
+        Formatting your ontology annotations correctly
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/go-style-annotation-property-practice/" class="md-nav__link">
+        OBO-style term annotation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_11_8" type="checkbox" id="__nav_11_8" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_8" tabindex="0" aria-expanded="false">
+          Ontology Matching
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Ontology Matching" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_8">
+          <span class="md-nav__icon md-icon"></span>
+          Ontology Matching
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/semantic-etl/" class="md-nav__link">
+        Semantic ETL
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_11_9" type="checkbox" id="__nav_11_9" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_9" tabindex="0" aria-expanded="false">
+          Git
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Git" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_9">
+          <span class="md-nav__icon md-icon"></span>
+          Git
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/github-intro/" class="md-nav__link">
+        Intro to GitHub
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/github-desktop/" class="md-nav__link">
+        GitHub Desktop
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/git-faq/" class="md-nav__link">
+        Git FAQ
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/semantic-engineering-toolbox/" class="md-nav__link">
+        Semantic Engineering Toolbox
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/tables-and-triples/" class="md-nav__link">
+        Tables and Triples
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/reasoning/" class="md-nav__link">
+        Reasoning
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/ontology-curator/" class="md-nav__link">
+        A day in the life of an ontology curator
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/protege-interface/" class="md-nav__link">
+        Protege interface
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_11_15" type="checkbox" id="__nav_11_15" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_15" tabindex="0" aria-expanded="false">
+          SPARQL
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="SPARQL" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_15">
+          <span class="md-nav__icon md-icon"></span>
+          SPARQL
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/sparql-basics/" class="md-nav__link">
+        SPARQL basics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/sparql-reference/" class="md-nav__link">
+        SPARQL templates
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/managing-issues/" class="md-nav__link">
+        Tools for Managing Issues
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/release-artefacts/" class="md-nav__link">
+        Release Artefacts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/base-specification/" class="md-nav__link">
+        Base Release
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/synonyms-obo/" class="md-nav__link">
+        Synonyms
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/mungall-blog-radar/" class="md-nav__link">
+        Monkeying around with OWL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/odk/" class="md-nav__link">
+        Ontology Development Kit (ODK)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/troublehooting-robot/" class="md-nav__link">
+        Troubleshooting ROBOT
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/gh-actions-errors/" class="md-nav__link">
+        Common Errors in GitHub actions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/other-resources/" class="md-nav__link">
+        Other useful resources
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/medical-ontology-landscape/" class="md-nav__link">
+        Medical Ontology landscape
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/wikidata/" class="md-nav__link">
+        A reference guide to Wikidata
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/obook-maturity-indicator/" class="md-nav__link">
+        OBOOK Maturity Indicator
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_11_28" type="checkbox" id="__nav_11_28" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_28" tabindex="0" aria-expanded="false">
+          ChatGPT
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="ChatGPT" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_28">
+          <span class="md-nav__icon md-icon"></span>
+          ChatGPT
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/chatgpt-prompts-for-ontology-development/" class="md-nav__link">
+        Leveraging ChatGPT for ontology curation
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/ontology-user/" class="md-nav__link">
+        Ontology User references
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_12" type="checkbox" id="__nav_12" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_12" tabindex="0" aria-expanded="false">
+          Explanations
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Explanations" data-md-level="1">
+        <label class="md-nav__title" for="__nav_12">
+          <span class="md-nav__icon md-icon"></span>
+          Explanations
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/intro-to-ontologies/" class="md-nav__link">
+        Introduction to Ontologies
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/logical-axiomatization/" class="md-nav__link">
+        Logical axiomatization of classes & use of reasoning
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/term-comments/" class="md-nav__link">
+        Term Comments
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/annotation-properties/" class="md-nav__link">
+        Introduction to Annotation Properties
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/writing-good-issues/" class="md-nav__link">
+        Writing good issues
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/ontology-matching/" class="md-nav__link">
+        Ontology Matching
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/which-ontology-to-use/" class="md-nav__link">
+        Which biomedical ontologies should we use?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/owl-format-variants/" class="md-nav__link">
+        OWL, OBO, JSON? Base, simple, full, basic? What should you use, and why?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/taxon-constraints-explainer/" class="md-nav__link">
+        What are taxon constraints?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/owl-building-blocks/" class="md-nav__link">
+        The logical building blocks of OWL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/subClassOf-vs-equivalentTo/" class="md-nav__link">
+        SubClassOf versus EquivalentTo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/existential-restrictions/" class="md-nav__link">
+        Existential restrictions
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_13" type="checkbox" id="__nav_13" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_13" tabindex="0" aria-expanded="false">
+          OBOOK Editors
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="OBOOK Editors" data-md-level="1">
+        <label class="md-nav__title" for="__nav_13">
+          <span class="md-nav__icon md-icon"></span>
+          OBOOK Editors
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started-obook/" class="md-nav__link">
+        Getting started for OBOOK editors
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../images/" class="md-nav__link">
+        How to add images
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/embed-video/" class="md-nav__link">
+        How to embed videos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../config/template/" class="md-nav__link">
+        New lesson template
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teaching/case-studies/" class="md-nav__link">
+        Case studies for teaching
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_14" type="checkbox" id="__nav_14" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_14" tabindex="0" aria-expanded="false">
+          Outreach
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Outreach" data-md-level="1">
+        <label class="md-nav__title" for="__nav_14">
+          <span class="md-nav__icon md-icon"></span>
+          Outreach
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/outreach/" class="md-nav__link">
+        Outreach materials
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tutorial-an-introduction-to-exomiser" class="md-nav__link">
+    Tutorial: an introduction to Exomiser
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    PREREQUISITES
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outline-of-the-tutorial" class="md-nav__link">
+    Outline of the tutorial
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exomiser-overview" class="md-nav__link">
+    Exomiser overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exomiser-installation" class="md-nav__link">
+    Exomiser installation
+  </a>
+  
+    <nav class="md-nav" aria-label="Exomiser installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#via-docker" class="md-nav__link">
+    via Docker
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#via-windows" class="md-nav__link">
+    via Windows
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#via-linuxmac" class="md-nav__link">
+    via Linux/Mac
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-the-applicationproperties" class="md-nav__link">
+    Configuring the application.properties
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tutorials" class="md-nav__link">
+    Tutorials
+  </a>
+  
+    <nav class="md-nav" aria-label="Tutorials">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#monarch-obo-training-tutorial" class="md-nav__link">
+    Monarch OBO Training Tutorial
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-exomiser" class="md-nav__link">
+    Running Exomiser
+  </a>
+  
+    <nav class="md-nav" aria-label="Running Exomiser">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-phenopackets" class="md-nav__link">
+    Using phenopackets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analysis-settings" class="md-nav__link">
+    Analysis settings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-via-docker" class="md-nav__link">
+    Running via Docker
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-locally" class="md-nav__link">
+    Running locally
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analysing-multi-sample-vcf-files" class="md-nav__link">
+    Analysing multi-sample VCF files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-large-jobs-batch" class="md-nav__link">
+    Running large jobs (batch)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#results" class="md-nav__link">
+    Results
+  </a>
+  
+    <nav class="md-nav" aria-label="Results">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#html" class="md-nav__link">
+    HTML
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json" class="md-nav__link">
+    JSON
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tsv-variants" class="md-nav__link">
+    TSV VARIANTS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tsv-genes" class="md-nav__link">
+    TSV GENES
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker-for-mac" class="md-nav__link">
+    Docker for Mac
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker-for-windows" class="md-nav__link">
+    Docker for Windows
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/OBOAcademy/obook/edit/master/docs/tutorial/exomiser-tutorial.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+    </a>
+  
+  
+
+
+
+  <h1>Introduction to Exomiser</h1>
+
+<h2 id="tutorial-an-introduction-to-exomiser">Tutorial: an introduction to Exomiser<a class="headerlink" href="#tutorial-an-introduction-to-exomiser" title="Permanent link">&para;</a></h2>
+<p><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FOBOAcademy%2Fobook%2Fmaster%2Fdocs%2Fresources%2Fobook-badge-stable.json" /></p>
+<p>Exomiser is a Java program that ranks potential rare Mendelian disease-causing variants from whole-exome or whole-genome sequencing data. Starting from a patient's VCF file and a set of phenotypes encoded using the <a href="https://hpo.jax.org/app/">Human Phenotype Ontology</a> (HPO), it will annotate, filter and prioritise likely causative variants. The program does this based on user-defined criteria such as a variant's predicted pathogenicity, frequency of occurrence in a population and also how closely the given patient's phenotype matches any known phenotype of genes from human disease and model organism data.</p>
+<p>In this tutorial, we will learn how to install and run Exomiser with Docker, and how to interpret the results in various output formats detailing the predicted causative genes and variants. If you prefer to work locally, instructions are also provided below for Windows and Linux/Mac users.</p>
+<p>The complete Exomiser documentation can be found <a href="https://exomiser.readthedocs.io/en/latest/">here</a>, including some relevant references <a href="https://exomiser.readthedocs.io/en/latest/publications.html">here</a>, and the Exomiser GitHub repository <a href="https://github.com/exomiser/Exomiser">here</a>.</p>
+<p>Please note that this tutorial is up-to-date with the current latest release 13.2.0 and data version up to 2302 (Feb 2023).</p>
+<h2 id="prerequisites">PREREQUISITES<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<p>You know:</p>
+<ul>
+<li>how to use a command line interface.</li>
+</ul>
+<p>You have:</p>
+<ul>
+<li>
+<p>Docker installed and running on your machine. Check out this simple guide to set up <a href="#docker-windows">Docker for Windows</a> or <a href="#docker-mac">Docker for Mac</a>.</p>
+</li>
+<li>
+<p>We recommend to have Exomiser installed via Docker prior to the tutorial. Open a terminal and run the command below:</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>pull<span class="w"> </span>exomiser/exomiser-cli:13.2.0
+</code></pre></div>
+<ul>
+<li><a href="https://drive.google.com/drive/u/2/folders/1DynxpvOTecvAXv3uYtJ0d2-A4NjQyyfN">Exomiser-Tutorial files</a> downloaded from our GoogleDrive.</li>
+</ul>
+<p>Alternatively:</p>
+<p><div class="highlight"><pre><span></span><code><span class="c1"># download the data via</span>
+wget<span class="w"> </span>https://github.com/iQuxLE/Exomiser-Tutorial/raw/main/Exomiser-Tutorial.zip
+<span class="c1"># OR clone the repository</span>
+git<span class="w"> </span>clone<span class="w"> </span>https://github.com/iQuxLE/Exomiser-Tutorial.git
+
+<span class="c1"># unzip</span>
+unzip<span class="w"> </span>Exomiser-Tutorial.zip
+</code></pre></div>
+Since the VCF files for parts of the example data are relatively large, you need to download the following separately and put it into the <code>Exomiser-Tutorial</code> folder.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># download</span>
+wget<span class="w"> </span>https://github.com/iQuxLE/Exomiser-Tutorial/raw/main/pfeiffer-family-vcf.zip
+<span class="c1"># unzip</span>
+unzip<span class="w"> </span>pfeiffer-family-vcf.zip<span class="w"> </span>-d<span class="w"> </span>Exomiser-Tutorial/exomiser-config/
+</code></pre></div>
+<p>The <code>Exomiser-Tutorial</code> folder contains a directory called <code>exomiser-config</code> (with all the VCF and analysis files)
+and <code>exomiser-overview</code> (with some introductory slides).</p>
+<ul>
+<li>Importantly, we <strong><em>highly</em></strong> recommend downloading the Exomiser data prior to the tutorial in order to follow along. The data required to run Exomiser is ~80GB and will take a while to download and unpack (depending on your internet connection, it may take a few hours). For this tutorial, you only need to download the Exomiser phenotype data and the variant data for the hg19 assembly. If you have your own samples to run with Exomiser and the VCF files are built on the hg38 build, then you will need to download the hg38 variant data as well. The current data version that we will use in this tutorial is 2302 (Feb 2023). This will change in the future. Always make sure that you use the latest data version available. To download the Exomiser data from the terminal:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1"># create an empty directory for exomiser-data within the Exomiser-Tutorial folder:</span>
+<span class="nb">cd</span><span class="w"> </span>/path/to/Exomiser-Tutorial/
+mkdir<span class="w"> </span>exomiser-data
+<span class="nb">cd</span><span class="w"> </span>exomiser-data
+<span class="c1"># download the data</span>
+wget<span class="w"> </span>https://data.monarchinitiative.org/exomiser/latest/2302_phenotype.zip<span class="w"> </span><span class="c1"># for the phenotype database</span>
+wget<span class="w"> </span>https://data.monarchinitiative.org/exomiser/latest/2302_hg19.zip<span class="w"> </span><span class="c1"># for the hg19 variant database</span>
+<span class="c1"># unzip the data</span>
+unzip<span class="w"> </span><span class="s2">&quot;2302_*.zip&quot;</span>
+</code></pre></div>
+<p>Otherwise, visit the links and download the data in your own <code>exomiser-data</code> directory:</p>
+<p><a href="https://data.monarchinitiative.org/exomiser/latest/2302_phenotype.zip">2302 phenotype database</a></p>
+<p><a href="https://data.monarchinitiative.org/exomiser/latest/2302_hg19.zip">2302 hg19 variant database</a></p>
+<p>Install <a href="http://www.7-zip.org/">7-Zip</a> for unzipping the database files. The built-in archiving software has issues extracting the zip files. Extract the database files (<code>2302_phenotype.zip</code>, <code>2302_hg19.zip</code>) by right-clicking the archive and selecting 7-Zip &gt; Extract files… into the <code>exomiser-data</code> directory.</p>
+<p>Your <code>Exomiser-Tutorial</code> directory should now be structured as follows:</p>
+<div class="highlight"><pre><span></span><code>Exomiser-Tutorial
+    ├── exomiser-config
+    ├── exomiser-data
+    │ ├── 2302_hg19
+    │ └── 2302_phenotype
+    └── exomiser-overview
+      └── exomiser-tutorial-slides
+</code></pre></div>
+<h2 id="outline-of-the-tutorial">Outline of the tutorial<a class="headerlink" href="#outline-of-the-tutorial" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="#exomiser-overview">Exomiser overview</a></li>
+<li><a href="#exomiser-installation">Exomiser installation</a><ul>
+<li><a href="#via-docker">via Docker</a></li>
+<li><a href="#via-windows">via Windows</a></li>
+<li><a href="#via-linuxmac">via Linux/Mac</a></li>
+<li><a href="#configuring-the-applicationproperties">Configuring the application.properties</a></li>
+</ul>
+</li>
+<li><a href="#running-exomiser">Running Exomiser</a><ul>
+<li><a href="#using-phenopackets">Using phenopackets</a></li>
+<li><a href="#analysis-settings">Analysis settings</a></li>
+<li><a href="#running-via-docker">Running via Docker</a></li>
+<li><a href="#running-locally">Running locally</a></li>
+<li><a href="#analysing-multi-sample-vcf-files">Analysing multi-sample VCF files</a></li>
+<li><a href="#running-large-jobs-batch">Running large jobs (batch)</a></li>
+</ul>
+</li>
+<li><a href="#results">Results</a><ul>
+<li><a href="#html">HTML</a></li>
+<li><a href="#json">JSON</a></li>
+<li><a href="#tsv-variants">TSV VARIANTS</a></li>
+<li><a href="#tsv-genes">TSV GENES</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="exomiser-overview">Exomiser overview<a class="headerlink" href="#exomiser-overview" title="Permanent link">&para;</a></h2>
+<p>For a quick overview of Exomiser take a look at the slides located in
+the <a href="https://drive.google.com/drive/u/2/folders/1DynxpvOTecvAXv3uYtJ0d2-A4NjQyyfN">Google Drive</a>
+or <a href="https://github.com/iQuxLE/Exomiser-Tutorial">GitHub repo</a>.</p>
+<h2 id="exomiser-installation">Exomiser installation<a class="headerlink" href="#exomiser-installation" title="Permanent link">&para;</a></h2>
+<h3 id="via-docker">via Docker<a class="headerlink" href="#via-docker" title="Permanent link">&para;</a></h3>
+<p>(recommended to be installed prior to the tutorial; if you run the command below again, you should receive the message "Image is up to date for exomiser/exomiser-cli:13.2.0")</p>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>pull<span class="w"> </span>exomiser/exomiser-cli:13.2.0
+</code></pre></div>
+<h3 id="via-windows">via Windows<a class="headerlink" href="#via-windows" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Install <a href="http://www.7-zip.org/">7-Zip</a> for unzipping the archive files. The built-in archiving software has issues extracting the zip files.</li>
+<li>Download the <code>exomiser-cli-13.2.0-distribution.zip</code> distribution from <a href="https://data.monarchinitiative.org/exomiser/latest/exomiser-cli-13.2.0-distribution.zip">Monarch</a>.</li>
+<li>Download the variant <code>2302_hg19.zip</code> and phenotype <code>2302_phenotype.zip</code> data files from <a href="https://data.monarchinitiative.org/exomiser/latest">Monarch</a>.</li>
+<li>Extract the distribution files by right-clicking <code>exomiser-cli-13.2.0-distribution.zip</code> and selecting 7-Zip &gt; Extract Here</li>
+<li>Extract the data files (e.g. <code>2302_phenotype.zip</code>, <code>2302_hg19.zip</code>) by right-clicking the archive and selecting 7-Zip &gt; Extract files… into the exomiser data directory. By default, Exomiser expects this to be ‘exomiser-cli-13.2.0/data’, but this can be changed in the application.properties.</li>
+</ol>
+<h3 id="via-linuxmac">via Linux/Mac<a class="headerlink" href="#via-linuxmac" title="Permanent link">&para;</a></h3>
+<p>The following shell script should work:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># download the distribution (won&#39;t take long)</span>
+wget<span class="w"> </span>https://data.monarchinitiative.org/exomiser/latest/exomiser-cli-13.2.0-distribution.zip
+<span class="c1"># download the data (this is ~80GB and will take a while). If you only require a single assembly, only download the relevant files.</span>
+wget<span class="w"> </span>https://data.monarchinitiative.org/exomiser/latest/2302_hg19.zip
+wget<span class="w"> </span>https://data.monarchinitiative.org/exomiser/latest/2302_phenotype.zip
+<span class="c1"># unzip the distribution and data files - this will create a directory called &#39;exomiser-cli-13.2.0&#39; in the current working directory (with examples and application.properties)</span>
+unzip<span class="w"> </span>exomiser-cli-13.2.0-distribution.zip
+unzip<span class="w"> </span><span class="s1">&#39;2302_*.zip&#39;</span><span class="w"> </span>-d<span class="w"> </span>exomiser-cli-13.2.0/data
+</code></pre></div>
+<h3 id="configuring-the-applicationproperties">Configuring the application.properties<a class="headerlink" href="#configuring-the-applicationproperties" title="Permanent link">&para;</a></h3>
+<p>The application.properties file needs to be updated to point to the correct location of the Exomiser data. For the purpose of this tutorial, this is already sorted, pointing to the mounted directory inside the Docker container <code>exomiser.data-directory=/exomiser-data</code>.</p>
+<p>Also, you want to make sure to edit the file to use the correct data version (currently 2302):</p>
+<div class="highlight"><pre><span></span><code><span class="w"> </span>exomiser.hg19.data-version<span class="o">=</span><span class="m">2302</span>
+<span class="w"> </span>exomiser.phenotype.data-version<span class="o">=</span><span class="m">2302</span>
+</code></pre></div>
+<h2 id="tutorials">Tutorials<a class="headerlink" href="#tutorials" title="Permanent link">&para;</a></h2>
+<h3 id="monarch-obo-training-tutorial">Monarch OBO Training Tutorial<a class="headerlink" href="#monarch-obo-training-tutorial" title="Permanent link">&para;</a></h3>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/tzwvWkb3s8A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<h2 id="running-exomiser">Running Exomiser<a class="headerlink" href="#running-exomiser" title="Permanent link">&para;</a></h2>
+<p>For this tutorial, we will focus on running Exomiser on a single-sample (whole-exome) VCF file. Additional instructions for running Exomiser on multi-sample VCF data and large jobs are also provided below.</p>
+<h3 id="using-phenopackets">Using phenopackets<a class="headerlink" href="#using-phenopackets" title="Permanent link">&para;</a></h3>
+<p>It is recommended to provide Exomiser with the input sample as a Phenopacket. Exomiser will accept this in either JSON
+or YAML format. We will use the example <code>pfeiffer-phenopacket.yml</code> below:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">manuel</span>
+<span class="nt">subject</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">manuel</span>
+<span class="w">  </span><span class="nt">sex</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MALE</span>
+<span class="nt">phenotypicFeatures</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HP:0001159</span>
+<span class="w">      </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Syndactyly</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HP:0000486</span>
+<span class="w">      </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Strabismus</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HP:0000327</span>
+<span class="w">      </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Hypoplasia of the maxilla</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HP:0000520</span>
+<span class="w">      </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Proptosis</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HP:0000316</span>
+<span class="w">      </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Hypertelorism</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HP:0000244</span>
+<span class="w">      </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Brachyturricephaly</span>
+<span class="nt">htsFiles</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">exomiser/Pfeiffer.vcf.gz</span>
+<span class="w">    </span><span class="nt">htsFormat</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">VCF</span>
+<span class="w">    </span><span class="nt">genomeAssembly</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hg19</span>
+<span class="nt">metaData</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">created</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;2019-11-12T13:47:51.948Z&#39;</span>
+<span class="w">  </span><span class="nt">createdBy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">julesj</span>
+<span class="w">  </span><span class="nt">resources</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hp</span>
+<span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">human phenotype ontology</span>
+<span class="w">      </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://purl.obolibrary.org/obo/hp.owl</span>
+<span class="w">      </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hp/releases/2019-11-08</span>
+<span class="w">      </span><span class="nt">namespacePrefix</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HP</span>
+<span class="w">      </span><span class="nt">iriPrefix</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;http://purl.obolibrary.org/obo/HP_&#39;</span>
+<span class="w">  </span><span class="nt">phenopacketSchemaVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0</span>
+</code></pre></div>
+<blockquote>
+<p><strong><em>NOTE:</em></strong> This is an example of a v1.0 phenopacket, there is a more recent release of v2.0. Exomiser can run
+phenopackets built with either v1.0 or v2.0 schema. You can find out more about the v2.0 phenopacket schema and how to
+build one with Python or Java <a href="https://phenopacket-schema.readthedocs.io/en/latest/">here</a>. To convert a phenopacket
+v1.0 to v2.0, you can use <a href="https://github.com/phenopackets/phenopacket-tools">phenopacket-tools</a>.</p>
+</blockquote>
+<h3 id="analysis-settings">Analysis settings<a class="headerlink" href="#analysis-settings" title="Permanent link">&para;</a></h3>
+<p>Below are the default analysis settings from <code>pfeiffer-analysis.yml</code> that we will use in our tutorial:</p>
+<div class="highlight"><pre><span></span><code><span class="nn">---</span>
+<span class="nt">analysis</span><span class="p">:</span>
+<span class="w">  </span><span class="c1">#FULL or PASS_ONLY</span>
+<span class="w">  </span><span class="nt">analysisMode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PASS_ONLY</span>
+<span class="w">  </span><span class="c1"># In cases where you do not want any cut-offs applied an empty map should be used e.g. inheritanceModes: {}</span>
+<span class="w">  </span><span class="c1"># These are the default settings, with values representing the maximum minor allele frequency in percent (%) permitted for an</span>
+<span class="w">  </span><span class="c1"># allele to be considered as a causative candidate under that mode of inheritance.</span>
+<span class="w">  </span><span class="c1"># If you just want to analyse a sample under a single inheritance mode, delete/comment-out the others. For AUTOSOMAL_RECESSIVE</span>
+<span class="w">  </span><span class="c1"># or X_RECESSIVE ensure *both* relevant HOM_ALT and COMP_HET modes are present.</span>
+<span class="w">  </span><span class="nt">inheritanceModes</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span>
+<span class="nt">    AUTOSOMAL_DOMINANT</span><span class="p">:</span><span class="w"> </span><span class="nv">0.1</span><span class="p p-Indicator">,</span>
+<span class="nt">    AUTOSOMAL_RECESSIVE_COMP_HET</span><span class="p">:</span><span class="w"> </span><span class="nv">2.0</span><span class="p p-Indicator">,</span>
+<span class="nt">    AUTOSOMAL_RECESSIVE_HOM_ALT</span><span class="p">:</span><span class="w"> </span><span class="nv">0.1</span><span class="p p-Indicator">,</span>
+<span class="nt">    X_DOMINANT</span><span class="p">:</span><span class="w"> </span><span class="nv">0.1</span><span class="p p-Indicator">,</span>
+<span class="nt">    X_RECESSIVE_COMP_HET</span><span class="p">:</span><span class="w"> </span><span class="nv">2.0</span><span class="p p-Indicator">,</span>
+<span class="nt">    X_RECESSIVE_HOM_ALT</span><span class="p">:</span><span class="w"> </span><span class="nv">0.1</span><span class="p p-Indicator">,</span>
+<span class="nt">    MITOCHONDRIAL</span><span class="p">:</span><span class="w"> </span><span class="nv">0.2</span>
+<span class="w">  </span><span class="p p-Indicator">}</span>
+<span class="w">  </span><span class="c1">#Possible frequencySources:</span>
+<span class="w">  </span><span class="c1">#Thousand Genomes project http://www.1000genomes.org/</span>
+<span class="w">  </span><span class="c1">#   THOUSAND_GENOMES,</span>
+<span class="w">  </span><span class="c1">#ESP project http://evs.gs.washington.edu/EVS/</span>
+<span class="w">  </span><span class="c1">#   ESP_AFRICAN_AMERICAN, ESP_EUROPEAN_AMERICAN, ESP_ALL,</span>
+<span class="w">  </span><span class="c1">#ExAC project http://exac.broadinstitute.org/about</span>
+<span class="w">  </span><span class="c1">#   EXAC_AFRICAN_INC_AFRICAN_AMERICAN, EXAC_AMERICAN,</span>
+<span class="w">  </span><span class="c1">#   EXAC_SOUTH_ASIAN, EXAC_EAST_ASIAN,</span>
+<span class="w">  </span><span class="c1">#   EXAC_FINNISH, EXAC_NON_FINNISH_EUROPEAN,</span>
+<span class="w">  </span><span class="c1">#   EXAC_OTHER</span>
+<span class="w">  </span><span class="c1">#Possible frequencySources:</span>
+<span class="w">  </span><span class="c1">#Thousand Genomes project - http://www.1000genomes.org/ (THOUSAND_GENOMES)</span>
+<span class="w">  </span><span class="c1">#TOPMed - https://www.nhlbi.nih.gov/science/precision-medicine-activities (TOPMED)</span>
+<span class="w">  </span><span class="c1">#UK10K - http://www.uk10k.org/ (UK10K)</span>
+<span class="w">  </span><span class="c1">#ESP project - http://evs.gs.washington.edu/EVS/ (ESP_)</span>
+<span class="w">  </span><span class="c1">#   ESP_AFRICAN_AMERICAN, ESP_EUROPEAN_AMERICAN, ESP_ALL,</span>
+<span class="w">  </span><span class="c1">#ExAC project http://exac.broadinstitute.org/about (EXAC_)</span>
+<span class="w">  </span><span class="c1">#   EXAC_AFRICAN_INC_AFRICAN_AMERICAN, EXAC_AMERICAN,</span>
+<span class="w">  </span><span class="c1">#   EXAC_SOUTH_ASIAN, EXAC_EAST_ASIAN,</span>
+<span class="w">  </span><span class="c1">#   EXAC_FINNISH, EXAC_NON_FINNISH_EUROPEAN,</span>
+<span class="w">  </span><span class="c1">#   EXAC_OTHER</span>
+<span class="w">  </span><span class="c1">#gnomAD - http://gnomad.broadinstitute.org/ (GNOMAD_E, GNOMAD_G)</span>
+<span class="w">  </span><span class="nt">frequencySources</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span>
+<span class="w">    </span><span class="nv">THOUSAND_GENOMES</span><span class="p p-Indicator">,</span>
+<span class="w">    </span><span class="nv">TOPMED</span><span class="p p-Indicator">,</span>
+<span class="w">    </span><span class="nv">UK10K</span><span class="p p-Indicator">,</span>
+
+<span class="w">    </span><span class="nv">ESP_AFRICAN_AMERICAN</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">ESP_EUROPEAN_AMERICAN</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">ESP_ALL</span><span class="p p-Indicator">,</span>
+
+<span class="w">    </span><span class="nv">EXAC_AFRICAN_INC_AFRICAN_AMERICAN</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">EXAC_AMERICAN</span><span class="p p-Indicator">,</span>
+<span class="w">    </span><span class="nv">EXAC_SOUTH_ASIAN</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">EXAC_EAST_ASIAN</span><span class="p p-Indicator">,</span>
+<span class="w">    </span><span class="nv">EXAC_FINNISH</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">EXAC_NON_FINNISH_EUROPEAN</span><span class="p p-Indicator">,</span>
+<span class="w">    </span><span class="nv">EXAC_OTHER</span><span class="p p-Indicator">,</span>
+
+<span class="w">    </span><span class="nv">GNOMAD_E_AFR</span><span class="p p-Indicator">,</span>
+<span class="w">    </span><span class="nv">GNOMAD_E_AMR</span><span class="p p-Indicator">,</span>
+<span class="w">    </span><span class="c1">#        GNOMAD_E_ASJ,</span>
+<span class="w">    </span><span class="nv">GNOMAD_E_EAS</span><span class="p p-Indicator">,</span>
+<span class="w">    </span><span class="nv">GNOMAD_E_FIN</span><span class="p p-Indicator">,</span>
+<span class="w">    </span><span class="nv">GNOMAD_E_NFE</span><span class="p p-Indicator">,</span>
+<span class="w">    </span><span class="nv">GNOMAD_E_OTH</span><span class="p p-Indicator">,</span>
+<span class="w">    </span><span class="nv">GNOMAD_E_SAS</span><span class="p p-Indicator">,</span>
+
+<span class="w">    </span><span class="nv">GNOMAD_G_AFR</span><span class="p p-Indicator">,</span>
+<span class="w">    </span><span class="nv">GNOMAD_G_AMR</span><span class="p p-Indicator">,</span>
+<span class="w">    </span><span class="c1">#        GNOMAD_G_ASJ,</span>
+<span class="w">    </span><span class="nv">GNOMAD_G_EAS</span><span class="p p-Indicator">,</span>
+<span class="w">    </span><span class="nv">GNOMAD_G_FIN</span><span class="p p-Indicator">,</span>
+<span class="w">    </span><span class="nv">GNOMAD_G_NFE</span><span class="p p-Indicator">,</span>
+<span class="w">    </span><span class="nv">GNOMAD_G_OTH</span><span class="p p-Indicator">,</span>
+<span class="w">    </span><span class="nv">GNOMAD_G_SAS</span>
+<span class="w">  </span><span class="p p-Indicator">]</span>
+<span class="w">  </span><span class="c1"># Possible pathogenicitySources: (POLYPHEN, MUTATION_TASTER, SIFT), (REVEL, MVP), CADD, REMM</span>
+<span class="w">  </span><span class="c1"># REMM is trained on non-coding regulatory regions</span>
+<span class="w">  </span><span class="c1"># *WARNING* if you enable CADD or REMM ensure that you have downloaded and installed the CADD/REMM tabix files</span>
+<span class="w">  </span><span class="c1"># and updated their location in the application.properties. Exomiser will not run without this.</span>
+<span class="w">  </span><span class="nt">pathogenicitySources</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="nv">REVEL</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">MVP</span><span class="w"> </span><span class="p p-Indicator">]</span>
+<span class="w">  </span><span class="c1">#this is the standard exomiser order.</span>
+<span class="w">  </span><span class="c1">#all steps are optional</span>
+<span class="w">  </span><span class="nt">steps</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span>
+<span class="w">    </span><span class="c1">#hiPhivePrioritiser: {},</span>
+<span class="w">    </span><span class="c1">#priorityScoreFilter: {priorityType: HIPHIVE_PRIORITY, minPriorityScore: 0.500},</span>
+<span class="w">    </span><span class="c1">#intervalFilter: {interval: &#39;chr10:123256200-123256300&#39;},</span>
+<span class="w">    </span><span class="c1"># or for multiple intervals:</span>
+<span class="w">    </span><span class="c1">#intervalFilter: {intervals: [&#39;chr10:123256200-123256300&#39;, &#39;chr10:123256290-123256350&#39;]},</span>
+<span class="w">    </span><span class="c1"># or using a BED file - NOTE this should be 0-based, Exomiser otherwise uses 1-based coordinates in line with VCF</span>
+<span class="w">    </span><span class="c1">#intervalFilter: {bed: /full/path/to/bed_file.bed},</span>
+<span class="w">    </span><span class="c1">#genePanelFilter: {geneSymbols: [&#39;FGFR1&#39;,&#39;FGFR2&#39;]},</span>
+<span class="w">      </span><span class="nv">failedVariantFilter</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="w"> </span><span class="p p-Indicator">},</span>
+<span class="w">    </span><span class="c1">#qualityFilter: {minQuality: 50.0},</span>
+<span class="w">      </span><span class="nv">variantEffectFilter</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="p p-Indicator">{</span>
+<span class="nt">        remove</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span>
+<span class="w">            </span><span class="nv">FIVE_PRIME_UTR_EXON_VARIANT</span><span class="p p-Indicator">,</span>
+<span class="w">            </span><span class="nv">FIVE_PRIME_UTR_INTRON_VARIANT</span><span class="p p-Indicator">,</span>
+<span class="w">            </span><span class="nv">THREE_PRIME_UTR_EXON_VARIANT</span><span class="p p-Indicator">,</span>
+<span class="w">            </span><span class="nv">THREE_PRIME_UTR_INTRON_VARIANT</span><span class="p p-Indicator">,</span>
+<span class="w">            </span><span class="nv">NON_CODING_TRANSCRIPT_EXON_VARIANT</span><span class="p p-Indicator">,</span>
+<span class="w">            </span><span class="nv">UPSTREAM_GENE_VARIANT</span><span class="p p-Indicator">,</span>
+<span class="w">            </span><span class="nv">INTERGENIC_VARIANT</span><span class="p p-Indicator">,</span>
+<span class="w">        </span><span class="nv">REGULATORY_REGION_VARIANT</span><span class="p p-Indicator">,</span>
+<span class="w">        </span><span class="nv">CODING_TRANSCRIPT_INTRON_VARIANT</span><span class="p p-Indicator">,</span>
+<span class="w">        </span><span class="nv">NON_CODING_TRANSCRIPT_INTRON_VARIANT</span><span class="p p-Indicator">,</span>
+<span class="w">        </span><span class="nv">DOWNSTREAM_GENE_VARIANT</span>
+<span class="w">      </span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="p p-Indicator">},</span>
+<span class="w">    </span><span class="c1"># removes variants represented in the database</span>
+<span class="w">    </span><span class="c1">#knownVariantFilter: {},</span>
+<span class="w">    </span><span class="nv">frequencyFilter</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt">maxFrequency</span><span class="p">:</span><span class="w"> </span><span class="nv">2.0</span><span class="p p-Indicator">},</span>
+<span class="w">    </span><span class="nv">pathogenicityFilter</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt">keepNonPathogenic</span><span class="p">:</span><span class="w"> </span><span class="nv">true</span><span class="p p-Indicator">},</span>
+<span class="w">    </span><span class="c1"># inheritanceFilter and omimPrioritiser should always run AFTER all other filters have completed</span>
+<span class="w">    </span><span class="nv">inheritanceFilter</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="p p-Indicator">{},</span>
+<span class="w">    </span><span class="c1"># omimPrioritiser isn&#39;t mandatory.</span>
+<span class="w">    </span><span class="nv">omimPrioritiser</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="p p-Indicator">{},</span>
+<span class="w">    </span><span class="c1">#priorityScoreFilter: {minPriorityScore: 0.4},</span>
+<span class="w">    </span><span class="c1"># Other prioritisers: Only combine omimPrioritiser with one of these.</span>
+<span class="w">    </span><span class="c1"># Don&#39;t include any if you only want to filter the variants.</span>
+<span class="w">    </span><span class="nv">hiPhivePrioritiser</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="p p-Indicator">{},</span>
+<span class="w">    </span><span class="c1"># or run hiPhive in benchmarking mode:</span>
+<span class="w">    </span><span class="c1">#hiPhivePrioritiser: {runParams: &#39;mouse&#39;},</span>
+<span class="w">    </span><span class="c1">#phivePrioritiser: {}</span>
+<span class="w">    </span><span class="c1">#phenixPrioritiser: {}</span>
+<span class="w">    </span><span class="c1">#exomeWalkerPrioritiser: {seedGeneIds: [11111, 22222, 33333]}</span>
+<span class="w">  </span><span class="p p-Indicator">]</span>
+<span class="nt">outputOptions</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">outputContributingVariantsOnly</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">    </span><span class="c1">#numGenes options: 0 = all or specify a limit e.g. 500 for the first 500 results</span>
+<span class="w">    </span><span class="nt">numGenes</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="c1">#minExomiserGeneScore: 0.7</span>
+<span class="w">    </span><span class="c1"># Path to the desired output directory. Will default to the &#39;results&#39; subdirectory of the exomiser install directory</span>
+<span class="w">    </span><span class="nt">outputDirectory</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">results</span>
+<span class="w">    </span><span class="c1"># Filename for the output files. Will default to {input-vcf-filename}-exomiser</span>
+<span class="w">    </span><span class="nt">outputFileName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Pfeiffer-HIPHIVE-exome</span>
+<span class="w">    </span><span class="c1">#out-format options: HTML, JSON, TSV_GENE, TSV_VARIANT, VCF (default: HTML)</span>
+<span class="w">    </span><span class="nt">outputFormats</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">HTML</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">JSON</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">TSV_GENE</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">TSV_VARIANT</span><span class="p p-Indicator">]</span>
+</code></pre></div>
+<h3 id="running-via-docker">Running via Docker<a class="headerlink" href="#running-via-docker" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>-v<span class="w"> </span><span class="s2">&quot;/path/to/Exomiser-Tutorial/exomiser-data:/exomiser-data&quot;</span><span class="w"> </span><span class="se">\</span>
+-v<span class="w"> </span><span class="s2">&quot;/path/to/Exomiser-Tutorial/exomiser-config/:/exomiser&quot;</span><span class="w"> </span><span class="se">\</span>
+-v<span class="w"> </span><span class="s2">&quot;/path/to/Exomiser-Tutorial/exomiser-results:/results&quot;</span><span class="w"> </span><span class="se">\</span>
+exomiser/exomiser-cli:13.2.0<span class="w"> </span><span class="se">\</span>
+--sample<span class="w"> </span>/exomiser/pfeiffer-phenopacket.yml<span class="w"> </span><span class="se">\</span>
+--analysis<span class="w"> </span>/exomiser/pfeiffer-analysis.yml<span class="w"> </span><span class="se">\</span>
+--spring.config.location<span class="o">=</span>/exomiser/application.properties
+</code></pre></div>
+<p>This command will produce <code>Pfeiffer-HIPHIVE-exome.html</code>, <code>Pfeiffer-HIPHIVE-exome.json</code>, <code>Pfeiffer-HIPHIVE-exome.genes.tsv</code> and <code>Pfeiffer-HIPHIVE-exome.variants.tsv</code> in your <code>exomiser-results</code> directory.</p>
+<h3 id="running-locally">Running locally<a class="headerlink" href="#running-locally" title="Permanent link">&para;</a></h3>
+<p>Assuming that you are within the <code>exomiser-cli-13.2.0</code> distribution folder:</p>
+<div class="highlight"><pre><span></span><code>java<span class="w"> </span>-jar<span class="w"> </span>exomiser-cli-13.2.0.jar<span class="w"> </span>--sample<span class="w"> </span>examples/pfeiffer-phenopacket.yml<span class="w"> </span><span class="se">\</span>
+--analysis<span class="w"> </span>examples/exome-analysis.yml<span class="w"> </span>--output<span class="w"> </span>examples/output-options.yml<span class="w">  </span>
+</code></pre></div>
+<h3 id="analysing-multi-sample-vcf-files">Analysing multi-sample VCF files<a class="headerlink" href="#analysing-multi-sample-vcf-files" title="Permanent link">&para;</a></h3>
+<p>When analysing a multi-sample VCF file, you must detail the pedigree information in a phenopacket describing a Family
+object:</p>
+<p>e.g. <code>Exomiser-Tutorial/exomiser-config/pfeiffer-family.yml</code></p>
+<div class="highlight"><pre><span></span><code><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ISDBM322017-family</span>
+<span class="nt">proband</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">subject</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ISDBM322017</span>
+<span class="w">    </span><span class="nt">sex</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">FEMALE</span>
+<span class="w">  </span><span class="nt">phenotypicFeatures</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HP:0001159</span>
+<span class="w">        </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Syndactyly</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HP:0000486</span>
+<span class="w">        </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Strabismus</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HP:0000327</span>
+<span class="w">        </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Hypoplasia of the maxilla</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HP:0000520</span>
+<span class="w">        </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Proptosis</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HP:0000316</span>
+<span class="w">        </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Hypertelorism</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HP:0000244</span>
+<span class="w">        </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Brachyturricephaly</span>
+<span class="nt">pedigree</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">persons</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">individualId</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ISDBM322017</span>
+<span class="w">      </span><span class="nt">paternalId</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ISDBM322016</span>
+<span class="w">      </span><span class="nt">maternalId</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ISDBM322018</span>
+<span class="w">      </span><span class="nt">sex</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">FEMALE</span>
+<span class="w">      </span><span class="nt">affectedStatus</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AFFECTED</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">individualId</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ISDBM322015</span>
+<span class="w">      </span><span class="nt">paternalId</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ISDBM322016</span>
+<span class="w">      </span><span class="nt">maternalId</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ISDBM322018</span>
+<span class="w">      </span><span class="nt">sex</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MALE</span>
+<span class="w">      </span><span class="nt">affectedStatus</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">UNAFFECTED</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">individualId</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ISDBM322016</span>
+<span class="w">      </span><span class="nt">sex</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MALE</span>
+<span class="w">      </span><span class="nt">affectedStatus</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">UNAFFECTED</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">individualId</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ISDBM322018</span>
+<span class="w">      </span><span class="nt">sex</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">FEMALE</span>
+<span class="w">      </span><span class="nt">affectedStatus</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">UNAFFECTED</span>
+<span class="nt">htsFiles</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">exomiser/Pfeiffer-quartet.vcf.gz</span>
+<span class="w">    </span><span class="nt">htsFormat</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">VCF</span>
+<span class="w">    </span><span class="nt">genomeAssembly</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">GRCh37</span>
+<span class="nt">metaData</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">created</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;2019-11-12T13:47:51.948Z&#39;</span>
+<span class="w">  </span><span class="nt">createdBy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">julesj</span>
+<span class="w">  </span><span class="nt">resources</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hp</span>
+<span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">human phenotype ontology</span>
+<span class="w">      </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://purl.obolibrary.org/obo/hp.owl</span>
+<span class="w">      </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hp/releases/2019-11-08</span>
+<span class="w">      </span><span class="nt">namespacePrefix</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HP</span>
+<span class="w">      </span><span class="nt">iriPrefix</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;http://purl.obolibrary.org/obo/HP_&#39;</span>
+<span class="w">  </span><span class="nt">phenopacketSchemaVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0</span>
+</code></pre></div>
+<p>Running via Docker:</p>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>-v<span class="w"> </span><span class="s1">&#39;/path/to/Exomiser-Tutorial/exomiser-data:/exomiser-data&#39;</span><span class="w"> </span><span class="se">\</span>
+-v<span class="w"> </span><span class="s1">&#39;/path/to/Exomiser-Tutorial/exomiser-config/:/exomiser&#39;</span><span class="w"> </span><span class="se">\</span>
+-v<span class="w"> </span><span class="s1">&#39;/path/to/Exomiser-Tutorial/exomiser-results:/results&#39;</span><span class="w"> </span><span class="se">\</span>
+exomiser/exomiser-cli:13.2.0<span class="w"> </span><span class="se">\</span>
+--sample<span class="w"> </span>/exomiser/pfeiffer-family.yml<span class="w"> </span><span class="se">\</span>
+--analysis<span class="w"> </span>/exomiser/pfeiffer-analysis.yml<span class="w"> </span><span class="se">\</span>
+--spring.config.location<span class="o">=</span>/exomiser/application.properties
+</code></pre></div>
+<p>Running locally:</p>
+<p>Assuming that you are within the <code>exomiser-cli-13.2.0</code> distribution folder</p>
+<div class="highlight"><pre><span></span><code>java<span class="w"> </span>-jar<span class="w"> </span>exomiser-cli-13.2.0.jar<span class="w"> </span>--sample<span class="w"> </span>examples/pfeiffer-family.yml<span class="w"> </span>--analysis<span class="w"> </span>examples/exome-analysis.yml<span class="w"> </span>--output<span class="w"> </span>examples/output-options.yml
+</code></pre></div>
+<h3 id="running-large-jobs-batch">Running large jobs (batch)<a class="headerlink" href="#running-large-jobs-batch" title="Permanent link">&para;</a></h3>
+<p>The above commands can be added to a batch file for example in the
+file <code>Exomiser-Tutorial/exomiser-config/test-analysis-batch-commands.txt</code>. Using it with Docker we recommend creating a
+new directory for the batch files and mounting that to the Docker container.</p>
+<p>Running via Docker:</p>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>-v<span class="w"> </span><span class="s1">&#39;/path/to/Exomiser-Tutorial/exomiser-data:/exomiser-data&#39;</span><span class="w"> </span><span class="se">\</span>
+-v<span class="w"> </span><span class="s1">&#39;/path/to/Exomiser-Tutorial/exomiser-config/:/exomiser&#39;</span><span class="w"> </span><span class="se">\</span>
+-v<span class="w"> </span><span class="s1">&#39;/path/to/Exomiser-Tutorial/exomiser-results:/results&#39;</span><span class="w"> </span><span class="se">\</span>
+-v<span class="w"> </span><span class="s1">&#39;/path/to/Exomiser-Tutorial/exomiser-batch-files:/batch-files&#39;</span><span class="w"> </span><span class="se">\</span>
+exomiser/exomiser-cli:13.2.0<span class="w"> </span><span class="se">\</span>
+--batch<span class="w"> </span>/batch-files/test-analysis-batch-commands.txt
+--spring.config.location<span class="o">=</span>/exomiser/application.properties
+</code></pre></div>
+<p>Running locally:</p>
+<p>Assuming that you are within the <code>exomiser-cli-13.2.0</code> distribution folder</p>
+<div class="highlight"><pre><span></span><code>java<span class="w"> </span>-jar<span class="w"> </span>exomiser-cli-13.2.0.jar<span class="w"> </span>--batch<span class="w"> </span>examples/test-analysis-batch-commands.txt
+</code></pre></div>
+<p>The advantage of this is that a single command will be able to analyse many samples in far less time than starting a new
+JVM for each as there will be no start-up penalty after the initial start and the Java JIT compiler will be able to take
+advantage of a longer-running process to optimise the runtime code. For maximum throughput on a cluster consider
+splitting your batch jobs over multiple nodes.</p>
+<h2 id="results">Results<a class="headerlink" href="#results" title="Permanent link">&para;</a></h2>
+<p>Depending on the output options provided, Exomiser will write out at least an HTML and JSON output file in the <code>results</code> subdirectory of the Exomiser installation (by default) or a user-defined results directory as indicated in the output options.</p>
+<p>As a general rule, all output files contain a ranked list of genes and variants with the top-ranked gene/variant displayed first. The exception being the VCF output (if requested in the output options; not requested in this tutorial) which, since version 13.1.0, is sorted according to VCF convention and tabix indexed.</p>
+<p>In our tutorial, we requested HTML, JSON, TSV_VARIANT and TSV_GENE output formats which are briefly outlined below.</p>
+<h3 id="html">HTML<a class="headerlink" href="#html" title="Permanent link">&para;</a></h3>
+<p>A few relevant screenshots from <code>Pfeiffer-HIPHIVE-exome.html</code>:
+<img alt="HTML annotation 1" src="../../images/exomiser_tutorial_images/HTML_annotation_part1.png" />
+<img alt="HTML annotation 2" src="../../images/exomiser_tutorial_images/HTML_annotated_part2.jpg" />
+<img alt="HTML annotation 3" src="../../images/exomiser_tutorial_images/HTML_annotated_part3.jpg" /></p>
+<h3 id="json">JSON<a class="headerlink" href="#json" title="Permanent link">&para;</a></h3>
+<p>The JSON file represents the most accurate representation of the results, as it is referenced internally by Exomiser. As
+such, we don’t provide a schema for this, but it has been pretty stable and breaking changes will only occur with major
+version changes to the software. Minor additions are to be expected for minor releases, as per the SemVer specification.</p>
+<p>We recommend using Python or JQ to extract data from this file. To give you an idea of how you can extract some data with Python, we have provided examples of how you can iterate over the results below. However, there is a lot more information content that you can pull out from the JSON results file, this only provides a snippet of what you can do.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># import json library</span>
+<span class="kn">import</span> <span class="nn">json</span>
+
+<span class="c1"># to load in the exomiser json result</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;path/to/Exomiser-Tutorial/Pfeiffer-HIPHIVE-exome.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">exomiser_json_result</span><span class="p">:</span>
+    <span class="n">exomiser_result</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">exomiser_json_result</span><span class="p">)</span>
+<span class="n">exomiser_json_result</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="c1"># to retrieve all predicted genes and corresponding identifier (ENSEMBL)</span>
+<span class="n">gene_results</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">result</span> <span class="ow">in</span> <span class="n">exomiser_result</span><span class="p">:</span>
+    <span class="n">gene_results</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="n">result</span><span class="p">[</span><span class="s2">&quot;geneSymbol&quot;</span><span class="p">]:</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;geneIdentifier&quot;</span><span class="p">][</span><span class="s2">&quot;geneId&quot;</span><span class="p">]})</span>
+
+<span class="c1"># to retrieve all predicted variants</span>
+<span class="n">variant_results</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">result</span> <span class="ow">in</span> <span class="n">exomiser_result</span><span class="p">:</span>
+  <span class="k">for</span> <span class="n">moi</span> <span class="ow">in</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;geneScores&quot;</span><span class="p">]:</span>  <span class="c1"># iterating over all modes of inheritance</span>
+    <span class="k">if</span> <span class="s2">&quot;contributingVariants&quot;</span> <span class="ow">in</span> <span class="n">moi</span><span class="p">:</span>  <span class="c1">#  checking if there is evidence of contributing variants</span>
+        <span class="k">for</span> <span class="n">cv</span> <span class="ow">in</span> <span class="n">moi</span><span class="p">[</span><span class="s2">&quot;contributingVariants&quot;</span><span class="p">]:</span>  <span class="c1"># iterating over all contributing variants</span>
+          <span class="n">variant_results</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s2">&quot;chromosome&quot;</span><span class="p">:</span> <span class="n">cv</span><span class="p">[</span><span class="s2">&quot;contigName&quot;</span><span class="p">],</span>
+                                  <span class="s2">&quot;start_pos&quot;</span><span class="p">:</span> <span class="n">cv</span><span class="p">[</span><span class="s2">&quot;start&quot;</span><span class="p">],</span>
+                                  <span class="s2">&quot;end_pos&quot;</span><span class="p">:</span> <span class="n">cv</span><span class="p">[</span><span class="s2">&quot;end&quot;</span><span class="p">],</span>
+                                  <span class="s2">&quot;ref_allele&quot;</span><span class="p">:</span> <span class="n">cv</span><span class="p">[</span><span class="s2">&quot;ref&quot;</span><span class="p">],</span>
+                                  <span class="s2">&quot;alt_allele&quot;</span><span class="p">:</span> <span class="n">cv</span><span class="p">[</span><span class="s2">&quot;alt&quot;</span><span class="p">]})</span>
+</code></pre></div>
+<h3 id="tsv-variants">TSV VARIANTS<a class="headerlink" href="#tsv-variants" title="Permanent link">&para;</a></h3>
+<p>In the <code>Pfeiffer-HIPHIVE-exome.variants.tsv</code> file it is possible for a variant to appear multiple times, depending on the MOI it is compatible with. For example, in the excerpt of the file below, MUC6 has two variants ranked 7th under the AD model and two ranked 8th under an AR (compound heterozygous) model. In the AD case the CONTRIBUTING_VARIANT column indicates whether the variant was (1) or wasn't (0) used for calculating the EXOMISER_GENE_COMBINED_SCORE and EXOMISER_GENE_VARIANT_SCORE.</p>
+<div class="highlight"><pre><span></span><code>#RANK   ID      GENE_SYMBOL     ENTREZ_GENE_ID  MOI     P-VALUE EXOMISER_GENE_COMBINED_SCORE    EXOMISER_GENE_PHENO_SCORE       EXOMISER_GENE_VARIANT_SCORE     EXOMISER_VARIANT_SCORE  CONTRIBUTING_VARIANT    WHITELIST_VARIANT       VCF_ID  RS_ID   CONTIG  START   END     REF     ALT     CHANGE_LENGTH   QUAL    FILTER  GENOTYPE        FUNCTIONAL_CLASS        HGVS    EXOMISER_ACMG_CLASSIFICATION    EXOMISER_ACMG_EVIDENCE  EXOMISER_ACMG_DISEASE_ID        EXOMISER_ACMG_DISEASE_NAME      CLINVAR_ALLELE_ID       CLINVAR_PRIMARY_INTERPRETATION  CLINVAR_STAR_RATING     GENE_CONSTRAINT_LOEUF   GENE_CONSTRAINT_LOEUF_LOWER     GENE_CONSTRAINT_LOEUF_UPPER     MAX_FREQ_SOURCE MAX_FREQ        ALL_FREQ        MAX_PATH_SOURCE MAX_PATH        ALL_PATH
+1       10-123256215-T-G_AD     FGFR2   2263    AD      0.0000  0.9957  0.9187  1.0000  1.0000  1       1               rs121918506     10      123256215       123256215       T       G       0       900.0000        PASS    0/1     missense_variant        FGFR2:ENST00000346997.2:c.1688A&gt;C:p.(Glu563Ala) PATHOGENIC      PM2,PP3_Strong,PP4,PP5_Strong   ORPHA:87        Apert syndrome  28333   PATHOGENIC_OR_LIKELY_PATHOGENIC 2       0.13692 0.074   0.27                            REVEL   0.965   REVEL=0.965,MVP=0.9517972
+2       5-71755984-C-G_AD       ZNF366  167465  AD      0.0018  0.9237  0.8195  0.7910  0.7910  1       0               rs375204168     5       71755984        71755984        C       G       0       380.8900        PASS    0/1     splice_region_variant   ZNF366:ENST00000318442.5:c.1332+8G&gt;C:p.?        UNCERTAIN_SIGNIFICANCE                                  NOT_PROVIDED    0       0.27437 0.155   0.515   EXAC_AMERICAN   0.07975895      THOUSAND_GENOMES=0.01997,TOPMED=0.01096,ESP_EUROPEAN_AMERICAN=0.0116,ESP_ALL=0.0077,EXAC_AMERICAN=0.07975895,EXAC_NON_FINNISH_EUROPEAN=0.010914307,GNOMAD_E_AMR=0.07153929,GNOMAD_E_NFE=0.010890082,GNOMAD_E_OTH=0.018328445
+3       16-2150254-G-A_AD       PKD1    5310    AD      0.0050  0.8272  0.6597  0.8707  0.8707  1       0               rs147967021     16      2150254 2150254 G       A       0       406.0800        PASS    0/1     missense_variant        PKD1:ENST00000262304.4:c.9625C&gt;T:p.(Arg3209Cys) UNCERTAIN_SIGNIFICANCE                          1319391 UNCERTAIN_SIGNIFICANCE  1       0.12051 0.082   0.179   EXAC_AMERICAN   0.06979585      THOUSAND_GENOMES=0.01997,TOPMED=0.007934,EXAC_AMERICAN=0.06979585,EXAC_NON_FINNISH_EUROPEAN=0.0015655332,EXAC_SOUTH_ASIAN=0.012149192,GNOMAD_E_AFR=0.006708708,GNOMAD_E_AMR=0.05070389,GNOMAD_E_NFE=0.002718672,GNOMAD_E_SAS=0.013009822,GNOMAD_G_AFR=0.011462632       MVP     0.8792868       REVEL=0.346,MVP=0.8792868
+4       3-56653839-CTG-C_AD     CCDC66  285331  AD      0.0051  0.8262  0.5463  0.9984  0.9984  1       0               rs751329549     3       56653839        56653841        CTG     C       -2      1872.9400       PASS    0/1     frameshift_truncation   CCDC66:ENST00000326595.7:c.2572_2573del:p.(Val858Glnfs*6)       UNCERTAIN_SIGNIFICANCE                                  NOT_PROVIDED    0       0.9703  0.78    1.215   GNOMAD_E_AMR    0.011914691     TOPMED=7.556E-4,EXAC_EAST_ASIAN=0.01155535,EXAC_NON_FINNISH_EUROPEAN=0.0015023135,GNOMAD_E_AMR=0.011914691,GNOMAD_E_EAS=0.0057977736,GNOMAD_E_NFE=8.988441E-4
+5       13-110855918-C-G_AD     COL4A1  1282    AD      0.0075  0.7762  0.5288  0.9838  0.9838  1       0               rs150182714     13      110855918       110855918       C       G       0       1363.8700       PASS    0/1     missense_variant        COL4A1:ENST00000375820.4:c.994G&gt;C:p.(Gly332Arg) UNCERTAIN_SIGNIFICANCE  PP3_Moderate    OMIM:175780     Brain small vessel disease with or without ocular anomalies     333515  CONFLICTING_PATHOGENICITY_INTERPRETATIONS       1       0.065014        0.035   0.128   ESP_EUROPEAN_AMERICAN   0.0233  THOUSAND_GENOMES=0.01997,TOPMED=0.0068,ESP_EUROPEAN_AMERICAN=0.0233,ESP_ALL=0.0154,EXAC_AFRICAN_INC_AFRICAN_AMERICAN=0.009609841,EXAC_NON_FINNISH_EUROPEAN=0.007491759,GNOMAD_E_AFR=0.013068479,GNOMAD_E_NFE=0.0071611437,GNOMAD_G_NFE=0.013324451      MVP     0.9869305       REVEL=0.886,MVP=0.9869305
+6       6-132203615-G-A_AD      ENPP1   5167    AD      0.0079  0.7695  0.5112  0.9996  0.9996  1       0               rs770775549     6       132203615       132203615       G       A       0       922.9800        PASS    0/1     splice_donor_variant    ENPP1:ENST00000360971.2:c.2230+1G&gt;A:p.? UNCERTAIN_SIGNIFICANCE  PVS1_Strong                             NOT_PROVIDED    0       0.41042 0.292   0.586   GNOMAD_E_SAS    0.0032486517    TOPMED=7.556E-4,EXAC_NON_FINNISH_EUROPEAN=0.0014985314,GNOMAD_E_NFE=0.0017907989,GNOMAD_E_SAS=0.0032486517
+7       11-1018088-TG-T_AD      MUC6    4588    AD      0.0089  0.7563  0.5046  0.9990  0.9990  1       0               rs765231061     11      1018088 1018089 TG      T       -1      441.8100        PASS    0/1     frameshift_variant      MUC6:ENST00000421673.2:c.4712del:p.(Pro1571Hisfs*21)    UNCERTAIN_SIGNIFICANCE                                  NOT_PROVIDED    0       0.79622 0.656   0.971   GNOMAD_G_NFE    0.0070363074    GNOMAD_E_AMR=0.0030803352,GNOMAD_G_NFE=0.0070363074
+7       11-1018093-G-GT_AD      MUC6    4588    AD      0.0089  0.7563  0.5046  0.9990  0.9989  0       0               rs376177791     11      1018093 1018093 G       GT      1       592.4500        PASS    0/1     frameshift_elongation   MUC6:ENST00000421673.2:c.4707dup:p.(Pro1570Thrfs*136)   NOT_AVAILABLE                                   NOT_PROVIDED    0       0.79622 0.656   0.971   GNOMAD_G_NFE    0.007835763     GNOMAD_G_NFE=0.007835763
+8       11-1018088-TG-T_AR      MUC6    4588    AR      0.0089  0.7562  0.5046  0.9990  0.9990  1       0               rs765231061     11      1018088 1018089 TG      T       -1      441.8100        PASS    0/1     frameshift_variant      MUC6:ENST00000421673.2:c.4712del:p.(Pro1571Hisfs*21)    UNCERTAIN_SIGNIFICANCE                                  NOT_PROVIDED    0       0.79622 0.656   0.971   GNOMAD_G_NFE    0.0070363074    GNOMAD_E_AMR=0.0030803352,GNOMAD_G_NFE=0.0070363074
+8       11-1018093-G-GT_AR      MUC6    4588    AR      0.0089  0.7562  0.5046  0.9990  0.9989  1       0               rs376177791     11      1018093 1018093 G       GT      1       592.4500        PASS    0/1     frameshift_elongation   MUC6:ENST00000421673.2:c.4707dup:p.(Pro1570Thrfs*136)   UNCERTAIN_SIGNIFICANCE                                  NOT_PROVIDED    0       0.79622 0.656   0.971   GNOMAD_G_NFE    0.007835763     GNOMAD_G_NFE=0.007835763
+9       7-44610376-G-A_AD       DDX56   54606   AD      0.0091  0.7545  0.5036  0.9992  0.9992  1       0               rs774566321     7       44610376        44610376        G       A       0       586.6600        PASS    0/1     stop_gained     DDX56:ENST00000258772.5:c.991C&gt;T:p.(Arg331*)    UNCERTAIN_SIGNIFICANCE                                  NOT_PROVIDED    0       0.56071 0.379   0.852   EXAC_SOUTH_ASIAN        0.006114712     EXAC_SOUTH_ASIAN=0.006114712,GNOMAD_E_SAS=0.0032509754
+10      14-96730313-G-A_AD      BDKRB1  623     AD      0.0093  0.7525  0.5018  1.0000  1.0000  1       0                       14      96730313        96730313        G       A       0       378.2200        PASS    0/1     stop_gained     BDKRB1:ENST00000216629.6:c.294G&gt;A:p.(Trp98*)    UNCERTAIN_SIGNIFICANCE                                  NOT_PROVIDED    0       0.52212 0.272   1.097                                        
+</code></pre></div>
+<h3 id="tsv-genes">TSV GENES<a class="headerlink" href="#tsv-genes" title="Permanent link">&para;</a></h3>
+<p>In the <code>Pfeiffer-HIPHIVE-exome.genes.tsv</code> file, all the various phenotypic scores and HPO matches from the HUMAN, MOUSE, FISH and PPI comparisons are reported per each gene. It is possible for a gene to appear multiple times, depending on the MOI it is compatible with, given the filtered variants. For example in the example below MUC6 is ranked 7th under the AD model and 8th under an AR model.
+<div class="highlight"><pre><span></span><code>#RANK   ID      GENE_SYMBOL     ENTREZ_GENE_ID  MOI     P-VALUE EXOMISER_GENE_COMBINED_SCORE    EXOMISER_GENE_PHENO_SCORE       EXOMISER_GENE_VARIANT_SCORE     HUMAN_PHENO_SCORE       MOUSE_PHENO_SCORE       FISH_PHENO_SCORE        WALKER_SCORE    PHIVE_ALL_SPECIES_SCORE OMIM_SCORE      MATCHES_CANDIDATE_GENE  HUMAN_PHENO_EVIDENCE    MOUSE_PHENO_EVIDENCE    FISH_PHENO_EVIDENCE     HUMAN_PPI_EVIDENCE      MOUSE_PPI_EVIDENCE      FISH_PPI_EVIDENCE
+1       FGFR2_AD        FGFR2   2263    AD      0.0000  0.9957  0.9187  1.0000  0.8671  0.9187  0.0000  0.5057  0.9187  1.0000  0       Apert syndrome (ORPHA:87): Syndactyly (HP:0001159)-Toe syndactyly (HP:0001770), Strabismus (HP:0000486)-Strabismus (HP:0000486), Hypoplasia of the maxilla (HP:0000327)-Hypoplasia of the maxilla (HP:0000327), Proptosis (HP:0000520)-Proptosis (HP:0000520), Hypertelorism (HP:0000316)-Hypertelorism (HP:0000316), Brachyturricephaly (HP:0000244)-Brachyturricephaly (HP:0000244),  Strabismus (HP:0000486)-ocular hypertelorism (MP:0001300), Hypoplasia of the maxilla (HP:0000327)-short maxilla (MP:0000097), Proptosis (HP:0000520)-exophthalmos (MP:0002750), Hypertelorism (HP:0000316)-ocular hypertelorism (MP:0001300), Brachyturricephaly (HP:0000244)-abnormal frontal bone morphology (MP:0000107),                    Proximity to FGF18 Syndactyly (HP:0001159)-abnormal metatarsal bone morphology (MP:0003072), Strabismus (HP:0000486)-abnormal neurocranium morphology (MP:0000074), Hypoplasia of the maxilla (HP:0000327)-maxilla hypoplasia (MP:0000457), Proptosis (HP:0000520)-abnormal neurocranium morphology (MP:0000074), Hypertelorism (HP:0000316)-abnormal neurocranium morphology (MP:0000074), Brachyturricephaly (HP:0000244)-abnormal neurocranium morphology (MP:0000074),
+2       ZNF366_AD       ZNF366  167465  AD      0.0018  0.9237  0.8195  0.7910  0.0000  0.8195  0.0000  0.5015  0.8195  1.0000  0               Syndactyly (HP:0001159)-syndactyly (MP:0000564), Strabismus (HP:0000486)-microphthalmia (MP:0001297), Hypoplasia of the maxilla (HP:0000327)-micrognathia (MP:0002639), Proptosis (HP:0000520)-microphthalmia (MP:0001297), Hypertelorism (HP:0000316)-microphthalmia (MP:0001297), Brachyturricephaly (HP:0000244)-microphthalmia (MP:0001297),                Proximity to CTBP1 associated with Wolf-Hirschhorn syndrome (ORPHA:280): Syndactyly (HP:0001159)-Arachnodactyly (HP:0001166), Strabismus (HP:0000486)-Strabismus (HP:0000486), Hypoplasia of the maxilla (HP:0000327)-Micrognathia (HP:0000347), Proptosis (HP:0000520)-Proptosis (HP:0000520), Hypertelorism (HP:0000316)-Hypertelorism (HP:0000316), Brachyturricephaly (HP:0000244)-Calvarial skull defect (HP:0001362),
+3       PKD1_AD PKD1    5310    AD      0.0050  0.8272  0.6597  0.8707  0.0000  0.6597  0.2697  0.5069  0.6597  1.0000  0               Strabismus (HP:0000486)-micrognathia (MP:0002639), Hypoplasia of the maxilla (HP:0000327)-micrognathia (MP:0002639), Proptosis (HP:0000520)-micrognathia (MP:0002639), Hypertelorism (HP:0000316)-micrognathia (MP:0002639), Brachyturricephaly (HP:0000244)-micrognathia (MP:0002639),         Hypoplasia of the maxilla (HP:0000327)-mandibular arch skeleton malformed, abnormal (ZP:0001708),       Proximity to IFT88 associated with Retinitis pigmentosa (ORPHA:791): Strabismus (HP:0000486)-Ophthalmoplegia (HP:0000602), Hypoplasia of the maxilla (HP:0000327)-Wide nasal bridge (HP:0000431),       Proximity to IFT88 Syndactyly (HP:0001159)-polydactyly (MP:0000562), Strabismus (HP:0000486)-supernumerary molars (MP:0010773), Hypoplasia of the maxilla (HP:0000327)-supernumerary molars (MP:0010773), Proptosis (HP:0000520)-supernumerary molars (MP:0010773), Hypertelorism (HP:0000316)-supernumerary molars (MP:0010773), Brachyturricephaly (HP:0000244)-abnormal coronal suture morphology (MP:0003840),
+4       CCDC66_AD       CCDC66  285331  AD      0.0051  0.8262  0.5463  0.9984  0.0000  0.5463  0.0000  0.0000  0.5463  1.0000  0               Strabismus (HP:0000486)-abnormal cone electrophysiology (MP:0004022), Hypoplasia of the maxilla (HP:0000327)-abnormal rod electrophysiology (MP:0004021), Proptosis (HP:0000520)-abnormal rod electrophysiology (MP:0004021), Hypertelorism (HP:0000316)-abnormal rod electrophysiology (MP:0004021), Brachyturricephaly (HP:0000244)-abnormal retina photoreceptor layer morphology (MP:0003728),
+5       COL4A1_AD       COL4A1  1282    AD      0.0075  0.7762  0.5288  0.9838  0.3882  0.5288  0.0000  0.5047  0.5288  1.0000  0       Brain small vessel disease with or without ocular anomalies (OMIM:175780): Strabismus (HP:0000486)-Exotropia (HP:0000577),      Strabismus (HP:0000486)-buphthalmos (MP:0009274), Hypoplasia of the maxilla (HP:0000327)-abnormal cornea morphology (MP:0001312), Proptosis (HP:0000520)-abnormal cornea morphology (MP:0001312), Hypertelorism (HP:0000316)-abnormal cornea morphology (MP:0001312), Brachyturricephaly (HP:0000244)-abnormal retina morphology (MP:0001325),          Proximity to COL7A1 associated with Localized dystrophic epidermolysis bullosa, pretibial form (ORPHA:79410): Syndactyly (HP:0001159)-Nail dystrophy (HP:0008404), Hypoplasia of the maxilla (HP:0000327)-Carious teeth (HP:0000670),   Proximity to COL7A1 Syndactyly (HP:0001159)-abnormal digit morphology (MP:0002110), Strabismus (HP:0000486)-abnormal tongue morphology (MP:0000762), Hypoplasia of the maxilla (HP:0000327)-abnormal tongue morphology (MP:0000762), Proptosis (HP:0000520)-abnormal tongue morphology (MP:0000762), Hypertelorism (HP:0000316)-abnormal tongue morphology (MP:0000762),
+6       ENPP1_AD        ENPP1   5167    AD      0.0079  0.7695  0.5112  0.9996  0.3738  0.5112  0.0000  0.5044  0.5112  1.0000  0       Autosomal recessive hypophosphatemic rickets (ORPHA:289176): Hypoplasia of the maxilla (HP:0000327)-Tooth abscess (HP:0030757), Brachyturricephaly (HP:0000244)-Craniosynostosis (HP:0001363),  Syndactyly (HP:0001159)-abnormal elbow joint morphology (MP:0013945), Strabismus (HP:0000486)-abnormal retina morphology (MP:0001325), Hypoplasia of the maxilla (HP:0000327)-abnormal snout skin morphology (MP:0030533), Proptosis (HP:0000520)-abnormal retina morphology (MP:0001325), Hypertelorism (HP:0000316)-abnormal retina morphology (MP:0001325), Brachyturricephaly (HP:0000244)-abnormal retina morphology (MP:0001325),                 Proximity to DMP1 associated with Autosomal recessive hypophosphatemic rickets (ORPHA:289176): Hypoplasia of the maxilla (HP:0000327)-Tooth abscess (HP:0030757), Brachyturricephaly (HP:0000244)-Craniosynostosis (HP:0001363),        Proximity to DMP1 Syndactyly (HP:0001159)-abnormal long bone hypertrophic chondrocyte zone (MP:0000165), Strabismus (HP:0000486)-abnormal dental pulp cavity morphology (MP:0002819), Hypoplasia of the maxilla (HP:0000327)-abnormal dental pulp cavity morphology (MP:0002819), Proptosis (HP:0000520)-abnormal dental pulp cavity morphology (MP:0002819), Hypertelorism (HP:0000316)-abnormal dental pulp cavity morphology (MP:0002819), Brachyturricephaly (HP:0000244)-abnormal dental pulp cavity morphology (MP:0002819),
+7       MUC6_AD MUC6    4588    AD      0.0089  0.7563  0.5046  0.9990  0.0000  0.0000  0.0000  0.5046  0.5046  1.0000  0                               Proximity to GALNT2 associated with Congenital disorder of glycosylation, type IIt (OMIM:618885): Syndactyly (HP:0001159)-Sandal gap (HP:0001852), Strabismus (HP:0000486)-Alternating exotropia (HP:0031717), Hypoplasia of the maxilla (HP:0000327)-Tented upper lip vermilion (HP:0010804), Proptosis (HP:0000520)-Hypertelorism (HP:0000316), Hypertelorism (HP:0000316)-Hypertelorism (HP:0000316), Brachyturricephaly (HP:0000244)-Brachycephaly (HP:0000248),
+8       MUC6_AR MUC6    4588    AR      0.0089  0.7562  0.5046  0.9990  0.0000  0.0000  0.0000  0.5046  0.5046  1.0000  0                               Proximity to GALNT2 associated with Congenital disorder of glycosylation, type IIt (OMIM:618885): Syndactyly (HP:0001159)-Sandal gap (HP:0001852), Strabismus (HP:0000486)-Alternating exotropia (HP:0031717), Hypoplasia of the maxilla (HP:0000327)-Tented upper lip vermilion (HP:0010804), Proptosis (HP:0000520)-Hypertelorism (HP:0000316), Hypertelorism (HP:0000316)-Hypertelorism (HP:0000316), Brachyturricephaly (HP:0000244)-Brachycephaly (HP:0000248),
+9       DDX56_AD        DDX56   54606   AD      0.0091  0.7545  0.5036  0.9992  0.0000  0.0000  0.3788  0.5036  0.5036  1.0000  0                       Brachyturricephaly (HP:0000244)-head decreased width, abnormal (ZP:0000407),            Proximity to PAK1IP1 Strabismus (HP:0000486)-abnormal maxilla morphology (MP:0000455), Hypoplasia of the maxilla (HP:0000327)-abnormal maxilla morphology (MP:0000455), Proptosis (HP:0000520)-abnormal maxilla morphology (MP:0000455), Hypertelorism (HP:0000316)-abnormal maxilla morphology (MP:0000455), Brachyturricephaly (HP:0000244)-decreased forebrain size (MP:0012138),
+10      BDKRB1_AD       BDKRB1  623     AD      0.0093  0.7525  0.5018  1.0000  0.0000  0.0000  0.0000  0.5018  0.5018  1.0000  0                                       Proximity to OPN4 Strabismus (HP:0000486)-abnormal visual pursuit (MP:0006156), Hypoplasia of the maxilla (HP:0000327)-abnormal visual pursuit (MP:0006156), Proptosis (HP:0000520)-abnormal visual pursuit (MP:0006156), Hypertelorism (HP:0000316)-abnormal visual pursuit (MP:0006156), Brachyturricephaly (HP:0000244)-abnormal retina ganglion cell morphology (MP:0008056),
+</code></pre></div></p>
+<h2 id="docker-for-mac"><a id="docker-mac"></a>Docker for Mac<a class="headerlink" href="#docker-for-mac" title="Permanent link">&para;</a></h2>
+<p>Follow this <a href="https://docs.docker.com/desktop/install/mac-install/">link</a> and download the Docker.dmg for your operating
+system.</p>
+<p><img alt="Mac Image One " src="../../images/exomiser_tutorial_images/1_mac.jpg" /></p>
+<p>The Docker.dmg will be found in your <code>/Downloads</code> directory.</p>
+<p><img alt="Mac Image Two " src="../../images/exomiser_tutorial_images/2_mac.jpg" /></p>
+<p>After double-clicking on the Docker.dmg a new window will come up:</p>
+<p><img alt="Mac Image Three " src="../../images/exomiser_tutorial_images/3_mac.jpg" /></p>
+<p>Drag and drop the Docker app into your <code>/Applications</code> folder.
+Double-click on the Docker symbol.
+Docker Desktop will start in the background, after you allow it to be opened.</p>
+<p><img alt="Mac Image Six " src="../../images/exomiser_tutorial_images/6_mac.jpg" /></p>
+<p>Additionally, this window will come up to agree the Docker subscription service agreement.</p>
+<p><img alt="Mac Image Seven " src="../../images/exomiser_tutorial_images/7_mac.jpg" /></p>
+<p>After running the installation <strong>restart</strong> your terminal and check the Docker installation again from inside your
+terminal with:</p>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>--version
+</code></pre></div>
+<p>If the output gives you a version and no error you are ready to go. If you have not already restarted your terminal do
+this now,
+and the error should be fixed.</p>
+<p>In case you get an error message like this, please ensure you have downloaded the correct <code>docker.dmg</code>.</p>
+<p><img alt="Mac Image Eight " src="../../images/exomiser_tutorial_images/8_mac.jpg" /></p>
+<p>Now, whenever you want to pull images make sure that Docker is running in the background. Otherwise, you may get an
+error stating it's not able to connect to the Docker deamon.</p>
+<h2 id="docker-for-windows"><a id="docker-windows"></a>Docker for Windows<a class="headerlink" href="#docker-for-windows" title="Permanent link">&para;</a></h2>
+<p>Follow this <a href="https://docs.docker.com/desktop/install/windows-install/">link</a> and download the Docker installer for
+Windows.</p>
+<p>Inside your <code>/Downloads</code> directory, search for the Installer and double-click.</p>
+<p><img alt="Windows Image One " src="../../images/exomiser_tutorial_images/1_windows.jpg" /></p>
+<p>To run on Windows Docker requires a virtual machine. Docker recommends using WSL2.
+<a href="https://docs.docker.com/desktop/install/windows-install/">More information on this can be found here</a>.</p>
+<p><img alt="Windows Image Two " src="../../images/exomiser_tutorial_images/2_windows.jpg" /></p>
+<p>Click “Ok” and wait a bit.</p>
+<p><img alt="Windows Image Three " src="../../images/exomiser_tutorial_images/3_windows.jpg" /></p>
+<p>Now you will have to restart your computer.</p>
+<p><img alt="Windows Image Four " src="../../images/exomiser_tutorial_images/4_windows.jpg" /></p>
+<p>After restarting, Docker should start automatically and the Service Agreement will come up, which you will have to agree
+to use Docker:</p>
+<p><img alt="Windows Image Five " src="../../images/exomiser_tutorial_images/5_windows.jpg" /></p>
+<p>If the Docker desktop app is showing this warning upon start, do not click “Restart”, yet. Instead, follow the link and
+install the kernel update.</p>
+<p><img alt="Windows Image Six " src="../../images/exomiser_tutorial_images/6_windows.jpg" /></p>
+<p>The link should point you to an address with a separate download link.</p>
+<p><img alt="Windows Image Seven " src="../../images/exomiser_tutorial_images/7_windows.jpg" /></p>
+<p>Start and finish the installation for WSL.</p>
+<p><img alt="Windows Image Eight " src="../../images/exomiser_tutorial_images/8_windows.jpg" /></p>
+<p>If you still have the Docker Desktop dialog window open in the background, click on Restart. Otherwise, just restart
+your computer as you normally do.</p>
+<p><img alt="Windows Image Nine " src="../../images/exomiser_tutorial_images/9_windows.jpg" /></p>
+<p>If Docker Desktop did not start on its own, simply open it from the shortcut on your Desktop. You can do the initial
+orientation by clicking "Start".</p>
+<p><img alt="Windows Image Ten " src="../../images/exomiser_tutorial_images/10_windows.jpg" /></p>
+<p>After this, your Docker Desktop screen should look like this:</p>
+<p><img alt="Windows Image Eleven " src="../../images/exomiser_tutorial_images/11_windows.jpg" /></p>
+<p>Now, whenever you want to pull images make sure that Docker is running in the background.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.action.edit"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.51d95adb.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@8.5.1/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>
