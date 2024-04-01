@@ -2,14 +2,14 @@
 
 <a href="https://oboacademy.github.io/obook/reference/obook-maturity-indicator/"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FOBOAcademy%2Fobook%2Fmaster%2Fdocs%2Fresources%2Fobook-badge-draft.json" /></a>
 
-Part of the Phenotype data and the role of ontologies" (OBO Academy Phenomics Series).
+_Part of the Phenotype data and the role of ontologies" (OBO Academy Phenomics Series)._
 
-Authors:
+**Authors**:
 
 - [James McLaughlin](https://orcid.org/0000-0002-8361-2795)
 - [Nicolas Matentzoglu](https://orcid.org/0000-0002-7356-1779)
 
-Last update: 30.03.2024.
+**Last update**: 30.03.2024.
 
 In this lesson, we will discuss:
 
