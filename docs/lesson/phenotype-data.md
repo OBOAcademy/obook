@@ -18,6 +18,8 @@ In this lesson, we will discuss:
 - An overview on how the uPheno framework supports integrating all kinds of phenotype data into a computational framework
 - A brief outlook and how computational phenotypes can be exploited for analysis
 
+![uPheno model](../images/upheno_model.png)
+
 ## Overview
 
 Phenotyping is, in essence, the process of recording the observable characteristics, or phenotypic profile, of a subject.
