@@ -20,16 +20,20 @@ In this lesson, we will discuss:
 
 ## Overview
 
-Phenotyping is, in essence, the process of recording the observable characteristics, or phenotypic profile, of an organism.
-There are many use cases for doing this task: clinicians have to record a patient's phenotypic profile to facilitate more accurate diagnosis.
-Researchers have to record phenotypic profiles of model organisms to characterise them to assess interventions (genetic or drug or otherwise).
-Curators that seek to build a knowledge base which contains associations between phenotypes and other data types need to extract information about phenotypes from often unstructured data sources.
+Phenotyping is, in essence, the process of recording the observable characteristics, or phenotypic profile, of a subject.
+There are many use cases for doing this task, for example: 
 
-All of these are different processes, but the essence is the same: a set of observable characteristics has to be recorded using terms from a controlled vocabulary.
+- Clinicians have to record a patient's phenotypic profile to facilitate more accurate diagnosis
+- Researchers have to record phenotypic profiles of model organisms to characterise them and assess interventions (genetic or drug or otherwise).
+- Curators extract knowledge from scientific publications to build knowledge bases which contain associations between phenotypes and other data types.
 
-There are different schools about how to record phenotypes in a structured manner.
-Quantified phenotypes can be recorded using either a trait in combination with a measurement datum (“head circumference”, “35 cm”) or a qualified term expressing “phenotypic change” (“increased head circumference”).
-Furthermore, we can express phenotype terms as “pre-coordinated” terms, like “increased head circumference” or a “post-coordinated expression”, like “head”, “circumference”, “increased”). In the following, we will describe the different concepts and categories around phenotype data, and provide an introduction on how to best use them.
+There are different schools and use cases that are concerned with how to record phenotypes in a structured manner:
+
+- Quantified phenotypes can be recorded as a trait in combination with a measurement datum (“head circumference”, “35 cm”) or a qualified term expressing “phenotypic change” (“increased head circumference”).
+- We can express phenotype terms as “pre-coordinated” terms, like “increased head circumference” or a “post-coordinated expression”, like “head”, “circumference”, “increased”).
+- Phenotype data can be standardised to varying degrees, from free text to ontology terms.
+
+In this lesson, we will introduce different concepts and categories around phenotype data, and provide an introduction on how to integrate them using the uPheno framework.
 
 ## Prerequisites
 
@@ -56,8 +60,9 @@ None.
 
 ## Core concepts
 
-Duration: 12 min
-Goals of this section:
+**Duration**: 12 min
+
+**Goals of this section**:
 
 - Give a sense of the core features of phenotype data, including characteristics, traits and abnormalities.
 - [Materials](https://obophenotype.github.io/upheno/reference/core-concepts/).
@@ -66,8 +71,9 @@ Goals of this section:
 
 ## Phenotype Data in practice
 
-Duration: 12 min
-Goals of this section:
+**Duration**: 12 min
+
+**Goals of this section**:
 
 - Give a sense of the contexts in which phenotype data is produced (research and clinical)
 - Give a sense of the shape of different styles of phenotype data
@@ -77,8 +83,9 @@ Goals of this section:
 
 ### Integrating phenotype data
 
-Duration: 12 min
-Goals of this section:
+**Duration**: 12 min
+
+**Goals of this section**:
 
 - Show how the uPheno framework can be used to translate many forms of phenotype data into a coherent computational framework.
 - Show how the uPheno framework can be enriched with knowledge about phenotypes.
@@ -88,8 +95,9 @@ Goals of this section:
 
 ### The promise of integrated, computational phenotype data (4 min)
 
-Duration: 4 min
-Goals of this section:
+**Duration**: 4 min
+
+**Goals of this section**:
 
 - Give a sense how the uPheno framework can be used computationally.
 - [Materials](https://obophenotype.github.io/upheno/reference/use-cases/).
