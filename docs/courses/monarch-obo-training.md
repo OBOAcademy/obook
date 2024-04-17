@@ -29,7 +29,7 @@ _Note: this is tentative and subject to change_
 | Date | Lesson | Notes | Recordings |
 | --- | --- | --- | --- |
 | 2024/04/16 | [AI-assisted ontology editing workflows 2: Validation](https://docs.google.com/presentation/d/13Hlm-iJo7a1NAaUqLsrUlbn-tLUVbF25WBjwAgIuLdA/edit#slide=id.g2cbabe5fcdf_0_5) | Chris Mungall, LBNL |
-| 2024/04/02 | OBO Academy Phenomics Series: [Phenotype data and the role of ontologies](https://oboacademy.github.io/obook/lesson/phenotype-data/) | James McLaughlin (EBML-EBI) and Nico Matentzoglu | 
+| 2024/04/02 | OBO Academy Phenomics Series: [Phenotype data and the role of ontologies](https://oboacademy.github.io/obook/lesson/phenotype-data/) | James McLaughlin (EBML-EBI) and Nico Matentzoglu | [Here](https://youtu.be/9iWRRx7nZlU?feature=shared)
 | 2024/03/19 | _No Meeting_ |  |
 | 2024/03/05 | [AI-assisted ontology editing workflows 1: generating and augmenting](https://docs.google.com/presentation/d/13Hlm-iJo7a1NAaUqLsrUlbn-tLUVbF25WBjwAgIuLdA/edit#slide=id.g24560ef6bb7_0_84) | Chris Mungall, LBNL | [Here](https://www.youtube.com/watch?v=wGoGr2dmxZI) |
 | 2024/02/20 | [Ontology Metadata Standardisation](https://docs.google.com/presentation/d/12ig7zQ9R4lQAybuTQKb73gB22pIq5MEaowwbYOl5Ei8/edit?usp=sharing) | Anita Caron, EBI | [Here](https://youtu.be/tso8zawC3Tw?feature=shared)
