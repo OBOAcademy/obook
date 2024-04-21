@@ -50,7 +50,7 @@ SELECT DISTINCT ?entity ?property ?value WHERE {
 ORDER BY ?entity
 ```
 
-This is a typical workflow. Think of an ontology editor working on an ontology. Often, that curator notices that the same problem happens repeatedly and tell us, the Ontology Pipeline Developer, that they would like a check to prevent the error. We then capture the erroneous situation as a SPARQL query. Then, we add it to our [ontology repository](https://github.com/monarch-initiative/mondo/tree/master/src/sparql/qc), and execute it with ROBOT report or ROBOT verify (see above) in our CI pipelines, usually based on GitHub actions or Travis. Note that the [Ontology Development Kit](https://github.com/INCATools/ontology-development-kit) provides a built-in framework for for such queries build on ROBOT verify and report.
+This is a typical workflow. Think of an ontology editor working on an ontology. Often, that curator notices that the same problem happens repeatedly and tell us, the Ontology Pipeline Developer, that they would like a check to prevent the error. We then capture the erroneous situation as a SPARQL query. Then, we add it to our [ontology repository](https://github.com/monarch-initiative/mondo/tree/master/src/sparql/qc), and execute it with ROBOT report or ROBOT verify (see above) in our CI pipelines, usually based on GitHub actions or Travis. Note that the [Ontology Development Kit](https://github.com/INCATools/ontology-development-kit) provides a built-in framework for such queries, building on ROBOT verify and report.
 
 ### Creating summary tables for ontologies
 
