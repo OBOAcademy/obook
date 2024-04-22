@@ -1,4 +1,4 @@
-## An introduction to synonyms in OBO ontologies
+## An Introduction to Synonyms in OBO Ontologies
 
 <a href="https://oboacademy.github.io/obook/reference/obook-maturity-indicator/"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FOBOAcademy%2Fobook%2Fmaster%2Fdocs%2Fresources%2Fobook-badge-draft.json" /></a>
 
@@ -7,7 +7,7 @@
 - [Nicole Vasilevsky](https://orcid.org/0000-0001-5208-3432)
 - [Nicolas Matentzoglu](https://orcid.org/0000-0002-7356-1779)
 
-**Last update**: 21.04.2024.
+**Last update**: 22.04.2024.
 
 In this lesson, we will discuss:
 
@@ -20,9 +20,7 @@ In this lesson, we will discuss:
 
 ## Overview
 
-Over time, different scientific communities have developed widely divergent terminologies for describing the same things.
-
-TODO: Add example.
+Over time, different scientific communities have developed widely divergent terminologies for describing the same things. For example, "Varicella" and "Chickenpox" both refer to the same real world condition.
 
 In order to understand if different scientific resources such as a biological database, a scientific publication or an ontology talk about the same thing, we need to recognise if the expression they are using refer to the same real world concept (have the same meaning).
 
@@ -110,7 +108,7 @@ Clear distinctions among synonym types ensure that all parties have a correct un
 - **Medical Documentation and Coding**: Medical records, billing, and coding rely heavily on precise terminology.
 Using the correct synonym in the right context is crucial for accurate record-keeping and insurance processing.
 
-Lets look at some examples from the clinical domain:
+Let's look at some examples from the clinical domain:
 
 1. **Myocardial Infarction vs. Heart Attack**:
     - **Myocardial Infarction (Exact)**: A medical term used to describe the interruption of blood supply to a part of the heart, causing heart cells to die. This term is used in clinical diagnostics and documentation.
@@ -199,8 +197,6 @@ Synonyms are hugely important for many use cases in the information and data dom
 
 **Duration**: 25 min
 
-**Goals of this section**:
-
 - [OBO modeling and synonyms](#model)
 - [Overview of synonym properties](../reference/synonyms-obo.md).
 - [Overview of synonym types](../reference/synonyms-types.md)
@@ -223,7 +219,7 @@ There are two hierarchies of synonym types of particular relevance to synonym re
 
 Apart from the two core hierarchies, the situation for provenance related properties on synonyms is a bit chaotic (not standardises) at the time of writing this reference (21.04.2024).
 
-Ontologies developed using the [GO-family ontology development pattern](../pathways/ontology-curator-go-style.md) use the oboInOwl:hasDbXref property to represent "provenance" in general. 
+Ontologies developed using the [GO-family ontology development pattern](../pathways/ontology-curator-go-style.md) use the oboInOwl:hasDbXref property to represent "provenance" in general.
 This could be anything:
 
 1. An ORCiD, meaning "this person asserted/verified this synonym"
@@ -231,7 +227,13 @@ This could be anything:
 
 Some ontologies have started using dc:contributor and rdfs:seeAlso for more fine-grained provenance, but this pattern is not widely adopted.
 
-For an overview of the two synonym properties and types, we will resort to the specialised documentations here:
+!!! info
+
+    We warmly recommend to use to be generous with provenance when curating synonyms.
+    At the very least, we recommend to capture the ORCiD of the curator that captured the synonym, or the ROR of the organisation that promotes the term.
+    Ideally, however, you furthermore capture the source of the synonym, which could be a PMID, a term from an ontology or a DOI.
+
+For an overview of the two synonym properties and types, we will refer to the specialised documentation pages here:
 
 - [Overview of synonym properties](../reference/synonyms-obo.md)
 - [Overview of synonym types](../reference/synonyms-types.md)
