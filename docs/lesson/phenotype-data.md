@@ -58,6 +58,12 @@ None.
 - [Integrating phenotype data](#integrating)
 - [The promise of integrated, computational phenotype data](#promise)
 
+## Recording
+
+This is a recording from April 2024 covering the entire course:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9iWRRx7nZlU?si=fJDpxGyRZHK77etl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 <a id="core"></a>
 
 ## Core concepts
