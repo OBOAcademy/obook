@@ -78,20 +78,20 @@ In the medical or clinical domain, synonyms are particularly valuable for ensuri
 This is crucial for effective communication, accurate diagnosis, and comprehensive patient care.
 
 1. **Acute Myocardial Infarction**:
-   - **Synonyms**: Heart Attack, MI
-   - **Context**: "Acute Myocardial Infarction" is the clinical term for what is commonly known as a "heart attack." Using both terms can help ensure clarity in patient communications as well as in medical documentation.
+    - **Synonyms**: Heart Attack, MI
+    - **Context**: "Acute Myocardial Infarction" is the clinical term for what is commonly known as a "heart attack." Using both terms can help ensure clarity in patient communications as well as in medical documentation.
 
 2. **Hypertension**:
-   - **Synonyms**: High Blood Pressure
-   - **Context**: "Hypertension" is often used interchangeably with "High Blood Pressure." While "hypertension" is commonly used in clinical settings, "high blood pressure" is more frequently used in patient education and public health communications.
+    - **Synonyms**: High Blood Pressure
+    - **Context**: "Hypertension" is often used interchangeably with "High Blood Pressure." While "hypertension" is commonly used in clinical settings, "high blood pressure" is more frequently used in patient education and public health communications.
 
 3. **Cerebrovascular Accident**:
-   - **Synonyms**: Stroke, Brain Attack
-   - **Context**: A "Cerebrovascular Accident," often referred to simply as a "stroke," is sometimes also called a "brain attack" in educational materials to emphasize its urgency and nature, similar to a heart attack.
+    - **Synonyms**: Stroke, Brain Attack
+    - **Context**: A "Cerebrovascular Accident," often referred to simply as a "stroke," is sometimes also called a "brain attack" in educational materials to emphasize its urgency and nature, similar to a heart attack.
 
 4. **Varicella**:
-   - **Synonyms**: Chickenpox
-   - **Context**: "Varicella" is the medical term for "chickenpox," a common childhood illness. Using both terms helps in making literature accessible to both medical professionals and the general public.
+    - **Synonyms**: Chickenpox
+    - **Context**: "Varicella" is the medical term for "chickenpox," a common childhood illness. Using both terms helps in making literature accessible to both medical professionals and the general public.
 
 These examples illustrate how synonyms in the clinical domain facilitate effective communication across different levels of medical expertise and lay understanding, enhancing the clarity and efficacy of healthcare delivery.
 
@@ -113,20 +113,20 @@ Using the correct synonym in the right context is crucial for accurate record-ke
 Lets look at some examples from the clinical domain:
 
 1. **Myocardial Infarction vs. Heart Attack**:
-   - **Myocardial Infarction (Exact)**: A medical term used to describe the interruption of blood supply to a part of the heart, causing heart cells to die. This term is used in clinical diagnostics and documentation.
-   - **Heart Attack (Broad)**: Commonly used to describe any critical heart-related event by the general public. It is broader and might not always refer to myocardial infarction specifically.
+    - **Myocardial Infarction (Exact)**: A medical term used to describe the interruption of blood supply to a part of the heart, causing heart cells to die. This term is used in clinical diagnostics and documentation.
+    - **Heart Attack (Broad)**: Commonly used to describe any critical heart-related event by the general public. It is broader and might not always refer to myocardial infarction specifically.
 
 2. **Osteoarthritis vs. Arthritis**:
-   - **Osteoarthritis (Narrow)**: A type of arthritis that occurs when flexible tissue at the ends of bones wears down.
-   - **Arthritis (Broad)**: A general term used to refer to conditions involving pain and inflammation in joints. It includes over 100 different types of joint diseases, making it a broader term than osteoarthritis.
+    - **Osteoarthritis (Narrow)**: A type of arthritis that occurs when flexible tissue at the ends of bones wears down.
+    - **Arthritis (Broad)**: A general term used to refer to conditions involving pain and inflammation in joints. It includes over 100 different types of joint diseases, making it a broader term than osteoarthritis.
 
 3. **Seizure vs. Epilepsy**:
-   - **Seizure (Related)**: A single medical event that involves abnormal electrical activity in the brain, which can manifest as convulsions, minor physical signs, thought disturbances, or a combination of symptoms.
-   - **Epilepsy (Broad)**: A chronic disorder characterized by unprovoked, recurrent seizures. Epilepsy implies a condition with broader implications than a single seizure event.
+    - **Seizure (Related)**: A single medical event that involves abnormal electrical activity in the brain, which can manifest as convulsions, minor physical signs, thought disturbances, or a combination of symptoms.
+    - **Epilepsy (Broad)**: A chronic disorder characterized by unprovoked, recurrent seizures. Epilepsy implies a condition with broader implications than a single seizure event.
 
 4. **Tumor vs. Cancer**:
-   - **Tumor (Related)**: An abnormal lump or growth of tissue, which can be benign or malignant.
-   - **Cancer (Broad)**: A broad term for diseases involving abnormal cell growth with the potential to invade or spread to other parts of the body. Not all tumors are cancerous (e.g., benign tumors).
+    - **Tumor (Related)**: An abnormal lump or growth of tissue, which can be benign or malignant.
+    - **Cancer (Broad)**: A broad term for diseases involving abnormal cell growth with the potential to invade or spread to other parts of the body. Not all tumors are cancerous (e.g., benign tumors).
 
 Distinguishing between exact, broad, narrow, and related synonyms in the clinical domain is essential for maintaining the high standards of precision and care required in medical practice.
 This nuanced understanding aids in better patient outcomes, more effective communication among healthcare providers, and precise medical documentation.
@@ -178,16 +178,16 @@ Synonyms are commonly shared in many different ways. Here are a few that are wid
 Synonyms are hugely important for many use cases in the information and data domains. Here are some examples:
 
 1. **Search Engine Optimization (SEO)**:
-   - **Use Case**: Enhancing search engine visibility and improving user engagement by incorporating a wide range of synonyms into website content, metadata, and keywords. This approach broadens the reach of search queries that the site can effectively respond to, attracting a more diverse audience.
-   - **Benefit**: Using synonyms ensures that a website is accessible under various related search terms, thereby increasing organic traffic and improving search ranking.
+    - **Use Case**: Enhancing search engine visibility and improving user engagement by incorporating a wide range of synonyms into website content, metadata, and keywords. This approach broadens the reach of search queries that the site can effectively respond to, attracting a more diverse audience.
+    - **Benefit**: Using synonyms ensures that a website is accessible under various related search terms, thereby increasing organic traffic and improving search ranking.
 
 2. **Natural Language Processing (NLP)**:
-   - **Use Case**: Improving the accuracy of speech recognition systems, chatbots, and AI assistants. Synonyms help these systems understand and process human language more effectively by mapping different words to the same meanings.
-   - **Benefit**: Enhances the user experience by allowing more flexible, conversational interactions with technology using varied vocabulary, thus making AI interactions seem more natural and less constrained by specific word choices. In our domain, this is particularly important when automatically extracting data and knowledge from unstructured sources such as scientific articles, for example into a knowledge graph.
+    - **Use Case**: Improving the accuracy of speech recognition systems, chatbots, and AI assistants. Synonyms help these systems understand and process human language more effectively by mapping different words to the same meanings.
+    - **Benefit**: Enhances the user experience by allowing more flexible, conversational interactions with technology using varied vocabulary, thus making AI interactions seem more natural and less constrained by specific word choices. In our domain, this is particularly important when automatically extracting data and knowledge from unstructured sources such as scientific articles, for example into a knowledge graph.
 
 3. **Database Search**:
-   - **Use Case**: Enhancing the capability of database queries to return relevant results even when search terms use different terminology from that stored in the database. This is particularly important in fields like healthcare, legal, and academic databases where diverse terminologies are common.
-   - **Benefit**: Users can find relevant information even if they don't know the exact terminology used in the database, reducing search time and improving the usability of information systems. Many databases in the biomedical domain employ synonyms for more accurate discovery of information.
+    - **Use Case**: Enhancing the capability of database queries to return relevant results even when search terms use different terminology from that stored in the database. This is particularly important in fields like healthcare, legal, and academic databases where diverse terminologies are common.
+    - **Benefit**: Users can find relevant information even if they don't know the exact terminology used in the database, reducing search time and improving the usability of information systems. Many databases in the biomedical domain employ synonyms for more accurate discovery of information.
 
 !!! info
 
