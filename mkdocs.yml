@@ -5,7 +5,18 @@ theme:
     edit: material/pencil 
   features:
     - content.action.edit
-
+    #- navigation.tabs
+    #- toc.integrate
+    #- navigation.sections
+    #- navigation.top
+    - search.suggest
+    - search.highlight
+    #- content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+    - content.code.select
+plugins:
+  - search
 markdown_extensions:
   - toc:
       permalink: true
@@ -14,6 +25,26 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_div_format
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - attr_list
+  - md_in_html
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - admonition
+  - pymdownx.arithmatex:
+      generic: true
+  - footnotes
+  - attr_list
+  - md_in_html
+  - tables
 
 extra_javascript:
   - https://unpkg.com/mermaid@8.5.1/dist/mermaid.min.js
