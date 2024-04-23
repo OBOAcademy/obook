@@ -52,7 +52,7 @@ Synonyms can also be classified by types. The default is no type. The synonym ty
 - [UK spelling](http://purl.obolibrary.org/obo/OMO_0003005) - the english language spelling that is used in the United Kingdom (UK) but not in the United States (US)
 
 Additional standardized synonym types can be found in the [OBO Metadata Ontology](https://obofoundry.org/ontology/omo)
-as sub-properties of `oboInOwl:SynonymType`.
+as sub-properties of [oboInOwl:SynonymType](https://www.ebi.ac.uk/ols4/ontologies/omo/properties/http%253A%252F%252Fwww.geneontology.org%252Fformats%252FoboInOwl%2523SynonymTypeProperty).
 
 ### Database cross references
 
