@@ -200,7 +200,7 @@ Synonyms are hugely important for many use cases in the information and data dom
 
 5. **Automated Ontology Matching**:
     - **Use Case**: Frequently, we have to automatically align different ontologies or controlled vocabularies. In order to create accurate matches, we need a good, reliable set of synonyms.
-    - **Benefits**: By matching on synonyms, we can quickly and easily determine if two terms are equivalent. 
+    - **Benefits**: By matching on synonyms, we can quickly and more easily determine if two terms are equivalent. 
 
 !!! info
 
