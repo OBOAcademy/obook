@@ -116,7 +116,7 @@ Let's look at some examples from the clinical domain:
 
 1. **Myocardial Infarction vs. Heart Attack**:
     - **Myocardial Infarction (Exact)**: A medical term used to describe the interruption of blood supply to a part of the heart, causing heart cells to die. This term is used in clinical diagnostics and documentation.
-    - **Heart Attack (Broad)**: Commonly used to describe any critical heart-related event by the general public. It is broader and might not always refer to myocardial infarction specifically.
+    - **Heart Attack (Broad)**: Commonly used to describe any critical heart-related event by the general public. It is broader and might not always refer to myocardial infarction specifically. A heart attack is when blood flow to the heart is blocked. Sudden cardiac arrest is when the heart malfunctions and suddenly stops beating. A heart attack is a “circulation” problem and sudden cardiac arrest is an “electrical” problem. [Reference](https://www.heart.org/en/health-topics/heart-attack/about-heart-attacks/heart-attack-or-sudden-cardiac-arrest-how-are-they-different#:~:text=People%20often%20use%20these%20terms,is%20an%20%E2%80%9Celectrical%E2%80%9D%20problem.)
 
 2. **Osteoarthritis vs. Arthritis**:
     - **Osteoarthritis (Narrow)**: A type of arthritis that occurs when flexible tissue at the ends of bones wears down.
