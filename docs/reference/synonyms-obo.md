@@ -46,11 +46,11 @@ Synonyms can also be classified by types. The default is no type. The synonym ty
 
 Synonym type | Description | Example
 -- | -- | -- |
-[abbreviation](http://purl.obolibrary.org/obo/OMO_0003000) | to indicate the synonym is an abbreviation. **Note** the scope for an acronym should be determined on a case-by-case basis. Not all acronyms are necessarily exact. | MONDO:0000190 VF |
+[abbreviation](http://purl.obolibrary.org/obo/OMO_0003000) | to indicate the synonym is an abbreviation. **Note** the scope for an acronym should be determined on a case-by-case basis. Not all acronyms are necessarily exact. | MONDO:0000190 ventricular fibrillation synonym: VF |
 [dubious synonym](http://purl.obolibrary.org/obo/OMO_0003002) | to indicate the synonym may be suspect | MONDO:0024309 neuropathy, hereditary sensory and autonomic, type 2A, synonym: Morvan disease|
-[layperson term](http://purl.obolibrary.org/obo/OMO_0003003) | to indicate the synonym is common language (used by the Human Phenotype Ontology) | |
+[layperson term](http://purl.obolibrary.org/obo/OMO_0003003) | to indicate the synonym is a common language (used by the Human Phenotype Ontology) | HP:0001028 Hemangioma, synonym: Strawberry mark |
 [plural form](http://purl.obolibrary.org/obo/OMO_0003004) | indicating the form of the term that means more than one | |
-[UK spelling](http://purl.obolibrary.org/obo/OMO_0003005) | the english language spelling that is used in the United Kingdom (UK) but not in the United States (US) | |
+[UK spelling](http://purl.obolibrary.org/obo/OMO_0003005) | the english language spelling that is used in the United Kingdom (UK) but not in the United States (US) | MONDO:0005059 leukemia, synonym: leukaemia (disease)|
 [ambiguous](http://purl.obolibrary.org/obo/OMO_0003001) | to indicate the synonym is open to more than one interpretation; may have a double meaning | MONDO:0019781 astrocytoma (excluding glioblastoma) synonym: "astrocytoma" (see associated [GitHub ticket](https://github.com/NCI-Thesaurus/thesaurus-obo-edition/issues/23) |
 
 Additional standardized synonym types can be found in the [OBO Metadata Ontology](https://obofoundry.org/ontology/omo)
