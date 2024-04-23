@@ -7,7 +7,9 @@
 - [Nicole Vasilevsky](https://orcid.org/0000-0001-5208-3432)
 - [Nicolas Matentzoglu](https://orcid.org/0000-0002-7356-1779)
 
-**Last update**: 22.04.2024.
+**Last update**: 23.04.2024.
+
+<img width="749" alt="image" src="https://github.com/OBOAcademy/obook/assets/6722114/38f5f2e0-f690-4536-85d2-21c2efd07b68">
 
 In this lesson, we will discuss:
 
@@ -16,15 +18,11 @@ In this lesson, we will discuss:
 - The OBO model for synonym representation
 - A brief outlook on validation
 
-<img width="749" alt="image" src="https://github.com/OBOAcademy/obook/assets/6722114/38f5f2e0-f690-4536-85d2-21c2efd07b68">
-
-Many terms can be used to mean the same thing
-
-<img width="535" alt="image" src="https://github.com/OBOAcademy/obook/assets/6722114/896386de-9df0-4d37-b284-1d91acbaf48e">
-
 ## Overview
 
-Over time, different scientific communities have developed widely divergent terminologies for describing the same things. For example, "Varicella" and "Chickenpox" both refer to the same real world condition.
+Over time, different scientific communities have developed widely divergent terminologies for describing the same things. For example, "Varicella" and "Chickenpox" both refer to the same real-world condition. Or magroglossia can be described as enlarged tongue, megaglossia, etc.
+
+<img width="535" alt="image" src="https://github.com/OBOAcademy/obook/assets/6722114/896386de-9df0-4d37-b284-1d91acbaf48e">
 
 In order to understand if different scientific resources such as a biological database, a scientific publication or an ontology talk about the same thing, we need to recognise if the expression they are using refer to the same real world concept (have the same meaning).
 
