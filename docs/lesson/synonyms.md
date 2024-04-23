@@ -202,7 +202,7 @@ Synonyms are hugely important for many use cases in the information and data dom
 **Duration**: 25 min
 
 - [OBO modeling and synonyms](#model)
-- [Overview of synonym properties](../reference/synonyms-obo.md).
+- [Overview of synonym properties](../reference/synonyms-obo.md)
 - [Overview of synonym types](../reference/synonyms-types.md)
 
 <a id="model"></a>
