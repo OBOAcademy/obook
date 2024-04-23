@@ -34,7 +34,7 @@
 
 ##### Duplicate exact synonym check that excludes abbreviations
 - In Mondo, this SPARQL query checks for duplicate exact synonyms between terms but excludes any abbreviations.
-- For example, "SMS" is an abbreviation for MONDO:0008491 stiff-person syndrome and MONDO:0008434 Smith-Magenis syndrome.
+- For example, "SMS" is an abbreviation for MONDO:0008491 stiff-person syndrome and MONDO:0008434 Smith-Magenis syndrome and this is acceptable.
 - Implemented as [qc-duplicate-exact-synonym-no-abbrev.sparql](https://mondo.readthedocs.io/en/latest/editors-guide/quality-control-tests/#qc-duplicate-exact-synonym-no-abbrevsparql) in Mondo. 
 
 ??? QC duplicate exact synonym no abbreviation query
