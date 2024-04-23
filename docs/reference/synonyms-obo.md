@@ -1,6 +1,9 @@
 # Synonyms in OBO
 
-A synonym indicates an alternative name for a term. Terms can have multiple synonyms.
+A synonym indicates an alternative name for a term. Terms can have multiple synonyms of any type. For example, the Mondo term MONDO:0005992 cancer, has many exact synonyms and a related synonym:
+
+<img width="653" alt="image" src="https://github.com/OBOAcademy/obook/assets/6722114/3120bf59-1802-4209-b896-8039c96a7b28">
+
 
 ### The scope of a synonym may fall into one of four categories:
 
