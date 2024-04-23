@@ -7,7 +7,7 @@
 - [Nicole Vasilevsky](https://orcid.org/0000-0001-5208-3432)
 - [Nicolas Matentzoglu](https://orcid.org/0000-0002-7356-1779)
 
-**Last update**: 23.04.2024.
+**In progress, Last update**: 23.04.2024
 
 <img width="749" alt="image" src="https://github.com/OBOAcademy/obook/assets/6722114/38f5f2e0-f690-4536-85d2-21c2efd07b68">
 
@@ -81,6 +81,7 @@ This is crucial for effective communication, accurate diagnosis, and comprehensi
 1. **Acute Myocardial Infarction**:
     - **Synonyms**: Heart Attack, MI
     - **Context**: "Acute Myocardial Infarction" is the clinical term for what is commonly known as a "heart attack." Using both terms can help ensure clarity in patient communications as well as in medical documentation.
+    - **Note**: Cardiac arrest, also known as sudden cardiac arrest, is when the heart stops beating suddenly. It's not the same as a heart attack. [Reference](https://www.heart.org/en/health-topics/heart-attack/about-heart-attacks/heart-attack-or-sudden-cardiac-arrest-how-are-they-different#:~:text=People%20often%20use%20these%20terms,is%20an%20%E2%80%9Celectrical%E2%80%9D%20problem.)
 
 2. **Hypertension**:
     - **Synonyms**: High Blood Pressure
