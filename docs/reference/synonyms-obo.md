@@ -66,4 +66,6 @@ ClinGen label (CLINGEN_LABEL) | Added to gene-based names/synonyms (or other lab
 
 ### Database cross references
 
-Whenever possible, database cross-references (dbxrefs) for synonyms should be provided, to indicate the publication that used the synonym. References to PubMed IDs should be in the format PMID:XXXXXXX (no space). However, dbxrefs for synonyms are not mandatory in most ontologies.
+Whenever possible, database cross-references (dbxrefs) for synonyms should be provided, to indicate the publication that used the synonym. References to PubMed IDs should be in the format PMID:XXXXXXX (no space). See example below. However, dbxrefs for synonyms are not mandatory in most ontologies.
+
+<img width="428" alt="image" src="https://github.com/OBOAcademy/obook/assets/6722114/171829f2-f057-4445-8ca8-02d2aeae9ce3">
