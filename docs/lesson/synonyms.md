@@ -27,7 +27,7 @@ In order to understand if different scientific resources such as a biological da
 The primary role of an ontology is to provide an explicit conceptualisations of a domain. However, ontologies especially in the biomedical domain have become much more than just that:
 for example, they encode hierarchical structures (taxonomies), provide formal definitions for terms (terminologies) and provide synonyms for terminological disambiguation (thesaurus).
 
-Synonyms can have different levels of precision (e.g. exact, broad, related) and be used for different purposes (laypersons, acronyms, language translations). The variety of synonym types makes them difficult to curator and use.
+Synonyms can have different levels of precision (e.g. exact, broad, related) and be used for different purposes (laypersons, acronyms, language translations). The variety of synonym types makes them difficult to curate and use.
 
 This lesson is aimed at ontology curators, data analysts and tool developers to understand how to accurately curate and use synonyms provided by OBO ontologies.
 
