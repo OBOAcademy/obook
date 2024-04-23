@@ -22,7 +22,8 @@ In this lesson, we will discuss:
 
 Over time, different scientific communities have developed widely divergent terminologies for describing the same things. For example, "Varicella" and "Chickenpox" both refer to the same real-world condition. Or magroglossia can be described as enlarged tongue, megaglossia, etc.
 
-<img width="535" alt="image" src="https://github.com/OBOAcademy/obook/assets/6722114/896386de-9df0-4d37-b284-1d91acbaf48e">
+<img width="436" alt="image" src="https://github.com/OBOAcademy/obook/assets/6722114/0f28e01a-9fab-4ac0-ab65-0173868bcd8c">
+
 
 In order to understand if different scientific resources such as a biological database, a scientific publication or an ontology talk about the same thing, we need to recognise if the expression they are using refer to the same real world concept (have the same meaning).
 
