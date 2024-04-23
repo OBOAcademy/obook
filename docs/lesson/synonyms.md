@@ -199,8 +199,8 @@ Synonyms are hugely important for many use cases in the information and data dom
     - **Benefit**: Users can find relevant information even if they don't know the exact terminology used in the database, reducing search time and improving the usability of information systems. Many databases in the biomedical domain employ synonyms for more accurate discovery of information.
 
 5. **Automated Ontology Matching**:
-   - **Use Case**: Frequently, we have to automatically align different ontologies or controlled vocabularies. In order to create accurate matches, we need a good, reliable set of synonyms.
-   - **Benefits**: By matching on synonyms, we can quickly and easily determine if two terms are equivalent. 
+    - **Use Case**: Frequently, we have to automatically align different ontologies or controlled vocabularies. In order to create accurate matches, we need a good, reliable set of synonyms.
+    - **Benefits**: By matching on synonyms, we can quickly and easily determine if two terms are equivalent. 
 
 !!! info
 
