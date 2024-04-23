@@ -34,7 +34,7 @@
 
 ##### Mondo test 
 - In Mondo, this SPARQL query checks for duplicate exact synonyms between terms but excludes any abbreviations.
-- For example, **FIND NEW EXAMPLE**
+- For example, "ALPS" is an abbreviation for MONDO:0017979 autoimmune lymphoproliferative syndrome and 
 - Implemented as [qc-duplicate-exact-synonym-no-abbrev.sparql](https://mondo.readthedocs.io/en/latest/editors-guide/quality-control-tests/#qc-duplicate-exact-synonym-no-abbrevsparql) in Mondo. 
 
 ??? QC duplicate exact synonym no abbreviation query
