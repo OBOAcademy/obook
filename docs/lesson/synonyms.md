@@ -130,6 +130,10 @@ Let's look at some examples from the clinical domain:
     - **Tumor (Related)**: An abnormal lump or growth of tissue, which can be benign or malignant.
     - **Cancer (Broad)**: A broad term for diseases involving abnormal cell growth with the potential to invade or spread to other parts of the body. Not all tumors are cancerous (e.g., benign tumors).
 
+!!! info "Cancer vs Malignant Tumor"
+
+    In Mondo, malignant tumor, malignant neoplasm, malignancy are synonyms for cancer. 
+
 Distinguishing between exact, broad, narrow, and related synonyms in the clinical domain is essential for maintaining the high standards of precision and care required in medical practice.
 This nuanced understanding aids in better patient outcomes, more effective communication among healthcare providers, and precise medical documentation.
 
