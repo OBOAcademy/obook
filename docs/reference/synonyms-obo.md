@@ -54,6 +54,12 @@ Synonyms can also be classified by types. The default is no type. The synonym ty
 Additional standardized synonym types can be found in the [OBO Metadata Ontology](https://obofoundry.org/ontology/omo)
 as sub-properties of [oboInOwl:SynonymType](https://www.ebi.ac.uk/ols4/ontologies/omo/properties/http%253A%252F%252Fwww.geneontology.org%252Fformats%252FoboInOwl%2523SynonymTypeProperty).
 
+#### Additional (interesting) Synonym Type Examples from Mondo
+
+- 'A synonym that is historic and discouraged' (DEPRECATED)
+- 'Synonym to be removed from public release but maintained in edit version as record of external usage' (EXCLUDE)
+- ClinGen label (CLINGEN_LABEL)
+
 ### Database cross references
 
 Whenever possible, database cross-references (dbxrefs) for synonyms should be provided, to indicate the publication that used the synonym. References to PubMed IDs should be in the format PMID:XXXXXXX (no space). However, dbxrefs for synonyms are not mandatory in most ontologies.
