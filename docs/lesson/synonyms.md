@@ -187,6 +187,10 @@ Synonyms are hugely important for many use cases in the information and data dom
     - **Use Case**: Enhancing the capability of database queries to return relevant results even when search terms use different terminology from that stored in the database. This is particularly important in fields like healthcare, legal, and academic databases where diverse terminologies are common.
     - **Benefit**: Users can find relevant information even if they don't know the exact terminology used in the database, reducing search time and improving the usability of information systems. Many databases in the biomedical domain employ synonyms for more accurate discovery of information.
 
+4. **Automated Ontology Matching**:
+   - **Use Case**: Frequently, we have to automatically align different ontologies or controlled vocabularies. In order to create accurate matches, we need a good, reliable set of synonyms.
+   - **Benefits**: By matching on synonyms, we can quickly and easily determine if two terms are equivalent. 
+
 !!! info
 
     The importance of explicitly curated synonyms may become a little less obvious in the age of LLMs, where synonyms are naturally represented in some magic place called "latent space", which makes it possible for chatbots to understand if two expressions refer to the same real world entity. However, LLMs are far from perfect at reflecting specialised scientific synonymy and are still prone to hallucination in 2024. For scenarios where accuracy and provenance (who says this is a synonym?) is important, structured sources for synonymy are key.
