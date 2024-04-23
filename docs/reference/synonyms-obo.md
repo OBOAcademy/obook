@@ -46,8 +46,8 @@ Synonyms can also be classified by types. The default is no type. The synonym ty
 
 Synonym type | Description | Example
 -- | -- | -- |
-[abbreviation](http://purl.obolibrary.org/obo/OMO_0003000) | to indicate the synonym is an abbreviation. **Note** the scope for an acronym should be determined on a case-by-case basis. Not all acronyms are necessarily exact. |  |
-[dubious synonym](http://purl.obolibrary.org/obo/OMO_0003002) | to indicate the synonym may be suspect | |
+[abbreviation](http://purl.obolibrary.org/obo/OMO_0003000) | to indicate the synonym is an abbreviation. **Note** the scope for an acronym should be determined on a case-by-case basis. Not all acronyms are necessarily exact. | MONDO:0000190 VF |
+[dubious synonym](http://purl.obolibrary.org/obo/OMO_0003002) | to indicate the synonym may be suspect | MONDO:0024309 neuropathy, hereditary sensory and autonomic, type 2A, synonym: Morvan disease|
 [layperson term](http://purl.obolibrary.org/obo/OMO_0003003) | to indicate the synonym is common language (used by the Human Phenotype Ontology) | |
 [plural form](http://purl.obolibrary.org/obo/OMO_0003004) | indicating the form of the term that means more than one | |
 [UK spelling](http://purl.obolibrary.org/obo/OMO_0003005) | the english language spelling that is used in the United Kingdom (UK) but not in the United States (US) | |
