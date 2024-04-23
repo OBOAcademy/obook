@@ -245,7 +245,7 @@ Some ontologies have started using dc:contributor and rdfs:seeAlso for more fine
 !!! info
 
     We warmly recommend to use to be generous with provenance when curating synonyms.
-    At the very least, we recommend to capture the ORCiD of the curator that captured the synonym, or the ROR of the organisation that promotes the term.
+    At the very least, we recommend to capture the ORCiD of the curator that captured the synonym, or the Research Organization Registry (ROR) identifier of the organisation that promotes the term.
     Ideally, however, you furthermore capture the source of the synonym, which could be a PMID, a term from an ontology or a DOI.
 
 For an overview of the two synonym properties and types, we will refer to the specialised documentation pages here:
