@@ -46,7 +46,7 @@ Synonyms can also be classified by types. The default is no type. The synonym ty
 
 Synonym type | Description | Example
 -- | -- | -- 
-[abbreviation](http://purl.obolibrary.org/obo/OMO_0003000) | to indicate the synonym is an abbreviation. **Note** the scope for an acronym should be determined on a case-by-case basis. Not all acronyms are necessarily exact. | |[ambiguous](http://purl.obolibrary.org/obo/OMO_0003001) | to indicate the synonym is open to more than one interpretation; may have a double meaning | |
+[abbreviation](http://purl.obolibrary.org/obo/OMO_0003000) | to indicate the synonym is an abbreviation. **Note** the scope for an acronym should be determined on a case-by-case basis. Not all acronyms are necessarily exact. |  |[ambiguous](http://purl.obolibrary.org/obo/OMO_0003001) | to indicate the synonym is open to more than one interpretation; may have a double meaning | MONDO:0019781 astrocytoma (excluding glioblastoma) synonym: "astrocytoma" (see associated [GitHub ticket](https://github.com/NCI-Thesaurus/thesaurus-obo-edition/issues/23) |
 [dubious synonym](http://purl.obolibrary.org/obo/OMO_0003002) | to indicate the synonym may be suspect | |
 [layperson term](http://purl.obolibrary.org/obo/OMO_0003003) | to indicate the synonym is common language (used by the Human Phenotype Ontology) | |
 [plural form](http://purl.obolibrary.org/obo/OMO_0003004) | indicating the form of the term that means more than one | |
