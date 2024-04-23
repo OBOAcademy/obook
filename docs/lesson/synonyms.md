@@ -16,7 +16,11 @@ In this lesson, we will discuss:
 - The OBO model for synonym representation
 - A brief outlook on validation
 
-![Synonyms](../images/kg-synonyms.png)
+<img width="749" alt="image" src="https://github.com/OBOAcademy/obook/assets/6722114/38f5f2e0-f690-4536-85d2-21c2efd07b68">
+
+Many terms can be used to mean the same thing
+
+<img width="535" alt="image" src="https://github.com/OBOAcademy/obook/assets/6722114/896386de-9df0-4d37-b284-1d91acbaf48e">
 
 ## Overview
 
