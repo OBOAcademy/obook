@@ -220,7 +220,7 @@ Synonyms are hugely important for many use cases in the information and data dom
 
 ### OBO modeling and synonyms
 
-All standardised metadata properties promoted by the OBO Foundry included in the [OBO Metadata Ontology](https://ontobee.org/ontology/OMO).
+All standardised metadata properties promoted by the OBO Foundry included in the [OBO Metadata Ontology](https://ontobee.org/ontology/OMO) (OMO).
 
 There are two hierarchies of synonym types of particular relevance to synonym representation:
 
