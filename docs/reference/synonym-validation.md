@@ -11,6 +11,10 @@
 
     Some exact synonyms are not globally unique. For example, the acronym "ASD" is an exact synonym of the concept representing "Atrial septal defect" and "Autism Spectrum Disorder".
 
+#### The same synonym cannot be duplicated with different scope 
+
+- An entity has duplicate synonyms with different properties (e.g. the same broad and related synonym). This causes ambiguity.
+
 #### The same synonym cannot be an exact synonym and a label at the same time
 
 - Implemented in the form of the [duplicate_label_synonym](https://robot.obolibrary.org/report_queries/duplicate_label_synonym) check implemented in ROBOT report.
@@ -20,4 +24,5 @@
     - No matter whether you agree or disagree with the above, as a ontology _user_ you should not assume 
 
 ### Advanced validation
+
 
