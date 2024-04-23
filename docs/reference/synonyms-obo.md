@@ -45,7 +45,7 @@ For example, Autistic behavior has the related synonym Autism spectrum disorder.
 Synonyms can also be classified by types. The default is no type. The synonym types vary in each ontology, but some commonly used synonym types include:
 
 Synonym type | Description | Example
--- | -- | -- |
+-- | -- | -- 
 [abbreviation](http://purl.obolibrary.org/obo/OMO_0003000) | to indicate the synonym is an abbreviation. **Note** the scope for an acronym should be determined on a case-by-case basis. Not all acronyms are necessarily exact. | MONDO:0000190 ventricular fibrillation synonym: VF |
 [dubious synonym](http://purl.obolibrary.org/obo/OMO_0003002) | to indicate the synonym may be suspect | MONDO:0024309 neuropathy, hereditary sensory and autonomic, type 2A, synonym: Morvan disease|
 [layperson term](http://purl.obolibrary.org/obo/OMO_0003003) | to indicate the synonym is a common language (used by the Human Phenotype Ontology) | HP:0001028 Hemangioma, synonym: Strawberry mark |
@@ -59,7 +59,7 @@ as sub-properties of [oboInOwl:SynonymType](https://www.ebi.ac.uk/ols4/ontologie
 #### Additional (interesting) Synonym Type Examples from Mondo
 
 Synonym type | Description | Example
--- | -- | -- |
+-- | -- | -- 
 'A synonym that is historic and discouraged' (DEPRECATED) | Mondo marks synonyms with DEPRECATED that are historic and no longer appropriate to use, e.g. all occurrences of “mental retardation” should be “intellectual disability”. They try to avoid including things in this list: https://en.wikipedia.org/wiki/List_of_medical_eponyms_with_Nazi_associations but if it’s established (e.g. Wegener granulomatosis), it may be included as a synonym and mark DEPRECATED | MONDO:0007113 Angelman syndrome, synonym: happy puppet syndrome
 'Synonym to be removed from public release but maintained in edit version as record of external usage' (EXCLUDE) | Some synonyms are annotated with EXCLUDE, e.g. “NOS” (not otherwise specified) synonyms. It is useful to have these in the edit version, but these are filtered on release. | MONDO:0007667 subependymoma, synonym: subependymal astrocytoma NOS
 ClinGen label (CLINGEN_LABEL) | Added to gene-based names/synonyms (or other labels) that were requested by an external user, ClinGen, and other terms that are the preferred terms for ClinGen.| MONDO:0010015 anterior segment dysgenesis 7, synonym: PXDN-related ocular dysgenesis
