@@ -84,3 +84,46 @@
     ORDER BY DESC(UCASE(str(?value)))
     ```
 
+##### Duplicate OMIM synonyms as exact and related in Mondo
+- In Mondo, this SPARQL query checks for duplicate synonyms between OMIM terms that are both exact and related.
+- This is a very specific use case to Mondo, as OMIM synonyms were initially brought in as related synonyms.
+- Implemented as [qc-related-exact-synonym-omim.sparql](https://mondo.readthedocs.io/en/latest/editors-guide/quality-control-tests/#qc-related-exact-synonym-omimsparql) in Mondo. 
+
+??? QC duplicate exact synonym no abbreviation query
+
+    ```    
+    prefix owl: <http://www.w3.org/2002/07/owl#>
+    prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+    prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    
+    SELECT DISTINCT ?entity ?property ?value WHERE {
+      { 
+        ?entity oboInOwl:hasRelatedSynonym ?related ;
+          rdfs:label ?entity_label ;
+          oboInOwl:hasExactSynonym ?exact ;
+          a owl:Class .
+          [
+             a owl:Axiom ;
+               owl:annotatedSource ?entity ;
+               owl:annotatedProperty oboInOwl:hasExactSynonym ;
+               owl:annotatedTarget ?exact ;
+               oboInOwl:hasDbXref ?xref1 
+          ] .
+          [
+             a owl:Axiom ;
+               owl:annotatedSource ?entity ;
+               owl:annotatedProperty oboInOwl:hasRelatedSynonym ;
+               owl:annotatedTarget ?related ;
+               oboInOwl:hasDbXref ?xref2 
+          ] .
+    
+        FILTER (str(?related)=str(?exact))
+        FILTER (regex(str(?xref1), "OMIM^"))
+        FILTER (regex(str(?xref2), "OMIM^"))
+        FILTER (isIRI(?entity) && STRSTARTS(str(?entity), "http://purl.obolibrary.org/obo/MONDO_"))
+        BIND(oboInOwl:hasExactSynonym as ?property)
+      }
+    }
+    
+    ORDER BY ?entity
+    ```
