@@ -24,7 +24,7 @@
     - It is often considered more convenient to be able to expect _all_ exact synonyms to be available via `oboInOwl:hasExactSynonym`, and not requiring downstream users to _know_ that exact synonyms are scattered across multiple properties (such as `rdfs:label`).
     - No matter whether you agree or disagree with the above, as a ontology _user_ you should not assume
  
-#### 
+#### ADD HEADER HERE
 
 - A synonym type is used in an annotation, but is not properly declared as a child of oboInOwl:SynonymTypeProperty. This can cause problems with conversions to OBO format.
 - Implemented in the form of [Missing Synonym Type Declaration](https://robot.obolibrary.org/report_queries/missing_synonymtype_declaration) in the ROBOT report.
