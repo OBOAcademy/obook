@@ -7,6 +7,9 @@ A synonym indicates an alternative name for a term. Terms can have multiple syno
 
 ### The scope of a synonym may fall into one of four categories:
 
+<img width="638" alt="image" src="https://github.com/OBOAcademy/obook/assets/6722114/c61ca5df-37cb-424c-86c5-504a02665d6e">
+
+
 #### Exact
 
 The definition of the synonym is exactly the same as primary term definition. This is used when the same class can have more than one name.
