@@ -232,7 +232,7 @@ There are two hierarchies of synonym types of particular relevance to synonym re
     While _synonym properties_ MUST be included in OMO to recognise a valid synonym, _synonym types_ are often defined by the ontologies themselves.
     This can be pretty confusing for tool developers. For example, at the time of this writing, [a number of OBO ontologies](https://github.com/OBOFoundry/OBOFoundry.github.io/issues/2450) define their own properties for "layperson" or "plural form".
 
-Apart from the two core hierarchies, the situation for provenance related properties on synonyms is a bit chaotic (not standardises) at the time of writing this reference (21.04.2024).
+Apart from the two core hierarchies, the situation for provenance related properties on synonyms is a bit chaotic (not standardised) at the time of writing this reference (21.04.2024).
 
 Ontologies developed using the [GO-family ontology development pattern](../pathways/ontology-curator-go-style.md) use the oboInOwl:hasDbXref property to represent "provenance" in general.
 This could be anything:
