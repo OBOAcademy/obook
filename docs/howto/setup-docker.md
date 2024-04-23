@@ -1,6 +1,6 @@
 # Set up docker
 
-- Follow the instructions [here](https://hub.docker.com/editions/community/docker-ce-desktop-mac) (note these instructions are for a Mac).
+- Follow the instructions [here](https://hub.docker.com/editions/community/docker-ce-desktop-mac) (for a Mac) or [here](https://docs.docker.com/desktop/install/windows-install/) (for Windows).
 - Once installed, you should be able to open your command line and download the ODK.
     - Open Terminal
     - in the command line type, type `docker pull obolibrary/odkfull`. This will download the ODK (will take a few minutes, depending on you internet connection).
