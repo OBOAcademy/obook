@@ -132,7 +132,7 @@ Let's look at some examples from the clinical domain:
 
 !!! info "Cancer vs Malignant Tumor"
 
-    In Mondo, malignant tumor, malignant neoplasm, malignancy are synonyms for cancer. 
+    In Mondo, malignant tumor, malignant neoplasm, malignancy are synonyms for cancer. Mondo follows the National Cancer Institute Thesaurus (NCIT), which uses 'Malignant Neoplasm' as the primary label (and cancer is a synonym). this may differ in other disease terminologies.
 
 Distinguishing between exact, broad, narrow, and related synonyms in the clinical domain is essential for maintaining the high standards of precision and care required in medical practice.
 This nuanced understanding aids in better patient outcomes, more effective communication among healthcare providers, and precise medical documentation.
@@ -145,7 +145,7 @@ Synonyms are commonly shared in many different ways. Here are a few that are wid
 
 !!! info "Thesauri"
 
-    **Definition**: A thesaurus is a structured vocabulary of controlled terms that includes synonyms and antonyms, and often, hierarchical (broader and narrower) relationships among the terms.
+    **Definition**: A thesaurus is a structured vocabulary of controlled terms that includes synonyms and antonyms (opposites), and often, hierarchical (broader and narrower) relationships among the terms.
     
     **Example**: The Art & Architecture Thesaurus (AAT) is widely used in cultural heritage and museum documentation to standardize terminology related to art, architecture, and material culture.
 
