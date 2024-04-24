@@ -48,6 +48,7 @@ ClinGen label (CLINGEN_LABEL) | Added to gene-based names/synonyms (or other lab
 3. Select **Entity IRI** and start searching for the synonym type in the search box, then select the annotation you wish to add. Click OK on each box.
 <img width="741" alt="image" src="https://github.com/OBOAcademy/obook/assets/6722114/929d993c-ae10-4b8a-9be7-12b7210a1c24">
 
+4. You will see your annotation on your synonym.
 <img width="862" alt="image" src="https://github.com/OBOAcademy/obook/assets/6722114/1b7e5da2-5a39-4795-b605-82c13d131c83">
 
 
