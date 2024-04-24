@@ -1,4 +1,4 @@
-## Common Synonym Types
+## Synonym Types
 
 In contrast to [synonym properties](../reference/synonyms-obo.md), which encode the semantic precision of a specific synonym such as "exact" or "broad, _synonym types_ encode the purpose of the synonym. In the following, we will describe some basic synonym types and give examples of their usage.
 
@@ -13,7 +13,7 @@ In contrast to [synonym properties](../reference/synonyms-obo.md), which encode 
     An word formed from the initial letter or letters of each of the successive parts or major parts of a compound term (https://www.merriam-webster.com/dictionary/acronym).
 
 
-### Synonym types
+### Common Synonym types
 
 Synonyms can also be classified by types. The default is no type. The synonym types vary in each ontology, but some commonly used synonym types include:
 
@@ -29,7 +29,7 @@ Synonym type | Description | Example
 Additional standardized synonym types can be found in the [OBO Metadata Ontology](https://obofoundry.org/ontology/omo)
 as sub-properties of [oboInOwl:SynonymType](https://www.ebi.ac.uk/ols4/ontologies/omo/properties/http%253A%252F%252Fwww.geneontology.org%252Fformats%252FoboInOwl%2523SynonymTypeProperty).
 
-#### Additional (interesting) Synonym Type Examples from Mondo
+### Additional (interesting) Synonym Type Examples from Mondo
 
 Synonym type | Description | Example
 -- | -- | -- 
