@@ -36,3 +36,20 @@ Synonym type | Description | Example
 'A synonym that is historic and discouraged' (DEPRECATED) | Mondo marks synonyms with DEPRECATED that are historic and no longer appropriate to use, e.g. all occurrences of “mental retardation” should be “intellectual disability”. They try to avoid including things in this list: https://en.wikipedia.org/wiki/List_of_medical_eponyms_with_Nazi_associations but if it’s established (e.g. Wegener granulomatosis), it may be included as a synonym and mark DEPRECATED | MONDO:0007113 Angelman syndrome, synonym: happy puppet syndrome
 'Synonym to be removed from public release but maintained in edit version as record of external usage' (EXCLUDE) | Some synonyms are annotated with EXCLUDE, e.g. “NOS” (not otherwise specified) synonyms. It is useful to have these in the edit version, but these are filtered on release. | MONDO:0007667 subependymoma, synonym: subependymal astrocytoma NOS
 ClinGen label (CLINGEN_LABEL) | Added to gene-based names/synonyms (or other labels) that were requested by an external user, ClinGen, and other terms that are the preferred terms for ClinGen.| MONDO:0010015 anterior segment dysgenesis 7, synonym: PXDN-related ocular dysgenesis
+
+## How to add Synonym Types in Protege v5.6.1
+
+1. Click on the annotation button next to the synonym
+<img width="855" alt="image" src="https://github.com/OBOAcademy/obook/assets/6722114/5332a6c7-379c-4558-843c-e3f0f7ee7432">
+
+2. Click the annotation button in the box
+<img width="529" alt="image" src="https://github.com/OBOAcademy/obook/assets/6722114/3772fd60-0522-4d51-831d-35de371e89ee">
+
+3. Select **Entity IRI** and start searching for the synonym type in the search box, then select the annotation you wish to add. Click OK on each box.
+<img width="741" alt="image" src="https://github.com/OBOAcademy/obook/assets/6722114/929d993c-ae10-4b8a-9be7-12b7210a1c24">
+
+<img width="862" alt="image" src="https://github.com/OBOAcademy/obook/assets/6722114/1b7e5da2-5a39-4795-b605-82c13d131c83">
+
+
+
+
