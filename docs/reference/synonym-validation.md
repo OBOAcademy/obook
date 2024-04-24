@@ -131,7 +131,7 @@
 - In Mondo, this SPARQL query checks for an exact synonym and a database cross-reference (dbxref) that is not exact. If the dbxef is equivalent to the Mondo term, the synonyms from that term should be added as exact synonyms. 
 - This is a very specific use case to Mondo, as dbxrefs in Mondo have equivalence mappings (in the form of MONDO:equivalentTo). The issue here was, in a merger, DOID:5603 was added as an equivalent dbxref, but the synonyms 'T-cell acute lymphoblastic leukemia' and 'precursor T lymphoblastic leukemia' were related synonyms. They were changed to exact and the QC check passed.
 - Implemented as [qc-exact-synonyms-non-exact-mappings.sparql](https://mondo.readthedocs.io/en/latest/editors-guide/quality-control-tests/#qc-exact-synonyms-non-exact-mappingssparql) in Mondo.
-- See [Pull Request here](https://github.com/monarch-initiative/mondo/pull/7472) where the QC check failed.
+- See the [Pull Request here](https://github.com/monarch-initiative/mondo/pull/7472) where the QC check failed.
 
     <img width="1039" alt="image" src="https://github.com/OBOAcademy/obook/assets/6722114/815b12ba-30b8-4c99-9e96-72781ab4ef40">
 
