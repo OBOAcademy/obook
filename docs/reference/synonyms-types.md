@@ -13,7 +13,7 @@ In contrast to [synonym properties](../reference/synonyms-obo.md), which encode 
     An word formed from the initial letter or letters of each of the successive parts or major parts of a compound term (https://www.merriam-webster.com/dictionary/acronym).
 
 
-### Common Synonym types
+### Common Synonym Types
 
 Synonyms can also be classified by types. The default is no type. The synonym types vary in each ontology, but some commonly used synonym types include:
 
