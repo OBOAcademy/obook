@@ -127,3 +127,53 @@
     
     ORDER BY ?entity
     ```
+##### Exact Synonyms/Non-exact Mappings
+- In Mondo, this SPARQL query checks for an exact synonym and a database cross-reference (dbxref) that is not exact. If the dbxef is equivalent to the Mondo term, the synonyms from that term should be added as exact synonyms. 
+- This is a very specific use case to Mondo, as dbxrefs in Mondo have equivalence mappings (in the form of MONDO:equivalentTo). The issue here was, in a merger, DOID:5603 was added as an equivalent dbxref, but the synonyms 'T-cell acute lymphoblastic leukemia' and 'precursor T lymphoblastic leukemia' were related synonyms. They were changed to exact and the QC check passed.
+- Implemented as [qc-exact-synonyms-non-exact-mappings.sparql](https://mondo.readthedocs.io/en/latest/editors-guide/quality-control-tests/#qc-exact-synonyms-non-exact-mappingssparql) in Mondo.
+- See [Pull Request here](https://github.com/monarch-initiative/mondo/pull/7472) where the QC check failed.
+
+    <img width="1039" alt="image" src="https://github.com/OBOAcademy/obook/assets/6722114/815b12ba-30b8-4c99-9e96-72781ab4ef40">
+
+??? Query
+
+```
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX MONDO: <http://purl.obolibrary.org/obo/MONDO_>
+
+SELECT DISTINCT ?entity ?label ?xref ?synonym ?code
+WHERE {
+
+  VALUES ?code {
+    "MONDO:relatedTo"^^xsd:string
+    "MONDO:mondoIsNarrowerThanSource"^^xsd:string
+    "MONDO:directSiblingOf"^^xsd:string
+    "MONDO:mondoIsBroaderThanSource"^^xsd:string
+  }
+
+  ?entity rdfs:subClassOf* MONDO:0000001 .
+  ?entity rdfs:label ?label .
+
+  ?entity oboInOwl:hasDbXref ?xref .
+    [ 
+      owl:annotatedSource ?entity ;
+      owl:annotatedProperty oboInOwl:hasDbXref ;
+      owl:annotatedTarget ?xref ;
+      oboInOwl:source ?code 
+    ] .
+
+  ?entity oboInOwl:hasExactSynonym ?synonym .
+    [ 
+      owl:annotatedSource ?entity ;
+      owl:annotatedProperty oboInOwl:hasExactSynonym ;
+      owl:annotatedTarget ?synonym ;
+      oboInOwl:hasDbXref ?xref 
+    ] .
+
+}
+```
