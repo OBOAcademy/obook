@@ -7,7 +7,9 @@
 - [Nicole Vasilevsky](https://orcid.org/0000-0001-5208-3432)
 - [Nicolas Matentzoglu](https://orcid.org/0000-0002-7356-1779)
 
-**Last update**: 22.04.2024.
+**In progress, Last update**: 23.04.2024
+
+<img width="749" alt="image" src="https://github.com/OBOAcademy/obook/assets/6722114/38f5f2e0-f690-4536-85d2-21c2efd07b68">
 
 In this lesson, we will discuss:
 
@@ -16,11 +18,12 @@ In this lesson, we will discuss:
 - The OBO model for synonym representation
 - A brief outlook on validation
 
-![Synonyms](../images/kg-synonyms.png)
-
 ## Overview
 
-Over time, different scientific communities have developed widely divergent terminologies for describing the same things. For example, "Varicella" and "Chickenpox" both refer to the same real world condition.
+Over time, different scientific communities have developed widely divergent terminologies for describing the same things. For example, "Varicella" and "Chickenpox" both refer to the same real-world condition. Or magroglossia can be described as enlarged tongue, megaglossia, etc.
+
+<img width="436" alt="image" src="https://github.com/OBOAcademy/obook/assets/6722114/0f28e01a-9fab-4ac0-ab65-0173868bcd8c">
+
 
 In order to understand if different scientific resources such as a biological database, a scientific publication or an ontology talk about the same thing, we need to recognise if the expression they are using refer to the same real world concept (have the same meaning).
 
@@ -78,6 +81,7 @@ This is crucial for effective communication, accurate diagnosis, and comprehensi
 1. **Acute Myocardial Infarction**:
     - **Synonyms**: Heart Attack, MI
     - **Context**: "Acute Myocardial Infarction" is the clinical term for what is commonly known as a "heart attack." Using both terms can help ensure clarity in patient communications as well as in medical documentation.
+    - **Note**: Cardiac arrest, also known as sudden cardiac arrest, is when the heart stops beating suddenly. It's not the same as a heart attack. [Reference](https://www.heart.org/en/health-topics/heart-attack/about-heart-attacks/heart-attack-or-sudden-cardiac-arrest-how-are-they-different#:~:text=People%20often%20use%20these%20terms,is%20an%20%E2%80%9Celectrical%E2%80%9D%20problem.)
 
 2. **Hypertension**:
     - **Synonyms**: High Blood Pressure
@@ -112,7 +116,7 @@ Let's look at some examples from the clinical domain:
 
 1. **Myocardial Infarction vs. Heart Attack**:
     - **Myocardial Infarction (Exact)**: A medical term used to describe the interruption of blood supply to a part of the heart, causing heart cells to die. This term is used in clinical diagnostics and documentation.
-    - **Heart Attack (Broad)**: Commonly used to describe any critical heart-related event by the general public. It is broader and might not always refer to myocardial infarction specifically.
+    - **Heart Attack (Broad)**: Commonly used to describe any critical heart-related event by the general public. It is broader and might not always refer to myocardial infarction specifically. A heart attack is when blood flow to the heart is blocked. Sudden cardiac arrest is when the heart malfunctions and suddenly stops beating. A heart attack is a “circulation” problem and sudden cardiac arrest is an “electrical” problem. [Reference](https://www.heart.org/en/health-topics/heart-attack/about-heart-attacks/heart-attack-or-sudden-cardiac-arrest-how-are-they-different#:~:text=People%20often%20use%20these%20terms,is%20an%20%E2%80%9Celectrical%E2%80%9D%20problem.)
 
 2. **Osteoarthritis vs. Arthritis**:
     - **Osteoarthritis (Narrow)**: A type of arthritis that occurs when flexible tissue at the ends of bones wears down.
@@ -126,6 +130,10 @@ Let's look at some examples from the clinical domain:
     - **Tumor (Related)**: An abnormal lump or growth of tissue, which can be benign or malignant.
     - **Cancer (Broad)**: A broad term for diseases involving abnormal cell growth with the potential to invade or spread to other parts of the body. Not all tumors are cancerous (e.g., benign tumors).
 
+!!! info "Cancer vs Malignant Tumor"
+
+    In Mondo, malignant tumor, malignant neoplasm, malignancy are synonyms for cancer. Mondo follows the National Cancer Institute Thesaurus (NCIT), which uses 'Malignant Neoplasm' as the primary label (and cancer is a synonym). this may differ in other disease terminologies.
+
 Distinguishing between exact, broad, narrow, and related synonyms in the clinical domain is essential for maintaining the high standards of precision and care required in medical practice.
 This nuanced understanding aids in better patient outcomes, more effective communication among healthcare providers, and precise medical documentation.
 
@@ -137,7 +145,7 @@ Synonyms are commonly shared in many different ways. Here are a few that are wid
 
 !!! info "Thesauri"
 
-    **Definition**: A thesaurus is a structured vocabulary of controlled terms that includes synonyms and antonyms, and often, hierarchical (broader and narrower) relationships among the terms.
+    **Definition**: A thesaurus is a structured vocabulary of controlled terms that includes synonyms and antonyms (opposites), and often, hierarchical (broader and narrower) relationships among the terms.
     
     **Example**: The Art & Architecture Thesaurus (AAT) is widely used in cultural heritage and museum documentation to standardize terminology related to art, architecture, and material culture.
 
@@ -178,18 +186,21 @@ Synonyms are hugely important for many use cases in the information and data dom
 1. **Search Engine Optimization (SEO)**:
     - **Use Case**: Enhancing search engine visibility and improving user engagement by incorporating a wide range of synonyms into website content, metadata, and keywords. This approach broadens the reach of search queries that the site can effectively respond to, attracting a more diverse audience.
     - **Benefit**: Using synonyms ensures that a website is accessible under various related search terms, thereby increasing organic traffic and improving search ranking.
+    - **Example**: A search for malignant neoplasm in google, brings up a knowledge panel about cancer
+  
+<img width="703" alt="image" src="https://github.com/OBOAcademy/obook/assets/6722114/8b99c3d0-758f-42b4-8c64-feaa49a76c40">
 
-2. **Natural Language Processing (NLP)**:
+3. **Natural Language Processing (NLP)**:
     - **Use Case**: Improving the accuracy of speech recognition systems, chatbots, and AI assistants. Synonyms help these systems understand and process human language more effectively by mapping different words to the same meanings.
     - **Benefit**: Enhances the user experience by allowing more flexible, conversational interactions with technology using varied vocabulary, thus making AI interactions seem more natural and less constrained by specific word choices. In our domain, this is particularly important when automatically extracting data and knowledge from unstructured sources such as scientific articles, for example into a knowledge graph.
 
-3. **Database Search**:
+4. **Database Search**:
     - **Use Case**: Enhancing the capability of database queries to return relevant results even when search terms use different terminology from that stored in the database. This is particularly important in fields like healthcare, legal, and academic databases where diverse terminologies are common.
     - **Benefit**: Users can find relevant information even if they don't know the exact terminology used in the database, reducing search time and improving the usability of information systems. Many databases in the biomedical domain employ synonyms for more accurate discovery of information.
 
-4. **Automated Ontology Matching**:
-   - **Use Case**: Frequently, we have to automatically align different ontologies or controlled vocabularies. In order to create accurate matches, we need a good, reliable set of synonyms.
-   - **Benefits**: By matching on synonyms, we can quickly and easily determine if two terms are equivalent. 
+5. **Automated Ontology Matching**:
+    - **Use Case**: Frequently, we have to automatically align different ontologies or controlled vocabularies. In order to create accurate matches, we need a good, reliable set of synonyms.
+    - **Benefits**: By matching on synonyms, we can quickly and more easily determine if two terms are equivalent. 
 
 !!! info
 
@@ -209,7 +220,7 @@ Synonyms are hugely important for many use cases in the information and data dom
 
 ### OBO modeling and synonyms
 
-All standardised metadata properties promoted by the OBO Foundry included in the [OBO Metadata Ontology](https://ontobee.org/ontology/OMO).
+All standardised metadata properties promoted by the OBO Foundry included in the [OBO Metadata Ontology](https://ontobee.org/ontology/OMO) (OMO).
 
 There are two hierarchies of synonym types of particular relevance to synonym representation:
 
@@ -221,7 +232,7 @@ There are two hierarchies of synonym types of particular relevance to synonym re
     While _synonym properties_ MUST be included in OMO to recognise a valid synonym, _synonym types_ are often defined by the ontologies themselves.
     This can be pretty confusing for tool developers. For example, at the time of this writing, [a number of OBO ontologies](https://github.com/OBOFoundry/OBOFoundry.github.io/issues/2450) define their own properties for "layperson" or "plural form".
 
-Apart from the two core hierarchies, the situation for provenance related properties on synonyms is a bit chaotic (not standardises) at the time of writing this reference (21.04.2024).
+Apart from the two core hierarchies, the situation for provenance related properties on synonyms is a bit chaotic (not standardised) at the time of writing this reference (21.04.2024).
 
 Ontologies developed using the [GO-family ontology development pattern](../pathways/ontology-curator-go-style.md) use the oboInOwl:hasDbXref property to represent "provenance" in general.
 This could be anything:
@@ -234,8 +245,8 @@ Some ontologies have started using dc:contributor and rdfs:seeAlso for more fine
 !!! info
 
     We warmly recommend to use to be generous with provenance when curating synonyms.
-    At the very least, we recommend to capture the ORCiD of the curator that captured the synonym, or the ROR of the organisation that promotes the term.
-    Ideally, however, you furthermore capture the source of the synonym, which could be a PMID, a term from an ontology or a DOI.
+    At the very least, we recommend to capture the ORCiD of the curator that captured the synonym, or the Research Organization Registry (ROR) identifier of the organisation that promotes the term.
+    Ideally, however, you furthermore capture the source of the synonym, which could be a PubMed ID (PMID), a term from an ontology or a Digital Object Identifier (DOI).
 
 For an overview of the two synonym properties and types, we will refer to the specialised documentation pages here:
 
