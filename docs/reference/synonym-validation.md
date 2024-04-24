@@ -13,8 +13,11 @@
 
 #### The same synonym cannot be duplicated with a different scope 
 
-- An entity has duplicate synonyms with different properties (e.g. the same broad and related synonym). This causes ambiguity.
+- An entity has duplicate synonyms with different properties (e.g. the same broad and related synonym). This causes ambiguity. An example screenshot from Mondo is pasted below.
 - Implemented in the form of [Duplicate Scoped Synonyms](https://robot.obolibrary.org/report_queries/duplicate_scoped_synonym) check in the ROBOT report.
+
+<img width="248" alt="image" src="https://github.com/OBOAcademy/obook/assets/6722114/19aa41ec-167c-4db7-8741-decf370fcb5b">
+
 
 #### The same synonym cannot be an exact synonym and a label at the same time
 
