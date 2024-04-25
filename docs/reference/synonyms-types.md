@@ -39,6 +39,8 @@ as sub-properties of `oboInOwl:SynonymType`.
 
 Synonyms can also be classified by types. The default is no type. The synonym types vary in each ontology, but some commonly used synonym types include:
 
+### Representation
+
 Synonym type | Description | Example
 -- | -- | -- 
 [abbreviation](http://purl.obolibrary.org/obo/OMO_0003000) | A shortened form of a word or phrase. **Warning** Many abbreviations you will find in the wild are actually acronyms.  | etc for et cetera |
@@ -65,8 +67,6 @@ ClinGen label (CLINGEN_LABEL) | Added to gene-based names/synonyms (or other lab
 
 #### Example synonym types in Protege from Mondo are shown below
 <img width="728" alt="image" src="https://github.com/OBOAcademy/obook/assets/6722114/43eb4583-2a89-4ca5-8177-334561ab094a">
-
-### Representation
 
 ??? Representation in OWL
 
