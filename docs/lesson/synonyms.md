@@ -213,7 +213,7 @@ Synonyms are hugely important for many use cases in the information and data dom
 **Duration**: 25 min
 
 - [OBO modeling and synonyms](#model)
-- [Overview of synonym properties](../reference/synonyms-obo.md)
+- [Overview of synonym properties](../reference/synonyms-properties.md)
 - [Overview of synonym types](../reference/synonyms-types.md)
 
 <a id="model"></a>
@@ -227,30 +227,9 @@ There are two hierarchies of synonym types of particular relevance to synonym re
 - [Synonym Properties](https://ontobee.org/ontology/OMO?iri=http://purl.obolibrary.org/obo/IAO_0000118)
 - [Synonym Types](https://ontobee.org/ontology/OMO?iri=http://www.geneontology.org/formats/oboInOwl%23SynonymTypeProperty)
 
-!!! warning
 
-    While _synonym properties_ MUST be included in OMO to recognise a valid synonym, _synonym types_ are often defined by the ontologies themselves.
-    This can be pretty confusing for tool developers. For example, at the time of this writing, [a number of OBO ontologies](https://github.com/OBOFoundry/OBOFoundry.github.io/issues/2450) define their own properties for "layperson" or "plural form".
 
-Apart from the two core hierarchies, the situation for provenance related properties on synonyms is a bit chaotic (not standardised) at the time of writing this reference (21.04.2024).
-
-Ontologies developed using the [GO-family ontology development pattern](../pathways/ontology-curator-go-style.md) use the oboInOwl:hasDbXref property to represent "provenance" in general.
-This could be anything:
-
-1. An ORCiD, meaning "this person asserted/verified this synonym"
-2. An ontology term, meaning "the synonym was source from this ontology concept"
-
-Some ontologies have started using dc:contributor and rdfs:seeAlso for more fine-grained provenance, but this pattern is not widely adopted.
-
-!!! info
-
-    We warmly recommend to use to be generous with provenance when curating synonyms.
-    At the very least, we recommend to capture the ORCiD of the curator that captured the synonym, or the Research Organization Registry (ROR) identifier of the organisation that promotes the term.
-    Ideally, however, you furthermore capture the source of the synonym, which could be a PubMed ID (PMID), a term from an ontology or a Digital Object Identifier (DOI).
-
-For an overview of the two synonym properties and types, we will refer to the specialised documentation pages here:
-
-- [Overview of synonym properties](../reference/synonyms-obo.md)
+- [Overview of synonym properties](../reference/synonyms-properties.md)
 - [Overview of synonym types](../reference/synonyms-types.md)
 
 <a id="validation"></a>

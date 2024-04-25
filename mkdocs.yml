@@ -222,7 +222,9 @@ nav:
       - Tools for Managing Issues: reference/managing-issues.md
       - Release Artefacts: reference/release-artefacts.md
       - Base Release: reference/base-specification.md
-      - Synonyms: reference/synonyms-obo.md
+      - Synonym Properties: reference/synonyms-properties.md
+      - Synonym Types: reference/synonyms-types.md
+      - Synonym Validation: reference/synonym-validation.md
       - Monkeying around with OWL: reference/mungall-blog-radar.md
       - Ontology Development Kit (ODK): reference/odk.md
       - Troubleshooting ROBOT: reference/troublehooting-robot.md
