@@ -9,7 +9,7 @@
 
 **Last update**: 25.04.2024
 
-<img width="749" alt="image" src="https://github.com/OBOAcademy/obook/assets/6722114/38f5f2e0-f690-4536-85d2-21c2efd07b68">
+![](../images/tutorials/synonyms/synonyms.png)
 
 In this lesson, we will discuss:
 
@@ -22,12 +22,12 @@ In this lesson, we will discuss:
 
 Over time, different scientific communities have developed widely divergent terminologies for describing the same things. For example, "Varicella" and "Chickenpox" both refer to the same real-world condition. Or magroglossia can be described as enlarged tongue, megaglossia, etc.
 
-<img width="436" alt="image" src="https://github.com/OBOAcademy/obook/assets/6722114/0f28e01a-9fab-4ac0-ab65-0173868bcd8c">
+![](../images/tutorials/synonyms/tongue.png)
 
 
-In order to understand if different scientific resources such as a biological database, a scientific publication or an ontology talk about the same thing, we need to recognise if the expression they are using refer to the same real world concept (have the same meaning).
+To understand if different scientific resources such as a biological database, a scientific publication or an ontology talk about the same thing, we need to recognise if the expression they are using refers to the same real-world concept (have the same meaning).
 
-The primary role of an ontology is to provide an explicit conceptualisations of a domain. However, ontologies especially in the biomedical domain have become much more than just that:
+The primary role of an ontology is to provide an explicit conceptualisation of a domain. However, ontologies especially in the biomedical domain have become much more than just that:
 for example, they encode hierarchical structures (taxonomies), provide formal definitions for terms (terminologies) and provide synonyms for terminological disambiguation (thesaurus).
 
 Synonyms can have different levels of precision (e.g. exact, broad, related) and be used for different purposes (laypersons, acronyms, language translations). The variety of synonym types makes them difficult to curate and use.
@@ -188,7 +188,7 @@ Synonyms are hugely important for many use cases in the information and data dom
     - **Benefit**: Using synonyms ensures that a website is accessible under various related search terms, thereby increasing organic traffic and improving search ranking.
     - **Example**: A search for malignant neoplasm in google, brings up a knowledge panel about cancer
   
-<img width="703" alt="image" src="https://github.com/OBOAcademy/obook/assets/6722114/8b99c3d0-758f-42b4-8c64-feaa49a76c40">
+![](../images/tutorials/synonyms/Picture1.png)
 
 3. **Natural Language Processing (NLP)**:
     - **Use Case**: Improving the accuracy of speech recognition systems, chatbots, and AI assistants. Synonyms help these systems understand and process human language more effectively by mapping different words to the same meanings.
