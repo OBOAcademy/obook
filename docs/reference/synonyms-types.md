@@ -52,6 +52,20 @@ Synonym type | Description | Example
 Additional standardized synonym types can be found in the [OBO Metadata Ontology](https://obofoundry.org/ontology/omo)
 as sub-properties of [oboInOwl:SynonymType](https://www.ebi.ac.uk/ols4/ontologies/omo/properties/http%253A%252F%252Fwww.geneontology.org%252Fformats%252FoboInOwl%2523SynonymTypeProperty).
 
+### Additional (interesting) Synonym Type Examples from Mondo
+
+Synonym type | Description | Example
+-- | -- | -- 
+'A synonym that is historic and discouraged' (DEPRECATED) | Mondo marks synonyms with DEPRECATED that are historic and no longer appropriate to use, e.g. all occurrences of “mental retardation” should be “intellectual disability”. They try to avoid including things in this list: https://en.wikipedia.org/wiki/List_of_medical_eponyms_with_Nazi_associations but if it’s established (e.g. Wegener granulomatosis), it may be included as a synonym and mark DEPRECATED | MONDO:0007113 Angelman syndrome, synonym: happy puppet syndrome
+'Synonym to be removed from public release but maintained in edit version as record of external usage' (EXCLUDE) | Some synonyms are annotated with EXCLUDE, e.g. “NOS” (not otherwise specified) synonyms. It is useful to have these in the edit version, but these are filtered on release. | MONDO:0007667 subependymoma, synonym: subependymal astrocytoma NOS
+ClinGen label (CLINGEN_LABEL) | Added to gene-based names/synonyms (or other labels) that were requested by an external user, ClinGen, and other terms that are the preferred terms for ClinGen.| MONDO:0010015 anterior segment dysgenesis 7, synonym: PXDN-related ocular dysgenesis
+
+#### Example synonym types in Protege from HPO are shown below
+<img width="326" alt="image" src="https://github.com/OBOAcademy/obook/assets/6722114/c6dfb5a6-bb0c-478a-a4f2-e28052f03527">
+
+#### Example synonym types in Protege from Mondo are shown below
+<img width="728" alt="image" src="https://github.com/OBOAcademy/obook/assets/6722114/43eb4583-2a89-4ca5-8177-334561ab094a">
+
 ### Representation
 
 ??? Representation in OWL
@@ -86,16 +100,6 @@ In the above OWL example, you can see how an acronym and a custom synonym type c
 
 In the above OBO example, you can see how an acronym and a custom synonym type called "CLINGEN_LABEL" would look like in OBO Format.
 
-### Additional (interesting) Synonym Type Examples from Mondo
-
-Synonym type | Description | Example
--- | -- | -- 
-'A synonym that is historic and discouraged' (DEPRECATED) | Mondo marks synonyms with DEPRECATED that are historic and no longer appropriate to use, e.g. all occurrences of “mental retardation” should be “intellectual disability”. They try to avoid including things in this list: https://en.wikipedia.org/wiki/List_of_medical_eponyms_with_Nazi_associations but if it’s established (e.g. Wegener granulomatosis), it may be included as a synonym and mark DEPRECATED | MONDO:0007113 Angelman syndrome, synonym: happy puppet syndrome
-'Synonym to be removed from public release but maintained in edit version as record of external usage' (EXCLUDE) | Some synonyms are annotated with EXCLUDE, e.g. “NOS” (not otherwise specified) synonyms. It is useful to have these in the edit version, but these are filtered on release. | MONDO:0007667 subependymoma, synonym: subependymal astrocytoma NOS
-ClinGen label (CLINGEN_LABEL) | Added to gene-based names/synonyms (or other labels) that were requested by an external user, ClinGen, and other terms that are the preferred terms for ClinGen.| MONDO:0010015 anterior segment dysgenesis 7, synonym: PXDN-related ocular dysgenesis
-
-#### Example synonym types in Protege from Mondo are shown below
-<img width="728" alt="image" src="https://github.com/OBOAcademy/obook/assets/6722114/43eb4583-2a89-4ca5-8177-334561ab094a">
 
 
 ## How to add Synonym Types in Protege v5.6.1
