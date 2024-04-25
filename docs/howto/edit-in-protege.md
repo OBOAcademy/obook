@@ -58,7 +58,7 @@ To add a dbxref to the definition:
 To add a synonym:
 
 1.  Select the + button to add an annotation to the selected entity
-1.  Add the synonyms as 'has_exact_synonym' (note: use [appropriate synonym annotation](../reference/synonyms-obo.md))
+1.  Add the synonyms as 'has_exact_synonym' (note: use [appropriate synonym annotation](../reference/synonyms-properties.md))
 1.  Synonyms should have a reference to it
 1.  Click the @ symbol next to the synonym
 1.  Click the + button
