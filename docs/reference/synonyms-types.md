@@ -105,17 +105,16 @@ In the above OBO example, you can see how an acronym and a custom synonym type c
 ## How to add Synonym Types in Protege v5.6.1
 
 1. Click on the annotation button next to the synonym
-<img width="855" alt="image" src="https://github.com/OBOAcademy/obook/assets/6722114/5332a6c7-379c-4558-843c-e3f0f7ee7432">
+![](../images/tutorials/synonyms/synonym-annotation-1.png)
 
-2. Click the annotation button in the box
-<img width="529" alt="image" src="https://github.com/OBOAcademy/obook/assets/6722114/3772fd60-0522-4d51-831d-35de371e89ee">
+3. Click the annotation button in the box
+![](../images/tutorials/synonyms/abbreviation.png)
 
-3. Select **Entity IRI** and start searching for the synonym type in the search box, then select the annotation you wish to add. Click OK on each box.
+4. Select **Entity IRI** and start searching for the synonym type in the search box, then select the annotation you wish to add. Click OK on each box.
 <img width="741" alt="image" src="https://github.com/OBOAcademy/obook/assets/6722114/929d993c-ae10-4b8a-9be7-12b7210a1c24">
 
-4. You will see your annotation on your synonym.
-<img width="862" alt="image" src="https://github.com/OBOAcademy/obook/assets/6722114/1b7e5da2-5a39-4795-b605-82c13d131c83">
-
+5. You will see your annotation on your synonym.
+![](../images/tutorials/synonyms/synonymannotation.png
 
 
 
