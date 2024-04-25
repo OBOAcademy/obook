@@ -94,6 +94,10 @@ Synonym type | Description | Example
 'Synonym to be removed from public release but maintained in edit version as record of external usage' (EXCLUDE) | Some synonyms are annotated with EXCLUDE, e.g. “NOS” (not otherwise specified) synonyms. It is useful to have these in the edit version, but these are filtered on release. | MONDO:0007667 subependymoma, synonym: subependymal astrocytoma NOS
 ClinGen label (CLINGEN_LABEL) | Added to gene-based names/synonyms (or other labels) that were requested by an external user, ClinGen, and other terms that are the preferred terms for ClinGen.| MONDO:0010015 anterior segment dysgenesis 7, synonym: PXDN-related ocular dysgenesis
 
+#### Example synonym types in Protege from Mondo are shown below
+<img width="728" alt="image" src="https://github.com/OBOAcademy/obook/assets/6722114/43eb4583-2a89-4ca5-8177-334561ab094a">
+
+
 ## How to add Synonym Types in Protege v5.6.1
 
 1. Click on the annotation button next to the synonym
