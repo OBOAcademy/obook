@@ -12,7 +12,7 @@ A synonym indicates an alternative name for a term.
 Terms can have multiple synonyms of of different types and using different properties.
 For example, the Mondo term MONDO:0005992 cancer, has many exact synonyms and a related synonym:
 
-<img width="653" alt="image" src="https://github.com/OBOAcademy/obook/assets/6722114/3120bf59-1802-4209-b896-8039c96a7b28">
+![](../images/tutorials/synonyms/cancerterm.png)
 
 ### List of widely used synonym properties
 
