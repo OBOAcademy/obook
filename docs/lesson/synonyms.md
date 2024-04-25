@@ -7,7 +7,7 @@
 - [Nicole Vasilevsky](https://orcid.org/0000-0001-5208-3432)
 - [Nicolas Matentzoglu](https://orcid.org/0000-0002-7356-1779)
 
-**In progress, Last update**: 23.04.2024
+**Last update**: 25.04.2024
 
 <img width="749" alt="image" src="https://github.com/OBOAcademy/obook/assets/6722114/38f5f2e0-f690-4536-85d2-21c2efd07b68">
 
