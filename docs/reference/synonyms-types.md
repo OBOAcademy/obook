@@ -63,10 +63,10 @@ Synonym type | Description | Example
 ClinGen label (CLINGEN_LABEL) | Added to gene-based names/synonyms (or other labels) that were requested by an external user, ClinGen, and other terms that are the preferred terms for ClinGen.| MONDO:0010015 anterior segment dysgenesis 7, synonym: PXDN-related ocular dysgenesis
 
 #### Example synonym types in Protege from HPO are shown below
-<img width="326" alt="image" src="https://github.com/OBOAcademy/obook/assets/6722114/c6dfb5a6-bb0c-478a-a4f2-e28052f03527">
+![](../images/tutorials/synonyms/synonymtypeproperty.png)
 
 #### Example synonym types in Protege from Mondo are shown below
-<img width="728" alt="image" src="https://github.com/OBOAcademy/obook/assets/6722114/43eb4583-2a89-4ca5-8177-334561ab094a">
+![](../images/tutorials/synonyms/synonymtypepropertymondo.png)
 
 ??? Representation in OWL
 
