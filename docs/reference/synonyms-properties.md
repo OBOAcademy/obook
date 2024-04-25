@@ -31,7 +31,7 @@ For example, the Mondo term MONDO:0005992 cancer, has many exact synonyms and a 
 
 #### `oboInOwl:hasExactSynomym`
 
-<img width="638" alt="image" src="https://github.com/OBOAcademy/obook/assets/6722114/c61ca5df-37cb-424c-86c5-504a02665d6e">
+![](../images/tutorials/synonyms/synonymscope.png)
 
 The definition of the synonym is exactly the same as primary term definition. This is used when the same class can have more than one name.
 
@@ -72,7 +72,7 @@ This could be anything:
 2. An ontology term, meaning "the synonym was source from this ontology concept"
 3. A Pubmed ID, to indicate the publication that used the synonym. References to PubMed IDs should be in the format PMID:XXXXXXX (no space). See example below.
 
-<img width="428" alt="image" src="https://github.com/OBOAcademy/obook/assets/6722114/171829f2-f057-4445-8ca8-02d2aeae9ce3">
+![](../images/tutorials/synonyms/winchester.png)
 
 Some other ontologies have started using dc:contributor and rdfs:seeAlso for more fine-grained provenance, but this pattern is not widely adopted.
 
