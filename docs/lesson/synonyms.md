@@ -11,8 +11,6 @@
 
 ![](../images/tutorials/synonyms/synonyms.png)
 
-<img width="749" alt="image" src="https://github.com/OBOAcademy/obook/assets/6722114/38f5f2e0-f690-4536-85d2-21c2efd07b68">
-
 In this lesson, we will discuss:
 
 - Definitions and basic concepts around synonyms
