@@ -190,17 +190,17 @@ Synonyms are hugely important for many use cases in the information and data dom
   
 ![](../images/tutorials/synonyms/Picture1.png)
 
-3. **Natural Language Processing (NLP)**:
+2. **Natural Language Processing (NLP)**:
     - **Use Case**: Improving the accuracy of speech recognition systems, chatbots, and AI assistants. Synonyms help these systems understand and process human language more effectively by mapping different words to the same meanings.
     - **Benefit**: Enhances the user experience by allowing more flexible, conversational interactions with technology using varied vocabulary, thus making AI interactions seem more natural and less constrained by specific word choices. In our domain, this is particularly important when automatically extracting data and knowledge from unstructured sources such as scientific articles, for example into a knowledge graph.
 
-4. **Database Search**:
+3. **Database Search**:
     - **Use Case**: Enhancing the capability of database queries to return relevant results even when search terms use different terminology from that stored in the database. This is particularly important in fields like healthcare, legal, and academic databases where diverse terminologies are common.
     - **Benefit**: Users can find relevant information even if they don't know the exact terminology used in the database, reducing search time and improving the usability of information systems. Many databases in the biomedical domain employ synonyms for more accurate discovery of information.
 
-5. **Automated Ontology Matching**:
-    - **Use Case**: Frequently, we have to automatically align different ontologies or controlled vocabularies. In order to create accurate matches, we need a good, reliable set of synonyms.
-    - **Benefits**: By matching on synonyms, we can quickly and more easily determine if two terms are equivalent. 
+4. **Automated Ontology and Knowledge Graph Matching**:
+    - **Use Case**: Frequently, we have to align different ontologies, KGs or controlled vocabularies. A new buzzword (promoted as far as we can see by a business that wants to sell the service) is "entity resolved knowledge graphs" - KGs in which all records/terms that mean the same thing resolve to the same graph entity. This is, for many of us of course, our daily bread and butter. Synonyms are critical features of terms needed for entity resolution and ontology matching.
+    - **Benefits**: By matching on exact synonyms, we can easily determine if two terms are equivalent.
 
 !!! info
 
@@ -227,7 +227,7 @@ There are two hierarchies of synonym types of particular relevance to synonym re
 - [Synonym Properties](https://ontobee.org/ontology/OMO?iri=http://purl.obolibrary.org/obo/IAO_0000118)
 - [Synonym Types](https://ontobee.org/ontology/OMO?iri=http://www.geneontology.org/formats/oboInOwl%23SynonymTypeProperty)
 
-
+For the main part of the course, please study the following to reference guides.
 
 - [Overview of synonym properties](../reference/synonyms-properties.md)
 - [Overview of synonym types](../reference/synonyms-types.md)
