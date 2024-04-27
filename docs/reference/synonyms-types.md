@@ -68,7 +68,7 @@ ClinGen label (CLINGEN_LABEL) | Added to gene-based names/synonyms (or other lab
 #### Example synonym types in Protege from Mondo are shown below
 ![](../images/tutorials/synonyms/synonymtypepropertymondo.png)
 
-??? Representation in OWL
+??? OWL
 
     ```xml
     <owl:Axiom>
@@ -88,7 +88,7 @@ ClinGen label (CLINGEN_LABEL) | Added to gene-based names/synonyms (or other lab
 
 In the above OWL example, you can see how an acronym and a custom synonym type called "CLINGEN_LABEL" would look like in OWL Format. Note that the acronym property was changed here for illustration purposes, as Mondo has not yet caught up with implementing all the new standard OMO synonym type properties.
 
-??? Representation in OBO format
+??? OBO format
 
     ```
     [Term]
