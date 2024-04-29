@@ -17,8 +17,8 @@ The goal of this course is to provide ongoing training for the OBO community. As
 
 - [Nicole Vasilevsky](https://orcid.org/0000-0001-5208-3432), Critical Path Institute
 - [Nico Matentzoglu](https://orcid.org/0000-0002-7356-1779), Semanticly, Athens, Greece
-- [Sabrina Toro](https://tislab.org/members/sabrina-toro.html), University of Colorado Anschutz Medical Campus
-- [Sarah Gehrke](https://orcid.org/0000-0003-3245-2880), University of Colorado Anschutz Medical Campus
+- [Sabrina Toro](https://tislab.org/members/sabrina-toro.html), University of North Carolina at Chapel Hill
+- [Sarah Gehrke](https://orcid.org/0000-0003-3245-2880), University of North Carolina at Chapel Hill
 - Prepare the materials for each lesson and provide schedules
 - Build new training materials where needed
 - Organise the course and rooms
