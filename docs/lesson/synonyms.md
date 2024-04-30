@@ -202,6 +202,14 @@ Synonyms are hugely important for many use cases in the information and data dom
     - **Use Case**: Frequently, we have to align different ontologies, KGs or controlled vocabularies. A new buzzword (promoted as far as we can see by a business that wants to sell the service) is "entity resolved knowledge graphs" - KGs in which all records/terms that mean the same thing resolve to the same graph entity. This is, for many of us of course, our daily bread and butter. Synonyms are critical features of terms needed for entity resolution and ontology matching.
     - **Benefits**: By matching on exact synonyms, we can easily determine if two terms are equivalent.
 
+5. **Supporting Community Terminologies**:
+    - **Use Case**: Ontology classes can have a at maximum a single preferred label. This can be frustrating when two different communities use different terminologies for the same concepts. Using synonyms we have the choice of favoring one community for the primary label, and another for the synonym; or using neutral terminology for the label, and making each community's preferred term a synonym. Optionally, the synonyms can be marked up using axioms to indicate they are preferred for that community, and some tools can then render that as the primary label in given contexts.
+    - **Benefits**: A pluralistic, more inclusive approach to community ontology development
+
+6. **Orienting Users**:
+    - **Use Case**: Some users may be unfamiliar with the nomenclature used in primary labels. By including all standard alternative terms as synonyms, this can help "anchor" users to reassure them that a given ontology class matches the concept they have in mind
+    - **Benefits**: Making ontologies easier to use, and easier for curators to select the correct term.
+
 !!! info
 
     The importance of explicitly curated synonyms may become a little less obvious in the age of LLMs, where synonyms are naturally represented in some magic place called "latent space", which makes it possible for chatbots to understand if two expressions refer to the same real world entity. However, LLMs are far from perfect at reflecting specialised scientific synonymy and are still prone to hallucination in 2024. For scenarios where accuracy and provenance (who says this is a synonym?) is important, structured sources for synonymy are key.
