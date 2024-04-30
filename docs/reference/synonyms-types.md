@@ -110,7 +110,7 @@ In the above OBO example, you can see how an acronym and a custom synonym type c
 3. Click the annotation button in the box
 ![](../images/tutorials/synonyms/synonym-annotation-2.png)
 
-4. Select **Entity IRI** and start searching for the synonym type in the search box, then select the annotation you wish to add. Click OK on each box.
+4. Select **has_synonym_type** on the left, then **Entity IRI** and start searching for the synonym type in the search box, then select the annotation you wish to add. Click OK on each box.
 ![](../images/tutorials/synonyms/synonym-annotation-3.png)
 
 6. You will see your annotation on your synonym.
