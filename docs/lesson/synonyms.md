@@ -183,16 +183,23 @@ Synonyms are commonly shared in many different ways. Here are a few that are wid
 
 Synonyms are hugely important for many use cases in the information and data domains. Here are some examples:
 
+1. **Database curation**:
+    - **Use Case**: Making it easier to identify the right ontology or vocabulary term during data curation.
+    - **Benefit**: Precise synonyms make it easier to recognise that a specific class in an ontology is "the right one" when curating a record in a database, especially if the term I most frequently use is one of the synonyms.
 
-1. **Natural Language Processing (NLP)**:
+2. **Integration of community-level terminological preferences**:
+    - **Use Case**: Ontology classes can have a at maximum a single preferred label. This can be frustrating when two different communities use different terminologies for the same concepts. Using synonyms we have the choice of favoring one community for the primary label, and another for the synonym; or using neutral terminology for the label, and making each community's preferred term a synonym. Optionally, the synonyms can be marked up using axioms to indicate they are preferred for that community, and some tools can then render that as the primary label in given contexts.
+    - **Benefit**: Scientific communities evolved across a spectrum of disciplines and geographical locations. Many have divergent terminological preferences, for example, [ClinGen](https://www.clinicalgenome.org/) prefers, in some cases, to explicitly include gene symbols as part of a disease name, while other organisation prefer to use other forms of naming. Synonyms are a great way to record such community-level preferences linked to a common disease concept. This enables a pluralistic, more inclusive approach to ontology development involving many different communities.
+
+3. **Natural Language Processing (NLP)**:
     - **Use Case**: Improving the accuracy of speech recognition systems, chatbots, and AI assistants. Synonyms help these systems understand and process human language more effectively by mapping different words to the same meanings.
     - **Benefit**: Enhances the user experience by allowing more flexible, conversational interactions with technology using varied vocabulary, thus making AI interactions seem more natural and less constrained by specific word choices. In our domain, this is particularly important when automatically extracting data and knowledge from unstructured sources such as scientific articles, for example into a knowledge graph.
 
-2. **Database Search**:
+4. **Database Search**:
     - **Use Case**: Enhancing the capability of database queries to return relevant results even when search terms use different terminology from that stored in the database. This is particularly important in fields like healthcare, legal, and academic databases where diverse terminologies are common.
     - **Benefit**: Users can find relevant information even if they don't know the exact terminology used in the database, reducing search time and improving the usability of information systems. Many databases in the biomedical domain employ synonyms for more accurate discovery of information.
 
-3. **Automated Ontology and Knowledge Graph Matching**:
+5. **Automated Ontology and Knowledge Graph Matching**:
     - **Use Case**: Frequently, we have to align different ontologies, KGs or controlled vocabularies. A new buzzword (promoted as far as we can see by a business that wants to sell the service) is "entity resolved knowledge graphs" - KGs in which all records/terms that mean the same thing resolve to the same graph entity. This is, for many of us of course, our daily bread and butter. Synonyms are critical features of terms needed for entity resolution and ontology matching.
     - **Benefits**: By matching on exact synonyms, we can easily determine if two terms are equivalent.
 
