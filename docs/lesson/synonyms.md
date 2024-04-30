@@ -183,22 +183,16 @@ Synonyms are commonly shared in many different ways. Here are a few that are wid
 
 Synonyms are hugely important for many use cases in the information and data domains. Here are some examples:
 
-1. **Search Engine Optimization (SEO)**:
-    - **Use Case**: Enhancing search engine visibility and improving user engagement by incorporating a wide range of synonyms into website content, metadata, and keywords. This approach broadens the reach of search queries that the site can effectively respond to, attracting a more diverse audience.
-    - **Benefit**: Using synonyms ensures that a website is accessible under various related search terms, thereby increasing organic traffic and improving search ranking.
-    - **Example**: A search for malignant neoplasm in google, brings up a knowledge panel about cancer
-  
-![](../images/tutorials/synonyms/Picture1.png)
 
-2. **Natural Language Processing (NLP)**:
+1. **Natural Language Processing (NLP)**:
     - **Use Case**: Improving the accuracy of speech recognition systems, chatbots, and AI assistants. Synonyms help these systems understand and process human language more effectively by mapping different words to the same meanings.
     - **Benefit**: Enhances the user experience by allowing more flexible, conversational interactions with technology using varied vocabulary, thus making AI interactions seem more natural and less constrained by specific word choices. In our domain, this is particularly important when automatically extracting data and knowledge from unstructured sources such as scientific articles, for example into a knowledge graph.
 
-3. **Database Search**:
+2. **Database Search**:
     - **Use Case**: Enhancing the capability of database queries to return relevant results even when search terms use different terminology from that stored in the database. This is particularly important in fields like healthcare, legal, and academic databases where diverse terminologies are common.
     - **Benefit**: Users can find relevant information even if they don't know the exact terminology used in the database, reducing search time and improving the usability of information systems. Many databases in the biomedical domain employ synonyms for more accurate discovery of information.
 
-4. **Automated Ontology and Knowledge Graph Matching**:
+3. **Automated Ontology and Knowledge Graph Matching**:
     - **Use Case**: Frequently, we have to align different ontologies, KGs or controlled vocabularies. A new buzzword (promoted as far as we can see by a business that wants to sell the service) is "entity resolved knowledge graphs" - KGs in which all records/terms that mean the same thing resolve to the same graph entity. This is, for many of us of course, our daily bread and butter. Synonyms are critical features of terms needed for entity resolution and ontology matching.
     - **Benefits**: By matching on exact synonyms, we can easily determine if two terms are equivalent.
 
