@@ -29,8 +29,8 @@ _Note: this is tentative and subject to change_
 | Date | Lesson | Notes | Recordings |
 | --- | --- | --- | --- |
 | 2024/05/14 | Introduction to the legendary [Uberon Anatomy ontology](https://obophenotype.github.io/uberon/) | Damien Goutte-Gattat and Nico Matentzoglu |  |
-| 2024/04/30 | [An Introduction to Synonyms in OBO Ontologies](https://oboacademy.github.io/obook/lesson/synonyms/) | Nicole Vasilevsky, C-Path | 
-| 2024/04/16 | [AI-assisted ontology editing workflows 2: Validation](https://docs.google.com/presentation/d/13Hlm-iJo7a1NAaUqLsrUlbn-tLUVbF25WBjwAgIuLdA/edit#slide=id.g2cbabe5fcdf_0_5) | Chris Mungall, LBNL |
+| 2024/04/30 | [An Introduction to Synonyms in OBO Ontologies](https://oboacademy.github.io/obook/lesson/synonyms/) | Nicole Vasilevsky, C-Path | [Here](https://youtu.be/N3_Nf11QXfE?si=iZCMlkmieZoWxGct)
+| 2024/04/16 | [AI-assisted ontology editing workflows 2: Validation](https://docs.google.com/presentation/d/13Hlm-iJo7a1NAaUqLsrUlbn-tLUVbF25WBjwAgIuLdA/edit#slide=id.g2cbabe5fcdf_0_5) | Chris Mungall, LBNL | [Here](https://youtu.be/cQWfJ5IjUM8?si=DLRKmP5rCFLzalOk)
 | 2024/04/02 | OBO Academy Phenomics Series: [Phenotype data and the role of ontologies](https://oboacademy.github.io/obook/lesson/phenotype-data/) | James McLaughlin (EBML-EBI) and Nico Matentzoglu | [Here](https://youtu.be/9iWRRx7nZlU?feature=shared)
 | 2024/03/19 | _No Meeting_ |  |
 | 2024/03/05 | [AI-assisted ontology editing workflows 1: generating and augmenting](https://docs.google.com/presentation/d/13Hlm-iJo7a1NAaUqLsrUlbn-tLUVbF25WBjwAgIuLdA/edit#slide=id.g24560ef6bb7_0_84) | Chris Mungall, LBNL | [Here](https://www.youtube.com/watch?v=wGoGr2dmxZI) |
