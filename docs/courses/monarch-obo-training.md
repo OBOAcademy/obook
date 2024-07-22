@@ -28,7 +28,8 @@ _Note: this is tentative and subject to change_
 
 | Date | Lesson | Notes | Recordings |
 | --- | --- | --- | --- |
-| 2024/07/23 | Follow up on [ICBO 2024 OBO Tutorial on Collaborative Workflows](../courses/icbo2024.md) | Nicole Vasilevsky, Nico Matentzoglu and Sabrina Toro | TBD |
+| August 2024 | _No Meeting_ | Enjoy Summer break! |  |
+| July 2024 | _No Meeting_ | Enjoy Summer break! |  |
 | 2024/06/25 | Structures and Instructors: Applying the Strengths of Large Language Models to Biomedical Informatics | Harry Caufield | [Here](https://youtu.be/wJvKMIyOpfo?feature=shared) |
 | 2024/05/14 | Introduction to the legendary [Uberon Anatomy ontology](https://obophenotype.github.io/uberon/) | Damien Goutte-Gattat and Nico Matentzoglu | [Here](https://youtu.be/HmFhTk0Bahs?si=q4cfg1lYx7sTqE0M) |
 | 2024/04/30 | [An Introduction to Synonyms in OBO Ontologies](https://oboacademy.github.io/obook/lesson/synonyms/) | Nicole Vasilevsky, C-Path | [Here](https://youtu.be/N3_Nf11QXfE?si=iZCMlkmieZoWxGct)
