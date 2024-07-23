@@ -203,6 +203,7 @@ nav:
       - Frequently used ODK commands: reference/frequently-used-odk-commands.md
       - Protege Interface: reference/protege-interface.md
       - Protege FAQ: reference/protege-faq.md
+      - LLMs for the Semantic Engineer: reference/llms.md
       - Formatting your ontology annotations correctly: reference/formatting-license.md
       - OBO-style term annotation: reference/go-style-annotation-property-practice.md
       - Ontology Matching:
