@@ -14,7 +14,7 @@ Please suggest your own content here by making a PR!
     - OBO Academy: [AI-assisted ontology editing workflows, Part 1](https://www.youtube.com/watch?v=wGoGr2dmxZI&ab_channel=obo-academy)
     - OBO Academy: [AI-assisted ontology editing workflows Part 2: Validation](https://www.youtube.com/watch?v=cQWfJ5IjUM8&ab_channel=obo-academy)
     - OBO Academy: [Applying the Strengths of Large Language Models to Biomedical Informatics](https://www.youtube.com/watch?v=wJvKMIyOpfo&ab_channel=obo-academy)
-- [Berkelely Guide to LLM's](https://docs.google.com/document/d/1B6YVEGjzOC7sizhRaKQ0B_afivFAG-Cs1E9yodHaNoA/edit): Evolving Google docs with links to many useful slide decks and presentations. Particularly useful for Curators and Semantic Software Engineers who wish to levarage Monarch LLM tools like DragonAI, CurateGPT and OntoGPT.
+- [Berkelely Guide to LLMs](https://docs.google.com/document/d/1B6YVEGjzOC7sizhRaKQ0B_afivFAG-Cs1E9yodHaNoA/edit): Evolving Google docs with links to many useful slide decks and presentations. Particularly useful for Curators and Semantic Software Engineers who wish to levarage Monarch LLM tools like [DragonAI](https://github.com/monarch-initiative/dragon-ai-cookiecutter), [CurateGPT](https://github.com/monarch-initiative/curate-gpt) and [OntoGPT](https://github.com/monarch-initiative/ontogpt).
 
 #### Experienced
 
