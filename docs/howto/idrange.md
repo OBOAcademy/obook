@@ -4,7 +4,7 @@
 
 1. Curators and projects are assigned specific ID ranges within the prefix for your ontology. See the README-editors.md for your ontology
 
-2. An example: [go-idranges.owl](https://github.com/geneontology/go-ontology/blob/master/src/ontology/go-idranges.owl)
+2. An example: [uberon-idranges.owl](https://github.com/obophenotype/uberon/blob/master/src/ontology/uberon-idranges.owl)
 
 3. **NOTE:** You should only use IDs within your range.
 
