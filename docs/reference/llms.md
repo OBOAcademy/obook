@@ -2,7 +2,7 @@
 
 This page contains a collection of resources useful to review for Semantic Engineers (Ontology, KG and Semantic Software Engineers).
 
-Please suggest your own content here by makeing a PR!
+Please suggest your own content here by making a PR!
 
 ### Resources
 
