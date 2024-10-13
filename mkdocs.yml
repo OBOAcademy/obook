@@ -124,7 +124,8 @@ nav:
           - Pull requests: tutorial/pull-requests.md
       - ChatGPT:
           - Leveraging ChatGPT for ontology curation: lesson/chatgpt-ontology-curation.md
-          - OntoGPT: tutorial/ontogpt.md
+          - OntoGPT Introduction: tutorial/ontogpt.md
+          - OntoGPT in Practice: tutorial/ontogpt_workshop.md
       - Dealing with Semantic Data:
           - From Tables to Linked Data: tutorial/linking-data.md
           - Standardizing Prefixes, CURIEs, and URIs with the `curies` package: tutorial/curies.md
