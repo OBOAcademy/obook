@@ -18,4 +18,4 @@ More info about OntoGPT:
 We are also working on a curation-specific tool, [CurateGPT](https://github.com/monarch-initiative/curate-gpt),
 a prototype web application and framework for performing general-purpose AI-guided curation and curation-related operations over collections of objects.
 
-Please see [this tutorial](https://oboacademy.github.io/obook/lesson/chatgpt-ontology-curation/) to learn how to leverage ChatGPT for ontology curation.
+Please see [this walkthrough](https://oboacademy.github.io/obook/tutorial/ontogpt-workshop/) to learn how to leverage OntoGPT for ontology curation.
