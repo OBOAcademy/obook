@@ -30,7 +30,7 @@ _Note: this is tentative and subject to change_
 | --- | --- | --- | --- |
 | 2024/12/10 | Rare Diseases & Ontologies | Eric Sid, NIH/NCATS |  |
 | 2024/11/12 | Hands On Workshop Part 2: OntoGPT | Harry Caufield, LBNL |  |
-| 2024/10/15 | Hands On Workshop Part 1: OntoGPT | Harry Caufield, LBNL |  |
+| 2024/10/15 | Hands On Workshop Part 1: OntoGPT | Harry Caufield, LBNL | [Here](https://youtu.be/ezFIgY0LE4A?si=Pwuoq3VkvVNjon09)  |
 | July to Sept 2024 | _No Meeting_ | Enjoy Summer break! |  |
 | 2024/06/25 | Structures and Instructors: Applying the Strengths of Large Language Models to Biomedical Informatics | Harry Caufield, LBNL | [Here](https://youtu.be/wJvKMIyOpfo?feature=shared) |
 | 2024/05/14 | Introduction to the legendary [Uberon Anatomy ontology](https://obophenotype.github.io/uberon/) | Damien Goutte-Gattat and Nico Matentzoglu | [Here](https://youtu.be/HmFhTk0Bahs?si=q4cfg1lYx7sTqE0M) |
