@@ -210,14 +210,15 @@ Even if you created a completely new repository, you should now do the next step
 ## 6. Migrating the Content into the Editor File
 
 * Open the editor file (.e.g. `target/chmo/src/ontology/chmo-edit.owl`) in your text editor and Protégé.
-* From your previously created “old” OFN ontology file, copy all declared terms (classes, object, data &
-  annotation properties and individuals) that use the namespace of your ontology into the editor file.
-    * Start by copying the term declarations, then the classes, and so on.
-    * Check that you make no mistakes these copying steps. Whenever you save your text editor, Protégé will
-      ask you to reload the editor file. Click yes, and if this causes an error, you did something wrong.
+* From your previously converted “old” OFN ontology file, cut all declared terms (classes, object, data &
+  annotation properties and individuals) that use the namespace of your ontology and paste them into the editor file.
+    * Start by cutting the term declarations, then the classes, and so on.
+    * Check that you make no mistakes in these cutting & paste steps. Whenever you save the editor file in your 
+      text editor, Protégé will ask you to reload the editor file. Click yes, and if this causes an error, you 
+      did something wrong.
 
 ## 7. Building your Import Modules
-In the term declaration section of your “”old” OFN ontology there should now only be those terms left,
+In the term declaration section of your “old” OFN ontology file there should now only be those terms left,
 that are external and which need to be imported via import modules. To build the latter, you first need
 to provide these terms in the empty text files that were created by ODK in the seeding step in the
 `src/ontology/imports` folder (e.g. _iao_terms.txt_). Each term that should be imported must be listed in its
@@ -227,8 +228,11 @@ to have this row in your _iao_terms.txt_:
   ```
   http://purl.obolibrary.org/obo/IAO_0000136 # is about
   ```
-Assuming you have specified all terms you want to import in their respective import text file, you can build
-an import module from it in two ways, as described
+Assuming you have specified all terms you want to import in their respective import text file, you can delete 
+your "old" OFN ontology file now, as it should be almost empty anyway and has outlived its purpose. 
+
+Now, it is time to build your import modules from the text files you just populated. There are two ways of doing 
+this, as described 
 [in this section of the OBOOK](https://oboacademy.github.io/obook/howto/update-import/).
 * You can either call the ODK command with which all import modules are build/updated at once using:
   ```
@@ -255,6 +259,9 @@ an import module from it in two ways, as described
   ../src/ontology/$ sh run.sh make no-mirror-refresh-%
   ```
   for building only a specific one.
+
+
+* If you use ODK runner, just replace `sh run.sh` with `odk` in any of the above commands.
 
 In most cases the default way of building import modules in ODK via the extraction method called SLME-BOT will
 be the best option. In some cases this default can be too “noisy” by also importing terms you don’t need/want.
