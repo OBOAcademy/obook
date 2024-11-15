@@ -310,5 +310,6 @@ Your cheat sheet for the [Frequently Used ODK Commands](http://incatools.github.
 
 ## Contributors
 
-- [Philip Strömert](https://orcid.org/0000-0002-1595-3213)
-- [Nicolas Matentzoglu](https://orcid.org/0000-0002-7356-1779)
+- [Philip Strömert](https://orcid.org/0000-0002-1595-3213) (GitHub: @StroemPhi)
+- [Nicolas Matentzoglu](https://orcid.org/0000-0002-7356-1779) (GitHub: @matentzn)
+- [Damien Goutte-Gattat](https://orcid.org/0000-0002-6095-8718) (GitHub: @gouttegd)
