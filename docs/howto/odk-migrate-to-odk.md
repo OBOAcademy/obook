@@ -120,49 +120,47 @@ with this content to start out with:
     description: "CHMO, the chemical methods ontology, describes methods used to collect data in chemical experiments, such as mass spectrometry and electron microscopy prepare and separate material for further analysis, such as sample ionisation, chromatography, and electrophoresis synthesise materials, such as epitaxy and continuous vapour deposition It also describes the instruments used in these experiments, such as mass spectrometers and chromatography columns. It is intended to be complementary to the Ontology for Biomedical Investigations (OBI)."
     contact:  batchelorc [at] rsc [.] org
     creators:
-    - Royal Society of Chemistry
-      license: https://creativecommons.org/licenses/by/4.0/
-    
-    
+      - Royal Society of Chemistry
+    license: https://creativecommons.org/licenses/by/4.0/
+        
     ## general ODK Settings ##
     repo: rsc-cmo
     git_main_branch: master
     github_org: rsc-ontologies
     ci:
-    - github_actions
-      documentation:
+      - github_actions
+    documentation:
       documentation_system: mkdocs
-      export_formats:
+    export_formats:
       - owl
       - obo
-        reasoner: ELK
-        release_artefacts:
+    reasoner: ELK
+    release_artefacts:
       - full
       - base
-        robot_java_args: '-Xmx8G'  # max RAM to be used by Robot in ODK
-    
-    
+    robot_java_args: '-Xmx8G'  # max RAM to be used by Robot in ODK
+        
     ## CHMO specific Settings ##
     import_group:
-    products:
-    - id: bfo
-      module_type: mirror
-      - id: ro
-        use_base: true
-        slme_individuals: exclude
-      - id: omo
-        module_type: mirror
-      - id: iao
-        make_base: true
-      - id: obi
-      - id: ms
-      - id: fix
-      - id: rex
-      - id: obsc
-      - id: chebi
-        is_large: true
-        use_gzipped: true
-        make_base: true
+      products:
+        - id: bfo
+          module_type: mirror
+        - id: ro
+          use_base: true
+          slme_individuals: exclude
+        - id: omo
+          module_type: mirror
+        - id: iao
+          make_base: true
+        - id: obi
+        - id: ms
+        - id: fix
+        - id: rex
+        - id: obsc
+        - id: chebi
+          is_large: true
+          use_gzipped: true
+          make_base: true
     ```
 ## 4. Seeding your ODK Repository Locally
 To create a new ODK repository within your working directory based on the project YAML
