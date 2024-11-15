@@ -12,9 +12,8 @@ You may need assistance from someone with basic unix knowledge in following the 
 * OPTIONAL (Beta Testing): Install the [ODK runner](https://github.com/gouttegd/odkrunner) for
   better user experience. In the Linux shell you can do this with:
     * ```mkdir ~/tools``` (to create a _~/tools_ directory)
-    * ```wget https://github.com/gouttegd/odkrunner/releases/download/odkrunner-0.3.1/odkrun-linux -O ~/tools/odk```
-      (to download and save the ODK runner binary file into the _~/tools_ directory. CHECK IF A NEWER VERSION
-      IS ALREADY AVAILABLE FIRST)
+    * ```wget wget https://github.com/gouttegd/odkrunner/releases/latest/download/odkrun-linux -O ~/tools/odk -O ~/tools/odk```
+      (to download and save the ODK runner binary file into the _~/tools_ directory.)
     * ```chmod +x ~/tools/odk``` (to make the binary file executable)
     * ```export PATH=$PATH:~/tools``` (to add the _~/tools_ folder to your path for the current
       session)
