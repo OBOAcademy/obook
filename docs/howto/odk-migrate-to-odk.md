@@ -17,13 +17,13 @@ You may need assistance from someone with basic unix knowledge in following the 
     * ```chmod +x ~/tools/odk``` (to make the binary file executable)
     * ```export PATH=$PATH:~/tools``` (to add the _~/tools_ folder to your path for the current
       session)
-        * To add the _~/tools_ folder permanently to your path, you can add it to your Bash config
-          file with:
+        * Assuming you use Bash as your shell (the Ubuntu default), you could add the _~/tools_ folder permanently to your path in your Bash config file with:
           ```
           echo "
           # Adding ODK runner script living in ~/tools to PATH
           export PATH=\"\$PATH:~/tools\"" >> ~/.bashrc
           ```
+          If you’re using another shell, check its documentation to know how to add a directory to its executable search path.
 
 ## 2. Get the ontology you want to migrate into the right format
 
