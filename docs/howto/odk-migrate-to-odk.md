@@ -47,26 +47,32 @@ The conversion to OFN can best be done with ROBOT, which is provided in ODK. If 
 installed the ODK runner previously, you can simply run the following command (replace
 [PATH TO YOUR “OLD” ONTOLOGY FILE] with the actual path to your “old” ontology file):
 
-      ```
-      odk robot convert \
-      --input [PATH TO YOUR “OLD” ONTOLOGY FILE] \
-      --format ofn --output [PATH TO YOUR “OLD” ONTOLOGY FILE].ofn
-      ```
+  ```
+  odk robot convert \
+  --input [PATH TO YOUR “OLD” ONTOLOGY FILE] \
+  --format ofn --output [PATH TO YOUR “OLD” ONTOLOGY FILE].ofn
+  ```
+
 * If you didn't install the ODK runner, you need to download the ODK wrapper script into your
   working directory with
 * `wget https://oboacademy.github.io/obook/resources/odk.sh`. Then check that it works by
   running `sh odk.sh robot --version`, which should return the version of ROBOT (e.g.: `ROBOT 
 version 1.9.6`). Now, you can convert your current ontology file with:
-    ```
-    sh odk.sh robot convert \
-    --input [PATH TO YOUR “OLD” ONTOLOGY FILE] \
-    --format ofn --output [PATH TO YOUR “OLD” ONTOLOGY FILE].ofn
-    ```
+
+  ```
+  sh odk.sh robot convert \
+  --input [PATH TO YOUR “OLD” ONTOLOGY FILE] \
+  --format ofn --output [PATH TO YOUR “OLD” ONTOLOGY FILE].ofn
+  ```
+
+
 In the below example of the Chemical Methods Ontology (CHMO), you can see that it
 declares terms from the following namespaces:
+
 * classes from BFO,FIX, CHEBI, IAO, MS, OBSC, OBI and REX
 * object properties from BFO, IAO, OBI, and RO
 * and annotation properties from various other ontologies.
+
   ```
   Declaration(Class(obo:BFO_0000140)
   Declaration(Class(obo:CHEBI_50803))
@@ -97,6 +103,7 @@ declares terms from the following namespaces:
   Declaration(AnnotationProperty(rdfs:label))
   Declaration(AnnotationProperty(owl:deprecated))
   ```
+  
 Based on this and assuming that all native terms within CHMO use the CHMO namespace
 (obo:CHMO_), we can derive that CHMO needs to have import modules for BFO, RO, CHEBI,
 IAO, OBI, MS, OBSC, REX and FIX to properly import the terms from these ontologies. To
@@ -169,13 +176,17 @@ YOUR PROJECT YAML FILE] with the actual path to your project YAML file).
 
 * Using the seed-via-docker wrapper script (which is downloaded in this call, and thus
   needs internet connection):
+
     ```
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/INCATools/ontology-development-kit/master/seed-via-docker.sh)" --clean -C [PATH TO YOUR PROJECT YAML]
     ```
+  
 * Using ODK runner:
+
     ```
     odk seed --clean -C [PATH TO YOUR PROJECT YAML]
     ```
+  
 This will create a folder called _target_ in which you will find your new ODK repository
 structure with all the necessary files and folders as well as some first GIT commits already
 made. For more details, see also
@@ -197,6 +208,7 @@ just follow the steps explained [here](odk-create-repo.md#4-push-to-git-hosting-
 ## 6. Make a new Branch to Work in
 If you want to keep your existing GitHub / GitLab repository, used your local clone as working directory for
 the above steps and have not done the following already, then you should now:
+
 * [Make a new branch](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-and-deleting-branches-within-your-repository#creating-a-branch) and check it out.
 * Think about how to integrate existing files and folders of your current repository into the
   new ODK repo structure. (E.g. you might want to archive previous release files in a
@@ -225,39 +237,52 @@ to provide these terms in the empty text files that were created by ODK in the s
 respective text file as a new row via its term IRI. Optionally, for better human-readbility, you can provide a
 label after the term IRI via a comment. E.g. if you want to import the IAO object property “is about” you need
 to have this row in your _iao_terms.txt_:
+
   ```
   http://purl.obolibrary.org/obo/IAO_0000136 # is about
   ```
+
 Assuming you have specified all terms you want to import in their respective import text file, you can delete 
 your "old" OFN ontology file now, as it should be almost empty anyway and has outlived its purpose. 
 
 Now, it is time to build your import modules from the text files you just populated. There are two ways of doing 
 this, as described 
 [in this section of the OBOOK](https://oboacademy.github.io/obook/howto/update-import/).
+
 * You can either call the ODK command with which all import modules are build/updated at once using:
+
   ```
   ../src/ontology/$ sh run.sh make refresh-imports
   ```
+  
 * or you can only update a specific import module by calling:
+
   ```
   ../src/ontology/$ sh run.sh make refresh-%
   ```
+  
   where the “%” is the placeholder for the id of the ontology from which you import. E.g. to build/update your
   IAO module, you’d have to call:
+
   ```
   ../src/ontology/$ sh run.sh make refresh-iao
   ```
+  
 * With the above commands ODK will first download the whole ontology from which ODK will build your
   import module. If you ran this command previously just recently, and thus already have the most current mirror
   of that ontology within your mirror folder (`scr/ontology/mirror`), you can skip this download/mirror step by
   instead calling:
+
   ```
   ../src/ontology/$ sh run.sh make no-mirror-refresh-imports
   ```
+  
   for building all import modules at once, or:
+
   ```
   ../src/ontology/$ sh run.sh make no-mirror-refresh-%
   ```
+  
   for building only a specific one.
 
 
@@ -267,6 +292,7 @@ In most cases the default way of building import modules in ODK via the extracti
 be the best option. In some cases this default can be too “noisy” by also importing terms you don’t need/want.
 With the `module_type` & `module_type_slme` parameters in your project.yaml you can tweak the default import
 module build behavior of ODK, which relies on knowing what ROBOT can do, see also:
+
 * http://robot.obolibrary.org/extract
 * http://robot.obolibrary.org/filter
 * http://robot.obolibrary.org/remove
@@ -277,6 +303,7 @@ wanted, including their axioms and not any terms that are unrelated.
 
 You also have the option to use `module_type: custom` and define your own ROBOT code for building an
 import module within your custom makefile (e.g. [like this](https://github.com/NFDI4Chem/VibrationalSpectroscopyOntology/blob/main/src/ontology/vibso.Makefile#L46-L56)).
+
 * However, this can be quite challenging to get right, as you’d probably not want to accidentally miss
   any asserted axioms.
 
@@ -285,10 +312,12 @@ import module.
 
 NOTE: If you need to add a new import dependency to your _project.yaml_ (e.g. you added another
 ontology dependency to the `import_group` section), you need to run:
+
    ```
    ../src/ontology/$ sh run.sh make update_repo
    ```
-**AND** you need to add this newly added ontology dependency also to the import declaration sections of your
+
+AND you need to add this newly added ontology dependency also to the import declaration sections of your
 `catalog-v001.xml` and your editor file.
 
 ## 8. Merge your Branch
@@ -296,14 +325,16 @@ Once you got your import modules (dependencies) right, you can merge the branch.
 
 ## 9. Make a Release
 Make a release and update the metadata needed for your purl system to resolve (e.g. OBO PURL system can also
-resolve to your import modules) see also: http://pato-ontology.github.io/pato/odk-workflows/ReleaseWorkflow/
+resolve to your import modules) see also: 
+http://pato-ontology.github.io/pato/odk-workflows/ReleaseWorkflow
 
 ## 10. Join the ODK Slack Channel
 Come to the [#ontology-development-kit](https://obo-communitygroup.slack.com/archives/C01BKKED8R2) Slack
-channel to get help (best to have an open repo so others have something to look at for helping to fix problems
+channel to get help (it is best to have an open repo so others have something to look at for helping to fix 
+problems).
 
 ## 11. Updating your ODK Environment
-To update your ODK environment follow [this HowTo](odk-update.md)).
+To update your ODK environment follow [this HowTo](odk-update.md).
 
 ## Good to Know
 Your cheat sheet for the [Frequently Used ODK Commands](http://incatools.github.io/ontology-development-kit/FrequentlyUsedODKCommands/).
