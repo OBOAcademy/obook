@@ -156,6 +156,8 @@ Example 2 (Mondo):
 
 #### Write a good commit messages
 
+For more details about writing good commit messages [see here](https://incenp.org/dvlpt/docs/vcs-good-practices/index.html) (mandatory reading).
+
 3. Commit message: Before Committing, you must add a commit message. In GitHub Desktop in the Commit field in the lower left, there is a subject line and a description.
 
 4. Give a very descriptive title: Add a descriptive title in the subject line. For example: add new class ONTOLOGY:ID [term name] (e.g. add new class MONDO:0000006 heart disease)
