@@ -29,7 +29,7 @@ _Note: this is tentative and subject to change_
 | Date | Lesson | Notes | Recordings |
 | --- | --- | --- | --- |
 | 2024/12/10 | Rare Diseases & Ontologies | Eric Sid, NIH/NCATS |  |
-| 2024/11/12 | Hands On Workshop Part 2: OntoGPT | Harry Caufield, LBNL |  |
+| 2024/11/12 | Hands On Workshop Part 2: OntoGPT | Unforuntately, we had technical difficulties during this workshop. We will reschedule Part 2 for sometime in 2025. |  |
 | 2024/10/15 | Hands On Workshop Part 1: OntoGPT | Harry Caufield, LBNL | [Here](https://youtu.be/ezFIgY0LE4A?si=Pwuoq3VkvVNjon09)  |
 | July to Sept 2024 | _No Meeting_ | Enjoy Summer break! |  |
 | 2024/06/25 | Structures and Instructors: Applying the Strengths of Large Language Models to Biomedical Informatics | Harry Caufield, LBNL | [Here](https://youtu.be/wJvKMIyOpfo?feature=shared) |
