@@ -1,0 +1,5754 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://oboacademy.github.io/obook/tutorial/robot-tutorial-2/">
+      
+      
+        <link rel="prev" href="../robot-tutorial-1/">
+      
+      
+        <link rel="next" href="../robot-tutorial-qc/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>ROBOT Mini-Tutorial 2 - Annotate, Merge, Reason and Diff - OBO Semantic Engineering Training</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bcfcd587.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#robot-tutorial-2-annotate-merge-reason-and-diff" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="OBO Semantic Engineering Training" class="md-header__button md-logo" aria-label="OBO Semantic Engineering Training" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OBO Semantic Engineering Training
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ROBOT Mini-Tutorial 2 - Annotate, Merge, Reason and Diff
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/OBOAcademy/obook/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="OBO Semantic Engineering Training" class="md-nav__button md-logo" aria-label="OBO Semantic Engineering Training" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    OBO Semantic Engineering Training
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/OBOAcademy/obook/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About the course
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting started with learning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview of lessons and tutorials
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contribute to the course
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Courses
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Courses
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../courses/icbo2024/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ICBO 2024 Tutorial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../courses/icbo2023/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ICBO 2023 Tutorial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../courses/icbo2022/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ICBO 2022 Tutorial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../courses/icbo2021/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ICBO 2021 Tutorial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../courses/monarch-obo-training/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Monarch Ontology Training
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../courses/ontology-summit-2023/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology Summit 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Pathways
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Pathways
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pathways/pathways/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What is a pathway?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pathways/early-career-data-scientist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Early Career Data Scientist
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pathways/ontology-curator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology Curator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pathways/ontology-curator-go-style/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology Curator GO-style
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pathways/ontology-curator-obi-style/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology Curator OBI-style
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pathways/ontology-engineer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology Engineer/Developer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pathways/ontology-contributor/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology Contributor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Lessons
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Lessons
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/contributing-to-obo-ontologies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contributing to OBO ontologies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/ontology-pipelines/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology Pipelines with ROBOT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project-ontology-development/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project Ontology Development
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/analysing-linked-data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Analysing Linked Data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/automating-ontology-workflows/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Automating Ontology Workflows
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/developing-an-obo-ontology/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Developing an OBO Ontology
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/ontology-design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology Design
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/templates-for-obo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Templates for OBO ontologies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/ontology-fundamentals/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology Fundamentals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/modelling-with-object-properties/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modelling with Object Properties
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/ontology-term-use/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology Term Use
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/rdf/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RDF Fundamentals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/entity-matching/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semantic Entity Matching
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/using-disease-and-phenotype-ontologies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Disease and Phenotype Ontologies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/phenotype-data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic concepts of phenotype data and ontologies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/hackathon/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hacking the OBOOK
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/getting-hands-on/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Hands on with Ontologies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/chatgpt-ontology-curation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leveraging ChatGPT for ontology curation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/linkml-helps-with-ontology-use/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using Ontologies in Practice--LinkML can help
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/licensing-data-and-software/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Licensing Data and Software
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/vocabularies-for-bioinformatics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vocabularies for bioinformatics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/synonyms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    An Introduction to Synonyms in OBO Ontologies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Lessons In Development
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Lessons In Development
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/developing-application-ontologies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Developing an Application Ontology
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/ontology-development/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology Development
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/semantic-database-fundamentals/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semantic Database Fundamentals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tutorials
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Tutorials
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_1" id="__nav_9_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Protege
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_1">
+            <span class="md-nav__icon md-icon"></span>
+            Protege
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basic-dl-query/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DL queries
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../disjointness/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Disjointness
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_9_2" id="__nav_9_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ontology Pipelines - ODK, ROBOT, etc
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_9_2">
+            <span class="md-nav__icon md-icon"></span>
+            Ontology Pipelines - ODK, ROBOT, etc
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../robot-tutorial-1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ROBOT Mini-Tutorial 1 - Convert, Extract and Template
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    ROBOT Mini-Tutorial 2 - Annotate, Merge, Reason and Diff
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    ROBOT Mini-Tutorial 2 - Annotate, Merge, Reason and Diff
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#annotate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Annotate
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Annotate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ontology-iris" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ontology IRIs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-iris" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version IRIs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ontology-annotations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ontology Annotations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#merge" class="md-nav__link">
+    <span class="md-ellipsis">
+      Merge
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Merge">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#merging-multiple-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Merging Multiple Files
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#merging-imports" class="md-nav__link">
+    <span class="md-ellipsis">
+      Merging Imports
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reason" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reason
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diff
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../robot-tutorial-qc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ROBOT Mini-Tutorial QC - Quality Control with report, verify and query
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sparql-report-robot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ROBOT - Generating SPARQL table reports
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sparql-report-odk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ODK - Adding SPARQL table reports
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setting-up-project-odk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ODK - Getting started with your own repo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../odk-tutorial-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ODK - 20 minute complete walk-through
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../custom-qc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ODK - Adding custom Quality Check
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../managing-dynamic-imports-odk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ODK - Managing imports
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../managing-ontology-releases-odk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ODK - Managing ontology releases
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../migrating-ontology-to-odk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ODK - Migrating to ODK
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../odk-toolbox/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ODK - Using the ODK Toolbox
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_3" id="__nav_9_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Templates
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_3">
+            <span class="md-nav__icon md-icon"></span>
+            Templates
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dosdp-overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting started with DOSDP templates
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dosdp-template/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DOSDP Templates Basic Tutorial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dosdp-odk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction to Managing DOSDP Templates in ODK
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_4" id="__nav_9_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Git, GitHub and Collaborative Workflows
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_4">
+            <span class="md-nav__icon md-icon"></span>
+            Git, GitHub and Collaborative Workflows
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../github-fundamentals/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GitHub Fundamentals for OBO Engineers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../github-issues/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GitHub Issue for OBO Engineers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../managing-ontology-project/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Managing OBO ontology projects
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pull-requests/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pull requests
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_5" id="__nav_9_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    OntoGPT
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_5">
+            <span class="md-nav__icon md-icon"></span>
+            OntoGPT
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ontogpt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OntoGPT Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ontogpt-workshop/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OntoGPT in Practice
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_6" id="__nav_9_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Dealing with Semantic Data
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_6">
+            <span class="md-nav__icon md-icon"></span>
+            Dealing with Semantic Data
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linking-data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    From Tables to Linked Data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../curies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Standardizing Prefixes, CURIEs, and URIs with the `curies` package
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../units/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Units of Measurement
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sparql/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic SPARQL for OBO Engineers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../monarch-kg-neo4j-basics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic cypher on the Monarch Neo4j graph
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_7" id="__nav_9_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Command line
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_7">
+            <span class="md-nav__icon md-icon"></span>
+            Command line
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../intro-cli-1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic introduction to CLI 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../intro-cli-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic introduction to CLI 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_8" id="__nav_9_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Mappings and SSSOM
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_8">
+            <span class="md-nav__icon md-icon"></span>
+            Mappings and SSSOM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sssom-tutorial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic Tutorial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lexmatch-tutorial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lexical Matching with OAK Lexmatch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sssom-toolkit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction to the SSSOM Toolkit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../biomappings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Curating Mappings with Biomappings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_9" id="__nav_9_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    General Ontology Modelling
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_9">
+            <span class="md-nav__icon md-icon"></span>
+            General Ontology Modelling
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project-ontology-development/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project Ontology Development
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fhkb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Family History Knowledge Base (FHKB) tutorial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_10" id="__nav_9_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Exomiser
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_10">
+            <span class="md-nav__icon md-icon"></span>
+            Exomiser
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../exomiser-tutorial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction to Exomiser
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_11" id="__nav_9_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Information Extraction
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_11">
+            <span class="md-nav__icon md-icon"></span>
+            Information Extraction
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../named-entity-recognition/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Named Entity Recognition with Gilda
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../named-entity-normalization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Named Entity Normalization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../named-entity-standardization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Named Entity Standardization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    How-to guides
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            How-to guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_1" id="__nav_10_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    General
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_1">
+            <span class="md-nav__icon md-icon"></span>
+            General
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/open-science-engineer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Maximising impact as an open science engineer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/create-ontology-from-scratch/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating an ontology from scratch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/ontology-overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create an ontology overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/prettify/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prettify Markdown Files
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/screenshot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create Screenshot and paste into an issue
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/setup-docker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Set-up docker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_2" id="__nav_10_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Protege
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_2">
+            <span class="md-nav__icon md-icon"></span>
+            Protege
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/install-protege/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Install Protégé
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/set-up-protege/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setup Protege 5.5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/installing-elk-in-protege/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installing ELK in Protege
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/idrange/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setting up your ID range
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/edit-in-protege/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Editing in Protege
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/daily-curator-workflow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Daily Workflow
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/edit-in-protege/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Edit in Protege
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/switching-ontologies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Switching Ontologies in Protege
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/protege-browse-search/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Browsing and Searching
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/create-new-term/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating New Terms in Protege
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/obsolete-term/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Obsoleting a Term
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/merge-terms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Merging Terms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/add-taxon-restrictions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Adding Taxon Restrictions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/add-new-slim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating a new Slim (under construction)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_3" id="__nav_10_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ODK
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_3">
+            <span class="md-nav__icon md-icon"></span>
+            ODK
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/setup-ontology-development-odk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Get set up for ODK-based ontology development
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/odk-setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setting up the ODK
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/odk-update/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Update to a newer ODK version
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/odk-create-repo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating a Repo with ODK
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/deal-with-large-ontologies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dealing with Large Ontologies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/update-import/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Updating Imports with ODK
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/odk-add-orcidio-module/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Import ORCIDIO
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/run-odk-with-podman/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Running ODK with podman
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/odk-migrate-to-odk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Migrate an existing ontology Repo to ODK
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_4" id="__nav_10_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Git and GitHub
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_4">
+            <span class="md-nav__icon md-icon"></span>
+            Git and GitHub
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/term-request/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Make term requests to existing ontologies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/clone-mondo-repo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Clone a repository
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/github-create-fork/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fork an ontology for editing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/github-create-pull-request/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create a GitHub Pull Request
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/change-files-pull-request/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Change a pull request
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/fixing-conflicts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fix conflicts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/github-actions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Automate tasks with GitHub actions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/revert-commit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Revert a commit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/review-pull-request/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Review a pull request
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_5" id="__nav_10_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Quality control
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_5">
+            <span class="md-nav__icon md-icon"></span>
+            Quality control
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/deploy-custom-obo-dashboard/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deploy a custom OBO-Dashboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_6" id="__nav_10_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Command line
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_6">
+            <span class="md-nav__icon md-icon"></span>
+            Command line
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/filter-text-file/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to filter a file based on another file
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_7" id="__nav_10_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Mappings
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_7">
+            <span class="md-nav__icon md-icon"></span>
+            Mappings
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/are-two-entities-the-same/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Are these two entities the same? A guide.
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/review-disease-mappings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to review disease mappings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Reference
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/glossary-of-terms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary of Terms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/frequently-used-odk-commands/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Frequently used ODK commands
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/protege-interface/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Protege Interface
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/protege-faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Protege FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/llms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LLMs for the Semantic Engineer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/formatting-license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Formatting your ontology annotations correctly
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/go-style-annotation-property-practice/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OBO-style term annotation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_9" id="__nav_11_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ontology Matching
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_9">
+            <span class="md-nav__icon md-icon"></span>
+            Ontology Matching
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/semantic-etl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semantic ETL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_10" id="__nav_11_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Git
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_10">
+            <span class="md-nav__icon md-icon"></span>
+            Git
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/github-intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intro to GitHub
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/github-desktop/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GitHub Desktop
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/git-faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/semantic-engineering-toolbox/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semantic Engineering Toolbox
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/tables-and-triples/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tables and Triples
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/reasoning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Reasoning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/ontology-curator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    A day in the life of an ontology curator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/protege-interface/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Protege interface
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_16" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_16" id="__nav_11_16_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    SPARQL
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_16">
+            <span class="md-nav__icon md-icon"></span>
+            SPARQL
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/sparql-basics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SPARQL basics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/sparql-reference/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SPARQL templates
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/managing-issues/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tools for Managing Issues
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/release-artefacts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Release Artefacts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/base-specification/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Base Release
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/synonyms-properties/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Synonym Properties
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/synonyms-types/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Synonym Types
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/synonym-validation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Synonym Validation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/mungall-blog-radar/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Monkeying around with OWL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/odk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology Development Kit (ODK)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/troublehooting-robot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Troubleshooting ROBOT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/gh-actions-errors/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Common Errors in GitHub actions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/other-resources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Other useful resources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/medical-ontology-landscape/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Medical Ontology landscape
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/wikidata/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    A reference guide to Wikidata
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/obook-maturity-indicator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OBOOK Maturity Indicator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_31" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_31" id="__nav_11_31_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ChatGPT
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_31_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_31">
+            <span class="md-nav__icon md-icon"></span>
+            ChatGPT
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/chatgpt-prompts-for-ontology-development/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leveraging ChatGPT for ontology curation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/ontology-user/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology User references
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Explanations
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            Explanations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/intro-to-ontologies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction to Ontologies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/logical-axiomatization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Logical axiomatization of classes & use of reasoning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/term-comments/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Term Comments
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/annotation-properties/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction to Annotation Properties
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/writing-good-issues/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Writing good issues
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/ontology-matching/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology Matching
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/which-ontology-to-use/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Which biomedical ontologies should we use?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/owl-format-variants/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OWL, OBO, JSON? Base, simple, full, basic? What should you use, and why?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/taxon-constraints-explainer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What are taxon constraints?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/owl-building-blocks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The logical building blocks of OWL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/subClassOf-vs-equivalentTo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SubClassOf versus EquivalentTo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/existential-restrictions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Existential restrictions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    OBOOK Editors
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            OBOOK Editors
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started-obook/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting started for OBOOK editors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../images/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to add images
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/embed-video/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to embed videos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../config/template/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    New lesson template
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teaching/case-studies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Case studies for teaching
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Outreach
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14">
+            <span class="md-nav__icon md-icon"></span>
+            Outreach
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/outreach/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Outreach materials
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#annotate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Annotate
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Annotate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ontology-iris" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ontology IRIs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-iris" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version IRIs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ontology-annotations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ontology Annotations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#merge" class="md-nav__link">
+    <span class="md-ellipsis">
+      Merge
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Merge">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#merging-multiple-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Merging Multiple Files
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#merging-imports" class="md-nav__link">
+    <span class="md-ellipsis">
+      Merging Imports
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reason" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reason
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diff
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/OBOAcademy/obook/edit/master/docs/tutorial/robot-tutorial-2.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="robot-tutorial-2-annotate-merge-reason-and-diff">ROBOT Tutorial 2: Annotate, Merge, Reason and Diff<a class="headerlink" href="#robot-tutorial-2-annotate-merge-reason-and-diff" title="Permanent link">&para;</a></h1>
+<p>In week 6, we got some hands-on experience with ROBOT using <code>convert</code>, <code>extract</code>, and <code>template</code>. This week, we will learn four new ROBOT commands:</p>
+<ul>
+<li><a href="http://robot.obolibrary.org/annotate">Annotate</a></li>
+<li><a href="http://robot.obolibrary.org/merge">Merge</a></li>
+<li><a href="http://robot.obolibrary.org/reason">Reason</a></li>
+<li><a href="http://robot.obolibrary.org/diff">Diff</a></li>
+</ul>
+<p>The goal of these and previous commands is to build up to creating an ontology release workflow.</p>
+<p>Before starting this tutorial, either:</p>
+<ul>
+<li>make sure Docker is running and you are in the container</li>
+<li><a href="http://robot.obolibrary.org/">download and install ROBOT</a> for your operating system</li>
+</ul>
+<p>To start, we will be working in the same folder as the first <a href="../robot-tutorial-1/">ROBOT Mini-Tutorial</a>. Navigate to this folder in your terminal and list the contents of the current directory by running <code>ls</code>. You should see <code>catalog-v001.xml</code> listed as one of these files. We want to delete this so that we can fix the ontology IRI problem we ran into last week! Before going any further with this tutorial, do this by running either <code>del catalog-v001.xml</code> for Windows or <code>rm catalog-v001.xml</code> if you're using Docker, MacOS, or other Linux system.</p>
+<hr />
+<h2 id="annotate">Annotate<a class="headerlink" href="#annotate" title="Permanent link">&para;</a></h2>
+<p>The <code>annotate</code> command allows you to attach metadata to your ontology in the form of IRIs and ontology annotations. Like the annotations on a term, ontology annotations help users to understand how they can use the ontology.</p>
+<h3 id="ontology-iris">Ontology IRIs<a class="headerlink" href="#ontology-iris" title="Permanent link">&para;</a></h3>
+<p>As we discussed during previous parts of the course, ontology IRIs are very important! We saw how importing an ontology without an IRI into another ontology without an IRI can cause some problems in the <code>catalog-v001.xml</code> file. We're going to fix that problem by giving IRIs to both our <code>animals.owl</code> and <code>animals2.owl</code> files.</p>
+<p>Let's start with <code>animals.owl</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>robot annotate --input animals.owl \
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  --ontology-iri http://example.com/animals.owl \
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  --output animals.owl
+</code></pre></div>
+<p>You'll notice we gave the same file name as the input file; we're just updating our previous file so we don't need to do this in a separate OWL file.</p>
+<p>On your own, give <code>animals2.owl</code> the ontology IRI <code>http://example.com/animals2.owl</code>. Remember that, in reality, we always want our ontology IRIs to be <em>resolvable</em>, so these would be pretty bad IRIs for an actual ontology.</p>
+<p>Let's fix our import statement now. Open <code>animals2.owl</code> in Protégé and go to the <strong>Entities</strong> tab. You'll see that even though we still have the import statement in the <strong>Active ontology</strong> tab, the top-level terms are no longer labeled. Since we changed the ontology IRI, Protégé can no longer resolve our local file (because the <code>catalog-v001.xml</code> file was not updated). Go back to the <strong>Active ontology</strong> tab and click the X to the right of our original import. Then, re-add <code>animals.owl</code> as an import using the same steps as last time. When you return to the <strong>Entities</strong> tab, you'll once again see the labels of the top-level terms.</p>
+<h3 id="version-iris">Version IRIs<a class="headerlink" href="#version-iris" title="Permanent link">&para;</a></h3>
+<p>When we release our ontologies, we want to make sure to include a version IRI. Like the ontology IRI, this should always resolve to the version of the ontology at the time of the release. For clarity, we usually use dates in our version IRIs in the OBO Foundry. That way, you know when you navigate to a specific version IRI, that's what the ontology looked like on that date. (Note: edit files don't usually have version IRIs as they are always changing, and we don't expect to be able to point to a stable version)</p>
+<p>While you can add a version IRI in Protégé, if you're trying to create an automated release workflow, this is a manual step you don't want to have to include. Keeping it in your release workflow also makes sure that the verion IRIs are consistent (we'll see how to do this with <code>make</code> later). For now, let's add a version IRI to <code>animals.owl</code> (feel free to replace the <code>2021-05-20</code> with today's date):</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>robot annotate --input animals.owl \
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  --version-iri http://example.com/animals/2021-05-20/animals.owl \
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>  --output animals.owl
+</code></pre></div>
+<p>Let's break down this version IRI. We have the host (<code>http://example.com/</code>) followed by our ontology's namespace (<code>animals</code>). Next, we provided the date in the format of <code>YYYY-MM-DD</code>. Finally, we have the name of the file. This is standard for OBO Foundry, except with a different host. For example, you can find a release of OBI from April 6, 2021 at <code>http://purl.obolibrary.org/obo/obi/2021-04-06/obi.owl</code>. In this case, the host is <code>http://purl.obolibrary.org/obo/</code>. Of course, you may see different patterns in non-OBO-Foundry ontologies, but they should always resolve (hopefully!).</p>
+<p>Go ahead and open or reload <code>animals.owl</code> in Protege. You'll see in the <strong>Active Ontology</strong> tab that now both the ontology IRI and version IRI fields are filled out.</p>
+<h3 id="ontology-annotations">Ontology Annotations<a class="headerlink" href="#ontology-annotations" title="Permanent link">&para;</a></h3>
+<p>In addition to ontology and version IRIs, you may also want to add some other metadata to your ontology. For example, when we were introduced to <code>report</code>, we added a description to the ontology to fix one of the report problems. The three ontology annotations that are required by the OBO Foundry are:</p>
+<ul>
+<li>Title (<code>dc11:title</code>)</li>
+<li>License (<code>dc:license</code>)</li>
+<li>Description (<code>dc11:description</code>)</li>
+</ul>
+<p>These three annotation properties all come from the <a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/">Dublin Core</a>, but they have slightly different namespaces. This is because DC is split into two parts: the <code>/terms/</code> and <code>/elements/1.1/</code> namespaces. Just remember to double check that you're using the correct namespace. If you click on the DC link, you can find the complete list of DC terms in their respective namespaces.</p>
+<p>ROBOT contains some built-in prefixes, which can be found <a href="https://github.com/ontodev/robot/blob/master/robot-core/src/main/resources/obo_context.jsonld">here</a>. The prefix <code>dc:</code> corresponds to the <code>/terms/</code> namespace and <code>dc11:</code> to <code>/elements/1.1/</code>. You may see different prefixes used (for example, <code>/terms/</code> is sometimes <code>dcterms:</code> or just <code>terms:</code>), but the full namespace is what really matters as long as the prefix is defined somewhere.</p>
+<p>Let's go ahead and add a title and description to our <code>animals.owl</code> file. We'll do this using the <code>--annotation</code> option, which expects two arguments: (1) the CURIE of the annotation property, (2) the value of the annotation. The value of the annotation must be enclosed in double quotes if there are spaces. You can use any annotation property you want here, and include as many as you want! For now, we'll start with two:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>robot annotate --input animals.owl \
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>  --annotation dc11:title &quot;Animal Ontology&quot; \
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>  --annotation dc11:description &quot;An ontology about animals&quot; \
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>  --output animals.owl
+</code></pre></div>
+<p><code>--annotation</code> adds these as strings, but remember that an annotation can also point to an link or IRI. We want our license to be a link, so we'll use <code>--link-annotation</code> instead to add that:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>robot annotate --input animals.owl \
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>  --link-annotation dc:license https://creativecommons.org/licenses/by/4.0/ \
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>  --output animals.owl
+</code></pre></div>
+<p>OBO Foundry recommends using <a href="https://creativecommons.org">Creative Commons</a> for all licenses. We just gave our ontology the most permissive of these, <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a>.</p>
+<p>When you open <code>animals.owl</code> in Protégé again, you'll see these annotations added to the <strong>Active ontology</strong> tab. You can also click on the CC-BY link!</p>
+<hr />
+<h2 id="merge">Merge<a class="headerlink" href="#merge" title="Permanent link">&para;</a></h2>
+<p>We've already learned how to include external ontologies as imports. Usually, for the released version of an ontology, the imports are <em>merged in</em> so that all contents are in one file.</p>
+<p>Another reason you may want to merge two ontologies is if you're adding new terms to an ontology using <code>template</code>, like how we created new animal terms in <code>animals2.tsv</code> last time. We're going to demonstrate two methods of merging now. The first involves merging two (or more!) separate files and the second involves merging all imports into the current input ontology.</p>
+<h3 id="merging-multiple-files">Merging Multiple Files<a class="headerlink" href="#merging-multiple-files" title="Permanent link">&para;</a></h3>
+<p>First, copy <code>animals2.owl</code> to <code>animals-new.owl</code>. In Windows, this command is <code>copy animals2.owl animals-new.owl</code>. For Docker and other Linux operating systems, this is <code>cp animals2.owl animals-new.owl</code>. Open <code>animals-new.owl</code> in Protégé and remove the import we added last time. This is done in the <strong>Imported ontologies</strong> section of the <strong>Active ontology</strong> tab. Just click the X on the right side of the imported animals ontology. Don't forget to save!</p>
+<p>Continuing with the <code>animals.owl</code> file we created last week, now run the following command:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>robot merge --input animals.owl --input animals-new.owl --output animals-full.owl
+</code></pre></div>
+<p>When you just import an external ontology into your ontology, you'll notice in the Protégé class hierarchy that all terms from the external ontology are a less-bold text than internal terms. This can be seen when you open <code>animals2.owl</code>, where we imported <code>animals.owl</code>. This is simply Protégé's way of telling us that these terms are not part of <em>your current ontology</em>. Now that we've merged these two ontologies together, when you open <code>animals-full.owl</code> in Protégé, you'll see that <em>all</em> the terms are bold.</p>
+<p>By default, the output ontology will get the ontology IRI of the first input ontology. We picked <code>animals.owl</code> as our first ontology here because this is the ontology that we're adding terms to, so we want our new output ontology to replace the original while keeping the same IRI. <code>merge</code> will also copy over all the ontology annotations from <code>animals.owl</code> (the first input) into the new file. The annotations from <code>animals2.owl</code> are ignored, but we'll talk more about this in our class session.</p>
+<p>If we were editing an ontology in the wild, we'd probably now replace the original with this new file using <code>cp</code> or <code>copy</code>. For now, don't replace <code>animals.owl</code> because we'll need it for this next part.</p>
+<p><em>IMPORTANT</em>: Be very careful to check that the format is the same if you're replacing a file! Remember, you can always output OWL Functional syntax or another syntax by ending your output with <code>.ofn</code>, for example: <code>--output animals-full.ofn</code>.</p>
+<h3 id="merging-imports">Merging Imports<a class="headerlink" href="#merging-imports" title="Permanent link">&para;</a></h3>
+<p>When we want to merge all our imports into our working ontology, we call this <em>collapsing the import closure</em>. Luckily (since we're lazy), you don't need to type out each of your imports as an input to do this.</p>
+<p>We already have <code>animals.owl</code> imported into <code>animals2.owl</code>. Let's collapse the import closure:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>robot merge --input animals2.owl --collapse-import-closure true --output animals-full-2.owl
+</code></pre></div>
+<p>Even though we gave this a different file name, if you open <code>animals-full-2.owl</code> in Protégé, you'll notice that it's exactly the same as <code>animals-full.owl</code>! This is because we merged the same files together, just in a slightly different way. This time, though, the ontology IRI is the one for <code>animals2.owl</code>, not <code>animals.owl</code>. That is because that was our first input file.</p>
+<hr />
+<h2 id="reason">Reason<a class="headerlink" href="#reason" title="Permanent link">&para;</a></h2>
+<p>As we saw in the prepwork for Week 5, running a reasoner in Protégé creates an inferred class hierarchy. In the OBO Foundry, releases versions of ontologies usually have this inferred hierarchy <em>asserted</em>, so you see the full inferred hierarchy when you open the ontology without running the reasoner. ROBOT <code>reason</code> allows us to output a version of the ontology with these inferences asserted.</p>
+<p>As we discussed, ELK and HermiT are the two main reasoners you'll be using. Instead of using our example ontologies (the asserted and inferred hierarchies for these will look exactly the same), we're going to use another ontology from the <strong>Ontologies 101</strong> tutorial from week 5. Navigate back to that directory and then navigate to <code>BDK14_exercises/basic-classification</code>.</p>
+<p>Like running the reasoner in Protégé, running <code>reason</code> does three things:</p>
+<ol>
+<li>Check for inconsistency</li>
+<li>Check for unsatisfiable classes</li>
+<li>Assert the inferred class hierarchy</li>
+</ol>
+<p>Remember, when we run the reasoner in Protégé, if the ontology is inconsistent, <code>reason</code> will fail. If there are unsatisfiable classes, these will be asserted as <code>owl:Nothing</code>. ROBOT will always fail in both cases, but has some tools to help us figure out why. Let's introduce an unsatifiable class into our test and see what happens.</p>
+<p>First, let's make a copy of <code>ubiq-ligase-complex.owl</code> and call this new file <code>unreasoned.owl</code> (<code>copy</code> or <code>cp</code>).</p>
+<p>Open <code>unreasoned.owl</code> in Protégé and follow the steps below. These are things we've covered in past exercises, but if you get stuck, please don't hesitate to reach out.</p>
+<ol>
+<li>Find 'organelle' in the class hierarchy below 'cellular_component' (or just search for it by label)</li>
+<li>Make 'organelle' disjoint with 'organelle part' (either use the class hierarchy or type it in the expression editor)</li>
+<li>Find 'intracellular organelle part' below 'intracellular part' or 'organelle part' (or search for it by label)</li>
+<li>Add 'organelle' as a parent class to 'intracellular organelle part' (remember that you only need to include the single quotes if the label has spaces)</li>
+</ol>
+<p>Like we did in the <a href="https://ontology101tutorial.readthedocs.io/en/latest/Disjointness.html">Disjointness</a> part of the Ontologies 101 tutorial, we've made 'intracellular organelle part' a subclass of two classes that should have no overlap based on the disjointness axiom. Save the ontology and return to your terminal. Now, we'll run <code>reason</code>. The default reasoner is ELK, but you can specify the reasoner you want to use with the <code>--reasoner</code> option. For now, we'll just use ELK.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>robot reason --input unreasoned.owl --output unsatisfiable.owl
+</code></pre></div>
+<p>You'll notice that ROBOT printed an error message telling us that the term with the IRI <code>http://purl.obolibrary.org/obo/GO_0044446</code> is unsatisfiable and ROBOT didn't create <code>unsatisfiable.owl</code>. This is ideal for automated pipelines where we don't want to be releasing unsatisfiable classes.</p>
+<p>We can still use ROBOT to investigate the issue, though. It already gave us the IRI, but we can get more details using the <code>--dump-unsatisfiable</code> option. We won't provide an output this time because we know it won't succeed.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>robot reason --input unreasoned.owl --dump-unsatisfiable unsatisfiable.owl
+</code></pre></div>
+<p>You can open <code>unsatisfiable.owl</code> in Protégé and see that 'intracellular organelle part' is not the only term included, even though it was the only unsatisfiable class. Like with the SLME method of extraction, all the terms used in unsatisfiable class or classes logic are included in this unsatisfiable module. We can then use Protégé to dig a little deeper in this small module. This is especially useful when working with large ontologies and/or the HermiT reasoner, which both can take quite some time. By extracting a smaller module, we can run the reasoner again in Protégé to get detailed explanations. In this case, we already know the problem, so we don't need to investigate any more.</p>
+<p>Now let's reason over the original <code>ubiq-ligase-complex.owl</code> and see what happens:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>robot reason --input ubiq-ligase-complex.owl --output reasoned.owl
+</code></pre></div>
+<p>If you just open <code>reasoned.owl</code> in Protégé, you won't really notice a different between this and the input file unless you do some digging. This takes us to our next command...</p>
+<hr />
+<h2 id="diff">Diff<a class="headerlink" href="#diff" title="Permanent link">&para;</a></h2>
+<p>The <code>diff</code> command can be used to compare the axioms in two ontologies to see what has been added and what has been removed. While the diffs on GitHub are useful for seeing what changed, it can be really tough for a human to read the raw OWL formats. Using ROBOT, we can output these diffs in a few different formats (using the <code>--format</code> option):</p>
+<ul>
+<li><code>plain</code>: plain text with just the added and removed axioms listed in OWL functional syntax (still tough for a human to read, but could be good for passing to other scripts)</li>
+<li><code>pretty</code>: similar to <code>plain</code>, but the IRIs are replaced with CURIEs and labels where available (still hard to read)</li>
+<li><code>html</code>: a nice, sharable HTML file with the diffs sorted by term</li>
+<li><code>markdown</code>: like the HTML diff, but in markdown for easy sharing on platforms like GitHub (perfect for pull requests!)</li>
+</ul>
+<p>We're going to generate an HTML diff of <code>ubiq-ligase-complex.owl</code> compared to the new <code>reasoned.owl</code> file to see what inferences have been asserted. <code>diff</code> takes a left ("original") and a right ("new") input to compare.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>robot diff --left ubiq-ligase-complex.owl \
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>  --right reasoned.owl \
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>  --format html \
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>  --output diff.html
+</code></pre></div>
+<p>Open <code>diff.html</code> in your browser side-by-side with <code>reasoned.owl</code> and you can see how the changes look in both.</p>
+<p><em>Homework question</em>: Running <code>reason</code> should assert inferences, yet there are some removed axioms in our diff. Why do you think these axioms were removed?</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.action.edit", "search.suggest", "search.highlight", "content.code.annotation", "content.code.copy", "content.code.select"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@8.5.1/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>

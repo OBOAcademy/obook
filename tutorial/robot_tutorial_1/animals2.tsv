@@ -1,0 +1,4 @@
+CURIE	Label	Parent	Comment
+ID	LABEL	SC %	A rdfs:comment
+obo:0000004	dog	canine	A member of the subspecies Canis lupus familiaris.
+obo:0000005	cat	feline	A member of the species Felis catus.
