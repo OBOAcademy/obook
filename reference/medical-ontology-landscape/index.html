@@ -1,0 +1,7431 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://oboacademy.github.io/obook/reference/medical-ontology-landscape/">
+      
+      
+        <link rel="prev" href="../other-resources/">
+      
+      
+        <link rel="next" href="../wikidata/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>Medical Ontology landscape - OBO Semantic Engineering Training</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bcfcd587.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#the-landscape-of-disease-and-phenotype-ontologies" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="OBO Semantic Engineering Training" class="md-header__button md-logo" aria-label="OBO Semantic Engineering Training" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OBO Semantic Engineering Training
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Medical Ontology landscape
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/OBOAcademy/obook/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="OBO Semantic Engineering Training" class="md-nav__button md-logo" aria-label="OBO Semantic Engineering Training" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    OBO Semantic Engineering Training
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/OBOAcademy/obook/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About the course
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting started with learning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview of lessons and tutorials
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contribute to the course
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Courses
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Courses
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../courses/icbo2024/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ICBO 2024 Tutorial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../courses/icbo2023/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ICBO 2023 Tutorial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../courses/icbo2022/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ICBO 2022 Tutorial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../courses/icbo2021/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ICBO 2021 Tutorial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../courses/monarch-obo-training/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Monarch Ontology Training
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../courses/ontology-summit-2023/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology Summit 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Pathways
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Pathways
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pathways/pathways/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What is a pathway?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pathways/early-career-data-scientist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Early Career Data Scientist
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pathways/ontology-curator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology Curator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pathways/ontology-curator-go-style/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology Curator GO-style
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pathways/ontology-curator-obi-style/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology Curator OBI-style
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pathways/ontology-engineer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology Engineer/Developer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pathways/ontology-contributor/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology Contributor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Lessons
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Lessons
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/contributing-to-obo-ontologies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contributing to OBO ontologies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/ontology-pipelines/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology Pipelines with ROBOT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/project-ontology-development/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project Ontology Development
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/analysing-linked-data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Analysing Linked Data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/automating-ontology-workflows/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Automating Ontology Workflows
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/developing-an-obo-ontology/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Developing an OBO Ontology
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/ontology-design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology Design
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/templates-for-obo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Templates for OBO ontologies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/ontology-fundamentals/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology Fundamentals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/modelling-with-object-properties/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modelling with Object Properties
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/ontology-term-use/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology Term Use
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/rdf/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RDF Fundamentals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/entity-matching/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semantic Entity Matching
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/using-disease-and-phenotype-ontologies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Disease and Phenotype Ontologies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/phenotype-data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic concepts of phenotype data and ontologies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/hackathon/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hacking the OBOOK
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/getting-hands-on/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Hands on with Ontologies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/chatgpt-ontology-curation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leveraging ChatGPT for ontology curation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/linkml-helps-with-ontology-use/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using Ontologies in Practice--LinkML can help
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/licensing-data-and-software/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Licensing Data and Software
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/vocabularies-for-bioinformatics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vocabularies for bioinformatics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/synonyms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    An Introduction to Synonyms in OBO Ontologies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Lessons In Development
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Lessons In Development
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/developing-application-ontologies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Developing an Application Ontology
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/ontology-development/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology Development
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/semantic-database-fundamentals/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semantic Database Fundamentals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tutorials
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Tutorials
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_1" id="__nav_9_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Protege
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_1">
+            <span class="md-nav__icon md-icon"></span>
+            Protege
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/basic-dl-query/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DL queries
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/disjointness/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Disjointness
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_2" id="__nav_9_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ontology Pipelines - ODK, ROBOT, etc
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_2">
+            <span class="md-nav__icon md-icon"></span>
+            Ontology Pipelines - ODK, ROBOT, etc
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/robot-tutorial-1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ROBOT Mini-Tutorial 1 - Convert, Extract and Template
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/robot-tutorial-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ROBOT Mini-Tutorial 2 - Annotate, Merge, Reason and Diff
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/robot-tutorial-qc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ROBOT Mini-Tutorial QC - Quality Control with report, verify and query
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/sparql-report-robot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ROBOT - Generating SPARQL table reports
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/sparql-report-odk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ODK - Adding SPARQL table reports
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/setting-up-project-odk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ODK - Getting started with your own repo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/odk-tutorial-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ODK - 20 minute complete walk-through
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/custom-qc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ODK - Adding custom Quality Check
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/managing-dynamic-imports-odk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ODK - Managing imports
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/managing-ontology-releases-odk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ODK - Managing ontology releases
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/migrating-ontology-to-odk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ODK - Migrating to ODK
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/odk-toolbox/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ODK - Using the ODK Toolbox
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_3" id="__nav_9_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Templates
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_3">
+            <span class="md-nav__icon md-icon"></span>
+            Templates
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/dosdp-overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting started with DOSDP templates
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/dosdp-template/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DOSDP Templates Basic Tutorial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/dosdp-odk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction to Managing DOSDP Templates in ODK
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_4" id="__nav_9_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Git, GitHub and Collaborative Workflows
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_4">
+            <span class="md-nav__icon md-icon"></span>
+            Git, GitHub and Collaborative Workflows
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/github-fundamentals/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GitHub Fundamentals for OBO Engineers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/github-issues/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GitHub Issue for OBO Engineers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/managing-ontology-project/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Managing OBO ontology projects
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/pull-requests/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pull requests
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_5" id="__nav_9_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    OntoGPT
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_5">
+            <span class="md-nav__icon md-icon"></span>
+            OntoGPT
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/ontogpt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OntoGPT Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/ontogpt-workshop/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OntoGPT in Practice
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_6" id="__nav_9_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Dealing with Semantic Data
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_6">
+            <span class="md-nav__icon md-icon"></span>
+            Dealing with Semantic Data
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/linking-data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    From Tables to Linked Data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/curies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Standardizing Prefixes, CURIEs, and URIs with the `curies` package
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/units/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Units of Measurement
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/sparql/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic SPARQL for OBO Engineers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/monarch-kg-neo4j-basics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic cypher on the Monarch Neo4j graph
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_7" id="__nav_9_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Command line
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_7">
+            <span class="md-nav__icon md-icon"></span>
+            Command line
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/intro-cli-1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic introduction to CLI 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/intro-cli-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic introduction to CLI 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_8" id="__nav_9_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Mappings and SSSOM
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_8">
+            <span class="md-nav__icon md-icon"></span>
+            Mappings and SSSOM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/sssom-tutorial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic Tutorial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/lexmatch-tutorial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lexical Matching with OAK Lexmatch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/sssom-toolkit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction to the SSSOM Toolkit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/biomappings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Curating Mappings with Biomappings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_9" id="__nav_9_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    General Ontology Modelling
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_9">
+            <span class="md-nav__icon md-icon"></span>
+            General Ontology Modelling
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/project-ontology-development/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project Ontology Development
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/fhkb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Family History Knowledge Base (FHKB) tutorial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_10" id="__nav_9_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Exomiser
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_10">
+            <span class="md-nav__icon md-icon"></span>
+            Exomiser
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/exomiser-tutorial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction to Exomiser
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_11" id="__nav_9_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Information Extraction
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_11">
+            <span class="md-nav__icon md-icon"></span>
+            Information Extraction
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/named-entity-recognition/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Named Entity Recognition with Gilda
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/named-entity-normalization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Named Entity Normalization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/named-entity-standardization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Named Entity Standardization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    How-to guides
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            How-to guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_1" id="__nav_10_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    General
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_1">
+            <span class="md-nav__icon md-icon"></span>
+            General
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/open-science-engineer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Maximising impact as an open science engineer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/create-ontology-from-scratch/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating an ontology from scratch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/ontology-overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create an ontology overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/prettify/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prettify Markdown Files
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/screenshot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create Screenshot and paste into an issue
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/setup-docker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Set-up docker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_2" id="__nav_10_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Protege
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_2">
+            <span class="md-nav__icon md-icon"></span>
+            Protege
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/install-protege/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Install Protégé
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/set-up-protege/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setup Protege 5.5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/installing-elk-in-protege/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installing ELK in Protege
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/idrange/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setting up your ID range
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/edit-in-protege/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Editing in Protege
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/daily-curator-workflow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Daily Workflow
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/edit-in-protege/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Edit in Protege
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/switching-ontologies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Switching Ontologies in Protege
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/protege-browse-search/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Browsing and Searching
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/create-new-term/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating New Terms in Protege
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/obsolete-term/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Obsoleting a Term
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/merge-terms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Merging Terms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/add-taxon-restrictions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Adding Taxon Restrictions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/add-new-slim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating a new Slim (under construction)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_3" id="__nav_10_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ODK
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_3">
+            <span class="md-nav__icon md-icon"></span>
+            ODK
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/setup-ontology-development-odk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Get set up for ODK-based ontology development
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/odk-setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setting up the ODK
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/odk-update/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Update to a newer ODK version
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/odk-create-repo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating a Repo with ODK
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/deal-with-large-ontologies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dealing with Large Ontologies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/update-import/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Updating Imports with ODK
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/odk-add-orcidio-module/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Import ORCIDIO
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/run-odk-with-podman/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Running ODK with podman
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/odk-migrate-to-odk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Migrate an existing ontology Repo to ODK
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_4" id="__nav_10_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Git and GitHub
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_4">
+            <span class="md-nav__icon md-icon"></span>
+            Git and GitHub
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/term-request/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Make term requests to existing ontologies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/clone-mondo-repo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Clone a repository
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/github-create-fork/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fork an ontology for editing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/github-create-pull-request/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create a GitHub Pull Request
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/change-files-pull-request/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Change a pull request
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/fixing-conflicts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fix conflicts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/github-actions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Automate tasks with GitHub actions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/revert-commit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Revert a commit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/review-pull-request/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Review a pull request
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_5" id="__nav_10_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Quality control
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_5">
+            <span class="md-nav__icon md-icon"></span>
+            Quality control
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/deploy-custom-obo-dashboard/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deploy a custom OBO-Dashboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_6" id="__nav_10_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Command line
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_6">
+            <span class="md-nav__icon md-icon"></span>
+            Command line
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/filter-text-file/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to filter a file based on another file
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_7" id="__nav_10_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Mappings
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_7">
+            <span class="md-nav__icon md-icon"></span>
+            Mappings
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/are-two-entities-the-same/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Are these two entities the same? A guide.
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/review-disease-mappings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to review disease mappings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Reference
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary-of-terms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary of Terms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../frequently-used-odk-commands/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Frequently used ODK commands
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protege-interface/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Protege Interface
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protege-faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Protege FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../llms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LLMs for the Semantic Engineer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../formatting-license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Formatting your ontology annotations correctly
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../go-style-annotation-property-practice/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OBO-style term annotation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_9" id="__nav_11_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ontology Matching
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_9">
+            <span class="md-nav__icon md-icon"></span>
+            Ontology Matching
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../semantic-etl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semantic ETL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_10" id="__nav_11_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Git
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_10">
+            <span class="md-nav__icon md-icon"></span>
+            Git
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../github-intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intro to GitHub
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../github-desktop/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GitHub Desktop
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git-faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../semantic-engineering-toolbox/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semantic Engineering Toolbox
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tables-and-triples/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tables and Triples
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reasoning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Reasoning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ontology-curator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    A day in the life of an ontology curator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protege-interface/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Protege interface
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_16" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_16" id="__nav_11_16_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    SPARQL
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_16">
+            <span class="md-nav__icon md-icon"></span>
+            SPARQL
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sparql-basics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SPARQL basics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sparql-reference/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SPARQL templates
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../managing-issues/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tools for Managing Issues
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../release-artefacts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Release Artefacts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../base-specification/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Base Release
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../synonyms-properties/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Synonym Properties
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../synonyms-types/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Synonym Types
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../synonym-validation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Synonym Validation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mungall-blog-radar/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Monkeying around with OWL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../odk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology Development Kit (ODK)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troublehooting-robot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Troubleshooting ROBOT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gh-actions-errors/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Common Errors in GitHub actions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../other-resources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Other useful resources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Medical Ontology landscape
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Medical Ontology landscape
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-landscape-of-disease-and-phenotype-ontologies" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Landscape of Disease and Phenotype Ontologies
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Landscape of Disease and Phenotype Ontologies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#disease-ontologies-terminologies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Disease Ontologies &amp; Terminologies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disease-summary-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Disease Summary Table
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Disease Summary Table">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#artificial-intelligence-rheumatology-consultant-system-ontology-ai-rheum" class="md-nav__link">
+    <span class="md-ellipsis">
+      Artificial Intelligence Rheumatology Consultant System ontology (AI-RHEUM)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autism-dsm-adi-r-ontology-adar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Autism DSM-ADI-R Ontology (ADAR)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autism-spectrum-disorder-phenotype-ontology-asdpto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Autism Spectrum Disorder Phenotype Ontology (ASDPTO)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brucellosis-ontology-idobru" class="md-nav__link">
+    <span class="md-ellipsis">
+      Brucellosis Ontology (IDOBRU)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cardiovascular-disease-ontology-cvdo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cardiovascular Disease Ontology (CVDO)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chronic-kidney-disease-ontology-ckdo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chronic Kidney Disease Ontology (CKDO)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chronic-obstructive-pulmonary-disease-ontology-copdo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chronic Obstructive Pulmonary Disease Ontology (COPDO)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#coronavirus-infectious-disease-ontology-cido" class="md-nav__link">
+    <span class="md-ellipsis">
+      Coronavirus Infectious Disease Ontology (CIDO)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagnostic-and-statistical-manual-of-mental-disorders-dsm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagnostic and Statistical Manual of Mental Disorders (DSM)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dispedia-core-ontology-dco" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dispedia Core Ontology (DCO)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#experimental-factor-ontology-efo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Experimental Factor Ontology (EFO)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fibrotic-interstitial-lung-disease-ontology-fildo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fibrotic Interstitial Lung Disease Ontology (FILDO)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genetic-and-rare-diseases-information-center-gard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Genetic and Rare Diseases Information Center (GARD)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#holistic-ontology-of-rare-diseases-hord" class="md-nav__link">
+    <span class="md-ellipsis">
+      Holistic Ontology of Rare Diseases (HORD)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#human-dermatological-disease-ontology-dermo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Human Dermatological Disease Ontology (DERMO)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#human-disease-ontology-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      Human Disease Ontology (DO)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#infectious-disease-ontology-ido" class="md-nav__link">
+    <span class="md-ellipsis">
+      Infectious Disease Ontology (IDO)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#international-classification-of-functioning-disability-and-health-icf" class="md-nav__link">
+    <span class="md-ellipsis">
+      International Classification of Functioning, Disability and Health (ICF)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#international-statistical-classification-of-diseases-and-related-health-problems-icd-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      International Statistical Classification of Diseases and Related Health Problems (ICD-11)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#international-classification-of-diseases-for-oncology-icd-o" class="md-nav__link">
+    <span class="md-ellipsis">
+      International Classification of Diseases for Oncology (ICD-O)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-observation-identifier-names-and-codes-loinc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logical Observation Identifier Names and Codes (LOINC)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#medical-subject-headings-mesh" class="md-nav__link">
+    <span class="md-ellipsis">
+      Medical Subject Headings (MeSH)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#medgen" class="md-nav__link">
+    <span class="md-ellipsis">
+      MedGen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#medical-dictionary-for-regulatory-activities-meddra" class="md-nav__link">
+    <span class="md-ellipsis">
+      Medical Dictionary for Regulatory Activities (MedDRA)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mental-disease-ontology-mdo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mental Disease Ontology (MDO)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mondo-disease-ontology-mondo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mondo Disease Ontology (Mondo)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#national-cancer-institute-thesaurus-ncit" class="md-nav__link">
+    <span class="md-ellipsis">
+      National Cancer Institute Thesaurus (NCIT)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#neurological-disease-ontology-nd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Neurological Disease Ontology (ND)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#online-mendelian-inheritance-in-man-omim" class="md-nav__link">
+    <span class="md-ellipsis">
+      Online Mendelian Inheritance in Man (OMIM)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ontology-of-cardiovascular-drug-adverse-events-ocvdae" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ontology of Cardiovascular Drug Adverse Events (OCVDAE)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ontology-for-general-medical-science-ogms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ontology for General Medical Science (OGMS)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ontology-for-genetic-susceptibility-factor-ogsf" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ontology for Genetic Susceptibility Factor (OGSF)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ontology-of-glucose-metabolism-disorder-ogmd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ontology of Glucose Metabolism Disorder (OGMD)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ontology-of-language-disorder-in-autism-lda" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ontology of Language Disorder in Autism (LDA)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-oral-health-and-disease-ontology-ohd" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Oral Health and Disease Ontology (OHD)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#orphanet-ordo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Orphanet (ORDO)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parkinson-disease-ontology-pdo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parkinson Disease ontology (PDO)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pathogenic-disease-ontology-pdo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pathogenic Disease Ontology (PDO)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#polycystic-ovary-syndrome-knowledgebase-pcoskb" class="md-nav__link">
+    <span class="md-ellipsis">
+      PolyCystic Ovary Syndrome Knowledgebase (PCOSKB)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rat-disease-ontology-rdo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rat Disease Ontology (RDO)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removable-partial-denture-ontology-rpdo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Removable Partial Denture Ontology (RPDO)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource-of-asian-primary-immunodeficiency-diseases-rpo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resource of Asian Primary Immunodeficiency Diseases (RPO)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sickle-cell-disease-ontology-scdo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sickle Cell Disease Ontology (SCDO)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#snomed-clinical-terminology-snomed-ct" class="md-nav__link">
+    <span class="md-ellipsis">
+      SNOMED Clinical Terminology (SNOMED CT)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#symptom-ontology" class="md-nav__link">
+    <span class="md-ellipsis">
+      Symptom Ontology
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unified-medical-language-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unified Medical Language System
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phenotype-ontologies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Phenotype ontologies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phenotype-summary-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Phenotype Summary Table
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Phenotype Summary Table">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ascomycete-phenotype-ontology-apo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ascomycete phenotype ontology (APO)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-elegans-phenotype-wbphenotype" class="md-nav__link">
+    <span class="md-ellipsis">
+      C. elegans phenotype (wbphenotype)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dictyostelium-discoideum-phenotype-ontology-ddpheno" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dictyostelium discoideum phenotype ontology (ddpheno)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drosophila-phenotype-ontology-dpo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Drosophila Phenotype Ontology (DPO)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flora-phenotype-ontology-flopo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flora Phenotype Ontology (FLOPO)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fission-yeast-phenotype-ontology-fypo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fission Yeast Phenotype Ontology (FYPO)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#human-phenotype-ontology-hpo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Human Phenotype Ontology (HPO)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hpo-ordo-ontological-module-hoom" class="md-nav__link">
+    <span class="md-ellipsis">
+      HPO - ORDO Ontological Module (HOOM)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mammalian-phenotype-ontology-mp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mammalian Phenotype Ontology (MP)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ontology-of-microbial-phenotypes-omp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ontology of Microbial Phenotypes (OMP)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ontology-of-prokaryotic-phenotypic-and-metabolic-characters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ontology of Prokaryotic Phenotypic and Metabolic Characters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pathogen-host-interaction-phenotype-ontology" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pathogen Host Interaction Phenotype Ontology
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#planarian-phenotype-ontology-planp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Planarian Phenotype Ontology (PLANP)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plant-trait-ontology-to" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plant Trait Ontology (TO)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plant-phenology-ontology" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plant Phenology Ontology
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unified-phenotype-ontology-upheno" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unified Phenotype Ontology (uPheno)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xenopus-phenotype-ontology-xpo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Xenopus Phenotype Ontology (XPO)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zebrafish-phenotype-ontology-zp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zebrafish Phenotype Ontology (ZP)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wikidata/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    A reference guide to Wikidata
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../obook-maturity-indicator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OBOOK Maturity Indicator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_31" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_31" id="__nav_11_31_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ChatGPT
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_31_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_31">
+            <span class="md-nav__icon md-icon"></span>
+            ChatGPT
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chatgpt-prompts-for-ontology-development/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leveraging ChatGPT for ontology curation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ontology-user/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology User references
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Explanations
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            Explanations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/intro-to-ontologies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction to Ontologies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/logical-axiomatization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Logical axiomatization of classes & use of reasoning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/term-comments/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Term Comments
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/annotation-properties/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction to Annotation Properties
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/writing-good-issues/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Writing good issues
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/ontology-matching/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology Matching
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/which-ontology-to-use/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Which biomedical ontologies should we use?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/owl-format-variants/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OWL, OBO, JSON? Base, simple, full, basic? What should you use, and why?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/taxon-constraints-explainer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What are taxon constraints?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/owl-building-blocks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The logical building blocks of OWL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/subClassOf-vs-equivalentTo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SubClassOf versus EquivalentTo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/existential-restrictions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Existential restrictions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    OBOOK Editors
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            OBOOK Editors
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started-obook/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting started for OBOOK editors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../images/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to add images
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/embed-video/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to embed videos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../config/template/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    New lesson template
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teaching/case-studies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Case studies for teaching
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Outreach
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14">
+            <span class="md-nav__icon md-icon"></span>
+            Outreach
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../outreach/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Outreach materials
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-landscape-of-disease-and-phenotype-ontologies" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Landscape of Disease and Phenotype Ontologies
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Landscape of Disease and Phenotype Ontologies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#disease-ontologies-terminologies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Disease Ontologies &amp; Terminologies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disease-summary-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Disease Summary Table
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Disease Summary Table">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#artificial-intelligence-rheumatology-consultant-system-ontology-ai-rheum" class="md-nav__link">
+    <span class="md-ellipsis">
+      Artificial Intelligence Rheumatology Consultant System ontology (AI-RHEUM)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autism-dsm-adi-r-ontology-adar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Autism DSM-ADI-R Ontology (ADAR)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autism-spectrum-disorder-phenotype-ontology-asdpto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Autism Spectrum Disorder Phenotype Ontology (ASDPTO)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brucellosis-ontology-idobru" class="md-nav__link">
+    <span class="md-ellipsis">
+      Brucellosis Ontology (IDOBRU)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cardiovascular-disease-ontology-cvdo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cardiovascular Disease Ontology (CVDO)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chronic-kidney-disease-ontology-ckdo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chronic Kidney Disease Ontology (CKDO)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chronic-obstructive-pulmonary-disease-ontology-copdo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chronic Obstructive Pulmonary Disease Ontology (COPDO)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#coronavirus-infectious-disease-ontology-cido" class="md-nav__link">
+    <span class="md-ellipsis">
+      Coronavirus Infectious Disease Ontology (CIDO)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagnostic-and-statistical-manual-of-mental-disorders-dsm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagnostic and Statistical Manual of Mental Disorders (DSM)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dispedia-core-ontology-dco" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dispedia Core Ontology (DCO)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#experimental-factor-ontology-efo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Experimental Factor Ontology (EFO)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fibrotic-interstitial-lung-disease-ontology-fildo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fibrotic Interstitial Lung Disease Ontology (FILDO)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genetic-and-rare-diseases-information-center-gard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Genetic and Rare Diseases Information Center (GARD)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#holistic-ontology-of-rare-diseases-hord" class="md-nav__link">
+    <span class="md-ellipsis">
+      Holistic Ontology of Rare Diseases (HORD)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#human-dermatological-disease-ontology-dermo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Human Dermatological Disease Ontology (DERMO)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#human-disease-ontology-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      Human Disease Ontology (DO)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#infectious-disease-ontology-ido" class="md-nav__link">
+    <span class="md-ellipsis">
+      Infectious Disease Ontology (IDO)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#international-classification-of-functioning-disability-and-health-icf" class="md-nav__link">
+    <span class="md-ellipsis">
+      International Classification of Functioning, Disability and Health (ICF)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#international-statistical-classification-of-diseases-and-related-health-problems-icd-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      International Statistical Classification of Diseases and Related Health Problems (ICD-11)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#international-classification-of-diseases-for-oncology-icd-o" class="md-nav__link">
+    <span class="md-ellipsis">
+      International Classification of Diseases for Oncology (ICD-O)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-observation-identifier-names-and-codes-loinc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logical Observation Identifier Names and Codes (LOINC)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#medical-subject-headings-mesh" class="md-nav__link">
+    <span class="md-ellipsis">
+      Medical Subject Headings (MeSH)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#medgen" class="md-nav__link">
+    <span class="md-ellipsis">
+      MedGen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#medical-dictionary-for-regulatory-activities-meddra" class="md-nav__link">
+    <span class="md-ellipsis">
+      Medical Dictionary for Regulatory Activities (MedDRA)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mental-disease-ontology-mdo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mental Disease Ontology (MDO)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mondo-disease-ontology-mondo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mondo Disease Ontology (Mondo)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#national-cancer-institute-thesaurus-ncit" class="md-nav__link">
+    <span class="md-ellipsis">
+      National Cancer Institute Thesaurus (NCIT)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#neurological-disease-ontology-nd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Neurological Disease Ontology (ND)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#online-mendelian-inheritance-in-man-omim" class="md-nav__link">
+    <span class="md-ellipsis">
+      Online Mendelian Inheritance in Man (OMIM)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ontology-of-cardiovascular-drug-adverse-events-ocvdae" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ontology of Cardiovascular Drug Adverse Events (OCVDAE)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ontology-for-general-medical-science-ogms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ontology for General Medical Science (OGMS)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ontology-for-genetic-susceptibility-factor-ogsf" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ontology for Genetic Susceptibility Factor (OGSF)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ontology-of-glucose-metabolism-disorder-ogmd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ontology of Glucose Metabolism Disorder (OGMD)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ontology-of-language-disorder-in-autism-lda" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ontology of Language Disorder in Autism (LDA)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-oral-health-and-disease-ontology-ohd" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Oral Health and Disease Ontology (OHD)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#orphanet-ordo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Orphanet (ORDO)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parkinson-disease-ontology-pdo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parkinson Disease ontology (PDO)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pathogenic-disease-ontology-pdo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pathogenic Disease Ontology (PDO)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#polycystic-ovary-syndrome-knowledgebase-pcoskb" class="md-nav__link">
+    <span class="md-ellipsis">
+      PolyCystic Ovary Syndrome Knowledgebase (PCOSKB)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rat-disease-ontology-rdo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rat Disease Ontology (RDO)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removable-partial-denture-ontology-rpdo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Removable Partial Denture Ontology (RPDO)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource-of-asian-primary-immunodeficiency-diseases-rpo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resource of Asian Primary Immunodeficiency Diseases (RPO)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sickle-cell-disease-ontology-scdo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sickle Cell Disease Ontology (SCDO)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#snomed-clinical-terminology-snomed-ct" class="md-nav__link">
+    <span class="md-ellipsis">
+      SNOMED Clinical Terminology (SNOMED CT)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#symptom-ontology" class="md-nav__link">
+    <span class="md-ellipsis">
+      Symptom Ontology
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unified-medical-language-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unified Medical Language System
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phenotype-ontologies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Phenotype ontologies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phenotype-summary-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Phenotype Summary Table
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Phenotype Summary Table">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ascomycete-phenotype-ontology-apo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ascomycete phenotype ontology (APO)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-elegans-phenotype-wbphenotype" class="md-nav__link">
+    <span class="md-ellipsis">
+      C. elegans phenotype (wbphenotype)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dictyostelium-discoideum-phenotype-ontology-ddpheno" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dictyostelium discoideum phenotype ontology (ddpheno)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drosophila-phenotype-ontology-dpo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Drosophila Phenotype Ontology (DPO)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flora-phenotype-ontology-flopo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flora Phenotype Ontology (FLOPO)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fission-yeast-phenotype-ontology-fypo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fission Yeast Phenotype Ontology (FYPO)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#human-phenotype-ontology-hpo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Human Phenotype Ontology (HPO)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hpo-ordo-ontological-module-hoom" class="md-nav__link">
+    <span class="md-ellipsis">
+      HPO - ORDO Ontological Module (HOOM)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mammalian-phenotype-ontology-mp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mammalian Phenotype Ontology (MP)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ontology-of-microbial-phenotypes-omp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ontology of Microbial Phenotypes (OMP)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ontology-of-prokaryotic-phenotypic-and-metabolic-characters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ontology of Prokaryotic Phenotypic and Metabolic Characters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pathogen-host-interaction-phenotype-ontology" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pathogen Host Interaction Phenotype Ontology
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#planarian-phenotype-ontology-planp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Planarian Phenotype Ontology (PLANP)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plant-trait-ontology-to" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plant Trait Ontology (TO)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plant-phenology-ontology" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plant Phenology Ontology
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unified-phenotype-ontology-upheno" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unified Phenotype Ontology (uPheno)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xenopus-phenotype-ontology-xpo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Xenopus Phenotype Ontology (XPO)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zebrafish-phenotype-ontology-zp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zebrafish Phenotype Ontology (ZP)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/OBOAcademy/obook/edit/master/docs/reference/medical-ontology-landscape.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+    </a>
+  
+  
+
+
+  <h1>Medical Ontology landscape</h1>
+
+<h2 id="the-landscape-of-disease-and-phenotype-ontologies">The Landscape of Disease and Phenotype Ontologies<a class="headerlink" href="#the-landscape-of-disease-and-phenotype-ontologies" title="Permanent link">&para;</a></h2>
+<p><em>Compiled by Nicole Vasilevsky. Feel free to make pull requests to suggest edits.</em> Note: This currently just provides an overview of disease and phenotype ontologies. Contributors are welcome to add more descriptions of other medical ontologies. This was last updated in 2021.</p>
+<h3 id="disease-ontologies-terminologies">Disease Ontologies &amp; Terminologies<a class="headerlink" href="#disease-ontologies-terminologies" title="Permanent link">&para;</a></h3>
+<hr />
+<h3 id="disease-summary-table">Disease Summary Table<a class="headerlink" href="#disease-summary-table" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Disease Area</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Artificial Intelligence Rheumatology Consultant System Ontology (AI-RHEUM)</td>
+<td>Rheumatic diseases</td>
+</tr>
+<tr>
+<td>Autism DSM-ADI-R Ontology (ADAR)</td>
+<td>Autism</td>
+</tr>
+<tr>
+<td>Autism Spectrum Disorder Phenotype Ontology (ASDPTO)</td>
+<td>Autism</td>
+</tr>
+<tr>
+<td>Brucellosis Ontology (IDOBRU)</td>
+<td>brucellosis</td>
+</tr>
+<tr>
+<td>Cardiovascular Disease Ontology (CVDO)</td>
+<td>Cardiovascular</td>
+</tr>
+<tr>
+<td>Chronic Kidney Disease Ontology (CKDO)</td>
+<td>Chronic kidney disease</td>
+</tr>
+<tr>
+<td>Chronic Obstructive Pulmonary Disease Ontology (COPDO)</td>
+<td>Chronic obstructive pulmonary disease (COPD)</td>
+</tr>
+<tr>
+<td>Coronavirus Infectious Disease Ontology (CIDO)</td>
+<td>Coronavirus infectious diseases</td>
+</tr>
+<tr>
+<td>Diagnostic and Statistical Manual of Mental Disorders (DSM)</td>
+<td>Mental disorders</td>
+</tr>
+<tr>
+<td>Dispedia Core Ontology (DCO)</td>
+<td>Rare diseases</td>
+</tr>
+<tr>
+<td>Experimental Factor Ontology (EFO)</td>
+<td>Broad disease coverage</td>
+</tr>
+<tr>
+<td>Fibrotic Interstitial Lung Disease Ontology (FILDO)</td>
+<td>Fibrotic interstitial lung disease</td>
+</tr>
+<tr>
+<td>Genetic and Rare Diseases Information Center (GARD)</td>
+<td>Rare diseases</td>
+</tr>
+<tr>
+<td>Holistic Ontology of Rare Diseases (HORD)</td>
+<td>Rare disease</td>
+</tr>
+<tr>
+<td>Human Dermatological Disease Ontology (DERMO)</td>
+<td>Dermatology (skin)</td>
+</tr>
+<tr>
+<td>Human Disease Ontology (DO)</td>
+<td>Human disease</td>
+</tr>
+<tr>
+<td>Infectious Disease Ontology (IDO)</td>
+<td>Infectious disease</td>
+</tr>
+<tr>
+<td>International Classification of Functioning, Disability and Health (ICF)</td>
+<td>Cross-discipline, focuses disabilities</td>
+</tr>
+<tr>
+<td>International Statistical Classification of Diseases and Related Health Problems (ICD-11)</td>
+<td>Broad coverage</td>
+</tr>
+<tr>
+<td>International Classification of Diseases for Oncology (ICD-O)</td>
+<td>Cancer</td>
+</tr>
+<tr>
+<td>Logical Observation Identifier Names and Codes (LOINC)</td>
+<td>Broad coverage</td>
+</tr>
+<tr>
+<td>Medical Subject Headings (MeSH)</td>
+<td>Broad coverage</td>
+</tr>
+<tr>
+<td>MedGen</td>
+<td>Human medical genetics</td>
+</tr>
+<tr>
+<td>Medical Dictionary for Regulatory Activities (MedDRA)</td>
+<td>Broad coverage</td>
+</tr>
+<tr>
+<td>Mental Disease Ontology (MDO)</td>
+<td>Mental functioning</td>
+</tr>
+<tr>
+<td>Mondo Disease Ontology (Mondo)</td>
+<td>Broad coverage, Cross species</td>
+</tr>
+<tr>
+<td>National Cancer Institute Thesaurus (NCIT)</td>
+<td>Humam cancer and neoplasms</td>
+</tr>
+<tr>
+<td>Neurological Disease Ontology (ND)</td>
+<td>Neurology</td>
+</tr>
+<tr>
+<td>Online Mendelian Inheritance in Man (OMIM)</td>
+<td>Mendelian, genetic diseases.</td>
+</tr>
+<tr>
+<td>Ontology of Cardiovascular Drug Adverse Events (OCVDAE)</td>
+<td>Cardiovascular</td>
+</tr>
+<tr>
+<td>Ontology for General Medical Science (OGMS)</td>
+<td>Broad coverage</td>
+</tr>
+<tr>
+<td>Ontology for Genetic Susceptibility Factor (OGSF)</td>
+<td>Genetic disease</td>
+</tr>
+<tr>
+<td>Ontology of Glucose Metabolism Disorder (OGMD)</td>
+<td>Metabolic disorders</td>
+</tr>
+<tr>
+<td>Ontology of Language Disorder in Autism (LDA)</td>
+<td>Austism</td>
+</tr>
+<tr>
+<td>The Oral Health and Disease Ontology (OHD)</td>
+<td>Oral health and disease</td>
+</tr>
+<tr>
+<td>Orphanet (ORDO)</td>
+<td>Rare diseases</td>
+</tr>
+<tr>
+<td>Parkinson Disease Ontology (PDO)</td>
+<td>Parkinson disease</td>
+</tr>
+<tr>
+<td>Pathogenic Disease Ontology (PDO)</td>
+<td>Pathogenic diseases</td>
+</tr>
+<tr>
+<td>PolyCystic Ovary Syndrome Knowledgebase (PCOSKB)</td>
+<td>Polycystic ovary syndrome</td>
+</tr>
+<tr>
+<td>Rat Disease Ontology (RDO)</td>
+<td>Broad coverage</td>
+</tr>
+<tr>
+<td>Removable Partial Denture Ontology (RPDO)</td>
+<td>Oral health</td>
+</tr>
+<tr>
+<td>Resource of Asian Primary Immunodeficiency Diseases (RPO)</td>
+<td>Immunodeficiencies</td>
+</tr>
+<tr>
+<td>Sickle Cell Disease Ontology (SCDO)</td>
+<td>Sickle Cell Disease</td>
+</tr>
+<tr>
+<td>SNOMED Clinical Terminology (SNOMED CT)</td>
+<td>Broad disease representation for human diseases.</td>
+</tr>
+<tr>
+<td>Symptom Ontology</td>
+<td>Human diseases</td>
+</tr>
+<tr>
+<td>Unified Medical Language System</td>
+<td>Broad coverage</td>
+</tr>
+</tbody>
+</table>
+<h4 id="artificial-intelligence-rheumatology-consultant-system-ontology-ai-rheum">Artificial Intelligence Rheumatology Consultant System ontology (AI-RHEUM)<a class="headerlink" href="#artificial-intelligence-rheumatology-consultant-system-ontology-ai-rheum" title="Permanent link">&para;</a></h4>
+<p><strong>Description:</strong> Contains findings, such as clinical signs, symptoms, laboratory test results, radiologic observations, tissue biopsy results, and intermediate diagnosis hypotheses, for the diagnosis of rheumatic diseases.<br />
+<strong>Disease area:</strong> Rheumatic diseases<br />
+<strong>Use Cases:</strong> Used by clinicians and informatics researchers.<br />
+<strong>Website:</strong> https://bioportal.bioontology.org/ontologies/AI-RHEUM<br />
+<strong>Open:</strong> Yes</p>
+<h4 id="autism-dsm-adi-r-ontology-adar">Autism DSM-ADI-R Ontology (ADAR)<a class="headerlink" href="#autism-dsm-adi-r-ontology-adar" title="Permanent link">&para;</a></h4>
+<p><strong>Description:</strong> An ontology of autism spectrum disorder (ASD) and related neurodevelopmental disorders.<br />
+<strong>Disease area:</strong> Autism<br />
+<strong>Use Cases:</strong> It extends an existing autism ontology to allow automatic inference of ASD phenotypes and Diagnostic and Statistical Manual of Mental Disorders (DSM) criteria based on subjects’ Autism Diagnostic Interview–Revised (ADI-R) assessment data.<br />
+<strong>Website:</strong> https://bioportal.bioontology.org/ontologies/ADAR<br />
+<strong>Open:</strong> Yes</p>
+<h4 id="autism-spectrum-disorder-phenotype-ontology-asdpto">Autism Spectrum Disorder Phenotype Ontology (ASDPTO)<a class="headerlink" href="#autism-spectrum-disorder-phenotype-ontology-asdpto" title="Permanent link">&para;</a></h4>
+<p><strong>Description:</strong> Encapsulates the ASD behavioral phenotype, informed by the standard ASD assessment instruments and the currently known characteristics of this disorder.<br />
+<strong>Disease area:</strong> Autism<br />
+<strong>Use Cases:</strong> Intended for use in research settings where extensive phenotypic data have been collected, allowing a concept-based approach to identifying behavioral features of importance and for correlating these with genotypic data.<br />
+<strong>Website:</strong> https://bioportal.bioontology.org/ontologies/ASDPTO<br />
+<strong>Open:</strong> Yes</p>
+<h4 id="brucellosis-ontology-idobru">Brucellosis Ontology (IDOBRU)<a class="headerlink" href="#brucellosis-ontology-idobru" title="Permanent link">&para;</a></h4>
+<p><strong>Description:</strong> Describes the most common zoonotic disease, brucellosis, which is caused by Brucella, a type of facultative intracellular bacteria.<br />
+<strong>Disease area:</strong> brucellosis bacteria<br />
+<strong>Use Cases:</strong> An extension ontology of the core Infectious Disease Ontology (IDO-core). This project appears to be inactive.<br />
+<strong>Website:</strong> https://github.com/biomedontology/idobru
+<strong>Open:</strong> Yes</p>
+<h4 id="cardiovascular-disease-ontology-cvdo">Cardiovascular Disease Ontology (CVDO)<a class="headerlink" href="#cardiovascular-disease-ontology-cvdo" title="Permanent link">&para;</a></h4>
+<p><strong>Description:</strong> An ontology to describe entities related to cardiovascular diseases.<br />
+<strong>Disease area:</strong> Cardiovascular<br />
+<strong>Use Cases:</strong> Describes entities related to cardiovascular diseases including the diseases themselves, the underlying disorders, and the related pathological processes. Imports upper level terms from OGMS and imports some terms from Disease Ontology (DO).<br />
+<strong>GitHub repo:</strong> https://github.com/OpenLHS/CVDO/<br />
+<strong>Website:</strong> https://github.com/OpenLHS/CVDO<br />
+<strong>OBO Foundry webpage:</strong> http://obofoundry.org/ontology/cvdo.html<br />
+<strong>Open:</strong> Yes</p>
+<h4 id="chronic-kidney-disease-ontology-ckdo">Chronic Kidney Disease Ontology (CKDO)<a class="headerlink" href="#chronic-kidney-disease-ontology-ckdo" title="Permanent link">&para;</a></h4>
+<p><strong>Description:</strong> An ontology of chronic kidney disease in primary care.<br />
+<strong>Disease area:</strong> Chronic kidney disease<br />
+<strong>Use Cases:</strong> CKDDO was developed to assist routine data studies and case identification of CKD in primary care.<br />
+<strong>Website:</strong> http://purl.bioontology.org/ontology/CKDO<br />
+<strong>Open:</strong> Yes</p>
+<h4 id="chronic-obstructive-pulmonary-disease-ontology-copdo">Chronic Obstructive Pulmonary Disease Ontology (COPDO)<a class="headerlink" href="#chronic-obstructive-pulmonary-disease-ontology-copdo" title="Permanent link">&para;</a></h4>
+<p><strong>Description:</strong> Models concepts associated with chronic obstructive pulmonary disease in routine clinical databases.<br />
+<strong>Disease area:</strong> Chronic obstructive pulmonary disease (COPD)<br />
+<strong>Use Cases:</strong> Clinical use.<br />
+<strong>Website:</strong> https://bioportal.bioontology.org/ontologies/COPDO<br />
+<strong>Open:</strong> Yes</p>
+<h4 id="coronavirus-infectious-disease-ontology-cido">Coronavirus Infectious Disease Ontology (CIDO)<a class="headerlink" href="#coronavirus-infectious-disease-ontology-cido" title="Permanent link">&para;</a></h4>
+<p><strong>Description:</strong> Aims to ontologically represent and standardize various aspects of coronavirus infectious diseases, including their etiology, transmission, epidemiology, pathogenesis, diagnosis, prevention, and treatment.<br />
+<strong>Disease area:</strong> Coronavirus infectious diseases, including COVID-19, SARS, MERS; covers etiology, transmission, epidemiology, pathogenesis, diagnosis, prevention, and treatment.<br />
+<strong>Use Cases:</strong> Used for disease annotations related to coronavirus infections.<br />
+<strong>GitHub repo:</strong> https://github.com/cido-ontology/cido<br />
+<strong>OBO Foundry webpage:</strong> http://obofoundry.org/ontology/cido.html<br />
+<strong>Open:</strong> Yes</p>
+<h4 id="diagnostic-and-statistical-manual-of-mental-disorders-dsm">Diagnostic and Statistical Manual of Mental Disorders (DSM)<a class="headerlink" href="#diagnostic-and-statistical-manual-of-mental-disorders-dsm" title="Permanent link">&para;</a></h4>
+<p><strong>Description:</strong> Authoritative source to define and classify mental disorders to improve diagnoses, treatment, and research.<br />
+<strong>Disease area:</strong> Mental disorders<br />
+<strong>Use Cases:</strong> Used in clinical healthcare and research by pyschiatrists and psychologists.<br />
+<strong>Website:</strong> https://www.psychiatry.org/psychiatrists/practice/dsm<br />
+<strong>Open:</strong> No, must be purchased</p>
+<h4 id="dispedia-core-ontology-dco">Dispedia Core Ontology (DCO)<a class="headerlink" href="#dispedia-core-ontology-dco" title="Permanent link">&para;</a></h4>
+<p><strong>Description:</strong> A schema for information brokering and knowledge management in the complex field of rare diseases. DCO describes patients affected by rare diseases and records expertise about diseases in machine-readable form.<br />
+<strong>Disease area:</strong> Rare disease<br />
+<strong>Use Cases:</strong> DCO was initially created with amyotrophic lateral sclerosis as a use case.<br />
+<strong>Website:</strong> http://purl.bioontology.org/ontology/DCO<br />
+<strong>Open:</strong> Yes</p>
+<h4 id="experimental-factor-ontology-efo">Experimental Factor Ontology (EFO)<a class="headerlink" href="#experimental-factor-ontology-efo" title="Permanent link">&para;</a></h4>
+<p><strong>Description:</strong> Provides a systematic description of many experimental variables available in EBI databases, and for projects such as the GWAS catalog.<br />
+<strong>Disease area:</strong> Broad disease coverage, integrates the Mondo disease ontology.<br />
+<strong>Use Cases:</strong> Application ontology build for <a href="https://www.ebi.ac.uk/">European Bioinformatics (EBI)</a> tools and databases and <a href="https://www.opentargets.org/">Open Targets Genetics Portal</a>.<br />
+<strong>Website:</strong> https://www.ebi.ac.uk/efo/<br />
+<strong>Open:</strong> Yes</p>
+<h4 id="fibrotic-interstitial-lung-disease-ontology-fildo">Fibrotic Interstitial Lung Disease Ontology (FILDO)<a class="headerlink" href="#fibrotic-interstitial-lung-disease-ontology-fildo" title="Permanent link">&para;</a></h4>
+<p><strong>Description:</strong> An in-progress, four-tiered ontology proposed to standardize the diagnostic classification of patients with fibrotic interstitial lung disease.<br />
+<strong>Disease area:</strong> Fibrotic interstitial lung disease<br />
+<strong>Use Cases:</strong> Goal is to standardize the diagnostic classification of patients with fibrotic ILD. A paper was published in 2017 and an ontology is not publicly available.<br />
+<strong>Publication:</strong> https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5803648/<br />
+<strong>Open:</strong> No</p>
+<h4 id="genetic-and-rare-diseases-information-center-gard">Genetic and Rare Diseases Information Center (GARD)<a class="headerlink" href="#genetic-and-rare-diseases-information-center-gard" title="Permanent link">&para;</a></h4>
+<p><strong>Description:</strong> NIH resource that provides the public with access to current, reliable, and easy-to-understand information about rare or genetic diseases in English or Spanish.<br />
+<strong>Disease area:</strong> Rare diseases<br />
+<strong>Use Cases:</strong> Patient portal. Integrates defintions and synonyms from Orphanet, maps to HPO phenotypes, and is integrated by Mondo.<br />
+<strong>Website:</strong> https://rarediseases.info.nih.gov/<br />
+<strong>Open:</strong> Yes</p>
+<h4 id="holistic-ontology-of-rare-diseases-hord">Holistic Ontology of Rare Diseases (HORD)<a class="headerlink" href="#holistic-ontology-of-rare-diseases-hord" title="Permanent link">&para;</a></h4>
+<p><strong>Description:</strong> Describes the biopsychosocial state (i.e., disease, psychological, social, and environmental state) of persons with rare diseases in a holistic way.<br />
+<strong>Disease area:</strong> Rare disease<br />
+<strong>Use Cases:</strong> <a href="https://pemb.cat/en/strategic-projects/rehabilita__disruptive_technologies_for_the_rehabilitation_of_the_future/53/">Rehabilita, Disruptive Technologies for the Rehabilitation of the Future</a>, a project that aims to enhance rehabilitation transforming it to a more personalized, ubiquitous and evidence-based rehabilitation.<br />
+<strong>Website:</strong> http://purl.bioontology.org/ontology/HORD<br />
+<strong>Open:</strong> Yes</p>
+<h4 id="human-dermatological-disease-ontology-dermo">Human Dermatological Disease Ontology (DERMO)<a class="headerlink" href="#human-dermatological-disease-ontology-dermo" title="Permanent link">&para;</a></h4>
+<p><strong>Description:</strong> The most comprehensive dermatological disease ontology available, with over 3,500 classes available. There are 20 upper-level disease entities, with features such as anatomical location, heritability, and affected cell or tissue type.<br />
+<strong>Disease area:</strong> Dermatology (skin)<br />
+<strong>Use Cases:</strong> DermO can be used to extract data from patient electronic health records using text mining, or to translate existing variable-granularity coding such as ICD-10 to allow capture and standardization of patient/disease annotations.<br />
+<strong>Website:</strong> https://bioportal.bioontology.org/ontologies/DERMO
+<strong>Open:</strong> Yes</p>
+<h4 id="human-disease-ontology-do">Human Disease Ontology (DO)<a class="headerlink" href="#human-disease-ontology-do" title="Permanent link">&para;</a></h4>
+<p><strong>Description:</strong> An ontology for describing the classification of human diseases organized by etiology.<br />
+<strong>Disease area:</strong> Human disease terms, phenotype characteristics and related medical vocabulary disease concepts.<br />
+<strong>Use Cases:</strong> Used by Model Organism Databases (MOD), such as Mouse Genome Informatics disease model for diseae annotations, and Alliance for Genome Resources for disease annotations. In 2018, DO tracked over 300 DO project citations suggesting wide adoption and usage for disease annotations.<br />
+<strong>GitHub repo:</strong> https://github.com/DiseaseOntology/HumanDiseaseOntology/<br />
+<strong>Website:</strong> http://www.disease-ontology.org/<br />
+<strong>OBO Foundry webpage:</strong> http://obofoundry.org/ontology/doid.html<br />
+<strong>Open:</strong> Yes</p>
+<h4 id="infectious-disease-ontology-ido">Infectious Disease Ontology (IDO)<a class="headerlink" href="#infectious-disease-ontology-ido" title="Permanent link">&para;</a></h4>
+<p><strong>Description:</strong> A set of interoperable ontologies that will together provide coverage of the infectious disease domain. IDO core is the upper-level ontology that hosts terms of general relevance across the domain, while extension ontologies host terms to specific to a particular part of the domain.<br />
+<strong>Disease area:</strong> Infectious disease features, such as acute, primary, secondary infection, and chronic, hospital acquired and local infection.<br />
+<strong>Use Cases:</strong> Does not seem active, has not been released since 2017.<br />
+<strong>GitHub repo:</strong> https://github.com/infectious-disease-ontology/infectious-disease-ontology/<br />
+<strong>Website:</strong> http://www.bioontology.org/wiki/index.php/Infectious_Disease_Ontology<br />
+<strong>OBO Foundry webpage:</strong> http://obofoundry.org/ontology/ido.html<br />
+<strong>Open:</strong> Yes</p>
+<h4 id="international-classification-of-functioning-disability-and-health-icf">International Classification of Functioning, Disability and Health (ICF)<a class="headerlink" href="#international-classification-of-functioning-disability-and-health-icf" title="Permanent link">&para;</a></h4>
+<p><strong>Description:</strong> Represents diseases and provides a conceptual basis for the definition and measurement of health and disability as organized by patient-oriented outcomes of function and disability. ICF considers environmental factors as well as the relevance of associated health conditions in recognizing major models of disability.<br />
+<strong>Disease area:</strong> Cross-discipline, focuses on health and disability<br />
+<strong>Use Cases:</strong> ICF is the World Health Organization (WHO) framework for measuring health and disability at both individual and population levels. ICF was officially endorsed by the WHO as the international standard to describe and measure health and disability.<br />
+<strong>Website:</strong> https://www.who.int/standards/classifications/international-classification-of-functioning-disability-and-health<br />
+<strong>Open:</strong> Yes</p>
+<h4 id="international-statistical-classification-of-diseases-and-related-health-problems-icd-11">International Statistical Classification of Diseases and Related Health Problems (ICD-11)<a class="headerlink" href="#international-statistical-classification-of-diseases-and-related-health-problems-icd-11" title="Permanent link">&para;</a></h4>
+<p><strong>Description:</strong> A medical classification list by the World Health Organization (WHO) that contains codes for diseases, signs and symptoms, abnormal findings, complaints, social circumstances, and external causes of injury or diseases.<br />
+<strong>Disease area:</strong> Broad coverage of human disease features, such as disease of anatomical systems, infectious diseases, injuries, external causes of morbidity and mortality.<br />
+<strong>Use Cases:</strong> The main purpose of ICD-11 is for clinical care, billing and coding for insurance companies.<br />
+<strong>Website:</strong> https://www.who.int/standards/classifications/classification-of-diseases<br />
+<strong>Open:</strong> Yes</p>
+<h4 id="international-classification-of-diseases-for-oncology-icd-o">International Classification of Diseases for Oncology (ICD-O)<a class="headerlink" href="#international-classification-of-diseases-for-oncology-icd-o" title="Permanent link">&para;</a></h4>
+<p><strong>Description:</strong> A domain-specific extension of the International Statistical Classification of Diseases and Related Health Problems for tumor diseases.<br />
+<strong>Disease area:</strong> A multi-axial classification of the site, morphology, behaviour, and grading of neoplasms.<br />
+<strong>Use Cases:</strong> Used principally in tumour or cancer registries for coding the site (topography) and the histology (morphology) of neoplasms, usually obtained from a pathology report.<br />
+<strong>Website:</strong> https://www.who.int/standards/classifications/other-classifications/international-classification-of-diseases-for-oncology<br />
+<strong>Open:</strong> Yes</p>
+<h4 id="logical-observation-identifier-names-and-codes-loinc">Logical Observation Identifier Names and Codes (LOINC)<a class="headerlink" href="#logical-observation-identifier-names-and-codes-loinc" title="Permanent link">&para;</a></h4>
+<p><strong>Description:</strong> Identifies medical laboratory observations.<br />
+<strong>Disease area:</strong> Broad coverage<br />
+<strong>Use Cases:</strong> The Regenstrief Institute first developed LOINC in 1994 in response to the demand for an electronic database for clinical care and management. LOINC is publicly available at no cost and is endorsed by the American Clinical Laboratory Association and the College of American Pathologists. Since its inception, LOINC has expanded to include not just medical laboratory code names but also nursing diagnoses, nursing interventions, outcome classifications, and patient care data sets.<br />
+<strong>Website:</strong> https://loinc.org/<br />
+<strong>Open:</strong> Yes, registration is required.</p>
+<h4 id="medical-subject-headings-mesh">Medical Subject Headings (MeSH)<a class="headerlink" href="#medical-subject-headings-mesh" title="Permanent link">&para;</a></h4>
+<p><strong>Description:</strong> Medical Subject Headings (MeSH) thesaurus is a controlled and hierarchically-organized vocabulary produced by the National Library of Medicine.<br />
+<strong>Disease area:</strong> Broad coverage<br />
+<strong>Use Cases:</strong> It is used for indexing, cataloging, and searching of biomedical and health-related information. Integrated into Mondo.<br />
+<strong>Website:</strong> https://meshb.nlm.nih.gov/search<br />
+<strong>Open:</strong> Yes</p>
+<h4 id="medgen">MedGen<a class="headerlink" href="#medgen" title="Permanent link">&para;</a></h4>
+<p><strong>Description:</strong> Organizes information related to human medical genetics, such as attributes of conditions and phenotypes of genetic contributions.<br />
+<strong>Disease area:</strong> Human medical genetics<br />
+<strong>Use Cases:</strong> MedGen is NCBI's portal to information about conditions and phenotypes related to Medical Genetics. Terms from the NIH Genetic Testing Registry (GTR), UMLS, HPO, Orphanet, ClinVar and other sources are aggregated into concepts, each of which is assigned a unique identifier and a preferred name and symbol. The core content of the record may include names, identifiers used by other databases, mode of inheritance, clinical features, and map location of the loci affecting the disorder. The concept identifier (CUI) is used to aggregate information about that concept, similar to the way NCBI Gene serves as a gateway to gene-related information.<br />
+<strong>Website:</strong> https://www.ncbi.nlm.nih.gov/medgen/<br />
+<strong>Open:</strong> Yes</p>
+<h4 id="medical-dictionary-for-regulatory-activities-meddra">Medical Dictionary for Regulatory Activities (MedDRA)<a class="headerlink" href="#medical-dictionary-for-regulatory-activities-meddra" title="Permanent link">&para;</a></h4>
+<p><strong>Description:</strong> Provides a standardized international medical terminology to be used for regulatory communication and evaluation of data about medicinal products for human use.<br />
+<strong>Disease area:</strong> Broad coverage<br />
+<strong>Use Cases:</strong> Mainly targeted towards industry and regulatory users.<br />
+<strong>Website:</strong> https://www.meddra.org/<br />
+<strong>Open:</strong> Yes</p>
+<h4 id="mental-disease-ontology-mdo">Mental Disease Ontology (MDO)<a class="headerlink" href="#mental-disease-ontology-mdo" title="Permanent link">&para;</a></h4>
+<p><strong>Description:</strong> An ontology to describe and classify mental diseases such as schizophrenia, annotated with DSM-IV and ICD codes where applicable.<br />
+<strong>Disease area:</strong> Mental functioning, including mental processes such as cognition and traits such as intelligence.<br />
+<strong>Use Cases:</strong> The ontology has been partially aligned with the related projects <a href="http://www.cognitiveatlas.org/">Cognitive Atlas</a>, knowledge base on cognitive science and the <a href="http://www.cogpo.org/">Cognitive Paradigm Ontology</a>, which is used in the <a href="http://brainmap.org/">Brainmap</a>, a database of neuroimaging experiments.<br />
+<strong>GitHub repo:</strong> https://github.com/jannahastings/mental-functioning-ontology<br />
+<strong>OBO Foundry webpage:</strong> http://obofoundry.org/ontology/mfomd.html<br />
+<strong>Open:</strong> yes</p>
+<h4 id="mondo-disease-ontology-mondo">Mondo Disease Ontology (Mondo)<a class="headerlink" href="#mondo-disease-ontology-mondo" title="Permanent link">&para;</a></h4>
+<p><strong>Description:</strong> An integrated disease ontology that provides precise mappings between source ontologies that comprehensively covers cross-species diseases, from common to rare diseases.<br />
+<strong>Disease area:</strong> Cross species, intended to cover all areas of diseases, integrating source ontologies that cover Mendelian diseases (OMIM), rare diseases (Orphanet), neoplasms (NCIt), human diseases (DO), and others. See all sources <a href="https://mondo.monarchinitiative.org/pages/sources/">here</a>.<br />
+<strong>Use Cases:</strong> Mondo was developed for usage in the <a href="https://monarchinitiative.org/">Monarch Initiative</a>, a discovery system that allows navigation of similarities between phenotypes, organisms, and human diseases across many data sources and organisms. Mondo is also used by <a href="https://www.clinicalgenome.org/">ClinGen</a> for disease curations, the <a href="https://portal.kidsfirstdrc.org/">Kids First Data Resource Portal</a> for disease annotations and others, see an extensive list <a href="https://mondo.monarchinitiative.org/pages/users/">here</a>.<br />
+<strong>GitHub repo:</strong> https://github.com/monarch-initiative/mondo<br />
+<strong>Website:</strong> https://mondo.monarchinitiative.org/<br />
+<strong>OBO Foundry webpage:</strong> http://obofoundry.org/ontology/mondo.html<br />
+<strong>Open:</strong> yes</p>
+<h4 id="national-cancer-institute-thesaurus-ncit">National Cancer Institute Thesaurus (NCIT)<a class="headerlink" href="#national-cancer-institute-thesaurus-ncit" title="Permanent link">&para;</a></h4>
+<p><strong>Description:</strong> NCI Thesaurus (NCIt)is a reference terminology that includes broad coverage of the cancer domain, including cancer related diseases, findings and abnormalities. The NCIt OBO Edition aims to increase integration of the NCIt with OBO Library ontologies. NCIt OBO Edition releases should be considered experimental.<br />
+<strong>Disease area:</strong> Cancer and neoplasms<br />
+<strong>Use Cases:</strong> NCI Thesaurus (NCIt) provides reference terminology for many National Cancer Institute and other systems. It is used by the Clinical Data Interchange Standards Consortium Terminology (CDISC), the U.S. Food and Drug Administration (FDA), the Federal Medication Terminologies (FMT), and the National Council for Prescription Drug Programs (NCPDP). It provides extensive coverage of neoplasms and cancers.<br />
+<strong>GitHub repo:</strong> https://github.com/NCI-Thesaurus/thesaurus-obo-edition/issues<br />
+<strong>Website:</strong> https://ncithesaurus.nci.nih.gov/ncitbrowser/pages/home.jsf?version=20.11e<br />
+<strong>OBO Foundry webpage:</strong> http://obofoundry.org/ontology/ncit.html<br />
+<strong>Open:</strong> Yes</p>
+<h4 id="neurological-disease-ontology-nd">Neurological Disease Ontology (ND)<a class="headerlink" href="#neurological-disease-ontology-nd" title="Permanent link">&para;</a></h4>
+<p><strong>Description:</strong> A framework for the representation of key aspects of neurological disease.<br />
+<strong>Disease area:</strong> Neurology<br />
+<strong>Use Cases:</strong> Goal is to provide a framework to enable representation of aspects of neurological diseases that are relevant to their treatment and study. This project may be inactive, the last commit to GitHub was in 2016.<br />
+<strong>GitHub repo:</strong> https://github.com/addiehl/neurological-disease-ontology<br />
+<strong>Open:</strong> Yes</p>
+<h4 id="online-mendelian-inheritance-in-man-omim">Online Mendelian Inheritance in Man (OMIM)<a class="headerlink" href="#online-mendelian-inheritance-in-man-omim" title="Permanent link">&para;</a></h4>
+<p><strong>Description:</strong> a comprehensive, authoritative compendium of human genes and genetic phenotypes that is freely available and updated daily.<br />
+<strong>Disease area:</strong> Mendelian, genetic diseases.<br />
+<strong>Use Cases:</strong> Integrated into the disease ontology, used by the Human Phenotype Ontology for disease annotations, patients and researchers.<br />
+<strong>Website:</strong> https://omim.org/<br />
+<strong>Open:</strong> yes</p>
+<h4 id="ontology-of-cardiovascular-drug-adverse-events-ocvdae">Ontology of Cardiovascular Drug Adverse Events (OCVDAE)<a class="headerlink" href="#ontology-of-cardiovascular-drug-adverse-events-ocvdae" title="Permanent link">&para;</a></h4>
+<p><strong>Description:</strong> A biomedical ontology of cardiovascular drug–associated adverse events.<br />
+<strong>Disease area:</strong> Cardiovascular<br />
+<strong>Use Cases:</strong> One novel study of the OCVDAE project is the development of the PCR method. Specifically, an AE-specific drug class effect is defined to exist when all the drugs (drug chemical ingredients or drug products) in a drug class are associated with an AE, which is formulated as a proportional class level ratio (“PCR”) = 1. See more information in the paper: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5653862/. This project may be inactive, the last GitHub commit was in 2019.<br />
+<strong>GitHub repo:</strong> https://github.com/OCVDAE/OCVDAE<br />
+<strong>Website:</strong> https://bioportal.bioontology.org/ontologies/OCVDAE<br />
+<strong>Open:</strong> yes</p>
+<h4 id="ontology-for-general-medical-science-ogms">Ontology for General Medical Science (OGMS)<a class="headerlink" href="#ontology-for-general-medical-science-ogms" title="Permanent link">&para;</a></h4>
+<p><strong>Description:</strong> An ontology of entities involved in a clinical encounter.<br />
+<strong>Use Cases:</strong> Provides a formal theory of disease that can be further elaborated by specific disease ontologies. It is intended to be used as a upper level ontology for other disease ontologies. Used by <a href="https://github.com/OpenLHS/CVDO">Cardiovascular Disease Ontology</a>.<br />
+<strong>GitHub repo:</strong> https://github.com/OGMS/ogms<br />
+<strong>OBO Foundry webpage:</strong> http://obofoundry.org/ontology/ogms.html<br />
+<strong>Open:</strong> Yes</p>
+<h4 id="ontology-for-genetic-susceptibility-factor-ogsf">Ontology for Genetic Susceptibility Factor (OGSF)<a class="headerlink" href="#ontology-for-genetic-susceptibility-factor-ogsf" title="Permanent link">&para;</a></h4>
+<p><strong>Description:</strong> An application ontology to represent genetic susceptibility to a specific disease, adverse event, or a pathological process.<br />
+<strong>Use Cases:</strong> Modeling genetic susceptibility to vaccine adverse events.<br />
+<strong>GitHub repo:</strong> https://github.com/linikujp/OGSF<br />
+<strong>OBO Foundry webpage:</strong> http://obofoundry.org/ontology/ogsf.html<br />
+<strong>Open:</strong> Yes</p>
+<h4 id="ontology-of-glucose-metabolism-disorder-ogmd">Ontology of Glucose Metabolism Disorder (OGMD)<a class="headerlink" href="#ontology-of-glucose-metabolism-disorder-ogmd" title="Permanent link">&para;</a></h4>
+<p><strong>Description:</strong> Represents glucose metabolism disorder and diabetes disease names, phenotypes, and their classifications.<br />
+<strong>Disease area:</strong> Metabolic disorders<br />
+<strong>Use Cases:</strong> Still under development (last verssion released in BioPortal was in 2021) but there is little information about its usage online.<br />
+<strong>Website:</strong> https://bioportal.bioontology.org/ontologies/OGMD<br />
+<strong>Open:</strong> Yes</p>
+<h4 id="ontology-of-language-disorder-in-autism-lda">Ontology of Language Disorder in Autism (LDA)<a class="headerlink" href="#ontology-of-language-disorder-in-autism-lda" title="Permanent link">&para;</a></h4>
+<p><strong>Description:</strong> An ontology assembled from a set of language terms mined from the autism literature.<br />
+<strong>Disease area:</strong> Austism<br />
+<strong>Use Cases:</strong> This has not been released since 2008 and looks like it is inactive.<br />
+<strong>Website:</strong> https://bioportal.bioontology.org/ontologies/LDA<br />
+<strong>Open:</strong> Yes</p>
+<h4 id="the-oral-health-and-disease-ontology-ohd">The Oral Health and Disease Ontology (OHD)<a class="headerlink" href="#the-oral-health-and-disease-ontology-ohd" title="Permanent link">&para;</a></h4>
+<p><strong>Description:</strong> Represents the content of dental practice health records and is intended to be further developed for use in translational medicine. OHD is structured using BFO (Basic Formal Ontology) and uses terms from many ontologies, NCBITaxon, and a subset of terms from the CDT (Current Dental Terminology).<br />
+<strong>Disease area:</strong> Oral health and disease<br />
+<strong>Use Cases:</strong> Used to represent the content of dental practice health records and is intended to be further developed for use in translation medicine. Appears to be inactive.<br />
+<strong>OBO Foundry webpage:</strong> http://www.obofoundry.org/ontology/ohd.html<br />
+<strong>Open:</strong> Yes</p>
+<h4 id="orphanet-ordo">Orphanet (ORDO)<a class="headerlink" href="#orphanet-ordo" title="Permanent link">&para;</a></h4>
+<p><strong>Description:</strong> The portal for rare diseases and orphan drugs. Contains a structured vocabulary for rare diseases capturing relationships between diseases, genes, and other relevant features, jointly developed by Orphanet and the EBI. It contains information on nearly 10,000 cancers and related diseases, 8,000 single agents and combination therapies, and a wide range of other topics related to cancer and biomedical research.<br />
+<strong>Disease area:</strong> Rare diseases<br />
+<strong>Use Cases:</strong> Used by rare disease research and clinical community. Integrated into the Mondo disease ontology, aligned with OMIM.<br />
+<strong>Website:</strong> https://www.orpha.net/consor/cgi-bin/index.php<br />
+<strong>Open:</strong> Yes</p>
+<h4 id="parkinson-disease-ontology-pdo">Parkinson Disease ontology (PDO)<a class="headerlink" href="#parkinson-disease-ontology-pdo" title="Permanent link">&para;</a></h4>
+<p><strong>Description:</strong> A comprehensive semantic framework with a subclass-based taxonomic hierarchy, covering the whole breadth of the Parkinson disease knowledge domain from major biomedical concepts to different views on disease features held by molecular biologists, clinicians, and drug developers.<br />
+<strong>Disease area:</strong> Parkinson disease<br />
+<strong>Use Cases:</strong> This resource has been created for use in the IMI-funded <a href="https://www.aetionomy.org">AETIONOMY project</a>. Last release was in 2015, may be inactive.
+<strong>Website:</strong> https://bioportal.bioontology.org/ontologies/PDON<br />
+<strong>Open:</strong> Yes</p>
+<h4 id="pathogenic-disease-ontology-pdo">Pathogenic Disease Ontology (PDO)<a class="headerlink" href="#pathogenic-disease-ontology-pdo" title="Permanent link">&para;</a></h4>
+<p><strong>Description:</strong> Provides information on infectious diseases, disease synonyms, transmission pathways, disease agents, affected populations, and disease properties. Diseases are grouped into syndromic disease categories, organisms are structured hierarchically, and both disease transmission and relevant disease properties are searchable.<br />
+<strong>Disease area:</strong> human infectious diseases caused by microbes and the diseases that is related to microbial infection.<br />
+<strong>Use Cases:</strong> Has not been released since 2016 and may be inactive.<br />
+<strong>Website:</strong> https://bioportal.bioontology.org/ontologies/PDO<br />
+<strong>Open:</strong> Yes.</p>
+<h4 id="polycystic-ovary-syndrome-knowledgebase-pcoskb">PolyCystic Ovary Syndrome Knowledgebase (PCOSKB)<a class="headerlink" href="#polycystic-ovary-syndrome-knowledgebase-pcoskb" title="Permanent link">&para;</a></h4>
+<p><strong>Description:</strong> Comprises genes, single nucleotide polymorphisms, diseases, gene ontology terms, and biochemical pathways associated with polycystic ovary syndrome, a major cause of female subfertility worldwide.<br />
+<strong>Disease area:</strong> polycystic ovary syndrome
+<strong>Use Cases:</strong> Ontology underlying the <a href="http://pcoskb.bicnirrh.res.in/index.php">Polycystic Ovary Syndrome Knowledgebase</a>, a manually curated knowledgebase on PCOS.<br />
+<strong>Website:</strong> http://pcoskb.bicnirrh.res.in/go_d.php<br />
+<strong>Open:</strong> Yes</p>
+<h4 id="rat-disease-ontology-rdo">Rat Disease Ontology (RDO)<a class="headerlink" href="#rat-disease-ontology-rdo" title="Permanent link">&para;</a></h4>
+<p><strong>Description:</strong> Provides the foundation for ten comprehensive disease area–related data sets at the Rat Genome Database Disease Portals.<br />
+<strong>Disease area:</strong> Broad coverage including animal diseases, infectious diseases, chemically-induced disorders, occupational diseases, wounds and injuries and more.<br />
+<strong>Use Cases:</strong> Developed for use with the <a href="https://rgd.mcw.edu/rgdweb/homepage/">Rat Genome Database</a> Disease Portals.<br />
+<strong>Website:</strong> https://rgd.mcw.edu/rgdweb/ontology/view.html?acc_id=DOID:4
+<strong>Open:</strong> Yes</p>
+<h4 id="removable-partial-denture-ontology-rpdo">Removable Partial Denture Ontology (RPDO)<a class="headerlink" href="#removable-partial-denture-ontology-rpdo" title="Permanent link">&para;</a></h4>
+<p><strong>Description:</strong> Represents knowledge of a patient’s oral conditions and denture component parts, originally developed to create a clinician decision support model.<br />
+<strong>Disease area:</strong> Oral health and dentures<br />
+<strong>Use Cases:</strong> A paper was published on this in 2016 but it does not appear any other information is available about this ontology on the website, presumably it is an inactive project.<br />
+<strong>Publication:</strong> https://www.nature.com/articles/srep27855<br />
+<strong>Open:</strong> No</p>
+<h4 id="resource-of-asian-primary-immunodeficiency-diseases-rpo">Resource of Asian Primary Immunodeficiency Diseases (RPO)<a class="headerlink" href="#resource-of-asian-primary-immunodeficiency-diseases-rpo" title="Permanent link">&para;</a></h4>
+<p><strong>Description:</strong> Represents observed phenotypic terms, sequence variations, and messenger RNA and protein expression levels of all genes involved in primary immunodeficiency diseases.
+<strong>Disease area:</strong> Primary immunodeficiency diseases
+<strong>Use Cases:</strong> This terminology is used in a freely accessible, dynamic and integrated database for primary immunodeficiency diseases (PID) called Resource of Asian Primary Immunodeficiency Diseases (RAPID), which is available <a href="http://web16.kazusa.or.jp/rapid/">here</a>.
+<strong>Publication:</strong> https://academic.oup.com/nar/article/37/suppl_1/D863/1004993
+<strong>Open:</strong> Yes</p>
+<h4 id="sickle-cell-disease-ontology-scdo">Sickle Cell Disease Ontology (SCDO)<a class="headerlink" href="#sickle-cell-disease-ontology-scdo" title="Permanent link">&para;</a></h4>
+<p><strong>Description:</strong> SCDO establishes (a) community-standardized sickle cell disease terms and descriptions, (b) canonical and hierarchical representation of knowledge on sickle cell disease, and (c) links to other ontologies and bodies of work.<br />
+<strong>Disease area:</strong> Sickle Cell Disease (SCD).
+<strong>Use Cases:</strong> SCDO is intended to be a comprehensive collection of knowledge on SCD, facilitate exploration of new scientific questions and ideas, facilitate seamless data sharing and collaborations including meta-analysis within the SCD community, support the building of databasing and clinical informatics in SCD.<br />
+<strong>GitHub repo:</strong> https://github.com/scdodev/scdo-ontology/issues<br />
+<strong>Website:</strong> https://scdontology.h3abionet.org/<br />
+<strong>OBO Foundry webpage:</strong> http://obofoundry.org/ontology/scdo.html<br />
+<strong>Open:</strong> Yes</p>
+<h4 id="snomed-clinical-terminology-snomed-ct">SNOMED Clinical Terminology (SNOMED CT)<a class="headerlink" href="#snomed-clinical-terminology-snomed-ct" title="Permanent link">&para;</a></h4>
+<p><strong>Description:</strong> A comprehensive clinical terminology/ontology used in healthcare settings.<br />
+<strong>Disease area:</strong> Broad disease representation for human diseases.<br />
+<strong>Use Cases:</strong> Main coding system used in Electronic Health Records (EHRs).<br />
+<strong>Website:</strong> https://browser.ihtsdotools.org/?<br />
+<strong>Open:</strong> No, requires a license for usage.</p>
+<h4 id="symptom-ontology">Symptom Ontology<a class="headerlink" href="#symptom-ontology" title="Permanent link">&para;</a></h4>
+<p><strong>Description:</strong> An ontology of disease symptoms, with symptoms encompasing perceived changes in function, sensations or appearance reported by a patient indicative of a disease.<br />
+<strong>Disease area:</strong> Human diseases<br />
+<strong>Use Cases:</strong> Developed by the <a href="http://www.disease-ontology.org/">Disease Ontology (DO)</a> team and used for describing symptoms of human diseases in the DO.<br />
+<strong>Website:</strong> http://symptomontologywiki.igs.umaryland.edu/mediawiki/index.php/Main_Page<br />
+<strong>OBO Foundry webpage:</strong> http://obofoundry.org/ontology/symp.html<br />
+<strong>Open:</strong> Yes</p>
+<h4 id="unified-medical-language-system">Unified Medical Language System<a class="headerlink" href="#unified-medical-language-system" title="Permanent link">&para;</a></h4>
+<p><strong>Description:</strong> The UMLS integrates and distributes key terminology, classification and coding standards, and associated resources to promote creation of more effective and interoperable biomedical information systems and services.<br />
+<strong>Disease area:</strong> Broad coverage<br />
+<strong>Use Cases:</strong> Healthcare settings including electronic health records and HL7.<br />
+<strong>Website:</strong> https://www.nlm.nih.gov/research/umls/index.html<br />
+<strong>Open:</strong> Yes</p>
+<hr />
+<h3 id="phenotype-ontologies">Phenotype ontologies<a class="headerlink" href="#phenotype-ontologies" title="Permanent link">&para;</a></h3>
+<hr />
+<h3 id="phenotype-summary-table">Phenotype Summary Table<a class="headerlink" href="#phenotype-summary-table" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Species Area</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ascomycete phenotype ontology (APO)</td>
+<td>Ascomycota</td>
+</tr>
+<tr>
+<td>C. elegans phenotype (wbphenotype)</td>
+<td>C elegans</td>
+</tr>
+<tr>
+<td>Dictyostelium discoideum phenotype ontology (ddpheno)</td>
+<td>Dictyostelium discoideum</td>
+</tr>
+<tr>
+<td>Drosophila Phenotype Ontology (DPO)</td>
+<td>Drosophila</td>
+</tr>
+<tr>
+<td>Flora Phenotype Ontology (FLOPO)</td>
+<td>Viridiplantae</td>
+</tr>
+<tr>
+<td>Fission Yeast Phenotype Ontology (FYPO)</td>
+<td>S. pombe</td>
+</tr>
+<tr>
+<td>Human Phenotype Ontology (HPO)</td>
+<td>Human</td>
+</tr>
+<tr>
+<td>HPO - ORDO Ontological Module (HOOM)</td>
+<td>Human</td>
+</tr>
+<tr>
+<td>Mammalian Phenotype Ontology (MP)</td>
+<td>Mammals</td>
+</tr>
+<tr>
+<td>Ontology of Microbial Phenotypes (OMP)</td>
+<td>Microbe</td>
+</tr>
+<tr>
+<td>Ontology of Prokaryotic Phenotypic and Metabolic Characters</td>
+<td>Prokaryotes</td>
+</tr>
+<tr>
+<td>Pathogen Host Interaction Phenotype Ontology</td>
+<td>pathogens</td>
+</tr>
+<tr>
+<td>Planarian Phenotype Ontology (PLANP)</td>
+<td>Schmidtea mediterranea</td>
+</tr>
+<tr>
+<td>Plant Trait Ontology (TO)</td>
+<td>Viridiplantae</td>
+</tr>
+<tr>
+<td>Plant Phenology Ontology</td>
+<td>Plants</td>
+</tr>
+<tr>
+<td>Unified Phenotype Ontology (uPheno)</td>
+<td>Cross-species coverage</td>
+</tr>
+<tr>
+<td>Xenopus Phenotype Ontology (XPO)</td>
+<td>Xenopus</td>
+</tr>
+<tr>
+<td>Zebrafish Phenotype Ontology (ZP)</td>
+<td>Zebrafish</td>
+</tr>
+</tbody>
+</table>
+<h4 id="ascomycete-phenotype-ontology-apo">Ascomycete phenotype ontology (APO)<a class="headerlink" href="#ascomycete-phenotype-ontology-apo" title="Permanent link">&para;</a></h4>
+<p><strong>Description:</strong> A structured controlled vocabulary for the phenotypes of Ascomycete fungi.<br />
+<strong>Species:</strong> Ascomycota<br />
+<strong>GitHub repo:</strong> https://github.com/obophenotype/ascomycete-phenotype-ontology/<br />
+<strong>Webpage:</strong> http://www.yeastgenome.org/
+<strong>OBO Foundry webpage:</strong> http://obofoundry.org/ontology/wbphenotype.html<br />
+<strong>Open:</strong> Yes</p>
+<h4 id="c-elegans-phenotype-wbphenotype">C. elegans phenotype (wbphenotype)<a class="headerlink" href="#c-elegans-phenotype-wbphenotype" title="Permanent link">&para;</a></h4>
+<p><strong>Description:</strong> A structured controlled vocabulary of Caenorhabditis elegans phenotypes.<br />
+<strong>Species:</strong> C elegans<br />
+<strong>GitHub repo:</strong> https://github.com/obophenotype/c-elegans-phenotype-ontology<br />
+<strong>OBO Foundry webpage:</strong> http://obofoundry.org/ontology/wbphenotype.html<br />
+<strong>Open:</strong> Yes</p>
+<h4 id="dictyostelium-discoideum-phenotype-ontology-ddpheno">Dictyostelium discoideum phenotype ontology (ddpheno)<a class="headerlink" href="#dictyostelium-discoideum-phenotype-ontology-ddpheno" title="Permanent link">&para;</a></h4>
+<p><strong>Description:</strong> A structured controlled vocabulary of phenotypes of the slime-mould Dictyostelium discoideum.<br />
+<strong>Species:</strong> Dictyostelium discoideum<br />
+<strong>GitHub repo:</strong> https://github.com/obophenotype/dicty-phenotype-ontology/issues<br />
+<strong>Webpage:</strong> http://dictybase.org/<br />
+<strong>OBO Foundry webpage:</strong> http://obofoundry.org/ontology/ddpheno.html<br />
+<strong>Open:</strong> Yes</p>
+<h4 id="drosophila-phenotype-ontology-dpo">Drosophila Phenotype Ontology (DPO)<a class="headerlink" href="#drosophila-phenotype-ontology-dpo" title="Permanent link">&para;</a></h4>
+<p><strong>Description:</strong> An ontology of commonly encountered and/or high level Drosophila phenotypes.<br />
+<strong>Species:</strong> Drosophila<br />
+<strong>GitHub repo:</strong> https://github.com/obophenotype/c-elegans-phenotype-ontology<br />
+<strong>Webpage:</strong> http://purl.obolibrary.org/obo/fbcv<br />
+<strong>OBO Foundry webpage:</strong> http://obofoundry.org/ontology/dpo.html<br />
+<strong>Open:</strong> Yes</p>
+<h4 id="flora-phenotype-ontology-flopo">Flora Phenotype Ontology (FLOPO)<a class="headerlink" href="#flora-phenotype-ontology-flopo" title="Permanent link">&para;</a></h4>
+<p><strong>Description:</strong> Traits and phenotypes of flowering plants occurring in digitized Floras.<br />
+<strong>Species:</strong> Viridiplantae<br />
+<strong>GitHub repo:</strong> https://github.com/flora-phenotype-ontology/flopoontology/<br />
+<strong>OBO Foundry webpage:</strong> http://obofoundry.org/ontology/flopo.html<br />
+<strong>Open:</strong> Yes</p>
+<h4 id="fission-yeast-phenotype-ontology-fypo">Fission Yeast Phenotype Ontology (FYPO)<a class="headerlink" href="#fission-yeast-phenotype-ontology-fypo" title="Permanent link">&para;</a></h4>
+<p><strong>Description:</strong> FYPO is a formal ontology of phenotypes observed in fission yeast.<br />
+<strong>Species:</strong> S. pombe<br />
+<strong>GitHub repo:</strong> https://github.com/pombase/fypo<br />
+<strong>OBO Foundry webpage:</strong> http://obofoundry.org/ontology/fypo.html<br />
+<strong>Open:</strong> Yes</p>
+<h4 id="human-phenotype-ontology-hpo">Human Phenotype Ontology (HPO)<a class="headerlink" href="#human-phenotype-ontology-hpo" title="Permanent link">&para;</a></h4>
+<p><strong>Description:</strong> HPO provides a standardized vocabulary of phenotypic abnormalities encountered in human disease. Each term in the HPO describes a phenotypic abnormality.<br />
+<strong>Species:</strong> Human<br />
+<strong>GitHub repo:</strong> https://github.com/obophenotype/human-phenotype-ontology<br />
+<strong>Website:</strong> https://hpo.jax.org/app/<br />
+<strong>OBO Foundry webpage:</strong> http://obofoundry.org/ontology/hp.html<br />
+<strong>Open:</strong> yes</p>
+<h4 id="hpo-ordo-ontological-module-hoom">HPO - ORDO Ontological Module (HOOM)<a class="headerlink" href="#hpo-ordo-ontological-module-hoom" title="Permanent link">&para;</a></h4>
+<p><strong>Description:</strong> Orphanet provides phenotypic annotations of the rare diseases in the Orphanet nomenclature using the Human Phenotype Ontology (HPO). HOOM is a module that qualifies the annotation between a clinical entity and phenotypic abnormalities according to a frequency and by integrating the notion of diagnostic criterion. In ORDO a clinical entity is either a group of rare disorders, a rare disorder or a subtype of disorder. The phenomes branch of ORDO has been refactored as a logical import of HPO, and the HPO-ORDO phenotype disease-annotations have been provided in a series of triples in OBAN format in which associations, frequency and provenance are modeled. HOOM is provided as an OWL (Ontologies Web Languages) file, using OBAN, the Orphanet Rare Disease Ontology (ORDO), and HPO ontological models. HOOM provides extra possibilities for researchers, pharmaceutical companies and others wishing to co-analyse rare and common disease phenotype associations, or re-use the integrated ontologies in genomic variants repositories or match-making tools.<br />
+<strong>Species:</strong> Human<br />
+<strong>Website:</strong> http://www.orphadata.org/cgi-bin/img/PDF/WhatIsHOOM.pdf<br />
+<strong>BioPortal:</strong> https://bioportal.bioontology.org/ontologies/HOOM<br />
+<strong>Open:</strong> yes</p>
+<h4 id="mammalian-phenotype-ontology-mp">Mammalian Phenotype Ontology (MP)<a class="headerlink" href="#mammalian-phenotype-ontology-mp" title="Permanent link">&para;</a></h4>
+<p><strong>Description:</strong> Standard terms for annotating mammalian phenotypic data.<br />
+<strong>Species:</strong> Mammals (main focus is on mouse and rodents)<br />
+<strong>GitHub repo:</strong> https://github.com/obophenotype/mammalian-phenotype-ontology<br />
+<strong>Website:</strong> http://www.informatics.jax.org/searches/MP_form.shtml<br />
+<strong>OBO Foundry webpage:</strong> http://obofoundry.org/ontology/mp.html<br />
+<strong>Open:</strong> Yes</p>
+<h4 id="ontology-of-microbial-phenotypes-omp">Ontology of Microbial Phenotypes (OMP)<a class="headerlink" href="#ontology-of-microbial-phenotypes-omp" title="Permanent link">&para;</a></h4>
+<p><strong>Description:</strong> An ontology of phenotypes covering microbes.<br />
+<strong>Species:</strong> microbes<br />
+<strong>GitHub repo:</strong> https://github.com/microbialphenotypes/OMP-ontology
+<strong>Website:</strong> http://microbialphenotypes.org
+<strong>OBO Foundry webpage:</strong> http://obofoundry.org/ontology/omp.html
+<strong>Open:</strong> Yes</p>
+<h4 id="ontology-of-prokaryotic-phenotypic-and-metabolic-characters">Ontology of Prokaryotic Phenotypic and Metabolic Characters<a class="headerlink" href="#ontology-of-prokaryotic-phenotypic-and-metabolic-characters" title="Permanent link">&para;</a></h4>
+<p><strong>Description:</strong> An ontology of phenotypes covering microbes.<br />
+<strong>Species:</strong> Prokaryotes
+<strong>GitHub repo:</strong> https://github.com/microbialphenotypes/OMP-ontology/issues<br />
+<strong>Website:</strong> http://microbialphenotypes.org/<br />
+<strong>OBO Foundry webpage:</strong> http://obofoundry.org/ontology/omp.html<br />
+<strong>Open:</strong> Yes</p>
+<h4 id="pathogen-host-interaction-phenotype-ontology">Pathogen Host Interaction Phenotype Ontology<a class="headerlink" href="#pathogen-host-interaction-phenotype-ontology" title="Permanent link">&para;</a></h4>
+<p><strong>Description:</strong> PHIPO is a formal ontology of species-neutral phenotypes observed in pathogen-host interactions.<br />
+<strong>Species:</strong> pathogens<br />
+<strong>GitHub repo:</strong> https://github.com/PHI-base/phipo<br />
+<strong>Website:</strong> http://www.phi-base.org<br />
+<strong>OBO Foundry webpage:</strong> http://obofoundry.org/ontology/phipo.html<br />
+<strong>Open:</strong> Yes</p>
+<h4 id="planarian-phenotype-ontology-planp">Planarian Phenotype Ontology (PLANP)<a class="headerlink" href="#planarian-phenotype-ontology-planp" title="Permanent link">&para;</a></h4>
+<p><strong>Description:</strong> Planarian Phenotype Ontology is an ontology of phenotypes observed in the planarian Schmidtea mediterranea.<br />
+<strong>Species:</strong> Schmidtea mediterranea<br />
+<strong>GitHub repo:</strong> https://github.com/obophenotype/planarian-phenotype-ontology<br />
+<strong>OBO Foundry webpage:</strong> http://obofoundry.org/ontology/planp.html<br />
+<strong>Open:</strong> Yes</p>
+<h4 id="plant-trait-ontology-to">Plant Trait Ontology (TO)<a class="headerlink" href="#plant-trait-ontology-to" title="Permanent link">&para;</a></h4>
+<p><strong>Description:</strong> A controlled vocabulary of describe phenotypic traits in plants.<br />
+<strong>Species:</strong> Viridiplantae<br />
+<strong>GitHub repo:</strong> https://github.com/Planteome/plant-trait-ontology/<br />
+<strong>OBO Foundry webpage:</strong> http://obofoundry.org/ontology/to.html<br />
+<strong>Open:</strong> Yes</p>
+<h4 id="plant-phenology-ontology">Plant Phenology Ontology<a class="headerlink" href="#plant-phenology-ontology" title="Permanent link">&para;</a></h4>
+<p><strong>Description:</strong> An ontology for describing the phenology of individual plants and populations of plants, and for integrating plant phenological data across sources and scales.<br />
+<strong>Species:</strong> Plants<br />
+<strong>GitHub repo:</strong> https://github.com/PlantPhenoOntology/PPO<br />
+<strong>OBO Foundry webpage:</strong> http://obofoundry.org/ontology/ppo.html<br />
+<strong>Open:</strong> Yes</p>
+<h4 id="unified-phenotype-ontology-upheno">Unified Phenotype Ontology (uPheno)<a class="headerlink" href="#unified-phenotype-ontology-upheno" title="Permanent link">&para;</a></h4>
+<p><strong>Description:</strong> The uPheno ontology integrates multiple phenotype ontologies into a unified cross-species phenotype ontology.<br />
+<strong>Species:</strong> Cross-species coverage<br />
+<strong>GitHub repo:</strong> https://github.com/obophenotype/upheno<br />
+<strong>OBO Foundry webpage:</strong> http://obofoundry.org/ontology/upheno.html<br />
+<strong>Open:</strong> Yes</p>
+<h4 id="xenopus-phenotype-ontology-xpo">Xenopus Phenotype Ontology (XPO)<a class="headerlink" href="#xenopus-phenotype-ontology-xpo" title="Permanent link">&para;</a></h4>
+<p><strong>Description:</strong> XPO represents anatomical, cellular, and gene function phenotypes occurring throughout the development of the African frogs Xenopus laevis and tropicalis.<br />
+<strong>Species:</strong> Xenopus<br />
+<strong>GitHub repo:</strong> https://github.com/obophenotype/xenopus-phenotype-ontology<br />
+<strong>OBO Foundry webpage:</strong> http://obofoundry.org/ontology/xpo.html<br />
+<strong>Open:</strong> Yes</p>
+<h4 id="zebrafish-phenotype-ontology-zp">Zebrafish Phenotype Ontology (ZP)<a class="headerlink" href="#zebrafish-phenotype-ontology-zp" title="Permanent link">&para;</a></h4>
+<p><strong>Description:</strong> The Zebrafish Phenotype Ontology formally defines all phenotypes of the Zebrafish model organism.<br />
+<strong>Species:</strong> Zebrafish<br />
+<strong>GitHub repo:</strong> https://github.com/obophenotype/zebrafish-phenotype-ontology<br />
+<strong>OBO Foundry webpage:</strong> http://obofoundry.org/ontology/zp.html<br />
+<strong>Open:</strong> Yes</p>
+<h3 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://www.annualreviews.org/doi/abs/10.1146/annurev-biodatasci-080917-013459?journalCode=biodatasci">A Census of Disease Ontologies</a> Melissa A. Haendel, Julie A. McMurry, Rose Relevo, Christopher J. Mungall, Peter N. Robinson, Christopher G. Chute
+  Annual Review of Biomedical Data Science 2018 1:1, 305-331</li>
+<li><a href="https://github.com/callahantiff/OMOP2OBO">OMOP2OBO repository</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.action.edit", "search.suggest", "search.highlight", "content.code.annotation", "content.code.copy", "content.code.select"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@8.5.1/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>
