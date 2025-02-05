@@ -1,4 +1,4 @@
-# Embed YouTube video into a OBOOK pagetoid
+# Embed YouTube video into a OBOOK page
 
 This guide explains how to embed a YouTube video into a page in this OBO Academy material. Example, see the videos on the [Contributing to OBO Ontologies page](https://oboacademy.github.io/obook/lesson/contributing-to-obo-ontologies/#tutorials).
 
