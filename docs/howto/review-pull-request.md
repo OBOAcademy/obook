@@ -55,3 +55,13 @@ In many cases, we may not have the time to perform a proper code review. In that
 1. **Random code sampling**: Instead of trying to read every line, pick a few sections of code at random to review. Pay attention to the cleanliness of the code, and see if there are any glaring issues or departures from the project's coding conventions.
 1. **Check automated tests and results**: Review the tests that have been added or modified. Check the results of the tests and automated build processes, if available. Even in a quick review, the status of the tests can provide useful information about the quality of the changes.
 1. **Provide high-level feedback**: Based on your quick review, provide high-level feedback. This could include praising good practices you've noticed, pointing out major concerns or areas that seem off, or simply acknowledging the work with a comment.
+
+## Video explanations
+
+### How to review an Obsoletion PR in Mondo
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/h7NwC3LG8FI?si=55ktNL6U7V7OQX7_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### How to review a merge PR in Mondo
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XElHQ6knEpw?si=84SnvIrpf17IOsD8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
