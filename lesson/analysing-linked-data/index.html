@@ -1,0 +1,6496 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://oboacademy.github.io/obook/lesson/analysing-linked-data/">
+      
+      
+        <link rel="prev" href="../../tutorial/project-ontology-development/">
+      
+      
+        <link rel="next" href="../automating-ontology-workflows/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>Analysing Linked Data - OBO Semantic Engineering Training</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bcfcd587.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#analysing-linked-data-fundamentals" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="OBO Semantic Engineering Training" class="md-header__button md-logo" aria-label="OBO Semantic Engineering Training" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OBO Semantic Engineering Training
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Analysing Linked Data
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/OBOAcademy/obook/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="OBO Semantic Engineering Training" class="md-nav__button md-logo" aria-label="OBO Semantic Engineering Training" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    OBO Semantic Engineering Training
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/OBOAcademy/obook/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About the course
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting started with learning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview of lessons and tutorials
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contribute to the course
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Courses
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Courses
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../courses/icbo2024/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ICBO 2024 Tutorial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../courses/icbo2023/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ICBO 2023 Tutorial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../courses/icbo2022/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ICBO 2022 Tutorial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../courses/icbo2021/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ICBO 2021 Tutorial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../courses/monarch-obo-training/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Monarch Ontology Training
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../courses/ontology-summit-2023/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology Summit 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Pathways
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Pathways
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pathways/pathways/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What is a pathway?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pathways/early-career-data-scientist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Early Career Data Scientist
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pathways/ontology-curator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology Curator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pathways/ontology-curator-go-style/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology Curator GO-style
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pathways/ontology-curator-obi-style/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology Curator OBI-style
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pathways/ontology-engineer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology Engineer/Developer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pathways/ontology-contributor/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology Contributor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Lessons
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Lessons
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contributing-to-obo-ontologies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contributing to OBO ontologies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ontology-pipelines/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology Pipelines with ROBOT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/project-ontology-development/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project Ontology Development
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Analysing Linked Data
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Analysing Linked Data
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#warning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Warning
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preparation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Preparation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning objectives
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tutorials" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tutorials
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tutorials">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-linked-data-landscape-from-an-obo-perspective-standards-services-and-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Linked Data landscape from an OBO perspective: Standards, Services and Tools
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Linked Data landscape from an OBO perspective: Standards, Services and Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flagship-projects-of-the-wider-semantic-web-community" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flagship projects of the wider Semantic Web community
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#where-the-obo-and-semantic-web-communities-are-slightly-at-odds" class="md-nav__link">
+    <span class="md-ellipsis">
+      Where the OBO and Semantic Web communities are slightly at odds
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#useful-tools-for-biomedical-research" class="md-nav__link">
+    <span class="md-ellipsis">
+      Useful tools for biomedical research
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Useful tools for biomedical research">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#which-biomedical-ontologies-should-we-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      Which biomedical ontologies should we use?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-interesting-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other interesting links
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basic-linked-data-and-semantic-web-concepts-for-the-semantic-data-engineer-in-the-biomedical-domain" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Linked data and Semantic Web Concepts for the Semantic Data Engineer in the Biomedical Domain
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic Linked data and Semantic Web Concepts for the Semantic Data Engineer in the Biomedical Domain">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-way-to-refer-to-things-including-entities-and-relations-in-a-global-namespace" class="md-nav__link">
+    <span class="md-ellipsis">
+      A way to refer to things (including entities and relations) in a global namespace.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lots-loaaaads-of-ways-to-make-statements-about-things" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lots (loaaaads!) of ways to make statements about things.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#collections-of-statements-about-things-that-somehow-belong-together-and-provide-some-meaning-or-context-for-those-things" class="md-nav__link">
+    <span class="md-ellipsis">
+      Collections of statements about things that somehow belong together and provide some meaning, or context, for those things.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tools-that-do-something-useful-with-these-collections-of-statements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tools that do something useful with these collections of statements.
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-i-say-mendelian-disease-i-mean-httppurlobolibraryorgobomondo_0003847" class="md-nav__link">
+    <span class="md-ellipsis">
+      When I say "Mendelian Disease" I mean http://purl.obolibrary.org/obo/MONDO_0003847
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="When I say "Mendelian Disease" I mean http://purl.obolibrary.org/obo/MONDO_0003847">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-advent-of-the-curie-and-the-bane-of-the-curie-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      The advent of the CURIE and the bane of the CURIE map
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#semantic-web-in-the-biomedical-domain-success-stories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Semantic Web in the biomedical domain: Success stories
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Semantic Web in the biomedical domain: Success stories">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#light-semantics-for-data-aggregation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Light Semantics for data aggregation.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#heavy-semantics-for-ontology-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Heavy Semantics for ontology management.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#globally-unique-identifiers-for-data-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Globally unique identifiers for data integration.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#coordinated-development-of-mutually-compatible-ontologies-across-the-biomedical-domain-the-open-biological-and-biomedical-ontologies-obo-foundry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Coordinated development of mutually compatible ontologies across the biomedical domain: The Open Biological and Biomedical Ontologies (OBO) Foundry.
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#semantic-web-and-linked-data-things-you-should-have-heard-about" class="md-nav__link">
+    <span class="md-ellipsis">
+      Semantic Web and Linked Data: Things you should have heard about
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-ecosystem-of-linked-data-and-semantic-web-standards-technologies-and-research-areas" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Ecosystem of Linked Data and Semantic Web: Standards, Technologies and Research Areas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typical-jobs-of-semantic-data-engineers-in-the-biomedical-domain" class="md-nav__link">
+    <span class="md-ellipsis">
+      Typical Jobs of Semantic Data Engineers in the biomedical domain
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Typical Jobs of Semantic Data Engineers in the biomedical domain">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#finding-the-right-ontologies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Finding the right ontologies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#finding-the-right-data-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Finding the right data sources
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extending-existing-ontologies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extending existing ontologies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mapping-data-into-ontologiesknowledge-graphs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mapping data into ontologies/knowledge graphs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-application-ontologies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Build application ontologies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#leverage-ontologies-and-knowledge-graphs-for-you-data-analysis-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Leverage ontologies and knowledge graphs for you data analysis problems
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-materials-and-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional materials and resources
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contributors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contributors
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../automating-ontology-workflows/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Automating Ontology Workflows
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../developing-an-obo-ontology/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Developing an OBO Ontology
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ontology-design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology Design
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../templates-for-obo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Templates for OBO ontologies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ontology-fundamentals/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology Fundamentals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modelling-with-object-properties/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modelling with Object Properties
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ontology-term-use/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology Term Use
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rdf/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RDF Fundamentals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../entity-matching/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semantic Entity Matching
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../using-disease-and-phenotype-ontologies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Disease and Phenotype Ontologies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phenotype-data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic concepts of phenotype data and ontologies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hackathon/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hacking the OBOOK
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-hands-on/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Hands on with Ontologies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chatgpt-ontology-curation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leveraging ChatGPT for ontology curation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linkml-helps-with-ontology-use/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using Ontologies in Practice--LinkML can help
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../licensing-data-and-software/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Licensing Data and Software
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vocabularies-for-bioinformatics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vocabularies for bioinformatics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../synonyms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    An Introduction to Synonyms in OBO Ontologies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Lessons In Development
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Lessons In Development
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../developing-application-ontologies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Developing an Application Ontology
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ontology-development/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology Development
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../semantic-database-fundamentals/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semantic Database Fundamentals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tutorials
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Tutorials
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_1" id="__nav_9_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Protege
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_1">
+            <span class="md-nav__icon md-icon"></span>
+            Protege
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/basic-dl-query/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DL queries
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/disjointness/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Disjointness
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_2" id="__nav_9_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ontology Pipelines - ODK, ROBOT, etc
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_2">
+            <span class="md-nav__icon md-icon"></span>
+            Ontology Pipelines - ODK, ROBOT, etc
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/robot-tutorial-1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ROBOT Mini-Tutorial 1 - Convert, Extract and Template
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/robot-tutorial-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ROBOT Mini-Tutorial 2 - Annotate, Merge, Reason and Diff
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/robot-tutorial-qc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ROBOT Mini-Tutorial QC - Quality Control with report, verify and query
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/sparql-report-robot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ROBOT - Generating SPARQL table reports
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/sparql-report-odk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ODK - Adding SPARQL table reports
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/setting-up-project-odk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ODK - Getting started with your own repo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/odk-tutorial-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ODK - 20 minute complete walk-through
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/custom-qc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ODK - Adding custom Quality Check
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/managing-dynamic-imports-odk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ODK - Managing imports
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/managing-ontology-releases-odk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ODK - Managing ontology releases
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/migrating-ontology-to-odk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ODK - Migrating to ODK
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/odk-toolbox/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ODK - Using the ODK Toolbox
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_3" id="__nav_9_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Templates
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_3">
+            <span class="md-nav__icon md-icon"></span>
+            Templates
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/dosdp-overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting started with DOSDP templates
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/dosdp-template/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DOSDP Templates Basic Tutorial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/dosdp-odk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction to Managing DOSDP Templates in ODK
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_4" id="__nav_9_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Git, GitHub and Collaborative Workflows
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_4">
+            <span class="md-nav__icon md-icon"></span>
+            Git, GitHub and Collaborative Workflows
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/github-fundamentals/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GitHub Fundamentals for OBO Engineers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/github-issues/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GitHub Issue for OBO Engineers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/managing-ontology-project/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Managing OBO ontology projects
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/pull-requests/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pull requests
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_5" id="__nav_9_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    OntoGPT
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_5">
+            <span class="md-nav__icon md-icon"></span>
+            OntoGPT
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/ontogpt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OntoGPT Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/ontogpt-workshop/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OntoGPT in Practice
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_6" id="__nav_9_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Dealing with Semantic Data
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_6">
+            <span class="md-nav__icon md-icon"></span>
+            Dealing with Semantic Data
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/linking-data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    From Tables to Linked Data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/curies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Standardizing Prefixes, CURIEs, and URIs with the `curies` package
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/units/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Units of Measurement
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/sparql/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic SPARQL for OBO Engineers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/monarch-kg-neo4j-basics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic cypher on the Monarch Neo4j graph
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_7" id="__nav_9_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Command line
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_7">
+            <span class="md-nav__icon md-icon"></span>
+            Command line
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/intro-cli-1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic introduction to CLI 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/intro-cli-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic introduction to CLI 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_8" id="__nav_9_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Mappings and SSSOM
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_8">
+            <span class="md-nav__icon md-icon"></span>
+            Mappings and SSSOM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/sssom-tutorial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic Tutorial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/lexmatch-tutorial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lexical Matching with OAK Lexmatch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/sssom-toolkit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction to the SSSOM Toolkit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/biomappings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Curating Mappings with Biomappings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_9" id="__nav_9_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    General Ontology Modelling
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_9">
+            <span class="md-nav__icon md-icon"></span>
+            General Ontology Modelling
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/project-ontology-development/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project Ontology Development
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/fhkb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Family History Knowledge Base (FHKB) tutorial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_10" id="__nav_9_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Exomiser
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_10">
+            <span class="md-nav__icon md-icon"></span>
+            Exomiser
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/exomiser-tutorial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction to Exomiser
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_11" id="__nav_9_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Information Extraction
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_11">
+            <span class="md-nav__icon md-icon"></span>
+            Information Extraction
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/named-entity-recognition/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Named Entity Recognition with Gilda
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/named-entity-normalization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Named Entity Normalization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/named-entity-standardization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Named Entity Standardization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    How-to guides
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            How-to guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_1" id="__nav_10_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    General
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_1">
+            <span class="md-nav__icon md-icon"></span>
+            General
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/open-science-engineer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Maximising impact as an open science engineer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/create-ontology-from-scratch/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating an ontology from scratch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/ontology-overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create an ontology overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/prettify/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prettify Markdown Files
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/screenshot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create Screenshot and paste into an issue
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/setup-docker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Set-up docker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_2" id="__nav_10_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Protege
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_2">
+            <span class="md-nav__icon md-icon"></span>
+            Protege
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/install-protege/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Install Protégé
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/set-up-protege/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setup Protege 5.5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/installing-elk-in-protege/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installing ELK in Protege
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/idrange/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setting up your ID range
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/edit-in-protege/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Editing in Protege
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/daily-curator-workflow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Daily Workflow
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/edit-in-protege/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Edit in Protege
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/switching-ontologies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Switching Ontologies in Protege
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/protege-browse-search/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Browsing and Searching
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/create-new-term/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating New Terms in Protege
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/obsolete-term/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Obsoleting a Term
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/merge-terms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Merging Terms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/add-taxon-restrictions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Adding Taxon Restrictions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/add-new-slim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating a new Slim (under construction)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_3" id="__nav_10_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ODK
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_3">
+            <span class="md-nav__icon md-icon"></span>
+            ODK
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/setup-ontology-development-odk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Get set up for ODK-based ontology development
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/odk-setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setting up the ODK
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/odk-update/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Update to a newer ODK version
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/odk-create-repo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating a Repo with ODK
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/deal-with-large-ontologies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dealing with Large Ontologies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/update-import/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Updating Imports with ODK
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/odk-add-orcidio-module/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Import ORCIDIO
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/run-odk-with-podman/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Running ODK with podman
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/odk-migrate-to-odk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Migrate an existing ontology Repo to ODK
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_4" id="__nav_10_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Git and GitHub
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_4">
+            <span class="md-nav__icon md-icon"></span>
+            Git and GitHub
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/term-request/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Make term requests to existing ontologies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/clone-mondo-repo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Clone a repository
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/github-create-fork/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fork an ontology for editing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/github-create-pull-request/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create a GitHub Pull Request
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/change-files-pull-request/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Change a pull request
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/fixing-conflicts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fix conflicts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/github-actions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Automate tasks with GitHub actions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/revert-commit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Revert a commit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/review-pull-request/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Review a pull request
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_5" id="__nav_10_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Quality control
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_5">
+            <span class="md-nav__icon md-icon"></span>
+            Quality control
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/deploy-custom-obo-dashboard/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deploy a custom OBO-Dashboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_6" id="__nav_10_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Command line
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_6">
+            <span class="md-nav__icon md-icon"></span>
+            Command line
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/filter-text-file/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to filter a file based on another file
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_7" id="__nav_10_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Mappings
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_7">
+            <span class="md-nav__icon md-icon"></span>
+            Mappings
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/are-two-entities-the-same/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Are these two entities the same? A guide.
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/review-disease-mappings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to review disease mappings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Reference
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/glossary-of-terms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary of Terms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/frequently-used-odk-commands/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Frequently used ODK commands
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/protege-interface/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Protege Interface
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/protege-faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Protege FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/llms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LLMs for the Semantic Engineer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/formatting-license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Formatting your ontology annotations correctly
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/go-style-annotation-property-practice/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OBO-style term annotation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_9" id="__nav_11_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ontology Matching
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_9">
+            <span class="md-nav__icon md-icon"></span>
+            Ontology Matching
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/semantic-etl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semantic ETL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_10" id="__nav_11_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Git
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_10">
+            <span class="md-nav__icon md-icon"></span>
+            Git
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/github-intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intro to GitHub
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/github-desktop/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GitHub Desktop
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/git-faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/semantic-engineering-toolbox/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semantic Engineering Toolbox
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/tables-and-triples/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tables and Triples
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/reasoning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Reasoning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/ontology-curator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    A day in the life of an ontology curator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/protege-interface/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Protege interface
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_16" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_16" id="__nav_11_16_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    SPARQL
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_16">
+            <span class="md-nav__icon md-icon"></span>
+            SPARQL
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/sparql-basics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SPARQL basics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/sparql-reference/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SPARQL templates
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/managing-issues/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tools for Managing Issues
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/release-artefacts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Release Artefacts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/base-specification/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Base Release
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/synonyms-properties/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Synonym Properties
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/synonyms-types/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Synonym Types
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/synonym-validation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Synonym Validation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/mungall-blog-radar/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Monkeying around with OWL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/odk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology Development Kit (ODK)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/troublehooting-robot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Troubleshooting ROBOT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/gh-actions-errors/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Common Errors in GitHub actions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/other-resources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Other useful resources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/medical-ontology-landscape/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Medical Ontology landscape
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/wikidata/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    A reference guide to Wikidata
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/obook-maturity-indicator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OBOOK Maturity Indicator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_31" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_31" id="__nav_11_31_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ChatGPT
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_31_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_31">
+            <span class="md-nav__icon md-icon"></span>
+            ChatGPT
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/chatgpt-prompts-for-ontology-development/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leveraging ChatGPT for ontology curation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/ontology-user/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology User references
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Explanations
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            Explanations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/intro-to-ontologies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction to Ontologies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/logical-axiomatization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Logical axiomatization of classes & use of reasoning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/term-comments/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Term Comments
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/annotation-properties/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction to Annotation Properties
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/writing-good-issues/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Writing good issues
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/ontology-matching/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology Matching
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/which-ontology-to-use/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Which biomedical ontologies should we use?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/owl-format-variants/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OWL, OBO, JSON? Base, simple, full, basic? What should you use, and why?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/taxon-constraints-explainer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What are taxon constraints?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/owl-building-blocks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The logical building blocks of OWL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/subClassOf-vs-equivalentTo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SubClassOf versus EquivalentTo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/existential-restrictions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Existential restrictions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    OBOOK Editors
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            OBOOK Editors
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started-obook/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting started for OBOOK editors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../images/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to add images
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/embed-video/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to embed videos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../config/template/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    New lesson template
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teaching/case-studies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Case studies for teaching
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Outreach
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14">
+            <span class="md-nav__icon md-icon"></span>
+            Outreach
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/outreach/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Outreach materials
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#warning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Warning
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preparation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Preparation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning objectives
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tutorials" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tutorials
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tutorials">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-linked-data-landscape-from-an-obo-perspective-standards-services-and-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Linked Data landscape from an OBO perspective: Standards, Services and Tools
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Linked Data landscape from an OBO perspective: Standards, Services and Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flagship-projects-of-the-wider-semantic-web-community" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flagship projects of the wider Semantic Web community
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#where-the-obo-and-semantic-web-communities-are-slightly-at-odds" class="md-nav__link">
+    <span class="md-ellipsis">
+      Where the OBO and Semantic Web communities are slightly at odds
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#useful-tools-for-biomedical-research" class="md-nav__link">
+    <span class="md-ellipsis">
+      Useful tools for biomedical research
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Useful tools for biomedical research">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#which-biomedical-ontologies-should-we-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      Which biomedical ontologies should we use?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-interesting-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other interesting links
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basic-linked-data-and-semantic-web-concepts-for-the-semantic-data-engineer-in-the-biomedical-domain" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Linked data and Semantic Web Concepts for the Semantic Data Engineer in the Biomedical Domain
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic Linked data and Semantic Web Concepts for the Semantic Data Engineer in the Biomedical Domain">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-way-to-refer-to-things-including-entities-and-relations-in-a-global-namespace" class="md-nav__link">
+    <span class="md-ellipsis">
+      A way to refer to things (including entities and relations) in a global namespace.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lots-loaaaads-of-ways-to-make-statements-about-things" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lots (loaaaads!) of ways to make statements about things.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#collections-of-statements-about-things-that-somehow-belong-together-and-provide-some-meaning-or-context-for-those-things" class="md-nav__link">
+    <span class="md-ellipsis">
+      Collections of statements about things that somehow belong together and provide some meaning, or context, for those things.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tools-that-do-something-useful-with-these-collections-of-statements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tools that do something useful with these collections of statements.
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-i-say-mendelian-disease-i-mean-httppurlobolibraryorgobomondo_0003847" class="md-nav__link">
+    <span class="md-ellipsis">
+      When I say "Mendelian Disease" I mean http://purl.obolibrary.org/obo/MONDO_0003847
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="When I say "Mendelian Disease" I mean http://purl.obolibrary.org/obo/MONDO_0003847">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-advent-of-the-curie-and-the-bane-of-the-curie-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      The advent of the CURIE and the bane of the CURIE map
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#semantic-web-in-the-biomedical-domain-success-stories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Semantic Web in the biomedical domain: Success stories
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Semantic Web in the biomedical domain: Success stories">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#light-semantics-for-data-aggregation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Light Semantics for data aggregation.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#heavy-semantics-for-ontology-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Heavy Semantics for ontology management.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#globally-unique-identifiers-for-data-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Globally unique identifiers for data integration.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#coordinated-development-of-mutually-compatible-ontologies-across-the-biomedical-domain-the-open-biological-and-biomedical-ontologies-obo-foundry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Coordinated development of mutually compatible ontologies across the biomedical domain: The Open Biological and Biomedical Ontologies (OBO) Foundry.
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#semantic-web-and-linked-data-things-you-should-have-heard-about" class="md-nav__link">
+    <span class="md-ellipsis">
+      Semantic Web and Linked Data: Things you should have heard about
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-ecosystem-of-linked-data-and-semantic-web-standards-technologies-and-research-areas" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Ecosystem of Linked Data and Semantic Web: Standards, Technologies and Research Areas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typical-jobs-of-semantic-data-engineers-in-the-biomedical-domain" class="md-nav__link">
+    <span class="md-ellipsis">
+      Typical Jobs of Semantic Data Engineers in the biomedical domain
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Typical Jobs of Semantic Data Engineers in the biomedical domain">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#finding-the-right-ontologies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Finding the right ontologies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#finding-the-right-data-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Finding the right data sources
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extending-existing-ontologies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extending existing ontologies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mapping-data-into-ontologiesknowledge-graphs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mapping data into ontologies/knowledge graphs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-application-ontologies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Build application ontologies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#leverage-ontologies-and-knowledge-graphs-for-you-data-analysis-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Leverage ontologies and knowledge graphs for you data analysis problems
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-materials-and-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional materials and resources
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contributors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contributors
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/OBOAcademy/obook/edit/master/docs/lesson/analysing-linked-data.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="analysing-linked-data-fundamentals">Analysing Linked Data (Fundamentals)<a class="headerlink" href="#analysing-linked-data-fundamentals" title="Permanent link">&para;</a></h1>
+<h3 id="warning">Warning<a class="headerlink" href="#warning" title="Permanent link">&para;</a></h3>
+<p>These materials are under construction and incomplete.</p>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Review tutorial on <a href="../ontology-fundamentals/">Ontology Theory</a></li>
+</ul>
+<h2 id="preparation">Preparation<a class="headerlink" href="#preparation" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Essential</li>
+<li><a href="https://open.hpi.de/courses/semanticweb2016/overview">Linked Data Engineering</a>: Week 1</li>
+<li>Support</li>
+<li><a href="https://programminghistorian.org/en/lessons/intro-to-linked-data">Programming Historian Linked Data tutorial</a></li>
+<li><a href="https://www-sop.inria.fr/acacia/cours/essi2006/Scientific%20American_%20Feature%20Article_%20The%20Semantic%20Web_%20May%202001.pdf">Original Whitepaper (Tim Berners Lee et al)</a></li>
+<li><a href="https://euclid-project.eu/">Educational curriculum for Linked Data</a></li>
+<li>Tools: Browse through the tools and standards listed in the <a href="../../reference/semantic-engineering-toolbox/">Semantic Engineer Toolbox</a>.</li>
+</ul>
+<h3 id="learning-objectives">Learning objectives<a class="headerlink" href="#learning-objectives" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Advanced SPARQL</li>
+<li>Term enrichment</li>
+<li>Semantic similarity</li>
+<li>Named Entity Recognition</li>
+</ul>
+<h2 id="tutorials">Tutorials<a class="headerlink" href="#tutorials" title="Permanent link">&para;</a></h2>
+<h3 id="the-linked-data-landscape-from-an-obo-perspective-standards-services-and-tools">The Linked Data landscape from an OBO perspective: Standards, Services and Tools<a class="headerlink" href="#the-linked-data-landscape-from-an-obo-perspective-standards-services-and-tools" title="Permanent link">&para;</a></h3>
+<p>In the following we will look a bit at the general Linked Data landscape, and name some of its flagship projects and standards. It is important to be clear that the Semantic Web field is a very heterogenous one:</p>
+<h4 id="flagship-projects-of-the-wider-semantic-web-community">Flagship projects of the wider Semantic Web community<a class="headerlink" href="#flagship-projects-of-the-wider-semantic-web-community" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="https://lod-cloud.net/">Linked Open Data (LOD) cloud</a>: The flagship project of the Semantic Web. An attempt to make all, or anyways a lot, of Linked Data accessible in one giant knowledge graph. A good overview can be found in <a href="https://medium.com/virtuoso-blog/what-is-the-linked-open-data-cloud-and-why-is-it-important-1901a7cb7b1f">this</a> medium article. Note that some people seem to think that the Semantic Web <em>is</em> (or should be) the Linked Open Data cloud. I would question this view, but I am not yet decided what my position is.</li>
+<li><a href="https://schema.org/">Schema.org</a>: General purpose vocabulary for entities on the web, founded by Google, Microsoft, Yahoo and Yandex. To get a better sense of the types of entities and relationships covered see <a href="https://schema.org/docs/full.html">here</a>.</li>
+<li><a href="https://www.dbpedia.org/">DBpedia</a>: Project that extracts structured data from Wikipedia and makes it available as a giant knowledge graph. The <a href="http://mappings.dbpedia.org/server/ontology/classes/">associated ontology</a>, similar to schema.org, covers entities encountered in common sense knowledge.</li>
+<li><a href="https://www.wikidata.org/wiki/Wikidata:Main_Page">Wikidata</a>: Free and open knowledge base that can be edited in much the same way as Wikipedia is edited.</li>
+</ul>
+<p>While these Semantic Web flagship projects are doubtlessly useful, it is sometimes hard to see how they can help for your biomedical research. We rarely make use of them in our day to day work as ontologists, but there are some notable exceptions:</p>
+<ul>
+<li>Where our work involves modelling environmental factors, we sometimes use wikidata as a standard way to refer for example to countries.</li>
+<li>For some more common sense knowledge use cases, such as nutrition, consider augmenting your knowledge graph with data from wikidata or dbpedia. While they may be a bit more messy and not directly useful for exploration by humans, it is quite possible that Machine Learning approaches can use the additional context provided by these knowledge graphs to improve embeddings and deliver more meaningful link predictions.</li>
+<li>Some OBO ontologies are already on Wikidata - perhaps you can find additional synonyms and labels which help with your data mapping problems!</li>
+</ul>
+<h4 id="where-the-obo-and-semantic-web-communities-are-slightly-at-odds">Where the OBO and Semantic Web communities are slightly at odds<a class="headerlink" href="#where-the-obo-and-semantic-web-communities-are-slightly-at-odds" title="Permanent link">&para;</a></h4>
+<p>The <a href="http://owlcollab.github.io/oboformat/doc/obo-syntax.html#5.1">OBO format</a> is a very popular syntax for representing biomedical ontologies. A lot of tools have been built over the years to hack OBO ontologies on the basis of that format - I still work with it on a daily basis. Although it has semantically been proven to be a subset of OWL (i.e. there is a lossless mapping of OBO into OWL) and can be viewed as just another syntax, it is in many ways idiosyncratic. For starters, you wont find many, if any, IRIs in OBO ontologies. The format itself uses CURIEs which are mapped to the general OBO PURL namespace during transformation to OWL. For example, if you see MONDO:0003847 in an OBO file, and were to translate it to OWL, you will see this term being translated to http://purl.obolibrary.org/obo/MONDO_0003847. Secondly, you have a bunch of built-in properties like BROAD or ABBREVIATION that mapped to a vocabulary called oboInOwl (oio). These are pretty non-standard on the general Semantic Web, and often have to be manually mapped to the more popular counterparts in the Dublin Core or SKOS namespaces.</p>
+<p>Having URIs as identifiers is not generally popular in the life sciences. As discussed elsewhere, it is much more likely to encounter CURIEs such as MONDO:0003847 than URIs such as http://purl.obolibrary.org/obo/MONDO_0003847 in biomedical databases.</p>
+<p><a name="tools-biomedical-research"></a></p>
+<h4 id="useful-tools-for-biomedical-research">Useful tools for biomedical research<a class="headerlink" href="#useful-tools-for-biomedical-research" title="Permanent link">&para;</a></h4>
+<p>Why does the biomedical research, and clinical, community care about the Semantic Web and Linked Data? There are endless lists of applications that try to apply semantic technologies to biomedical problems, but for this week, we only want to look at the broader picture. In our experience, the use cases where Semantic Web standards are applied successfully are:</p>
+<ul>
+<li>Where to find ontologies: Ontology repositories</li>
+<li><a href="http://obofoundry.org/">OBO Foundry Ontology Library</a></li>
+<li><a href="https://bioportal.bioontology.org/">BioPortal</a><ul>
+<li><a href="https://www.bioontology.org/why-bioportal-no-longer-offers-the-current-procedural-terminology-cpt/">CPT Story</a>. The Current Procedural Terminology was the by far most highly accessed Terminology on Bioportal - for many years. Due to license concerns, it had to be withdrawn from the repository. This story serves a cautionary tale of using terminologies with non-open or non-transparent licensing schemes.</li>
+</ul>
+</li>
+<li><a href="http://agroportal.lirmm.fr/">AgroPortal</a>: Like BioPortal, but focussed on the Agronomy domain.</li>
+<li><a href="https://lov.linkeddata.es/dataset/lov/">Linked Open Data Vocabularies (LOV)</a>: Lists the most important vocabularies in the Linked Data space, such as <a href="https://dublincore.org/">Dublin Core</a>, <a href="https://www.w3.org/TR/skos-reference/">SKOS</a> and <a href="http://xmlns.com/foaf/spec/">Friend-of-a-Friend</a> (FOAF).</li>
+<li>Where to find terms: Term browsers</li>
+<li><a href="https://www.ebi.ac.uk/ols/index">OLS</a>: The boss of the current term browsers out there. While the code base is a bit dated, it still gives access to a wide range of relevant open biomedical ontology terms. Note, while being a bit painful, it is possible to <a href="https://github.com/EBISPOT/ontotools-docker-config">set up your own OLS</a> (for your organisation) which only contains those terms/ontologies that are relevant for your work.</li>
+<li><a href="http://www.ontobee.org/">Ontobee</a>: The default term browser for OBO term purls. For example, click on http://purl.obolibrary.org/obo/OBI_0000070. This will redirect you directly to Ontobee, to show you the terms location in the hierarchy. A key difference between Ontobee and OLS/Bioportal is that Ontobee limits hierarchical relationships to is_a. This means if you are browsing ontologies such as GO, Uberon, CL, ENVO, you will not see part-of links in the hierarchy, and these links are crucial for understanding these ontologies.</li>
+<li><a href="http://aber-owl.net/#/">AberOWL</a>: Another ontology repository and semantic search engine. Some ontologies such as <a href="http://aber-owl.net/ontology/PhenomeNET/">PhenomeNet</a> can only be found on AberOWL, however, I personally prefer OLS.</li>
+<li><a href="https://identifiers.org/">identifiers.org</a>: A centralised registry for identifiers used in the life sciences. This is one of the tools that bridge the gap between CURIEs and URLs, but it does not cover (OBO) ontologies very well, and if so, is not aware of the proper URI prefixes (see for example <a href="https://identifiers.org/resolve?query=HP:0000001">here</a>, and HP term resolution that does not list the proper persistent URL of the HP identifier (http://purl.obolibrary.org/obo/HP_0000001)). Identifiers.org has mainly good coverage for databases/resources that use CURIE type identifiers. But: you can enter any ID you find in your data and it will tell you what it is associated with.</li>
+<li>Curate biomedical data. There are a lot of different tools in this space - which we will discuss in a bespoke unit later in the course. Examples:</li>
+<li><a href="https://isa-tools.org/index.html">isatools</a>: The open source ISA framework and tools help to manage an increasingly diverse set of life science, environmental and biomedical experiments that employing one or a combination of technologies.</li>
+<li><a href="https://rightfield.org.uk/about">RightField</a>: System for curating ontology terms in Excel spreadsheets.</li>
+<li><a href="https://more.metadatacenter.org/tools-training/cedar-template-tools">CEDAR Templates</a>: Basically a templating system that allows to create templates to record metadata, for example in a lab setting, of course with ontology integration.</li>
+<li><a href="https://github.com/timrdf/csv2rdf4lod-automation/wiki/Alternative-Tabular-to-RDF-converters">Other examples</a> of tabular data to RDF converters, but new ones coming up every year.</li>
+<li>Building ontologies</li>
+<li><a href="https://github.com/EBISPOT/webulous">Populous/Webulous</a>: A system to maintain/generate ontologies from spreadsheets. The idea was to basically to define patterns in a (now mostly dead) language called OPPL, and then apply them to spreadsheets to generate OWL axioms. EBI recently discontinued the service, as there is a general exodus to Google Sheets + ROBOT templates instead.</li>
+<li><a href="http://robot.obolibrary.org/template">ROBOT templates + Google Sheets and Cogs</a>: A lightweight approach based on a set of tools that allows curating ontologies in spreadsheets (e.g. Google Sheets) which are converted into OWL using ROBOT.</li>
+<li><a href="https://github.com/INCATools/dead_simple_owl_design_patterns">DOSDP tools + Dead Simple Design Patterns (DOSDP)</a>: Similar to ROBOT templates, DOSDPs (which really should be called DOSDTs, because they are not really design <em>patterns</em>; they are ontology templates), another system that allows the generation of OWL axioms based on spreadsheet data.</li>
+<li>Cleaning messy data</li>
+<li><a href="https://openrefine.org/">OpenRefine</a>: I have not myself used this ever, but some of my colleagues have. OpenRefine allows you to upload (spreadsheet) data, explore it and clean it (going as far as reconciling terms using Wikidata concepts).</li>
+</ul>
+<h5 id="which-biomedical-ontologies-should-we-use">Which biomedical ontologies should we use?<a class="headerlink" href="#which-biomedical-ontologies-should-we-use" title="Permanent link">&para;</a></h5>
+<p>As a rule of thumb, for every single problem/term/use case, you will have 3-6 options to choose from, in some cases even more. The criteria for selecting a good ontology are very much dependent on your particular use case, but some concerns are generally relevant. A good first pass is to apply to "<a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004743">10 simple rules for selecting a Bio-ontology</a>" by Malone et al, but I would further recommend to ask yourself the following:</p>
+<ul>
+<li><em>Do I need the ontology for grouping and semantic analysis?</em> In this case a high quality hierarchy reflecting biological subsumption is imperative. We will explain later what this means, but in essence, you should be able to ask the following question: "All instances/occurrences of this concept in the ontology are also instances of all its parent classes. Everything that is true about the parent class is always also true about instances of the children." It is important for you to understand that, while OWL semantics imply the above, OWL is difficult and many ontologies "pretend" that the subclass link means something else (like a rule of thumb grouping relation).</li>
+<li><em>Can I handle multiple inheritance in my analysis?</em> While I personally recommend to <em>always</em> consider multiple inheritance (i.e, allow a term to have more than one parent class), there are some analysis frameworks, in particular in the clinical domain, that make this hard. Some ontologies are inherently ploy-hierarchical (such as <a href="https://github.com/monarch-initiative/mondo">Mondo</a>), while others strive to be single inheritance (<a href="https://disease-ontology.org/">DO</a>, ICD).</li>
+<li><em>Are key resources I am interested in using the ontology?</em> Maybe the most important question that will drastically reduce the amount of data mapping work you will have to do: Does the resource you wish to integrate already annotate to a particular ontology? For example, EBI resources will be annotating phenotype data using EFO, which in turn used HPO identifiers. If your use case demands to integrate EBI databases, it is likely a good idea to consider using HPO as the reference ontology for your phenotype data.</li>
+</ul>
+<p>Aside from aspects of your analysis, there is one more thing you should consider carefully: the open-ness of your ontology in question. As a user, you have quite a bit of power on the future trajectory of the domain, and therefore should seek to endorse and promote open standards as much as possible (for egotistic reasons as well: you don't want to have to suddenly pay for the ontologies that drive your semantic analyses). It is true that ontologies such as <a href="https://www.snomed.org/snomed-ct/five-step-briefing">SNOMED</a> have some great content, and, even more compellingly, some really great coverage. In fact, I would probably compare SNOMED not with any particular disease ontology, but with the OBO Foundry as a whole, and if you do that, it is a) cleaner, b) better integrated. But this comes at a cost. SNOMED is a commercial product - millions are being payed every year in license fees, and the more millions come, the better SNOMED will become - and the more drastic consequences will the lock-in have if one day you are forced to use SNOMED because OBO has fallen too far behind. Right now, the sum of all OBO ontologies is probably still richer and more valuable, given their use in many of the central biological databases (such as the ones hosted by the <a href="https://www.ebi.ac.uk/">EBI</a>) - but as SNOMED is seeping into the all aspects of genomics now (for example, it will soon be featured on <a href="https://www.ebi.ac.uk/ols/index">OLS</a>!) it will become increasingly important to <em>actively</em> promote the use of open biomedical ontologies - by contributing to them as well as by using them.</p>
+<p>We will discuss ontologies in the medical, phenomics and genomics space in more detail in a later session of the course.</p>
+<h5 id="other-interesting-links">Other interesting links<a class="headerlink" href="#other-interesting-links" title="Permanent link">&para;</a></h5>
+<ul>
+<li><a href="https://joinup.ec.europa.eu/sites/default/files/inline-files/D4.3.2_Case_Study_Linked_Data_eGov.pdf">Linked Data in e-Government</a></li>
+<li><a href="https://www.industrialontologies.org/">Industrial Ontologies Foundry</a>: Something like the OBO Foundry for Industrial Ontologies</li>
+<li><a href="https://ontocommons.eu/">OntoCommons</a>: An H2020 CSA project dedicated to the standardisation of data documentation across all domains related to materials and manufacturing.</li>
+</ul>
+<h3 id="basic-linked-data-and-semantic-web-concepts-for-the-semantic-data-engineer-in-the-biomedical-domain">Basic Linked data and Semantic Web Concepts for the Semantic Data Engineer in the Biomedical Domain<a class="headerlink" href="#basic-linked-data-and-semantic-web-concepts-for-the-semantic-data-engineer-in-the-biomedical-domain" title="Permanent link">&para;</a></h3>
+<p>In this section we will discuss the following:</p>
+<ul>
+<li>Introductory remarks</li>
+<li>The advantages of globally unique identifiers</li>
+<li>Some success stories of the Semantic Web in the biomedical domain</li>
+<li>Some basic concepts you should probably have heard about</li>
+<li>The ecosystem of the Semantic Web: Standards, Technologies and Research Areas</li>
+<li>Typical tasks of Semantic Data Engineers in the biomedical domain</li>
+</ul>
+<h4 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h4>
+<p><em>Note of caution</em>: No two Semantic Web overviews will be equivalent to each other. Some people claim the Semantic Web as an idea is an utter failure, while others praise it as a great success (in the making) - in the end you will have to make up your own mind. In this section I focus on parts of the Semantic Web step particularly valuable to the biomedical domain, and I will omit many relevant topics in the wider Semantic Web area, such as Enterprise Knowledge Graphs, decentralisation and personalisation, and many more. Also, the reader is expected to be familiar with the basic notions of the Semantic Web, and should use this overview mainly to tie some of the ideas together.</p>
+<p>The goal of this section is to give the aspiring Semantic Data Engineer in the biomedical domain a rough idea of key concepts around Linked Data and the Semantic Web insofar as they relate to their data science and and data engineering problems. Even after 20 years of Semantic Web research (the <a href="https://www.scientificamerican.com/article/the-semantic-web/">seminal paper</a>, conveniently and somewhat ironically behind a paywall, was published in May 2001), the area is still dominated by "academic types", although the advent of the Knowledge Graph is already changing that. As I already mentioned above, no two stories of what the Semantic Web is will sound the same. However, there are a few stories that are often told to illustrate why we need semantics. The <a href="https://open.hpi.de/courses/semanticweb2016">OpenHPI course</a> names a few:</p>
+<ul>
+<li>"From the web of documents to the web of data" tells the story of how the original web is essentially a huge heap of (interlinked) natural language text documents which are very hard to understand for search engines: Does the word "Jaguar" on this site refer to the car or the cat? Clarifying in your web page that the word Jaguar refers to the concept of "Jaguar the cat", for example like this: <code>&lt;span about="dbpedia:Jaguar"&gt;Jaguar&lt;/span&gt;</code>, will make it easier for the search engine to understand what your site is about and link it to other relevant content. From this kind of mark-up, structured data can be extracted and integrate into a giant, worldwide database, and exposed through SPARQL endpoints, that can then be queried using a suitable query language.</li>
+<li>"From human to machine understandable": as a Human, we know that a Jaguar is a kind of cat, and all cats have four legs. If you ask a normal search engine: "Does a Jaguar have four legs?" it will have a tough time to answer this question correctly (if it cannot find that exact statement anywhere). That is why we need <em>proper semantics</em>, some kind of formalism such that a "machine" can deduce from the statements "Jaguar is a cat; Cat has four legs" that "Jaguar has four legs".</li>
+<li>The "Semantic Layer Cake": a <a href="https://en.wikipedia.org/wiki/Semantic_Web_Stack">box/brick diagram</a> showing how Semantic Web Technologies are stacked on top of each other. An engineering centric view that has been used countless times to introduce the Semantic Web, but rarely helped anyone to understand what it is about.</li>
+</ul>
+<p>I am not entirely sure anymore that any of these ways (web of data, machine understanding, layered stack of matching standards) to motivate the Semantic Web are particularly effective for the average data scientists or engineer.
+If I had to explain the Semantic Web stack to my junior self, just having finished my undergraduate, I would explain it as follows (no guarantee though it will help you).</p>
+<hr />
+<p>The Semantic Web / Linked Data stack comprises roughly four components that are useful for the aspiring Semantic (Biomedical) Data Engineer/Scientist to distinguish:</p>
+<h5 id="a-way-to-refer-to-things-including-entities-and-relations-in-a-global-namespace">A <em>way to refer to things</em> (including entities and relations) in a global namespace.<a class="headerlink" href="#a-way-to-refer-to-things-including-entities-and-relations-in-a-global-namespace" title="Permanent link">&para;</a></h5>
+<p>You, as a scientist, might be using the term "gene" to refer to basic physical and functional unit of heredity, but me, as a German, prefer the term "Gen". In the Semantic Web, instead of natural language words, we prefer to use <em>URIs to refer to things</em> such as https://www.wikidata.org/wiki/Q7187: if you say something using the name https://www.wikidata.org/wiki/Q7187, both your German and Japanese colleagues will "understand" what you are referring to. More about that in the next chapter.</p>
+<h5 id="lots-loaaaads-of-ways-to-make-statements-about-things">Lots (loaaaads!) of <em>ways to make statements about things</em>.<a class="headerlink" href="#lots-loaaaads-of-ways-to-make-statements-about-things" title="Permanent link">&para;</a></h5>
+<p>For example, to express "a mutation of SHH in humans causes isolated microphthalmia with coloboma-5" you could say something like (http://purl.obolibrary.org/obo/MONDO_0012709 | "microphthalmia, isolated, with coloboma 5")--[http://purl.obolibrary.org/obo/RO_0004020 | "has basis in dysfunction of"]--&gt;(https://identifiers.org/HGNC:10848 | "SSH (gene)"). Or you could say: (http://purl.obolibrary.org/obo/MONDO_0012709 | "microphthalmia, isolated, with coloboma 5")--[http://www.w3.org/2000/01/rdf-schema#subClassOf | "is a"]--&gt;(http://purl.obolibrary.org/obo/MONDO_0003847 | "Mendelian Disease"). If we use the analogy of "language", then the URIs (above) are the words, and the statements are <em>sentences in a language</em>. Unfortunately, there are <em>many</em> languages in the Semantic Web, such as OWL, RDFS, SKOS, SWRL, SHACL, SHEX, and dialects (OWL 2 EL, OWL 2 RL) and a <em>plethora</em> of formats, or serialisations (you can store the exact same sentence in the same language such as RDF, or OWL, in many different ways)- more about that later. In here lies also one of the largest problems of the Semantic Web - lots of overlapping standards means, lots of incompatible data - which raises the bar for actually being able to seamlessly integrate "statements about things" across resources.</p>
+<h5 id="collections-of-statements-about-things-that-somehow-belong-together-and-provide-some-meaning-or-context-for-those-things"><em>Collections of statements about things that somehow belong together and provide some meaning, or context, for those things</em>.<a class="headerlink" href="#collections-of-statements-about-things-that-somehow-belong-together-and-provide-some-meaning-or-context-for-those-things" title="Permanent link">&para;</a></h5>
+<p>Examples include:</p>
+<ul>
+<li><em>controlled vocabularies</em>, that define, for example, how to refer to a disease (e.g., we use http://purl.obolibrary.org/obo/MONDO_0012709 to refer to "isolated microphthalmia with coloboma 5"),</li>
+<li><em>terminologies</em> which describe how we humans refer to a disease (How is it called in German? Which other synonyms are used in the literature? How is the term defined in the medical literature?),</li>
+<li><em>taxonomies</em> which define how diseases are related hierarchically ("microphthalmia, isolated, with coloboma 5 is a kind of Mendelian disease"),</li>
+<li><em>ontologies</em> which further define how diseases are defined in terms of other entities, for example "microphthalmia, isolated, with coloboma 5 is a Mendelian disease that has its basis in the dysfunction of SSH".</li>
+<li><em>Note</em>: In practice, when we say "ontology", we mean <em>all of the above together</em> - it is, however, good to know that they are somewhat distinct, and that there are different "languages" that can be used for each of these distinctions.</li>
+</ul>
+<h5 id="tools-that-do-something-useful-with-these-collections-of-statements"><em>Tools</em> that do something useful with these collections of statements.<a class="headerlink" href="#tools-that-do-something-useful-with-these-collections-of-statements" title="Permanent link">&para;</a></h5>
+<p>For example (as always, non exhaustive):</p>
+<ul>
+<li>Efficient <em>storage</em> (triple stores, in-memory ontology APIs, other databases). Similar to traditional SQL databases, the Semantic Web comes with a number of database solutions that are optimised to deliver "semantic content".</li>
+<li><em>Semantically aware querying</em>: Very similar to traditional SQL (which, incidentally is often great to query semantic data), there are various ways to "interrogate", or query, your Linked Data, such as SPARQL, <a href="https://ontology101tutorial.readthedocs.io/en/latest/DL_QueryTab.html">DL Querying</a>, <a href="http://obdasystems.com/obda">Ontology-based data access</a> (OBDA).</li>
+<li><em>Subsetting</em> (module/subset extraction): Often, ontologies (or other collections of Linked Data statements) are very large and cover a lot of entities and knowledge that is not important to your work. There are a number of techniques that allow you to extract meaningful subsets for your use case; for example, you may be interested to get all the information you can about Mendelian diseases, but you don't care about common diseases (e.g. see <a href="http://robot.obolibrary.org/extract">ROBOT extract</a>).</li>
+<li><em>Visualisation</em>: As a Data Scientist, you are used to looking at your data in tabular form - while a lot of information stored in ontologies can still be inspected this way, in general semantic data is best perceived as a graph - which are notoriously hard to visualise. Fortunately, a lot of Linked Data, in particular ontologies in the biomedical domain are predominantly tree-shaped (you have a disease, and underneath sub-diseases). Term browsers like <a href="https://www.ebi.ac.uk/ols/index">OLS</a> typically render ontologies as trees.</li>
+<li><em>Data linking/matching</em>: This is key in particular in the biomedical sciences, as there is almost never just one way to refer to the same thing. In my experience, a good rule of thumb is that there are 3-6, e.g. 3-6 URIs that refer to "Mendelian Disease", all of which need to be <em>matched</em> together to integrate data across resources. There are many approaches to ontology matching - none of which are anywhere near perfect.</li>
+<li><em>Automated error checking and validation</em> (Syntax, Structure (SHEX, SHACL), logical Consistency (DL Reasoner)): Naturally, writing sentences in any language is hard in the beginning, but this is even more true for highly complex languages such as OWL. In my experience, no-one can write flawless OWL without the help of automatic syntax and semantics checking, at least not consistently. Validation tools are a crucial part of your Semantic Engineering toolbox.</li>
+<li><em>Translate</em> between languages: Often we need to translate from one language, for example OWL, to another, for example SKOS to integrate divergent resources. Translations in the Semantic Web context are nearly always lossy (there are always things you can say in one language, but not in another), but they may be necessary nevertheless.</li>
+<li><em>Discovery</em> of terms (<a href="https://www.ebi.ac.uk/ols/index">OLS</a>, <a href="https://bioportal.bioontology.org/">BioPortal</a>): If you are curating terms, you need to know what ID (URI) to use for "isolated microphthalmia with coloboma 5". For that, term browsers such as <a href="https://www.ebi.ac.uk/ols/index">OLS</a> are perfect. Just type in your natural language search term, and you will find a series of suggestions for URIs you can use for your curation.</li>
+<li>Discovery of vocabularies <a href="http://obofoundry.org/">OBO Foundry ontology library</a>, <a href="https://bioportal.bioontology.org/">BioPortal</a>): we will have a section later on on how to select appropriate ontologies for your use case, but the general problem of finding vocabularies, or ontologies, is answered by ontology repositories or libraries. Naturally, our favourite ontology library is the <a href="http://obofoundry.org/">OBO Foundry ontology library</a> which contain a lot of high quality ontologies for the biomedical domain.</li>
+<li>Make implicit knowledge explicit, aka <em>reasoning</em>:</li>
+<li>Deductive (DL Reasoning, Rule-based reasoning such as Datalog, SWRL). One of the major selling points for OWL, for example, in the biomedical domain is the ability to use logical reasoning in a way that is sound (only gives you correct inferences, at all times) and complete (all hidden implications are found, at all times, by the reasoner) - this is particularly great for medical knowledge where mistakes in computer algorithms can have devastating effects. However, I am slowly coming to the conviction that sound and complete reasoning is not the only form of deductive reasoning that is useful - many rule languages can offer value to your work by unveiling hidden relationships in the data without giving such strong "logical guarantees".</li>
+<li>Inductive (Machine Learning approaches, Knowledge Graph Representation Learning). The new frontier - we will discuss later in the course how our ontology-powered Knowledge Graphs can be leveraged to identify drug targets, novel gene to phenotype associations and more, using a diverse set of Machine Learning-based approaches.</li>
+</ul>
+<p>This week will focus on 1 (identifiers) and 4 (applications) - 2 (languages and standards) and 3 (controlled vocabularies and ontologies) will be covered in depth in the following weeks.</p>
+<p><em>Note on the side</em>: Its not always 100% clear what is meant by Linked Data in regular discourse. There are some supposedly "clear" definitions ("<a href="https://wordlift.io/blog/en/entity/linked-data">method for publishing structured data</a>", "<a href="https://www.w3.org/standards/semanticweb/data">collection of interrelated datasets on the Web</a>"), but when it comes down to the details, there is plenty of confusion (does an OWL ontology constitute Linked Data when it is published on the Web? Is it Linked Data if it does not use RDF? Is it Linked Data if it is less than 5-star - see below). In practice all these debates are academic and won't mean much to you and your daily work. There are <em>entities</em>, statements (context) being said about these entities using some standard (associated with the Semantic Web, such as OWL or RDFS) and tools that do something useful with the stuff being said.</p>
+<h4 id="when-i-say-mendelian-disease-i-mean-httppurlobolibraryorgobomondo_0003847">When I say "Mendelian Disease" I mean http://purl.obolibrary.org/obo/MONDO_0003847<a class="headerlink" href="#when-i-say-mendelian-disease-i-mean-httppurlobolibraryorgobomondo_0003847" title="Permanent link">&para;</a></h4>
+<p>One of the top 5 features of the Semantic Web (at least in the context of biomedical sciences) is the fact that we can use URIs as a global identifier scheme that is unambiguous, independent of database implementations, independent of language concerns to refer to the entities in our domain.</p>
+<p>For example, if I want to refer to the concept of "Mendelian Disease", I simply refer to http://purl.obolibrary.org/obo/MONDO_0003847 - and everyone, in Japan, Germany, China or South Africa, will be able to "understand" or <em>look up</em> what I mean. I don't quite like the word "understanding" in this context as it is not actually trivial to explain to a human how a particular ID relates to a thing in the real world (semiotics). In my experience, this process is a bit rough in practice - it requires that there is a concept like "Mendelian Disease" in the mental model of the person, and it requires some way to link the ID http://purl.obolibrary.org/obo/MONDO_0003847 to that "mental" concept - not always as trivial as in this case (where there are standard textbook definitions). The latter is usually achieved (philosophers and linguists please stop reading) by using an annotation that somehow explains the term - either a label or some kind of formal definition - that a person can understand. In any case, not trivial, but thankfully not the worst problem in the biomedical domain where we do have quite a wide range of shared "mental models" (more so in Biology than Medical Science..). Using URIs allows us to facilitate this "understanding" process by leaving behind some kind of information at the location that is dereferenced by the URI (basically you click on the URI and see what comes up). Note that there is a huge deal of compromise already happening across communities. In the original Semantic Web community, the hope was somehow that dereferencing the URI (clicking on it, navigating to it) would reveal <em>structured</em> information about the entity in question that could used by machines to understand what the entity is all about. In my experience, this was rarely ever realised in the biomedical domain. Some services like <a href="http://ontobee.org/">Ontobee</a> expose such machine readable data on request (using a technique called content negotiation), but most URIs simply refer to some website that allow humans to understand what it means - which is already a <em>huge</em> deal. For more on names and identifiers I refer the interested reader to James Overton's OBO tutorial <a href="https://github.com/jamesaoverton/obo-tutorial/blob/master/docs/names.md">here</a>.</p>
+<p><em>Personal note:</em> Some of my experienced friends in the bioinformatics world say that "IRI have been more pain than benefit". It is clear that there is no single thing in the Semantic Web is entirely uncontested - everything has its critics and proponents.</p>
+<h5 id="the-advent-of-the-curie-and-the-bane-of-the-curie-map">The advent of the CURIE and the bane of the CURIE map<a class="headerlink" href="#the-advent-of-the-curie-and-the-bane-of-the-curie-map" title="Permanent link">&para;</a></h5>
+<p>In reality, few biological resources will contain a reference to http://purl.obolibrary.org/obo/MONDO_0003847. More often, you will find something like <code>MONDO:0003847</code>, which is called a <em>CURIE</em>. You will find CURIEs in many contexts, to make Semantic Web languages easier to read and manage. The premise is basically that your document contains a prefix declaration that says something like this:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>PREFIX MONDO: &lt;http://purl.obolibrary.org/obo/MONDO_&gt;
+</code></pre></div>
+<p>which allows allows the interpreter to unfold the CURIE into the IRI:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>MONDO:0003847 -&gt; http://purl.obolibrary.org/obo/MONDO_0003847
+</code></pre></div>
+<p>In reality, the proliferation of CURIEs has become <em>a big problem for data engineers and data scientists</em> when analysing data. Databases rarely, if ever, ship the <em>CURIE maps</em> with their data required to understand what a prefix effectively stands for, leading to a lot of guess-work in the daily practice of the Semantic Data Engineer (if you ever had to distinguish ICD: ICD10: ICD9: UMLS:, UMLSCUI: without a prefix map, etc you will know what I am talking about). Efforts to bring order to this chaos, essentially globally agreed <em>CURIE maps</em> (e.g. <a href="https://github.com/prefixcommons/biocontext">prefixcommons</a>), or ID management services such as <a href="https://identifiers.org/">identifiers.org</a> exist, but right now there is no one solution - prepare yourself to having to deal with this issue when dealing with data integration efforts in the biomedical sciences. More likely than not, your organisation will build its own curie map and maintain it for the duration of your project.</p>
+<h4 id="semantic-web-in-the-biomedical-domain-success-stories">Semantic Web in the biomedical domain: Success stories<a class="headerlink" href="#semantic-web-in-the-biomedical-domain-success-stories" title="Permanent link">&para;</a></h4>
+<p>There are probably quite a few divergent opinions on this, but I would like to humbly list the following four use cases as among the most impactful applications of Semantic Web Technology in the biomedical domain.</p>
+<h5 id="light-semantics-for-data-aggregation"><em>Light Semantics for data aggregation</em>.<a class="headerlink" href="#light-semantics-for-data-aggregation" title="Permanent link">&para;</a></h5>
+<p>We can use hierarchical relations in ontology to group data. For example, if I know that http://purl.obolibrary.org/obo/MONDO_0012709 ("microphthalmia, isolated, with coloboma 5") http://www.w3.org/2000/01/rdf-schema#subClassOf ("is a") http://purl.obolibrary.org/obo/MONDO_0003847 ("Mendelian Disease"), then a specialised Semantic Web tool called a reasoner will know that, if I ask for all genes associated with Mendelian diseases, you also want to get those associated with "microphthalmia, isolated, with coloboma 5" specifically (note that many query engines such as <a href="https://www.w3.org/TR/sparql11-entailment/">SPARQL with RDFS entailment regime</a> have simple reasoners embedded in them, but we would not call them "reasoner" - just query engine).</p>
+<h5 id="heavy-semantics-for-ontology-management"><em>Heavy Semantics for ontology management</em>.<a class="headerlink" href="#heavy-semantics-for-ontology-management" title="Permanent link">&para;</a></h5>
+<p>Ontologies are extremely hard to manage and profit from the sound logical foundation provided by the Web Ontology Language (OWL). We can logically define our classes in terms of other ontologies, and then use a reasoner to classify our ontology automatically. For example, we can define abnormal biological process phenotypes in terms of biological processes (Gene Ontology) and classify our phenotypes entirely using the classification of biological processes in the Gene Ontology (don't worry if you don't understand a thing - we will get to that in a later week).</p>
+<h5 id="globally-unique-identifiers-for-data-integration"><em>Globally unique identifiers for data integration</em>.<a class="headerlink" href="#globally-unique-identifiers-for-data-integration" title="Permanent link">&para;</a></h5>
+<p>Refer to the same thing the same way. While this goal was never reached in total perfection, we have gotten quite close. In my experience, there are roughly 3-6 ways to refer to entities in the biomedical domain (like say, ENSEMBL, HGNC, Entrez for genes; or SNOMED, NCIT, DO, MONDO, UMLS for diseases). So while the "refer to the same thing the same way" did not truly happen, a <em>combination of standard identifiers with terminological mappings</em>, i.e. links between terms, can be used to integrate data across resources (more about Ontology Matching later). Again, many of my colleagues disagree - they don't like IRIs, and unfortunately, you will have to build your own position on that.</p>
+<p><em>Personal note</em>: From an evolutionary perspective, I sometimes think that having 2 or 3 competing terminological systems is better than 1, as the competition also drives the improvements in quality, but there is a lot of disagreement on this.</p>
+<h5 id="coordinated-development-of-mutually-compatible-ontologies-across-the-biomedical-domain-the-open-biological-and-biomedical-ontologies-obo-foundry"><em>Coordinated development of mutually compatible ontologies across the biomedical domain</em>: The Open Biological and Biomedical Ontologies (OBO) Foundry.<a class="headerlink" href="#coordinated-development-of-mutually-compatible-ontologies-across-the-biomedical-domain-the-open-biological-and-biomedical-ontologies-obo-foundry" title="Permanent link">&para;</a></h5>
+<p>The <a href="http://obofoundry.org/">OBO Foundry</a> is a community-driven effort to coordinate the development of vocabularies and ontologies across the biomedical domain. It develops standards for the representation of terminological content (like standard properties), and ontological knowledge (shared design patterns) as well as shared systems for quality control. Flagship projects include:</p>
+<ul>
+<li>The <a href="https://github.com/oborel/obo-relations">Relation Ontology</a> (RO) for the standardisation of relationships that connect entities in biomedical ontologies.</li>
+<li>The <a href="https://github.com/OBOFoundry/COB">Core Ontology for Biology and Biomedicine (COB)</a>: upper ontology to align key entities used throughout biomedical ontologies.</li>
+<li>The <a href="https://github.com/information-artifact-ontology/ontology-metadata">OBO Metadata Ontology</a> for aligning ontology metadata properties across OBO ontologies.</li>
+<li>The <a href="https://github.com/OBOFoundry/purl.obolibrary.org">OBO Persistent Identifier System</a>: an Identifier scheme for persistent URIs used by many ontologies on the web. The system is used to refer to terms as well as ontologies and their versions.</li>
+<li><a href="http://dashboard.obofoundry.org/dashboard/index.html">OBO Dashboard</a>: a system for the monitoring and continued improvement of OBO ontologies with automated Quality Control checks.</li>
+</ul>
+<h4 id="semantic-web-and-linked-data-things-you-should-have-heard-about">Semantic Web and Linked Data: Things you should have heard about<a class="headerlink" href="#semantic-web-and-linked-data-things-you-should-have-heard-about" title="Permanent link">&para;</a></h4>
+<ul>
+<li>The <a href="https://en.wikipedia.org/wiki/Semantic_Web_Stack">Semantic Web Layer Cake</a>: A iconic, colourful graphic that describes the layered design of the semantic web, from URIs to Logic. Its not particularly useful, but as a Semantic Web Explorer, you should have seen it.</li>
+<li><a href="https://en.wikipedia.org/wiki/Linked_data">Linked Data</a> is mostly referred to as a "method for publishing data", a key concept in the Semantic Web domain, coined by Tim Berners Lee in 2006. Related concepts:</li>
+<li><a href="https://www.w3.org/wiki/LinkedData">Linked Data Principles</a>:<ul>
+<li>Use URIs as names for things</li>
+<li>Use HTTP URIs so that people can look up those names.</li>
+<li>When someone looks up a URI, provide useful information.</li>
+<li>Include links to other URIs. so that they can discover more things.</li>
+</ul>
+</li>
+<li><a href="https://5stardata.info/en/">5-Star system</a><ol>
+<li>make your stuff available on the Web (whatever format) under an open license</li>
+<li>make it available as structured data (e.g., Excel instead of image scan of a table)</li>
+<li>use non-proprietary formats (e.g., CSV instead of Excel)</li>
+<li>use URIs to denote things, so that people can point at your stuff</li>
+<li>link your data to other data to provide context</li>
+</ol>
+</li>
+<li><a href="https://en.wikipedia.org/wiki/FAIR_data">FAIR data</a>: Principles defined in 2016, somewhat orthogonal to Linked Data Principles. A nice tutorial, also going a bit more in depth into identifiers than what we did in this section, can be found <a href="http://www.repronim.org/module-FAIR-data/01-Web-of-Data/">here</a>. The idea of FAIR data is probably more impactful in the biomedical and pharmaceutical world then the idea of Linked Data. While there are some (slighltly irritating) voices on the sidelines that say that "It can't be FAIR if its not RDF", it is probably true that a nicely formatted CSV file on the Web is at least as useful as a (hard to understand) RDF dump containing the same data. Worldwide collaborations between major pharmaceutical corporations promoting FAIR data, such as the <a href="https://www.pistoiaalliance.org/news/fair-toolkit-launch/">Pistoia Alliance</a> do mention Semantic Web Technologies in their <a href="https://www.sciencedirect.com/science/article/pii/S1359644618303039?via%3Dihub">White papers</a>, but keep the jargon a bit more hidden from the general public. Data, according to the FAIR principles, should be:</li>
+<li>Findable (machine readable metadata, etc)</li>
+<li>Accessible (open authentication, authorisation)</li>
+<li>Interoperable (integrated with other data, closely related to controlled vocabularies and linked data)</li>
+<li>Reusable (metadata, license, provenance)</li>
+<li><a href="https://www.w3.org/">World Wide Web Consortium (W3C)</a>: The World Wide Web Consortium (W3C) is an international community that develops open standards, in particular many of those (but not all!) pertaining to the Semantic Web.</li>
+</ul>
+<h4 id="the-ecosystem-of-linked-data-and-semantic-web-standards-technologies-and-research-areas">The Ecosystem of Linked Data and Semantic Web: Standards, Technologies and Research Areas<a class="headerlink" href="#the-ecosystem-of-linked-data-and-semantic-web-standards-technologies-and-research-areas" title="Permanent link">&para;</a></h4>
+<p>In the following, we will list some of the technologies you may find useful, or will be forced to use, as a Semantic Data Engineer. Most of these standards will be covered in the subsequent weeks of this course.</p>
+<table>
+<thead>
+<tr>
+<th>Standard</th>
+<th>Purpose</th>
+<th>Use case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.w3.org/2001/sw/wiki/OWL">Web Ontology Language</a> (OWL)</td>
+<td>Representing Knowledge in Biomedical Ontologies</td>
+<td>All OBO ontologies must be provided in OWL as well.</td>
+</tr>
+<tr>
+<td><a href="https://www.w3.org/2001/sw/wiki/RDF">Resource Description Framework</a> (RDF)</td>
+<td>Model for data interchange.</td>
+<td>Triples, the fundamental unit of RDF, are ubiquitous on the Semantic Web</td>
+</tr>
+<tr>
+<td><a href="https://www.w3.org/2001/sw/wiki/SPARQL">SPARQL Query Language for RDF</a></td>
+<td>A standard query language for RDF and RDFS.</td>
+<td>Primary query language to interrogate RDF/RDFS/Linked Data on the Web.</td>
+</tr>
+<tr>
+<td><a href="https://www.w3.org/2001/sw/wiki/SKOS">Simple Knowledge Organization System</a> (SKOS)</td>
+<td>Another, more lightweight, knowledge organisation system in many ways competing with OWL.</td>
+<td>Not as widely used in the biomedical domain as OWL, but increasing uptake of "matching" vocabulary (skos:exactMatch, etc).</td>
+</tr>
+<tr>
+<td><a href="https://w3c.github.io/rdf-star/">RDF-star</a></td>
+<td>A key shortcoming of RDF is that, while I can in principle say everything about everything, I cannot directly talk about edges, for example to attribute provenance: "microphthalmia, isolated, with coloboma 5 is kind of Mendelian disease"--source: Wikipedia</td>
+<td>Use cases <a href="https://w3c.github.io/rdf-star/UCR/rdf-star-ucr.html">here</a>.</td>
+</tr>
+<tr>
+<td><a href="https://en.wikipedia.org/wiki/JSON-LD">JSON-LD</a></td>
+<td>A method to encoding linked data in JSON format.</td>
+<td>(Very useful to at least know about).</td>
+</tr>
+<tr>
+<td><a href="https://en.wikipedia.org/wiki/RDFa">RDFa</a></td>
+<td>W3C Recommendation to embed rich semantic metadata in HTML (and XML).</td>
+<td>I have to admit - in 11 years Semantic Web Work I have not come across much use of RDFa in the biomedical domain. But @jamesaoverton is using it in his tools!</td>
+</tr>
+</tbody>
+</table>
+<p>A thorough overview of all the key standards and tools can be found on the <a href="https://github.com/semantalytics/awesome-semantic-web">Awesome Semantic Web</a> repo.</p>
+<p>For a rough sense of current research trends it is always good to look at the accepted papers at one of the major conferences in the area. I like ISWC (<a href="https://iswc2020.semanticweb.org/program/accepted-papers/">2020 papers</a>), but for the aspiring Semantic Data Engineering in the biomedical sphere, it is probably a bit broad and theoretical. Other interesting specialised venues are the <a href="https://jbiomedsem.biomedcentral.com/">Journal of Biomedical Semantics</a> and the <a href="https://icbo2020.inf.unibz.it/program/">International Conference on Biomedical Ontologies</a>, but with the shift of the focus in the whole community towards Knowledge Graphs, other journals and conferences are becoming relevant.</p>
+<p>Here are a few key research areas, which are, by no means (!), exhaustive.</p>
+<ul>
+<li>How can we combine data and knowledge from different ontologies/knowledge graphs?</li>
+<li><a href="https://en.wikipedia.org/wiki/Ontology_alignment">Ontology/Knowledge graph alignment</a>: How can we effectively link to ontologies, or knowledge graphs, together?</li>
+<li><a href="https://en.wikipedia.org/wiki/Ontology_merging">Ontology merging</a>: combine two ontologies by corresponding concepts and relations.</li>
+<li>Ontology matching: A sub-problem of ontology alignment, namely the problem of determining whether two terms (for example two diseases) from different ontologies should be linked together or not.</li>
+<li>How can we integrate data from unstructured and semistructured sources such as documents or spreadsheets?</li>
+<li><a href="https://en.wikipedia.org/wiki/Named-entity_recognition">Named Entity Recognition (NER)</a>: the process of identifying a named "thing" in a text.</li>
+<li><a href="https://en.wikipedia.org/wiki/Entity_linking">Entity linking</a>: The task of associating a named entity, for example the result of a Named Entity Recognition algorithm, or the column of a spreadsheet, to a concept in an ontology. For example, the value "Mendelian Disease" is <em>linked</em> to the concept http://purl.obolibrary.org/obo/MONDO_0003847.</li>
+<li><a href="https://medium.com/@andreasherman/different-ways-of-doing-relation-extraction-from-text-7362b4c3169e">Relationship extraction</a>: Once you have identified the genes and diseases in your Pubmed abstracts, you will want to understand how they related to each other. Is the gene the "basis in dysfunction of" the disease? Or just randomly co-occurs in the sentence?</li>
+<li>Note: Many of the problems in this category are typically associated with the domain of Natural Language Processing rather than Semantic Web.</li>
+<li>How can we generate insight from semantically integrated data?</li>
+<li>Knowledge Graphs and Machine Learning<ul>
+<li><a href="https://towardsdatascience.com/introduction-to-knowledge-graph-embedding-with-dgl-ke-77ace6fb60ef">Knowledge Graph Embeddings</a>. The number one hype topic in recent years: How do you get from a graph of interrelated entities to a faithful representation in a vector space (basically numbers), so that Machine Learning algorithms can do their magic?</li>
+<li><a href="https://en.wikipedia.org/wiki/Link_prediction">Link predication</a>: Based on what we know, which are the best drug targets for my rare disease of interest?</li>
+</ul>
+</li>
+<li>Logical reasoning: While the research on deductive reasoning, at least the more "hard-core" <a href="https://en.wikipedia.org/wiki/Description_logic">Description Logic</a> kind, seems to be a bit more quiet in recent years (maybe I am wrong here, I just see much less papers coming through my Google Scholar alerts now then I used to), there is still a lot going on in this domain: more efficient SPARQL engines, rule-based reasoning such as the recently commercialised <a href="https://link.springer.com/content/pdf/10.1007/978-3-319-25010-6_1.pdf">RDFox</a> reasoner and many more.</li>
+<li>Other research areas (not in any way exhaustive):</li>
+<li>Web decentralisation and privacy:<ul>
+<li><a href="https://solidproject.org/">Solid</a>: Solid (Social Linked Data) is a web decentralization project led by Tim Berners-Lee, with the aim of true ownership of personal data and improved privacy. "Pods" are like secure personal web servers for data from which application can request data.</li>
+<li><a href="https://www.w3.org/2014/data-shapes/wiki/Main_Page">Shape validation</a>: It is very difficult to validate huge Knowledge Graphs of interrelated data efficiently (by validate we can mean a lot of things, such as making sure that your cat does not accidentally end up as someone's "Mendelian Disease"). Shape languages such as Shex and SHACL are poised to solve this problem, but the research is ongoing.</li>
+</ul>
+</li>
+<li>New standards and tools: There is always someone proposing a new semantic standard for something or building a new kind of triple store, SPARQL extension or similar.</li>
+</ul>
+<h4 id="typical-jobs-of-semantic-data-engineers-in-the-biomedical-domain">Typical Jobs of Semantic Data Engineers in the biomedical domain<a class="headerlink" href="#typical-jobs-of-semantic-data-engineers-in-the-biomedical-domain" title="Permanent link">&para;</a></h4>
+<p>It is useful to get a picture of the typical tasks a Semantic Data Engineer faces when building ontologies are Knowledge Graphs. In my experience, it is unlikely that any particular set of tools will work in all cases - most likely you will have to try and assemble the right toolchain for your use case and refine it over the lifetime of your project. The following are just a few points for consideration of tasks I regularly encountered - which may or may not overlap with the specific problems you will face.</p>
+<h5 id="finding-the-right-ontologies">Finding the right ontologies<a class="headerlink" href="#finding-the-right-ontologies" title="Permanent link">&para;</a></h5>
+<p>There are no simple answers here and it very heavily depends on your use cases. We are discussing some places to look for ontologies <a href="#tools-biomedical-research">here</a>, but it may also be useful to simply upload the terms you are interested in to a service like <a href="https://www.ebi.ac.uk/spot/zooma/">Zooma</a> and see what the terms map to at a major database provider like EBI.</p>
+<h5 id="finding-the-right-data-sources">Finding the right data sources<a class="headerlink" href="#finding-the-right-data-sources" title="Permanent link">&para;</a></h5>
+<p>This is much harder still than it should have to be. Scientific databases are scattered across institutions that often do not talk to each other. Prepare for some significant work in researching the appropriate databases that could benefit your work, using Google and the scientific literature.</p>
+<h5 id="extending-existing-ontologies">Extending existing ontologies<a class="headerlink" href="#extending-existing-ontologies" title="Permanent link">&para;</a></h5>
+<p>It is rare nowadays that you will have to develop an ontology entirely from scratch - most biomedical sub-domains will have some kind of reasonable ontology to build upon. However, there is often a great need to extend existing ontologies - usually because you have the need of representing certain concepts in much more detail, or your specific problem has not been modelled yet - think for example when how disease ontologies needed to be extended during the Coronavirus Crisis. Extending ontologies usually have two major facets:</p>
+<ol>
+<li>If at all possible you should seek to contribute new terms, synonyms and relationships to the ontologies you seek to extend directly. Here, you can use GitHub to make issues requesting new terms, but more boldly, you can also add new terms yourself. We will teach you how to do that in one of the next weeks.</li>
+<li>If the knowledge is considered out of scope for the ontology to be extended (for example because the terms are considered too detailed), then you will maintain your own "branch" of the ontology. Many tools such as the <a href="https://github.com/INCATools/ontology-development-kit">Ontology Development Kit</a> and <a href="http://robot.obolibrary.org/">ROBOT</a> can help you maintain such a branch but the general instinct should be:</li>
+<li>Make a <em>public</em> GitHub repo.</li>
+<li>Reach out to the developers of the main ontology</li>
+<li>Stay in touch and coordinate releases</li>
+</ol>
+<h5 id="mapping-data-into-ontologiesknowledge-graphs">Mapping data into ontologies/knowledge graphs<a class="headerlink" href="#mapping-data-into-ontologiesknowledge-graphs" title="Permanent link">&para;</a></h5>
+<p>Also sometimes more broadly referred to as "data integration", this problem involves a variety of tasks, such as:</p>
+<ol>
+<li><em>Named Entity Recognition</em>. If you have a set of documents, such as PubMed abstracts or clinical notes, you may have to first identify the parts of speech that refer to clinical entities.</li>
+<li><em>Entity Linking</em>: Once you have identified the biomedical entities of interest, you may want to link them to your existing knowledge graph. This process is sometimes called entity mapping or data mapping as well. Very often, this task is not fully automated. We have worked on projects where we used approaches to Entity Linking to suggest good mappings to users, which then had to confirm or reject them. It is also good to understand that not all entity linking must be vertical (i.e. between "equivalent" entities). Very often, there is no equivalent entity in your knowledge graph to map to, and here you need to decide whether to (a) create a new entity in the knowledge graph to map to or (b) map to a broader entity (for example "microphthalmia, isolated, with coloboma 5" to "Mendelian Disease"). What is more efficient / useful solely depends on your use case!</li>
+</ol>
+<h5 id="build-application-ontologies">Build application ontologies<a class="headerlink" href="#build-application-ontologies" title="Permanent link">&para;</a></h5>
+<p>To make your data discoverable, it is often useful to extract a view from the ontologies you are using (for example, Gene Ontology, Disease Ontology) that only contains the terms and relationships of relevance to your data. We usually refer to this kind of ontology as an application ontology, or an ontology specific to your application, which will integrate subsets of other ontologies. This process will typically involve the following:</p>
+<ul>
+<li>Define a seed, or a set of terms you want to import from your external ontologies of interest.</li>
+<li>Extract relevant subsets from ontologies using this seed (for example using <a href="http://robot.obolibrary.org/extract">ROBOT extract</a>).</li>
+<li>Combine and potentially link these subsets together.</li>
+<li>Frameworks such as the <a href="https://github.com/INCATools/ontology-development-kit">Ontology Development Kit</a> can help with this task, see for example the <a href="https://github.com/EBISPOT/covoc">Coronavirus Vocabulary</a> maintained by EBI.</li>
+</ul>
+<h5 id="leverage-ontologies-and-knowledge-graphs-for-you-data-analysis-problems">Leverage ontologies and knowledge graphs for you data analysis problems<a class="headerlink" href="#leverage-ontologies-and-knowledge-graphs-for-you-data-analysis-problems" title="Permanent link">&para;</a></h5>
+<p>There are many ways your semantic data can be leveraged for data analysis, but in my experience, two are particularly central:</p>
+<ol>
+<li><em>Data grouping and search</em>: make data about "microphthalmia, isolated, with coloboma 5" available when searching for data about "Mendelian Disease".</li>
+<li><em>Link prediction</em>: Figure out what additional knowledge is hidden in your data that can drive your research (e.g. possible new therapies or drug targets).</li>
+</ol>
+<h2 id="additional-materials-and-resources">Additional materials and resources<a class="headerlink" href="#additional-materials-and-resources" title="Permanent link">&para;</a></h2>
+<p>The open courses of the <a href="https://open.hpi.de/">Hasso Plattner Institute</a> (HPI) offer introductions into the concepts around Linked Data, Semantic Web and Knowledge Engineering. There are three courses of relevance to this weeks topics, all of which overlap significantly.</p>
+<ul>
+<li><a href="https://open.hpi.de/courses/semanticweb2015/overview">Knowledge Engineering and the Web of Data</a>: The oldest (2015), of the courses, but the most thorough when it comes to logical foundations, semantics and OWL. We will come back to this course in Weeks 4 and 5.</li>
+<li><a href="https://open.hpi.de/courses/semanticweb2016/overview">Linked Data Engineering</a>: Overlaps a lot with the <a href="https://open.hpi.de/courses/semanticweb2015/overview">Knowledge Engineering and the Web of Data</a> course, with a bit more RDF/Linked Data focus.</li>
+<li><a href="https://open.hpi.de/courses/knowledgegraphs2020/overview">Knowledge Graphs</a>: The most up-to-date of the three courses (2020), and will be referred to again in Week 12 of our course here.</li>
+</ul>
+<h2 id="contributors">Contributors<a class="headerlink" href="#contributors" title="Permanent link">&para;</a></h2>
+<ul>
+<li>add name/ORCID here</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.action.edit", "search.suggest", "search.highlight", "content.code.annotation", "content.code.copy", "content.code.select"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@8.5.1/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>
