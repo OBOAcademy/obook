@@ -11,7 +11,7 @@ Writing a good ticket (or issue) is crucial to good management of a repo. In thi
 - Describe the problem and the context and include a repeatable example.
 - Clearly state what needs to be done to close the ticket
   - Tickets should ideally be actionable units that can be closed via a PR
-- Fag relevant people with @ (e.g., @nlharris)
+- Flag relevant people with @ (e.g., @nlharris)
 - Mention related issues with # (e.g., #123)
   - use a complete URL to link to tickets in other repos
 - Make issue titles actionable
