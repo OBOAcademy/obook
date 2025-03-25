@@ -1,6 +1,6 @@
 # Adding taxon restrictions
 
-Before adding taxon restrictions, please review the [types of taxon restrictions documentation](../explanation/taxon-constraints-explainer/#Types-of-Taxon-Restrictions).
+Before adding taxon restrictions, please review the [types of taxon restrictions documentation](../explanation/taxon-constraints-explainer/#types-of-taxon-restrictions).
 
 See [Daily Workflow](daily-curator-workflow.md) for creating branches and basic Protégé instructions.
 
