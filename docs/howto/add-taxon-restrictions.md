@@ -1,6 +1,6 @@
 # Adding taxon restrictions
 
-Before adding taxon restrictions, please review the [types of taxon restrictions documentation](https://oboacademy.github.io/obook/explanation/taxon-constraints-explainer/?h=taxon+restric#types-of-taxon-restrictions).
+Before adding taxon restrictions, please review the [types of taxon restrictions documentation](../explanation/taxon-constraints-explainer/#types-of-taxon-restrictions).
 
 See [Daily Workflow](daily-curator-workflow.md) for creating branches and basic Protégé instructions.
 
