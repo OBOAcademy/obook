@@ -29,6 +29,7 @@ _Note: this is tentative and subject to change_
 | Date | Lesson | Notes | Recordings |
 | --- | --- | --- | --- |
 | 2025/04/29 | AI Curation series | Chris Mungall, LBNL |  |
+| 2025/04/08 | Introduction to developing agentic workflows for semantic engineers | Nico Matentzoglu | | 
 | 2025/02/04 | More! Hands On Workshop: OntoGPT | Harry Caufield, LBNL  |  |
 | 2024/10/15 | Hands On Workshop: OntoGPT | Harry Caufield, LBNL | [Here](https://youtu.be/ezFIgY0LE4A?si=Pwuoq3VkvVNjon09)  |
 | July to Sept 2024 | _No Meeting_ | Enjoy Summer break! |  |
