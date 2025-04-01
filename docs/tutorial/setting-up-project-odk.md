@@ -32,7 +32,7 @@ cd odk_tutorial
 
 2. Download the seed-my-repo wrapper script
 
-Now download the seed-my-repo wrapper script from the ODK GitHub repository. A detailed explanation of how to do that can be found [here](https://github.com/INCATools/ontology-development-kit/blob/master/docs/CreatingRepo.md#2-download-the-wrapper-script-and-pull-latest-odk-version). For simplicity, we just use wget here to download the seed-my-repo file, but you can do it manually:
+Now download the seed-my-repo wrapper script from the ODK GitHub repository. A detailed explanation of how to do that can be found [here](https://oboacademy.github.io/obook/howto/odk-create-repo/). For simplicity, we just use wget here to download the seed-my-repo file, but you can do it manually:
 
 ```
 wget https://raw.githubusercontent.com/INCATools/ontology-development-kit/master/seed-via-docker.sh
