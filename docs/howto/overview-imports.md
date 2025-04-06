@@ -23,6 +23,8 @@ Ontologies are intraconnected beasts. Fully axiomatized ontologies contain lots 
 
 It gets out of hand quickly.
 
+There is a major caveat for all of this: Your decision on import process depends on whether you are working on a domain ontology or a [project ontology](../tutorial/project-ontology-development/). If you are working on a domain ontology, there is a strict requirement to maintain logical validity. The domain ontology itself may have already developed import workflows that suit it. If you are working on a project ontology, you have more freedom to decide how you import terms.
+
 There are a few questions you can ask yourself to help make this decision:
 1. Is the definition and place in the hierarchy suitable for your ontology?
 2. Do all of the axioms reflect the meaning of the term as you intend it?
