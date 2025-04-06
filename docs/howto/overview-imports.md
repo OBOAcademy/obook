@@ -10,9 +10,9 @@
 This is a guide on how to **import terms** from one ontology to another. The OBO Foundry emphasizes reuse between ontologies, yet reusing terms is a very complex process with a lot of caveats and technical nuance.
 
 This how-to is an addition to some of the more technical tutorials, which can be considered post-requisites:
-- [Update Imports Workflow](https://oboacademy.github.io/obook/howto/update-import/?h=import)
-- [Managing Dynamic Imports with the Ontology Development Kit](https://oboacademy.github.io/obook/howto/update-import/?h=import)
-- [Dealing with huge ontologies in your import chain](https://oboacademy.github.io/obook/howto/deal-with-large-ontologies/?h=import)
+- [Update Imports Workflow](../howto/update-import/)
+- [Managing Dynamic Imports with the Ontology Development Kit](../howto/update-import/)
+- [Dealing with huge ontologies in your import chain](../howto/deal-with-large-ontologies/)
 - ODK documentation - [Manage your ODK Repository](https://obofoundry.org/COB/odk-workflows/RepoManagement/)
 
 ## To import or create?
