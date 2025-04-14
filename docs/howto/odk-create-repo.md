@@ -72,13 +72,28 @@ release and initialize a local repository (not yet pushed to your Git host site 
 
 There are three frequently encountered problems at this stage:
 
-1. No `.gitconfig` in user directory
+1. No local Git configuration
 2. Spaces is user path
 3. During download, your filenames got changed (Windows)
 
-#### No `.gitconfig` in user directory
+#### No local Git configuration
 
-The seed-via-docker script requires a `.gitconfig` file in your user directory. If your `.gitconfig` is in a different directory, you need to change the path in the downloaded `seed-via-docker` script. For example on Windows (look at `seed-via-docker.bat`):
+On GNU/Linux and macOS, the `seed-via-docker.sh` script uses `git config` to automatically obtain the username and email to use in the initial commit. That information is typically stored in a `~/.gitconfig` file in your user account’s home directory.
+
+If you do not have such a file, you may create and initialise it with:
+
+```sh
+git config --global user.name Alice
+git config --global user.email alice@example.org
+```
+
+If for some reason you do not wish to set a Git username and email globally, or you wish to use a different username and email than those already set in your `~/.gitconfig` file, you may explicitly pass a username and an email when you call the `seed-via-docker.sh` script as follows:
+
+```sh
+ODK_GITNAME=Alice ODK_GITEMAIL=alice@example.org ./seed-via-docker.sh ...
+```
+
+On Windows, the `seed-via-docker.bat` script expects to find the Git configuration file in `%userprofile%/.gitconfig. This is _not_ configurable, so if your Git configuration file is located elsewhere, you need to change the path in the `seed-via-docker.bat` script directly. The script looks like the following:
 
 ```
 docker run -v %userprofile%/.gitconfig:/root/.gitconfig -v %cd%:/work -w /work --rm -ti obolibrary/odkfull /tools/odk.py seed %*
