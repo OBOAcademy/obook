@@ -163,6 +163,12 @@ This will create a basic layout of your repo under `target/cato/*`
 
 _Note:_ after this run, you wont need `cato-odk.yaml` anymore as it will have been added to your ontology repo, which we will see later.
 
+By default, the `seed-via-docker.sh` script attempts to obtain your Git username and email from your local Git configuration (typically stored in `~/.gitconfig`. If for some reason you want your repository to be initialised with a different username and/or email, you may explicitly pass them to the script as follows:
+
+```sh
+ODK_GITNAME=Alice ODK_GITEMAIL=alice@example.org sh seed-via-docker.sh ...
+```
+
 ## Publish on GitHub
 
 You can now move the `target/cato` directory to a more suitable location. For the sake of this tutorial we will move it to the Home directory.
