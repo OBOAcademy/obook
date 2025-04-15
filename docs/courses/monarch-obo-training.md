@@ -6,6 +6,7 @@ The goal of this course is to provide ongoing training for the OBO community. As
 
 ## You (Students)
 
+- Join the [Monarch Tutorials Mailing List](https://groups.google.com/g/monarch-tutorials)
 - Read the ["Getting started" guide](../getting-started.md)
 - Check which lessons interest you in the upcoming schedule - just participate in the ones you care about
 - Prepare the lessons (between 3 and 7 hours of preparation time)
