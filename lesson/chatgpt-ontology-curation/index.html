@@ -1,0 +1,6378 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://oboacademy.github.io/obook/lesson/chatgpt-ontology-curation/">
+      
+      
+        <link rel="prev" href="../getting-hands-on/">
+      
+      
+        <link rel="next" href="../linkml-helps-with-ontology-use/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>Leveraging ChatGPT for ontology curation - OBO Semantic Engineering Training</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bcfcd587.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#lesson-leveraging-chatgpt-for-ontology-curation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="OBO Semantic Engineering Training" class="md-header__button md-logo" aria-label="OBO Semantic Engineering Training" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OBO Semantic Engineering Training
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Leveraging ChatGPT for ontology curation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/OBOAcademy/obook/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="OBO Semantic Engineering Training" class="md-nav__button md-logo" aria-label="OBO Semantic Engineering Training" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    OBO Semantic Engineering Training
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/OBOAcademy/obook/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About the course
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting started with learning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview of lessons and tutorials
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contribute to the course
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Courses
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Courses
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../courses/icbo2024/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ICBO 2024 Tutorial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../courses/icbo2023/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ICBO 2023 Tutorial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../courses/icbo2022/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ICBO 2022 Tutorial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../courses/icbo2021/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ICBO 2021 Tutorial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../courses/monarch-obo-training/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Monarch Ontology Training
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../courses/ontology-summit-2023/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology Summit 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Pathways
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Pathways
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pathways/pathways/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What is a pathway?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pathways/early-career-data-scientist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Early Career Data Scientist
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pathways/ontology-curator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology Curator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pathways/ontology-curator-go-style/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology Curator GO-style
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pathways/ontology-curator-obi-style/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology Curator OBI-style
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pathways/ontology-engineer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology Engineer/Developer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pathways/ontology-contributor/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology Contributor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Lessons
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Lessons
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contributing-to-obo-ontologies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contributing to OBO ontologies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ontology-pipelines/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology Pipelines with ROBOT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/project-ontology-development/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project Ontology Development
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analysing-linked-data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Analysing Linked Data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../automating-ontology-workflows/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Automating Ontology Workflows
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../developing-an-obo-ontology/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Developing an OBO Ontology
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ontology-design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology Design
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../templates-for-obo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Templates for OBO ontologies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ontology-fundamentals/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology Fundamentals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modelling-with-object-properties/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modelling with Object Properties
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ontology-term-use/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology Term Use
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rdf/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RDF Fundamentals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../entity-matching/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semantic Entity Matching
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../using-disease-and-phenotype-ontologies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Disease and Phenotype Ontologies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phenotype-data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic concepts of phenotype data and ontologies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hackathon/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hacking the OBOOK
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-hands-on/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Hands on with Ontologies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Leveraging ChatGPT for ontology curation
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Leveraging ChatGPT for ontology curation
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lesson-leveraging-chatgpt-for-ontology-curation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lesson: Leveraging ChatGPT for ontology curation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lesson: Leveraging ChatGPT for ontology curation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contributors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contributors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skills-you-will-learn-in-this-lesson" class="md-nav__link">
+    <span class="md-ellipsis">
+      Skills you will learn in this lesson
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conventions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conventions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prequisites
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preparation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lesson" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lesson
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-prompt-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is prompt engineering?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-are-some-basic-tips-for-writing-good-prompts-for-chatgpt" class="md-nav__link">
+    <span class="md-ellipsis">
+      What are some basic tips for writing good prompts for ChatGPT?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#applications-of-chatgpt-for-ontology-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      Applications of ChatGPT for ontology development
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-can-we-concretely-enhance-the-ontology-curation-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      How can we, concretely, enhance the ontology curation process?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-chatgpt-for-ontology-mappings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using ChatGPT for ontology mappings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generating-pre-coordinated-expressions-and-schema-instances" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generating pre-coordinated expressions and schema instances
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Generating pre-coordinated expressions and schema instances">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#todo-finish-this-section" class="md-nav__link">
+    <span class="md-ellipsis">
+      TODO FINISH THIS SECTION
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from-chat-to-exectutable-workflows-what-we-need-to-do-to-leverage-llms" class="md-nav__link">
+    <span class="md-ellipsis">
+      From Chat to exectutable workflows: what we need to do to leverage LLMs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#some-more-thoughts-on-hallucinations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Some more thoughts on hallucinations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cool-applications-the-authors-of-this-tutorial-used" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cool applications the authors of this tutorial used
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-materials" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional materials
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linkml-helps-with-ontology-use/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using Ontologies in Practice--LinkML can help
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../licensing-data-and-software/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Licensing Data and Software
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vocabularies-for-bioinformatics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vocabularies for bioinformatics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../synonyms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    An Introduction to Synonyms in OBO Ontologies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Lessons In Development
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Lessons In Development
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../developing-application-ontologies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Developing an Application Ontology
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ontology-development/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology Development
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../semantic-database-fundamentals/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semantic Database Fundamentals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tutorials
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Tutorials
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_1" id="__nav_9_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Protege
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_1">
+            <span class="md-nav__icon md-icon"></span>
+            Protege
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/basic-dl-query/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DL queries
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/disjointness/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Disjointness
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_2" id="__nav_9_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ontology Pipelines - ODK, ROBOT, etc
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_2">
+            <span class="md-nav__icon md-icon"></span>
+            Ontology Pipelines - ODK, ROBOT, etc
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/robot-tutorial-1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ROBOT Mini-Tutorial 1 - Convert, Extract and Template
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/robot-tutorial-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ROBOT Mini-Tutorial 2 - Annotate, Merge, Reason and Diff
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/robot-tutorial-qc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ROBOT Mini-Tutorial QC - Quality Control with report, verify and query
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/sparql-report-robot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ROBOT - Generating SPARQL table reports
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/sparql-report-odk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ODK - Adding SPARQL table reports
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/setting-up-project-odk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ODK - Getting started with your own repo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/odk-tutorial-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ODK - 20 minute complete walk-through
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/custom-qc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ODK - Adding custom Quality Check
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/managing-dynamic-imports-odk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ODK - Managing imports
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/managing-ontology-releases-odk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ODK - Managing ontology releases
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/migrating-ontology-to-odk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ODK - Migrating to ODK
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/odk-toolbox/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ODK - Using the ODK Toolbox
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_3" id="__nav_9_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Templates
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_3">
+            <span class="md-nav__icon md-icon"></span>
+            Templates
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/dosdp-overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting started with DOSDP templates
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/dosdp-template/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DOSDP Templates Basic Tutorial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/dosdp-odk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction to Managing DOSDP Templates in ODK
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_4" id="__nav_9_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Git, GitHub and Collaborative Workflows
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_4">
+            <span class="md-nav__icon md-icon"></span>
+            Git, GitHub and Collaborative Workflows
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/github-fundamentals/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GitHub Fundamentals for OBO Engineers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/github-issues/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GitHub Issue for OBO Engineers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/managing-ontology-project/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Managing OBO ontology projects
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/pull-requests/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pull requests
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_5" id="__nav_9_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    OntoGPT
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_5">
+            <span class="md-nav__icon md-icon"></span>
+            OntoGPT
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/ontogpt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OntoGPT Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/ontogpt-workshop/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OntoGPT in Practice
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_6" id="__nav_9_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Dealing with Semantic Data
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_6">
+            <span class="md-nav__icon md-icon"></span>
+            Dealing with Semantic Data
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/linking-data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    From Tables to Linked Data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/curies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Standardizing Prefixes, CURIEs, and URIs with the `curies` package
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/units/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Units of Measurement
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/sparql/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic SPARQL for OBO Engineers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/monarch-kg-neo4j-basics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic cypher on the Monarch Neo4j graph
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_7" id="__nav_9_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Command line
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_7">
+            <span class="md-nav__icon md-icon"></span>
+            Command line
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/intro-cli-1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic introduction to CLI 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/intro-cli-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic introduction to CLI 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_8" id="__nav_9_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Mappings and SSSOM
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_8">
+            <span class="md-nav__icon md-icon"></span>
+            Mappings and SSSOM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/sssom-tutorial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic Tutorial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/lexmatch-tutorial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lexical Matching with OAK Lexmatch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/sssom-toolkit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction to the SSSOM Toolkit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/biomappings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Curating Mappings with Biomappings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_9" id="__nav_9_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    General Ontology Modelling
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_9">
+            <span class="md-nav__icon md-icon"></span>
+            General Ontology Modelling
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/project-ontology-development/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project Ontology Development
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/fhkb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Family History Knowledge Base (FHKB) tutorial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_10" id="__nav_9_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Exomiser
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_10">
+            <span class="md-nav__icon md-icon"></span>
+            Exomiser
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/exomiser-tutorial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction to Exomiser
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_11" id="__nav_9_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Information Extraction
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_11">
+            <span class="md-nav__icon md-icon"></span>
+            Information Extraction
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/named-entity-recognition/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Named Entity Recognition with Gilda
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/named-entity-normalization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Named Entity Normalization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/named-entity-standardization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Named Entity Standardization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    How-to guides
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            How-to guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_1" id="__nav_10_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    General
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_1">
+            <span class="md-nav__icon md-icon"></span>
+            General
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/open-science-engineer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Maximising impact as an open science engineer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/create-ontology-from-scratch/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating an ontology from scratch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/ontology-overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create an ontology overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/prettify/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prettify Markdown Files
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/screenshot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create Screenshot and paste into an issue
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/setup-docker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Set-up docker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_2" id="__nav_10_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Protege
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_2">
+            <span class="md-nav__icon md-icon"></span>
+            Protege
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/install-protege/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Install Protégé
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/set-up-protege/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setup Protege 5.5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/installing-elk-in-protege/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installing ELK in Protege
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/idrange/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setting up your ID range
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/edit-in-protege/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Editing in Protege
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/daily-curator-workflow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Daily Workflow
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/edit-in-protege/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Edit in Protege
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/switching-ontologies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Switching Ontologies in Protege
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/protege-browse-search/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Browsing and Searching
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/create-new-term/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating New Terms in Protege
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/obsolete-term/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Obsoleting a Term
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/merge-terms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Merging Terms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/add-taxon-restrictions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Adding Taxon Restrictions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/add-new-slim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating a new Slim (under construction)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_3" id="__nav_10_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ODK
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_3">
+            <span class="md-nav__icon md-icon"></span>
+            ODK
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/setup-ontology-development-odk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Get set up for ODK-based ontology development
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/odk-setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setting up the ODK
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/odk-update/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Update to a newer ODK version
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/odk-create-repo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating a Repo with ODK
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/deal-with-large-ontologies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dealing with Large Ontologies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/update-import/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Updating Imports with ODK
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/odk-add-orcidio-module/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Import ORCIDIO
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/run-odk-with-podman/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Running ODK with podman
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/odk-migrate-to-odk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Migrate an existing ontology Repo to ODK
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_4" id="__nav_10_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Git and GitHub
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_4">
+            <span class="md-nav__icon md-icon"></span>
+            Git and GitHub
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/term-request/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Make term requests to existing ontologies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/clone-mondo-repo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Clone a repository
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/github-create-fork/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fork an ontology for editing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/github-create-pull-request/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create a GitHub Pull Request
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/change-files-pull-request/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Change a pull request
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/fixing-conflicts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fix conflicts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/github-actions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Automate tasks with GitHub actions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/revert-commit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Revert a commit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/review-pull-request/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Review a pull request
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_5" id="__nav_10_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Quality control
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_5">
+            <span class="md-nav__icon md-icon"></span>
+            Quality control
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/deploy-custom-obo-dashboard/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deploy a custom OBO-Dashboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_6" id="__nav_10_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Command line
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_6">
+            <span class="md-nav__icon md-icon"></span>
+            Command line
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/filter-text-file/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to filter a file based on another file
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_7" id="__nav_10_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Mappings
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_7">
+            <span class="md-nav__icon md-icon"></span>
+            Mappings
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/are-two-entities-the-same/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Are these two entities the same? A guide.
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/review-disease-mappings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to review disease mappings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Reference
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/glossary-of-terms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary of Terms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/frequently-used-odk-commands/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Frequently used ODK commands
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/protege-interface/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Protege Interface
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/protege-faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Protege FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/llms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LLMs for the Semantic Engineer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/formatting-license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Formatting your ontology annotations correctly
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/go-style-annotation-property-practice/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OBO-style term annotation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_9" id="__nav_11_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ontology Matching
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_9">
+            <span class="md-nav__icon md-icon"></span>
+            Ontology Matching
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/semantic-etl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semantic ETL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_10" id="__nav_11_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Git
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_10">
+            <span class="md-nav__icon md-icon"></span>
+            Git
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/github-intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intro to GitHub
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/github-desktop/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GitHub Desktop
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/git-faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/semantic-engineering-toolbox/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semantic Engineering Toolbox
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/tables-and-triples/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tables and Triples
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/reasoning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Reasoning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/ontology-curator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    A day in the life of an ontology curator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/protege-interface/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Protege interface
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_16" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_16" id="__nav_11_16_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    SPARQL
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_16">
+            <span class="md-nav__icon md-icon"></span>
+            SPARQL
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/sparql-basics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SPARQL basics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/sparql-reference/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SPARQL templates
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/managing-issues/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tools for Managing Issues
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/release-artefacts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Release Artefacts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/base-specification/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Base Release
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/synonyms-properties/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Synonym Properties
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/synonyms-types/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Synonym Types
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/synonym-validation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Synonym Validation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/mungall-blog-radar/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Monkeying around with OWL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/odk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology Development Kit (ODK)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/troublehooting-robot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Troubleshooting ROBOT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/gh-actions-errors/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Common Errors in GitHub actions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/other-resources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Other useful resources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/medical-ontology-landscape/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Medical Ontology landscape
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/wikidata/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    A reference guide to Wikidata
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/obook-maturity-indicator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OBOOK Maturity Indicator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_31" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_31" id="__nav_11_31_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ChatGPT
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_31_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_31">
+            <span class="md-nav__icon md-icon"></span>
+            ChatGPT
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/chatgpt-prompts-for-ontology-development/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leveraging ChatGPT for ontology curation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/ontology-user/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology User references
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Explanations
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            Explanations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/intro-to-ontologies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction to Ontologies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/logical-axiomatization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Logical axiomatization of classes & use of reasoning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/term-comments/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Term Comments
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/annotation-properties/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction to Annotation Properties
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/writing-good-issues/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Writing good issues
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/ontology-matching/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology Matching
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/which-ontology-to-use/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Which biomedical ontologies should we use?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/owl-format-variants/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OWL, OBO, JSON? Base, simple, full, basic? What should you use, and why?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/taxon-constraints-explainer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What are taxon constraints?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/owl-building-blocks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The logical building blocks of OWL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/subClassOf-vs-equivalentTo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SubClassOf versus EquivalentTo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/existential-restrictions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Existential restrictions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    OBOOK Editors
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            OBOOK Editors
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started-obook/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting started for OBOOK editors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../images/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to add images
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/embed-video/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to embed videos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../config/template/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    New lesson template
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teaching/case-studies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Case studies for teaching
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Outreach
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14">
+            <span class="md-nav__icon md-icon"></span>
+            Outreach
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/outreach/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Outreach materials
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lesson-leveraging-chatgpt-for-ontology-curation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lesson: Leveraging ChatGPT for ontology curation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lesson: Leveraging ChatGPT for ontology curation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contributors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contributors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skills-you-will-learn-in-this-lesson" class="md-nav__link">
+    <span class="md-ellipsis">
+      Skills you will learn in this lesson
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conventions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conventions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prequisites
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preparation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lesson" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lesson
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-prompt-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is prompt engineering?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-are-some-basic-tips-for-writing-good-prompts-for-chatgpt" class="md-nav__link">
+    <span class="md-ellipsis">
+      What are some basic tips for writing good prompts for ChatGPT?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#applications-of-chatgpt-for-ontology-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      Applications of ChatGPT for ontology development
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-can-we-concretely-enhance-the-ontology-curation-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      How can we, concretely, enhance the ontology curation process?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-chatgpt-for-ontology-mappings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using ChatGPT for ontology mappings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generating-pre-coordinated-expressions-and-schema-instances" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generating pre-coordinated expressions and schema instances
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Generating pre-coordinated expressions and schema instances">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#todo-finish-this-section" class="md-nav__link">
+    <span class="md-ellipsis">
+      TODO FINISH THIS SECTION
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from-chat-to-exectutable-workflows-what-we-need-to-do-to-leverage-llms" class="md-nav__link">
+    <span class="md-ellipsis">
+      From Chat to exectutable workflows: what we need to do to leverage LLMs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#some-more-thoughts-on-hallucinations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Some more thoughts on hallucinations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cool-applications-the-authors-of-this-tutorial-used" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cool applications the authors of this tutorial used
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-materials" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional materials
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/OBOAcademy/obook/edit/master/docs/lesson/chatgpt-ontology-curation.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+    </a>
+  
+  
+
+
+  <h1>Leveraging ChatGPT for ontology curation</h1>
+
+<h2 id="lesson-leveraging-chatgpt-for-ontology-curation">Lesson: Leveraging ChatGPT for ontology curation<a class="headerlink" href="#lesson-leveraging-chatgpt-for-ontology-curation" title="Permanent link">&para;</a></h2>
+<p><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FOBOAcademy%2Fobook%2Fmaster%2Fdocs%2Fresources%2Fobook-badge-development.json" /></p>
+<p>In this lesson, we will take a look at the generative capabilities of LLM's in general and ChatGPT in particular, to try and get a beginning sense on how to leverage it to enhance ontology curation workflows.</p>
+<p>The goal of the lesson is to give a mental model of what ChatGPT and LLMs are used for (ignoring details on how they work), contextualise the public discourse a bit, and then move on to looking at some concrete examples at its potential for improving curation activties.</p>
+<p>To achieve this we engaged in a dialog with ChatGPT to generate <strong>almost the entire content of the lesson</strong>. The lesson authors provide the general "structure" of the lesson, provided to ChatGPT as a series of prompts, and get ChatGPT to provide the content. This content is obviously not as good as it could have been if it was created by a human with infinite resources, but we hope it does get the following points across:</p>
+<ol>
+<li>You can get 80% of the way in 20% (or less, in my case) of the time (it took me 90 minutes to write the lesson, while the same scope of lesson would have taken me 8-10 hours without ChatGPT</li>
+<li>Beware of hallucinations in particular</li>
+<li>ChatGPT is not only good for generating natural language text, but also <em>structured content</em></li>
+<li>Using ChatGPT is fun, which drastically reduces the mental barrier of using it in a professional context</li>
+</ol>
+<p>We believe that from a user perspective, <em>prompt engineering</em> will be the most important skill that need to be learned when dealing with generative AI. Not just ChatGPT (which generates text), but also tools that generate images from text such as <a href="https://en.wikipedia.org/wiki/DALL-E">DALL-E</a> or <a href="https://en.wikipedia.org/wiki/Midjourney">Midjourney</a>, so this is what we will focus on. In the long term, applications like Monarchs <a href="https://github.com/monarch-initiative/ontogpt">OntoGPT</a> will do some of the heavy lifting around writing perfect prompts, but it seems pretty clear that some basic knowledge of prompt engineering will be useful, or even necessary, for a long time to come.</p>
+<p>For a reference of effective ChatGPT prompts for ontology development see <a href="../../reference/chatgpt-prompts-for-ontology-development/">here</a>.</p>
+<p>Note:
+- ChatGPT is rapidly evolving. The moment we add an answer, it will probably be outdated. For example, I created the first version of this tutorial on April 17th 2023. On May 27th, almost all answers ChatGPT is giving are completely different from the ones given in the first round. This is also important to remember when building applications around ChatGPT.
+- Note: https://open-assistant.io/chat is free and can be used to follow this tutorial instead of ChatGPT.</p>
+<h3 id="contributors">Contributors<a class="headerlink" href="#contributors" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://orcid.org/0000-0002-8719-7760">Sierra Moxon</a></li>
+<li><a href="https://orcid.org/0000-0002-6601-2165">Chris Mungall</a></li>
+<li><a href="https://orcid.org/0000-0002-7356-1779">Nico Matentzoglu</a></li>
+</ul>
+<h3 id="skills-you-will-learn-in-this-lesson">Skills you will learn in this lesson<a class="headerlink" href="#skills-you-will-learn-in-this-lesson" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Write basic prompts for ChatGPT and similar LLM-based chatbots</li>
+<li>Understand the basic principles of text in -&gt; text out of LLM-based programs</li>
+<li>Understand practically the risks of hallucination</li>
+<li>Motivate yourself to explore the question: "How, if at all, can I use this technology to become more efficient/effective in my work? (there is no general answer to that yet!)"</li>
+</ul>
+<h3 id="conventions">Conventions<a class="headerlink" href="#conventions" title="Permanent link">&para;</a></h3>
+<p><em>Prompts</em></p>
+<blockquote>
+<p><img alt="" src="../../images/prompt-icon.png" /></p>
+<p>We use quote syntax with the prompt icon to indicate a concrete prompt for ChatGPT</p>
+</blockquote>
+<p><em>Comments</em></p>
+<blockquote>
+<p><img alt="" src="../../images/comment.png" /></p>
+<p>We use quote syntax with the comment icon to indicate a comment by the author</p>
+</blockquote>
+<p><em>Replies by ChatGPT</em></p>
+<p>Replies are given in normal text form. All text after the table of contents, apart from comments, prompts and the section on <a href="#workflows">executable workflows</a> are generated by ChatGPT.</p>
+<h3 id="prequisites">Prequisites<a class="headerlink" href="#prequisites" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Have a very basic understanding of <a href="https://www.youtube.com/watch?v=jHv63Uvk5VA">how ChatGPT works</a>.</li>
+</ul>
+<h3 id="preparation">Preparation<a class="headerlink" href="#preparation" title="Permanent link">&para;</a></h3>
+<ul>
+<li>If you have a tiny bit of a technical inclination, we recommend the ca. 60 minute OpenAI/DeepLearning.ai <a href="https://learn.deeplearning.ai/chatgpt-prompt-eng/lesson/1/introduction">course</a>. It has zero fluff, and is very focussed on some of the core use cases of using ChatGPT as an API.</li>
+<li>We recommend to spend 30-60 minutes studying the excellent <a href="https://learnprompting.org/docs/category/-basics">Learn Prompting</a>, a Free, Open Source Course on Communicating with Artificial Intelligence.</li>
+<li>Take a look at <a href="https://console.anthropic.com/docs/prompt-design/being-explicit">this nice introduction to prompt engineering by anthropic</a></li>
+<li>If you want to replicate the contents of this lession, you have to make an account at https://chat.openai.com/</li>
+</ul>
+<h3 id="lesson">Lesson<a class="headerlink" href="#lesson" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="#llms">Basic concepts and why should you care?</a></li>
+<li><a href="#prompt-engineering">What is Prompt Engineering?</a></li>
+<li><a href="#applications">Applications of LLMs and ChatGPT around ontology development</a></li>
+<li><a href="#applications-curation">How can we, concretely, enhance the ontology curation process?</a></li>
+<li><a href="#mappings">Using ChatGPT for ontology mappings</a></li>
+<li><a href="#expressions">Generating pre-coordinated expressions and schema instances</a></li>
+</ul>
+<p><a id="llms"></a></p>
+<blockquote>
+<p><img alt="" src="../../images/comment.png" /></p>
+<p>None of the text in this section is generated with ChatGPT.</p>
+</blockquote>
+<p>In essence, an LLM takes as an input a piece of text, and returns text as an output. A "prompt" is a 
+piece of text that is written by an agent. This can be a human, or a software tool, or a combination of the two. In most cases, a human agent will pass the prompt to a specialised tool that pre-processes the prompt in certain ways (like translating it, adding examples, structuring it and more) before passing it to the large language model (LLM). For example, a when a chatbot tool like ChatGPT receives a prompt, it processes the prompt in certain ways, than leveraging the trained LLM to generate the text (which is probably postprocessed) and passed back to the human agent.</p>
+<p><img alt="" src="../../images/llm_basic.png" /></p>
+<p>There are an infinite number of possible tools you can imagine following this rough paradigm. Monarch's own <a href="https://github.com/monarch-initiative/ontogpt">ontogpt</a>, for example, receives the prompt from the human agent, then augments the prompt in a certain way (by adding additional instructions to it) before passing the augmentd prompt to an LLM like gpt3.5 (or lately even gpt4), which generates an <em>instance of a curation schema</em>. This is a great example for an LLM generating not only human readable text, but <em>structured</em> text. Another example for this is to ask an LLM to generate, for example, a <a href="https://finnaarupnielsen.wordpress.com/2023/03/31/wikidata-and-chatgpt/">SPARQL query to obtain publications from Wikidata</a>.</p>
+<p>Given the wide range of applications LLMs can serve, it is important to get a mental model of how these can be leveraged to improve our ontology and data curation workflows. It makes sense for our domain (semantic engineering and curation) to distinguish four basic models of interacting with LLMs (which are technically not much different):</p>
+<ol>
+<li>Using LLM-based tools as advisors (endpoint humans)</li>
+<li>Using LLM-based tools as assistants (endpoint humans)</li>
+<li>Using LLM-based tools to extract information for automated processing (endpoint application)</li>
+</ol>
+<p>Using LLMs as advisors has a huge number of creative applications. An advisor in this sense is a machine that "knows a lot" and helps you with your own understanding of the world. 
+Large language models trained on a wide range of inputs are particularly interesting in this regard because of the immense breadth of their knowledge (rather than depth), which is something that can be difficult to get from human advisors.
+For example, the authors of this article have used ChatGPT and other LLM-based chatbots to help with understanding different domains, and how they might relate to knowledge management and ontologies in order to give specific career advice or to prepare for scientific panel discussions. For ontology curators, LLMs can be used to generate arguments for certain classification decisions (like a disease classification) or even <a href="#mappings">suggest a mapping</a>.</p>
+<p>Using LLMs as assistants is probably the most important use of LLM-based tools at the moment, which includes aspects like summarising texts, generating sometimes boring, yet important, creative work (documentation pages, tutorials, blog-posts etc). It is probably not a good idea, at least as of May 2023, to defer to LLM-based tools to classify a term in an ontology, for example because of its tendency to hallucinate. Despite many arguments to the contrary <a href="https://www.youtube.com/watch?v=WqYBx2gB6vA">LLMs are <em>not databases</em></a>. They are programs to generate text.</p>
+<p>Using LLMs to extract information, similar to "LLMs as assistants", is, similar to the above, also about automating certain tasks, but the endpoint is not a software program rather than a human. It is the most important basic model of LLMs for us curators and software engineers to understand, because it is, in essence, the one that threatens our current work-life the most: What happens if LLMs become better at extracting structured knowledge from papers (or similarly generate software codes for user stories) than us? It is important that this thought is not ignored out of fear, but approached with a realistic and positive mindset.</p>
+<p><em>Training</em>. Apart from the fact that LLMs take text as an input and return text as an output, it is important to be aware how they are trained.</p>
+<p><img alt="" src="../../images/llm_learn.png" /></p>
+<p>The basic technique for trainig is called "next token prediction". In essence, tokens in the text
+such as words or phrases are masked out by the training function and the LLM is trained to correctly predict these masked out phrases given the previous words in the sentence (or paragraph).
+The corpus used for this training ranges from specialised databases all the way to a large chunk of the publicly accessible textual information on the internet.
+Again, it is important to realise that text does not have to be composed of natural language sentences - learning how to generate programming code and structured data works much the same way.</p>
+<p>In the following, we will ask ChatGPT or Open Assistant a few questions that are relevant to this lesson, which allows us to make certain points. The main point is that a lot of the work for preparing a useful tutorial can be deferred to ChatGPT is an assistant! 
+Many of the questions explore how these tools <em>could</em> relate to us biocurators and semantic engineers in particular, but non of this should be viewed as written in stone.
+The most important take away from this lesson is that you should play with these tools yourself!</p>
+<blockquote>
+<p><img alt="" src="../../images/prompt-icon.png" /></p>
+<p>Can you explain in 3 simple sentences what an LLM is and how it works? <code>[Note this question was asked to [Open Assistant](https://open-assistant.io/chat/) instead of ChatGPT.]</code></p>
+</blockquote>
+<p>An LLM (Langauge Modell) is a AI model that can be trained to perform specific tasks such as speech recognition, text generation or machine translation. It's called a "model" because it is being trained on large sets of data to predict the next step based on previously learned relationships between inputs and outputs.
+LLMs are designed to recognize patterns in human language by processing input data through multiple layers of artificial neural networks that simulate the way neurons communicate in the brain. The training process involves feeding vast amounts of text into the model so that it can learn to identify underlying structures within the language itself. This allows the model to make predictions about likely next words or phrases given previous context. By continually adjusting its internal weights and biases using gradient descent techniques, the LLM becomes increasingly proficient at generating coherent text based on statistical probabilities derived from its knowledge of the language.</p>
+<blockquote>
+<p><img alt="" src="../../images/comment.png" /></p>
+<p>What is interesting here: the LLM actually made a typo, or rather, three: <code>Langauge Modell</code> - missing the first L (large), Langauge instead of Language and Modell with double L (which is German). Note that both words are spellied correctly later in the text.</p>
+<p><img alt="" src="../../images/prompt-icon.png" /></p>
+<p>What are the 5 core concepts relevant for end-users to understand LLMs?</p>
+</blockquote>
+<ol>
+<li>Language Understanding and Generation: LLMs can understand human language inputs and generate text-based responses, allowing for interactive conversations.</li>
+<li>Contextual Understanding: LLMs consider the context of the conversation to provide relevant and coherent responses, taking into account previous messages or prompts.</li>
+<li>Pretraining: LLMs learn from vast amounts of text data during pretraining, which helps them acquire a general understanding of language, grammar, and context.</li>
+<li>Limitations and Potential Bias: LLMs may provide incorrect or biased information as they generate responses based on patterns learned from training data. Users should be mindful of these limitations and critically evaluate the information provided.</li>
+<li>Responsible Use and Privacy: Users should use LLMs responsibly, following platform guidelines and being cautious when sharing personal or sensitive information during interactions. Data privacy should be considered while engaging with LLMs.</li>
+</ol>
+<p><a id="prompt-engineering"></a></p>
+<h3 id="what-is-prompt-engineering">What is prompt engineering?<a class="headerlink" href="#what-is-prompt-engineering" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><img alt="" src="../../images/prompt-icon.png" /></p>
+<p>Describe the idea of prompt engineering in simple terms for an audience of domain experts</p>
+</blockquote>
+<p>Prompt engineering is the process of carefully crafting input queries, or "prompts," to guide the behavior of a large language model (LLM) like GPT-4, ensuring that it provides useful, relevant, and accurate responses. As domain experts, you understand the importance of asking the right questions to extract valuable information. Similarly, with prompt engineering, the goal is to design questions or statements in a way that maximizes the LLM's ability to generate meaningful, high-quality output.</p>
+<p>Essentially, prompt engineering serves as a "communication bridge" between humans and the LLM, allowing the model to better understand the intent behind the query and generate the desired response. This can involve refining the wording, providing context, or specifying the format of the desired answer, among other techniques.</p>
+<p>By focusing on the art and science of prompt engineering, researchers and practitioners can better harness the potential of LLMs and overcome some of the challenges related to biases, incomplete knowledge, and misleading responses.</p>
+<blockquote>
+<p>Providing an effective prompt to ChatGPT is an art form, and as resources like <a href="https://learnprompting.org/">learnprompting.org</a> testify, one that requires cultivation and care. The better you become at writing prompts, the more value you will draw from ChatGPT for your daily ontology curation tasks. How effective our prompts are depends on the exact language models used in ChatGPT (at the moment 3.5 or 4), which means that this lesson will keep evolving.</p>
+</blockquote>
+<h3 id="what-are-some-basic-tips-for-writing-good-prompts-for-chatgpt">What are some basic tips for writing good prompts for ChatGPT?<a class="headerlink" href="#what-are-some-basic-tips-for-writing-good-prompts-for-chatgpt" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>In the excellent 60 minute <a href="https://learn.deeplearning.ai/chatgpt-prompt-eng/lesson/1/introduction">OpenAI, Deeplearning.ai course on Prompt Engineering</a>, we learn that we should be (1) writing clear an specific instructions and (2) give ChatGPT "time to think".</p>
+</blockquote>
+<ul>
+<li>Talking to a LLM is like talking to a teenager</li>
+<li>Give clear and specific instructions.</li>
+<li>Use different words to get better results the second time.</li>
+<li>Give the LLM time to think.</li>
+</ul>
+<p><a id="applications"></a></p>
+<h3 id="applications-of-chatgpt-for-ontology-development">Applications of ChatGPT for ontology development<a class="headerlink" href="#applications-of-chatgpt-for-ontology-development" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><img alt="" src="../../images/prompt-icon.png" /></p>
+<p>What are some potential applications of ChatGPT for ontology development?</p>
+</blockquote>
+<p>ChatGPT can be a valuable tool for ontology development in various ways. Some potential applications include:</p>
+<ol>
+<li><strong>Concept identification</strong>: ChatGPT can help identify and extract relevant concepts from large volumes of unstructured text, providing a list of entities, relationships, and attributes that can be included in an ontology.</li>
+<li><strong>Semantic relation extraction</strong>: ChatGPT can be employed to detect semantic relationships between concepts, such as "is-a" or "part-of" relations, facilitating the construction of the ontology's hierarchical structure.</li>
+<li><strong>Ontology validation</strong>: ChatGPT can assist in validating and refining the structure of an ontology by providing human-like feedback on its consistency and coherence, suggesting improvements, or identifying potential gaps or redundancies.</li>
+<li><strong>Automated ontology population</strong>: ChatGPT can be used to generate instances of entities and relationships based on examples or descriptions, helping to populate the ontology with relevant data.</li>
+<li><strong>Ontology alignment and merging</strong>: ChatGPT can help identify similarities and differences between different ontologies, supporting the process of ontology alignment and merging, which is essential when integrating information from diverse sources.</li>
+<li><strong>Natural language interfaces</strong>: ChatGPT can be utilized to develop natural language interfaces for interacting with ontologies, allowing users to query and explore the ontology using conversational language rather than complex formal queries.</li>
+<li><strong>Ontology documentation</strong>: ChatGPT can assist in generating human-readable documentation for ontologies, including explanations of concepts, relationships, and properties, making it easier for users to understand and work with the ontology.</li>
+<li><strong>Ontology learning</strong>: ChatGPT can be trained to learn from examples or other sources of knowledge, supporting the semi-automatic or automatic creation of ontologies based on the input data.</li>
+</ol>
+<p>By leveraging the capabilities of ChatGPT, ontology developers can streamline the development process, enhance the quality of their ontologies, and facilitate their adoption and use across various domains.</p>
+<p><a id="applications-curation"></a></p>
+<h3 id="how-can-we-concretely-enhance-the-ontology-curation-process">How can we, concretely, enhance the ontology curation process?<a class="headerlink" href="#how-can-we-concretely-enhance-the-ontology-curation-process" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><img alt="" src="../../images/prompt-icon.png" /></p>
+<p>A normal workflow of ontology curation is this:</p>
+<ol>
+<li>A concept is required by a biocurator to describe a piece of data, for example, a disease concept, or an anatomical entity.</li>
+<li>The biocurator requests the new concept (or term) from the ontology curator, providing a label and perhaps a scientific reference</li>
+<li>The ontology curator then adds that concept to the ontology using a tool like Protege, adding a human-readable definition, synonyms and provenance metadata. Most importantly, they define the concept logically, often using a formalism such as OWL specifying super-classes, and other logical relationships</li>
+<li>Lastly, the ontology curator runs a number of quality checks to ensure that the added concepts is logically coherent (e.g. the reasoner places it in the intended part of of the class hierarchy).</li>
+</ol>
+<p>How can ChatGPT be used concretely to help with that process?</p>
+</blockquote>
+<p>ChatGPT can be incorporated into various stages of the <strong>ontology curation workflow</strong> to assist biocurators and ontology curators in streamlining and improving the process. Here's how ChatGPT can be used concretely at each step:</p>
+<ol>
+<li><strong>Concept identification</strong>: ChatGPT can help the biocurator identify relevant concepts based on the data they are working with. By providing information or descriptions related to the data, the biocurator can receive a list of potential concepts or terms, including disease concepts or anatomical entities, that might be suitable for the ontology.</li>
+<li><strong>Term request and communication</strong>: ChatGPT can facilitate communication between the biocurator and the ontology curator. It can be used to draft the term request, including the label, scientific reference, and any other relevant information, ensuring that the request is clear and complete.</li>
+<li><strong>Concept addition and metadata generation</strong>: ChatGPT can assist ontology curators in generating human-readable definitions, synonyms, and provenance metadata for the new concept. By providing the initial label and scientific reference, ChatGPT can produce candidate definitions, suggest synonyms, and even help draft metadata descriptions. Additionally, it can provide suggestions for logical relationships, such as super-classes and other connections, using its understanding of the formalism, like OWL.</li>
+<li><strong>Quality checks and coherence</strong>: While ChatGPT may not directly run quality checks like a reasoner, it can help ontology curators verify the coherence of the added concepts by providing human-like feedback on the logical relationships and overall structure. It can suggest potential issues, such as redundancies or inconsistencies, that the curator may want to address to ensure that the concept is logically coherent and correctly placed in the class hierarchy.</li>
+</ol>
+<p>By integrating ChatGPT into the ontology curation workflow, biocurators and ontology curators can benefit from its natural language understanding and generation capabilities, making the process more efficient and accurate. However, it is essential to keep in mind that ChatGPT should be used as a complementary tool and not as a replacement for human expertise or specialized software designed for ontology development and curation.</p>
+<p><a id="mappings"></a></p>
+<h3 id="using-chatgpt-for-ontology-mappings">Using ChatGPT for ontology mappings<a class="headerlink" href="#using-chatgpt-for-ontology-mappings" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><img alt="" src="../../images/prompt-icon.png" /></p>
+<p>What about ontology mappings?</p>
+</blockquote>
+<p>LLMs like ChatGPT can be used to identify equivalent or similar concepts across different ontologies by analyzing concept labels, definitions, and other metadata. They can understand and process natural language descriptions and compare them to find potential matches or alignments between concepts. Specifically, LLMs can:</p>
+<ul>
+<li>Perform text similarity analysis: By comparing the textual descriptions of concepts, LLMs can calculate similarity scores, identifying closely related concepts across different ontologies.</li>
+<li>Understand contextual relationships: LLMs can identify and consider the context in which concepts are used, making it easier to match concepts that have similar meanings or roles within their respective ontologies.</li>
+<li>Leverage synonyms and alternative terms: LLMs can use synonyms or alternative terms provided in the ontology metadata to improve concept matching, ensuring that equivalent concepts with different labels can still be identified.</li>
+<li>Exploit structured knowledge: LLMs can be trained to understand and work with formalisms like OWL and RDF, which can help them identify matching concepts based on the structured information within ontologies.</li>
+</ul>
+<p>By leveraging these capabilities, LLMs can assist ontology curators in the challenging task of concept matching, ultimately enhancing the ontology mapping and alignment process.</p>
+<blockquote>
+<p><img alt="" src="../../images/prompt-icon.png" /></p>
+<p>Can you provide an example of mapping a concept from the Human Phenotype Ontology to the Mammalian Phenotype Ontology?</p>
+</blockquote>
+<p>Let's consider the concept <strong>"Abnormality of the ear"</strong> in HPO.</p>
+<ol>
+<li>HPO Concept:</li>
+<li>ID: <strong>HP:0000598</strong></li>
+<li>Label: <strong>Abnormality of the ear</strong></li>
+<li>Definition: A structural or functional anomaly of the ear.</li>
+</ol>
+<p>Our goal is to find a matching or similar concept in the Mammalian Phenotype Ontology (MPO).</p>
+<ol>
+<li>After analyzing the MPO, we find the following concept:</li>
+<li>ID: <strong>MP:0002161</strong></li>
+<li>Label: <strong>abnormal ear morphology</strong></li>
+<li>Definition: any structural anomaly of the external or middle ear</li>
+</ol>
+<p>In this case, both concepts describe abnormalities of the ear in their respective domains (human and mammalian). The labels and definitions are similar, indicating that these concepts might be considered equivalent or closely related.</p>
+<p>Thus, we can propose the following mapping:</p>
+<ul>
+<li>HPO: <strong>HP:0000598 (Abnormality of the ear)</strong> &lt;=&gt; MPO: <strong>MP:0002161 (abnormal ear morphology)</strong></li>
+</ul>
+<blockquote>
+<p><strong>COMMENT</strong>. The 27th May version of ChatGPT is giving a different answer:</p>
+</blockquote>
+<p>Sure, let's consider an example for this mapping:</p>
+<p>Human Phenotype Ontology (HPO) is designed to classify and annotate the phenotypic abnormalities encountered in human disease. Each term in HPO describes a specific phenotypic abnormality, such as 'HP:0004322 - Short stature' which describes an abnormality of body height that is less than -2 standard deviations compared to the appropriate reference population.</p>
+<p>Mammalian Phenotype Ontology (MPO), on the other hand, is used in the annotation of data from mammalian phenotyping experiments, typically in model organisms like mice. Its equivalent term for short stature might be 'MP:0001265 - decreased body size' which describes a mammal with an overall smaller body size.</p>
+<p>So, in this case, 'HP:0004322 - Short stature' in HPO could be mapped to 'MP:0001265 - decreased body size' in MPO.</p>
+<p>Please note that this is a simplified example and the actual mapping process could be more complex, due to the nuanced differences between human and mammalian phenotypes and the structure of these ontologies. For actual mappings, it is essential to ensure the descriptions and definitions align appropriately, and the context of use is correctly considered. </p>
+<p>Also, there may not always be a one-to-one correspondence between the terms in different ontologies. Sometimes, one term in an ontology may correspond to multiple terms in another, or there may not be an equivalent term at all. This is why ontological mapping is a complex task requiring domain knowledge and careful consideration.</p>
+<blockquote>
+<p><img alt="" src="../../images/prompt-icon.png" /></p>
+<p>Can you express the above mapping in SSSOM?</p>
+</blockquote>
+<p>The Simple Standard for Sharing Ontology Mappings (SSSOM) is a standard that enables sharing and comparing ontology mappings using a simple tabular format (TSV). Here's the example mapping from Human Phenotype Ontology (HPO) to Mammalian Phenotype Ontology (MPO) expressed in SSSOM format:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>subject_id  subject_label                 predicate_id  object_id  object_label            match_type  confidence
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>HP:0000598  Abnormality of the ear        skos:closeMatch  MP:0002161  abnormal ear morphology  Lexical     0.90
+</code></pre></div>
+<p>In this case, I have used skos:closeMatch as the predicate to represent the close relationship between the two concepts. The match_type is "Lexical" since the mapping is based on similar labels and definitions. The confidence score is set to 0.90 to reflect a high degree of similarity between the concepts, but this value may vary depending on the actual similarity estimation method used.</p>
+<p>Please note that the SSSOM format includes metadata and other required fields in a TSV header. The provided example only focuses on the core mapping information. For a complete SSSOM file, you would need to include the appropriate header and metadata.</p>
+<blockquote>
+<p><img alt="" src="../../images/prompt-icon.png" /></p>
+<p>The SSSOM example you gave is using an old version of the SSSOM standard. In particular, match_type now is mapping_justification. Can you try to rewrite the mapping using the new standard?</p>
+</blockquote>
+<p>Apologies for the confusion. Here's the example mapping from Human Phenotype Ontology (HPO) to Mammalian Phenotype Ontology (MPO) expressed in the updated SSSOM format:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>subject_id  subject_label                 predicate_id  object_id  object_label            mapping_justification  confidence
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>HP:0000598  Abnormality of the ear        skos:closeMatch  MP:0002161  abnormal ear morphology  Lexical                0.90
+</code></pre></div>
+<p>In this revised example, the match_type field has been replaced with mapping_justification, which is now set to "Lexical" to indicate that the mapping is based on similar labels and definitions. The remaining fields are unchanged from the previous example.</p>
+<blockquote>
+<p><img alt="" src="../../images/prompt-icon.png" /></p>
+<p>mapping_justification values should be populated from a controlled vocabulary, called the Semantic Mapping Vocabulary (SEMAPV). You can look at the vocabulary in RDF here: https://raw.githubusercontent.com/mapping-commons/semantic-mapping-vocabulary/main/semapv.owl. Given that vocabulary, can you revise the value for the mapping_justification?</p>
+</blockquote>
+<p>My apologies for the oversight. Based on the Semantic Mapping Vocabulary (SEMAPV), I will revise the mapping justification for the example. Here's the updated SSSOM mapping using the SEMAPV:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>subject_id  subject_label                 predicate_id  object_id  object_label            mapping_justification     confidence
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>HP:0000598  Abnormality of the ear        skos:closeMatch  MP:0002161  abnormal ear morphology  semapv:LexicalMatch        0.90
+</code></pre></div>
+<p>In this updated example, I have replaced the previous mapping_justification value with semapv:LexicalMatch from the Semantic Mapping Vocabulary (SEMAPV) to represent the lexical similarity between the two concepts based on their labels and definitions. The remaining fields are unchanged.</p>
+<blockquote>
+<p><img alt="" src="../../images/prompt-icon.png" /></p>
+<p>You were hallucinating earlier. Here is the semapv vocabulary as a tsv:</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>IRI skos:prefLabel  skos:definition dc:source   skos:example    rdfs:comment    altLabel    Parent
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>ID  A skos:prefLabel    A skos:definition   AI dc:source    A skos:example  A rdfs:comment  A skos:altLabel SC %
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>semapv:MappingActivity  mapping activity    A process that relates to the creation, confirmation, rejection or curation of a mapping.       Matching is a mapping activity that results in the creating of a mapping; mapping review is an activity that results in the confirmation of a mapping.          
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>semapv:Matching matching process    An process that results in a mapping between a subject and an object entity.        The label of a subject entity matches to an exact synonym of an object entity.      matching operation|matching task    semapv:MappingActivity
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>semapv:Mapping  mapping A triple &lt;s,p,o&gt; comprising a subject entity s, an object entity o and a mapping predicate p.       The subject entity NCI:C9305 is mapped to the object entity ICD10:C80.9 using the skos:relatedMatch mapping predicate.          
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>semapv:LexicalMatching  lexical matching process    A matching process based on a lexical comparison between one or more syntactic features of the subject with one or more syntactic features of the object.       The label of a subject entity matches to an exact synonym of an object entity.          semapv:Matching
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>semapv:LogicalReasoning logical reasoning process   A matching process based on the inferences made by a logical reasoner.      Two classes across ontologies are determined equivalent by an OWL reasoner such as ELK.         semapv:Matching
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>semapv:CompositeMatching    composite matching process  A matching process based on multiple, possibly intertwined, matching approaches.        An ontology matching tool determines that a subject should be mapped to an object by employing a range of techniques, including lexical, semantic and structural.           semapv:Matching
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>semapv:UnspecifiedMatching  unspecified matching process    A matching process based on an unspecified comparison.      A mapping between a subject and an object was established, but it is no longer clear how or why.            semapv:Matching
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>semapv:SemanticSimilarityThresholdMatching  semantic similarity threshold-based matching process    A matching process based on a minimum threshold of a score from a comparison based on a semantic similarity algorithm.      A match between a subject and an object entity was established because they had a Jaccard score higher than 0.8 based on the set of (common) superclasses.          semapv:Matching
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>semapv:LexicalSimilarityThresholdMatching   lexical similarity threshold-based matching process A lexical matching process based on a minimum threshold of a score from a comparison based on a lexical similarity algorithm.       A match between a subject and an object was established because they had a Levenshtein score higher than 0.8.           semapv:Matching
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>semapv:StructuralMatching   structural matching process     https://doi.org/10.1016/j.websem.2009.11.002    A match between a subject and an object was established because of the similarity of their structural features, e.g., the number of direct property of a class. Structural matching does not involve looking at &quot;values&quot; of properties.     semapv:Matching
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>semapv:InstanceBasedMatching    instance-based matching process A matching process based on individual representations (or instances).  https://doi.org/10.1007/978-3-642-38721-0   A match between a subject A and an object B was established because they share the same instances.          semapv:Matching
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>semapv:BackgroundKnowledgeBasedMatching background knowledge-based matching process A matching process that exploits background knowledge from external resources, commonly referred to as background knowledge resources. This approach is also known as indirect matching, BK-based matching or context-based matching.   https://doi.org/10.1016/j.websem.2018.04.001    A match between a subject A and an object B was established because they appear equivalent under consideration of externally provided background knowledge.         semapv:Matching
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>semapv:MappingChaining  mapping chaining-based matching process A matching process based on the traversing of multiple mappings.        A match between a subject A and an object B was established because A was mapped to C, C was mapped to D and D was mapped to B.         semapv:Matching
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>semapv:MappingReview    mapping review  A process that is concerned with determining if a mapping “candidate” (otherwise determined) is reasonable/correct.     A match between a subject A and an object B was established elsewhere, and a human reviewer determined that the mapping is true (or false) based on an independent evaluation.          semapv:MappingActivity
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>semapv:ManualMappingCuration    manual mapping curation An matching process that is performed by a human agent and is based on human judgement and domain knowledge.        A human curator determines that a subject should be mapped to an object by virtue of their domain expertise.            semapv:Matching
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>semapv:MatchingPreprocessing    matching process pre-processing A preliminary processing of inputs prior to performing matching.                    semapv:MappingActivity
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>semapv:Stemming stemming    The process of reducing a word to its word stem.                    semapv:Normalization
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>semapv:Lemmatization    lemmatization   The process of reducing the different forms of a word to one single form.   https://doi.org/10.1007/978-3-642-38721-0               semapv:Normalization
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>semapv:StopWordRemoval  stop-word removal   A preprocessing method transforming a string by removing a list of stop words.  https://doi.org/10.1007/978-3-642-38721-0   The stop-words “of, and, is, a” are removed from the label field of the subject entity in the mapping.          semapv:Normalization
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>semapv:RegexRemoval regex removal   A preprocessing method transforming a string by matching a regular expression and then removing that match.     The regex match “[ -]phenotype” is removed from the label field of the subject entity in the mapping.           semapv:Normalization
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>semapv:RegexReplacement regex replacement   A preprocessing method transforming a string by matching a regular expression and then replacing that match with a specified substitution string.       The regex match “[ -]phenotype” is replaced by “-disease” for the label field of the subject entity in the mapping.         semapv:Normalization
+<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>semapv:MatchingPostProcessing   matching process post-processing    A process applied to a set of mappings, usually with the intention of changing it.                  semapv:MappingActivity
+<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>semapv:ThresholdFiltering   threshold filtering                     semapv:MatchingPostProcessing
+<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>semapv:StableMarriageFiltering  stable marriage filtering                       semapv:MatchingPostProcessing
+<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>semapv:CardinalityFiltering cardinality filtering                       semapv:MatchingPostProcessing
+<a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>semapv:LogicalConsistencyFiltering  logical consistency filtering                       semapv:MatchingPostProcessing
+<a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a>semapv:Normalization    normalization   A family of preprocessing techniques for reducing strings to be compared to a common format.    https://doi.org/10.1007/978-3-642-38721-0               semapv:MatchingPreprocessing
+<a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>semapv:CaseNormalization    case normalization  A normalization technique converting each alphabetic character in a string to their lower case counterpart. https://doi.org/10.1007/978-3-642-38721-0   The string &#39;Ontology&#39; is normalised to &#39;ontology&#39; (lower case).         semapv:Normalization
+<a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a>semapv:DiacriticsSuppression    diacritics suppression  A normalization technique replacing diactritic signs (e.g. accents, hats) with their most frequent replacements.    https://doi.org/10.1007/978-3-642-38721-0   The string &#39;Protégé&#39; is normalised to &#39;Protege&#39;.            semapv:Normalization
+<a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a>semapv:BlankNormalisation   blank normalisation A normalization technique replacing all blank characters, such as space, tabulation, carriage return (or sequences of these) into a single blank character. https://doi.org/10.1007/978-3-642-38721-0   The string &#39;ontology  matching&#39; (two spaces between &#39;ontology&#39; and &#39;matching) becomes &#39;ontology matching&#39; (one space).          semapv:Normalization
+<a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a>semapv:LinkStripping    link stripping  A normalization technique replacing specific links between words, such as apostrophes, dashes, underscore, etc into dashes or blanks.   https://doi.org/10.1007/978-3-642-38721-0   The string &#39;alzheimer&#39;s&#39; becomes &#39;alzheimers&#39;.          semapv:Normalization
+<a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a>semapv:DigitSuppression digit suppression   A normalization technique removing all numbers in a string.     https://doi.org/10.1007/978-3-642-38721-0   The string &#39;ontology1&#39; becomes &#39;ontology&#39;.          semapv:Normalization
+</code></pre></div>
+<blockquote>
+<p><img alt="" src="../../images/prompt-icon.png" /></p>
+<p>Can you use this to pick the right mapping justification?</p>
+</blockquote>
+<p>Apologies for the confusion earlier. Based on the provided SEMAPV vocabulary as a TSV, I will revise the mapping justification for the example. Here's the updated SSSOM mapping using the correct SEMAPV:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>subject_id  subject_label                 predicate_id  object_id  object_label            mapping_justification                    confidence
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>HP:0000598  Abnormality of the ear        skos:closeMatch  MP:0002161  abnormal ear morphology  semapv:LexicalMatching                    0.90
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>In this updated example, I have replaced the previous mapping_justification value with semapv:LexicalMatching from the provided Semantic Mapping Vocabulary (SEMAPV) to represent the lexical similarity between the two concepts based on their labels and definitions. The remaining fields are unchanged.
+</code></pre></div>
+<p>Please remember that a complete SSSOM file would require the appropriate header and metadata in addition to the core mapping information provided in the example.</p>
+<blockquote>
+<p><img alt="" src="../../images/prompt-icon.png" /></p>
+<p>Can you add 4 more examples to that SSSOM table</p>
+</blockquote>
+<p>Sure, here are 4 more examples of mappings between the Human Phenotype Ontology (HPO) and the Mammalian Phenotype Ontology (MPO) using SSSOM format:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>subject_id  subject_label                         predicate_id  object_id  object_label                      mapping_justification                    confidence
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>HP:0000598  Abnormality of the ear                skos:closeMatch  MP:0002161  abnormal ear morphology            semapv:LexicalMatching                    0.90
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>HP:0000365  Hearing impairment                    skos:closeMatch  MP:0006325  hearing loss                      semapv:LexicalMatching                    0.92
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>HP:0001382  Joint hypermobility                   skos:closeMatch  MP:0004927  increased joint flexibility       semapv:LexicalMatching                    0.85
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>HP:0001392  Hepatomegaly                          skos:closeMatch  MP:0002764  enlarged liver                    semapv:LexicalMatching                    0.88
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>HP:0001250  Seizures                              skos:closeMatch  MP:0002064  seizures                          semapv:LexicalMatching                    0.95
+</code></pre></div>
+<p>These examples illustrate mappings between HPO and MPO concepts based on lexical matching, where the similarity between the labels and definitions is considered. Note that the confidence values are provided as an example and may differ in real-world scenarios.</p>
+<blockquote>
+<p><img alt="" src="../../images/prompt-icon.png" /></p>
+<p>Can you print only the table using markdown table syntax <strong>in a way that I can copy paste it</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>subject_id</th>
+<th>subject_label</th>
+<th>predicate_id</th>
+<th>object_id</th>
+<th>object_label</th>
+<th>mapping_justification</th>
+<th>confidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HP:0000598</td>
+<td>Abnormality of the ear</td>
+<td>skos:closeMatch</td>
+<td>MP:0002161</td>
+<td>abnormal ear morphology</td>
+<td>semapv:LexicalMatching</td>
+<td>0.90</td>
+</tr>
+<tr>
+<td>HP:0000365</td>
+<td>Hearing impairment</td>
+<td>skos:closeMatch</td>
+<td>MP:0006325</td>
+<td>hearing loss</td>
+<td>semapv:LexicalMatching</td>
+<td>0.92</td>
+</tr>
+<tr>
+<td>HP:0001382</td>
+<td>Joint hypermobility</td>
+<td>skos:closeMatch</td>
+<td>MP:0004927</td>
+<td>increased joint flexibility</td>
+<td>semapv:LexicalMatching</td>
+<td>0.85</td>
+</tr>
+<tr>
+<td>HP:0001392</td>
+<td>Hepatomegaly</td>
+<td>skos:closeMatch</td>
+<td>MP:0002764</td>
+<td>enlarged liver</td>
+<td>semapv:LexicalMatching</td>
+<td>0.88</td>
+</tr>
+<tr>
+<td>HP:0001250</td>
+<td>Seizures</td>
+<td>skos:closeMatch</td>
+<td>MP:0002064</td>
+<td>seizures</td>
+<td>semapv:LexicalMatching</td>
+<td>0.95</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><img alt="" src="../../images/prompt-icon.png" /></p>
+<p>Can you add 100 more examples, this time only providing a markdown table that I can copy paste, with no further comments around it?</p>
+</blockquote>
+<p>Creating 100 mappings with accuracy requires domain expertise and a comprehensive understanding of the ontology mappings. However, I can provide you with 20 examples to help you understand the format. Please note that these examples may not be completely accurate and should not be used for any critical applications.</p>
+<table>
+<thead>
+<tr>
+<th>subject_id</th>
+<th>subject_label</th>
+<th>predicate_id</th>
+<th>object_id</th>
+<th>object_label</th>
+<th>mapping_justification</th>
+<th>confidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HP:0000010</td>
+<td>Megabladder</td>
+<td>skos:closeMatch</td>
+<td>MP:0000547</td>
+<td>enlarged bladder</td>
+<td>semapv:LexicalMatching</td>
+<td>0.85</td>
+</tr>
+<tr>
+<td>HP:0000014</td>
+<td>Renal agenesis</td>
+<td>skos:closeMatch</td>
+<td>MP:0000548</td>
+<td>absent kidney</td>
+<td>semapv:LexicalMatching</td>
+<td>0.82</td>
+</tr>
+<tr>
+<td>HP:0000015</td>
+<td>Bladder diverticulum</td>
+<td>skos:closeMatch</td>
+<td>MP:0000556</td>
+<td>bladder diverticula</td>
+<td>semapv:LexicalMatching</td>
+<td>0.88</td>
+</tr>
+<tr>
+<td>HP:0000016</td>
+<td>Urethral atresia</td>
+<td>skos:closeMatch</td>
+<td>MP:0000565</td>
+<td>closed urethra</td>
+<td>semapv:LexicalMatching</td>
+<td>0.90</td>
+</tr>
+<tr>
+<td>HP:0000020</td>
+<td>Renal duplication</td>
+<td>skos:closeMatch</td>
+<td>MP:0000571</td>
+<td>duplex kidney</td>
+<td>semapv:LexicalMatching</td>
+<td>0.84</td>
+</tr>
+<tr>
+<td>HP:0000021</td>
+<td>Hypospadias</td>
+<td>skos:closeMatch</td>
+<td>MP:0000573</td>
+<td>abnormal penis morphology</td>
+<td>semapv:LexicalMatching</td>
+<td>0.76</td>
+</tr>
+<tr>
+<td>HP:0000022</td>
+<td>Urethral stricture</td>
+<td>skos:closeMatch</td>
+<td>MP:0000574</td>
+<td>urethral obstruction</td>
+<td>semapv:LexicalMatching</td>
+<td>0.86</td>
+</tr>
+<tr>
+<td>HP:0000025</td>
+<td>Polycystic kidney dysplasia</td>
+<td>skos:closeMatch</td>
+<td>MP:0000576</td>
+<td>polycystic kidney</td>
+<td>semapv:LexicalMatching</td>
+<td>0.92</td>
+</tr>
+<tr>
+<td>HP:0000026</td>
+<td>Hyperechogenic kidneys</td>
+<td>skos:closeMatch</td>
+<td>MP:0000581</td>
+<td>abnormal kidney echogenicity</td>
+<td>semapv:LexicalMatching</td>
+<td>0.81</td>
+</tr>
+<tr>
+<td>HP:0000027</td>
+<td>Renal cortical microcysts</td>
+<td>skos:closeMatch</td>
+<td>MP:0000584</td>
+<td>renal cortical cysts</td>
+<td>semapv:LexicalMatching</td>
+<td>0.89</td>
+</tr>
+<tr>
+<td>HP:0000028</td>
+<td>Renal tubular atrophy</td>
+<td>skos:closeMatch</td>
+<td>MP:0000585</td>
+<td>atrophic renal tubules</td>
+<td>semapv:LexicalMatching</td>
+<td>0.87</td>
+</tr>
+<tr>
+<td>HP:0000031</td>
+<td>Renal hypoplasia</td>
+<td>skos:closeMatch</td>
+<td>MP:0000591</td>
+<td>small kidney</td>
+<td>semapv:LexicalMatching</td>
+<td>0.79</td>
+</tr>
+<tr>
+<td>HP:0000032</td>
+<td>Renal hypoplasia/aplasia</td>
+<td>skos:closeMatch</td>
+<td>MP:0000592</td>
+<td>renal hypoplasia</td>
+<td>semapv:LexicalMatching</td>
+<td>0.91</td>
+</tr>
+<tr>
+<td>HP:0000033</td>
+<td>Proximal tubulopathy</td>
+<td>skos:closeMatch</td>
+<td>MP:0000593</td>
+<td>abnormal proximal tubule</td>
+<td>semapv:LexicalMatching</td>
+<td>0.75</td>
+</tr>
+<tr>
+<td>AT THIS POINT CHATGPT JUST STOPPED GENERATING CONTENT.</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><a id="expressions"></a></p>
+<h3 id="generating-pre-coordinated-expressions-and-schema-instances">Generating pre-coordinated expressions and schema instances<a class="headerlink" href="#generating-pre-coordinated-expressions-and-schema-instances" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><img alt="" src="../../images/prompt-icon.png" /></p>
+<p>Here are a few slots in a schema: quality, anatomical_entity and chemical_entity</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>quality:
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>description: The property being measured, or changes in this property, for example, amount, level, increased amount, decreased concentration
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>annotations:
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>    prompt.example: amount, level, increased amount, decreased concentration
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>range: Quality
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>anatomical_entity:
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>description: The anatomical location that the chemical entity is measured in
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>range: AnatomicalEntity
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>annotations:
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>    prompt.example: liver, heart, brain, finger
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>chemical_entity:
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>description: The chemical entity that is being measured
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>range: ChemicalEntity
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>annotations:
+<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>    prompt.example: lysine, metabolite
+</code></pre></div>
+<blockquote>
+<p><img alt="" src="../../images/prompt-icon.png" /></p>
+<p>Can you create a YAML file with those three elements as keys, and extract the contents of the string "increased blood glucose levels" into as values to these keys? Output should be just a simple yaml file, like:</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>quality: concentration
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>anatomical_entity: liver
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>chemical_entity: lysine
+</code></pre></div>
+<h4 id="todo-finish-this-section">TODO FINISH THIS SECTION<a class="headerlink" href="#todo-finish-this-section" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../../images/under-construction.png" /></p>
+<p><a id="workflows"></a></p>
+<h3 id="from-chat-to-exectutable-workflows-what-we-need-to-do-to-leverage-llms">From Chat to exectutable workflows: what we need to do to leverage LLMs<a class="headerlink" href="#from-chat-to-exectutable-workflows-what-we-need-to-do-to-leverage-llms" title="Permanent link">&para;</a></h3>
+<p>The above tutorial was a fun case study using ChatGPT with GPT-4. 95% of the content provided was generated by ChatGPT with GPT-4. While certainly not as great as possible, it took a solid ontology engineer (<code>@matentzn</code>) about 90 minutes to write this lesson, which would have usually cost him more than 8 hours.</p>
+<p>It is clear that learning how to talk to AI, the process we refer to as "prompt engineering" is going to be absolutely essential for ontology curators moving forward - as LLMs improve and understand even complex languages like OWL better, perhaps as important as ontology modelling itself. I dont think there is any doubt that enganging is a good amount of play and study on this subject is both fun and hugely beneficial.</p>
+<p>All that said, perceiving LLMs through the lens of a chat bot leaves a lot of potential unexplored. For example, if ChatGPT (or LLMs in general) can generate structured data, why not implement this directly into our curation tools (like Protege)? Tools like GitHub co-pilot are already used to making good programmers a lot more effective, but so far, these tools focus on development environments where the majority of the generated content is text (e.g. software code), and not so much heavily UI driven ones like Protege.</p>
+<p>A lot of blog posts have circulated recently on Twitter and LinkedIn explored the potential of LLMs to generate RDF and OWL directly. It is already clear that LLMs can and will do this moving forward. For ontology curation specifically, we will need to develop executable workflows that fit into our general ontology curation process. As a first pass, some members of our community have developed <a href="https://github.com/monarch-initiative/ontogpt">OntoGPT</a>. We will explore how to use OntoGPT in a future lesson.</p>
+<h3 id="some-more-thoughts-on-hallucinations">Some more thoughts on hallucinations<a class="headerlink" href="#some-more-thoughts-on-hallucinations" title="Permanent link">&para;</a></h3>
+<p>Update 27 May 2023: It seems that complaints wrt to hallucinations, the chat part of ChatGPT is a bit more sensitive to database like queries:</p>
+<p><img alt="" src="../../images/chatgpt_more_hallucination_aware.png" /></p>
+<h3 id="cool-applications-the-authors-of-this-tutorial-used">Cool applications the authors of this tutorial used<a class="headerlink" href="#cool-applications-the-authors-of-this-tutorial-used" title="Permanent link">&para;</a></h3>
+<ul>
+<li>The key is that it is <em>generative</em>: the key thing is that we are generating text that is human like</li>
+<li>As databases, LLMs are very inefficient (see excellent talk by <a href="https://www.youtube.com/watch?v=WqYBx2gB6vA">Denny Vrandecic</a>) and Hallucinate too often (Chat)</li>
+<li>Writing emails: shortening</li>
+<li>Writing documentations:</li>
+<li>Writing docs for a softare tool. Adding background info and context.</li>
+<li>Find a good human-readable name for a cluster in ML clustering</li>
+<li>Named entity recognition and knowledge extraction</li>
+<li>Career planning and discovering stuff you didnt know about at all</li>
+<li>ChatGPT for contextualising work and writing use cases</li>
+<li>Using it for curation research - but doing it right</li>
+<li>Don't ask it to do the curation for you, get it to help you find arguments for and against a modelling decision ("I will always have to recurate anyways, so what is the point?")</li>
+<li>Always remember that ChatGPT is <em>not a database</em>. It hallucinates and changes its mind all the time. Get it to generate text for you that could be useful in your work.</li>
+</ul>
+<h3 id="additional-materials">Additional materials<a class="headerlink" href="#additional-materials" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Tutorial on using <a href="../../tutorial/ontogpt/">OntoGPT</a></li>
+<li>Reference of <a href="../../reference/chatgpt-prompts-for-ontology-development/">effective prompts for ChatGPT</a></li>
+</ul>
+<p><strong>(Current) Limitations</strong>:</p>
+<ul>
+<li><a href="https://cims.nyu.edu/~sbowman/eightthings.pdf">8 Things to know about large language models</a></li>
+<li><a href="https://dl.acm.org/doi/10.1145/3442188.3445922">On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.action.edit", "search.suggest", "search.highlight", "content.code.annotation", "content.code.copy", "content.code.select"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@8.5.1/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>
