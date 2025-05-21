@@ -50,14 +50,24 @@ Warning: some ontologies give advance notice on terms that will be obsoleted thr
 
 Examples of additional annotations to add:
 
-- IAO:0000233 term tracker item (type xsd:anyURI) - link to GitHub issue
+- [IAO:0000233](http://purl.obolibrary.org/obo/IAO_0000231) "term tracker item" (type xsd:anyURI) - link to GitHub issue
 
-- has_obsolence_reason
+- [IAO:0000231](http://purl.obolibrary.org/obo/IAO_0000231) "has_obsolence_reason" (type: [IAO:0000225](http://purl.obolibrary.org/obo/IAO_0000225) "obsolescence reason specification") - its value should be an IRI taken from the table below
 
 - add ‘OBSOLETE.’ to the term definition: In the 'Description' window, click on the `o` on the right-hand side of the definition entry. In the resulting window, in the Literal tab, at the beginning of the definition, type: `OBSOLETE.`
 
 - if the obsoleted term was not replaced by another term in the ontology, but there are existing terms that might be appropriate for annotation, add those term IDs in the 'consider' tag: In the 'Annotations' window, select `+` to add an annotation. In the resulting menu, select `consider` and enter the ID of the replacement term.
   > **NOTE:** Here you have to add the ID of the entity as an `xsd:string`, e.g. GO:0005819, not the term label.
+
+|IRI            |CURIE      |Label                  |Definition|Editor note    |
+|---------------|-----------|-----------------------|----------|-------------- |
+|obo:IAO_0000103|IAO:0000103|failed exploratory term|The term was used in an attempt to structure part of the ontology but in retrospect failed to do a good job|???|
+|obo:IAO_0000226|IAO:0000226|placeholder removed    |???   | ???               |
+|obo:IAO_0000227|IAO:0000227|terms merged |???|An editor note should explain what were the merged terms and the reason for the merge.                               |
+|obo:IAO_0000228|IAO:0000228|term imported|???|This is to be used when the original term has been replaced by a term imported from an other ontology. An editor note should indicate what is the URI of the new term to use.|
+|obo:IAO_0000229|IAO:0000229|term split   |???|This is to be used when a term has been split in two or more new terms. An editor note should indicate the reason for the split and indicate the URIs of the new terms created.|
+|obo:OMO_0001000|OMO:0001000|out of scope |???|This obsolesence reason should be used conservatively. Typical valid examples are: un-necessary grouping classes in disease ontologies, a phenotype term added on the assumption it was a disease.|
+
 
 ## Obsolete a class (using Protege 'Make entity obsolete' function)
 
