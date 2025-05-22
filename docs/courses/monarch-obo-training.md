@@ -16,6 +16,7 @@ The goal of this course is to provide ongoing training for the OBO community. As
 
 ## We (Tutors and Organisers)
 
+
 - [Nicole Vasilevsky](https://orcid.org/0000-0001-5208-3432), Critical Path Institute
 - [Nico Matentzoglu](https://orcid.org/0000-0002-7356-1779), Semanticly, Athens, Greece
 - [Sabrina Toro](https://tislab.org/members/sabrina-toro.html), University of North Carolina at Chapel Hill
@@ -29,8 +30,8 @@ _Note: this is tentative and subject to change_
 
 | Date | Lesson | Notes | Recordings |
 | --- | --- | --- | --- |
-| 2025/06/24 | Continuing our AI for Curation and Ontologies Series |  | 
-| 2025/05/27 | An introduction to Claude Code for ontology developers | Chris Mungall, LBNL |  |
+| 2025/06/24 | Continuing our AI for Curation and Ontologies Series | Chris Mungall, LBNL | 
+| 2025/06/09 | An introduction to Claude Code for ontology developers | Chris Mungall, LBNL |  |
 | 2025/04/08 | Introduction to developing agentic workflows for semantic engineers. [Tutorial material](https://github.com/cmungall/agent-tutorial) | Chris Mungall, LBNL | [Here](https://youtu.be/Ml0YVjKnZnE?si=BVLomWUjPoAqH5oG) | 
 | 2025/02/04 | More! Hands On Workshop: OntoGPT | Harry Caufield, LBNL  |  |
 | 2024/10/15 | Hands On Workshop: OntoGPT | Harry Caufield, LBNL | [Here](https://youtu.be/ezFIgY0LE4A?si=Pwuoq3VkvVNjon09)  |
