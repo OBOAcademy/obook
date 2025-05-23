@@ -1,0 +1,6 @@
+## How to build respectful collaborative environments on Github
+
+WARNING: This is an incomplete page which will be gradually populated with content.
+
+1. _Consider a Code of Conduct for your project_.
+Having an explicit Code of Conduct in an ontology repository supports maintaining respectful and inclusive interactions, particularly in collaborative workflows that often span diverse international communities and cultures. Ontology development typically involves extensive discussions, consensus-building, and iterative refinement, processes that thrive on clear, respectful, and open communication. By adopting a CoC, you explicitly affirm the repository's commitment to respectful conduct, inclusivity, and professional collaboration, helping reduce misunderstandings, conflicts, and barriers to contribution. Ultimately, this strengthens community cohesion, fosters trust among contributors, and contributes significantly to the sustainability and effectiveness of collaborative ontology engineering efforts. Learn how to add a CoC to your project [here](../howto/add-coc.md).
