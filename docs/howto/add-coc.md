@@ -1,0 +1,4 @@
+## Adding a Code of Conduct to your repository
+
+To include a Code of Conduct (CoC) in your ontology repository, first create a dedicated file named `CODE_OF_CONDUCT.md` in the root directory of your repository. This file should clearly articulate the community's expected behaviors, identify unacceptable conduct such as harassment or discrimination, and describe the mechanisms through which community members can confidentially report any violations. You may base your document on widely recognized templates such as the [Contributor Covenant](https://www.contributor-covenant.org/) or established examples like the [OBO Foundry's Code of Conduct](https://obofoundry.org/code-of-conduct/). Once created, prominently link your CoC from the repository's `README.md`, contribution guidelines (`CONTRIBUTING.md`), and other prominent documentation pages to ensure it is easily discoverable.
+

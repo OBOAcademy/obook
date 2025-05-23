@@ -191,6 +191,8 @@ nav:
           - Automate tasks with GitHub actions: howto/github-actions.md
           - Revert a commit: howto/revert-commit.md
           - Review a pull request: howto/review-pull-request.md
+          - Respectful Collaboration: howto/respectful-collaboration.md
+          - Add a Code of Conduct: howto/add-coc.md
       - Quality control:
           - Deploy a custom OBO-Dashboard: howto/deploy-custom-obo-dashboard.md
       - Command line:
