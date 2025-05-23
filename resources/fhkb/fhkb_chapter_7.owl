@@ -1,0 +1,466 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_7.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_7.owl">
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://mowl-power.cs.man.ac.uk/fhkbtutorial/1.1/ontology/fhkb_chapter_6.owl</Import>
+    <Declaration>
+        <DataProperty IRI="#hasBirthYear"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasDeathYear"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasEventYear"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasFamilyName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasFirstGivenName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasGivenName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasSecondGivenName"/>
+    </Declaration>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasBirthYear"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#Charles_Herbert_Rever_1895"/>
+        <Literal datatypeIRI="&xsd;integer">1895</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasFamilyName"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#Charles_Herbert_Rever_1895"/>
+        <Literal datatypeIRI="&xsd;string">Rever</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasFirstGivenName"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#Charles_Herbert_Rever_1895"/>
+        <Literal datatypeIRI="&xsd;string">Charles</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasSecondGivenName"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#Charles_Herbert_Rever_1895"/>
+        <Literal datatypeIRI="&xsd;string">Herbert</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasBirthYear"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#Clare_Bright_1966"/>
+        <Literal datatypeIRI="&xsd;integer">1966</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasFamilyName"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#Clare_Bright_1966"/>
+        <Literal datatypeIRI="&xsd;string">Bright</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasFirstGivenName"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#Clare_Bright_1966"/>
+        <Literal datatypeIRI="&xsd;string">Clare</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasBirthYear"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#David_Bright_1934"/>
+        <Literal datatypeIRI="&xsd;integer">1934</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasFamilyName"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#David_Bright_1934"/>
+        <Literal datatypeIRI="&xsd;string">Bright</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasFirstGivenName"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#David_Bright_1934"/>
+        <Literal datatypeIRI="&xsd;string">David</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasBirthYear"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#Eileen_Mary_Rever_1929"/>
+        <Literal datatypeIRI="&xsd;integer">1929</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasFamilyName"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#Eileen_Mary_Rever_1929"/>
+        <Literal datatypeIRI="&xsd;string">Rever</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasFirstGivenName"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#Eileen_Mary_Rever_1929"/>
+        <Literal datatypeIRI="&xsd;string">Eileen</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasSecondGivenName"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#Eileen_Mary_Rever_1929"/>
+        <Literal datatypeIRI="&xsd;string">Mary</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasBirthYear"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#Ian_Bright_1959"/>
+        <Literal datatypeIRI="&xsd;integer">1959</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasFamilyName"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#Ian_Bright_1959"/>
+        <Literal datatypeIRI="&xsd;string">Bright</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasFirstGivenName"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#Ian_Bright_1959"/>
+        <Literal datatypeIRI="&xsd;string">Ian</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasBirthYear"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#Iris_Ellen_Archer_1906"/>
+        <Literal datatypeIRI="&xsd;integer">1906</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasFamilyName"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#Iris_Ellen_Archer_1906"/>
+        <Literal datatypeIRI="&xsd;string">Archer</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasFirstGivenName"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#Iris_Ellen_Archer_1906"/>
+        <Literal datatypeIRI="&xsd;string">Iris</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasSecondGivenName"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#Iris_Ellen_Archer_1906"/>
+        <Literal datatypeIRI="&xsd;string">Ellen</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasBirthYear"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#James_Bright_1964"/>
+        <Literal datatypeIRI="&xsd;integer">1964</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasFamilyName"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#James_Bright_1964"/>
+        <Literal datatypeIRI="&xsd;string">Bright</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasFirstGivenName"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#James_Bright_1964"/>
+        <Literal datatypeIRI="&xsd;string">James</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasBirthYear"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#Janet_Bright_1964"/>
+        <Literal datatypeIRI="&xsd;integer">1964</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasFamilyName"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#Janet_Bright_1964"/>
+        <Literal datatypeIRI="&xsd;string">Bright</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasFirstGivenName"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#Janet_Bright_1964"/>
+        <Literal datatypeIRI="&xsd;string">Janet</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasBirthYear"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#John_Bright_1930"/>
+        <Literal datatypeIRI="&xsd;integer">1930</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasFamilyName"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#John_Bright_1930"/>
+        <Literal datatypeIRI="&xsd;string">Bright</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasFirstGivenName"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#John_Bright_1930"/>
+        <Literal datatypeIRI="&xsd;string">John</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasBirthYear"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#Julie_Bright_1966"/>
+        <Literal datatypeIRI="&xsd;integer">1966</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasFamilyName"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#Julie_Bright_1966"/>
+        <Literal datatypeIRI="&xsd;string">Bright</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasFirstGivenName"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#Julie_Bright_1966"/>
+        <Literal datatypeIRI="&xsd;string">Julie</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasBirthYear"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#Margaret_Grace_Rever_1934"/>
+        <Literal datatypeIRI="&xsd;integer">1934</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasFamilyName"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#Margaret_Grace_Rever_1934"/>
+        <Literal datatypeIRI="&xsd;string">Rever</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasFirstGivenName"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#Margaret_Grace_Rever_1934"/>
+        <Literal datatypeIRI="&xsd;string">Margaret</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasSecondGivenName"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#Margaret_Grace_Rever_1934"/>
+        <Literal datatypeIRI="&xsd;string">Grace</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasBirthYear"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#Mark_Anthony_Heath_1960"/>
+        <Literal datatypeIRI="&xsd;integer">1960</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasFamilyName"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#Mark_Anthony_Heath_1960"/>
+        <Literal datatypeIRI="&xsd;string">Heath</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasFirstGivenName"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#Mark_Anthony_Heath_1960"/>
+        <Literal datatypeIRI="&xsd;string">Mark</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasSecondGivenName"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#Mark_Anthony_Heath_1960"/>
+        <Literal datatypeIRI="&xsd;string">Anthony</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasBirthYear"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#Mark_Bright_1956"/>
+        <Literal datatypeIRI="&xsd;integer">1956</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasFamilyName"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#Mark_Bright_1956"/>
+        <Literal datatypeIRI="&xsd;string">Bright</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasFirstGivenName"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#Mark_Bright_1956"/>
+        <Literal datatypeIRI="&xsd;string">Mark</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasBirthYear"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#Nicholas_Charles_Heath_1964"/>
+        <Literal datatypeIRI="&xsd;integer">1964</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasFamilyName"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#Nicholas_Charles_Heath_1964"/>
+        <Literal datatypeIRI="&xsd;string">Heath</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasFirstGivenName"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#Nicholas_Charles_Heath_1964"/>
+        <Literal datatypeIRI="&xsd;string">Nicholas</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasSecondGivenName"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#Nicholas_Charles_Heath_1964"/>
+        <Literal datatypeIRI="&xsd;string">Charles</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasBirthYear"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#Peter_William_Bright_1941"/>
+        <Literal datatypeIRI="&xsd;integer">1941</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasFamilyName"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#Peter_William_Bright_1941"/>
+        <Literal datatypeIRI="&xsd;string">Bright</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasFirstGivenName"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#Peter_William_Bright_1941"/>
+        <Literal datatypeIRI="&xsd;string">Peter</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasSecondGivenName"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#Peter_William_Bright_1941"/>
+        <Literal datatypeIRI="&xsd;string">William</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasBirthYear"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#Richard_John_Bright_1962"/>
+        <Literal datatypeIRI="&xsd;integer">1962</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasFamilyName"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#Richard_John_Bright_1962"/>
+        <Literal datatypeIRI="&xsd;string">Bright</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasFirstGivenName"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#Richard_John_Bright_1962"/>
+        <Literal datatypeIRI="&xsd;string">Richard</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasSecondGivenName"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#Richard_John_Bright_1962"/>
+        <Literal datatypeIRI="&xsd;string">John</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasBirthYear"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#Robert_David_Bright_1965"/>
+        <Literal datatypeIRI="&xsd;integer">1965</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasFamilyName"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#Robert_David_Bright_1965"/>
+        <Literal datatypeIRI="&xsd;string">Bright</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasFirstGivenName"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#Robert_David_Bright_1965"/>
+        <Literal datatypeIRI="&xsd;string">Robert</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasSecondGivenName"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#Robert_David_Bright_1965"/>
+        <Literal datatypeIRI="&xsd;string">David</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasBirthYear"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#Violet_Sylvia_Steward_1894"/>
+        <Literal datatypeIRI="&xsd;integer">1894</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasFamilyName"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#Violet_Sylvia_Steward_1894"/>
+        <Literal datatypeIRI="&xsd;string">Steward</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasFirstGivenName"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#Violet_Sylvia_Steward_1894"/>
+        <Literal datatypeIRI="&xsd;string">Violet</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasSecondGivenName"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#Violet_Sylvia_Steward_1894"/>
+        <Literal datatypeIRI="&xsd;string">Sylvia</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasBirthYear"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#William_Bright_1970"/>
+        <Literal datatypeIRI="&xsd;integer">1970</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasFamilyName"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#William_Bright_1970"/>
+        <Literal datatypeIRI="&xsd;string">Bright</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasFirstGivenName"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#William_Bright_1970"/>
+        <Literal datatypeIRI="&xsd;string">William</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasBirthYear"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#William_George_Bright_1901"/>
+        <Literal datatypeIRI="&xsd;integer">1901</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasFamilyName"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#William_George_Bright_1901"/>
+        <Literal datatypeIRI="&xsd;string">Bright</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasFirstGivenName"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#William_George_Bright_1901"/>
+        <Literal datatypeIRI="&xsd;string">William</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasSecondGivenName"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#William_George_Bright_1901"/>
+        <Literal datatypeIRI="&xsd;string">George</Literal>
+    </DataPropertyAssertion>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasBirthYear"/>
+        <DataProperty IRI="#hasEventYear"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasDeathYear"/>
+        <DataProperty IRI="#hasEventYear"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasFamilyName"/>
+        <DataProperty IRI="#hasName"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasFirstGivenName"/>
+        <DataProperty IRI="#hasGivenName"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasGivenName"/>
+        <DataProperty IRI="#hasName"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasSecondGivenName"/>
+        <DataProperty IRI="#hasGivenName"/>
+    </SubDataPropertyOf>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasBirthYear"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasFirstGivenName"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasSecondGivenName"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasDeathYear"/>
+        <Class IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_4.owl#Person"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasEventYear"/>
+        <Class IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_4.owl#Person"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasName"/>
+        <Class IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_4.owl#Person"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasDeathYear"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasEventYear"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+
