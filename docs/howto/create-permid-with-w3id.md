@@ -1,4 +1,5 @@
 # How to create permanent identifiers for your ontology
+
 Permanent identifiers are a core feature of ontologies. Each term should have its own unique URI that points to information about that term. In large domain ontologies, these identifiers are handled by OBO Foundry and resolve to a major ontology index service. However, when making [project ontologies](../tutorial/project-ontology-development) or other small ontologies not in the OBO ecosystem, you are on your own.
 
 Fortunately there's [w3id.org](https://w3id.org/) - an open, secure, permanent redirect service. This service can give you a custom URI for your ontology and handle redirects to where your ontology lives. 
@@ -26,6 +27,7 @@ The name of the folder you create will form the URI. For example, we created the
 You need to create exactly two files in this folder: `.htaccess` and `README.md`. You can use your favourite text editor to create these two files. 
 
 The folks at w3id.org have created some documentation and examples for these files which can be found at [this link](https://github.com/perma-id/w3id.org/tree/master/examples), but we will provide ontology-specific examples here.
+
 ### README.md
 
 This file must contain, at a minimum: 
@@ -34,6 +36,7 @@ This file must contain, at a minimum:
 - A GitHub repo for the ontology.
 
 The syntax is straightforward markdown. Here is the [exact file](https://raw.githubusercontent.com/perma-id/w3id.org/refs/heads/master/elmo/README.md) used for elmo:
+
 ```
 # Ecolink Model Ontology (elmo)
 This is a permanent identifier for the Ecolink Model Ontology.
@@ -48,6 +51,7 @@ Please see the Github repo for more details: https://github.com/timalamenciak/el
 ### .htaccess
 
 This file is a little more complicated and may take some trial and error to get right. You have two options here:
+
 1. A generic redirect that always points to the latest version of the ontology:
 ```
 # Ecolink Model Ontology (elmo)
@@ -94,6 +98,7 @@ RewriteRule ^$ https://timalamenciak.github.io/elmo/elmo.html [R=301,L,QSA]
 This file uses a fairly uncommon syntax and it can be difficult to get right. Here is a breakdown of our example.
 
 First, there is the frontmatter, which essentially restates what you wrote in the `README.md`:
+
 ```
 # Ecolink Model Ontology (elmo)
 # This is a project ontology for the Ecolink Model, which 
