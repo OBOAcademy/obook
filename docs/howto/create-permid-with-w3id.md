@@ -8,7 +8,7 @@ This tutorial will show you how to use [w3id.org](https://w3id.org/) to create p
 
 ## Step 1: Pick your prefix
 
-The convention in ontology world is to have a short prefix for your ontology. This is usually indicative of the domain of the ontology. For example, the environment ontology has the prefix ENVO. 
+The convention in ontology world is to have a short prefix for your ontology. This is usually related to the domain of the ontology. For example, the environment ontology has the prefix ENVO. 
 
 When selecting your prefix, you should ensure that it is not in use or similar to other ontologies. See the OBO Foundry [ID Policy](https://obofoundry.org/id-policy.html#allocating-idspaces) page for more best practices.
 
@@ -53,6 +53,7 @@ Please see the Github repo for more details: https://github.com/timalamenciak/el
 This file is a little more complicated and may take some trial and error to get right. You have two options here:
 
 1. A generic redirect that always points to the latest version of the ontology:
+
 ```
 # Ecolink Model Ontology (elmo)
 # This is a project ontology for the Ecolink Model, which 
