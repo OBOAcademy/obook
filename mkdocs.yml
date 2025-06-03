@@ -142,6 +142,7 @@ nav:
       - General Ontology Modelling:
           - Project Ontology Development: tutorial/project-ontology-development.md
           - Family History Knowledge Base (FHKB) tutorial: tutorial/fhkb.md
+          - Using the Delphi method to bring domain knowledge into ontologies: tutorial/Delphi-method-ontology.md 
       - Exomiser:
           - Introduction to Exomiser: tutorial/exomiser-tutorial.md
       - Information Extraction:
@@ -156,6 +157,7 @@ nav:
           - Prettify Markdown Files: howto/prettify.md
           - Create Screenshot and paste into an issue: howto/screenshot.md
           - Set-up docker: howto/setup-docker.md
+          - Create permanent identifiers with w3id.org: howto/create-permid-with-w3id.md
       - Protege:
           - Install Protégé: howto/install-protege.md
           - Setup Protege 5.5: howto/set-up-protege.md
@@ -240,6 +242,7 @@ nav:
       - ChatGPT:
           - Leveraging ChatGPT for ontology curation: reference/chatgpt-prompts-for-ontology-development.md
       - Ontology User references: reference/ontology-user.md 
+      - How XML Catalog files work: reference/catalog-xml.md
   - Explanations:
       - Introduction to Ontologies: explanation/intro-to-ontologies.md
       - Logical axiomatization of classes & use of reasoning: explanation/logical-axiomatization.md
