@@ -31,7 +31,7 @@ _Note: this is tentative and subject to change_
 | Date | Lesson | Notes | Recordings |
 | --- | --- | --- | --- |
 | 2025/06/24 | Continuing our AI for Curation and Ontologies Series | Chris Mungall, LBNL | 
-| 2025/06/09 | An introduction to Claude Code for ontology developers | Chris Mungall, LBNL |  |
+| 2025/06/09 | Using AI vibe coding tools (Claude Code, Goose) for ontology developers | Chris Mungall, LBNL |  |
 | 2025/04/08 | Introduction to developing agentic workflows for semantic engineers. [Tutorial material](https://github.com/cmungall/agent-tutorial) | Chris Mungall, LBNL | [Here](https://youtu.be/Ml0YVjKnZnE?si=BVLomWUjPoAqH5oG) | 
 | 2025/02/04 | More! Hands On Workshop: OntoGPT | Harry Caufield, LBNL  |  |
 | 2024/10/15 | Hands On Workshop: OntoGPT | Harry Caufield, LBNL | [Here](https://youtu.be/ezFIgY0LE4A?si=Pwuoq3VkvVNjon09)  |
