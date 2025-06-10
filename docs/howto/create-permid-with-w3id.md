@@ -1,5 +1,7 @@
 # How to create permanent identifiers for your ontology
 
+**Author:** [Tim Alamenciak](https://timalamenciak.github.io/)
+
 Permanent identifiers are a core feature of ontologies. Each term should have its own unique URI that points to information about that term. In large domain ontologies, these identifiers are handled by OBO Foundry and resolve to a major ontology index service. However, when making [project ontologies](../tutorial/project-ontology-development) or other small ontologies not in the OBO ecosystem, you are on your own.
 
 Fortunately there's [w3id.org](https://w3id.org/) - an open, secure, permanent redirect service. This service can give you a custom URI for your ontology and handle redirects to where your ontology lives. 

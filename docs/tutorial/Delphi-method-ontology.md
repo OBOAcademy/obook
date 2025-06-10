@@ -1,5 +1,7 @@
 # Using the Delphi method to bring domain knowledge into ontologies
 
+**Author:** [Tim Alamenciak](https://timalamenciak.github.io/)
+
 ## Overview
 
 Ontologies are meant to be underpinned by domain knowledge, but there are huge cognitive and technical barriers to contributing directly to ontologies. Many domain experts do not have knowledge of logical axioms, OWL, URIs or Github, yet still have much to contribute to ontology development.
