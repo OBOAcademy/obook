@@ -31,7 +31,7 @@ _Note: this is tentative and subject to change_
 | Date | Lesson | Notes | Recordings |
 | --- | --- | --- | --- |
 | 2025/07/22 | ... | ... | 
-| 2025/06/24 | ... | ... | 
+| 2025/06/24 | How to write good ontology definitions | Sabrina Toro, UNC-Chapel Hill | 
 | 2025/06/09 | Using AI coding apps for ontology developers. [Tutorial material](https://ai4curation.github.io/aidocs/tutorials/ontology-editing-with-ai/) | Chris Mungall, LBNL | [Here](https://youtu.be/4nyeGFACPKI?si=56v1jVXT8VYqZXUn) |
 | 2025/04/08 | Introduction to developing agentic workflows for semantic engineers. [Tutorial material](https://github.com/cmungall/agent-tutorial) | Chris Mungall, LBNL | [Here](https://youtu.be/Ml0YVjKnZnE?si=BVLomWUjPoAqH5oG) | 
 | 2025/02/04 | More! Hands On Workshop: OntoGPT | Harry Caufield, LBNL  |  |
