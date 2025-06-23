@@ -28,10 +28,10 @@ The goal of this course is to provide ongoing training for the OBO community. As
 ## Schedule
 _Note: this is tentative and subject to change_
 
-| Date | Lesson | Notes | Recordings |
+| Date | Lesson | Presenter / Notes | Recordings |
 | --- | --- | --- | --- |
 | 2025/07/22 | ... | ... | 
-| 2025/06/24 | ... | ... | 
+| 2025/06/24 | From Fuzzy to Clear: Writing Ontology Definitions That Work | Sabrina Toro, UNC-Chapel Hill <br> This is a tutorial for curators at any level. | 
 | 2025/06/09 | Using AI coding apps for ontology developers. [Tutorial material](https://ai4curation.github.io/aidocs/tutorials/ontology-editing-with-ai/) | Chris Mungall, LBNL | [Here](https://youtu.be/4nyeGFACPKI?si=56v1jVXT8VYqZXUn) |
 | 2025/04/08 | Introduction to developing agentic workflows for semantic engineers. [Tutorial material](https://github.com/cmungall/agent-tutorial) | Chris Mungall, LBNL | [Here](https://youtu.be/Ml0YVjKnZnE?si=BVLomWUjPoAqH5oG) | 
 | 2025/02/04 | More! Hands On Workshop: OntoGPT | Harry Caufield, LBNL  |  |
