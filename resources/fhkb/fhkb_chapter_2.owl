@@ -1,0 +1,318 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl">
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <ObjectProperty IRI="#hasFather"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasMother"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasParent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isFatherOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isMotherOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isParentOf"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Charles_Herbert_Rever_1895"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Clare_Bright_1966"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#David_Bright_1934"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Eileen_Mary_Rever_1929"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ian_Bright_1959"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Iris_Ellen_Archer_1906"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#James_Bright_1964"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Janet_Bright_1964"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#John_Bright_1930"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Julie_Bright_1966"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Margaret_Grace_Rever_1934"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Mark_Anthony_Heath_1960"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Mark_Bright_1956"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Nicholas_Charles_Heath_1964"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Peter_William_Bright_1941"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Richard_John_Bright_1962"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Robert_David_Bright_1965"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Violet_Sylvia_Steward_1894"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#William_Bright_1970"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#William_George_Bright_1901"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <NamedIndividual IRI="#Charles_Herbert_Rever_1895"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <NamedIndividual IRI="#Clare_Bright_1966"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <NamedIndividual IRI="#Eileen_Mary_Rever_1929"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <NamedIndividual IRI="#Ian_Bright_1959"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <NamedIndividual IRI="#Iris_Ellen_Archer_1906"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <NamedIndividual IRI="#James_Bright_1964"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <NamedIndividual IRI="#Janet_Bright_1964"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <NamedIndividual IRI="#John_Bright_1930"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <NamedIndividual IRI="#Julie_Bright_1966"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <NamedIndividual IRI="#Margaret_Grace_Rever_1934"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <NamedIndividual IRI="#Mark_Anthony_Heath_1960"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <NamedIndividual IRI="#Mark_Bright_1956"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <NamedIndividual IRI="#Nicholas_Charles_Heath_1964"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <NamedIndividual IRI="#Peter_William_Bright_1941"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <NamedIndividual IRI="#Richard_John_Bright_1962"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <NamedIndividual IRI="#Robert_David_Bright_1965"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <NamedIndividual IRI="#Violet_Sylvia_Steward_1894"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <NamedIndividual IRI="#William_Bright_1970"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <NamedIndividual IRI="#William_George_Bright_1901"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFather"/>
+        <NamedIndividual IRI="#Clare_Bright_1966"/>
+        <NamedIndividual IRI="#Peter_William_Bright_1941"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFather"/>
+        <NamedIndividual IRI="#David_Bright_1934"/>
+        <NamedIndividual IRI="#William_George_Bright_1901"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMother"/>
+        <NamedIndividual IRI="#David_Bright_1934"/>
+        <NamedIndividual IRI="#Iris_Ellen_Archer_1906"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFather"/>
+        <NamedIndividual IRI="#Eileen_Mary_Rever_1929"/>
+        <NamedIndividual IRI="#Charles_Herbert_Rever_1895"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMother"/>
+        <NamedIndividual IRI="#Eileen_Mary_Rever_1929"/>
+        <NamedIndividual IRI="#Violet_Sylvia_Steward_1894"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFather"/>
+        <NamedIndividual IRI="#Ian_Bright_1959"/>
+        <NamedIndividual IRI="#John_Bright_1930"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFather"/>
+        <NamedIndividual IRI="#James_Bright_1964"/>
+        <NamedIndividual IRI="#Peter_William_Bright_1941"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFather"/>
+        <NamedIndividual IRI="#Janet_Bright_1964"/>
+        <NamedIndividual IRI="#John_Bright_1930"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFather"/>
+        <NamedIndividual IRI="#John_Bright_1930"/>
+        <NamedIndividual IRI="#William_George_Bright_1901"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMother"/>
+        <NamedIndividual IRI="#John_Bright_1930"/>
+        <NamedIndividual IRI="#Iris_Ellen_Archer_1906"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFather"/>
+        <NamedIndividual IRI="#Julie_Bright_1966"/>
+        <NamedIndividual IRI="#Peter_William_Bright_1941"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFather"/>
+        <NamedIndividual IRI="#Margaret_Grace_Rever_1934"/>
+        <NamedIndividual IRI="#Charles_Herbert_Rever_1895"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMother"/>
+        <NamedIndividual IRI="#Margaret_Grace_Rever_1934"/>
+        <NamedIndividual IRI="#Violet_Sylvia_Steward_1894"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMother"/>
+        <NamedIndividual IRI="#Mark_Anthony_Heath_1960"/>
+        <NamedIndividual IRI="#Eileen_Mary_Rever_1929"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFather"/>
+        <NamedIndividual IRI="#Mark_Bright_1956"/>
+        <NamedIndividual IRI="#John_Bright_1930"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMother"/>
+        <NamedIndividual IRI="#Nicholas_Charles_Heath_1964"/>
+        <NamedIndividual IRI="#Eileen_Mary_Rever_1929"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFather"/>
+        <NamedIndividual IRI="#Peter_William_Bright_1941"/>
+        <NamedIndividual IRI="#William_George_Bright_1901"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMother"/>
+        <NamedIndividual IRI="#Peter_William_Bright_1941"/>
+        <NamedIndividual IRI="#Iris_Ellen_Archer_1906"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFather"/>
+        <NamedIndividual IRI="#Richard_John_Bright_1962"/>
+        <NamedIndividual IRI="#David_Bright_1934"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMother"/>
+        <NamedIndividual IRI="#Richard_John_Bright_1962"/>
+        <NamedIndividual IRI="#Margaret_Grace_Rever_1934"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFather"/>
+        <NamedIndividual IRI="#Robert_David_Bright_1965"/>
+        <NamedIndividual IRI="#David_Bright_1934"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMother"/>
+        <NamedIndividual IRI="#Robert_David_Bright_1965"/>
+        <NamedIndividual IRI="#Margaret_Grace_Rever_1934"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFather"/>
+        <NamedIndividual IRI="#William_Bright_1970"/>
+        <NamedIndividual IRI="#John_Bright_1930"/>
+    </ObjectPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasFather"/>
+        <ObjectProperty IRI="#hasParent"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasMother"/>
+        <ObjectProperty IRI="#hasParent"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasFather"/>
+        <ObjectProperty IRI="#isFatherOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isMotherOf"/>
+        <ObjectProperty IRI="#hasMother"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasParent"/>
+        <ObjectProperty IRI="#isParentOf"/>
+    </InverseObjectProperties>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+
