@@ -30,6 +30,7 @@ _Note: this is tentative and subject to change_
 
 | Date | Lesson | Presenter / Notes | Recordings |
 | --- | --- | --- | --- |
+| 2025/10/TBD | Generating SPARQL queries with ChatGPT | Trish Whetzel |  |
 | 2025/10/TBD | Efficient Bioinformatics with Claude Code | Chris Tabone |  |
 | July & August & Sept 2025 | _No Meeting_ | Enjoy Summer break! |  |
 | 2025/06/24 | [From Fuzzy to Clear: Writing Ontology Definitions That Work](https://docs.google.com/presentation/d/1UsjN7OzSXsRMy1v7ucvMBmlUF0VUau3pJYXV3wXMEzs/edit?slide=id.p#slide=id.p) <br> This is a tutorial for curators at any level.| Sabrina Toro, UNC-Chapel Hill  | [here](https://youtu.be/jhJWv-2d-S4?si=KPuHA5wXTWT_n0Q4)
