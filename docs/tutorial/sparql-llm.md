@@ -4,7 +4,7 @@ This tutorial will teach you how to create SPARQL queries by prompting a large l
 
 
 ## Preparation
-This tutorial uses LLMs, such as [ChatGPT](https://chatgpt.com/), [Gemini](https://gemini.google.com/), [Claude](https://www.anthropic.com/claude-code), etc. You are responsible for obtaining access and any to one of these tools prior to the session.
+This tutorial uses LLMs, such as [ChatGPT](https://chatgpt.com/), [Gemini](https://gemini.google.com/), [Claude](https://www.anthropic.com/claude-code), etc. 
 
 The resulting SPARQL queries can be tested using https://yasgui.triply.cc/# (endpoint https://ubergraph.apps.renci.org/sparql) or using [ROBOT query](https://robot.obolibrary.org/query). You are responsible for obtaining access to yasgui and/or installing ROBOT. 
 
