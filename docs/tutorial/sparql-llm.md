@@ -1,12 +1,20 @@
 # Generating SPARQL queries using LLMs
 
-This tutorial will teach you how to create SPARQL queries by prompting a large language model (LLM). You may use whichever system you prefer, such as [ChatGPT](https://chatgpt.com/), [Gemini](https://gemini.google.com/), [Claude](https://www.anthropic.com/claude-code), etc.
+This tutorial will teach you how to create SPARQL queries by prompting a large language model (LLM) via a chat interface. You may use whichever system you prefer, such as [ChatGPT](https://chatgpt.com/), [Gemini](https://gemini.google.com/), [Claude](https://www.anthropic.com/claude-code), etc. These prompts have been tested with ChatGPT 5 and Gemini 2.5 Pro.
 
 
 ## Preparation
-This tutorial uses LLMs, such as [ChatGPT](https://chatgpt.com/), [Gemini](https://gemini.google.com/), [Claude](https://www.anthropic.com/claude-code), etc. 
+This tutorial uses LLMs via chat interfaces, such as [ChatGPT](https://chatgpt.com/), [Gemini](https://gemini.google.com/), [Claude](https://www.anthropic.com/claude-code), etc. to convert text prompts into SPARQL queries. The resulting SPARQL queries can be tested using https://yasgui.triply.cc/# (endpoint https://ubergraph.apps.renci.org/sparql) or using the [ROBOT query](https://robot.obolibrary.org/query) functionality. You are responsible for obtaining access to yasgui and/or installing ROBOT.
 
-The resulting SPARQL queries can be tested using https://yasgui.triply.cc/# (endpoint https://ubergraph.apps.renci.org/sparql) or using [ROBOT query](https://robot.obolibrary.org/query). You are responsible for obtaining access to yasgui and/or installing ROBOT. 
+
+## Learning Objectives
+- Explain what SPARQL is and describe the types queries, e.g. SELECT, INSERT, DELETE, that can be used with ontologies.
+- Identify and provide key prompt setup information to guide LLMs toward generating accurate SPARQL queries in chat interfaces.
+- Create effective natural language prompts for large language models (via chat interfaces) to generate valid SPARQL queries.
+- Design advanced prompts that incorporate ontology-specific features—such as axiom reification, source provenance, and IRI or synonym constraints—to guide LLMs in producing accurate and semantically rich queries.
+- Interpret and debug the SPARQL queries produced by LLMs — recognizing things like CURIEs vs IRIs, missing filters, or extraneous results.
+- Run queries e.g., on Ubergraph or similar endpoints, considering things like performance, excessive results, and correctness.
+- Evaluate prompt‑engineering best practices to get consistent query outputs.
 
 
 ## Prompting Best Practices
