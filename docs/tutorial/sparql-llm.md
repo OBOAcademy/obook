@@ -233,7 +233,250 @@ Defaults (unless I override in the prompt):
 </details>
 
 
-## Example LLM prompts
+---
+## LLM Prompts
+
+### Counts and Summaries
+
+#### Example - Count all subclasses of disease in Mondo
+
+- Prompt:
+Write a SPARQL query that counts the number of classes in the MONDO ontology that are subclasses of MONDO:0000001 (disease).
+
+- Prompt Breakdown:
+    - Type of query - count
+    - Target class - all subclasses of MONDO:0000001 (disease)
+    - Ontology - MONDO
+
+<details>
+<summary>View SPARQL query</summary>
+
+```
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+
+# Get a count of all subclasses of disease excluding obsolete terms
+
+SELECT (COUNT(DISTINCT ?cls) AS ?count)
+WHERE {
+  ?cls rdfs:subClassOf* obo:MONDO_0000001 .
+  ?cls a owl:Class .
+}
+
+```
+
+</details>
+
+
+---
+### Filtering Basics
+
+#### Example - Count all exact synonyms in Mondo, excluding obsolete classes
+
+- Prompt:
+Write a SPARQL query to count all exact synonyms (oboInOwl:hasExactSynonym) in MONDO, excluding obsolete Mondo classes.
+
+- Prompt Breakdown:
+    - Type of query - count
+    - Target class - all Mondo classes
+    - Filter - exclude obsolete terms
+    - Ontology - MONDO
+
+<details>
+<summary>View SPARQL query</summary>
+
+```
+PREFIX owl:      <http://www.w3.org/2002/07/owl#>
+PREFIX MONDO:    <http://purl.obolibrary.org/obo/MONDO_>
+PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+
+SELECT (COUNT(DISTINCT ?syn) AS ?count_exact_synonyms)
+WHERE {
+  ?class a owl:Class ;
+         oboInOwl:hasExactSynonym ?syn .
+  FILTER STRSTARTS(STR(?class), "http://purl.obolibrary.org/obo/MONDO_")
+  FILTER NOT EXISTS { ?class owl:deprecated true }
+}
+
+```
+
+</details>
+
+
+---
+### Labels & Annotations
+
+#### Example - Get Mondo terms, CURIE and label, excluding obsolete terms
+
+- Prompt:
+Write a SPARQL query to retrieve a MONDO classes with their human-readable labels (rdfs:label). Return the MONDO CURIE and the label, limited to 20 results. Exclude obsolete classes (owl:deprecated true).
+
+- Prompt Breakdown:
+    - Type of query - select MONDO CURIE and label
+    - Target class - all Mondo classes
+    - Filter - exclude obsolete terms
+    - Ontology - MONDO
+
+<details>
+<summary>View SPARQL query</summary>
+
+```
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:   <http://www.w3.org/2002/07/owl#>
+PREFIX MONDO: <http://purl.obolibrary.org/obo/MONDO_>
+
+SELECT DISTINCT ?mondo_curie ?label
+WHERE {
+  ?class a owl:Class ;
+         rdfs:label ?label .
+  FILTER STRSTARTS(STR(?class), "http://purl.obolibrary.org/obo/MONDO_")
+  FILTER NOT EXISTS { ?class owl:deprecated true }
+
+  BIND(REPLACE(STR(?class), "^.*/MONDO_", "MONDO:") AS ?mondo_curie)
+}
+ORDER BY ?mondo_curie
+LIMIT 20
+
+
+```
+
+</details>
+
+
+---
+### Synonyms & Cross-references
+
+#### Example - Get a count of all MONDO classes with an exact synonym from Orphanet
+
+Prompt: 
+Write a SPARQL query to count all exact synonyms (oboInOwl:hasExactSynonym) in non-obsolete MONDO classes where the synonym is annotated with a database cross reference (oboInOwl:hasDbXref) containing "Orphanet:". Use the axiom annotation pattern to connect the synonym to its provenance.
+
+- Prompt Breakdown:
+    - Type of query - count
+    - Target class - all non-obsolete Mondo classes
+    - Synonym constraint - class must have oboInOwl:hasExactSynonym
+    - Axiom constraint - the synonym must be annotated with a database cross reference and the value must contain "Orphanet:"
+    - Filter - exclude deprecated classes
+    - Ontology - MONDO 
+
+<details>
+<summary>View SPARQL query</summary>
+
+```
+PREFIX owl:      <http://www.w3.org/2002/07/owl#>
+PREFIX MONDO:    <http://purl.obolibrary.org/obo/MONDO_>
+PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+
+SELECT (COUNT(DISTINCT ?syn) AS ?count_orphanet_exact_synonyms)
+WHERE {
+  ?class a owl:Class .
+  FILTER STRSTARTS(STR(?class), "http://purl.obolibrary.org/obo/MONDO_")
+  FILTER NOT EXISTS { ?class owl:deprecated true }
+
+  ?class oboInOwl:hasExactSynonym ?syn .
+
+  ?axiom a owl:Axiom ;
+         owl:annotatedSource ?class ;
+         owl:annotatedProperty oboInOwl:hasExactSynonym ;
+         owl:annotatedTarget ?syn ;
+         oboInOwl:hasDbXref ?xref .
+
+  FILTER CONTAINS(STR(?xref), "Orphanet:")
+}
+
+```
+
+</details>
+
+
+---
+### Conjunctions (AND)
+
+
+---
+### Disjunctions (OR)
+
+
+---
+### Optional Patterns
+
+
+---
+### Grouping and Aggregation
+
+
+---
+### Axiom-level Queries
+Example: get provenance for gene associations
+
+
+--- 
+### Ontology Structure Queries
+Example: “Which diseases have material basis in germline mutation in a gene?”
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---
+## Prompting Best Practices
+
+- Provide context for the prompts
+- Be specific and state the question cleary
+    - Include examples in the prompt
+    - Include prefixes and term IRIs/CURIEs in the prompt
+    - Use the real name of a property, 'has material basis in germline mutation in' vs. gene association
+    - Provide an OBO stanza or for more complicated queries the OWL class representation as needed
+- State what properties to return 
+	  - Select the CURIE, label, and definition
+- State modifiers and constraints
+    - Limit to 10 results, sort by label
+    - Filter out obsolete terms
+- Share an example query to extend
+	  - Use a base query and ask LLM to extend the query
+- Ask for explanations of the query
+	  - Prompt for the query and also ask for a step-wise explanation of the query
+- Review query, test, and iterate
+    - Test the query in your tool of interest
+    - If the query fails or returns incorrect information, share the error message and ask for a fix or clarify what’s missing
+    - Some SPARQL constructs are not valid for ROBOT and the query needs to be modified
+    - If the LLM starts returning circular options ask it to reset to clear the current conversation context and them start again
+
+
+## Pitfalls and Limitations
+
+- LLM hallucinations
+	  - queries might look plausible but be wrong or inefficient or not work with certain tools
+- Schema/ontology drift
+	  - LLMs trained on old data may not match the current ontology
+- Validate the query
+	  - Test the query using the tools mentioned earlier
+- Provide feedback to the LLM
+	  - That did not work, e.g. try again using the correct prefix for MONDO
+
+
+
+---
+
+---
+## Additional LLM prompts
 
 ### Count Queries
 
@@ -268,7 +511,7 @@ WHERE {
 
 </details>
 
-
+---
 #### Example - Get a count of all exact synonyms in Mondo excluding obsolete terms
 
 - Prompt:
@@ -303,7 +546,7 @@ WHERE {
 </details>
 
 
-
+---
 #### Example - Get a count of all exact synonyms where the synonym also exists in Orphanet
 
 - Prompt:
@@ -352,7 +595,7 @@ WHERE {
 #### Example - Get all Mondo classes that have a gene association and it’s provenance
 
 - Prompt:
-Write a SPARQL query to get all Mondo classes that have a gene association, e.g. RO:0004003 'has material basis in germline mutation in', and also return the source provenance for the gene association. Include the Mondo CURIE, Mondo label, gene identifier, and source provenance in the result.
+Write a SPARQL query to get all Mondo classes that have a gene association, e.g. RO:0004003 'has material basis in germline mutation in', and also return the source provenance for the gene association. Include the Mondo CURIE, Mondo label, gene identifier, and source provenance in the result. For testing, limit to 20 results.
 
 - Prompt Breakdown:
     - Type of query - select MONDO CURIE, label, gene identifier, source provenance
@@ -364,38 +607,51 @@ Write a SPARQL query to get all Mondo classes that have a gene association, e.g.
 <summary>View SPARQL query</summary>
 
 ```
-PREFIX owl: <http://www.w3.org/2002/07/owl#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:      <http://www.w3.org/2002/07/owl#>
+PREFIX MONDO:    <http://purl.obolibrary.org/obo/MONDO_>
+PREFIX RO:       <http://purl.obolibrary.org/obo/RO_>
 PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
 
-SELECT DISTINCT ?mondo_curie ?label ?gene ?source WHERE {
-  ?mondo_class rdfs:subClassOf ?restriction .
-  
+SELECT DISTINCT ?mondo_curie ?label ?gene_id ?provenance
+WHERE {
+  ?class a owl:Class ;
+         rdfs:label ?label ;
+         rdfs:subClassOf ?restriction .
+  FILTER STRSTARTS(STR(?class), "http://purl.obolibrary.org/obo/MONDO_")
+  FILTER NOT EXISTS { ?class owl:deprecated true }
+
+  # Restriction for RO:0004003 (has material basis in germline mutation in)
   ?restriction a owl:Restriction ;
-               owl:onProperty obo:RO_0004003 ;
+               owl:onProperty RO:0004003 ;
                owl:someValuesFrom ?gene .
 
-  ?mondo_class rdfs:label ?label .
+  # MONDO CURIE
+  BIND(REPLACE(STR(?class), "^.*/MONDO_", "MONDO:") AS ?mondo_curie)
 
-  ?axiom a owl:Axiom ;
-         owl:annotatedSource ?mondo_class ;
-         owl:annotatedProperty rdfs:subClassOf ;
-         owl:annotatedTarget ?restriction ;
-         oboInOwl:source ?source .
+  # Gene CURIE (assumes identifiers.org/hgnc/#### pattern)
+  BIND(REPLACE(STR(?gene), "^.*/", "HGNC:") AS ?gene_id)
 
-  BIND(REPLACE(STR(?mondo_class), "http://purl.obolibrary.org/obo/MONDO_", "MONDO:") AS ?mondo_curie)
+  # Provenance from the annotated subClassOf axiom
+  OPTIONAL {
+    ?axiom a owl:Axiom ;
+           owl:annotatedSource ?class ;
+           owl:annotatedProperty rdfs:subClassOf ;
+           owl:annotatedTarget ?restriction ;
+           oboInOwl:source ?provenance .
+  }
 }
-ORDER BY ?label
+ORDER BY ?mondo_curie ?gene_id
+LIMIT 20
 
 ```
 
 </details>
 
 
-#### Example - Get all Mondo classes that have a gene association and it’s provenance (with aggregation)
-- Prompt:
-Given the query above to get all Mondo classes that have a gene association, how can we collapse the multiple rows due to multiple sources for a gene association?
+---
+#### Example - Get all Mondo classes that have a gene association and it’s provenance, aggregate all gene association sources
+- Prompt: Given the query above to get all Mondo classes that have a gene association, how can we collapse the multiple rows due to multiple sources for a gene association? The gene association provenance is represented using the oboInOwl:source annotation property.
 
 - Prompt Breakdown:
 Here we are extending the query from a previous query prompt. If you are using a tool like ChatGPT or Gemini it will have memory of the earlier query.
@@ -405,42 +661,54 @@ Here we are extending the query from a previous query prompt. If you are using a
 <summary>View SPARQL query</summary>
 
 ```
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX owl: <http://www.w3.org/2002/07/owl#>
-PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:      <http://www.w3.org/2002/07/owl#>
+PREFIX MONDO:    <http://purl.obolibrary.org/obo/MONDO_>
+PREFIX RO:       <http://purl.obolibrary.org/obo/RO_>
 PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
 
-SELECT ?mondo_curie ?mondo_label ?gene (GROUP_CONCAT(DISTINCT ?source; separator=", ") AS ?sources)
+SELECT ?mondo_curie ?label ?gene_id
+       (GROUP_CONCAT(DISTINCT ?provenance; SEPARATOR=" | ") AS ?sources)
 WHERE {
-  ?mondo_class rdfs:subClassOf ?restriction .
+  ?class a owl:Class ;
+         rdfs:label ?label ;
+         rdfs:subClassOf ?restriction .
+  FILTER STRSTARTS(STR(?class), "http://purl.obolibrary.org/obo/MONDO_")
+  FILTER NOT EXISTS { ?class owl:deprecated true }
+
+  # Restriction for RO:0004003 (has material basis in germline mutation in)
   ?restriction a owl:Restriction ;
-               owl:onProperty obo:RO_0004003 ;
+               owl:onProperty RO:0004003 ;
                owl:someValuesFrom ?gene .
 
-  ?mondo_class rdfs:label ?mondo_label .
+  # MONDO CURIE
+  BIND(REPLACE(STR(?class), "^.*/MONDO_", "MONDO:") AS ?mondo_curie)
 
+  # Gene CURIE (assumes identifiers.org/hgnc/#### pattern)
+  BIND(REPLACE(STR(?gene), "^.*/", "HGNC:") AS ?gene_id)
+
+  # Provenance annotations on the restriction axiom
   OPTIONAL {
     ?axiom a owl:Axiom ;
-           owl:annotatedSource ?mondo_class ;
+           owl:annotatedSource ?class ;
            owl:annotatedProperty rdfs:subClassOf ;
            owl:annotatedTarget ?restriction ;
-           (oboInOwl:source | oboInOwl:hasDbXref) ?source .
+           oboInOwl:source ?provenance .
   }
-
-  BIND(REPLACE(STR(?mondo_class), "http://purl.obolibrary.org/obo/MONDO_", "MONDO:") AS ?mondo_curie)
 }
-GROUP BY ?mondo_curie ?mondo_label ?gene
-ORDER BY ?mondo_curie
+GROUP BY ?mondo_curie ?label ?gene_id
+ORDER BY ?mondo_curie ?gene_id
+LIMIT 20
 
 ```
 
 </details>
 
 
-
+---
 #### Example - Get all Mondo classes that have more than one gene association
 - Prompt:
-Write a SPARQL query to get all Mondo classes that have more than one gene association, e.g. RO:0004003 'has material basis in germline mutation in', and the source provenance. Include the Mondo CURIE, Mondo label, gene identifier, and source provenance in the result.
+Write a SPARQL query to get all Mondo classes that have more than one gene association, e.g. RO:0004003 'has material basis in germline mutation in', and the source provenance represented using oboInOWL:source. Include the Mondo CURIE, Mondo label, gene identifier, and source provenance in the result.
 
 - Prompt Breakdown:
     - Type of query - select MONDO CURIE, label, gene identifier, OMIM CURIE with HAVING
@@ -486,8 +754,6 @@ WHERE {
            owl:annotatedProperty rdfs:subClassOf ;
            owl:annotatedTarget ?restriction ;
            oboInOwl:source ?omim_source .
-
-    FILTER(STRSTARTS(STR(?omim_source), "OMIM:"))
   }
 
   BIND(REPLACE(STR(?mondo_class), "http://purl.obolibrary.org/obo/MONDO_", "MONDO:") AS ?mondo_curie)
@@ -499,7 +765,7 @@ ORDER BY ?mondo_curie ?gene
 
 </details>
 
-
+---
 #### Example - Confirm that obsolete terms have a label that starts with “obsolete” do not have any subClassOf relationships
 - Prompt:
 Write a SPARQL query that checks for two quality control rules about obsolete Mondo classes: All classes marked with owl:deprecated true must have an rdfs:label that starts with the string "obsolete ". Obsolete classes must not have any logical axioms, such as rdfs:subClassOf. For each violation, the query should return the class IRI, its label, and a description of which rule was violated. 
@@ -511,7 +777,7 @@ Write a SPARQL query that checks for two quality control rules about obsolete Mo
     - Rules - Class label must start with “obsolete” and logical axioms can not be on an obsolete class
     - Ontology - MONDO
 
-NOTE: This query times out on yasgui so let's break this down into two queries, one to find any obsolete class that does not have a label that starts with 'obsolete ' and and another query to find obsolete classes with logical axioms.
+!! NOTE: This query times out on yasgui so let's break this down into two queries, one to find any obsolete class that does not have a label that starts with 'obsolete ' and and another query to find obsolete classes with logical axioms.
 
 
 <details>
@@ -524,15 +790,16 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 # Find obsolete classes where the label does not start with 'obsolete '
 
-SELECT ?cls ?clsLabel ?rule WHERE {
-  ?cls owl:deprecated "true"^^xsd:boolean ;
-       rdfs:label ?clsLabel .
+SELECT ?cls ?label ?rule
+WHERE {
+  ?cls a owl:Class ;
+         owl:deprecated true ;
+         rdfs:label ?label .
   FILTER STRSTARTS(STR(?cls), "http://purl.obolibrary.org/obo/MONDO_")
-  FILTER (!STRSTARTS(STR(?clsLabel), "obsolete "))
+  FILTER (!STRSTARTS(LCASE(STR(?label)), "obsolete "))
   BIND("Label must start with 'obsolete '" AS ?rule)
 }
 ORDER BY ?cls
-
 
 ```
 
@@ -552,7 +819,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 SELECT ?cls ?clsLabel ?parent WHERE {
   ?cls a owl:Class ;
-       owl:deprecated "true"^^xsd:boolean ;
+       owl:deprecated true ;
        rdfs:label ?clsLabel ;
        rdfs:subClassOf ?parent .
 
@@ -567,16 +834,16 @@ ORDER BY ?cls
 </details>
 
 
-
-
+---
 #### Example - Find all classes where the definition does not have any provenance
 - Prompt:
-Write a SPARQL query that retrieves all Mondo classes and their definitions where the definition does not have a xref. Return the class CURIE, class label, and the definition.
+Write a SPARQL query to retrieve all MONDO classes with a textual definition (IAO:0000115). The query should only return results where it is not possible to find a corresponding database cross reference that provides provenance for that specific definition. Return the class CURIE, class label, and the definition.
+
 
 - Prompt Breakdown:
     - Type of query - select CURIE, label, definition
     - Target class - any owl:Class
-    - Filter - include only classes where the definition does not have an xref
+    - Filter - include only classes where the definition does not have a database cross reference
     - Ontology - MONDO
 
 
@@ -584,70 +851,36 @@ Write a SPARQL query that retrieves all Mondo classes and their definitions wher
 <summary>View SPARQL query</summary>
 
 ```
-PREFIX owl: <http://www.w3.org/2002/07/owl#>
-PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:      <http://www.w3.org/2002/07/owl#>
+PREFIX MONDO:    <http://purl.obolibrary.org/obo/MONDO_>
+PREFIX IAO:      <http://purl.obolibrary.org/obo/IAO_>
 PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-# QC - Get all classes where the definition is missing provenance
-
-SELECT DISTINCT ?mondo_curie ?label ?definition WHERE {
+SELECT DISTINCT ?mondo_curie ?label ?definition
+WHERE {
   ?class a owl:Class ;
-         obo:IAO_0000115 ?definition ;
-         rdfs:label ?label .
-
-  FILTER(STRSTARTS(STR(?class), "http://purl.obolibrary.org/obo/MONDO_"))
+         rdfs:label ?label ;
+         IAO:0000115 ?definition .
+  FILTER STRSTARTS(STR(?class), "http://purl.obolibrary.org/obo/MONDO_")
   FILTER NOT EXISTS { ?class owl:deprecated true }
 
+  # Exclude any definition that has a provenance xref in an axiom annotation
   FILTER NOT EXISTS {
     ?axiom a owl:Axiom ;
            owl:annotatedSource ?class ;
-           owl:annotatedProperty obo:IAO_0000115 ;
+           owl:annotatedProperty IAO:0000115 ;
            owl:annotatedTarget ?definition ;
            oboInOwl:hasDbXref ?xref .
   }
-  BIND(REPLACE(STR(?class), "http://purl.obolibrary.org/obo/MONDO_", "MONDO:") AS ?mondo_curie)
+
+  # Convert class IRI to MONDO CURIE
+  BIND(REPLACE(STR(?class), "^.*/MONDO_", "MONDO:") AS ?mondo_curie)
 }
+ORDER BY ?mondo_curie
 
 ```
 
 </details>
 
-
-
-
-## Prompting Best Practices
-
-- Provide context for the prompts
-- Be specific and state the question cleary
-    - Include examples in the prompt
-    - Include prefixes and term IRIs/CURIEs in the prompt
-    - Use the real name of a property, 'has material basis in germline mutation in' vs. gene association
-    - Provide an OBO stanza or for more complicated queries the OWL class representation as needed
-- State what properties to return 
-	  - Select the CURIE, label, and definition
-- State modifiers and constraints
-    - Limit to 10 results, sort by label
-    - Filter out obsolete terms
-- Share an example query to extend
-	  - Use a base query and ask LLM to extend the query
-- Ask for explanations of the query
-	  - Prompt for the query and also ask for a step-wise explanation of the query
-- Review query, test, and iterate
-    - Test the query in your tool of interest
-    - If the query fails or returns incorrect information, share the error message and ask for a fix or clarify what’s missing
-    - Some SPARQL constructs are not valid for ROBOT and the query needs to be modified
-    - If the LLM starts returning circular options ask it to reset to clear the current conversation context and them start again
-
-
-## Pitfalls and Limitations
-
-- LLM hallucinations
-	  - queries might look plausible but be wrong or inefficient or not work with certain tools
-- Schema/ontology drift
-	  - LLMs trained on old data may not match the current ontology
-- Validate the query
-	  - Test the query using the tools mentioned earlier
-- Provide feedback to the LLM
-	  - That did not work, e.g. try again using the correct prefix for MONDO
 
