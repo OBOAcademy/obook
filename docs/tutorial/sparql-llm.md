@@ -317,6 +317,7 @@ Write a SPARQL query to retrieve a MONDO classes with their human-readable label
     - Target class - all Mondo classes
     - Filter - exclude obsolete terms
     - Ontology - MONDO
+    - Limt to 20 results
 
 <details>
 <summary>View SPARQL query</summary>
@@ -350,13 +351,13 @@ LIMIT 20
 #### Example - Get a count of all MONDO classes with an exact synonym from Orphanet
 
 Prompt: 
-Write a SPARQL query to count all exact synonyms (oboInOwl:hasExactSynonym) in non-obsolete MONDO classes where the synonym is annotated with a database cross reference (oboInOwl:hasDbXref) containing "Orphanet:". Use the axiom annotation pattern to connect the synonym to its provenance.
+Write a SPARQL query to count all exact synonyms (oboInOwl:hasExactSynonym) in non-obsolete MONDO classes where the synonym is annotated with a database cross reference (oboInOwl:hasDbXref) containing "Orphanet". Use the axiom annotation pattern to connect the synonym to its provenance.
 
 - Prompt Breakdown:
     - Type of query - count
     - Target class - all non-obsolete Mondo classes
     - Synonym constraint - class must have oboInOwl:hasExactSynonym
-    - Axiom constraint - the synonym must be annotated with a database cross reference and the value must contain "Orphanet:"
+    - Axiom constraint - the synonym must be annotated with a database cross reference and the value must contain "Orphanet"
     - Filter - exclude deprecated classes
     - Ontology - MONDO 
 
@@ -392,15 +393,108 @@ WHERE {
 
 ---
 ### Conjunctions (AND)
+#### Example: Get Mondo terms, CURIE, label, synonym, excluding obsolete terms
+
+Prompt: 
+Write a SPARQL query to select MONDO classes that have both a human-readable label (rdfs:label) and an exact synonym (oboInOwl:hasExactSynonym). Return the MONDO CURIE, label, and synonym. Restrict to MONDO classes, exclude obsolete terms, and limit to 20 results.
+
+- Prompt Breakdown:
+    - Type of query - select MONDO CURIE, label, and synonym
+    - Target class - all Mondo classes
+    - Annotation properties: require both `rdfs:labe`l` AND `oboInOwl:hasExactSynonym`
+    - Filter - exclude obsolete terms
+    - Ontology - MONDO
+    - Limit to 20 results
+
+<details>
+<summary>View SPARQL query</summary>
+
+```
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:      <http://www.w3.org/2002/07/owl#>
+PREFIX MONDO:    <http://purl.obolibrary.org/obo/MONDO_>
+PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+
+SELECT DISTINCT ?mondo_curie ?label ?syn
+WHERE {
+  ?class a owl:Class ;
+         rdfs:label ?label ;
+         oboInOwl:hasExactSynonym ?syn .
+  FILTER STRSTARTS(STR(?class), "http://purl.obolibrary.org/obo/MONDO_")
+  FILTER NOT EXISTS { ?class owl:deprecated true }
+
+  BIND(REPLACE(STR(?class), "^.*/MONDO_", "MONDO:") AS ?mondo_curie)
+}
+ORDER BY ?mondo_curie
+LIMIT 20
+
+```
+
+</details>
 
 
 ---
 ### Disjunctions (OR)
+Use UNION for alternative patterns
+
+#### Example - Get Mondo terms, CURIE, label, synonym, and synonym type for terms with either an exact synonym or a related synonym
+
+Prompt: 
+Write a SPARQL query to retrieve non-obsolete MONDO classes that have either an exact synonym (oboInOwl:hasExactSynonym) or a related synonym (oboInOwl:hasRelatedSynonym). Use UNION to combine the two patterns. Return the MONDO CURIE, label, the synonym and synonym type. Limit to 50 results.
+
+- Prompt Breakdown
+    - Type of query: select MONDO CURIE, label, and synonym
+    - Target class: all OWL classes in MONDO
+    - Annotation properties: match classes with an exact synonym OR related synonym
+    - Disjunction: use UNION to combine patterns
+    - Filter: exclude obsolete classes
+    - Ontology: MONDO
+    - Limit to 50 results
+
+<details>
+<summary>View SPARQL query</summary>
+
+```
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:      <http://www.w3.org/2002/07/owl#>
+PREFIX MONDO:    <http://purl.obolibrary.org/obo/MONDO_>
+PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+
+SELECT DISTINCT ?mondo_curie ?label ?synonym ?synonym_type
+WHERE {
+  ?class a owl:Class ;
+         rdfs:label ?label .
+  FILTER STRSTARTS(STR(?class), "http://purl.obolibrary.org/obo/MONDO_")
+  FILTER NOT EXISTS { ?class owl:deprecated true }
+
+  {
+    # Exact synonyms
+    ?class oboInOwl:hasExactSynonym ?synonym .
+    BIND("EXACT" AS ?synonym_type)
+  }
+  UNION
+  {
+    # Related synonyms
+    ?class oboInOwl:hasRelatedSynonym ?synonym .
+    BIND("RELATED" AS ?synonym_type)
+  }
+
+  BIND(REPLACE(STR(?class), "^.*/MONDO_", "MONDO:") AS ?mondo_curie)
+}
+ORDER BY ?mondo_curie ?synonym_type
+LIMIT 50
+
+```
+
+</details>
+
+
 
 
 ---
 ### Optional Patterns
 
+#### Example:
 
 ---
 ### Grouping and Aggregation
