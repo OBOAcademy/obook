@@ -1,13 +1,15 @@
-# Generating SPARQL queries using LLMs
+# Generating SPARQL queries using Large Language Models (LLMs)
 
-This tutorial will teach you how to create SPARQL queries by prompting a large language model (LLM) via a chat interface. You may use whichever system you prefer, such as [ChatGPT](https://chatgpt.com/), [Gemini](https://gemini.google.com/), [Claude](https://www.anthropic.com/claude-code), etc. These prompts have been tested with ChatGPT 5 and Gemini 2.5 Pro.
+This tutorial will teach you how to create SPARQL queries by prompting a large language model (LLM) via a chat interface. You may use whichever system you prefer, such as [ChatGPT](https://chatgpt.com/), [Gemini](https://gemini.google.com/), [Claude](https://www.anthropic.com/claude-code), etc. The prompts in this tutorial have been tested with ChatGPT 4o and Gemini 2.5 Pro.
 
 
 ## Preparation
-This tutorial uses LLMs via chat interfaces, such as [ChatGPT](https://chatgpt.com/), [Gemini](https://gemini.google.com/), [Claude](https://www.anthropic.com/claude-code), etc. to convert text prompts into SPARQL queries. The resulting SPARQL queries can be tested using https://yasgui.triply.cc/# (endpoint https://ubergraph.apps.renci.org/sparql) or using the [ROBOT query](https://robot.obolibrary.org/query) functionality. You are responsible for obtaining access to yasgui and/or installing ROBOT.
+
+The resulting SPARQL queries can be tested using https://yasgui.triply.cc/# (endpoint https://ubergraph.apps.renci.org/sparql) or using the [ROBOT query](https://robot.obolibrary.org/query) functionality. You are responsible for obtaining access to yasgui and/or installing ROBOT.
 
 
 ## Learning Objectives
+
 - Explain what SPARQL is and describe the types queries, e.g. SELECT, INSERT, DELETE, that can be used with ontologies.
 - Identify and provide key prompt setup information to guide LLMs toward generating accurate SPARQL queries in chat interfaces.
 - Create effective natural language prompts for large language models (via chat interfaces) to generate valid SPARQL queries.
@@ -17,40 +19,221 @@ This tutorial uses LLMs via chat interfaces, such as [ChatGPT](https://chatgpt.c
 - Evaluate prompt‑engineering best practices to get consistent query outputs.
 
 
-## Prompting Best Practices
+## SPARQL Refresher
+### What is SPARQL?
+
+- SPARQL (pronounced 'sparkle') is a language to query ontologies
+- A query can consist of:
+    - Triple patterns (subject-predicate-object), e.g. an entity is an OWL class 
+      ```
+      ?entity a owl:Class .
+      ```
+    - Conjunctions (multiple triple patterns that must match in order to return a result), e.g. Find all entities that are subclasses of MONDO:0000001 'disease' AND have a label. Both conditions must be true for the same entity.
+      ```
+      ?entity rdfs:subClassOf* MONDO:0000001 .
+      ?entity rdfs:label ?label .
+      ```
+    - Disjunctions (match either one triple pattern OR another), e.g. Find the label whether it's defined with either `rdfs:label` or `skos:prefLabel`
+      ```
+      { ?entity rdfs:label ?label . }
+      UNION
+      { ? entity skos:prefLabel ?label . }
+      ```
+    - Optional patterns (include extra information when available), e.g. Find all subclasses of MONDO:0000001 'disease'. If a label exists, include it, but don’t exclude entities without a label.
+      ```
+      ?class rdfs:subClassOf* obo:MONDO_0000001 .
+      OPTIONAL { ?class rdfs:label ?label }
+      ```
+- SPARQL can be used to query class hierarchies, annotation properties, e.g. labels, definitions, database cross reference, and logical class definitions
+- For more details, review Basic SPARQL for OBO Engineers <a href="https://oboacademy.github.io/obook/tutorial/sparql/" target="_blank">https://oboacademy.github.io/obook/tutorial/sparql/</a>
+
+
+### SPARQL Query Operations
+
+- SPARQL operators
+    - SELECT - retrieve specific data from an ontology, e.g. terms, labels, database cross references, hierarchy relationships, etc.
+    - INSERT - add information into the ontology
+    - DELETE - remove information from the ontology
+- SPARQL modifiers
+    - ORDER BY - sorts results
+    - LIMIT - max rows
+    - OFFSET - skip rows
+    - DISTINCT - remove duplicate query results
+    - GROUP BY and HAVING - aggregate data
+- FILTER - restrict results based on expressions
+    - Examples: Filter out obsolete terms, Filter to keep only terms with MONDO identifier
+
+
+### SPARQL Query Structure
+![Basic SPARQL Query](../images/tutorials/sparql-llm/basic_sparql_query-no-title.png)
+
+- Prefix declarations: Declares namespace abbreviations to shorten URIs (e.g., owl:, rdfs:)
+
+- Select clause: Specifies the variables to be returned: `?entity` and `?label`
+
+- Where clause:	Defines the pattern of RDF triples to match.
+    - The triple pattern `?entity a owl:Class` means match entities that are OWL classes.
+    - The triple pattern `?entity rdfs:label ?label` means match entities that have a `rdfs:label`.
+
+- Filters
+    - `FILTER (STRSTARTS(STR(?entity), "http://purl.obolibrary.org/obo/MONDO_"))`: Limits results to MONDO classes
+    - `FILTER NOT EXISTS { ?entity owl:deprecated true }`: Excludes obsolete classes
+    - `LIMIT 10`: Return at most 10 results 
+
+
+### Tools to run SPARQL queries
+
+- ROBOT 
+    - A command line tool for working with OBO ontologies and has a query command <a href="https://robot.obolibrary.org/query" target="_blank">https://robot.obolibrary.org/query</a>
+- RENCI Ubergraph endpoint
+    - Web based interface to query OBO ontologies <a href="https://yasgui.triply.cc/#" target="_blank">https://yasgui.triply.cc/#</a>
+
+
+### SPARQL Use Cases
+
+- Create a custom report
+    - How many disease classes are in Mondo? 
+    - How many Mondo classes have a gene association?
+    - See Mondo stats for more statistics <a href="https://mondo.monarchinitiative.org/#stats" target="_blank">https://mondo.monarchinitiative.org/#stats</a>
+- Ontology QC and modeling validation
+    - Do all synonyms contain a database cross reference?
+- Insert and update an ontology
+    - Many Mondo pipelines use SPARQL update queries, e.g. OMIM gene pipeline, to add content into the ontology
+
+
+## What are Large Language Models
+- Large Language Models (LLMs) are AI systems trained on massive text corpora to understand and generate human language
+- Understand and generate text and code
+    - Examples: ChatGPT, Claude, Gemini
+- Interact using natural language prompts, not programming
+
+
+### What Can LLMs Do?
+
+LLMs can interpret and generate:
+
+- Text summaries, explanations, and rewrite content
+- Data transformations and format conversions
+- Generate code
+
+
+### Why Large Language Models (LLMs) matter for querying ontologies
+
+<table style="border: none; border-collapse: collapse; margin-top: 0; padding-top: 0;">
+  <tr>
+    <td style="border: none; vertical-align: top; width: 50%; padding: 0; font-size: .8rem;">
+      <strong>Problems:</strong>
+      <ul>
+        <li>Natural language is intuitive, but not machine-readable</li>
+        <li>Ontology queries (SPARQL) are precise, but hard to write and take time to learn</li>
+      </ul>
+    </td>
+    <td style="border: none; vertical-align: top; width: 50%; padding: 0 0 0 1.5rem; font-size: .8rem;">
+      <strong>LLMs can:</strong>
+      <ul>
+        <li>Translate natural language questions into SPARQL queries</li>
+        <li>Lower the barrier of entry to writing SPARQL queries and extracting ontology information</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+
+## Prompting LLMs via Chat Interfaces for SPARQL Queries
+
 - Be specific and state the question cleary
-	- Include examples in the prompt
-	- Include prefixes and term IRIs/CURIEs in the prompt
-	- Use the real name of a property, 'has material basis in germline mutation in' vs. gene association
-	- Provide an OBO stanza or for more complicated queries the OWL class representation
+    - Not great: “Find all diseases.”
+    - Better: “List all subclasses of MONDO:0700096 ‘human disease’ in MONDO, including the class labels and definitions.”
+- Include example data in the prompt
+    - Share prefixes or example IRIs/CURIEs
+    - Use the real IRI/CURIE or name of a property 
+    - Provide an OBO stanza or for more complicated queries the OWL class representation
 - State what properties to return 
-	- Select the CURIE, label, and definition
+    - Select the CURIE, label, and definition
 - State modifiers and constraints
- 	- Limit to 10 results, sort by label
- 	- Filter out obsolete terms
+    - Limit to 10 results, sort by label
+    - Filter out obsolete terms
 - Share an example query to extend
-	- Use a base query and ask LLM to extend the query
-- Ask for explanations of the query
-	- Prompt for the query and also ask for a step-wise explanation of the query
+    - Use base query and ask LLM to extend 
+- Ask for explanations 
+    - Prompt for query and also ask for a step-wise explanation of the query
 - Review query, test, and iterate
-	- Test the query in your tool of interest
-	- If the query fails or returns incorrect information, share the error message and ask for a fix or clarify what’s missing
-	- Some SPARQL constructs are not valid for ROBOT and the query needs to be modified
-	- If the LLM starts returning circular options ask it to reset to clear the current conversation context
+    - Test the query in your tool of interest
+    - If query fails or returns incorrect information, share the error message and ask for a fix or clarify what’s missing
+    - Some SPARQL constructs are not valid for ROBOT and the query needs to be modified
+    - If the LLM starts returning circular options ask it to reset to clear the current conversation context
 
 
-## Pitfalls and Limitations
-- LLM hallucinations
-	- queries might look plausible but be wrong or inefficient or not work with certain tools
-- Schema/ontology drift
-	- LLMs trained on old data may not match the current ontology
-- Validate the query
-	- Test the query using the tools mentioned earlier
-- Provide feedback to the LLM
-	- That did not work, e.g. try again using the correct prefix for MONDO
+### Prompt Setup for Chat-Based LLMs
+
+- Information to include at the start of your chat session to guide the LLM throughout your prompts 
+- This information will be remembered by the model throughout the chat session (limited by model, chat length, and chat settings)
+    - ChatGPT - session memory is enabled by default
+    - Gemini -  iterative conversation history
+    - Claude - selective session memory
+- The information should be clear and specific to guide the LLM toward the desired output
+- For best results, it is a good practice to set a persona, provide examples, and structure the information clearly
+
+<details>
+<summary>Prompt Setup</summary>
+```
+Role: Act as an ontology engineer with expert knowledge of SPARQL and MONDO.
+
+Environment: Queries will be run in YASGUI against MONDO (OWL) and should also run via ROBOT.
+
+Namespace scope: By default, restrict results to MONDO classes:
+    FILTER STRSTARTS(STR(?class), "http://purl.obolibrary.org/obo/MONDO_")
+
+Reasoning: Assume no entailment; use explicit patterns and property paths (e.g., rdfs:subClassOf*).
+
+Obsoletes: Exclude classes with owl:deprecated true.
+
+Labels: Use `rdfs:label`.
+
+Prefixes: Include only the PREFIX declarations actually used in the query (no extras).
+  These are the main prefixes we will need: 
+    Core RDF/OWL
+      rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+      rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      owl: <http://www.w3.org/2002/07/owl#>
+      xsd: <http://www.w3.org/2001/XMLSchema#>
+    MONDO
+      MONDO: <http://purl.obolibrary.org/obo/MONDO_>
+    Common OBO namespaces
+      RO: <http://purl.obolibrary.org/obo/RO_>
+      IAO: <http://purl.obolibrary.org/obo/IAO_>
+      oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+
+Axiom-annotated data (synonyms, database cross references (also known as xrefs), provenance):
+  When querying properties that are commonly axiom-annotated (e.g., oboInOwl:hasExactSynonym),
+    1) Assert the base triple:
+       ?class oboInOwl:hasExactSynonym ?syn .
+    2) Tie the reified axiom back to that exact triple:
+       ?axiom a owl:Axiom ;
+              owl:annotatedSource ?class ;
+              owl:annotatedProperty oboInOwl:hasExactSynonym ;
+              owl:annotatedTarget ?syn .
+    3) Add any desired axiom annotations (e.g., oboInOwl:hasDbXref ?xref).
+
+Output rules:
+  * Return paste-ready SPARQL in a single code block.
+  * Use DISTINCT when appropriate (e.g., in COUNTs).
+  * If a list of results is requested, include the `?label` and convert the IRI to a CURIE
+
+Request format: 
+  * I will provide prompts in plain English.
+  * Respond only with the SPARQL query (and a one-line explanation if needed).
+
+Defaults (unless I override in the prompt): 
+  * Consider all descendants (rdfs:subClassOf*), not just direct children.
+  * Filter out obsoletes as above.
+  * Keep results sorted using ORDER BY unless I request otherwise.
+
+```
+</details>
 
 
-## Tutorial
+## Example LLM prompts 
 ### Example - Get a count of all subclasses of disease excluding obsolete terms
 - Prompt:
 Write a SPARQL query that counts the number of OWL classes in the MONDO ontology that are subclasses of MONDO:0000001 (disease) and do not include obsolete classes, which are marked as deprecated using `owl:deprecated true`.
@@ -433,4 +616,38 @@ SELECT DISTINCT ?mondo_curie ?label ?definition WHERE {
 
 </details>
 
+
+
+
+## Prompting Best Practices
+- Be specific and state the question cleary
+    - Include examples in the prompt
+    - Include prefixes and term IRIs/CURIEs in the prompt
+    - Use the real name of a property, 'has material basis in germline mutation in' vs. gene association
+    - Provide an OBO stanza or for more complicated queries the OWL class representation
+- State what properties to return 
+	  - Select the CURIE, label, and definition
+- State modifiers and constraints
+    - Limit to 10 results, sort by label
+    - Filter out obsolete terms
+- Share an example query to extend
+	  - Use a base query and ask LLM to extend the query
+- Ask for explanations of the query
+	  - Prompt for the query and also ask for a step-wise explanation of the query
+- Review query, test, and iterate
+    - Test the query in your tool of interest
+    - If the query fails or returns incorrect information, share the error message and ask for a fix or clarify what’s missing
+    - Some SPARQL constructs are not valid for ROBOT and the query needs to be modified
+    - If the LLM starts returning circular options ask it to reset to clear the current conversation context
+
+
+## Pitfalls and Limitations
+- LLM hallucinations
+	  - queries might look plausible but be wrong or inefficient or not work with certain tools
+- Schema/ontology drift
+	  - LLMs trained on old data may not match the current ontology
+- Validate the query
+	  - Test the query using the tools mentioned earlier
+- Provide feedback to the LLM
+	  - That did not work, e.g. try again using the correct prefix for MONDO
 
