@@ -5,7 +5,7 @@ This tutorial will teach you how to create SPARQL queries by prompting a large l
 
 ## Preparation
 
-The resulting SPARQL queries can be tested using https://yasgui.triply.cc/# (endpoint https://ubergraph.apps.renci.org/sparql) or using the [ROBOT query](https://robot.obolibrary.org/query) functionality. You are responsible for obtaining access to yasgui and/or installing ROBOT.
+The resulting SPARQL queries can be tested using <a href="https://yasgui.triply.cc/#" target="_blank">https://yasgui.triply.cc/#</a> (endpoint https://ubergraph.apps.renci.org/sparql) or using the [ROBOT query](https://robot.obolibrary.org/query) functionality. You are responsible for obtaining access to yasgui and/or installing ROBOT.
 
 
 ## Learning Objectives
@@ -39,10 +39,10 @@ The resulting SPARQL queries can be tested using https://yasgui.triply.cc/# (end
       UNION
       { ? entity skos:prefLabel ?label . }
       ```
-    - Optional patterns (include extra information when available), e.g. Find all subclasses of MONDO:0000001 'disease'. If a label exists, include it, but don’t exclude entities without a label.
+    - Optional patterns (include extra information when available), e.g. Find all subclasses of MONDO:0000001 'disease'. If a definition exists, include it, but don’t exclude entities without a definition.
       ```
       ?class rdfs:subClassOf* obo:MONDO_0000001 .
-      OPTIONAL { ?class rdfs:label ?label }
+      OPTIONAL { ?class IAO:0000115 ?definition }
       ```
 - SPARQL can be used to query class hierarchies, annotation properties, e.g. labels, definitions, database cross reference, and logical class definitions
 - For more details, review Basic SPARQL for OBO Engineers <a href="https://oboacademy.github.io/obook/tutorial/sparql/" target="_blank">https://oboacademy.github.io/obook/tutorial/sparql/</a>
@@ -75,10 +75,12 @@ The resulting SPARQL queries can be tested using https://yasgui.triply.cc/# (end
     - The triple pattern `?entity a owl:Class` means match entities that are OWL classes.
     - The triple pattern `?entity rdfs:label ?label` means match entities that have a `rdfs:label`.
 
-- Filters
-    - `FILTER (STRSTARTS(STR(?entity), "http://purl.obolibrary.org/obo/MONDO_"))`: Limits results to MONDO classes
-    - `FILTER NOT EXISTS { ?entity owl:deprecated true }`: Excludes obsolete classes
-    - `LIMIT 10`: Return at most 10 results 
+- Filters:
+    - Limits results to MONDO classes: `FILTER (STRSTARTS(STR(?entity), "http://purl.obolibrary.org/obo/MONDO_"))`
+    - Excludes obsolete classes: `FILTER NOT EXISTS { ?entity owl:deprecated true }`
+
+- Limit:
+    - Return at most 10 results: `LIMIT 10` 
 
 
 ### Tools to run SPARQL queries
@@ -102,19 +104,12 @@ The resulting SPARQL queries can be tested using https://yasgui.triply.cc/# (end
 
 
 ## What are Large Language Models
-- Large Language Models (LLMs) are AI systems trained on massive text corpora to understand and generate human language
+
+- Large Language Models (LLMs) are AI systems trained on huge amounts of text
 - Understand and generate text and code
     - Examples: ChatGPT, Claude, Gemini
 - Interact using natural language prompts, not programming
-
-
-### What Can LLMs Do?
-
-LLMs can interpret and generate:
-
-- Text summaries, explanations, and rewrite content
-- Data transformations and format conversions
-- Generate code
+- ⚠️ LLMs can make mistakes or “hallucinate” information — always review and validate the results before using them in your work
 
 
 ### Why Large Language Models (LLMs) matter for querying ontologies
@@ -122,57 +117,45 @@ LLMs can interpret and generate:
 <table style="border: none; border-collapse: collapse; margin-top: 0; padding-top: 0;">
   <tr>
     <td style="border: none; vertical-align: top; width: 50%; padding: 0; font-size: .8rem;">
-      <strong>Problems:</strong>
+      <strong>Challenges for users:</strong>
       <ul>
-        <li>Natural language is intuitive, but not machine-readable</li>
-        <li>Ontology queries (SPARQL) are precise, but hard to write and take time to learn</li>
+        <li>Natural language is intuitive for humans, but not machine-readable</li>
+        <li>SPARQL queries are precise and powerful, but hard to learn and time-consuming to write</li>
       </ul>
     </td>
     <td style="border: none; vertical-align: top; width: 50%; padding: 0 0 0 1.5rem; font-size: .8rem;">
-      <strong>LLMs can:</strong>
+      <strong>How LLMs help:</strong>
       <ul>
-        <li>Translate natural language questions into SPARQL queries</li>
-        <li>Lower the barrier of entry to writing SPARQL queries and extracting ontology information</li>
+        <li>Translate natural language questions into SPARQL queries <em>(bridging the gap)</em></li>
+        <li>Lower the barrier to writing SPARQL by drafting queries, saving time for learners and experts</li>
       </ul>
     </td>
   </tr>
 </table>
 
 
-## Prompting LLMs via Chat Interfaces for SPARQL Queries
+## Prompting LLMs for SPARQL Queries via Chat Interfaces
 
 - Be specific and state the question cleary
-    - Not great: “Find all diseases.”
-    - Better: “List all subclasses of MONDO:0700096 ‘human disease’ in MONDO, including the class labels and definitions.”
-- Include example data in the prompt
-    - Share prefixes or example IRIs/CURIEs
-    - Use the real IRI/CURIE or name of a property 
-    - Provide an OBO stanza or for more complicated queries the OWL class representation
 - State what properties to return 
-    - Select the CURIE, label, and definition
 - State modifiers and constraints
-    - Limit to 10 results, sort by label
-    - Filter out obsolete terms
 - Share an example query to extend
-    - Use base query and ask LLM to extend 
 - Ask for explanations 
-    - Prompt for query and also ask for a step-wise explanation of the query
 - Review query, test, and iterate
-    - Test the query in your tool of interest
-    - If query fails or returns incorrect information, share the error message and ask for a fix or clarify what’s missing
-    - Some SPARQL constructs are not valid for ROBOT and the query needs to be modified
-    - If the LLM starts returning circular options ask it to reset to clear the current conversation context
 
 
 ### Prompt Setup for Chat-Based LLMs
-
-- Information to include at the start of your chat session to guide the LLM throughout your prompts 
+ 
+- ‼️ **This setup is very important — it helps ensure the LLM responds correctly and consistently**
+- Text information to include at the start of your chat session to guide the LLM throughout your prompts 
 - This information will be remembered by the model throughout the chat session (limited by model, chat length, and chat settings)
     - ChatGPT - session memory is enabled by default
     - Gemini -  iterative conversation history
     - Claude - selective session memory
 - The information should be clear and specific to guide the LLM toward the desired output
 - For best results, it is a good practice to set a persona, provide examples, and structure the information clearly
+- ⚡ **_Use the information in the Prompt Setup below before prompting the LLM to generate SPARQL queries. Customize as needed for your ontology of interest._** 
+
 
 <details>
 <summary>Prompt Setup</summary>
@@ -244,9 +227,9 @@ Defaults (unless I override in the prompt):
 Write a SPARQL query that counts the number of classes in the MONDO ontology that are subclasses of MONDO:0000001 (disease).
 
 - Prompt Breakdown:
-    - Type of query - count
-    - Target class - all subclasses of MONDO:0000001 (disease)
-    - Ontology - MONDO
+    - Type of query: COUNT
+    - Target class: all subclasses of MONDO:0000001 (disease)
+    - Ontology scope: MONDO
 
 <details>
 <summary>View SPARQL query</summary>
@@ -278,10 +261,10 @@ WHERE {
 Write a SPARQL query to count all exact synonyms (oboInOwl:hasExactSynonym) in MONDO, excluding obsolete Mondo classes.
 
 - Prompt Breakdown:
-    - Type of query - count
-    - Target class - all Mondo classes
-    - Filter - exclude obsolete terms
-    - Ontology - MONDO
+    - Type of query: COUNT
+    - Target class: all Mondo classes
+    - Filter: exclude obsolete terms
+    - Ontology scope: MONDO
 
 <details>
 <summary>View SPARQL query</summary>
@@ -313,11 +296,11 @@ WHERE {
 Write a SPARQL query to retrieve a MONDO classes with their human-readable labels (rdfs:label). Return the MONDO CURIE and the label, limited to 20 results. Exclude obsolete classes (owl:deprecated true).
 
 - Prompt Breakdown:
-    - Type of query - select MONDO CURIE and label
-    - Target class - all Mondo classes
-    - Filter - exclude obsolete terms
-    - Ontology - MONDO
-    - Limt to 20 results
+    - Type of query: SELECT - MONDO CURIE and label
+    - Target class: all Mondo classes
+    - Filter: exclude obsolete terms
+    - Ontology scope: MONDO
+    - Result size: LIMIT 20 for readability
 
 <details>
 <summary>View SPARQL query</summary>
@@ -354,12 +337,12 @@ Prompt:
 Write a SPARQL query to count all exact synonyms (oboInOwl:hasExactSynonym) in non-obsolete MONDO classes where the synonym is annotated with a database cross reference (oboInOwl:hasDbXref) containing "Orphanet". Use the axiom annotation pattern to connect the synonym to its provenance.
 
 - Prompt Breakdown:
-    - Type of query - count
-    - Target class - all non-obsolete Mondo classes
-    - Synonym constraint - class must have oboInOwl:hasExactSynonym
-    - Axiom constraint - the synonym must be annotated with a database cross reference and the value must contain "Orphanet"
-    - Filter - exclude deprecated classes
-    - Ontology - MONDO 
+    - Type of query: COUNT
+    - Target class: all non-obsolete Mondo classes
+    - Synonym constraint: class must have oboInOwl:hasExactSynonym
+    - Axiom constraint: the synonym must be annotated with a database cross reference and the value must contain "Orphanet"
+    - Filter: exclude obsolete classes
+    - Ontology scope: MONDO 
 
 <details>
 <summary>View SPARQL query</summary>
@@ -399,12 +382,12 @@ Prompt:
 Write a SPARQL query to select MONDO classes that have both a human-readable label (rdfs:label) and an exact synonym (oboInOwl:hasExactSynonym). Return the MONDO CURIE, label, and synonym. Restrict to MONDO classes, exclude obsolete terms, and limit to 20 results.
 
 - Prompt Breakdown:
-    - Type of query - select MONDO CURIE, label, and synonym
-    - Target class - all Mondo classes
-    - Annotation properties: require both `rdfs:labe`l` AND `oboInOwl:hasExactSynonym`
-    - Filter - exclude obsolete terms
-    - Ontology - MONDO
-    - Limit to 20 results
+    - Type of query: SELECT - MONDO CURIE, label, and synonym
+    - Target class: all Mondo classes
+    - Annotation properties: require both `rdfs:label` AND `oboInOwl:hasExactSynonym`
+    - Filter: exclude obsolete terms
+    - Ontology scope: MONDO
+    - Result size: LIMIT 20 for readability
 
 <details>
 <summary>View SPARQL query</summary>
@@ -443,13 +426,13 @@ Prompt:
 Write a SPARQL query to retrieve non-obsolete MONDO classes that have either an exact synonym (oboInOwl:hasExactSynonym) or a related synonym (oboInOwl:hasRelatedSynonym). Use UNION to combine the two patterns. Return the MONDO CURIE, label, the synonym and synonym type. Limit to 50 results.
 
 - Prompt Breakdown
-    - Type of query: select MONDO CURIE, label, and synonym
-    - Target class: all OWL classes in MONDO
-    - Annotation properties: match classes with an exact synonym OR related synonym
+    - Type of query: SELECT - MONDO CURIE, label, and synonym
+    - Target class: all Mondo classes
+    - Annotation properties: match classes with an exact synonym _OR_ related synonym
     - Disjunction: use UNION to combine patterns
     - Filter: exclude obsolete classes
-    - Ontology: MONDO
-    - Limit to 50 results
+    - Ontology scope: MONDO
+    - Result size: LIMIT 50 for readability
 
 <details>
 <summary>View SPARQL query</summary>
@@ -489,43 +472,216 @@ LIMIT 50
 </details>
 
 
-
-
 ---
 ### Optional Patterns
 
-#### Example:
+#### Example: Get Mondo terms and the definition if it exists
+
+Prompt:
+Write a SPARQL query to retrieve non-obsolete MONDO classes with their human-readable label (rdfs:label). Also try to include a textual definition (IAO:0000115) if it exists. Use OPTIONAL so that classes without a definition are still returned. Return the MONDO CURIE, label, and definition. Limit to 20 results.
+
+- Prompt Breakdown:
+    - Type of query: SELECT — return MONDO CURIE, label, and optionally the definition
+    - Target class: all Mondo classes
+    - Annotations required: rdfs:label (mandatory)
+    - Annotations optional: IAO:0000115 (definition, may or may not be present)
+    - Filter: exclude obsolete classes
+    - Ontology scope: MONDO
+    - Output: MONDO CURIE, label, and definition
+    - Result size: LIMIT 20 for readability
+
+
+<details>
+<summary>View SPARQL query</summary>
+
+```
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:   <http://www.w3.org/2002/07/owl#>
+PREFIX MONDO: <http://purl.obolibrary.org/obo/MONDO_>
+PREFIX IAO:   <http://purl.obolibrary.org/obo/IAO_>
+
+SELECT DISTINCT ?mondo_curie ?label ?definition
+WHERE {
+  ?class a owl:Class ;
+         rdfs:label ?label .
+  FILTER STRSTARTS(STR(?class), "http://purl.obolibrary.org/obo/MONDO_")
+  FILTER NOT EXISTS { ?class owl:deprecated true }
+
+  # Definition is optional — not all classes have one
+  OPTIONAL { ?class IAO:0000115 ?definition }
+
+  BIND(REPLACE(STR(?class), "^.*/MONDO_", "MONDO:") AS ?mondo_curie)
+}
+ORDER BY ?mondo_curie
+LIMIT 20
+
+```
+
+</details>
+
 
 ---
 ### Grouping and Aggregation
+Use GROUP_CONCAT, GROUP BY
+
+#### Example: Get Mondo terms and the count of exact synonyms for each term
+
+Prompt:
+Write a SPARQL query to retrieve non-obsolete MONDO classes along with their exact synonyms. Use COUNT to calculate how many synonyms each class has, and GROUP_CONCAT to list them all in a single field. Return the MONDO CURIE, label, the count of synonyms, and the list of synonyms. Limit results to 20.
+
+- Prompt Breakdown:
+    - Type of query: SELECT with aggregation — return MONDO CURIE, label, count of synonyms, and list of the exact synonyms
+    - Target class: all Mondo classes
+    - Annotations required: rdfs:label (mandatory), oboInOwl:hasExactSynonym (to be counted)
+    - Filter: exclude obsolete classes
+    - Ontology scope: MONDO
+    - Aggregation: count unique synonym strings and aggregate all exact synonym values
+    - Grouping: GROUP BY ?class ?label ?mondo_curie
+    - Result size: LIMIT 20 for readability
+
+
+<details>
+<summary>View SPARQL query</summary>
+
+```
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:      <http://www.w3.org/2002/07/owl#>
+PREFIX MONDO:    <http://purl.obolibrary.org/obo/MONDO_>
+PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+
+SELECT ?mondo_curie ?label 
+       (COUNT(DISTINCT ?syn) AS ?synonym_count)
+       (GROUP_CONCAT(DISTINCT ?syn; separator=", ") AS ?synonyms)
+WHERE {
+  ?class a owl:Class ;
+         rdfs:label ?label ;
+         oboInOwl:hasExactSynonym ?syn .
+  FILTER STRSTARTS(STR(?class), "http://purl.obolibrary.org/obo/MONDO_")
+  FILTER NOT EXISTS { ?class owl:deprecated true }
+
+  BIND(REPLACE(STR(?class), "^.*/MONDO_", "MONDO:") AS ?mondo_curie)
+}
+GROUP BY ?mondo_curie ?label
+ORDER BY DESC(?synonym_count)
+LIMIT 20
+
+```
+
+</details>
+
 
 
 ---
 ### Axiom-level Queries
-Example: get provenance for gene associations
+Reified axioms with owl:Axiom
+
+#### Example: Get Mondo terms, exact synonyms, and their provenance
+
+Prompt:
+Write a SPARQL query to retrieve non-obsolete MONDO classes and their exact synonyms (oboInOwl:hasExactSynonym). For each synonym, also retrieve the list of database cross references (oboInOwl:hasDbXref) recorded on the synonym axiom. Use the axiom annotation pattern (owl:Axiom) to connect synonyms to their xrefs. Each synonym should appear only once, with all of its xrefs combined in a single column. Return the MONDO CURIE, label, synonym, and the list of xrefs. Limit results to 20.
+
+- Prompt Breakdown:
+    - Type of query: SELECT — return MONDO CURIE, label, synonym, and a combined list of xrefs
+    - Target class: all Mondo classes
+    - Annotation required: rdfs:label (mandatory for human-readable output)
+    - Synonyms: oboInOwl:hasExactSynonym (required)
+    - Axiom pattern: use owl:Axiom with owl:annotatedSource, owl:annotatedProperty, and owl:annotatedTarget to connect synonyms to oboInOwl:hasDbXref
+    - Aggregation: use GROUP_CONCAT(DISTINCT ?xref; separator=", ") so each synonym has its list of xrefs in one column.
+    - Grouping: group by MONDO CURIE, label, and synonym
+    - Filter: exclude obsolete classes
+    - Ontology scope: MONDO
+    - Result size: LIMIT 20 for readability
+
+
+<details>
+<summary>View SPARQL query</summary>
+
+```
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:      <http://www.w3.org/2002/07/owl#>
+PREFIX MONDO:    <http://purl.obolibrary.org/obo/MONDO_>
+PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+
+SELECT ?mondo_curie ?label ?synonym
+       (GROUP_CONCAT(DISTINCT ?xref; separator=", ") AS ?xrefs)
+WHERE {
+  ?class a owl:Class ;
+         rdfs:label ?label ;
+         oboInOwl:hasExactSynonym ?synonym .
+  FILTER STRSTARTS(STR(?class), "http://purl.obolibrary.org/obo/MONDO_")
+  FILTER NOT EXISTS { ?class owl:deprecated true }
+
+  # Axiom pattern tying synonym to xref
+  ?axiom a owl:Axiom ;
+         owl:annotatedSource ?class ;
+         owl:annotatedProperty oboInOwl:hasExactSynonym ;
+         owl:annotatedTarget ?synonym ;
+         oboInOwl:hasDbXref ?xref .
+
+  # Convert class IRI into MONDO CURIE
+  BIND(REPLACE(STR(?class), "^.*/MONDO_", "MONDO:") AS ?mondo_curie)
+}
+GROUP BY ?mondo_curie ?label ?synonym
+ORDER BY ?mondo_curie ?synonym
+LIMIT 20
+
+```
+
+</details>
+
 
 
 --- 
 ### Ontology Structure Queries
-Example: “Which diseases have material basis in germline mutation in a gene?”
+
+#### Example:
+
+Prompt:
+Write a SPARQL query to retrieve non-obsolete MONDO classes that have a gene association modeled as an rdfs:subClassOf restriction on the property RO:0004003 (“has material basis in germline mutation in”). Return the MONDO CURIE, label, and the gene identifier. Limit results to 20.
+
+- Prompt Breakdown:
+    - Type of query: SELECT — return MONDO CURIE, label, and gene identifier
+    - Target class: all Mondo classes
+    - Ontology structure: rdfs:subClassOf pointing to an owl:Restriction
+    - Restriction pattern:
+        ```
+        owl:onProperty RO:0004003
+        owl:someValuesFrom ?gene
+        ```
+    - Filter: exclude obsolete classes
+    - Ontology scope: MONDO
+    - Result size: LIMIT 20 for readability
 
 
+<details>
+<summary>View SPARQL query</summary>
 
+```
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:   <http://www.w3.org/2002/07/owl#>
+PREFIX MONDO: <http://purl.obolibrary.org/obo/MONDO_>
+PREFIX RO:    <http://purl.obolibrary.org/obo/RO_>
 
+SELECT DISTINCT ?mondo_curie ?label ?gene
+WHERE {
+  ?class a owl:Class ;
+         rdfs:label ?label ;
+         rdfs:subClassOf ?restriction .
+  FILTER STRSTARTS(STR(?class), "http://purl.obolibrary.org/obo/MONDO_")
+  FILTER NOT EXISTS { ?class owl:deprecated true }
 
+  ?restriction a owl:Restriction ;
+               owl:onProperty RO:0004003 ;
+               owl:someValuesFrom ?gene .
 
+  BIND(REPLACE(STR(?class), "^.*/MONDO_", "MONDO:") AS ?mondo_curie)
+}
+ORDER BY ?mondo_curie
+LIMIT 20
 
+```
 
-
-
-
-
-
-
-
-
-
-
+</details>
 
 
 
@@ -538,7 +694,7 @@ Example: “Which diseases have material basis in germline mutation in a gene?�
     - Include prefixes and term IRIs/CURIEs in the prompt
     - Use the real name of a property, 'has material basis in germline mutation in' vs. gene association
     - Provide an OBO stanza or for more complicated queries the OWL class representation as needed
-- State what properties to return 
+- State what information to return 
 	  - Select the CURIE, label, and definition
 - State modifiers and constraints
     - Limit to 10 results, sort by label
@@ -551,7 +707,7 @@ Example: “Which diseases have material basis in germline mutation in a gene?�
     - Test the query in your tool of interest
     - If the query fails or returns incorrect information, share the error message and ask for a fix or clarify what’s missing
     - Some SPARQL constructs are not valid for ROBOT and the query needs to be modified
-    - If the LLM starts returning circular options ask it to reset to clear the current conversation context and them start again
+    - If the LLM starts returning circular options ask it to reset to clear the current conversation context and them start again (remember to provide the Prompt Setup information again)
 
 
 ## Pitfalls and Limitations
@@ -775,7 +931,6 @@ WHERE {
                owl:onProperty RO:0004003 ;
                owl:someValuesFrom ?gene .
 
-  # MONDO CURIE
   BIND(REPLACE(STR(?class), "^.*/MONDO_", "MONDO:") AS ?mondo_curie)
 
   # Gene CURIE (assumes identifiers.org/hgnc/#### pattern)
