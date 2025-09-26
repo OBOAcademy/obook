@@ -846,6 +846,7 @@ LIMIT 20
 
 ---
 #### Example - Get all Mondo classes that have more than one gene association
+
 - Prompt:
 Write a SPARQL query to get all Mondo classes that have more than one gene association, e.g. RO:0004003 'has material basis in germline mutation in', and the source provenance represented using oboInOWL:source. Include the Mondo CURIE, Mondo label, gene identifier, and source provenance in the result.
 
