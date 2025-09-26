@@ -1,6 +1,6 @@
 # Generating SPARQL queries using Large Language Models (LLMs)
 
-This tutorial will teach you how to create SPARQL queries by prompting a large language model (LLM) via a chat interface. You may use whichever system you prefer, such as [ChatGPT](https://chatgpt.com/), [Gemini](https://gemini.google.com/), [Claude](https://www.anthropic.com/claude-code), etc. The prompts in this tutorial have been tested with ChatGPT 4o and Gemini 2.5 Pro.
+This tutorial will teach you how to create SPARQL queries by prompting a large language model (LLM) via a chat interface. You may use whichever system you prefer, such as [ChatGPT](https://chatgpt.com/), [Gemini](https://gemini.google.com/), [Claude](https://www.anthropic.com/claude-code), etc. The prompts in this tutorial have been tested with ChatGPT 4o and Gemini 2.5 Pro. However, while LLM responses are more consistent, they are non-deterministic (involve some randomness), so the same prompt may produce different answers.
 
 
 ## Preparation
