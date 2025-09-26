@@ -726,123 +726,11 @@ LIMIT 20
 ---
 
 ---
-## Additional LLM prompts
+## Additional LLM prompts and SPARQL Queries
 
-### Count Queries
-
-#### Example - Get a count of all subclasses of disease excluding obsolete terms
-
-- Prompt:
-Write a SPARQL query that counts the number of OWL classes in the MONDO ontology that are subclasses of MONDO:0000001 (disease) and do not include obsolete classes, which are marked as deprecated using `owl:deprecated true`.
-
-- Prompt Breakdown:
-    - Type of query - count
-    - Target class - all subclasses of MONDO:0000001 (disease)
-    - Filter - exclude deprecated terms
-    - Ontology - MONDO
-
-<details>
-<summary>View SPARQL query</summary>
-
-```
-PREFIX owl: <http://www.w3.org/2002/07/owl#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX obo: <http://purl.obolibrary.org/obo/>
-
-# Get a count of all subclasses of disease excluding obsolete terms
-
-SELECT (COUNT(DISTINCT ?cls) AS ?count)
-WHERE {
-  ?cls rdfs:subClassOf* obo:MONDO_0000001 .
-  ?cls a owl:Class .
-  FILTER NOT EXISTS { ?cls owl:deprecated true }
-}
-```
-
-</details>
-
----
-#### Example - Get a count of all exact synonyms in Mondo excluding obsolete terms
-
-- Prompt:
-Write a SPARQL query that counts the number of exact synonyms in the Mondo ontology and do not include obsolete classes, which are marked as deprecated using `owl:deprecated true`.
-
-- Prompt Breakdown:
-    - Type of query - count all synonyms
-    - Target class - all Mondo classes
-    - Synonym constraint - class must have oboInOwl:hasExactSynonym
-    - Filter - exclude deprecated classes
-    - Ontology - MONDO
-
-<details>
-<summary>View SPARQL query</summary>
-
-```
-PREFIX owl:      <http://www.w3.org/2002/07/owl#>
-PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
-
-# Get a count of exact synonyms
-
-SELECT (COUNT(DISTINCT ?syn) AS ?exact_synonym_count)
-WHERE {
-  ?class a owl:Class .
-  FILTER(STRSTARTS(STR(?class), "http://purl.obolibrary.org/obo/MONDO_"))
-  FILTER NOT EXISTS { ?class owl:deprecated true }
-
-  ?class oboInOwl:hasExactSynonym ?syn .
-}
-```
-
-</details>
-
-
----
-#### Example - Get a count of all exact synonyms where the synonym also exists in Orphanet
-
-- Prompt:
-Write a SPARQL query that counts the number of exact synonyms in the Mondo ontology where the exact synonym has a database cross reference to Orphanet. Do not include obsolete classes, which are marked as deprecated using `owl:deprecated true`.
-
-- Prompt Breakdown:
-    - Type of query - count all synonyms
-    - Target class - all Mondo classes
-    - Synonym constraint - class must have oboInOwl:hasExactSynonym
-    - Axiom constraint - the synonym must be annotated with an Xref and the value must start with "Orphanet:"
-    - Filter - exclude deprecated classes
-    - Ontology - MONDO
-
-<details>
-<summary>View SPARQL query</summary>
-
-```
-PREFIX owl: <http://www.w3.org/2002/07/owl#>
-PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
-
-# Count all exact synonyms with an xref to Orphanet
-
-SELECT (COUNT(DISTINCT ?syn) AS ?count)
-WHERE {
-  ?class a owl:Class .
-  FILTER STRSTARTS(STR(?class), "http://purl.obolibrary.org/obo/MONDO_")
-  FILTER NOT EXISTS { ?class owl:deprecated true }
-
-  ?class oboInOwl:hasExactSynonym ?syn .
-
-  ?axiom a owl:Axiom ;
-         owl:annotatedSource ?class ;
-         owl:annotatedProperty oboInOwl:hasExactSynonym ;
-         owl:annotatedTarget ?syn ;
-         oboInOwl:hasDbXref ?xref .
-
-  FILTER STRSTARTS(STR(?xref), "Orphanet:")
-}
-```
-
-</details>
-
----
 ### Select Queries
 
-#### Example - Get all Mondo classes that have a gene association and it’s provenance
+#### Example - Get all Mondo classes that have a gene association and the provenance for the gene association
 
 - Prompt:
 Write a SPARQL query to get all Mondo classes that have a gene association, e.g. RO:0004003 'has material basis in germline mutation in', and also return the source provenance for the gene association. Include the Mondo CURIE, Mondo label, gene identifier, and source provenance in the result. For testing, limit to 20 results.
@@ -900,11 +788,12 @@ LIMIT 20
 
 
 ---
-#### Example - Get all Mondo classes that have a gene association and it’s provenance, aggregate all gene association sources
-- Prompt: Given the query above to get all Mondo classes that have a gene association, how can we collapse the multiple rows due to multiple sources for a gene association? The gene association provenance is represented using the oboInOwl:source annotation property.
+#### Example - Get all Mondo classes that have a gene association and the provenance for the gene association, aggregate all gene association sources
+
+- Prompt: Given the query above (Get all Mondo classes that have a gene association and the provenance for the gene association), how can we collapse the multiple rows due to multiple sources for a gene association? The gene association provenance is represented using the oboInOwl:source annotation property.
 
 - Prompt Breakdown:
-Here we are extending the query from a previous query prompt. If you are using a tool like ChatGPT or Gemini it will have memory of the earlier query.
+Here we are extending the query from a previous query prompt or you may paste in the working query from above and ask the LLM to modify the query. If you are using a tool like ChatGPT or Gemini it will have memory of the earlier query.
 
 
 <details>
@@ -1016,6 +905,7 @@ ORDER BY ?mondo_curie ?gene
 
 ---
 #### Example - Confirm that obsolete terms have a label that starts with “obsolete” do not have any subClassOf relationships
+
 - Prompt:
 Write a SPARQL query that checks for two quality control rules about obsolete Mondo classes: All classes marked with owl:deprecated true must have an rdfs:label that starts with the string "obsolete ". Obsolete classes must not have any logical axioms, such as rdfs:subClassOf. For each violation, the query should return the class IRI, its label, and a description of which rule was violated. 
 
@@ -1026,7 +916,7 @@ Write a SPARQL query that checks for two quality control rules about obsolete Mo
     - Rules - Class label must start with “obsolete” and logical axioms can not be on an obsolete class
     - Ontology - MONDO
 
-!! NOTE: This query times out on yasgui so let's break this down into two queries, one to find any obsolete class that does not have a label that starts with 'obsolete ' and and another query to find obsolete classes with logical axioms.
+‼️ NOTE: This query times out on yasgui so let's break this down into two queries, one to find any obsolete class that does not have a label that starts with 'obsolete ' and and another query to find obsolete classes with logical axioms.
 
 
 <details>
@@ -1085,6 +975,7 @@ ORDER BY ?cls
 
 ---
 #### Example - Find all classes where the definition does not have any provenance
+
 - Prompt:
 Write a SPARQL query to retrieve all MONDO classes with a textual definition (IAO:0000115). The query should only return results where it is not possible to find a corresponding database cross reference that provides provenance for that specific definition. Return the class CURIE, class label, and the definition.
 
