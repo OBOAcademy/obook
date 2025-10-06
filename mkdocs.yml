@@ -20,6 +20,7 @@ plugins:
 markdown_extensions:
   - toc:
       permalink: true
+      toc_depth: 2
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
@@ -130,6 +131,7 @@ nav:
           - Standardizing Prefixes, CURIEs, and URIs with the `curies` package: tutorial/curies.md
           - Units of Measurement: tutorial/units.md
           - Basic SPARQL for OBO Engineers: tutorial/sparql.md
+          - Using Large Language Models (LLMs) to generate SPARQL queries: tutorial/sparql-llm.md
           - Basic cypher on the Monarch Neo4j graph: tutorial/monarch-kg-neo4j-basics.md
       - Command line:
           - Basic introduction to CLI 1: tutorial/intro-cli-1.md
