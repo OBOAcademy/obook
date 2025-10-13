@@ -587,3 +587,7 @@ In this tutorial, you learned:
 ---
 
 **Pro tip:** Start building a library of commands for your most common tasks. After a few weeks, you'll have a powerful toolkit that makes biocuration significantly faster!
+
+---
+
+**Note on Content Generation**: This tutorial was developed with the assistance of Claude Code (Anthropic's AI-powered CLI tool) for content generation, organization, and technical accuracy verification. All examples and workflows have been tested and validated for educational purposes.

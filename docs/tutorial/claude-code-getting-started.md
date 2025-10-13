@@ -191,3 +191,7 @@ Now that you understand Claude Code basics, explore more advanced features:
 ---
 
 **Tip:** Claude Code shines for biocuration tasks that involve repetitive file operations, data validation, schema exploration, and database queries. Start with simple tasks and build up to complex workflows!
+
+---
+
+**Note on Content Generation**: This tutorial was developed with the assistance of Claude Code (Anthropic's AI-powered CLI tool) for content generation, organization, and technical accuracy verification. All examples and workflows have been tested and validated for educational purposes.

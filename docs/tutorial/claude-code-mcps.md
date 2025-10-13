@@ -670,3 +670,7 @@ You now have the skills to:
 - Build reproducible research workflows
 
 **Keep exploring, building, and sharing your workflows with the OBO community!**
+
+---
+
+**Note on Content Generation**: This tutorial was developed with the assistance of Claude Code (Anthropic's AI-powered CLI tool) for content generation, organization, and technical accuracy verification. All examples and workflows have been tested and validated for educational purposes.

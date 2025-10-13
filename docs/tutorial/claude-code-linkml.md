@@ -530,3 +530,7 @@ In this tutorial, you:
 **This is exactly how professional biocuration modeling works** - understanding existing data, designing appropriate schemas, and validating with real-world requirements.
 
 Claude Code accelerates this process by helping you navigate complex schemas, understand inheritance patterns, and validate your models against established conventions.
+
+---
+
+**Note on Content Generation**: This tutorial was developed with the assistance of Claude Code (Anthropic's AI-powered CLI tool) for content generation, organization, and technical accuracy verification. All examples and workflows have been tested and validated for educational purposes.
