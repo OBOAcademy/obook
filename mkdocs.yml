@@ -151,6 +151,11 @@ nav:
           - Named Entity Recognition with Gilda: tutorial/named-entity-recognition.md
           - Named Entity Normalization: tutorial/named-entity-normalization.md
           - Named Entity Standardization: tutorial/named-entity-standardization.md
+      - Biocuration with Claude Code:
+          - Getting Started with Claude Code: tutorial/claude-code-getting-started.md
+          - Exploring LinkML Models with Claude Code: tutorial/claude-code-linkml.md
+          - Creating Slash Commands for API Lookups: tutorial/claude-code-slash-commands.md
+          - Using MCPs for Bioinformatics Workflows: tutorial/claude-code-mcps.md
   - How-to guides:
       - General:
           - Maximising impact as an open science engineer: howto/open-science-engineer.md
