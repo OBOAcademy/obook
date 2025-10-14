@@ -6,6 +6,9 @@ Claude Code is Anthropic's official CLI tool that transforms Claude into a devel
 
 This document provides general background and information about Claude Code to help you understand its core concepts and capabilities. For hands-on lessons applying Claude Code to biocuration workflows, see the other parts of this tutorial: [Exploring LinkML Models with Claude Code](claude-code-linkml.md), [Creating Slash Commands for API Lookups](claude-code-slash-commands.md), and [Using MCPs for Ontology Lookups](claude-code-mcps.md). Please review this document to familiarize yourself with Claude Code before moving on to those practical lessons.
 
+## OBO Academy Training Session Part 1
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pUoelp2qbDI?si=SQMzTGQqmabiJy-1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## What is Claude Code?
 
 **Claude Code** is an interactive command-line interface that provides:
