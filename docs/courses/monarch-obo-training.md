@@ -1,70 +1,66 @@
-# OBO Academy - Monarch Training Series
+# OBO Academy - A Monarch Training Series
 
 ## Goal
 
-The goal of this course is to provide ongoing training for the OBO community. As with previous tutorials, we follow the [flipped classroom](https://en.wikipedia.org/wiki/Flipped_classroom) concept: as organisers, we provide you with materials to look at, and you will work through the materials on your own. During our biweekly meeting, we will answer your questions, provide you with additional demonstrations where needed and go into depth wherever you as a student are curious to learn more. This means that _this course can only work if you are actually putting in the time to preparing the materials_. That said, we nevertheless welcome anyone to just lurk or ask related questions.
+The goal of this course is to provide ongoing training for the OBO community. As with previous tutorials, we follow the [flipped classroom](https://en.wikipedia.org/wiki/Flipped_classroom) concept: as organisers, we provide you with materials to look at, and you will work through the materials on your own or will guidance during an OBO Academy session. During our monthly meeting, we will answer your questions, provide you with additional demonstrations where needed and go into depth wherever you as a student are curious to learn more. This means that _this course can only work if you are actually putting in the time to preparing the materials_. That said, we nevertheless welcome anyone to just lurk or ask related questions.
 
 ## You (Students)
-
-- Join the [Monarch Tutorials Mailing List](https://groups.google.com/g/monarch-tutorials)
+- Join the [Monarch Tutorials Mailing List](https://groups.google.com/g/monarch-tutorials) to receive reminders about upcoming tutorials
+- Join the [OBO Slack Community](https://join.slack.com/t/obo-communitygroup/shared_invite/zt-37fu1zcxc-_wQRxOqHdRhEZcnU3CAAxQ) and find us on the #OBO-Academy channel
 - Read the ["Getting started" guide](../getting-started.md)
-- Check which lessons interest you in the upcoming schedule - just participate in the ones you care about
-- Prepare the lessons (between 3 and 7 hours of preparation time)
-- Prepare questions for the revision sessions (without questions, the revision sessions will be silent and awkward)
+- Check which lessons interest you in the upcoming schedule - mark your calendar and just participate in the ones you care about
 - Make detailed issues on our [issue tracker](https://github.com/jamesaoverton/obook/issues) when materials are broken, hard to follow or need more details - that is really important as we rely on you to help to improve our materials continuously.
-- Request new course units from us using the issue tracker.
+- Find recordings of previous session on our [YouTube channel](https://www.youtube.com/@obo-academy)
+- Request new course units from us using the issue tracker. If you are intersted in leading a session, reach out to the organisers listed below! 
 
 ## We (Tutors and Organisers)
-
-
-- [Nicole Vasilevsky](https://orcid.org/0000-0001-5208-3432), Critical Path Institute
 - [Nico Matentzoglu](https://orcid.org/0000-0002-7356-1779), Semanticly, Athens, Greece
 - [Sabrina Toro](https://tislab.org/members/sabrina-toro.html), University of North Carolina at Chapel Hill
+- [Nicole Vasilevsky](https://orcid.org/0000-0001-5208-3432), Critical Path Institute
 - [Sarah Gehrke](https://orcid.org/0000-0003-3245-2880), University of North Carolina at Chapel Hill
 - Prepare the materials for each lesson and provide schedules
 - Build new training materials where needed
 - Organise the course and rooms
 
 ## Schedule
-_Note: this is tentative and subject to change_
-
+Most session take place on the listed date at 8AM PT / 3PM UTC. If the tutorial time is different, those on the [mailing list](https://groups.google.com/g/monarch-tutorials) or [slack](https://join.slack.com/t/obo-communitygroup/shared_invite/zt-37fu1zcxc-_wQRxOqHdRhEZcnU3CAAxQ) will receive a message with the information. <br>_Note: this schedule is tentative and subject to change_
 | Date | Lesson | Presenter / Notes | Recordings |
 | --- | --- | --- | --- |
 | 2025/12/09 | Efficient Biocuration and Bioinformatics with Claude Code Part 2 | Chris Tabone |  |
 | 2025/11/11 | Generating SPARQL queries with ChatGPT | Trish Whetzel |  |
 | 2025/10/14 | [Efficient Biocuration and Bioinformatics with Claude Code Part 1](https://oboacademy.github.io/obook/tutorial/claude-code-getting-started/) | Chris Tabone | [here](https://youtu.be/pUoelp2qbDI?si=oSFPtkRI7LuHm-kq)  |
 | July & August & Sept 2025 | _No Meeting_ | Enjoy Summer break! |  |
-| 2025/06/24 | [From Fuzzy to Clear: Writing Ontology Definitions That Work](https://docs.google.com/presentation/d/1UsjN7OzSXsRMy1v7ucvMBmlUF0VUau3pJYXV3wXMEzs/edit?slide=id.p#slide=id.p) <br> This is a tutorial for curators at any level.| Sabrina Toro, UNC-Chapel Hill  | [here](https://youtu.be/jhJWv-2d-S4?si=KPuHA5wXTWT_n0Q4)
-| 2025/06/09 | Using AI coding apps for ontology developers. [Tutorial material](https://ai4curation.github.io/aidocs/tutorials/ontology-editing-with-ai/) | Chris Mungall, LBNL | [Here](https://youtu.be/4nyeGFACPKI?si=56v1jVXT8VYqZXUn) |
-| 2025/04/08 | Introduction to developing agentic workflows for semantic engineers. [Tutorial material](https://github.com/cmungall/agent-tutorial) | Chris Mungall, LBNL | [Here](https://youtu.be/Ml0YVjKnZnE?si=BVLomWUjPoAqH5oG) | 
-| 2025/02/04 | More! Hands On Workshop: OntoGPT | Harry Caufield, LBNL  |  |
+| 2025/06/24 | [From Fuzzy to Clear: Writing Ontology Definitions That Work](https://docs.google.com/presentation/d/1UsjN7OzSXsRMy1v7ucvMBmlUF0VUau3pJYXV3wXMEzs/edit?slide=id.p#slide=id.p) <br> This is a tutorial for curators at any level.| Sabrina Toro  | [here](https://youtu.be/jhJWv-2d-S4?si=KPuHA5wXTWT_n0Q4)
+| 2025/06/09 | Using AI coding apps for ontology developers. [Tutorial material](https://ai4curation.github.io/aidocs/tutorials/ontology-editing-with-ai/) | Chris Mungall | [Here](https://youtu.be/4nyeGFACPKI?si=56v1jVXT8VYqZXUn) |
+| 2025/04/08 | Introduction to developing agentic workflows for semantic engineers. [Tutorial material](https://github.com/cmungall/agent-tutorial) | Chris Mungall | [Here](https://youtu.be/Ml0YVjKnZnE?si=BVLomWUjPoAqH5oG) | 
+| 2025/02/04 | More! Hands On Workshop: OntoGPT | Harry Caufield  |  |
 | 2024/10/15 | Hands On Workshop: OntoGPT | Harry Caufield, LBNL | [Here](https://youtu.be/ezFIgY0LE4A?si=Pwuoq3VkvVNjon09)  |
-| 2024/06/25 | Structures and Instructors: Applying the Strengths of Large Language Models to Biomedical Informatics | Harry Caufield, LBNL | [Here](https://youtu.be/wJvKMIyOpfo?feature=shared) |
+| 2024/06/25 | Structures and Instructors: Applying the Strengths of Large Language Models to Biomedical Informatics | Harry Caufield | [Here](https://youtu.be/wJvKMIyOpfo?feature=shared) |
 | 2024/05/14 | Introduction to the legendary [Uberon Anatomy ontology](https://obophenotype.github.io/uberon/) | Damien Goutte-Gattat and Nico Matentzoglu | [Here](https://youtu.be/HmFhTk0Bahs?si=q4cfg1lYx7sTqE0M) |
-| 2024/04/30 | [An Introduction to Synonyms in OBO Ontologies](https://oboacademy.github.io/obook/lesson/synonyms/) | Nicole Vasilevsky, C-Path | [Here](https://youtu.be/N3_Nf11QXfE?si=iZCMlkmieZoWxGct)
+| 2024/04/30 | [An Introduction to Synonyms in OBO Ontologies](https://oboacademy.github.io/obook/lesson/synonyms/) | Nicole Vasilevsky | [Here](https://youtu.be/N3_Nf11QXfE?si=iZCMlkmieZoWxGct)
 | 2024/04/16 | [AI-assisted ontology editing workflows 2: Validation](https://docs.google.com/presentation/d/13Hlm-iJo7a1NAaUqLsrUlbn-tLUVbF25WBjwAgIuLdA/edit#slide=id.g2cbabe5fcdf_0_5) | Chris Mungall, LBNL | [Here](https://youtu.be/cQWfJ5IjUM8?si=DLRKmP5rCFLzalOk)
-| 2024/04/02 | OBO Academy Phenomics Series: [Phenotype data and the role of ontologies](https://oboacademy.github.io/obook/lesson/phenotype-data/) | James McLaughlin (EBML-EBI) and Nico Matentzoglu | [Here](https://youtu.be/9iWRRx7nZlU?feature=shared)
-| 2024/03/05 | [AI-assisted ontology editing workflows 1: generating and augmenting](https://docs.google.com/presentation/d/13Hlm-iJo7a1NAaUqLsrUlbn-tLUVbF25WBjwAgIuLdA/edit#slide=id.g24560ef6bb7_0_84) | Chris Mungall, LBNL | [Here](https://www.youtube.com/watch?v=wGoGr2dmxZI) |
-| 2024/02/20 | [Ontology Metadata Standardisation](https://docs.google.com/presentation/d/12ig7zQ9R4lQAybuTQKb73gB22pIq5MEaowwbYOl5Ei8/edit?usp=sharing) | Anita Caron, EBI | [Here](https://youtu.be/tso8zawC3Tw?feature=shared)
-| 2024/02/06 | [Introduction to Open Source licenses](../lesson/licensing-data-and-software.md) | Seth Carbon, LBNL |
-| 2024/01/23 | Bridge2AI data standards: a practical introduction | Harry Caufield, LBNL | [Here](https://youtu.be/zaZtcDbjqTw?feature=shared)
-| 2023/12/12 | Introduction to DOSDP pattern design and workflows | Tutorial by Ray Stefancsik ([Slides](https://docs.google.com/presentation/d/1ep-J7h-PZoZuVboCen8W6ZCX5iD4-TK0C2f057vp_Po/edit?usp=sharing)) | [Here](https://youtu.be/a2Mc9oLEiwk?feature=shared)|
-| 2023/11/14 | Enhancing curation workflows with CurateGPT | Tutorial by Chris Mungall | [Here](https://youtu.be/p6j3WwzIv40?feature=shared) |
+| 2024/04/02 | [Phenotype data and the role of ontologies](https://oboacademy.github.io/obook/lesson/phenotype-data/) | James McLaughlin and Nico Matentzoglu | [Here](https://youtu.be/9iWRRx7nZlU?feature=shared)
+| 2024/03/05 | [AI-assisted ontology editing workflows 1: generating and augmenting](https://docs.google.com/presentation/d/13Hlm-iJo7a1NAaUqLsrUlbn-tLUVbF25WBjwAgIuLdA/edit#slide=id.g24560ef6bb7_0_84) | Chris Mungall | [Here](https://www.youtube.com/watch?v=wGoGr2dmxZI) |
+| 2024/02/20 | [Ontology Metadata Standardisation](https://docs.google.com/presentation/d/12ig7zQ9R4lQAybuTQKb73gB22pIq5MEaowwbYOl5Ei8/edit?usp=sharing) | Anita Caron | [Here](https://youtu.be/tso8zawC3Tw?feature=shared)
+| 2024/02/06 | [Introduction to Open Source licenses](../lesson/licensing-data-and-software.md) | Seth Carbon |
+| 2024/01/23 | Bridge2AI data standards: a practical introduction | Harry Caufield | [Here](https://youtu.be/zaZtcDbjqTw?feature=shared)
+| 2023/12/12 | Introduction to DOSDP pattern design and workflows | Ray Stefancsik ([Slides](https://docs.google.com/presentation/d/1ep-J7h-PZoZuVboCen8W6ZCX5iD4-TK0C2f057vp_Po/edit?usp=sharing)) | [Here](https://youtu.be/a2Mc9oLEiwk?feature=shared)|
+| 2023/11/14 | Enhancing curation workflows with CurateGPT | Chris Mungall | [Here](https://youtu.be/p6j3WwzIv40?feature=shared) |
 | 2023/10/17 | [Using ontologies for data annotation and consequences for ontology development](https://docs.google.com/presentation/d/16Bd1szeJ-gaSuKWJhVJRHYrwdZ4LtjIAPSIqP9OveFc/edit?usp=sharing) | Tutorial by Sabrina Toro | [Here](https://youtu.be/jRB5VTJLOGc?feature=shared)|
-| 2023/10/03 | [Units modeling in and around OBO](https://oboacademy.github.io/obook/tutorial/units/) | Tutorial by James Overton | [Here](https://youtu.be/W4IQk-tft0I?feature=shared) |
-| 2023/09/19 | [Improving ontology interoperability with Biomappings](https://docs.google.com/presentation/d/1s9QNQQoRuQUWWJoIJklMHrqPowvBKU4Y638w54xP1t0/edit) | Tutorial by Charlie Hoyt | [Here](https://youtu.be/_gAdGShZReo?feature=shared) |
-| 2023/09/05 | [Modern prefix management with Bioregistry and `curies`](https://docs.google.com/presentation/d/1Hyi9t_wwoMAFskWtDBMHGpAw7ZwTQx-3RKrFdTFYB88/edit) | Tutorial by Charlie Hoyt | [Here](https://youtu.be/WTTHCZW4ubs?feature=shared) |
-| 2023/08/22 | [How to determine if two entities are the same?](../howto/are-two-entities-the-same.md) | Tutorial by Nico Matentzoglu | [Here](https://youtu.be/v5hjLgr54Zs?feature=shared) |
-| 2023/06/13 | [Modelling with Subclass and Equivalent class statements](https://oboacademy.github.io/obook/explanation/subClassOf-vs-equivalentTo/) | Tutorial by [Henriette Harmse](https://henrietteharmse.com/about/) | [slides](https://drive.google.com/file/d/1lU-2TsmMqIsIjTvwM4n875BymikOdjTF/view?usp=sharing) |
-| 2023/05/30 | [First steps with ChatGPT for semantic engineers and curators](https://oboacademy.github.io/obook/lesson/chatgpt-ontology-curation/) | Led by Sierra Moxon and Nico Matentzoglu | N/A |
-| 2023/04/18 | Overview of Protege 5.6 - the latest features | Tutorial by Damien Goutte-Gattat ([slides](https://docs.google.com/presentation/d/1fScxL59EL4YOYe6uNJnR9TCy72kOAkIxLH-HHDfRTKw/edit?usp=sharing))  | [Here](https://youtu.be/QXcdP_zM2LU) |
-| 2023/04/04 | [Introduction to Exomiser](../tutorial/exomiser-tutorial.md) | Tutorial by Valentina, Yasemin and Carlo from QMUL  | [Here](https://youtu.be/tzwvWkb3s8A)|
-| 2023/03/21 | Introduction to Wikidata | Tutorial by Andra Waagmeester and Tiago Lubiana  | [Here](https://youtu.be/KonJqKquUSU) |
-| 2023/03/07 | OAK for the Ontology Engineering community | Tutorial by Chris Mungall | [Here](https://youtu.be/zO6tS7gZtvw) |
+| 2023/10/03 | [Units modeling in and around OBO](https://oboacademy.github.io/obook/tutorial/units/) | James Overton | [Here](https://youtu.be/W4IQk-tft0I?feature=shared) |
+| 2023/09/19 | [Improving ontology interoperability with Biomappings](https://docs.google.com/presentation/d/1s9QNQQoRuQUWWJoIJklMHrqPowvBKU4Y638w54xP1t0/edit) | Charlie Hoyt | [Here](https://youtu.be/_gAdGShZReo?feature=shared) |
+| 2023/09/05 | [Modern prefix management with Bioregistry and `curies`](https://docs.google.com/presentation/d/1Hyi9t_wwoMAFskWtDBMHGpAw7ZwTQx-3RKrFdTFYB88/edit) | Charlie Hoyt | [Here](https://youtu.be/WTTHCZW4ubs?feature=shared) |
+| 2023/08/22 | [How to determine if two entities are the same?](../howto/are-two-entities-the-same.md) | Nico Matentzoglu | [Here](https://youtu.be/v5hjLgr54Zs?feature=shared) |
+| 2023/06/13 | [Modelling with Subclass and Equivalent class statements](https://oboacademy.github.io/obook/explanation/subClassOf-vs-equivalentTo/) | [Henriette Harmse](https://henrietteharmse.com/about/) | [slides](https://drive.google.com/file/d/1lU-2TsmMqIsIjTvwM4n875BymikOdjTF/view?usp=sharing) |
+| 2023/05/30 | [First steps with ChatGPT for semantic engineers and curators](https://oboacademy.github.io/obook/lesson/chatgpt-ontology-curation/) | Sierra Moxon and Nico Matentzoglu | N/A |
+| 2023/04/18 | Overview of Protege 5.6 - the latest features | Damien Goutte-Gattat ([slides](https://docs.google.com/presentation/d/1fScxL59EL4YOYe6uNJnR9TCy72kOAkIxLH-HHDfRTKw/edit?usp=sharing))  | [Here](https://youtu.be/QXcdP_zM2LU) |
+| 2023/04/04 | [Introduction to Exomiser](../tutorial/exomiser-tutorial.md) | Valentina Cipriani, Yasemin Bridges and Carlo Kroll  | [Here](https://youtu.be/tzwvWkb3s8A)|
+| 2023/03/21 | Introduction to Wikidata | Andra Waagmeester and Tiago Lubiana  | [Here](https://youtu.be/KonJqKquUSU) |
+| 2023/03/07 | OAK for the Ontology Engineering community | Chris Mungall | [Here](https://youtu.be/zO6tS7gZtvw) |
 | 2023/02/21 | OBO Academy Clinic | Bring your ontology issues and questions to discuss with Sabrina and Nico! Attend the [Ontology Summit Seminars](https://oboacademy.github.io/obook/courses/ontology-summit-2023/) instead! | |
-| 2023/02/07 | [Querying the Monarch KG using Neo4J](https://oboacademy.github.io/obook/tutorial/monarch-kg-neo4j-basics/) | Tutorial by Kevin Schaper | [Here](https://youtu.be/_Sx-1WaV4zY)|
+| 2023/02/07 | [Querying the Monarch KG using Neo4J](https://oboacademy.github.io/obook/tutorial/monarch-kg-neo4j-basics/) | Kevin Schaper | [Here](https://youtu.be/_Sx-1WaV4zY)|
 | 2023/01/24 | OBO Academy Clinic | Bring your ontology issues and questions to discuss with Sabrina and Nico! | |
-| 2023/01/10 | [Modeling with taxon constraints](https://oboacademy.github.io/obook/explanation/taxon-constraints-explainer/) | Tutorial by Jim Balhoff | [Here](https://youtu.be/ZNbn_JYzuvA)
+| 2023/01/10 | [Modeling with taxon constraints](https://oboacademy.github.io/obook/explanation/taxon-constraints-explainer/) | Jim Balhoff | [Here](https://youtu.be/ZNbn_JYzuvA)
 | 2022/12/13 | [Introduction to Semantic Entity Matching](../lesson/entity-matching.md) | [Slides](https://bit.ly/obo-academy-semantic-matching) | [Here](https://youtu.be/RN2hYxKYSUw) 
 | 2022/11/29 | [OBO Academy hackathon](../lesson/hackathon.md) | Work on open tickets together.  |
 | 2022/11/15 | [Contributing to OBO ontologies](../lesson/contributing-to-obo-ontologies.md) - Part 2 | | [Here](https://youtu.be/YBvMKMoCCrQ)
@@ -103,6 +99,6 @@ _Note: this is tentative and subject to change_
 
 ## Notes
 
-Most of materials used by this course were developed by James Overton, Becky Jackson, Nicole Vasilevsky and Nico Matentzoglu as part of a project with the Critical Path Institute (see [here](../index.md)). The materials are improved as part of an internal training program (onboarding and CPD) for the Phenomics First project (NIH / NHGRI #1RM1HG010860-01).
+Most of materials used by this course were developed by James Overton, Becky Jackson, Nicole Vasilevsky and Nico Matentzoglu as part of a project with the Critical Path Institute (see [here](../index.md)). The materials are continually improved as part of an internal training program (onboarding and CPD) for the Phenomics First project (NIH / NHGRI 1RM1HG010860) and Monarch Initiative (NIH OD 5R24OD011883).
 
 Thanks to Sarah Gehrke for her help with project management.
