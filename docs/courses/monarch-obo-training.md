@@ -23,7 +23,8 @@ The goal of this course is to provide ongoing training for the OBO community. As
 - Organise the course and rooms
 
 ## Schedule
-Most session take place on the listed date at 8AM PT / 3PM UTC. If the tutorial time is different, those on the [mailing list](https://groups.google.com/g/monarch-tutorials) or [slack](https://join.slack.com/t/obo-communitygroup/shared_invite/zt-37fu1zcxc-_wQRxOqHdRhEZcnU3CAAxQ) will receive a message with the information. <br>_Note: this schedule is tentative and subject to change_
+Most session take place on the listed date at 8AM PT / 3PM UTC. If the tutorial time is different, those on the [mailing list](https://groups.google.com/g/monarch-tutorials) or [slack](https://join.slack.com/t/obo-communitygroup/shared_invite/zt-37fu1zcxc-_wQRxOqHdRhEZcnU3CAAxQ) will receive a message with the information. <br>_Note: this schedule is tentative and subject to change_ <br>
+
 | Date | Lesson | Presenter / Notes | Recordings |
 | --- | --- | --- | --- |
 | 2025/12/09 | Efficient Biocuration and Bioinformatics with Claude Code Part 2 | Chris Tabone |  |
