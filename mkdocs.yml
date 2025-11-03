@@ -70,6 +70,7 @@ nav:
       - Ontology Curator OBI-style: pathways/ontology-curator-obi-style.md
       - Ontology Engineer/Developer: pathways/ontology-engineer.md
       - Ontology Contributor: pathways/ontology-contributor.md
+      - AI-powered semantic engineer: pathways/ai-powered-semantic-engineer.md
   - Lessons:
       - Contributing to OBO ontologies: lesson/contributing-to-obo-ontologies.md
       - Ontology Pipelines with ROBOT: lesson/ontology-pipelines.md
