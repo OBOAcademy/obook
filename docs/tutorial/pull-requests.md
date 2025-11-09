@@ -6,11 +6,11 @@ Participants will need to have access to the following resources and tools prior
 
 - **GitHub account** - register for a free GitHub account [here](https://github.com/join?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home)
 - **Install GitHub Desktop** Please make sure you have some kind of git client installed on your machine. If you are new to Git, please install [GitHub Desktop](https://desktop.github.com/)
-- **Protege** - Install Protege 5.5, download it [here](https://protege.stanford.edu/)
+- **Protege** - Install Protege 5.5 or higher; download it [here](https://protege.stanford.edu/)
 
 ## Preparation (_optional_)
 
-- Review tutorial on [Contributing to Ontologies](../lesson/contributing-to-obo-ontologies.md)
+- Review tutorial on [Contributing to OBO Ontologies](../lesson/contributing-to-obo-ontologies.md)
 - See ['How to' guide on Pull Requests](../howto/github-create-pull-request.md)
 
 ## What is delivered as part of the course
@@ -24,7 +24,7 @@ Participants will need to have access to the following resources and tools prior
 - How to find a reviewer for your pull request in an open source environment
 - How to review a pull request
 - How to change a pull request in response to review
-- How to update from master
+- How to update your branch from master
 - Resolve conflicts on branch
 
 ## Contributors
@@ -86,10 +86,10 @@ _Example_:
 - **Do**:
   - Follow the _Single Responsibility Principle_: The pull request should do only one thing.
     - _Note_: sometimes a small edit can change a lot of code, for example, if you want to change all of the created_by annotations to dc:creator. That's okay.
-  - The pull request should be atomic: it should be small and self contained with simple changes that affect a little code a possible
+  - The pull request should be atomic: it should be small and self contained with simple changes that affect as little code as possible
   - Whenever possible, break pull-requests into smaller ones
   - Commit early, commit often
-  - Include specific information like the ID and label for terms changed. Note, you can easily obtain term metadata like OBO ID, IRI, or the term label in Protege by clicking the three lines above the Annotations box (next to the term name), see screenshot below. You can also copy the IRI in markdown, which is really convenient for pasting into GitHub.
+  - Include specific information like the ID and label for terms changed. Note, you can easily obtain term metadata like OBO ID, IRI, or the term label in Protege by clicking the three lines above the Annotations box (next to the term name); see screenshot below. You can also copy the IRI in markdown, which is really convenient for pasting into GitHub.
 
 <img width="1143" alt="image" src="https://user-images.githubusercontent.com/6722114/188779564-82de605a-d5fa-4dfb-a283-07e3e071c7e7.png">
 
@@ -127,7 +127,7 @@ A video is below.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/kE_50AzpuB8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-2. **OPTIONAL:** To update the working branch with respect to the current version of the ontology, select Branch from the top menu, Update from master. This step is optional because it is not necessary to work on the current version of the ontology; all changes will be synchronized when git merge is performed.
+**OPTIONAL:** To update the working branch with respect to the current version of the ontology, select Branch from the top menu, Update from master. This step is optional because it is not necessary to work on the current version of the ontology; all changes will be synchronized when git merge is performed.
 
 ### Editing an ontology on a branch
 
@@ -187,7 +187,7 @@ For more details about writing good commit messages [see here](https://incenp.or
 <img width="343" alt="image" src="https://user-images.githubusercontent.com/6722114/179314287-e4474c60-f905-493a-90e9-9bd1af13f227.png">
 
 1. If you do not create a PR directly from GitHub Dekstop, you can go to your GitHub repo and you will see a yellow banner on top that notifies you of a pending PR.
-1. Navigate to the tab labeled as ‘Code’. You should see your commit listed at the top of the page in a light yellow box. If you don’t see it, click on the ‘Branches’ link to reveal it in the list, and click on it.
+1. Navigate to the tab labeled ‘Code’. You should see your commit listed at the top of the page in a light yellow box. If you don’t see it, click on the ‘Branches’ link to reveal it in the list, and click on it.
 
 <img width="1241" alt="image" src="https://user-images.githubusercontent.com/6722114/179314202-a1d1e229-decd-4033-ad46-9f504cbbc2d0.png">
 
@@ -244,7 +244,7 @@ _Example_:
 
 3. Check that the logic is correct. This can be a difficult thing to do. Some tips:
    - Open the branch in Protege and examine the hierarchy in Protege
-   - Compare the logic that was use to the logic used in an existing term
+   - Compare the logic that was used to the logic used in an existing term
    - If the ontology uses Design Patterns, ensure the logic is consistent with the Design Patterns
    - Ask an expert in ontology logic to help review the PR
    - Remember there is no magic bullet to ensuring an ontology is logically sound, but do the best you can
@@ -253,7 +253,7 @@ _Example_:
 
 1. After you finish reviewing each file, you can mark the file as viewed. This collapses the file, helping you identify the files you still need to review.
 1. A progress bar in the pull request header shows the number of files you've viewed.
-1. You can leave comments and requests for changes on the PR inline for on the PR when viewing the 'Files changed'.
+1. You can leave comments and requests for changes on the PR inline when viewing the 'Files changed'.
 1. You can add a single comment, or start a review if you have multiple comments.
 1. After reviewing the file(s), you can approve the pull request or request additional changes by submitting your review with a summary comment.
 
@@ -332,7 +332,7 @@ Some examples of conflicts that Nicole fixed in Mondo are below:
 <img width="1046" alt="image" src="https://user-images.githubusercontent.com/6722114/179615326-b2e7326b-68aa-4fd5-a667-f96cb4d6403e.png">
 <img width="955" alt="image" src="https://user-images.githubusercontent.com/6722114/179615360-b2bc96ea-d3cc-4a6c-acde-a0900040e318.png">
 
-## Further regarding
+## Further reading
 
 ### Gene Ontology Daily Workflow
 
