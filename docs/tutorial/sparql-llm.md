@@ -203,6 +203,18 @@ Axiom-annotated data (synonyms, database cross references (also known as xrefs),
               owl:annotatedTarget ?syn .
     3) Add any desired axiom annotations (e.g., oboInOwl:hasDbXref ?xref).
 
+Gene associations in MONDO (e.g., RO:0004003 for germline mutations) are modeled as OWL existential restrictions:
+- Use `rdfs:subClassOf` pointing to a blank node that is a restriction (`a owl:Restriction`)
+- That restriction must contain:
+    - `owl:onProperty RO:0004003`
+    - `owl:someValuesFrom` the gene class (e.g., HGNC ID)
+- Provenance is annotated on the `rdfs:subClassOf` triple using `owl:Axiom` with:
+    - `owl:annotatedSource` = MONDO class
+    - `owl:annotatedProperty` = `rdfs:subClassOf`
+    - `owl:annotatedTarget` = restriction
+    - `oboInOwl:source` (or other provenance properties) for evidence
+
+
 Output rules:
   * Return paste-ready SPARQL in a single code block.
   * Use DISTINCT when appropriate (e.g., in COUNTs).
