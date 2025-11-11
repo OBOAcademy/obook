@@ -18,6 +18,8 @@ The resulting SPARQL queries can be tested using <a href="https://yasgui.triply.
 - Run queries on Ubergraph or similar endpoints, considering things like performance, excessive results, and correctness.
 - Evaluate prompt engineering best practices to get consistent query outputs.
 
+## OBO Academy Training Session
+<iframe width="560" height="315" src="https://www.youtube.com/embed/h3Dz0TxUB5c?si=E6pY5_Ro5ayz4w44" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## SPARQL Refresher
 ### What is SPARQL?
