@@ -158,7 +158,7 @@ Data models, or schemas, further complement ontologies by providing a standardiz
 This collaborative relationship between ontologies and data models transforms complex information into a well-organized and accessible resource across scientific domains.
 
 
-## Further Reading
+## Further learning materials
 
 To understand the LinkML syntax and semantics in more depth, please check out the LinkML tutorial, and in particular, the guide for using ontologies in your LinkML schema, which includes many more examples:
 
@@ -168,6 +168,10 @@ To understand the LinkML syntax and semantics in more depth, please check out th
 For more information on how other researchers have used ontologies, please see the main ontology-user pathway in the OBOOK (Open Biological and Biomedical Ontologies Organized Knowledge):
 
 * [https://oboacademy.github.io/obook/pathways/ontology-user/](https://oboacademy.github.io/obook/pathways/ontology-user/)
+
+Tutorial (ICBO 2025): 
+
+* _Annotating Data with Ontologies: LinkML Can Help_ ([slides](https://go.lbl.gov/ICBO-LinkML-slides); [video, 2hr 25min](https://youtu.be/ijCXDGO-NTU?si=xO32Ed5bVe1LQrsa))
 
 ### Contributors
 * Lead author: Sierra Moxon
