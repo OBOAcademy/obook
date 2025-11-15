@@ -1,7 +1,11 @@
 # Generating SPARQL queries using Large Language Models (LLMs)
 
-This tutorial will teach you how to create SPARQL queries by prompting a large language model (LLM) via a chat interface. You may use whichever system you prefer, such as [ChatGPT](https://chatgpt.com/), [Gemini](https://gemini.google.com/), [Claude](https://www.anthropic.com/claude-code), etc. The prompts in this tutorial have been tested with ChatGPT 4o and Gemini 2.5 Pro. However, while LLM responses are more consistent, they are non-deterministic (involve some randomness), so the same prompt may produce different answers.
+_Last Updated: 14-Nov-2025_
 
+This tutorial will teach you how to create SPARQL queries by prompting a large language model (LLM) via a chat interface. You may use whichever system you prefer, such as [ChatGPT](https://chatgpt.com/), [Gemini](https://gemini.google.com/), [Claude](https://www.anthropic.com/claude-code), etc. The prompts in this tutorial have been tested with ChatGPT 4o, ChatGPT 5.x, and Gemini 2.5 Pro. However, while LLM responses are more consistent, they are non-deterministic (involve some randomness), so the same prompt may produce different answers.
+
+## Contributors
+- [Trish Whetzel](https://www.linkedin.com/in/trishwhetzel/)
 
 ## Preparation
 
@@ -180,6 +184,8 @@ Obsoletes: Exclude classes with owl:deprecated true.
 
 Labels: Use `rdfs:label`.
 
+Definition: Use `IAO:0000115`.
+
 Prefixes: Include only the PREFIX declarations actually used in the query (no extras).
   These are the main prefixes we will need: 
     Core RDF/OWL
@@ -216,15 +222,26 @@ Gene associations in MONDO (e.g., RO:0004003 for germline mutations) are modeled
     - `owl:annotatedTarget` = restriction
     - `oboInOwl:source` (or other provenance properties) for evidence
 
+Mode switching:
+  * If the latest user message or system prompt contains the token `EXTENSION_MODE`, treat this as **extension mode**.
 
 Output rules:
-  * Return paste-ready SPARQL in a single code block.
+  * In **extension mode** (for the Chrome extension):
+    - Return paste-ready SPARQL as plain text, with **no triple backticks** and no fenced code blocks.
+    - The query must contain only SPARQL, no natural-language text mixed in.
+    - If an explanation is explicitly requested, place it **after** the SPARQL query.
+    - In extension mode, every explanation line must begin with `# `.
+  * When **not** in extension mode (normal ChatGPT UI use):
+    - Return paste-ready SPARQL in a single fenced code block using triple backticks with language `sparql`.
+    - The code block must contain **only** the SPARQL query — no comments and no explanation inside it.
+    - Do NOT provide any explanation unless the user explicitly says “include an explanation”.
+    - If an explanation is explicitly requested, place it **after** the code block as plain text (and do **not** start explanation lines with `# `).
+  * Never include extra backticks outside a code block in non-extension mode.
   * Use DISTINCT when appropriate (e.g., in COUNTs).
-  * If a list of results is requested, include the `?label` and convert the IRI to a CURIE
+  * If a list of results is requested, include the `?label` and convert the IRI to a CURIE.
 
 Request format: 
   * I will provide prompts in plain English.
-  * Respond only with the SPARQL query (and a one-line explanation if needed).
 
 Defaults (unless I override in the prompt): 
   * Consider all descendants (rdfs:subClassOf*), not just direct children.
