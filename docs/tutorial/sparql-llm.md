@@ -11,6 +11,8 @@ This tutorial will teach you how to create SPARQL queries by prompting a large l
 
 The resulting SPARQL queries can be tested using <a href="https://yasgui.triply.cc/#" target="_blank">https://yasgui.triply.cc/#</a> (endpoint `https://ubergraph.apps.renci.org/sparql`) or using the [ROBOT query](https://robot.obolibrary.org/query) functionality. You are responsible for obtaining access to yasgui and/or installing ROBOT.
 
+The tutorial content can also be tested with [OntoPrompt](https://github.com/twhetzel/sparql-chrome-extension), a Chrome Extension for use with the yasgui site. An OpenAI API Key is needed for this tool.
+
 
 ## Learning Objectives
 
