@@ -1,9 +1,9 @@
 # The Basics of GitHub: Organizations, Repositories, & Issues
 
-### Signing up for Github
+### Signing up for GitHub
 
-1. Sign up for Github at [github.com](http://github.com).
-1. After signing up, your Username will be your **Github handle**. This serves as your unique identity on the platform and is used to log in, reference your profile, and mention you in discussions.
+1. Sign up for GitHub at [github.com](http://github.com).
+1. After signing up, your Username will be your **GitHub handle**. This serves as your unique identity on the platform and is used to log in, reference your profile, and mention you in discussions.
    **Note**: You can go to [Settings](https://github.com/settings/profile) to provide additional personal information, connect ORCID id, and customize your avatar.
 
 ### Understanding Organization and Repository 
@@ -43,7 +43,7 @@
 Note: Github content is written using Markdown, a text-to-HTML conversion tool. Please do not worry about using Markdown for adding your comment. More information on Markdown can be found [here](https://github.com/adam-p/markdown-here/wiki/markdown-cheatsheet).
 <img width="874" height="265" alt="Screenshot 2025-11-18 at 5 58 07 PM" src="https://github.com/user-attachments/assets/b824436a-3e2e-40ea-9057-6d0a00960baf" />
 
-4. Click on or type **@**, followed by a Githubhandle to mention someone in your comment.
+4. Click on or type **@**, followed by a GitHub handle to mention someone in your comment.
 
 5. Preview your comment under the **Preview** tab.
 
