@@ -27,7 +27,9 @@ Most session take place on the listed date at 8AM PT / 3PM UTC. If the tutorial 
 
 | Date | Lesson | Presenter / Notes | Recordings |
 | --- | --- | --- | --- |
-| 2025/12/09 | Efficient Biocuration and Bioinformatics with Claude Code Part 2 | Chris Tabone |  |
+| 2026/03/31 | Coming soon! | |  |
+| 2026/03/03 | Coming soon! | |  |
+| 2026/02/03 | Coming soon!| |  |
 | 2025/11/11 | [Generating SPARQL queries with ChatGPT](https://oboacademy.github.io/obook/tutorial/sparql-llm/) | Trish Whetzel | [Here](https://youtu.be/h3Dz0TxUB5c?si=OlGO_4gVvbc18F--) |
 | 2025/10/14 | [Efficient Biocuration and Bioinformatics with Claude Code Part 1](https://oboacademy.github.io/obook/tutorial/claude-code-getting-started/) | Chris Tabone | [here](https://youtu.be/pUoelp2qbDI?si=oSFPtkRI7LuHm-kq)  |
 | July & August & Sept 2025 | _No Meeting_ | Enjoy Summer break! |  |
