@@ -27,7 +27,7 @@ _Note_: We are in the process of transforming the documentation accordingly, so 
 - _Nicolas Matentzoglu_, Semanticly, Athens, Greece. Nico is an Ontology Engineer and Ontology Pipeline Specialist, being the Principal Ontology Pipeline Developer for the Monarch Initiative.
 - _Shawn Tan_, Novo Nordisk
 - _David Osumi-Sutherland_, EMBL-EBI
-- _Sabrina Toro_, University of Colorado
+- _Sabrina Toro_, University of North Carolina at Chapel Hill
 
 If you would like to contribute to this training, please [find out more here](contributing.md).
 
