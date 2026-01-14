@@ -1,0 +1,6995 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://oboacademy.github.io/obook/tutorial/sparql-llm/">
+      
+      
+        <link rel="prev" href="../sparql/">
+      
+      
+        <link rel="next" href="../monarch-kg-neo4j-basics/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>Using Large Language Models (LLMs) to generate SPARQL queries - OBO Semantic Engineering Training</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bcfcd587.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#generating-sparql-queries-using-large-language-models-llms" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="OBO Semantic Engineering Training" class="md-header__button md-logo" aria-label="OBO Semantic Engineering Training" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OBO Semantic Engineering Training
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Using Large Language Models (LLMs) to generate SPARQL queries
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/OBOAcademy/obook/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="OBO Semantic Engineering Training" class="md-nav__button md-logo" aria-label="OBO Semantic Engineering Training" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    OBO Semantic Engineering Training
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/OBOAcademy/obook/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About the course
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting started with learning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview of lessons and tutorials
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contribute to the course
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Courses
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Courses
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../courses/icbo2024/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ICBO 2024 Tutorial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../courses/icbo2023/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ICBO 2023 Tutorial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../courses/icbo2022/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ICBO 2022 Tutorial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../courses/icbo2021/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ICBO 2021 Tutorial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../courses/monarch-obo-training/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Monarch Ontology Training
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../courses/ontology-summit-2023/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology Summit 2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Pathways
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Pathways
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pathways/pathways/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What is a pathway?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pathways/early-career-data-scientist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Early Career Data Scientist
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pathways/ontology-curator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology Curator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pathways/ontology-curator-go-style/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology Curator GO-style
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pathways/ontology-curator-obi-style/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology Curator OBI-style
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pathways/ontology-engineer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology Engineer/Developer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pathways/ontology-contributor/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology Contributor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pathways/ai-powered-semantic-engineer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI-powered semantic engineer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Lessons
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Lessons
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/contributing-to-obo-ontologies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contributing to OBO ontologies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/ontology-pipelines/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology Pipelines with ROBOT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project-ontology-development/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project Ontology Development
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/analysing-linked-data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Analysing Linked Data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/automating-ontology-workflows/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Automating Ontology Workflows
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/developing-an-obo-ontology/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Developing an OBO Ontology
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/ontology-design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology Design
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/templates-for-obo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Templates for OBO ontologies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/ontology-fundamentals/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology Fundamentals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/modelling-with-object-properties/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modelling with Object Properties
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/ontology-term-use/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology Term Use
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/rdf/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RDF Fundamentals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/entity-matching/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semantic Entity Matching
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/using-disease-and-phenotype-ontologies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Disease and Phenotype Ontologies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/phenotype-data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic concepts of phenotype data and ontologies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/hackathon/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hacking the OBOOK
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/getting-hands-on/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Hands on with Ontologies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/chatgpt-ontology-curation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leveraging ChatGPT for ontology curation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/linkml-helps-with-ontology-use/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using Ontologies in Practice--LinkML can help
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/licensing-data-and-software/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Licensing Data and Software
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/vocabularies-for-bioinformatics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vocabularies for bioinformatics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/synonyms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    An Introduction to Synonyms in OBO Ontologies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Lessons In Development
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Lessons In Development
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/developing-application-ontologies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Developing an Application Ontology
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/ontology-development/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology Development
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson/semantic-database-fundamentals/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semantic Database Fundamentals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tutorials
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Tutorials
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_1" id="__nav_9_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Protege
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_1">
+            <span class="md-nav__icon md-icon"></span>
+            Protege
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basic-dl-query/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DL queries
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../disjointness/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Disjointness
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_2" id="__nav_9_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ontology Pipelines - ODK, ROBOT, etc
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_2">
+            <span class="md-nav__icon md-icon"></span>
+            Ontology Pipelines - ODK, ROBOT, etc
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../robot-tutorial-1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ROBOT Mini-Tutorial 1 - Convert, Extract and Template
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../robot-tutorial-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ROBOT Mini-Tutorial 2 - Annotate, Merge, Reason and Diff
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../robot-tutorial-qc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ROBOT Mini-Tutorial QC - Quality Control with report, verify and query
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sparql-report-robot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ROBOT - Generating SPARQL table reports
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sparql-report-odk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ODK - Adding SPARQL table reports
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setting-up-project-odk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ODK - Getting started with your own repo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../odk-tutorial-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ODK - 20 minute complete walk-through
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../custom-qc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ODK - Adding custom Quality Check
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../managing-dynamic-imports-odk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ODK - Managing imports
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../managing-ontology-releases-odk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ODK - Managing ontology releases
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../migrating-ontology-to-odk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ODK - Migrating to ODK
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../odk-toolbox/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ODK - Using the ODK Toolbox
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_3" id="__nav_9_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Templates
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_3">
+            <span class="md-nav__icon md-icon"></span>
+            Templates
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dosdp-overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting started with DOSDP templates
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dosdp-template/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DOSDP Templates Basic Tutorial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dosdp-odk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction to Managing DOSDP Templates in ODK
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_4" id="__nav_9_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Git, GitHub and Collaborative Workflows
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_4">
+            <span class="md-nav__icon md-icon"></span>
+            Git, GitHub and Collaborative Workflows
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../github-fundamentals/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GitHub Fundamentals for OBO Engineers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/github-basics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GitHub Basics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../github-issues/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GitHub Issue for OBO Engineers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../managing-ontology-project/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Managing OBO ontology projects
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pull-requests/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pull requests
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_5" id="__nav_9_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    OntoGPT
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_5">
+            <span class="md-nav__icon md-icon"></span>
+            OntoGPT
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ontogpt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OntoGPT Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ontogpt-workshop/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OntoGPT in Practice
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_9_6" id="__nav_9_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Dealing with Semantic Data
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_9_6">
+            <span class="md-nav__icon md-icon"></span>
+            Dealing with Semantic Data
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linking-data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    From Tables to Linked Data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../curies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Standardizing Prefixes, CURIEs, and URIs with the `curies` package
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../units/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Units of Measurement
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sparql/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic SPARQL for OBO Engineers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Using Large Language Models (LLMs) to generate SPARQL queries
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Using Large Language Models (LLMs) to generate SPARQL queries
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contributors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contributors
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preparation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Objectives
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#obo-academy-training-session" class="md-nav__link">
+    <span class="md-ellipsis">
+      OBO Academy Training Session
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sparql-refresher" class="md-nav__link">
+    <span class="md-ellipsis">
+      SPARQL Refresher
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-are-large-language-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      What are Large Language Models
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prompting-llms-for-sparql-queries-via-chat-interfaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prompting LLMs for SPARQL Queries via Chat Interfaces
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#llm-prompts" class="md-nav__link">
+    <span class="md-ellipsis">
+      LLM Prompts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prompting-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prompting Best Practices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pitfalls-and-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pitfalls and Limitations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-llm-prompts-and-sparql-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional LLM prompts and SPARQL Queries
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../monarch-kg-neo4j-basics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic cypher on the Monarch Neo4j graph
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_7" id="__nav_9_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Command line
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_7">
+            <span class="md-nav__icon md-icon"></span>
+            Command line
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../intro-cli-1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic introduction to CLI 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../intro-cli-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic introduction to CLI 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_8" id="__nav_9_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Mappings and SSSOM
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_8">
+            <span class="md-nav__icon md-icon"></span>
+            Mappings and SSSOM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sssom-tutorial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic Tutorial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lexmatch-tutorial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lexical Matching with OAK Lexmatch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sssom-toolkit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction to the SSSOM Toolkit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../biomappings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Curating Mappings with Biomappings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_9" id="__nav_9_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    General Ontology Modelling
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_9">
+            <span class="md-nav__icon md-icon"></span>
+            General Ontology Modelling
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project-ontology-development/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project Ontology Development
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fhkb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Family History Knowledge Base (FHKB) tutorial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Delphi-method-ontology/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using the Delphi method to bring domain knowledge into ontologies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_10" id="__nav_9_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Exomiser
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_10">
+            <span class="md-nav__icon md-icon"></span>
+            Exomiser
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../exomiser-tutorial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction to Exomiser
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_11" id="__nav_9_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Information Extraction
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_11">
+            <span class="md-nav__icon md-icon"></span>
+            Information Extraction
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../named-entity-recognition/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Named Entity Recognition with Gilda
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../named-entity-normalization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Named Entity Normalization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../named-entity-standardization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Named Entity Standardization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_12" id="__nav_9_12_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Biocuration with Claude Code
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_12">
+            <span class="md-nav__icon md-icon"></span>
+            Biocuration with Claude Code
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../claude-code-getting-started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started with Claude Code
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../claude-code-linkml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exploring LinkML Models with Claude Code
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../claude-code-slash-commands/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating Slash Commands for API Lookups
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../claude-code-mcps/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using MCPs for Bioinformatics Workflows
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    How-to guides
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            How-to guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_1" id="__nav_10_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    General
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_1">
+            <span class="md-nav__icon md-icon"></span>
+            General
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/open-science-engineer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Maximising impact as an open science engineer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/create-ontology-from-scratch/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating an ontology from scratch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/ontology-overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create an ontology overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/prettify/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prettify Markdown Files
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/screenshot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create Screenshot and paste into an issue
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/setup-docker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Set-up docker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/create-permid-with-w3id/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create permanent identifiers with w3id.org
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_2" id="__nav_10_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Protege
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_2">
+            <span class="md-nav__icon md-icon"></span>
+            Protege
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/install-protege/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Install Protégé
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/set-up-protege/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setup Protege 5.5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/installing-elk-in-protege/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installing ELK in Protege
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/idrange/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setting up your ID range
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/edit-in-protege/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Editing in Protege
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/daily-curator-workflow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Daily Workflow
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/edit-in-protege/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Edit in Protege
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/switching-ontologies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Switching Ontologies in Protege
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/protege-browse-search/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Browsing and Searching
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/create-new-term/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating New Terms in Protege
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/obsolete-term/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Obsoleting a Term
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/merge-terms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Merging Terms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/add-taxon-restrictions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Adding Taxon Restrictions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/add-new-slim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating a new Slim (under construction)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_3" id="__nav_10_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ODK
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_3">
+            <span class="md-nav__icon md-icon"></span>
+            ODK
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/setup-ontology-development-odk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Get set up for ODK-based ontology development
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/odk-setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setting up the ODK
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/odk-update/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Update to a newer ODK version
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/odk-create-repo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating a Repo with ODK
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/deal-with-large-ontologies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dealing with Large Ontologies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/update-import/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Updating Imports with ODK
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/odk-add-orcidio-module/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Import ORCIDIO
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/run-odk-with-podman/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Running ODK with podman
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/odk-migrate-to-odk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Migrate an existing ontology Repo to ODK
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_4" id="__nav_10_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Git and GitHub
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_4">
+            <span class="md-nav__icon md-icon"></span>
+            Git and GitHub
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/term-request/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Make term requests to existing ontologies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/clone-mondo-repo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Clone a repository
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/github-create-fork/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fork an ontology for editing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/github-create-pull-request/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create a GitHub Pull Request
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/change-files-pull-request/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Change a pull request
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/fixing-conflicts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fix conflicts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/github-actions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Automate tasks with GitHub actions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/revert-commit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Revert a commit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/review-pull-request/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Review a pull request
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/respectful-collaboration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Respectful Collaboration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/add-coc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Add a Code of Conduct
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_5" id="__nav_10_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Quality control
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_5">
+            <span class="md-nav__icon md-icon"></span>
+            Quality control
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/deploy-custom-obo-dashboard/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deploy a custom OBO-Dashboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_6" id="__nav_10_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Command line
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_6">
+            <span class="md-nav__icon md-icon"></span>
+            Command line
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/filter-text-file/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to filter a file based on another file
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_7" id="__nav_10_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Mappings
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_7">
+            <span class="md-nav__icon md-icon"></span>
+            Mappings
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/are-two-entities-the-same/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Are these two entities the same? A guide.
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/review-disease-mappings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to review disease mappings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Reference
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/glossary-of-terms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary of Terms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/frequently-used-odk-commands/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Frequently used ODK commands
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/protege-interface/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Protege Interface
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/protege-faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Protege FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/llms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LLMs for the Semantic Engineer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/formatting-license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Formatting your ontology annotations correctly
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/go-style-annotation-property-practice/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OBO-style term annotation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_9" id="__nav_11_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ontology Matching
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_9">
+            <span class="md-nav__icon md-icon"></span>
+            Ontology Matching
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/semantic-etl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semantic ETL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_10" id="__nav_11_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Git
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_10">
+            <span class="md-nav__icon md-icon"></span>
+            Git
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/github-intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intro to GitHub
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/github-desktop/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GitHub Desktop
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/git-faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/semantic-engineering-toolbox/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semantic Engineering Toolbox
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/tables-and-triples/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tables and Triples
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/reasoning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Reasoning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/ontology-curator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    A day in the life of an ontology curator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/protege-interface/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Protege interface
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_16" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_16" id="__nav_11_16_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    SPARQL
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_16">
+            <span class="md-nav__icon md-icon"></span>
+            SPARQL
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/sparql-basics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SPARQL basics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/sparql-reference/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SPARQL templates
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/managing-issues/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tools for Managing Issues
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/release-artefacts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Release Artefacts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/base-specification/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Base Release
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/synonyms-properties/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Synonym Properties
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/synonyms-types/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Synonym Types
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/synonym-validation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Synonym Validation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/mungall-blog-radar/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Monkeying around with OWL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/odk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology Development Kit (ODK)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/troublehooting-robot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Troubleshooting ROBOT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/gh-actions-errors/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Common Errors in GitHub actions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/other-resources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Other useful resources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/medical-ontology-landscape/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Medical Ontology landscape
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/wikidata/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    A reference guide to Wikidata
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/obook-maturity-indicator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OBOOK Maturity Indicator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_31" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_31" id="__nav_11_31_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ChatGPT
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_31_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_31">
+            <span class="md-nav__icon md-icon"></span>
+            ChatGPT
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/chatgpt-prompts-for-ontology-development/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leveraging ChatGPT for ontology curation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/ontology-user/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology User references
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/catalog-xml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How XML Catalog files work
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Explanations
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            Explanations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/intro-to-ontologies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction to Ontologies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/logical-axiomatization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Logical axiomatization of classes & use of reasoning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/term-comments/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Term Comments
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/annotation-properties/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction to Annotation Properties
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/writing-good-issues/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Writing good issues
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/ontology-matching/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ontology Matching
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/which-ontology-to-use/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Which biomedical ontologies should we use?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/owl-format-variants/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OWL, OBO, JSON? Base, simple, full, basic? What should you use, and why?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/taxon-constraints-explainer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What are taxon constraints?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/owl-building-blocks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The logical building blocks of OWL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/subClassOf-vs-equivalentTo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SubClassOf versus EquivalentTo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/existential-restrictions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Existential restrictions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    OBOOK Editors
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            OBOOK Editors
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started-obook/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting started for OBOOK editors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../images/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to add images
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/embed-video/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to embed videos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../config/template/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    New lesson template
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teaching/case-studies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Case studies for teaching
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Outreach
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14">
+            <span class="md-nav__icon md-icon"></span>
+            Outreach
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/outreach/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Outreach materials
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contributors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contributors
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preparation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Objectives
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#obo-academy-training-session" class="md-nav__link">
+    <span class="md-ellipsis">
+      OBO Academy Training Session
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sparql-refresher" class="md-nav__link">
+    <span class="md-ellipsis">
+      SPARQL Refresher
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-are-large-language-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      What are Large Language Models
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prompting-llms-for-sparql-queries-via-chat-interfaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prompting LLMs for SPARQL Queries via Chat Interfaces
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#llm-prompts" class="md-nav__link">
+    <span class="md-ellipsis">
+      LLM Prompts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prompting-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prompting Best Practices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pitfalls-and-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pitfalls and Limitations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-llm-prompts-and-sparql-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional LLM prompts and SPARQL Queries
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/OBOAcademy/obook/edit/master/docs/tutorial/sparql-llm.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="generating-sparql-queries-using-large-language-models-llms">Generating SPARQL queries using Large Language Models (LLMs)<a class="headerlink" href="#generating-sparql-queries-using-large-language-models-llms" title="Permanent link">&para;</a></h1>
+<p><em>Last Updated: 14-Nov-2025</em></p>
+<p>This tutorial will teach you how to create SPARQL queries by prompting a large language model (LLM) via a chat interface. You may use whichever system you prefer, such as <a href="https://chatgpt.com/">ChatGPT</a>, <a href="https://gemini.google.com/">Gemini</a>, <a href="https://www.anthropic.com/claude-code">Claude</a>, etc. The prompts in this tutorial have been tested with ChatGPT 4o, ChatGPT 5.x, and Gemini 2.5 Pro. However, while LLM responses are more consistent, they are non-deterministic (involve some randomness), so the same prompt may produce different answers.</p>
+<h2 id="contributors">Contributors<a class="headerlink" href="#contributors" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://www.linkedin.com/in/trishwhetzel/">Trish Whetzel</a></li>
+</ul>
+<h2 id="preparation">Preparation<a class="headerlink" href="#preparation" title="Permanent link">&para;</a></h2>
+<p>The resulting SPARQL queries can be tested using <a href="https://yasgui.triply.cc/#" target="_blank">https://yasgui.triply.cc/#</a> (endpoint <code>https://ubergraph.apps.renci.org/sparql</code>) or using the <a href="https://robot.obolibrary.org/query">ROBOT query</a> functionality. You are responsible for obtaining access to yasgui and/or installing ROBOT.</p>
+<p>The tutorial content can also be tested with <a href="https://github.com/twhetzel/sparql-chrome-extension">SPARQLPrompt</a>, a Chrome Extension for use with the yasgui site. An OpenAI API Key is needed for this tool.</p>
+<h2 id="learning-objectives">Learning Objectives<a class="headerlink" href="#learning-objectives" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Explain what SPARQL is and describe the types queries, e.g. SELECT, INSERT, DELETE, that can be used with ontologies.</li>
+<li>Identify and provide key prompt setup information to guide LLMs toward generating accurate SPARQL queries in chat interfaces.</li>
+<li>Create effective natural language prompts for large language models (via chat interfaces) to generate valid SPARQL queries.</li>
+<li>Design advanced prompts that incorporate ontology-specific features, such as axiom reification, source provenance, and IRI or synonym constraints, to guide LLMs in producing accurate and semantically rich queries.</li>
+<li>Interpret and debug the SPARQL queries produced by LLMs, recognizing things like CURIEs vs IRIs, missing filters, or extraneous results.</li>
+<li>Run queries on Ubergraph or similar endpoints, considering things like performance, excessive results, and correctness.</li>
+<li>Evaluate prompt engineering best practices to get consistent query outputs.</li>
+</ul>
+<h2 id="obo-academy-training-session">OBO Academy Training Session<a class="headerlink" href="#obo-academy-training-session" title="Permanent link">&para;</a></h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/h3Dz0TxUB5c?si=E6pY5_Ro5ayz4w44" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<h2 id="sparql-refresher">SPARQL Refresher<a class="headerlink" href="#sparql-refresher" title="Permanent link">&para;</a></h2>
+<h3 id="what-is-sparql">What is SPARQL?<a class="headerlink" href="#what-is-sparql" title="Permanent link">&para;</a></h3>
+<ul>
+<li>SPARQL (pronounced 'sparkle') is a language to query ontologies</li>
+<li>A query can consist of:<ul>
+<li>Triple patterns (subject-predicate-object), e.g. an entity is an OWL class 
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>?entity a owl:Class .
+</code></pre></div></li>
+<li>Conjunctions (multiple triple patterns that must match in order to return a result), e.g. Find all entities that are subclasses of MONDO:0000001 'disease' AND have a label. Both conditions must be true for the same entity.
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>?entity rdfs:subClassOf* MONDO:0000001 .
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>?entity rdfs:label ?label .
+</code></pre></div></li>
+<li>Disjunctions (match either one triple pattern OR another), e.g. Find the label whether it's defined with either <code>rdfs:label</code> or <code>skos:prefLabel</code>
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>{ ?entity rdfs:label ?label . }
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>UNION
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>{ ? entity skos:prefLabel ?label . }
+</code></pre></div></li>
+<li>Optional patterns (include extra information when available), e.g. Find all subclasses of MONDO:0000001 'disease'. If a definition exists, include it, but don’t exclude entities without a definition.
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>?class rdfs:subClassOf* obo:MONDO_0000001 .
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>OPTIONAL { ?class IAO:0000115 ?definition }
+</code></pre></div></li>
+</ul>
+</li>
+<li>SPARQL can be used to query class hierarchies, annotation properties, e.g. labels, definitions, database cross reference, and logical class definitions</li>
+</ul>
+<h3 id="sparql-query-operations">SPARQL Query Operations<a class="headerlink" href="#sparql-query-operations" title="Permanent link">&para;</a></h3>
+<ul>
+<li>SPARQL operators<ul>
+<li>SELECT - retrieve specific data from an ontology, e.g. terms, labels, database cross references, hierarchy relationships, etc.</li>
+<li>INSERT - add information into the ontology</li>
+<li>DELETE - remove information from the ontology</li>
+</ul>
+</li>
+<li>SPARQL modifiers<ul>
+<li>ORDER BY - sorts results</li>
+<li>LIMIT - max rows</li>
+<li>OFFSET - skip rows</li>
+<li>DISTINCT - remove duplicate query results</li>
+<li>GROUP BY and HAVING - aggregate data</li>
+</ul>
+</li>
+<li>FILTER - restrict results based on expressions<ul>
+<li>Examples: Filter out obsolete terms, Filter to keep only terms with MONDO identifier</li>
+</ul>
+</li>
+</ul>
+<h3 id="sparql-query-structure">SPARQL Query Structure<a class="headerlink" href="#sparql-query-structure" title="Permanent link">&para;</a></h3>
+<p><img alt="Basic SPARQL Query" src="../../images/tutorials/sparql-llm/basic_sparql_query-no-title.png" /></p>
+<ul>
+<li>
+<p>Prefix declarations: Declares namespace abbreviations to shorten URIs (e.g., <code>owl:</code>, <code>rdfs:</code>)</p>
+</li>
+<li>
+<p>Select clause: Specifies the variables to be returned: <code>?entity</code> and <code>?label</code></p>
+</li>
+<li>
+<p>Where clause: Defines the pattern of RDF triples to match.</p>
+<ul>
+<li>The triple pattern <code>?entity a owl:Class</code> means match entities that are OWL classes.</li>
+<li>The triple pattern <code>?entity rdfs:label ?label</code> means match entities that have a <code>rdfs:label</code>.</li>
+</ul>
+</li>
+<li>
+<p>Filters:</p>
+<ul>
+<li>Limits results to MONDO classes: </br> <code>FILTER (STRSTARTS(STR(?entity), "http://purl.obolibrary.org/obo/MONDO_"))</code></li>
+<li>Excludes obsolete classes: </br> <code>FILTER NOT EXISTS { ?entity owl:deprecated true }</code></li>
+</ul>
+</li>
+<li>
+<p>Limit:</p>
+<ul>
+<li>Return at most 10 results: <code>LIMIT 10</code> </li>
+</ul>
+</li>
+</ul>
+<h3 id="detailed-sparql-information">Detailed SPARQL information<a class="headerlink" href="#detailed-sparql-information" title="Permanent link">&para;</a></h3>
+<ul>
+<li>For more details, review Basic SPARQL for OBO Engineers <a href="https://oboacademy.github.io/obook/tutorial/sparql/" target="_blank">https://oboacademy.github.io/obook/tutorial/sparql/</a></li>
+</ul>
+<h3 id="tools-to-run-sparql-queries">Tools to run SPARQL queries<a class="headerlink" href="#tools-to-run-sparql-queries" title="Permanent link">&para;</a></h3>
+<ul>
+<li>ROBOT <ul>
+<li>A command line tool for working with OBO ontologies and has a query command <a href="https://robot.obolibrary.org/query" target="_blank">https://robot.obolibrary.org/query</a></li>
+</ul>
+</li>
+<li>RENCI Ubergraph endpoint<ul>
+<li>Web based interface to query OBO ontologies <a href="https://yasgui.triply.cc/#" target="_blank">https://yasgui.triply.cc/#</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="sparql-use-cases">SPARQL Use Cases<a class="headerlink" href="#sparql-use-cases" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Create a custom report<ul>
+<li>How many disease classes are in Mondo? </li>
+<li>How many Mondo classes have a gene association?</li>
+<li>See Mondo stats for more statistics <a href="https://mondo.monarchinitiative.org/#stats" target="_blank">https://mondo.monarchinitiative.org/#stats</a></li>
+</ul>
+</li>
+<li>Ontology QC and modeling validation<ul>
+<li>Do all synonyms contain a database cross reference?</li>
+</ul>
+</li>
+<li>Insert and update an ontology<ul>
+<li>Many Mondo pipelines use SPARQL update queries, e.g. OMIM gene pipeline, to add content into the ontology</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="what-are-large-language-models">What are Large Language Models<a class="headerlink" href="#what-are-large-language-models" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Large Language Models (LLMs) are AI systems trained on huge amounts of text</li>
+<li>Understand and generate text and code<ul>
+<li>Examples: ChatGPT, Claude, Gemini</li>
+</ul>
+</li>
+<li>Interact using natural language prompts, not programming</li>
+<li>⚠️ LLMs can make mistakes or “hallucinate” information — always review and validate the results before using them in your work</li>
+</ul>
+<h3 id="why-large-language-models-llms-matter-for-querying-ontologies">Why Large Language Models (LLMs) matter for querying ontologies<a class="headerlink" href="#why-large-language-models-llms-matter-for-querying-ontologies" title="Permanent link">&para;</a></h3>
+<table style="border: none; border-collapse: collapse; margin-top: 0; padding-top: 0;">
+  <tr>
+    <td style="border: none; vertical-align: top; width: 50%; padding: 0; font-size: .8rem;">
+      <strong>Challenges for users:</strong>
+      <ul>
+        <li>Natural language is intuitive for humans, but not machine-readable</li>
+        <li>SPARQL queries are precise, but hard to learn and time-consuming to write</li>
+      </ul>
+    </td>
+    <td style="border: none; vertical-align: top; width: 50%; padding: 0 0 0 1.5rem; font-size: .8rem;">
+      <strong>How LLMs help:</strong>
+      <ul>
+        <li>Translate natural language questions into SPARQL queries <em>(bridging the gap)</em></li>
+        <li>Lower the barrier to writing SPARQL by drafting queries, saving time for learners and experts</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+<h2 id="prompting-llms-for-sparql-queries-via-chat-interfaces">Prompting LLMs for SPARQL Queries via Chat Interfaces<a class="headerlink" href="#prompting-llms-for-sparql-queries-via-chat-interfaces" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Be specific and state the question cleary</li>
+<li>State what properties to return </li>
+<li>State modifiers and constraints</li>
+<li>Share an example query to extend</li>
+<li>Ask for explanations </li>
+<li>Review query, test, and iterate</li>
+</ul>
+<h3 id="prompt-setup-for-chat-based-llms">Prompt Setup for Chat-Based LLMs<a class="headerlink" href="#prompt-setup-for-chat-based-llms" title="Permanent link">&para;</a></h3>
+<ul>
+<li>‼️ <strong>This setup is very important — it helps ensure the LLM responds correctly and consistently</strong></li>
+<li>Text information to include at the start of your chat session to guide the LLM throughout your prompts </li>
+<li>This information will be remembered by the model throughout the chat session (limited by model, chat length, and chat settings)<ul>
+<li>ChatGPT - session memory is enabled by default</li>
+<li>Gemini -  iterative conversation history</li>
+<li>Claude - selective session memory</li>
+</ul>
+</li>
+<li>The information should be clear and specific to guide the LLM toward the desired output</li>
+<li>For best results, it is a good practice to set a persona, provide examples, and structure the information clearly</li>
+<li>⚡ <strong><em>Use the information in the Prompt Setup below before prompting the LLM to generate SPARQL queries. Customize as needed for your ontology of interest.</em></strong> </li>
+</ul>
+<details>
+<summary>Prompt Setup</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Role: Act as an ontology engineer with expert knowledge of SPARQL and MONDO.
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>Environment: Queries will be run in YASGUI against MONDO (OWL) and should also run via ROBOT.
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>Namespace scope: By default, restrict results to MONDO classes:
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>    FILTER STRSTARTS(STR(?class), &quot;http://purl.obolibrary.org/obo/MONDO_&quot;)
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>Reasoning: Assume no entailment; use explicit patterns and property paths (e.g., rdfs:subClassOf*).
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>Obsoletes: Exclude classes with owl:deprecated true.
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>Labels: Use `rdfs:label`.
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>Definition: Use `IAO:0000115`.
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>Prefixes: Include only the PREFIX declarations actually used in the query (no extras).
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>  These are the main prefixes we will need: 
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>    Core RDF/OWL
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>      rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>      rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>      owl: &lt;http://www.w3.org/2002/07/owl#&gt;
+<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>      xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
+<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>    MONDO
+<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>      MONDO: &lt;http://purl.obolibrary.org/obo/MONDO_&gt;
+<a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>    Common OBO namespaces
+<a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>      RO: &lt;http://purl.obolibrary.org/obo/RO_&gt;
+<a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>      IAO: &lt;http://purl.obolibrary.org/obo/IAO_&gt;
+<a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>      oboInOwl: &lt;http://www.geneontology.org/formats/oboInOwl#&gt;
+<a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a>
+<a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a>Axiom-annotated data (synonyms, database cross references (also known as xrefs), provenance):
+<a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a>  When querying properties that are commonly axiom-annotated (e.g., oboInOwl:hasExactSynonym),
+<a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a>    1) Assert the base triple:
+<a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a>       ?class oboInOwl:hasExactSynonym ?syn .
+<a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a>    2) Tie the reified axiom back to that exact triple:
+<a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a>       ?axiom a owl:Axiom ;
+<a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a>              owl:annotatedSource ?class ;
+<a id="__codelineno-4-37" name="__codelineno-4-37" href="#__codelineno-4-37"></a>              owl:annotatedProperty oboInOwl:hasExactSynonym ;
+<a id="__codelineno-4-38" name="__codelineno-4-38" href="#__codelineno-4-38"></a>              owl:annotatedTarget ?syn .
+<a id="__codelineno-4-39" name="__codelineno-4-39" href="#__codelineno-4-39"></a>    3) Add any desired axiom annotations (e.g., oboInOwl:hasDbXref ?xref).
+<a id="__codelineno-4-40" name="__codelineno-4-40" href="#__codelineno-4-40"></a>
+<a id="__codelineno-4-41" name="__codelineno-4-41" href="#__codelineno-4-41"></a>Gene associations in MONDO (e.g., RO:0004003 for germline mutations) are modeled as OWL existential restrictions:
+<a id="__codelineno-4-42" name="__codelineno-4-42" href="#__codelineno-4-42"></a>- Use `rdfs:subClassOf` pointing to a blank node that is a restriction (`a owl:Restriction`)
+<a id="__codelineno-4-43" name="__codelineno-4-43" href="#__codelineno-4-43"></a>- That restriction must contain:
+<a id="__codelineno-4-44" name="__codelineno-4-44" href="#__codelineno-4-44"></a>    - `owl:onProperty RO:0004003`
+<a id="__codelineno-4-45" name="__codelineno-4-45" href="#__codelineno-4-45"></a>    - `owl:someValuesFrom` the gene class (e.g., HGNC ID)
+<a id="__codelineno-4-46" name="__codelineno-4-46" href="#__codelineno-4-46"></a>- Provenance is annotated on the `rdfs:subClassOf` triple using `owl:Axiom` with:
+<a id="__codelineno-4-47" name="__codelineno-4-47" href="#__codelineno-4-47"></a>    - `owl:annotatedSource` = MONDO class
+<a id="__codelineno-4-48" name="__codelineno-4-48" href="#__codelineno-4-48"></a>    - `owl:annotatedProperty` = `rdfs:subClassOf`
+<a id="__codelineno-4-49" name="__codelineno-4-49" href="#__codelineno-4-49"></a>    - `owl:annotatedTarget` = restriction
+<a id="__codelineno-4-50" name="__codelineno-4-50" href="#__codelineno-4-50"></a>    - `oboInOwl:source` (or other provenance properties) for evidence
+<a id="__codelineno-4-51" name="__codelineno-4-51" href="#__codelineno-4-51"></a>
+<a id="__codelineno-4-52" name="__codelineno-4-52" href="#__codelineno-4-52"></a>Mode switching:
+<a id="__codelineno-4-53" name="__codelineno-4-53" href="#__codelineno-4-53"></a>  * If the latest user message or system prompt contains the token `EXTENSION_MODE`, treat this as **extension mode**.
+<a id="__codelineno-4-54" name="__codelineno-4-54" href="#__codelineno-4-54"></a>
+<a id="__codelineno-4-55" name="__codelineno-4-55" href="#__codelineno-4-55"></a>Output rules:
+<a id="__codelineno-4-56" name="__codelineno-4-56" href="#__codelineno-4-56"></a>  * In **extension mode** (for the Chrome extension):
+<a id="__codelineno-4-57" name="__codelineno-4-57" href="#__codelineno-4-57"></a>    - Return paste-ready SPARQL as plain text, with **no triple backticks** and no fenced code blocks.
+<a id="__codelineno-4-58" name="__codelineno-4-58" href="#__codelineno-4-58"></a>    - The query must contain only SPARQL, no natural-language text mixed in.
+<a id="__codelineno-4-59" name="__codelineno-4-59" href="#__codelineno-4-59"></a>    - If an explanation is explicitly requested, place it **after** the SPARQL query.
+<a id="__codelineno-4-60" name="__codelineno-4-60" href="#__codelineno-4-60"></a>    - In extension mode, every explanation line must begin with `# `.
+<a id="__codelineno-4-61" name="__codelineno-4-61" href="#__codelineno-4-61"></a>  * When **not** in extension mode (normal ChatGPT UI use):
+<a id="__codelineno-4-62" name="__codelineno-4-62" href="#__codelineno-4-62"></a>    - Return paste-ready SPARQL in a single fenced code block using triple backticks with language `sparql`.
+<a id="__codelineno-4-63" name="__codelineno-4-63" href="#__codelineno-4-63"></a>    - The code block must contain **only** the SPARQL query — no comments and no explanation inside it.
+<a id="__codelineno-4-64" name="__codelineno-4-64" href="#__codelineno-4-64"></a>    - Do NOT provide any explanation unless the user explicitly says “include an explanation”.
+<a id="__codelineno-4-65" name="__codelineno-4-65" href="#__codelineno-4-65"></a>    - If an explanation is explicitly requested, place it **after** the code block as plain text (and do **not** start explanation lines with `# `).
+<a id="__codelineno-4-66" name="__codelineno-4-66" href="#__codelineno-4-66"></a>  * Never include extra backticks outside a code block in non-extension mode.
+<a id="__codelineno-4-67" name="__codelineno-4-67" href="#__codelineno-4-67"></a>  * Use DISTINCT when appropriate (e.g., in COUNTs).
+<a id="__codelineno-4-68" name="__codelineno-4-68" href="#__codelineno-4-68"></a>  * If a list of results is requested, include the `?label` and convert the IRI to a CURIE.
+<a id="__codelineno-4-69" name="__codelineno-4-69" href="#__codelineno-4-69"></a>
+<a id="__codelineno-4-70" name="__codelineno-4-70" href="#__codelineno-4-70"></a>Request format: 
+<a id="__codelineno-4-71" name="__codelineno-4-71" href="#__codelineno-4-71"></a>  * I will provide prompts in plain English.
+<a id="__codelineno-4-72" name="__codelineno-4-72" href="#__codelineno-4-72"></a>
+<a id="__codelineno-4-73" name="__codelineno-4-73" href="#__codelineno-4-73"></a>Defaults (unless I override in the prompt): 
+<a id="__codelineno-4-74" name="__codelineno-4-74" href="#__codelineno-4-74"></a>  * Consider all descendants (rdfs:subClassOf*), not just direct children.
+<a id="__codelineno-4-75" name="__codelineno-4-75" href="#__codelineno-4-75"></a>  * Filter out obsoletes as above.
+<a id="__codelineno-4-76" name="__codelineno-4-76" href="#__codelineno-4-76"></a>  * Keep results sorted using ORDER BY unless I request otherwise.
+</code></pre></div>
+</details>
+
+<hr />
+<h2 id="llm-prompts">LLM Prompts<a class="headerlink" href="#llm-prompts" title="Permanent link">&para;</a></h2>
+<h3 id="counts-and-summaries">Counts and Summaries<a class="headerlink" href="#counts-and-summaries" title="Permanent link">&para;</a></h3>
+<h4 id="example-count-all-subclasses-of-disease-in-mondo">Example - Count all subclasses of disease in Mondo<a class="headerlink" href="#example-count-all-subclasses-of-disease-in-mondo" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Prompt:
+Write a SPARQL query that counts the number of classes in the MONDO ontology that are subclasses of MONDO:0000001 (disease).</p>
+</li>
+<li>
+<p>Prompt Breakdown:</p>
+<ul>
+<li>Type of query: COUNT</li>
+<li>Target class: all subclasses of MONDO:0000001 (disease)</li>
+<li>Ontology scope: MONDO</li>
+</ul>
+</li>
+</ul>
+<details>
+<summary>View SPARQL query</summary>
+
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>PREFIX owl: &lt;http://www.w3.org/2002/07/owl#&gt;
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>PREFIX obo: &lt;http://purl.obolibrary.org/obo/&gt;
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a># Get a count of all subclasses of disease excluding obsolete terms
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>SELECT (COUNT(DISTINCT ?cls) AS ?count)
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>WHERE {
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>  ?cls rdfs:subClassOf* obo:MONDO_0000001 .
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>  ?cls a owl:Class .
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>}
+</code></pre></div>
+
+</details>
+
+<hr />
+<h3 id="filtering-basics">Filtering Basics<a class="headerlink" href="#filtering-basics" title="Permanent link">&para;</a></h3>
+<h4 id="example-count-all-exact-synonyms-in-mondo-excluding-obsolete-classes">Example - Count all exact synonyms in Mondo, excluding obsolete classes<a class="headerlink" href="#example-count-all-exact-synonyms-in-mondo-excluding-obsolete-classes" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Prompt:
+Write a SPARQL query to count all exact synonyms (oboInOwl:hasExactSynonym) in MONDO, excluding obsolete Mondo classes.</p>
+</li>
+<li>
+<p>Prompt Breakdown:</p>
+<ul>
+<li>Type of query: COUNT</li>
+<li>Target class: all Mondo classes</li>
+<li>Filter: exclude obsolete terms</li>
+<li>Ontology scope: MONDO</li>
+</ul>
+</li>
+</ul>
+<details>
+<summary>View SPARQL query</summary>
+
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>PREFIX owl:      &lt;http://www.w3.org/2002/07/owl#&gt;
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>PREFIX MONDO:    &lt;http://purl.obolibrary.org/obo/MONDO_&gt;
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>PREFIX oboInOwl: &lt;http://www.geneontology.org/formats/oboInOwl#&gt;
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>SELECT (COUNT(DISTINCT ?syn) AS ?count_exact_synonyms)
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>WHERE {
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>  ?class a owl:Class ;
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>         oboInOwl:hasExactSynonym ?syn .
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>  FILTER STRSTARTS(STR(?class), &quot;http://purl.obolibrary.org/obo/MONDO_&quot;)
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>  FILTER NOT EXISTS { ?class owl:deprecated true }
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>}
+</code></pre></div>
+
+</details>
+
+<hr />
+<h3 id="labels-annotations">Labels &amp; Annotations<a class="headerlink" href="#labels-annotations" title="Permanent link">&para;</a></h3>
+<h4 id="example-get-mondo-terms-curie-and-label-excluding-obsolete-terms">Example - Get Mondo terms, CURIE and label, excluding obsolete terms<a class="headerlink" href="#example-get-mondo-terms-curie-and-label-excluding-obsolete-terms" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Prompt:
+Write a SPARQL query to retrieve a MONDO classes with their human-readable labels (rdfs:label). Return the MONDO CURIE and the label, limited to 20 results. Exclude obsolete classes (owl:deprecated true).</p>
+</li>
+<li>
+<p>Prompt Breakdown:</p>
+<ul>
+<li>Type of query: SELECT - MONDO CURIE and label</li>
+<li>Target class: all Mondo classes</li>
+<li>Filter: exclude obsolete terms</li>
+<li>Ontology scope: MONDO</li>
+<li>Result size: LIMIT 20 for readability</li>
+</ul>
+</li>
+</ul>
+<details>
+<summary>View SPARQL query</summary>
+
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>PREFIX rdfs:  &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>PREFIX owl:   &lt;http://www.w3.org/2002/07/owl#&gt;
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>PREFIX MONDO: &lt;http://purl.obolibrary.org/obo/MONDO_&gt;
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>SELECT DISTINCT ?mondo_curie ?label
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>WHERE {
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>  ?class a owl:Class ;
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>         rdfs:label ?label .
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>  FILTER STRSTARTS(STR(?class), &quot;http://purl.obolibrary.org/obo/MONDO_&quot;)
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>  FILTER NOT EXISTS { ?class owl:deprecated true }
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>  BIND(REPLACE(STR(?class), &quot;^.*/MONDO_&quot;, &quot;MONDO:&quot;) AS ?mondo_curie)
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>}
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>ORDER BY ?mondo_curie
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>LIMIT 20
+</code></pre></div>
+
+</details>
+
+<hr />
+<h3 id="synonyms-cross-references">Synonyms &amp; Cross-references<a class="headerlink" href="#synonyms-cross-references" title="Permanent link">&para;</a></h3>
+<h4 id="example-get-a-count-of-all-mondo-classes-with-an-exact-synonym-from-orphanet">Example - Get a count of all MONDO classes with an exact synonym from Orphanet<a class="headerlink" href="#example-get-a-count-of-all-mondo-classes-with-an-exact-synonym-from-orphanet" title="Permanent link">&para;</a></h4>
+<p>Prompt: 
+Write a SPARQL query to count all exact synonyms (oboInOwl:hasExactSynonym) in non-obsolete MONDO classes where the synonym is annotated with a database cross reference (oboInOwl:hasDbXref) containing "Orphanet". Use the axiom annotation pattern to connect the synonym to its provenance.</p>
+<ul>
+<li>Prompt Breakdown:<ul>
+<li>Type of query: COUNT</li>
+<li>Target class: all non-obsolete Mondo classes</li>
+<li>Synonym constraint: class must have oboInOwl:hasExactSynonym</li>
+<li>Axiom constraint: the synonym must be annotated with a database cross reference and the value must contain "Orphanet"</li>
+<li>Filter: exclude obsolete classes</li>
+<li>Ontology scope: MONDO </li>
+</ul>
+</li>
+</ul>
+<details>
+<summary>View SPARQL query</summary>
+
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>PREFIX owl:      &lt;http://www.w3.org/2002/07/owl#&gt;
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>PREFIX MONDO:    &lt;http://purl.obolibrary.org/obo/MONDO_&gt;
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>PREFIX oboInOwl: &lt;http://www.geneontology.org/formats/oboInOwl#&gt;
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>SELECT (COUNT(DISTINCT ?syn) AS ?count_orphanet_exact_synonyms)
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>WHERE {
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>  ?class a owl:Class .
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>  FILTER STRSTARTS(STR(?class), &quot;http://purl.obolibrary.org/obo/MONDO_&quot;)
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>  FILTER NOT EXISTS { ?class owl:deprecated true }
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>  ?class oboInOwl:hasExactSynonym ?syn .
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>  ?axiom a owl:Axiom ;
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>         owl:annotatedSource ?class ;
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>         owl:annotatedProperty oboInOwl:hasExactSynonym ;
+<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>         owl:annotatedTarget ?syn ;
+<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>         oboInOwl:hasDbXref ?xref .
+<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>
+<a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a>  FILTER CONTAINS(STR(?xref), &quot;Orphanet:&quot;)
+<a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a>}
+</code></pre></div>
+
+</details>
+
+<hr />
+<h3 id="conjunctions-and">Conjunctions (AND)<a class="headerlink" href="#conjunctions-and" title="Permanent link">&para;</a></h3>
+<h4 id="example-get-mondo-terms-curie-label-synonym-excluding-obsolete-terms">Example: Get Mondo terms, CURIE, label, synonym, excluding obsolete terms<a class="headerlink" href="#example-get-mondo-terms-curie-label-synonym-excluding-obsolete-terms" title="Permanent link">&para;</a></h4>
+<p>Prompt: 
+Write a SPARQL query to select MONDO classes that have both a human-readable label (rdfs:label) and an exact synonym (oboInOwl:hasExactSynonym). Return the MONDO CURIE, label, and synonym. Restrict to MONDO classes, exclude obsolete terms, and limit to 20 results.</p>
+<ul>
+<li>Prompt Breakdown:<ul>
+<li>Type of query: SELECT - MONDO CURIE, label, and synonym</li>
+<li>Target class: all Mondo classes</li>
+<li>Annotation properties: require both <code>rdfs:label</code> AND <code>oboInOwl:hasExactSynonym</code></li>
+<li>Filter: exclude obsolete terms</li>
+<li>Ontology scope: MONDO</li>
+<li>Result size: LIMIT 20 for readability</li>
+</ul>
+</li>
+</ul>
+<details>
+<summary>View SPARQL query</summary>
+
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>PREFIX rdfs:     &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>PREFIX owl:      &lt;http://www.w3.org/2002/07/owl#&gt;
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>PREFIX MONDO:    &lt;http://purl.obolibrary.org/obo/MONDO_&gt;
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>PREFIX oboInOwl: &lt;http://www.geneontology.org/formats/oboInOwl#&gt;
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>SELECT DISTINCT ?mondo_curie ?label ?syn
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>WHERE {
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>  ?class a owl:Class ;
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>         rdfs:label ?label ;
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>         oboInOwl:hasExactSynonym ?syn .
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>  FILTER STRSTARTS(STR(?class), &quot;http://purl.obolibrary.org/obo/MONDO_&quot;)
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>  FILTER NOT EXISTS { ?class owl:deprecated true }
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>  BIND(REPLACE(STR(?class), &quot;^.*/MONDO_&quot;, &quot;MONDO:&quot;) AS ?mondo_curie)
+<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a>}
+<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a>ORDER BY ?mondo_curie
+<a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a>LIMIT 20
+</code></pre></div>
+
+</details>
+
+<hr />
+<h3 id="disjunctions-or">Disjunctions (OR)<a class="headerlink" href="#disjunctions-or" title="Permanent link">&para;</a></h3>
+<p>Use UNION for alternative patterns</p>
+<h4 id="example-get-mondo-terms-curie-label-synonym-and-synonym-type-for-terms-with-either-an-exact-synonym-or-a-related-synonym">Example - Get Mondo terms, CURIE, label, synonym, and synonym type for terms with either an exact synonym or a related synonym<a class="headerlink" href="#example-get-mondo-terms-curie-label-synonym-and-synonym-type-for-terms-with-either-an-exact-synonym-or-a-related-synonym" title="Permanent link">&para;</a></h4>
+<p>Prompt: 
+Write a SPARQL query to retrieve non-obsolete MONDO classes that have either an exact synonym (oboInOwl:hasExactSynonym) or a related synonym (oboInOwl:hasRelatedSynonym). Use UNION to combine the two patterns. Return the MONDO CURIE, label, the synonym and synonym type. Limit to 50 results.</p>
+<ul>
+<li>Prompt Breakdown<ul>
+<li>Type of query: SELECT - MONDO CURIE, label, and synonym</li>
+<li>Target class: all Mondo classes</li>
+<li>Annotation properties: match classes with an exact synonym <em>OR</em> related synonym</li>
+<li>Disjunction: use UNION to combine patterns</li>
+<li>Filter: exclude obsolete classes</li>
+<li>Ontology scope: MONDO</li>
+<li>Result size: LIMIT 50 for readability</li>
+</ul>
+</li>
+</ul>
+<details>
+<summary>View SPARQL query</summary>
+
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>PREFIX rdfs:     &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>PREFIX owl:      &lt;http://www.w3.org/2002/07/owl#&gt;
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>PREFIX MONDO:    &lt;http://purl.obolibrary.org/obo/MONDO_&gt;
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>PREFIX oboInOwl: &lt;http://www.geneontology.org/formats/oboInOwl#&gt;
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>SELECT DISTINCT ?mondo_curie ?label ?synonym ?synonym_type
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>WHERE {
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>  ?class a owl:Class ;
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>         rdfs:label ?label .
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>  FILTER STRSTARTS(STR(?class), &quot;http://purl.obolibrary.org/obo/MONDO_&quot;)
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>  FILTER NOT EXISTS { ?class owl:deprecated true }
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>  {
+<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>    # Exact synonyms
+<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a>    ?class oboInOwl:hasExactSynonym ?synonym .
+<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a>    BIND(&quot;EXACT&quot; AS ?synonym_type)
+<a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a>  }
+<a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a>  UNION
+<a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a>  {
+<a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a>    # Related synonyms
+<a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a>    ?class oboInOwl:hasRelatedSynonym ?synonym .
+<a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a>    BIND(&quot;RELATED&quot; AS ?synonym_type)
+<a id="__codelineno-10-23" name="__codelineno-10-23" href="#__codelineno-10-23"></a>  }
+<a id="__codelineno-10-24" name="__codelineno-10-24" href="#__codelineno-10-24"></a>
+<a id="__codelineno-10-25" name="__codelineno-10-25" href="#__codelineno-10-25"></a>  BIND(REPLACE(STR(?class), &quot;^.*/MONDO_&quot;, &quot;MONDO:&quot;) AS ?mondo_curie)
+<a id="__codelineno-10-26" name="__codelineno-10-26" href="#__codelineno-10-26"></a>}
+<a id="__codelineno-10-27" name="__codelineno-10-27" href="#__codelineno-10-27"></a>ORDER BY ?mondo_curie ?synonym_type
+<a id="__codelineno-10-28" name="__codelineno-10-28" href="#__codelineno-10-28"></a>LIMIT 50
+</code></pre></div>
+
+</details>
+
+<hr />
+<h3 id="optional-patterns">Optional Patterns<a class="headerlink" href="#optional-patterns" title="Permanent link">&para;</a></h3>
+<h4 id="example-get-mondo-terms-and-the-definition-if-it-exists">Example: Get Mondo terms and the definition if it exists<a class="headerlink" href="#example-get-mondo-terms-and-the-definition-if-it-exists" title="Permanent link">&para;</a></h4>
+<p>Prompt:
+Write a SPARQL query to retrieve non-obsolete MONDO classes with their human-readable label (rdfs:label). Also try to include a textual definition (IAO:0000115) if it exists. Use OPTIONAL so that classes without a definition are still returned. Return the MONDO CURIE, label, and definition. Limit to 20 results.</p>
+<ul>
+<li>Prompt Breakdown:<ul>
+<li>Type of query: SELECT — return MONDO CURIE, label, and optionally the definition</li>
+<li>Target class: all Mondo classes</li>
+<li>Annotations required: rdfs:label (mandatory)</li>
+<li>Annotations optional: IAO:0000115 (definition, may or may not be present)</li>
+<li>Filter: exclude obsolete classes</li>
+<li>Ontology scope: MONDO</li>
+<li>Output: MONDO CURIE, label, and definition</li>
+<li>Result size: LIMIT 20 for readability</li>
+</ul>
+</li>
+</ul>
+<details>
+<summary>View SPARQL query</summary>
+
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>PREFIX rdfs:  &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>PREFIX owl:   &lt;http://www.w3.org/2002/07/owl#&gt;
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>PREFIX MONDO: &lt;http://purl.obolibrary.org/obo/MONDO_&gt;
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>PREFIX IAO:   &lt;http://purl.obolibrary.org/obo/IAO_&gt;
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>SELECT DISTINCT ?mondo_curie ?label ?definition
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>WHERE {
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>  ?class a owl:Class ;
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>         rdfs:label ?label .
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>  FILTER STRSTARTS(STR(?class), &quot;http://purl.obolibrary.org/obo/MONDO_&quot;)
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>  FILTER NOT EXISTS { ?class owl:deprecated true }
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>  # Definition is optional — not all classes have one
+<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>  OPTIONAL { ?class IAO:0000115 ?definition }
+<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a>
+<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a>  BIND(REPLACE(STR(?class), &quot;^.*/MONDO_&quot;, &quot;MONDO:&quot;) AS ?mondo_curie)
+<a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a>}
+<a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a>ORDER BY ?mondo_curie
+<a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a>LIMIT 20
+</code></pre></div>
+
+</details>
+
+<hr />
+<h3 id="grouping-and-aggregation">Grouping and Aggregation<a class="headerlink" href="#grouping-and-aggregation" title="Permanent link">&para;</a></h3>
+<p>Use GROUP_CONCAT, GROUP BY</p>
+<h4 id="example-get-mondo-terms-and-the-count-of-exact-synonyms-for-each-term">Example: Get Mondo terms and the count of exact synonyms for each term<a class="headerlink" href="#example-get-mondo-terms-and-the-count-of-exact-synonyms-for-each-term" title="Permanent link">&para;</a></h4>
+<p>Prompt:
+Write a SPARQL query to retrieve non-obsolete MONDO classes along with their exact synonyms. Use COUNT to calculate how many synonyms each class has, and GROUP_CONCAT to list them all in a single field. Return the MONDO CURIE, label, the count of synonyms, and the list of synonyms. Limit results to 20.</p>
+<ul>
+<li>Prompt Breakdown:<ul>
+<li>Type of query: SELECT with aggregation — return MONDO CURIE, label, count of synonyms, and list of the exact synonyms</li>
+<li>Target class: all Mondo classes</li>
+<li>Annotations required: rdfs:label (mandatory), oboInOwl:hasExactSynonym (to be counted)</li>
+<li>Filter: exclude obsolete classes</li>
+<li>Ontology scope: MONDO</li>
+<li>Aggregation: aggregate all exact synonym values for each Mondo class</li>
+<li>Result size: LIMIT 20 for readability</li>
+</ul>
+</li>
+</ul>
+<details>
+<summary>View SPARQL query</summary>
+
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>PREFIX rdfs:     &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>PREFIX owl:      &lt;http://www.w3.org/2002/07/owl#&gt;
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>PREFIX MONDO:    &lt;http://purl.obolibrary.org/obo/MONDO_&gt;
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>PREFIX oboInOwl: &lt;http://www.geneontology.org/formats/oboInOwl#&gt;
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>SELECT ?mondo_curie ?label 
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>       (COUNT(DISTINCT ?syn) AS ?synonym_count)
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>       (GROUP_CONCAT(DISTINCT ?syn; separator=&quot;, &quot;) AS ?synonyms)
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>WHERE {
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>  ?class a owl:Class ;
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>         rdfs:label ?label ;
+<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>         oboInOwl:hasExactSynonym ?syn .
+<a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>  FILTER STRSTARTS(STR(?class), &quot;http://purl.obolibrary.org/obo/MONDO_&quot;)
+<a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a>  FILTER NOT EXISTS { ?class owl:deprecated true }
+<a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a>
+<a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a>  BIND(REPLACE(STR(?class), &quot;^.*/MONDO_&quot;, &quot;MONDO:&quot;) AS ?mondo_curie)
+<a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a>}
+<a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a>GROUP BY ?mondo_curie ?label
+<a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a>ORDER BY DESC(?synonym_count)
+<a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a>LIMIT 20
+</code></pre></div>
+
+</details>
+
+<hr />
+<h3 id="axiom-level-queries">Axiom-level Queries<a class="headerlink" href="#axiom-level-queries" title="Permanent link">&para;</a></h3>
+<p>Reified axioms with owl:Axiom</p>
+<h4 id="example-get-mondo-terms-exact-synonyms-and-their-provenance">Example: Get Mondo terms, exact synonyms, and their provenance<a class="headerlink" href="#example-get-mondo-terms-exact-synonyms-and-their-provenance" title="Permanent link">&para;</a></h4>
+<p>Prompt:
+Write a SPARQL query to retrieve non-obsolete MONDO classes and their exact synonyms (oboInOwl:hasExactSynonym). For each synonym, also retrieve the list of database cross references (oboInOwl:hasDbXref) recorded on the synonym axiom. Use the axiom annotation pattern (owl:Axiom) to connect synonyms to their xrefs. Each synonym should appear only once, with all of its xrefs combined in a single column. Return the MONDO CURIE, label, synonym, and the list of xrefs. Limit results to 20.</p>
+<ul>
+<li>Prompt Breakdown:<ul>
+<li>Type of query: SELECT — return MONDO CURIE, label, synonym, and a combined list of xrefs</li>
+<li>Target class: all Mondo classes</li>
+<li>Annotation required: rdfs:label (mandatory for human-readable output)</li>
+<li>Synonyms: oboInOwl:hasExactSynonym (required)</li>
+<li>Axiom pattern: use owl:Axiom with owl:annotatedSource, owl:annotatedProperty, and owl:annotatedTarget to connect synonyms to oboInOwl:hasDbXref</li>
+<li>Aggregation: aggregate all xrefs for the synonym</li>
+<li>Filter: exclude obsolete classes</li>
+<li>Ontology scope: MONDO</li>
+<li>Result size: LIMIT 20 for readability</li>
+</ul>
+</li>
+</ul>
+<details>
+<summary>View SPARQL query</summary>
+
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>PREFIX rdfs:     &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>PREFIX owl:      &lt;http://www.w3.org/2002/07/owl#&gt;
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>PREFIX MONDO:    &lt;http://purl.obolibrary.org/obo/MONDO_&gt;
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>PREFIX oboInOwl: &lt;http://www.geneontology.org/formats/oboInOwl#&gt;
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>SELECT ?mondo_curie ?label ?synonym
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>       (GROUP_CONCAT(DISTINCT ?xref; separator=&quot;, &quot;) AS ?xrefs)
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>WHERE {
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>  ?class a owl:Class ;
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>         rdfs:label ?label ;
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>         oboInOwl:hasExactSynonym ?synonym .
+<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>  FILTER STRSTARTS(STR(?class), &quot;http://purl.obolibrary.org/obo/MONDO_&quot;)
+<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a>  FILTER NOT EXISTS { ?class owl:deprecated true }
+<a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a>
+<a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a>  # Axiom pattern tying synonym to xref
+<a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a>  ?axiom a owl:Axiom ;
+<a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a>         owl:annotatedSource ?class ;
+<a id="__codelineno-13-18" name="__codelineno-13-18" href="#__codelineno-13-18"></a>         owl:annotatedProperty oboInOwl:hasExactSynonym ;
+<a id="__codelineno-13-19" name="__codelineno-13-19" href="#__codelineno-13-19"></a>         owl:annotatedTarget ?synonym ;
+<a id="__codelineno-13-20" name="__codelineno-13-20" href="#__codelineno-13-20"></a>         oboInOwl:hasDbXref ?xref .
+<a id="__codelineno-13-21" name="__codelineno-13-21" href="#__codelineno-13-21"></a>
+<a id="__codelineno-13-22" name="__codelineno-13-22" href="#__codelineno-13-22"></a>  # Convert class IRI into MONDO CURIE
+<a id="__codelineno-13-23" name="__codelineno-13-23" href="#__codelineno-13-23"></a>  BIND(REPLACE(STR(?class), &quot;^.*/MONDO_&quot;, &quot;MONDO:&quot;) AS ?mondo_curie)
+<a id="__codelineno-13-24" name="__codelineno-13-24" href="#__codelineno-13-24"></a>}
+<a id="__codelineno-13-25" name="__codelineno-13-25" href="#__codelineno-13-25"></a>GROUP BY ?mondo_curie ?label ?synonym
+<a id="__codelineno-13-26" name="__codelineno-13-26" href="#__codelineno-13-26"></a>ORDER BY ?mondo_curie ?synonym
+<a id="__codelineno-13-27" name="__codelineno-13-27" href="#__codelineno-13-27"></a>LIMIT 20
+</code></pre></div>
+
+</details>
+
+<hr />
+<h3 id="ontology-structure-queries">Ontology Structure Queries<a class="headerlink" href="#ontology-structure-queries" title="Permanent link">&para;</a></h3>
+<h4 id="example-get-mondo-terms-that-have-a-gene-association">Example: Get Mondo terms that have a gene association<a class="headerlink" href="#example-get-mondo-terms-that-have-a-gene-association" title="Permanent link">&para;</a></h4>
+<p>Prompt:
+Write a SPARQL query to retrieve non-obsolete MONDO classes that have a gene association modeled as an rdfs:subClassOf restriction on the property RO:0004003 (“has material basis in germline mutation in”). Return the MONDO CURIE, label, and the gene identifier. Limit results to 20.</p>
+<ul>
+<li>Prompt Breakdown:<ul>
+<li>Type of query: SELECT — return MONDO CURIE, label, and gene identifier</li>
+<li>Target class: all Mondo classes</li>
+<li>Ontology structure: rdfs:subClassOf pointing to an owl:Restriction</li>
+<li>Restriction pattern:
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>owl:onProperty RO:0004003
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>owl:someValuesFrom ?gene
+</code></pre></div></li>
+<li>Filter: exclude obsolete classes</li>
+<li>Ontology scope: MONDO</li>
+<li>Result size: LIMIT 20 for readability</li>
+</ul>
+</li>
+</ul>
+<details>
+<summary>View SPARQL query</summary>
+
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>PREFIX rdfs:  &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>PREFIX owl:   &lt;http://www.w3.org/2002/07/owl#&gt;
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>PREFIX MONDO: &lt;http://purl.obolibrary.org/obo/MONDO_&gt;
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>PREFIX RO:    &lt;http://purl.obolibrary.org/obo/RO_&gt;
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>SELECT DISTINCT ?mondo_curie ?label ?gene
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>WHERE {
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>  ?class a owl:Class ;
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>         rdfs:label ?label ;
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>         rdfs:subClassOf ?restriction .
+<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a>  FILTER STRSTARTS(STR(?class), &quot;http://purl.obolibrary.org/obo/MONDO_&quot;)
+<a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a>  FILTER NOT EXISTS { ?class owl:deprecated true }
+<a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a>
+<a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a>  ?restriction a owl:Restriction ;
+<a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a>               owl:onProperty RO:0004003 ;
+<a id="__codelineno-15-16" name="__codelineno-15-16" href="#__codelineno-15-16"></a>               owl:someValuesFrom ?gene .
+<a id="__codelineno-15-17" name="__codelineno-15-17" href="#__codelineno-15-17"></a>
+<a id="__codelineno-15-18" name="__codelineno-15-18" href="#__codelineno-15-18"></a>  BIND(REPLACE(STR(?class), &quot;^.*/MONDO_&quot;, &quot;MONDO:&quot;) AS ?mondo_curie)
+<a id="__codelineno-15-19" name="__codelineno-15-19" href="#__codelineno-15-19"></a>}
+<a id="__codelineno-15-20" name="__codelineno-15-20" href="#__codelineno-15-20"></a>ORDER BY ?mondo_curie
+<a id="__codelineno-15-21" name="__codelineno-15-21" href="#__codelineno-15-21"></a>LIMIT 20
+</code></pre></div>
+
+</details>
+
+<hr />
+<h2 id="prompting-best-practices">Prompting Best Practices<a class="headerlink" href="#prompting-best-practices" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Provide context for the prompts (see <a href="#prompt-setup-for-chat-based-llms">Prompt Setup</a>)</li>
+<li>Be specific and state the question cleary<ul>
+<li>Include examples in the prompt</li>
+<li>Include prefixes and term IRIs/CURIEs in the prompt</li>
+<li>Use the real name of a property, 'has material basis in germline mutation in' vs. gene association</li>
+<li>Provide an OBO stanza or for more complicated queries the OWL class representation as needed</li>
+</ul>
+</li>
+<li>State what information to return <ul>
+<li>Select the CURIE, label, and definition</li>
+</ul>
+</li>
+<li>State modifiers and constraints<ul>
+<li>Limit to 10 results, sort by label</li>
+<li>Filter out obsolete terms</li>
+</ul>
+</li>
+<li>Share an example query to extend<ul>
+<li>Use a base query and ask LLM to extend the query</li>
+</ul>
+</li>
+<li>Ask for explanations of the query<ul>
+<li>Prompt for the query and also ask for a step-wise explanation of the query</li>
+</ul>
+</li>
+<li>Review query, test, and iterate<ul>
+<li>Test the query in your tool of interest</li>
+<li>If the query fails or returns incorrect information, share the error message and ask for a fix or clarify what’s missing</li>
+<li>Some SPARQL constructs are not valid for ROBOT and the query needs to be modified</li>
+<li>If the LLM starts returning circular options ask it to reset to clear the current conversation context and then start again (remember to provide the Prompt Setup information again)</li>
+</ul>
+</li>
+</ul>
+<h2 id="pitfalls-and-limitations">Pitfalls and Limitations<a class="headerlink" href="#pitfalls-and-limitations" title="Permanent link">&para;</a></h2>
+<ul>
+<li>LLM hallucinations<ul>
+<li>queries might look plausible but be wrong or inefficient or not work with certain tools</li>
+</ul>
+</li>
+<li>Validate the query<ul>
+<li>Test the query using the <a href="#tools-to-run-sparql-queries">tools</a> mentioned earlier</li>
+</ul>
+</li>
+<li>Provide feedback to the LLM<ul>
+<li>That did not work, e.g. try again using the correct prefix for MONDO</li>
+</ul>
+</li>
+<li>Schema/ontology drift/new ontology<ul>
+<li>LLMs trained on old data may not match the current ontology or know of a new ontology   </li>
+</ul>
+</li>
+</ul>
+<hr />
+<hr />
+<h2 id="additional-llm-prompts-and-sparql-queries">Additional LLM prompts and SPARQL Queries<a class="headerlink" href="#additional-llm-prompts-and-sparql-queries" title="Permanent link">&para;</a></h2>
+<h4 id="example-get-all-mondo-classes-that-have-a-gene-association-and-the-provenance-for-the-gene-association">Example - Get all Mondo classes that have a gene association and the provenance for the gene association<a class="headerlink" href="#example-get-all-mondo-classes-that-have-a-gene-association-and-the-provenance-for-the-gene-association" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Prompt:
+Write a SPARQL query to get all Mondo classes that have a gene association, e.g. RO:0004003 'has material basis in germline mutation in', and also return the source provenance for the gene association. Include the Mondo CURIE, Mondo label, gene identifier, and source provenance in the result. For testing, limit to 20 results.</p>
+</li>
+<li>
+<p>Prompt Breakdown:</p>
+<ul>
+<li>Type of query - select MONDO CURIE, label, gene identifier, source provenance</li>
+<li>Target class - any Mondo class that has a gene association</li>
+<li>Axiom constraint - the class must have a gene association (RO:0004003 'has material basis in germline mutation in')</li>
+<li>Ontology - MONDO</li>
+</ul>
+</li>
+</ul>
+<details>
+<summary>View SPARQL query</summary>
+
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>PREFIX rdfs:     &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>PREFIX owl:      &lt;http://www.w3.org/2002/07/owl#&gt;
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>PREFIX MONDO:    &lt;http://purl.obolibrary.org/obo/MONDO_&gt;
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>PREFIX RO:       &lt;http://purl.obolibrary.org/obo/RO_&gt;
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>PREFIX oboInOwl: &lt;http://www.geneontology.org/formats/oboInOwl#&gt;
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>SELECT DISTINCT ?mondo_curie ?label ?gene_id ?provenance
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>WHERE {
+<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a>  ?class a owl:Class ;
+<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a>         rdfs:label ?label ;
+<a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a>         rdfs:subClassOf ?restriction .
+<a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a>  FILTER STRSTARTS(STR(?class), &quot;http://purl.obolibrary.org/obo/MONDO_&quot;)
+<a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a>  FILTER NOT EXISTS { ?class owl:deprecated true }
+<a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a>
+<a id="__codelineno-16-15" name="__codelineno-16-15" href="#__codelineno-16-15"></a>  # Restriction for RO:0004003 (has material basis in germline mutation in)
+<a id="__codelineno-16-16" name="__codelineno-16-16" href="#__codelineno-16-16"></a>  ?restriction a owl:Restriction ;
+<a id="__codelineno-16-17" name="__codelineno-16-17" href="#__codelineno-16-17"></a>               owl:onProperty RO:0004003 ;
+<a id="__codelineno-16-18" name="__codelineno-16-18" href="#__codelineno-16-18"></a>               owl:someValuesFrom ?gene .
+<a id="__codelineno-16-19" name="__codelineno-16-19" href="#__codelineno-16-19"></a>
+<a id="__codelineno-16-20" name="__codelineno-16-20" href="#__codelineno-16-20"></a>  # MONDO CURIE
+<a id="__codelineno-16-21" name="__codelineno-16-21" href="#__codelineno-16-21"></a>  BIND(REPLACE(STR(?class), &quot;^.*/MONDO_&quot;, &quot;MONDO:&quot;) AS ?mondo_curie)
+<a id="__codelineno-16-22" name="__codelineno-16-22" href="#__codelineno-16-22"></a>
+<a id="__codelineno-16-23" name="__codelineno-16-23" href="#__codelineno-16-23"></a>  # Gene CURIE (assumes identifiers.org/hgnc/#### pattern)
+<a id="__codelineno-16-24" name="__codelineno-16-24" href="#__codelineno-16-24"></a>  BIND(REPLACE(STR(?gene), &quot;^.*/&quot;, &quot;HGNC:&quot;) AS ?gene_id)
+<a id="__codelineno-16-25" name="__codelineno-16-25" href="#__codelineno-16-25"></a>
+<a id="__codelineno-16-26" name="__codelineno-16-26" href="#__codelineno-16-26"></a>  # Provenance from the annotated subClassOf axiom
+<a id="__codelineno-16-27" name="__codelineno-16-27" href="#__codelineno-16-27"></a>  OPTIONAL {
+<a id="__codelineno-16-28" name="__codelineno-16-28" href="#__codelineno-16-28"></a>    ?axiom a owl:Axiom ;
+<a id="__codelineno-16-29" name="__codelineno-16-29" href="#__codelineno-16-29"></a>           owl:annotatedSource ?class ;
+<a id="__codelineno-16-30" name="__codelineno-16-30" href="#__codelineno-16-30"></a>           owl:annotatedProperty rdfs:subClassOf ;
+<a id="__codelineno-16-31" name="__codelineno-16-31" href="#__codelineno-16-31"></a>           owl:annotatedTarget ?restriction ;
+<a id="__codelineno-16-32" name="__codelineno-16-32" href="#__codelineno-16-32"></a>           oboInOwl:source ?provenance .
+<a id="__codelineno-16-33" name="__codelineno-16-33" href="#__codelineno-16-33"></a>  }
+<a id="__codelineno-16-34" name="__codelineno-16-34" href="#__codelineno-16-34"></a>}
+<a id="__codelineno-16-35" name="__codelineno-16-35" href="#__codelineno-16-35"></a>ORDER BY ?mondo_curie ?gene_id
+<a id="__codelineno-16-36" name="__codelineno-16-36" href="#__codelineno-16-36"></a>LIMIT 20
+</code></pre></div>
+
+</details>
+
+<hr />
+<h4 id="example-get-all-mondo-classes-that-have-a-gene-association-and-the-provenance-for-the-gene-association-aggregate-all-gene-association-sources">Example - Get all Mondo classes that have a gene association and the provenance for the gene association, aggregate all gene association sources<a class="headerlink" href="#example-get-all-mondo-classes-that-have-a-gene-association-and-the-provenance-for-the-gene-association-aggregate-all-gene-association-sources" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Prompt: Given the query above (Get all Mondo classes that have a gene association and the provenance for the gene association), collapse the multiple rows due to multiple sources for a gene association. The gene association provenance is represented using the oboInOwl:source annotation property.</p>
+</li>
+<li>
+<p>Prompt Breakdown:
+Here we are extending the query from a previous query prompt or you may paste in the working query from above and ask the LLM to modify the query. If you are using a tool like ChatGPT or Gemini it will have memory of the earlier query.</p>
+</li>
+</ul>
+<details>
+<summary>View SPARQL query</summary>
+
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>PREFIX rdfs:     &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>PREFIX owl:      &lt;http://www.w3.org/2002/07/owl#&gt;
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>PREFIX MONDO:    &lt;http://purl.obolibrary.org/obo/MONDO_&gt;
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>PREFIX RO:       &lt;http://purl.obolibrary.org/obo/RO_&gt;
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>PREFIX oboInOwl: &lt;http://www.geneontology.org/formats/oboInOwl#&gt;
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>SELECT ?mondo_curie ?label ?gene_id
+<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>       (GROUP_CONCAT(DISTINCT ?provenance; SEPARATOR=&quot; | &quot;) AS ?sources)
+<a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>WHERE {
+<a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a>  ?class a owl:Class ;
+<a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a>         rdfs:label ?label ;
+<a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a>         rdfs:subClassOf ?restriction .
+<a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a>  FILTER STRSTARTS(STR(?class), &quot;http://purl.obolibrary.org/obo/MONDO_&quot;)
+<a id="__codelineno-17-14" name="__codelineno-17-14" href="#__codelineno-17-14"></a>  FILTER NOT EXISTS { ?class owl:deprecated true }
+<a id="__codelineno-17-15" name="__codelineno-17-15" href="#__codelineno-17-15"></a>
+<a id="__codelineno-17-16" name="__codelineno-17-16" href="#__codelineno-17-16"></a>  # Restriction for RO:0004003 (has material basis in germline mutation in)
+<a id="__codelineno-17-17" name="__codelineno-17-17" href="#__codelineno-17-17"></a>  ?restriction a owl:Restriction ;
+<a id="__codelineno-17-18" name="__codelineno-17-18" href="#__codelineno-17-18"></a>               owl:onProperty RO:0004003 ;
+<a id="__codelineno-17-19" name="__codelineno-17-19" href="#__codelineno-17-19"></a>               owl:someValuesFrom ?gene .
+<a id="__codelineno-17-20" name="__codelineno-17-20" href="#__codelineno-17-20"></a>
+<a id="__codelineno-17-21" name="__codelineno-17-21" href="#__codelineno-17-21"></a>  BIND(REPLACE(STR(?class), &quot;^.*/MONDO_&quot;, &quot;MONDO:&quot;) AS ?mondo_curie)
+<a id="__codelineno-17-22" name="__codelineno-17-22" href="#__codelineno-17-22"></a>
+<a id="__codelineno-17-23" name="__codelineno-17-23" href="#__codelineno-17-23"></a>  # Gene CURIE (assumes identifiers.org/hgnc/#### pattern)
+<a id="__codelineno-17-24" name="__codelineno-17-24" href="#__codelineno-17-24"></a>  BIND(REPLACE(STR(?gene), &quot;^.*/&quot;, &quot;HGNC:&quot;) AS ?gene_id)
+<a id="__codelineno-17-25" name="__codelineno-17-25" href="#__codelineno-17-25"></a>
+<a id="__codelineno-17-26" name="__codelineno-17-26" href="#__codelineno-17-26"></a>  # Provenance annotations on the restriction axiom
+<a id="__codelineno-17-27" name="__codelineno-17-27" href="#__codelineno-17-27"></a>  OPTIONAL {
+<a id="__codelineno-17-28" name="__codelineno-17-28" href="#__codelineno-17-28"></a>    ?axiom a owl:Axiom ;
+<a id="__codelineno-17-29" name="__codelineno-17-29" href="#__codelineno-17-29"></a>           owl:annotatedSource ?class ;
+<a id="__codelineno-17-30" name="__codelineno-17-30" href="#__codelineno-17-30"></a>           owl:annotatedProperty rdfs:subClassOf ;
+<a id="__codelineno-17-31" name="__codelineno-17-31" href="#__codelineno-17-31"></a>           owl:annotatedTarget ?restriction ;
+<a id="__codelineno-17-32" name="__codelineno-17-32" href="#__codelineno-17-32"></a>           oboInOwl:source ?provenance .
+<a id="__codelineno-17-33" name="__codelineno-17-33" href="#__codelineno-17-33"></a>  }
+<a id="__codelineno-17-34" name="__codelineno-17-34" href="#__codelineno-17-34"></a>}
+<a id="__codelineno-17-35" name="__codelineno-17-35" href="#__codelineno-17-35"></a>GROUP BY ?mondo_curie ?label ?gene_id
+<a id="__codelineno-17-36" name="__codelineno-17-36" href="#__codelineno-17-36"></a>ORDER BY ?mondo_curie ?gene_id
+<a id="__codelineno-17-37" name="__codelineno-17-37" href="#__codelineno-17-37"></a>LIMIT 20
+</code></pre></div>
+
+</details>
+
+<hr />
+<h4 id="example-get-all-mondo-classes-that-have-more-than-one-gene-association">Example - Get all Mondo classes that have more than one gene association<a class="headerlink" href="#example-get-all-mondo-classes-that-have-more-than-one-gene-association" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Prompt:
+Write a SPARQL query to get all Mondo classes that have more than one gene association, e.g. RO:0004003 'has material basis in germline mutation in', and the source provenance represented using oboInOWL:source. Include the Mondo CURIE, Mondo label, gene identifier, and source provenance in the result.</p>
+</li>
+<li>
+<p>Prompt Breakdown:</p>
+<ul>
+<li>Type of query - select MONDO CURIE, label, gene identifier, OMIM CURIE with HAVING</li>
+<li>Target class - any Mondo class that has more than one gene association</li>
+<li>Axiom constraint - the class must have a gene association (RO:0004003 'has material basis in germline mutation in')</li>
+<li>Filter - Must use RO:0004003 and have more than one gene association</li>
+<li>Ontology - MONDO</li>
+</ul>
+</li>
+</ul>
+<details>
+<summary>View SPARQL query</summary>
+
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>PREFIX owl: &lt;http://www.w3.org/2002/07/owl#&gt;
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>PREFIX obo: &lt;http://purl.obolibrary.org/obo/&gt;
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>PREFIX oboInOwl: &lt;http://www.geneontology.org/formats/oboInOwl#&gt;
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>SELECT ?mondo_curie ?label ?gene (GROUP_CONCAT(DISTINCT ?omim_source; separator=&quot;|&quot;) AS ?sources)
+<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a>WHERE {
+<a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a>  {
+<a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a>    SELECT ?mondo_class
+<a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a>    WHERE {
+<a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a>      ?mondo_class rdfs:subClassOf ?restriction .
+<a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a>      ?restriction a owl:Restriction ;
+<a id="__codelineno-18-13" name="__codelineno-18-13" href="#__codelineno-18-13"></a>                   owl:onProperty obo:RO_0004003 ;
+<a id="__codelineno-18-14" name="__codelineno-18-14" href="#__codelineno-18-14"></a>                   owl:someValuesFrom ?gene .
+<a id="__codelineno-18-15" name="__codelineno-18-15" href="#__codelineno-18-15"></a>    }
+<a id="__codelineno-18-16" name="__codelineno-18-16" href="#__codelineno-18-16"></a>    GROUP BY ?mondo_class
+<a id="__codelineno-18-17" name="__codelineno-18-17" href="#__codelineno-18-17"></a>    HAVING (COUNT(DISTINCT ?gene) &gt; 1)
+<a id="__codelineno-18-18" name="__codelineno-18-18" href="#__codelineno-18-18"></a>  }
+<a id="__codelineno-18-19" name="__codelineno-18-19" href="#__codelineno-18-19"></a>
+<a id="__codelineno-18-20" name="__codelineno-18-20" href="#__codelineno-18-20"></a>  ?mondo_class rdfs:label ?label ;
+<a id="__codelineno-18-21" name="__codelineno-18-21" href="#__codelineno-18-21"></a>               rdfs:subClassOf ?restriction .
+<a id="__codelineno-18-22" name="__codelineno-18-22" href="#__codelineno-18-22"></a>
+<a id="__codelineno-18-23" name="__codelineno-18-23" href="#__codelineno-18-23"></a>  ?restriction a owl:Restriction ;
+<a id="__codelineno-18-24" name="__codelineno-18-24" href="#__codelineno-18-24"></a>               owl:onProperty obo:RO_0004003 ;
+<a id="__codelineno-18-25" name="__codelineno-18-25" href="#__codelineno-18-25"></a>               owl:someValuesFrom ?gene .
+<a id="__codelineno-18-26" name="__codelineno-18-26" href="#__codelineno-18-26"></a>
+<a id="__codelineno-18-27" name="__codelineno-18-27" href="#__codelineno-18-27"></a>  OPTIONAL {
+<a id="__codelineno-18-28" name="__codelineno-18-28" href="#__codelineno-18-28"></a>    ?axiom a owl:Axiom ;
+<a id="__codelineno-18-29" name="__codelineno-18-29" href="#__codelineno-18-29"></a>           owl:annotatedSource ?mondo_class ;
+<a id="__codelineno-18-30" name="__codelineno-18-30" href="#__codelineno-18-30"></a>           owl:annotatedProperty rdfs:subClassOf ;
+<a id="__codelineno-18-31" name="__codelineno-18-31" href="#__codelineno-18-31"></a>           owl:annotatedTarget ?restriction ;
+<a id="__codelineno-18-32" name="__codelineno-18-32" href="#__codelineno-18-32"></a>           oboInOwl:source ?omim_source .
+<a id="__codelineno-18-33" name="__codelineno-18-33" href="#__codelineno-18-33"></a>  }
+<a id="__codelineno-18-34" name="__codelineno-18-34" href="#__codelineno-18-34"></a>
+<a id="__codelineno-18-35" name="__codelineno-18-35" href="#__codelineno-18-35"></a>  BIND(REPLACE(STR(?mondo_class), &quot;http://purl.obolibrary.org/obo/MONDO_&quot;, &quot;MONDO:&quot;) AS ?mondo_curie)
+<a id="__codelineno-18-36" name="__codelineno-18-36" href="#__codelineno-18-36"></a>}
+<a id="__codelineno-18-37" name="__codelineno-18-37" href="#__codelineno-18-37"></a>GROUP BY ?mondo_curie ?label ?gene
+<a id="__codelineno-18-38" name="__codelineno-18-38" href="#__codelineno-18-38"></a>ORDER BY ?mondo_curie ?gene
+</code></pre></div>
+
+</details>
+
+<hr />
+<h4 id="example-confirm-that-obsolete-terms-have-a-label-that-starts-with-obsolete-do-not-have-any-subclassof-relationships">Example - Confirm that obsolete terms have a label that starts with “obsolete” do not have any subClassOf relationships<a class="headerlink" href="#example-confirm-that-obsolete-terms-have-a-label-that-starts-with-obsolete-do-not-have-any-subclassof-relationships" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Prompt:
+Write a SPARQL query that checks for two quality control rules about obsolete Mondo classes: All classes marked with owl:deprecated true must have an rdfs:label that starts with the string "obsolete ". Obsolete classes must not have any logical axioms, such as rdfs:subClassOf. For each violation, the query should return the class IRI, its label, and a description of which rule was violated. </p>
+</li>
+<li>
+<p>Prompt Breakdown:</p>
+<ul>
+<li>Type of query - select</li>
+<li>Target class - any owl:Class</li>
+<li>Filter - include only deprecated classes</li>
+<li>Rules - Class label must start with “obsolete” and logical axioms can not be on an obsolete class</li>
+<li>Ontology - MONDO</li>
+</ul>
+</li>
+</ul>
+<p>‼️ NOTE: This query times out on yasgui so let's break this down into two queries, one to find any obsolete class that does not have a label that starts with 'obsolete ' and and another query to find obsolete classes with logical axioms.</p>
+<details>
+<summary>View SPARQL query - Check that obsolete classes have a label that starts with 'obsolete '</summary>
+
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>PREFIX owl: &lt;http://www.w3.org/2002/07/owl#&gt;
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a># Find obsolete classes where the label does not start with &#39;obsolete &#39;
+<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>
+<a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>SELECT ?cls ?label ?rule
+<a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>WHERE {
+<a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a>  ?cls a owl:Class ;
+<a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a>         owl:deprecated true ;
+<a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a>         rdfs:label ?label .
+<a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a>  FILTER STRSTARTS(STR(?cls), &quot;http://purl.obolibrary.org/obo/MONDO_&quot;)
+<a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a>  FILTER (!STRSTARTS(LCASE(STR(?label)), &quot;obsolete &quot;))
+<a id="__codelineno-19-14" name="__codelineno-19-14" href="#__codelineno-19-14"></a>  BIND(&quot;Label must start with &#39;obsolete &#39;&quot; AS ?rule)
+<a id="__codelineno-19-15" name="__codelineno-19-15" href="#__codelineno-19-15"></a>}
+<a id="__codelineno-19-16" name="__codelineno-19-16" href="#__codelineno-19-16"></a>ORDER BY ?cls
+</code></pre></div>
+
+</details>
+
+<p></br></p>
+<details>
+<summary>View SPARQL query - Check that obsolete classes do not have logical axioms</summary>
+
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>PREFIX owl: &lt;http://www.w3.org/2002/07/owl#&gt;
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a># Check if any obsolete classes have a subClassOf axiom
+<a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a>
+<a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a>SELECT ?cls ?clsLabel ?parent WHERE {
+<a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a>  ?cls a owl:Class ;
+<a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a>       owl:deprecated true ;
+<a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a>       rdfs:label ?clsLabel ;
+<a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a>       rdfs:subClassOf ?parent .
+<a id="__codelineno-20-12" name="__codelineno-20-12" href="#__codelineno-20-12"></a>
+<a id="__codelineno-20-13" name="__codelineno-20-13" href="#__codelineno-20-13"></a>  FILTER STRSTARTS(STR(?cls), &quot;http://purl.obolibrary.org/obo/MONDO_&quot;)
+<a id="__codelineno-20-14" name="__codelineno-20-14" href="#__codelineno-20-14"></a>  FILTER (?parent != owl:Thing)
+<a id="__codelineno-20-15" name="__codelineno-20-15" href="#__codelineno-20-15"></a>  FILTER (?parent != ?cls)
+<a id="__codelineno-20-16" name="__codelineno-20-16" href="#__codelineno-20-16"></a>}
+<a id="__codelineno-20-17" name="__codelineno-20-17" href="#__codelineno-20-17"></a>ORDER BY ?cls
+</code></pre></div>
+
+</details>
+
+<hr />
+<h4 id="example-find-all-classes-where-the-definition-does-not-have-any-provenance">Example - Find all classes where the definition does not have any provenance<a class="headerlink" href="#example-find-all-classes-where-the-definition-does-not-have-any-provenance" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Prompt:
+Write a SPARQL query to retrieve all MONDO classes with a textual definition (IAO:0000115). The query should only return results where it is not possible to find a corresponding database cross reference that provides provenance for that specific definition. Return the class CURIE, class label, and the definition.</p>
+</li>
+<li>
+<p>Prompt Breakdown:</p>
+<ul>
+<li>Type of query - select CURIE, label, definition</li>
+<li>Target class - any owl:Class</li>
+<li>Filter - include only classes where the definition does not have a database cross reference</li>
+<li>Ontology - MONDO</li>
+</ul>
+</li>
+</ul>
+<details>
+<summary>View SPARQL query</summary>
+
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>PREFIX rdfs:     &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>PREFIX owl:      &lt;http://www.w3.org/2002/07/owl#&gt;
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>PREFIX MONDO:    &lt;http://purl.obolibrary.org/obo/MONDO_&gt;
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>PREFIX IAO:      &lt;http://purl.obolibrary.org/obo/IAO_&gt;
+<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>PREFIX oboInOwl: &lt;http://www.geneontology.org/formats/oboInOwl#&gt;
+<a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>
+<a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>SELECT DISTINCT ?mondo_curie ?label ?definition
+<a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a>WHERE {
+<a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a>  ?class a owl:Class ;
+<a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a>         rdfs:label ?label ;
+<a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a>         IAO:0000115 ?definition .
+<a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a>  FILTER STRSTARTS(STR(?class), &quot;http://purl.obolibrary.org/obo/MONDO_&quot;)
+<a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a>  FILTER NOT EXISTS { ?class owl:deprecated true }
+<a id="__codelineno-21-14" name="__codelineno-21-14" href="#__codelineno-21-14"></a>
+<a id="__codelineno-21-15" name="__codelineno-21-15" href="#__codelineno-21-15"></a>  # Exclude any definition that has a provenance xref in an axiom annotation
+<a id="__codelineno-21-16" name="__codelineno-21-16" href="#__codelineno-21-16"></a>  FILTER NOT EXISTS {
+<a id="__codelineno-21-17" name="__codelineno-21-17" href="#__codelineno-21-17"></a>    ?axiom a owl:Axiom ;
+<a id="__codelineno-21-18" name="__codelineno-21-18" href="#__codelineno-21-18"></a>           owl:annotatedSource ?class ;
+<a id="__codelineno-21-19" name="__codelineno-21-19" href="#__codelineno-21-19"></a>           owl:annotatedProperty IAO:0000115 ;
+<a id="__codelineno-21-20" name="__codelineno-21-20" href="#__codelineno-21-20"></a>           owl:annotatedTarget ?definition ;
+<a id="__codelineno-21-21" name="__codelineno-21-21" href="#__codelineno-21-21"></a>           oboInOwl:hasDbXref ?xref .
+<a id="__codelineno-21-22" name="__codelineno-21-22" href="#__codelineno-21-22"></a>  }
+<a id="__codelineno-21-23" name="__codelineno-21-23" href="#__codelineno-21-23"></a>
+<a id="__codelineno-21-24" name="__codelineno-21-24" href="#__codelineno-21-24"></a>  # Convert class IRI to MONDO CURIE
+<a id="__codelineno-21-25" name="__codelineno-21-25" href="#__codelineno-21-25"></a>  BIND(REPLACE(STR(?class), &quot;^.*/MONDO_&quot;, &quot;MONDO:&quot;) AS ?mondo_curie)
+<a id="__codelineno-21-26" name="__codelineno-21-26" href="#__codelineno-21-26"></a>}
+<a id="__codelineno-21-27" name="__codelineno-21-27" href="#__codelineno-21-27"></a>ORDER BY ?mondo_curie
+</code></pre></div>
+
+</details>
+
+<p></br></br></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.action.edit", "search.suggest", "search.highlight", "content.code.annotation", "content.code.copy", "content.code.select"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@8.5.1/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>
