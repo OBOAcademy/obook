@@ -1,12 +1,15 @@
 # The Basics of GitHub: Organizations, Repositories, & Issues
 
+This serves as a quick reference and step by step guide for users with no prior GitHub experience. For more complete information and detailed instructions, see [GitHub Fundamentals for OBO Engineers](https://oboacademy.github.io/obook/tutorial/github-fundamentals/) and [GitHub Issue for OBO Engineers](https://oboacademy.github.io/obook/tutorial/github-issues/).
+
 ### Signing up for GitHub
 
-[**GitHub**](https://docs.github.com/en/get-started/start-your-journey/about-github-and-git#about-github) is a cloud-based platform where you can store, share, and work together with others to write code. Collaborative working, one of GitHub’s fundamental features, is made possible by the open-source software, **Git**, upon which GitHub is built.
+[**GitHub**](https://docs.github.com/en/get-started/start-your-journey/about-github-and-git#about-github) is a cloud-based platform where you can store, share, and work together with others to write code. Collaborative working, one of GitHub’s fundamental features, is made possible by the open-source software, **Git**, upon which GitHub is built. 
 
 1. Sign up for GitHub at [github.com](http://github.com).
-1. After signing up, your Username will be your **GitHub handle**. This serves as your unique identity on the platform and is used to log in, reference your profile, and mention you in discussions.
+2. After signing up, your Username will be your **GitHub handle**. This serves as your unique identity on the platform and is used to log in, reference your profile, and mention you in discussions.
    - Note: You can go to [Settings](https://github.com/settings/profile) to provide additional personal information, connect ORCID id, and customize your avatar.
+
 
 ### Understanding Organization and Repository 
 
@@ -14,7 +17,8 @@
    - Example: [https://github.com/zappfish](https://github.com/zappfish), [https://github.com/monarch-initiative](https://github.com/monarch-initiative)
 
 2. **Repository (repo)**: A storage space on GitHub where your project’s files, code, or documentation are kept. It tracks every change made to those files, allowing collaboration, version control, and issue tracking.
-   - Example: [https://github.com/zappfish/zapp-atlas](https://github.com/zappfish/zapp-atlas) 
+   - Example: [https://github.com/zappfish/zapp-atlas](https://github.com/zappfish/zapp-atlas)
+
 
 ### Creating an Issue from a Repository
 
@@ -40,6 +44,7 @@ Issues are easy to create, flexible, and useful for tracking ideas, feedback, ta
 8. To link related issues in the same repository, you can type **#** followed by part of the issue title and then clicking the issue that you want to link.
 9. When you're finished, click **Create**.
 
+
 ### Commenting on Issues
 Commenting on issues is an important way to communicate and collaborate. Anyone with write access to a repository can comment on issues, and issue creator will be notified through email.
 1. Under the repository name, click **Issues**. 
@@ -56,4 +61,6 @@ Commenting on issues is an important way to communicate and collaborate. Anyone 
 5. Preview your comment under the **Preview** tab.
 
 6. When you're finished, click **Comment**.
+
+
 
