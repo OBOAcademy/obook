@@ -42,7 +42,7 @@ Passing arguments on the command line:
 
     ./seed-via-docker.sh -d po -d ro -d pato -u cmungall -t "Triffid Behavior ontology" triffo
 
-Using a the predefined [project.yaml](https://raw.githubusercontent.com/INCATools/ontology-development-kit/master/examples/triffo/project.yaml) file:
+Using a the predefined [project.yaml](https://raw.githubusercontent.com/INCATools/odkcore/refs/heads/main/examples/triffo/project.yaml) file:
 
     ./seed-via-docker.sh -C examples/triffo/project.yaml
 
@@ -52,7 +52,7 @@ Passing arguments on the command line:
 
     seed-via-docker.bat -d po -d ro -d pato -u cmungall -t "Triffid Behavior ontology" triffo
 
-Using a the predefined [project.yaml](https://raw.githubusercontent.com/INCATools/ontology-development-kit/master/examples/triffo/project.yaml) config file:
+Using a the predefined [project.yaml](https://raw.githubusercontent.com/INCATools/odkcore/refs/heads/main/examples/triffo/project.yaml) config file:
 
     seed-via-docker.bat -C project.yaml
 
@@ -61,7 +61,7 @@ Using a the predefined [project.yaml](https://raw.githubusercontent.com/INCATool
 - Instead of `-u cmungall` you should be using your own username (i.e. `-u nico`), for example for your GitHub or GitLab hosting sites.
 - You can add a -c (lowercase) just before the -C (capital c) in the command to first delete any previous attempt to generate your ontology with the ODK, and then replaces it with a completely new one. So, `-c` stands for `clean` or "clean up previous attempts before running again" and `-C` stands for "the next parameter is the relative path to my config file".
 - In general, we now _always_ recommend the use of config files. The ODK has a rich set of configuration options, most of which can only be set through the config file, but in general the config also serves as documentation and will help with updating your ontology at later stages.
-  To create a config file, you can download for example [project.yaml](https://raw.githubusercontent.com/INCATools/ontology-development-kit/master/examples/triffo/project.yaml) by clicking on the link and then typing `command+s` on Mac or `ctrl+s` on Windows to save it in the same directory as your `seed-via-docker` script.
+  To create a config file, you can download for example [project.yaml](https://raw.githubusercontent.com/INCATools/odkcore/refs/heads/main/examples/triffo/project.yaml) by clicking on the link and then typing `command+s` on Mac or `ctrl+s` on Windows to save it in the same directory as your `seed-via-docker` script.
   Then you can open the file with a text editor like Notepad++, Atom, Sublime or even nano, and adapt it to your project. Other more comprehensive examples can be found [here](https://github.com/INCATools/ontology-development-kit/tree/master/configs).
 
 This will create your starter files in
