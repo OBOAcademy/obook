@@ -4,10 +4,11 @@ Claude Code is Anthropic's official CLI tool that transforms Claude into a devel
 
 **Official Documentation**: [Claude Code Overview](https://docs.claude.com/en/docs/claude-code/overview)
 
-This document provides general background and information about Claude Code to help you understand its core concepts and capabilities. For hands-on lessons applying Claude Code to biocuration workflows, see the other parts of this tutorial: [Exploring LinkML Models with Claude Code](claude-code-linkml.md), [Creating Slash Commands for API Lookups](claude-code-slash-commands.md), and [Using MCPs for Ontology Lookups](claude-code-mcps.md). Please review this document to familiarize yourself with Claude Code before moving on to those practical lessons.
+This document provides general background and information about Claude Code to help you understand its core concepts and capabilities. For hands-on lessons applying Claude Code to biocuration workflows, see the other parts of this tutorial: [Exploring LinkML Models with Claude Code](claude-code-linkml.md), [Skills for Biocuration Workflows](claude-code-skills.md), and [MCPs for Bioinformatics](claude-code-mcps.md). Please review this document to familiarize yourself with Claude Code before moving on to those practical lessons.
 
 ## OBO Academy Training Session Part 1
 <iframe width="560" height="315" src="https://www.youtube.com/embed/pUoelp2qbDI?si=SQMzTGQqmabiJy-1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 
 ## What is Claude Code?
 
@@ -181,8 +182,8 @@ Can you explain what you just did step-by-step?
 Now that you understand Claude Code basics, explore more advanced features:
 
 - **[Exploring LinkML Models with Claude Code](claude-code-linkml.md)** - Learn to navigate and extend AGR LinkML schemas
-- **[Creating Slash Commands for API Lookups](claude-code-slash-commands.md)** - Build reusable workflows for ChEBI, GO, and other API lookups
-- **[Using MCPs for Ontology Lookups](claude-code-mcps.md)** - Connect to EBI's Ontology Lookup Service for integrated ontology queries
+- **[Skills for Biocuration Workflows](claude-code-skills.md)** - Create reusable skills for ChEBI lookups, batch processing, and share via marketplaces
+- **[MCPs for Bioinformatics](claude-code-mcps.md)** - Connect to external systems like the OLS for ontology queries
 
 ## Resources
 
