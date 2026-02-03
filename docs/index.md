@@ -49,3 +49,11 @@ Critical Path Institute (CPI) is an independent, nonprofit organisation dedicate
 In April 2021, the CPI has commissioned the first version of this OBO course, contributing not only funding for the preparation and delivery of the materials, but also valuable feedback about the course contents and data for the practical exercises. We thank the CPI for contributing significantly to the OBO community and open science!
 
 https://c-path.org/
+
+### Monarch Initiative
+
+<img src="https://tislab.org/images/research/monarch.png" width="300" />
+
+The Monarch Initiative has been a long-standing contributor to the OBO Academy. Since 2021, Monarch has run a [dedicated OBO Academy seminar series](https://oboacademy.github.io/obook/courses/monarch-obo-training/) focused on practical ontology development and application, helping to onboard and upskill researchers across the community. In addition, Monarch has contributed several hands-on tutorials to the OBO Academy curriculum and manages the [OBO Academy YouTube channel](https://www.youtube.com/@obo-academy), ensuring that high-quality training materials and recorded sessions remain openly accessible to the broader biomedical and ontology communities.
+
+https://monarchinitiative.org/
