@@ -1,6 +1,6 @@
 # Getting Started with Claude Code: A (super) Beginner's Guide
 
-> _This document was created by Sabrina Toro and reviewed by Nico Matentzoglu, based on 1:1 sessions, workshops, and bootcamp training. The goal of this guide is to help curators and non-developers get started on their journey with Claude Code, from initial setup through everyday use, so they can confidently integrate it into their curation workflows. This document is a guideline and should not be considered as "the right way" to use Claude. Once more comfortable, Claude-code users should find the workflow that works best for them. 
+> _This document was created by Sabrina Toro and reviewed by Nico Matentzoglu, based on 1:1 sessions, workshops, and bootcamp training. The goal of this guide is to help curators and non-developers get started on their journey with Claude Code, from initial setup through everyday use, so they can confidently integrate it into their curation workflows. This document is a guideline and should not be considered as "the right way" to use Claude. Once more comfortable, Claude-code users should find the workflow that works best for them. It is also important to note that the field is changing very rapidely, and "best solutions" or "best practices" also change rapidely. 
 Last reviewed March 2026_
 
 ---
@@ -108,6 +108,15 @@ Claude has three modes. You switch between them by pressing **Shift + Tab**.
 - Stay in Default Mode until you feel confident. Use Plan Mode when you want to discuss a strategy without risk.
 - Be cognizant of the authorization you give Claude. One should never blindly give full permission without understanding the consequences 
 
+**Tips: what if I do not understand the permission it is asking for?** 
+Ask Claude what it is doing or to explain the task. You can do this by either:
+- selecting "no" and asking to explain the task
+- type `/btw` at any point, even while Claude is running, and get an answer to a question
+- type `Ctrl+E`; this will load an explanation. Use Tab to amend the options (and once the amendment has taken place, Claude will ask you again if it can proceed)
+
+
+
+
 #### Exercise:
 Switch from one mode to another by pressing **Shift + Tab**.
 
@@ -133,6 +142,15 @@ claude -c
 ```
 
 The `-c` means "continue." Claude will reconnect to your previous session and remember the conversation.
+
+#### Continuing an specific session
+
+```
+claude --session 9e9837498379874398374983749873984793874
+```
+
+The number is the session number from Claude. You can ask Claude to share this session number with you if you want to get back to it at a later point.
+
 
 **When to start fresh vs. continue:**
 
@@ -362,6 +380,15 @@ Note that currently, one can only install one plugin at a time!!
 3. Choose and install a Skill (e.g., editing-obo-ontologies)
 4. **Test:** Type `/plugin` and navigate to "Installed" to confirm the Skill appears
 
+
+**Keeping your Skills up-to-date**
+As the AI models progress rapidly, Skills can also become out of date rapidly. It is therefore important to regularly update them. 
+To update a skill (or enable the “automated update”), you can go to Claude and type:
+- /plugin (this will open a chat with tabs)
+- Select “marketplaces” (using the tab or arrow key)
+- Select the marketplace of your choice
+- Select “update” or “enable automated update”
+
 ### 5.3 Using Skills
 - You can run a specific Skill by typing "/(name of the skill)". If an input is required, you can add it afterward. Claude will ask you if an input is required and you haven't submitted it
 - You can also ask Claude to "use Skill X"
@@ -377,15 +404,17 @@ Sometimes, a task that we create (see Part 6: Workflows) can be reused to solve 
 **How to:**
 - In a "clean" environment, create a task (see Part 6: Workflows) as specific as possible. Make sure to test this task, and iterate (testing and making changes) until the results are as expected. This step is the most important and the most time consuming step.
 - When your task is created (ie you have a clear plan on what to do and what to execute), you can save this task as a markdown (.md) file and save it in your directory (.claude folder in your repository)
-
+- Ask Claude to "create a Skill" based on the task.md and **based on the official most up-to-date documentation**. Claude will create it in the correct format and add it in the correct folder. 
 
 
 **Tips**:
 - It is ok (even preferable) to create several smaller Skills in order to create a "big Skill". For example, a Skill to "create a new ontology term" might include a Skill to check the ID to be used, check that the term does not already exist in the ontology, etc...
-
+- One should be aware of **not overspecifying** a Skill. While it is crucial to be as specific as possible, a skill must be general enough to be reusable across projects and tasks. Therefore, one should be careful not to write the Skill in a way that is too specific to a particular resource or data set, especially if the intension is to reuse the Skill across different projects or tasks.
 
 #### Other Resources
 - https://resources.anthropic.com/hubfs/The-Complete-Guide-to-Building-Skill-for-Claude.pdf
+
+
 
 ### 5.5 Model Context Protocol (MCP)
 
