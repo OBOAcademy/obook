@@ -7,7 +7,8 @@ Last reviewed March 2026_
 
 ## Part 1: What Is Claude Code?
 
-Claude Code is an AI assistant that lives in your terminal (the text-based command window on your computer). It can read your files, help you write and edit code, plan tasks, and work alongside you on projects. Think of it as a very capable helper that sits inside your coding environment.
+Claude Code is an AI assistant that runs in your terminal (the text-based command window on your computer). It can read your files, help you write and edit code, plan tasks, and work alongside you on projects. Think of it as a very capable helper that sits inside your coding environment. 
+It is important to note that, though Claude Code runs in your terminal, it sends your prompts and potentially other context from your working environment to Anthropic's servers to generate responses. As with any AI tools, one exercise caution when working with sensitive data (Claude Code data usage can be found [here](https://code.claude.com/docs/en/data-usage)).
 
 ### Important Things to Keep in Mind
 
