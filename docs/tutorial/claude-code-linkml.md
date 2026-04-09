@@ -513,8 +513,8 @@ LinkML generates normalized schemas; databases may denormalize:
 
 You've learned how to explore and extend LinkML schemas with Claude Code. Continue with:
 
-- **[Creating Slash Commands for API Lookups](claude-code-slash-commands.md)** - Build reusable workflows for ontology lookups
-- **[Using MCPs for Ontology Lookups](claude-code-mcps.md)** - Connect to EBI's Ontology Lookup Service for integrated ontology queries
+- **[Skills for Biocuration Workflows](claude-code-skills.md)** - Create reusable skills for lookups, batch processing, and share via marketplaces
+- **[MCPs for Bioinformatics](claude-code-mcps.md)** - Connect to external systems like the OLS for ontology queries
 
 ## Summary
 

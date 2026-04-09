@@ -12,7 +12,7 @@ This guide on [_How to select and request terms from ontologies_](https://dourou
 
 ### Why make a new term request?
 
-Onologies are under constant development and are continuously expanded and iterated upon. You may discover that a term you need is not available in your preferred ontology. In this case, please make a new term request to the ontology.
+Ontologies are under constant development and are continuously expanded and iterated upon. You may discover that a term you need is not available in your preferred ontology. In this case, please make a new term request to the ontology.
 
 ### Making term requests to existing ontologies
 

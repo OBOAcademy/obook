@@ -27,10 +27,11 @@ Most session take place on the listed date at 8AM PT / 3PM UTC. If the tutorial 
 
 | Date | Lesson | Presenter / Notes | Recordings |
 | --- | --- | --- | --- |
-| 2025/12/09 | Efficient Biocuration and Bioinformatics with Claude Code Part 2 | Chris Tabone |  |
-| 2025/11/11 | Generating SPARQL queries with ChatGPT | Trish Whetzel |  |
-| 2025/10/14 | [Efficient Biocuration and Bioinformatics with Claude Code Part 1](https://oboacademy.github.io/obook/tutorial/claude-code-getting-started/) | Chris Tabone | [here](https://youtu.be/pUoelp2qbDI?si=oSFPtkRI7LuHm-kq)  |
-| July & August & Sept 2025 | _No Meeting_ | Enjoy Summer break! |  |
+| 2026/03/31 | Coming soon! | |  |
+| 2026/03/03 | Ontology Curation as It Was Meant to Be: Community Deliberation over Evidence | Nico Matentzoglu | [Here](https://youtu.be/xQcUe2RsTC4?si=CdNDDHYg5oaxdEnF)  |
+| 2026/02/03 | [Efficient Biocuration and Bioinformatics with Claude Code Part 2](https://oboacademy.github.io/obook/tutorial/claude-code-skills/)| Chris Tabone| [Here](https://youtu.be/UOjzTGnG_XM?si=KAv2WOXJuScn_UoN)  |
+| 2025/11/11 | [Generating SPARQL queries with ChatGPT](https://oboacademy.github.io/obook/tutorial/sparql-llm/) | Trish Whetzel | [Here](https://youtu.be/h3Dz0TxUB5c?si=OlGO_4gVvbc18F--) |
+| 2025/10/14 | [Efficient Biocuration and Bioinformatics with Claude Code Part 1](https://oboacademy.github.io/obook/tutorial/claude-code-getting-started/) | Chris Tabone | [Here](https://youtu.be/pUoelp2qbDI?si=oSFPtkRI7LuHm-kq)  |
 | 2025/06/24 | [From Fuzzy to Clear: Writing Ontology Definitions That Work](https://docs.google.com/presentation/d/1UsjN7OzSXsRMy1v7ucvMBmlUF0VUau3pJYXV3wXMEzs/edit?slide=id.p#slide=id.p) <br> This is a tutorial for curators at any level.| Sabrina Toro  | [here](https://youtu.be/jhJWv-2d-S4?si=KPuHA5wXTWT_n0Q4)
 | 2025/06/09 | Using AI coding apps for ontology developers. [Tutorial material](https://ai4curation.github.io/aidocs/tutorials/ontology-editing-with-ai/) | Chris Mungall | [Here](https://youtu.be/4nyeGFACPKI?si=56v1jVXT8VYqZXUn) |
 | 2025/04/08 | Introduction to developing agentic workflows for semantic engineers. [Tutorial material](https://github.com/cmungall/agent-tutorial) | Chris Mungall | [Here](https://youtu.be/Ml0YVjKnZnE?si=BVLomWUjPoAqH5oG) | 

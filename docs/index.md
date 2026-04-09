@@ -27,7 +27,7 @@ _Note_: We are in the process of transforming the documentation accordingly, so 
 - _Nicolas Matentzoglu_, Semanticly, Athens, Greece. Nico is an Ontology Engineer and Ontology Pipeline Specialist, being the Principal Ontology Pipeline Developer for the Monarch Initiative.
 - _Shawn Tan_, Novo Nordisk
 - _David Osumi-Sutherland_, EMBL-EBI
-- _Sabrina Toro_, University of Colorado
+- _Sabrina Toro_, University of North Carolina at Chapel Hill
 
 If you would like to contribute to this training, please [find out more here](contributing.md).
 
@@ -46,6 +46,14 @@ If you would like to contribute to this training, please [find out more here](co
 
 Critical Path Institute (CPI) is an independent, nonprofit organisation dedicated to bringing together experts from regulatory agencies, industry and academia to collaborate and improve the medical product development process.
 
-In April 2021, the CPI has commissioned the first version of this OBO course, contributing not only funding for the preparation and delivery of the materials, but also valuable feedback about the course contents and data for the practical exercises. We thank the CPI for contributing significantly to the OBO community and open science!
+In April 2021, the CPI commissioned the first version of this OBO course, contributing not only funding for the preparation and delivery of the materials, but also valuable feedback about the course contents and data for the practical exercises. We thank the CPI for contributing significantly to the OBO community and open science!
 
 https://c-path.org/
+
+### Monarch Initiative
+
+<img src="https://github.com/user-attachments/assets/a41c285f-f208-42e3-b228-6c1a077839c3" width="300" />
+
+The Monarch Initiative has been a long-standing contributor to the OBO Academy. Since 2021, Monarch has run a [dedicated OBO Academy seminar series](https://oboacademy.github.io/obook/courses/monarch-obo-training/) focused on practical ontology development and application, helping to onboard and upskill researchers across the community. In addition, Monarch has contributed several hands-on tutorials to the OBO Academy curriculum and manages the [OBO Academy YouTube channel](https://www.youtube.com/@obo-academy), ensuring that high-quality training materials and recorded sessions remain openly accessible to the broader biomedical and ontology communities.
+
+https://monarchinitiative.org/
