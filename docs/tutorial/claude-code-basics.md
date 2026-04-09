@@ -41,22 +41,31 @@ Follow the [official installation and update instructions](https://docs.anthropi
 
 ## Part 3: Getting Comfortable with the System
 
-This section walks you through the basics: navigating VS Code, opening a terminal, starting Claude, understanding its modes, and managing sessions.
+This section walks you through the basics: navigating your environment, opening a terminal, starting Claude, understanding its modes, and managing sessions.
 
 ### 3.1 Walking Through VS Code
 
-VS Code is where you will do most of your work. Here are the key things to know:
+VS Code is where many curators do most of their work. Here are the key things to know:
 
 - **File explorer (left panel):** Shows all the files and folders in your project. Click to open files.
 - **Editor (center):** Where you read and edit files.
 - **Terminal (bottom panel):** Where you type commands and interact with Claude. Open it from the menu: Terminal → New Terminal.
 - **Source control:** Changes you make to files show up here. You can also use `git diff` in the terminal to review changes.
 
+??? note "Alternative: Using a standalone terminal"
+    You do not need an IDE to use Claude Code. If you prefer working in a plain terminal:
+
+    1. Open your system's terminal app (Terminal on macOS, your preferred terminal on Linux)
+    2. Navigate to your project folder: `cd /path/to/your/repo`
+    3. Run `claude` to start
+
+    Use `ls` to browse files, `git diff` to review changes, and your preferred text editor to inspect files.
+
 #### Exercise: Getting Comfortable with Your Setup
 
-1. Open a repository folder in your IDE or navigate to it in your terminal
-2. Browse the files to see what's there
-3. Open a terminal window (in VS Code: Terminal menu → New Terminal)
+1. Open a repository folder in VS Code (or navigate to it in your terminal)
+2. Look at the file list on the left side — browse around to see what's there
+3. Open a terminal window (Terminal menu → New Terminal)
 4. Start Claude and ask it to make a small change (e.g., "Add 'you are all done' at the end of this document")
 5. Observe how the change appears directly in the file
 6. Run `git diff` to see the change, then `git checkout .` to discard it
@@ -66,10 +75,9 @@ VS Code is where you will do most of your work. Here are the key things to know:
 
 ### 3.2 Opening and Using Claude Code
 
-1. Open VS Code
-2. Navigate to the folder (repository) you want to work in
-3. Open a terminal window
-4. Type `claude` and press Enter
+1. Open VS Code (or a terminal) and navigate to the folder (repository) you want to work in
+2. Open a terminal window
+3. Type `claude` and press Enter
 
 ```
 claude
