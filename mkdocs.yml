@@ -155,6 +155,7 @@ nav:
           - Named Entity Standardization: tutorial/named-entity-standardization.md
       - Biocuration with Claude Code:
           - Getting Started with Claude Code: tutorial/claude-code-getting-started.md
+          - Claude Code Beginner Guide: tutorial/claude-code-basics.md
           - Exploring LinkML Models with Claude Code: tutorial/claude-code-linkml.md
           - Skills for Biocuration Workflows: tutorial/claude-code-skills.md
           - MCPs for Bioinformatics: tutorial/claude-code-mcps.md
