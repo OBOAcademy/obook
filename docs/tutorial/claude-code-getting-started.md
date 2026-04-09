@@ -27,11 +27,10 @@ This document provides general background and information about Claude Code to h
 
 Claude Code requires Node.js 18+ and is available via npm:
 
-```bash
-npm install -g @anthropic-ai/claude-code
-```
+Follow the [official installation and update instructions](https://docs.anthropic.com/en/docs/claude-code/getting-started) to keep Claude Code up to date.
 
 Verify installation:
+
 ```bash
 claude --version
 ```
