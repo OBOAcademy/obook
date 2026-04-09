@@ -1,21 +1,24 @@
 # Getting Started with Claude Code: A (super) Beginner's Guide
 
-> _This document was created by Sabrina Toro and reviewed by Nico Matentzoglu, based on 1:1 sessions, workshops, and bootcamp training. The goal of this guide is to help curators and non-developers get started on their journey with Claude Code, from initial setup through everyday use, so they can confidently integrate it into their curation workflows. This document is a guideline and should not be considered as "the right way" to use Claude. Once more comfortable, Claude-code users should find the workflow that works best for them. It is also important to note that the field is changing very rapidely, and "best solutions" or "best practices" also change rapidely. 
+> _This document was created by Sabrina Toro and reviewed by Nico Matentzoglu, based on 1:1 sessions, workshops, and bootcamp training. The goal of this guide is to help curators and non-developers get started on their journey with Claude Code, from initial setup through everyday use, so they can confidently integrate it into their curation workflows. This document is a guideline and should not be considered as "the right way" to use Claude. Once more comfortable, Claude-code users should find the workflow that works best for them. It is also important to note that the field is changing very rapidly, and "best solutions" or "best practices" also change rapidly. 
 Last reviewed March 2026_
 
 ---
 
 ## Part 1: What Is Claude Code?
 
-Claude Code is an AI assistant that runs in your terminal (the text-based command window on your computer). It can read your files, help you write and edit code, plan tasks, and work alongside you on projects. Think of it as a very capable helper that sits inside your coding environment. 
-It is important to note that, though Claude Code runs in your terminal, it sends your prompts and potentially other context from your working environment to Anthropic's servers to generate responses. As with any AI tools, one should exercise caution when working with sensitive data (Claude Code data usage can be found [here](https://code.claude.com/docs/en/data-usage)).
+Claude Code is an AI assistant that runs in your terminal (the text-based command window on your computer). It can read your files, help you write and edit code, plan tasks, and work alongside you on projects. Think of it as a very capable helper that sits inside your coding environment.
+
+!!! warning "Data Privacy"
+    Though Claude Code runs in your terminal, it sends your prompts and potentially other context from your working environment to Anthropic's servers to generate responses. As with any AI tools, one should exercise caution when working with sensitive data. See [Claude Code data usage](https://code.claude.com/docs/en/data-usage) for details.
 
 ### Important Things to Keep in Mind
 
 - Claude is not an oracle or an intelligent being. It is an extremely efficient tool. You should never rely on Claude alone to tell you *how* to do something — you need to provide it with context and information so it can help you find the answer.
-- Claude is trained to please you. It will tend to agree with you and show you what you want to see. This means it is not always the best partner for debating ideas or getting pushback. Be aware of this.
+- Claude is trained to keep you using it. One approach to achieve this is to try to please you (Sycophancy) and might therefore agree with you on things where pushback would be more appropriate. Be aware of this.
 - It is easy to go down a rabbit hole with Claude. Stay focused on your task.
 - Claude cannot do work that you yourself cannot verify. For example, if you ask it to evaluate something, you need to explain and determine how this evaluation should be done. Claude can suggest evaluation paths that you might not have thought about, but ultimately, you will need to review, iterate, and decide on the best strategy.
+- **Claude Code should generally be run from within a repository.** A well-organized repository (e.g., one set up with ODK, with a clear README, Makefile, and CLAUDE.md) gives Claude much better context and leads to significantly better results. A poorly organized repository with missing structure will produce worse outcomes.
 
 ---
 
@@ -23,19 +26,16 @@ It is important to note that, though Claude Code runs in your terminal, it sends
 
 Before using Claude Code, you need:
 
-1. **VS Code** or any other IDE (Integrated Development Environment) such as Cursor — this is your code editor. Download it from https://code.visualstudio.com if you don't have it.
-2. **Claude Code installed** — follow the official installation instructions at https://github.com/anthropics/claude-code. Note: you will need a paid subscription to use Claude Code.
-3. **GitHub Desktop installed** — download from desktop.github.com.
+1. **A terminal** — Claude Code runs in any terminal. You can use a standalone terminal or the one built into an IDE like VS Code or Cursor. If you prefer working in an IDE, [VS Code](https://code.visualstudio.com) is a good choice as it lets you see file changes alongside the terminal.
+2. **Claude Code installed** — follow the official installation instructions at https://docs.anthropic.com/en/docs/claude-code/getting-started. Note: you will need a paid subscription to use Claude Code.
+3. **A git repository to work in** — Claude Code works best when run from the root of a git repository. If you're new to git, see the [GitHub Basics](github-basics.md) guide.
+
+!!! note
+    This guide uses VS Code as the IDE in its examples and exercises. This is one recommended workflow, particularly for teams that have standardized on VS Code. However, Claude Code works just as well from a plain terminal — adapt the instructions to your preferred setup.
 
 ### Keeping Claude Code Up to Date
 
-Run this command periodically in any terminal window to get the latest version:
-
-```
-brew upgrade claude-code
-```
-
-Note: it doesn't matter which folder you are in when you run this.
+Follow the [official installation and update instructions](https://docs.anthropic.com/en/docs/claude-code/getting-started) to keep Claude Code up to date.
 
 ---
 
@@ -50,16 +50,19 @@ VS Code is where you will do most of your work. Here are the key things to know:
 - **File explorer (left panel):** Shows all the files and folders in your project. Click to open files.
 - **Editor (center):** Where you read and edit files.
 - **Terminal (bottom panel):** Where you type commands and interact with Claude. Open it from the menu: Terminal → New Terminal.
-- **Source control:** Changes you make to files show up here (and in GitHub Desktop, if you use it).
+- **Source control:** Changes you make to files show up here. You can also use `git diff` in the terminal to review changes.
 
-#### Exercise: Getting Comfortable with VS Code
+#### Exercise: Getting Comfortable with Your Setup
 
-1. Open a folder or repository in VS Code
-2. Look at the file list on the left side — browse around to see what's there
-3. Open a terminal window (Terminal menu → New Terminal)
+1. Open a repository folder in your IDE or navigate to it in your terminal
+2. Browse the files to see what's there
+3. Open a terminal window (in VS Code: Terminal menu → New Terminal)
 4. Start Claude and ask it to make a small change (e.g., "Add 'you are all done' at the end of this document")
-5. Observe how the change appears directly in the file in VS Code
-6. If you use GitHub Desktop, open it and see how the change shows up there too (you can discard the change afterward)
+5. Observe how the change appears directly in the file
+6. Run `git diff` to see the change, then `git checkout .` to discard it
+
+!!! tip
+    For ontology repositories, always open the repository root folder (the one containing the Makefile and src/ directory) rather than a subfolder.
 
 ### 3.2 Opening and Using Claude Code
 
@@ -100,20 +103,24 @@ Claude has three modes. You switch between them by pressing **Shift + Tab**.
 - Use this when you want to think through a problem before acting
 - Great for creating a strategy or evaluation plan without accidentally changing anything
 
+!!! tip
+    If you find Plan Mode confusing, you can achieve the same thing by simply telling Claude: "Don't make any changes, just explain what you would do." You don't have to use the mode switcher.
+
 #### Accept Edits Mode
 - Claude will make changes **without asking permission**
 - Only use this once you are comfortable and trust what Claude is doing
-- Always review changes afterward using `git diff`
+- Always review changes afterward (e.g., using `git diff` or your IDE's diff viewer)
 
-**Recommendations for beginners:** 
-- Stay in Default Mode until you feel confident. Use Plan Mode when you want to discuss a strategy without risk.
-- Be cognizant of the authorization you give Claude. One should never blindly give full permission without understanding the consequences 
+!!! warning "Recommendations for beginners"
+    - Stay in Default Mode until you feel confident. Use Plan Mode when you want to discuss a strategy without risk.
+    - Be cognizant of the authorization you give Claude. One should never blindly give full permission without understanding the consequences.
 
-**Tips: what if I do not understand the permission it is asking for?** 
-Ask Claude what it is doing or to explain the task. You can do this by either:
-- selecting "no" and asking to explain the task
-- type `/btw` at any point, even while Claude is running, and get an answer to a question
-- type `Ctrl+E`; this will load an explanation. Use Tab to amend the options (and once the amendment has taken place, Claude will ask you again if it can proceed)
+!!! tip "What if I do not understand the permission it is asking for?"
+    Ask Claude what it is doing or to explain the task. You can do this by either:
+
+    - Selecting "no" and asking Claude to explain what it wants to do
+    - Typing `/btw` followed by your question — this lets you ask a quick side question without interrupting Claude's current work or adding to the conversation history. For example: `/btw what file is it trying to change?`
+    - Using `Ctrl+E` to see an explanation of the proposed action. Use Tab to amend the options (and once the amendment has taken place, Claude will ask you again if it can proceed)
 
 
 
@@ -143,15 +150,6 @@ claude -c
 ```
 
 The `-c` means "continue." Claude will reconnect to your previous session and remember the conversation.
-
-#### Continuing an specific session
-
-```
-claude --session 9e9837498379874398374983749873984793874
-```
-
-The number is the session number from Claude. You can ask Claude to share this session number with you if you want to get back to it at a later point.
-
 
 **When to start fresh vs. continue:**
 
@@ -255,7 +253,8 @@ Stop adding pleasantries at the start of responses.
 
 This is where you put preferences that apply no matter what project you're working on.
 
-**Note:** After changing global files (settings or context), restart Claude to make sure the changes take effect.
+!!! note
+    After changing global files (settings or context), restart Claude to make sure the changes take effect.
 
 ##### Exercise: Create a Global CLAUDE.md
 
@@ -320,7 +319,7 @@ Experiment with adding additional guardrails. Examples:
 ---
 
 ## Part 5: Skills
-This section describes what Skills are, where they can be found, and created. There is a lot of more detailed information related to Skills, for example [here](xxxx)
+This section describes what Skills are, where they can be found, and created. For more detailed information on Skills, see the [Claude Code Skills documentation](https://docs.anthropic.com/en/docs/claude-code/skills).
 
 ### 5.1 What Are Skills?
 Skills extend the ability of AI agents to do a given task in a reproducible way. They are
@@ -410,7 +409,7 @@ Sometimes, a task that we create (see Part 6: Workflows) can be reused to solve 
 
 **Tips**:
 - It is ok (even preferable) to create several smaller Skills in order to create a "big Skill". For example, a Skill to "create a new ontology term" might include a Skill to check the ID to be used, check that the term does not already exist in the ontology, etc...
-- One should be aware of **not overspecifying** a Skill. While it is crucial to be as specific as possible, a skill must be general enough to be reusable across projects and tasks. Therefore, one should be careful not to write the Skill in a way that is too specific to a particular resource or data set, especially if the intension is to reuse the Skill across different projects or tasks.
+- One should be aware of **not overspecifying** a Skill. While it is crucial to be as specific as possible, a skill must be general enough to be reusable across projects and tasks. Therefore, one should be careful not to write the Skill in a way that is too specific to a particular resource or data set, especially if the intention is to reuse the Skill across different projects or tasks.
 
 #### Other Resources
 - https://resources.anthropic.com/hubfs/The-Complete-Guide-to-Building-Skill-for-Claude.pdf
@@ -427,7 +426,7 @@ For example:
 
 Useful MCP:
 - [OLS MCP server](https://www.ebi.ac.uk/ols4/mcp)
-- [PMC (for literature)](XXXX)
+- PMC (for literature) — link coming soon
 
 How to install:
 - Ask Claude to install it by consulting the most up to date documentation
@@ -440,7 +439,7 @@ How to install:
 
 ## Part 6: Workflows
 
-This section describes recommended approaches for getting work done with Claude. These are based on Nico's workflow — **adapt them to what works best for you** once you're comfortable.
+This section describes one recommended approach for getting work done with Claude, based on Nico's workflow. **These are suggestions, not the only way to work.** Adapt them to what works best for you once you're comfortable — different teams and individuals will develop different workflows.
 
 ### 6.1 For Simple Tasks
 
@@ -486,7 +485,8 @@ You can ask Claude to suggest how it would solve the issue, and have a back and 
 Note that it is helpful to switch to **Plan Mode** (Shift + Tab) for all your planning before making changes
 
 
-**Important:** Review evaluation strategies carefully. Claude might suggest an approach you wouldn't have thought of, but you need to decide if you trust it. Remember — Claude cannot do work that you yourself cannot verify. If the plan includes an evaluation step, make sure you understand *how* the evaluation will work and whether you can confirm the results.
+!!! warning "Important"
+    Review evaluation strategies carefully. Claude might suggest an approach you wouldn't have thought of, but you need to decide if you trust it. Remember — Claude cannot do work that you yourself cannot verify. If the plan includes an evaluation step, make sure you understand *how* the evaluation will work and whether you can confirm the results.
 
 #### Step 4: Execute the Plan
 
@@ -537,7 +537,7 @@ This gives you a clean context window with full knowledge of what was done befor
 | Continue previous session | `claude -c` |
 | Close Claude | Control + C (twice) |
 | Switch modes | Shift + Tab |
-| Update Claude | `brew upgrade claude-code` |
+| Update Claude | [See official docs](https://docs.anthropic.com/en/docs/claude-code/getting-started) |
 | Initialize project context | `/init` |
 | Browse/install Skills | `/plugin` |
 | Run a specific Skill | `/(skill-name)` |
