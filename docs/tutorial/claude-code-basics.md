@@ -28,7 +28,7 @@ Before using Claude Code, you need:
 
 1. **A terminal** — Claude Code runs in any terminal. You can use a standalone terminal or the one built into an IDE like VS Code or Cursor. If you prefer working in an IDE, [VS Code](https://code.visualstudio.com) is a good choice as it lets you see file changes alongside the terminal.
 2. **Claude Code installed** — follow the official installation instructions at https://docs.anthropic.com/en/docs/claude-code/getting-started. Note: you will need a paid subscription to use Claude Code.
-3. **A git repository to work in** — Claude Code works best when run from the root of a git repository. If you're new to git, see the [GitHub Basics](github-basics.md) guide.
+3. **A git repository to work in** — Claude Code works best when run from the root of a git repository. If you're new to git, see the [GitHub Basics](../howto/github-basics.md) guide.
 
 !!! note
     This guide uses VS Code as the IDE in its examples and exercises. This is one recommended workflow, particularly for teams that have standardized on VS Code. However, Claude Code works just as well from a plain terminal — adapt the instructions to your preferred setup.
@@ -79,7 +79,7 @@ VS Code is where many curators do most of their work. Here are the key things to
 2. Open a terminal window
 3. Type `claude` and press Enter
 
-```
+```bash
 claude
 ```
 
@@ -89,25 +89,27 @@ That's it — Claude is now running and ready for you to chat with.
 
 Once Claude is running, you simply type what you want in the terminal and press Enter. Claude will respond in the same terminal window.
 
+#### Exercise
 
-#### Exercise: 
 Ask Claude something. For example:
+
 - "What files are in this project?"
 - "Read the file README.md and summarize it for me"
-
 
 ### 3.3 Claude Modes
 
 Claude has three modes. You switch between them by pressing **Shift + Tab**.
 
 #### Default Mode (start here)
+
 - Claude will **ask your permission** before making any changes to your files
 - This is the safest mode for beginners
 - Use this for most of your work
 
 #### Plan Mode
+
 - Claude will **not make any changes** at all
-- It will only discuss, plan, and suggest what it *could* do
+- It will only discuss, plan, and suggest what it _could_ do
 - Use this when you want to think through a problem before acting
 - Great for creating a strategy or evaluation plan without accidentally changing anything
 
@@ -115,6 +117,7 @@ Claude has three modes. You switch between them by pressing **Shift + Tab**.
     If you find Plan Mode confusing, you can achieve the same thing by simply telling Claude: "Don't make any changes, just explain what you would do." You don't have to use the mode switcher.
 
 #### Accept Edits Mode
+
 - Claude will make changes **without asking permission**
 - Only use this once you are comfortable and trust what Claude is doing
 - Always review changes afterward (e.g., using `git diff` or your IDE's diff viewer)
@@ -130,12 +133,9 @@ Claude has three modes. You switch between them by pressing **Shift + Tab**.
     - Typing `/btw` followed by your question — this lets you ask a quick side question without interrupting Claude's current work or adding to the conversation history. For example: `/btw what file is it trying to change?`
     - Using `Ctrl+E` to see an explanation of the proposed action. Use Tab to amend the options (and once the amendment has taken place, Claude will ask you again if it can proceed)
 
+#### Exercise
 
-
-
-#### Exercise:
 Switch from one mode to another by pressing **Shift + Tab**.
-
 
 ### 3.4 Closing and Restarting Claude
 
@@ -145,7 +145,7 @@ Press **Control + C** twice. You must close Claude properly — if you don't, it
 
 #### Starting a Fresh Session
 
-```
+```bash
 claude
 ```
 
@@ -153,7 +153,7 @@ This gives you a completely fresh start with no memory of previous conversations
 
 #### Continuing Where You Left Off
 
-```
+```bash
 claude -c
 ```
 
@@ -162,22 +162,24 @@ The `-c` means "continue." Claude will reconnect to your previous session and re
 **When to start fresh vs. continue:**
 
 | Start Fresh | Continue |
-|---|---|
+| --- | --- |
 | New task or topic | Same task after a break |
 | Claude seems confused | Need the previous context |
 | It has been a long session | Short interruption |
 
-#### Exercises:
+#### Exercises
+
 Exercise 1:
+
 - Ask something (or say something to Claude)
-- close and reopen Claude using the "fresh start" option (ie type `claude`)
+- Close and reopen Claude using the "fresh start" option (ie type `claude`)
 - Claude should say something like "you haven't asked me anything yet"
 
 Exercise 2:
-- Ask something (or say something to Claude)
-- close and reopen Claude using the "start continue" option (ie type `claude -c`)
-- Claude should show you the last question you asked (or the last thing you said)
 
+- Ask something (or say something to Claude)
+- Close and reopen Claude using the "continue" option (ie type `claude -c`)
+- Claude should show you the last question you asked (or the last thing you said)
 
 #### Why Restarting Matters
 
@@ -205,7 +207,7 @@ There are three levels, from most specific to most general:
 
 **To create one for a new project**, you can ask Claude:
 
-```
+```bash
 /init
 ```
 
@@ -229,7 +231,7 @@ This tells Claude to look at the project and create a CLAUDE.md with information
 
 **Example content:**
 
-```
+```text
 Always tell me which git branch I am on.
 Give me a short summary after each task.
 Never add "Co-Authored-By Claude" to commits.
@@ -253,7 +255,7 @@ You don't need to write this in any special format. Plain text or markdown both 
 
 **Example content:**
 
-```
+```text
 Use terse messages.
 Do not ever commit things under my name.
 Stop adding pleasantries at the start of responses.
@@ -274,21 +276,22 @@ This is where you put preferences that apply no matter what project you're worki
 
 ##### Extended Exercise: Customize Your Context Files
 
-Add more instructions to any of these context files (local, global, and at the repository level), including instructions on things you *don't* want Claude to do. This is where you tailor Claude to your personal preferences and working style. Examples:
+Add more instructions to any of these context files (local, global, and at the repository level), including instructions on things you _don't_ want Claude to do. This is where you tailor Claude to your personal preferences and working style. Examples:
 
 - "Never push or commit to GitHub"
 - "Always explain your reasoning before making changes"
 - "End every message with 'I am here to serve you, Your Highness'"
 
-Experiment and have fun — there is no wrong answer here. You can always edit, add and remove items in these files at any time. 
+Experiment and have fun — there is no wrong answer here. You can always edit, add and remove items in these files at any time.
 
 ### 4.2 Settings and Permissions
 
-Beyond context files, you can set up guardrails that control what Claude is *allowed* or *denied* to do. These are stored in settings files, not in the CLAUDE.md files.
+Beyond context files, you can set up guardrails that control what Claude is _allowed_ or _denied_ to do. These are stored in settings files, not in the CLAUDE.md files.
 
 **The difference:**
-- **CLAUDE.md** = context and instructions (Claude *should* follow these, but they are guidance)
-- **Settings files** = hard guardrails (Claude *cannot* bypass these)
+
+- **CLAUDE.md** = context and instructions (Claude _should_ follow these, but they are guidance)
+- **Settings files** = hard guardrails (Claude _cannot_ bypass these)
 
 #### Setting Up Permissions
 
@@ -327,120 +330,128 @@ Experiment with adding additional guardrails. Examples:
 ---
 
 ## Part 5: Skills
+
 This section describes what Skills are, where they can be found, and created. For more detailed information on Skills, see the [Claude Code Skills documentation](https://docs.anthropic.com/en/docs/claude-code/skills).
 
 ### 5.1 What Are Skills?
-Skills extend the ability of AI agents to do a given task in a reproducible way. They are
-- instructions to teach an AI agent how to approach a specific task.
+
+Skills extend the ability of AI agents to do a given task in a reproducible way. They are:
+
+- Instructions to teach an AI agent how to approach a specific task.
 - Reusable documents written in natural language, mostly.
 - Partially structured Markdown files with metadata and conventions.
 
 Skills are NOT:
-- code
-- tooling for helping an AI agent use specific resources (see MCP later)
-- storage for API keys or authorization tokens
-- your full project docs
+
+- Code
+- Tooling for helping an AI agent use specific resources (see MCP later)
+- Storage for API keys or authorization tokens
+- Your full project docs
 
 #### Structure of a Skill
-- Skills follow formal open standard specifications (see https://agentskills.io/specification)
-- Skills include
-   - name and description: this is the only part of the Skill that the agents (eg Claude-code) will read when deciding whether or not to use a specific Skill
-   - Body text: this explains what should be done and how (ie these are the instructions). This will be read ONLY when the Skill is used
 
-**Notes**: 
-- a Skill can refer to other Skills and other resources (eg scripts, reference documents, data files, etc)
-- a Skill can be used by "any" agentic AI framework
+- Skills follow formal open standard specifications (see [agentskills.io](https://agentskills.io/specification))
+- Skills include:
+  - Name and description: this is the only part of the Skill that the agents (eg Claude Code) will read when deciding whether or not to use a specific Skill
+  - Body text: this explains what should be done and how (ie these are the instructions). This will be read ONLY when the Skill is used
+
+**Notes:**
+
+- A Skill can refer to other Skills and other resources (eg scripts, reference documents, data files, etc)
+- A Skill can be used by “any” agentic AI framework
 - Skills are also helpful to document what NOT to do (eg do NOT add a contributor when creating a new term)
 
-
 ### 5.2 Finding and Installing Skills
-There are a lot of places where Skills can be found and reused. 
-For example: 
-- AI4curation/curation-skills: https://github.com/ai4curation/curation-skills
-- Anthropic official Skills repository: https://github.com/anthropics/skills
-- Awesome Agent Skills (a meta-repository): https://github.com/VoltAgent/awesome-agent-skills
 
-**How to find useful Skills? (and can I trust them?)** 
+There are a lot of places where Skills can be found and reused. For example:
+
+- AI4curation/curation-skills: <https://github.com/ai4curation/curation-skills>
+- Anthropic official Skills repository: <https://github.com/anthropics/skills>
+- Awesome Agent Skills (a meta-repository): <https://github.com/VoltAgent/awesome-agent-skills>
+
+**How to find useful Skills? (and can I trust them?)**
+
 In the context of this (very) Beginner guidelines document, the simple answer is: talk to your colleagues (especially developers) who have more experience and have used and tested Skills. They can suggest or recommend useful and trustworthy Skills.
 
-A list of useful Skills for curation tasks can be found here (link to come)
+A curated list of useful Skills for curation tasks is [under development](https://github.com/ai4curation/curation-skills/issues/4).
 
 #### Installing a Skill
-Example: let's install some Skills from the AI4Curation repository (https://github.com/ai4curation/curation-skills). These Skills include tools to use ODK and ROBOT.
 
-- in Claude type: /plugin 
-   This will open a window where one can navigate through several tabs (using the arrow or tab key) where the different Skills repository or marketplace can be found. 
-- navigate to Marketplaces, and "Add MarketPlace". You can enter your market place source, in this example: https://github.com/ai4curation/curation-skills
-- After your MarketPlace of choice is loaded, choose the plugin you want to install (eg editing-obo-ontologies)
-Note that currently, one can only install one plugin at a time!! 
-- Choose the level at which you want this Skill to be installed. It could be at any levels: local level (only for you on a specific repo), repo level (for all the teammates on the repo), or at the global level (for you across all repos) (see Part 4: Claude Setup and Security)
+Example: let's install some Skills from the AI4Curation repository (<https://github.com/ai4curation/curation-skills>). These Skills include tools to use ODK and ROBOT.
+
+- In Claude type: `/plugin`.
+  This will open a window where one can navigate through several tabs (using the arrow or tab key) where the different Skills repository or marketplace can be found.
+- Navigate to Marketplaces, and “Add MarketPlace”. You can enter your marketplace source, in this example: `https://github.com/ai4curation/curation-skills`
+- After your MarketPlace of choice is loaded, choose the plugin you want to install (eg editing-obo-ontologies). Note that currently, one can only install one plugin at a time.
+- Choose the level at which you want this Skill to be installed. It could be at any level: local level (only for you on a specific repo), repo level (for all the teammates on the repo), or at the global level (for you across all repos) (see Part 4: Claude Setup and Security)
 
 **Where are my installed Skills?**
-- to see what Skills are available in your repo, you can go to Claude and type: /plugin , then navigate to "Installed"
-- the Skills installed in a specific repository can be seen in the "settings.json" file in the .claude folder. The actual files are in the "plugins" folder of your computer folder ~/.claude.
-- the Skills installed locally can be seen in the "settings.local.json" file in the .claude folder. The actual files are in the "plugins" folder of your computer folder ~/.claude.
-- The Skills installed at the global level can be found in the "plugins" folder of your computer folder ~/.claude.
+
+- To see what Skills are available in your repo, you can go to Claude and type: `/plugin`, then navigate to “Installed”
+- The Skills installed in a specific repository can be seen in the `settings.json` file in the `.claude` folder. The actual files are in the `plugins` folder of your computer folder `~/.claude`.
+- The Skills installed locally can be seen in the `settings.local.json` file in the `.claude` folder. The actual files are in the `plugins` folder of your computer folder `~/.claude`.
+- The Skills installed at the global level can be found in the `plugins` folder of your computer folder `~/.claude`.
 
 #### Exercise: Install a Skill
 
 1. In Claude, type `/plugin` and navigate to the Marketplaces tab
-2. Add the AI4Curation marketplace: https://github.com/ai4curation/curation-skills
+2. Add the AI4Curation marketplace: `https://github.com/ai4curation/curation-skills`
 3. Choose and install a Skill (e.g., editing-obo-ontologies)
-4. **Test:** Type `/plugin` and navigate to "Installed" to confirm the Skill appears
-
+4. **Test:** Type `/plugin` and navigate to “Installed” to confirm the Skill appears
 
 **Keeping your Skills up-to-date**
-As the AI models progress rapidly, Skills can also become out of date rapidly. It is therefore important to regularly update them. 
+
+As the AI models progress rapidly, Skills can also become out of date rapidly. It is therefore important to regularly update them.
 To update a skill (or enable the “automated update”), you can go to Claude and type:
-- /plugin (this will open a chat with tabs)
+
+- `/plugin` (this will open a chat with tabs)
 - Select “marketplaces” (using the tab or arrow key)
 - Select the marketplace of your choice
 - Select “update” or “enable automated update”
 
 ### 5.3 Using Skills
-- You can run a specific Skill by typing "/(name of the skill)". If an input is required, you can add it afterward. Claude will ask you if an input is required and you haven't submitted it
-- You can also ask Claude to "use Skill X"
 
-It is important to remember that 
-- Claude is a good canvas to explore how to do some tasks, however, one cannot assume Claude knows how to use the tools and how to do things. While Skills help with learning "how to do" things, one might need to tell Claude which Skills to use.
+- You can run a specific Skill by typing `/(name of the skill)`. If an input is required, you can add it afterward. Claude will ask you if an input is required and you haven't submitted it.
+- You can also ask Claude to “use Skill X”.
+
+It is important to remember that:
+
+- Claude is a good canvas to explore how to do some tasks, however, one cannot assume Claude knows how to use the tools and how to do things. While Skills help with learning “how to do” things, one might need to tell Claude which Skills to use.
 - Claude only checks the name and description of a Skill to determine whether to use it or not. Once it has determined that it will use a Skill, it will load it, read it, and follow the instructions on how to use it.
 
-
 ### 5.4 Creating Skills
-Sometimes, a task that we create (see Part 6: Workflows) can be reused to solve the same or similar issue in different context. For examples: add a new term in an ontology, analyze a github issue. In these cases, it is useful to turn this task into a Skill that can be shared with the rest of the team, and reused in these different contexts. 
+
+Sometimes, a task that we create (see Part 6: Workflows) can be reused to solve the same or similar issue in different context. For examples: add a new term in an ontology, analyze a github issue. In these cases, it is useful to turn this task into a Skill that can be shared with the rest of the team, and reused in these different contexts.
 
 **How to:**
-- In a "clean" environment, create a task (see Part 6: Workflows) as specific as possible. Make sure to test this task, and iterate (testing and making changes) until the results are as expected. This step is the most important and the most time consuming step.
+
+- In a “clean” environment, create a task (see Part 6: Workflows) as specific as possible. Make sure to test this task, and iterate (testing and making changes) until the results are as expected. This step is the most important and the most time consuming step.
 - When your task is created (ie you have a clear plan on what to do and what to execute), you can save this task as a markdown (.md) file and save it in your directory (.claude folder in your repository)
-- Ask Claude to "create a Skill" based on the task.md and **based on the official most up-to-date documentation**. Claude will create it in the correct format and add it in the correct folder. 
+- Ask Claude to “create a Skill” based on the task.md and **based on the official most up-to-date documentation**. Claude will create it in the correct format and add it in the correct folder.
 
+**Tips:**
 
-**Tips**:
-- It is ok (even preferable) to create several smaller Skills in order to create a "big Skill". For example, a Skill to "create a new ontology term" might include a Skill to check the ID to be used, check that the term does not already exist in the ontology, etc...
+- It is ok (even preferable) to create several smaller Skills in order to create a “big Skill”. For example, a Skill to “create a new ontology term” might include a Skill to check the ID to be used, check that the term does not already exist in the ontology, etc.
 - One should be aware of **not overspecifying** a Skill. While it is crucial to be as specific as possible, a skill must be general enough to be reusable across projects and tasks. Therefore, one should be careful not to write the Skill in a way that is too specific to a particular resource or data set, especially if the intention is to reuse the Skill across different projects or tasks.
 
 #### Other Resources
-- https://resources.anthropic.com/hubfs/The-Complete-Guide-to-Building-Skill-for-Claude.pdf
 
-
+- [The Complete Guide to Building Skills for Claude](https://resources.anthropic.com/hubfs/The-Complete-Guide-to-Building-Skill-for-Claude.pdf)
 
 ### 5.5 Model Context Protocol (MCP)
 
-MCP is a standardized system that allows agents like Claude to connect with external data sources, tools, and software applications. Instead of creating a Skill to explain how to use an API correctly, MCPs allow the connection to the external data sources more easily and "correctly". 
-For example, the [OLS MCP server](https://www.ebi.ac.uk/ols4/mcp) allows Claude to access the information in OLS via an API, without us having to explain how to. 
+MCP is a standardized system that allows agents like Claude to connect with external data sources, tools, and software applications. Instead of creating a Skill to explain how to use an API correctly, MCPs allow the connection to the external data sources more easily and “correctly”.
+For example, the [OLS MCP server](https://www.ebi.ac.uk/ols4/mcp) allows Claude to access the information in OLS via an API, without us having to explain how to.
 You can add this MCP to your task, Skill, or CLAUDE.md to indicate that any ontology term ID should be found by going to OLS using the MCP.
 
-For example: 
+Useful MCPs:
 
-Useful MCP:
 - [OLS MCP server](https://www.ebi.ac.uk/ols4/mcp)
 - PMC (for literature) — link coming soon
 
 How to install:
+
 - Ask Claude to install it by consulting the most up to date documentation
-
-
-
 
 
 ---
@@ -484,24 +495,23 @@ Example: "I want to validate the cross-references by comparing breed names and e
 You can also ask Claude to help you refine this description: "Create an overview summary to describe the task so that Claude Code can understand it." Then review the result to make sure it makes sense and is complete.
 
 #### Step 3: Plan Before You Act
-This is the most important part of the workflow. 
+
+This is the most important part of the workflow.
 You need to make sure you explain and describe exactly what needs to be done and how to do it. Remember: Claude is not an oracle, it needs to be told what to do and how to do it.
 For example: if you ask it to evaluate, you need to explain how to do the evaluation. For example: use this specific skill, this is how to determine if X is correct, Y and Z are the same if XXX.
 
-You can ask Claude to suggest how it would solve the issue, and have a back and forth discussion about changes in the plans, or about including the use of Skills. However, you are ultimately the expert and it is your responsibility to ensure that the solution offered makes sense
+You can ask Claude to suggest how it would solve the issue, and have a back and forth discussion about changes in the plans, or about including the use of Skills. However, you are ultimately the expert and it is your responsibility to ensure that the solution offered makes sense.
 
-Note that it is helpful to switch to **Plan Mode** (Shift + Tab) for all your planning before making changes
-
+Note that it is helpful to switch to **Plan Mode** (Shift + Tab) for all your planning before making changes.
 
 !!! warning "Important"
-    Review evaluation strategies carefully. Claude might suggest an approach you wouldn't have thought of, but you need to decide if you trust it. Remember — Claude cannot do work that you yourself cannot verify. If the plan includes an evaluation step, make sure you understand *how* the evaluation will work and whether you can confirm the results.
+    Review evaluation strategies carefully. Claude might suggest an approach you wouldn't have thought of, but you need to decide if you trust it. Remember — Claude cannot do work that you yourself cannot verify. If the plan includes an evaluation step, make sure you understand _how_ the evaluation will work and whether you can confirm the results.
 
 #### Step 4: Execute the Plan
 
 Once the plan is solid, switch to **Default Mode** (and to the appropriate repository) and ask Claude to execute it:
 
 > "Execute the plan we discussed"
-
 
 #### Step 5: Review the Results
 
@@ -525,7 +535,6 @@ Start Claude fresh (just `claude`, not `claude -c`) and restore context:
 
 This gives you a clean context window with full knowledge of what was done before.
 
-
 ### 6.4 Tips for Effective Workflows
 
 - **Break large tasks into smaller pieces.** Don't try to do everything at once. Validate each step before moving to the next.
@@ -540,7 +549,7 @@ This gives you a clean context window with full knowledge of what was done befor
 ## Quick Reference
 
 | Action | How |
-|---|---|
+| --- | --- |
 | Start Claude | `claude` |
 | Continue previous session | `claude -c` |
 | Close Claude | Control + C (twice) |
@@ -551,7 +560,7 @@ This gives you a clean context window with full knowledge of what was done befor
 | Run a specific Skill | `/(skill-name)` |
 
 | File | Location | Purpose |
-|---|---|---|
+| --- | --- | --- |
 | CLAUDE.md | Project root | Shared project context |
 | CLAUDE.local.md | Project root | Your personal project preferences |
 | ~/.claude/CLAUDE.md | Home directory | Your global preferences |
@@ -559,3 +568,12 @@ This gives you a clean context window with full knowledge of what was done befor
 | ~/.claude/settings.json | Home directory | Global permission guardrails |
 
 ---
+
+## Next Steps
+
+Once you are comfortable with the basics covered in this guide, explore the more advanced Claude Code tutorials:
+
+- [Getting Started with Claude Code (for biocuration)](claude-code-getting-started.md) — a more detailed walkthrough with biocuration-specific examples
+- [Exploring LinkML Models with Claude Code](claude-code-linkml.md) — using Claude Code to work with LinkML data models
+- [Skills for Biocuration Workflows](claude-code-skills.md) — deeper dive into creating and using Skills for curation
+- [MCPs for Bioinformatics](claude-code-mcps.md) — connecting Claude to external data sources with MCP
