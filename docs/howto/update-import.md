@@ -56,7 +56,7 @@ This workflow is appropriate if:
 1. You prefer to manage all your imported terms in a single file (rather than multiple files like in the "Using term files" workflow above).
 2. You wish to augment your imported ontologies with additional information. This requires a cautionary discussion.
 
-To enable this workflow, you add the following to your ODK config file (`src/ontology/cl-odk.yaml`), and update the repository (using `sh run.sh make update_repo`):
+To enable this workflow, you add the following to your ODK config file (`src/ontology/cl-odk.yaml`), and update the repository (using `sh run.sh update_repo`):
 
 ```
 use_custom_import_module: TRUE

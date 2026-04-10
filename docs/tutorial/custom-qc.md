@@ -46,7 +46,7 @@ robot_report:
 4. Update the repository. After adding the custom SPARQL check, you need to update your pipeline to take this check when testing the ontology.
 
 ```bash
-sh run.sh make update_repo
+sh run.sh update_repo
 ```
 
 5. Test the check. You can run the checks and verify the expected result.

@@ -55,7 +55,7 @@ Let us now import planned process:
         - id: cob
           module_type: filter
     ```
-6. Run `sh run.sh make update_repo` to apply the changes. Check out the git diff to the `Makefile` to convince yourself that the new extraction method has been applied.
+6. Run `sh run.sh update_repo` to apply the changes. Check out the git diff to the `Makefile` to convince yourself that the new extraction method has been applied.
 7. Let us refresh the COB import again: From within the `src/ontology` directory, run `sh run.sh make refresh-cob`. Convince yourself that now only the `planned process` term is imported.
 
 <a id="testing"></a>
