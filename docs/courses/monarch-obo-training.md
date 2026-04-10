@@ -6,7 +6,6 @@ The goal of this course is to provide ongoing training for the OBO community. As
 
 ## You (Students)
 - Join the [Monarch Tutorials Mailing List](https://groups.google.com/g/monarch-tutorials) to receive reminders about upcoming tutorials
-- Join the [OBO Slack Community](https://join.slack.com/t/obo-communitygroup/shared_invite/zt-37fu1zcxc-_wQRxOqHdRhEZcnU3CAAxQ) and find us on the #OBO-Academy channel
 - Read the ["Getting started" guide](../getting-started.md)
 - Check which lessons interest you in the upcoming schedule - mark your calendar and just participate in the ones you care about
 - Make detailed issues on our [issue tracker](https://github.com/jamesaoverton/obook/issues) when materials are broken, hard to follow or need more details - that is really important as we rely on you to help to improve our materials continuously.
