@@ -314,7 +314,7 @@ NOTE: If you need to add a new import dependency to your _project.yaml_ (e.g. yo
 ontology dependency to the `import_group` section), you need to run:
 
    ```
-   ../src/ontology/$ sh run.sh make update_repo
+   ../src/ontology/$ sh run.sh update_repo
    ```
 
 AND you need to add this newly added ontology dependency also to the import declaration sections of your

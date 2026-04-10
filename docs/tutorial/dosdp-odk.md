@@ -74,7 +74,7 @@ This flag activates DOSDP in ODK - without it, none of the DOSDP workflows in OD
 To fully activate DOSDP in your ontology, please run:
 
 ```
-sh run.sh make update_repo
+sh run.sh update_repo
 ```
 
 This will:

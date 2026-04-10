@@ -29,7 +29,7 @@ This will tell the ODK that you no longer wish to generate the ODK default repor
 Now, we can apply these changes as usual:
 
 ```
-sh run.sh make update_repo
+sh run.sh update_repo
 ```
 
 ### Adding the actual table report

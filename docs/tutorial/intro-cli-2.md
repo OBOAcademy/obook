@@ -308,7 +308,7 @@ In the following, we provide a list of aliases we find super useful:
 2. `alias orcid='echo '\''https://orcid.org/0000-0002-7356-1779'\'' | tr -d '\''\n'\'' | pbcopy'` - if you keep having to look up your ORCID, your favourite ontologies PURL or the your own zoom room, why not add a shortcut that copies it straight into your clipboard?
 3. `alias opent='open ~/tools'` - why not open your favourite directory in finder without faving to search the User Interface? You can use the same idea to open your favourite ontology from wherever you are, i.e. `alias ohp='open ~/ws/human-phenotype-ontology/src/ontology/hp-edit.owl'`.
 4. `alias env-linkml='source ~/.pyenv/versions/linkml/bin/activate'` - use simple shortcuts to active your python environments. This will become more important if you learn to master special python tools like [OAK](https://github.com/INCATools/ontology-access-kit).
-5. `alias update_repo='sh run.sh make update_repo'` - for users of ODK - alias all your long ODK commands!
+5. `alias update_repo='sh run.sh update_repo'` - for users of ODK - alias all your long ODK commands!
 
 ### Functions
 

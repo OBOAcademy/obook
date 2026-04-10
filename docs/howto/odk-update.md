@@ -23,7 +23,7 @@ sh run.sh update_repo
 sh run.sh update_repo
 ```
 
-Note, for older ODK versions the command is `sh run.sh make update_repo` .
+Note, for older ODK versions the command is `sh run.sh update_repo` .
 
 4. Edit the following file: `.github/workflows/qc.yml` (from the top level of your repository) and make sure that it is using the latest version of the ODK.
 
