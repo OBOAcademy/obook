@@ -55,7 +55,7 @@ There is documentation on the [ROBOT extract page](https://robot.obolibrary.org/
 
 There may be a case when you have imported a term using SLME or MIREOT where you find a need to add an axiom. If that happens, the best practice is to try to make an issue or PR with the originating ontology to get the axiom added. 
 
-If more urgent action is required, or there are difficulties with that process, a less preferrable but viable alternative is to add an annotation property **on the new axiom** that clearly states the axiom has been added in your ontology and is not in the original ontology.
+If more urgent action is required, or there are difficulties with that process, a less preferrable but viable alternative is to add an annotation property **on the new axiom** that clearly states the axiom has been added in your ontology and is not in the original ontology. Such axioms should not be included in the base release of the ontology (this is known as "axiom injection" -- see [this issue](https://github.com/OBOFoundry/OBOFoundry.github.io/issues/1991) for a lengthy discussion).
 
 ## SSSOM - aka Referential import
 
