@@ -26,7 +26,7 @@ Most session take place on the listed date at 8AM PT / 3PM UTC. If the tutorial 
 
 | Date | Lesson | Presenter / Notes | Recordings |
 | --- | --- | --- | --- |
-| 2026/03/31 | Coming soon! | |  |
+| 2026/04/28 | Coming soon! | |  |
 | 2026/03/03 | Ontology Curation as It Was Meant to Be: Community Deliberation over Evidence | Nico Matentzoglu | [Here](https://youtu.be/xQcUe2RsTC4?si=CdNDDHYg5oaxdEnF)  |
 | 2026/02/03 | [Efficient Biocuration and Bioinformatics with Claude Code Part 2](https://oboacademy.github.io/obook/tutorial/claude-code-skills/)| Chris Tabone| [Here](https://youtu.be/UOjzTGnG_XM?si=KAv2WOXJuScn_UoN)  |
 | 2025/11/11 | [Generating SPARQL queries with ChatGPT](https://oboacademy.github.io/obook/tutorial/sparql-llm/) | Trish Whetzel | [Here](https://youtu.be/h3Dz0TxUB5c?si=OlGO_4gVvbc18F--) |
