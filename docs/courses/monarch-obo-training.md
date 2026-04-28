@@ -6,11 +6,12 @@ The goal of this course is to provide ongoing training for the OBO community. As
 
 ## You (Students)
 - Join the [Monarch Tutorials Mailing List](https://groups.google.com/g/monarch-tutorials) to receive reminders about upcoming tutorials
+- Join the [OBO Community Slack](https://docs.google.com/forms/d/e/1FAIpQLScJbdW0QcCS3432mHkTiir9D-HwT5g2iaXYiiy2aOOiCFS3RQ/viewform?usp=dialog) #OBO-Academy channel to stay up to date on the latest tutorials
 - Read the ["Getting started" guide](../getting-started.md)
 - Check which lessons interest you in the upcoming schedule - mark your calendar and just participate in the ones you care about
 - Make detailed issues on our [issue tracker](https://github.com/jamesaoverton/obook/issues) when materials are broken, hard to follow or need more details - that is really important as we rely on you to help to improve our materials continuously.
 - Find recordings of previous session on our [YouTube channel](https://www.youtube.com/@obo-academy)
-- Request new course units from us using the issue tracker. If you are intersted in leading a session, reach out to the organisers listed below! 
+- Request new course units from us using the issue tracker or Slack. If you are intersted in leading a session, reach out to the organisers listed below! 
 
 ## We (Tutors and Organisers)
 - [Nico Matentzoglu](https://orcid.org/0000-0002-7356-1779), Semanticly, Athens, Greece
@@ -22,11 +23,11 @@ The goal of this course is to provide ongoing training for the OBO community. As
 - Organise the course and rooms
 
 ## Schedule
-Most session take place on the listed date at 8AM PT / 3PM UTC. If the tutorial time is different, those on the [mailing list](https://groups.google.com/g/monarch-tutorials) or Slack will receive a message with the information. <br>_Note: this schedule is tentative and subject to change_ <br>
+Most session take place on the listed date at 8AM PT / 3PM UTC. If the tutorial time is different, those on the [mailing list](https://groups.google.com/g/monarch-tutorials) or [Slack](https://docs.google.com/forms/d/e/1FAIpQLScJbdW0QcCS3432mHkTiir9D-HwT5g2iaXYiiy2aOOiCFS3RQ/viewform?usp=dialog) will receive a message with the information. <br>_Note: this schedule is tentative and subject to change_ <br>
 
 | Date | Lesson | Presenter / Notes | Recordings |
 | --- | --- | --- | --- |
-| 2026/04/28 | Coming soon! | |  |
+|  |  | |  |
 | 2026/03/03 | Ontology Curation as It Was Meant to Be: Community Deliberation over Evidence | Nico Matentzoglu | [Here](https://youtu.be/xQcUe2RsTC4?si=CdNDDHYg5oaxdEnF)  |
 | 2026/02/03 | [Efficient Biocuration and Bioinformatics with Claude Code Part 2](https://oboacademy.github.io/obook/tutorial/claude-code-skills/)| Chris Tabone| [Here](https://youtu.be/UOjzTGnG_XM?si=KAv2WOXJuScn_UoN)  |
 | 2025/11/11 | [Generating SPARQL queries with ChatGPT](https://oboacademy.github.io/obook/tutorial/sparql-llm/) | Trish Whetzel | [Here](https://youtu.be/h3Dz0TxUB5c?si=OlGO_4gVvbc18F--) |
