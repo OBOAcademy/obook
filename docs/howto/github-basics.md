@@ -33,12 +33,11 @@ Issues are easy to create, flexible, and useful for tracking ideas, feedback, ta
 <img width="1887" height="173" alt="Screenshot 2025-11-18 at 9 21 13 AM" src="https://github.com/user-attachments/assets/aa79da97-7367-4cee-82f5-2537c3e353a9" />
 
 4. In the **Add a title** field, type a concise title for your issue.The title should convey at a glance what the issue is about.
-   - Example: add phenotype abnormal intestinal cells  
-<img width="1030" height="687" alt="Screenshot 2025-11-19 at 9 44 26 AM" src="https://github.com/user-attachments/assets/d18c5186-a525-4c79-b6be-cbab06b84ac9" />
-
+   
+   - Example: request new synonyms for ZP:0000043 decreased size of eye
+    
 5. In the **Add a description** field, type a description providing more information of your issue.
-   - Example:[https://github.com/zappfish/zapp-atlas/issues/52](https://github.com/zappfish/zapp-atlas/issues/52)
-
+   - <img width="695" height="597" alt="blog3_fig3" src="https://github.com/user-attachments/assets/d24f973f-878f-4f6c-a787-9fdd637dfca2" />
 6. Add any labels to specify the issue by clicking on **Labels**. Note: This is not required.
 7. To draw someone's attention (with access to the repository) to your issue, mention them in your issue, click on or type **@**, followed by a **GitHub handle**.
 8. To link related issues in the same repository, you can type **#** followed by part of the issue title and then clicking the issue that you want to link.
