@@ -12,7 +12,7 @@ In this tutorial we introduce SPARQL, with a particular spin on how we use it ac
 
 - [RENCI Ubergraph Endpoint](https://api.triplydb.com/s/PHnGm2l5t): Many key OBO ontologies are loaded here with lots of materialised inferences ([docs](https://github.com/INCATools/ubergraph/)).
 - [Ontobee SPARQL endpoint](http://www.ontobee.org/sparql): Useful to run queries across all OBO Foundry ontologies.
-- [Yasgui](https://yasgui.triply.cc/): Yasgui is a simple and beautiful front-end for SPARQL endpoints which can be used not only to query, but also to share queries with others. For example [this simple SPARQL query](https://api.triplydb.com/s/r36KJ3x-D) runs across the RENCI Ubergraph Endpoint.
+- [Yasgui](https://yasgui.triply.cc/): Yasgui is a simple and beautiful front-end for SPARQL endpoints which can be used not only to query, but also to share queries with others. For example [this simple SPARQL query](https://api.triplydb.com/s/AuveN5kXN) runs across the RENCI Ubergraph Endpoint.
 - [GTF](https://sparql.gtf.fyi): A UI that allows one to run SPARQL queries on TTL files on the web, or upload them. Looks like its based on Yasgui, as it shares the same share functionality.
 - [ROBOT query](http://robot.obolibrary.org/query): ROBOT method to generate TSV reports from SPARQL queries, and applying data transformations (`--update`). ROBOT uses [Jena](https://jena.apache.org/tutorials/sparql.html) internally to execute SPARQL queries.
 - [ROBOT verify](http://robot.obolibrary.org/verify): ROBOT method to run SPARQL QC queries. If the query returns a result, the QC test fails.
