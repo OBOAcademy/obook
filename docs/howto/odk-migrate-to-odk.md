@@ -3,7 +3,7 @@
 These are instructions on how to migrate an existing ontology repository hosted on GitHub
 or GitLab to an ODK based workflow. They are heavily based on (and are often identical to) the
 instructions provided in [Creating a new Repository with the Ontology Development Kit](odk-create-repo.md).
-You may need assistance from someone with basic unix knowledge in following the instructions here.
+You may need assistance from someone with basic Unix knowledge in following the instructions here.
 
 ## 1. Install requirements
 
@@ -18,7 +18,7 @@ You may need assistance from someone with basic unix knowledge in following the 
     * ```export PATH=$PATH:~/tools``` (to add the _~/tools_ folder to your path for the current
       session)
         * Assuming you use Bash as your shell (the Ubuntu default), you could add the _~/tools_ folder permanently to your path in your Bash config file with:
-          ```
+          ```shell
           echo "
           # Adding ODK runner script living in ~/tools to PATH
           export PATH=\"\$PATH:~/tools\"" >> ~/.bashrc
@@ -47,10 +47,10 @@ The conversion to OFN can best be done with ROBOT, which is provided in ODK. If 
 installed the ODK runner previously, you can simply run the following command (replace
 [PATH TO YOUR “OLD” ONTOLOGY FILE] with the actual path to your “old” ontology file):
 
-  ```
-  odk robot convert \
-  --input [PATH TO YOUR “OLD” ONTOLOGY FILE] \
-  --format ofn --output [PATH TO YOUR “OLD” ONTOLOGY FILE].ofn
+  ```console
+  $ odk robot convert \
+    --input [PATH TO YOUR “OLD” ONTOLOGY FILE] \
+    --format ofn --output [PATH TO YOUR “OLD” ONTOLOGY FILE].ofn
   ```
 
 * If you didn't install the ODK runner, you need to download the ODK wrapper script into your
@@ -59,17 +59,16 @@ installed the ODK runner previously, you can simply run the following command (r
   running `sh odk.sh robot --version`, which should return the version of ROBOT (e.g.: `ROBOT 
 version 1.9.6`). Now, you can convert your current ontology file with:
 
+  ```console
+  $ sh odk.sh robot convert \
+    --input [PATH TO YOUR “OLD” ONTOLOGY FILE] \
+    --format ofn --output [PATH TO YOUR “OLD” ONTOLOGY FILE].ofn
   ```
-  sh odk.sh robot convert \
-  --input [PATH TO YOUR “OLD” ONTOLOGY FILE] \
-  --format ofn --output [PATH TO YOUR “OLD” ONTOLOGY FILE].ofn
-  ```
-
 
 In the below example of the Chemical Methods Ontology (CHMO), you can see that it
 declares terms from the following namespaces:
 
-* classes from BFO,FIX, CHEBI, IAO, MS, OBSC, OBI and REX
+* classes from BFO, FIX, CHEBI, IAO, MS, OBSC, OBI, and REX
 * object properties from BFO, IAO, OBI, and RO
 * and annotation properties from various other ontologies.
 
@@ -105,10 +104,10 @@ declares terms from the following namespaces:
   ```
   
 Based on this and assuming that all native terms within CHMO use the CHMO namespace
-(obo:CHMO_), we can derive that CHMO needs to have import modules for BFO, RO, CHEBI,
-IAO, OBI, MS, OBSC, REX and FIX to properly import the terms from these ontologies. To
-reuse the standard OBO annotation properties, like IAO:0000115 or
-oboInOwl:SynonymTypeProperty, you should import the complete
+(`obo:CHMO_`), we can derive that CHMO needs to have import modules for BFO, RO, CHEBI,
+IAO, OBI, MS, OBSC, REX, and FIX to properly import the terms from these ontologies. To
+reuse the standard OBO annotation properties, like `IAO:0000115` or
+`oboInOwl:SynonymTypeProperty`, you should import the complete
 [OBO Metadata Ontology](http://purl.obolibrary.org/obo/omo.owl) instead of re-declaring
 them in your editor file.
 
@@ -120,7 +119,7 @@ which is usually named _yourOntologyID-odk.yaml_.
 For example, if we want to migrate CHMO we would create a file called _chmo-odk.yaml_
 with this content to start out with:
 
-  ```
+  ```yaml
   ## ontology metadata ##
   id: chmo
   title: Chemical Methods Ontology
@@ -169,22 +168,24 @@ with this content to start out with:
         use_gzipped: true
         make_base: true
   ```
+
 ## 4. Seeding your ODK Repository Locally
+
 To create a new ODK repository within your working directory based on the project YAML
-file you just created, you just have to call the following commands (replacing [PATH TO
-YOUR PROJECT YAML FILE] with the actual path to your project YAML file).
+file you just created, you just have to call the following commands (replacing `[PATH TO
+YOUR PROJECT YAML FILE]` with the actual path to your project YAML file).
 
 * Using the seed-via-docker wrapper script (which is downloaded in this call, and thus
   needs internet connection):
 
-    ```
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/INCATools/ontology-development-kit/master/seed-via-docker.sh)" --clean -C [PATH TO YOUR PROJECT YAML]
+    ```console
+    $ sh -c "$(curl -fsSL https://raw.githubusercontent.com/INCATools/ontology-development-kit/master/seed-via-docker.sh)" --clean -C [PATH TO YOUR PROJECT YAML]
     ```
   
 * Using ODK runner:
 
-    ```
-    odk seed --clean -C [PATH TO YOUR PROJECT YAML]
+    ```console
+    $ odk seed --clean -C [PATH TO YOUR PROJECT YAML]
     ```
   
 This will create a folder called _target_ in which you will find your new ODK repository
@@ -202,10 +203,12 @@ script in case something went wrong and would have to delete the target folder b
 rerun with root permission.
 
 ## 5. Push your ODK Repository to GitHub / GitLab
+
 If you want to create a brand-new repository on GitHub / GitLab, you can
 just follow the steps explained [here](odk-create-repo.md#4-push-to-git-hosting-website).
 
 ## 6. Make a new Branch to Work in
+
 If you want to keep your existing GitHub / GitLab repository, used your local clone as working directory for
 the above steps and have not done the following already, then you should now:
 
@@ -219,9 +222,9 @@ the above steps and have not done the following already, then you should now:
 
 Even if you created a completely new repository, you should now do the next steps in a new branch.
 
-## 6. Migrating the Content into the Editor File
+## 7. Migrating the Content into the Editor File
 
-* Open the editor file (.e.g. `target/chmo/src/ontology/chmo-edit.owl`) in your text editor and Protégé.
+* Open the editor file (e.g., `target/chmo/src/ontology/chmo-edit.owl`) in your text editor and Protégé.
 * From your previously converted “old” OFN ontology file, cut all declared terms (classes, object, data &
   annotation properties and individuals) that use the namespace of your ontology and paste them into the editor file.
     * Start by cutting the term declarations, then the classes, and so on.
@@ -229,7 +232,8 @@ Even if you created a completely new repository, you should now do the next step
       text editor, Protégé will ask you to reload the editor file. Click yes, and if this causes an error, you 
       did something wrong.
 
-## 7. Building your Import Modules
+## 8. Building your Import Modules
+
 In the term declaration section of your “old” OFN ontology file there should now only be those terms left,
 that are external and which need to be imported via import modules. To build the latter, you first need
 to provide these terms in the empty text files that were created by ODK in the seeding step in the
@@ -251,14 +255,14 @@ this, as described
 
 * You can either call the ODK command with which all import modules are build/updated at once using:
 
-  ```
-  ../src/ontology/$ sh run.sh make refresh-imports
+  ```console
+  $ ../src/ontology/$ sh run.sh make refresh-imports
   ```
   
 * or you can only update a specific import module by calling:
 
-  ```
-  ../src/ontology/$ sh run.sh make refresh-%
+  ```console
+  $ ../src/ontology/$ sh run.sh make refresh-%
   ```
   
   where the “%” is the placeholder for the id of the ontology from which you import. E.g. to build/update your
@@ -273,14 +277,14 @@ this, as described
   of that ontology within your mirror folder (`scr/ontology/mirror`), you can skip this download/mirror step by
   instead calling:
 
-  ```
-  ../src/ontology/$ sh run.sh make no-mirror-refresh-imports
+  ```console
+  $ ../src/ontology/$ sh run.sh make no-mirror-refresh-imports
   ```
   
   for building all import modules at once, or:
 
-  ```
-  ../src/ontology/$ sh run.sh make no-mirror-refresh-%
+  ```console
+  $ ../src/ontology/$ sh run.sh make no-mirror-refresh-%
   ```
   
   for building only a specific one.
@@ -313,30 +317,37 @@ import module.
 NOTE: If you need to add a new import dependency to your _project.yaml_ (e.g. you added another
 ontology dependency to the `import_group` section), you need to run:
 
-   ```
-   ../src/ontology/$ sh run.sh update_repo
+   ```console
+   $ ../src/ontology/$ sh run.sh update_repo
    ```
 
 AND you need to add this newly added ontology dependency also to the import declaration sections of your
 `catalog-v001.xml` and your editor file.
 
-## 8. Merge your Branch
+## 9. Merge your Branch
+
 Once you got your import modules (dependencies) right, you can merge the branch.
 
-## 9. Make a Release
+## 10. Make a Release
+
 Make a release and update the metadata needed for your purl system to resolve (e.g. OBO PURL system can also
 resolve to your import modules) see also: 
 http://pato-ontology.github.io/pato/odk-workflows/ReleaseWorkflow
 
-## 10. Join the ODK Slack Channel
-Come to the [#ontology-development-kit](https://obo-communitygroup.slack.com/archives/C01BKKED8R2) Slack
+## 11. Join the ODK Slack Channel
+
+Join the OBO Foundry Community Slack workspace by
+[filling out this form](https://docs.google.com/forms/d/e/1FAIpQLScJbdW0QcCS3432mHkTiir9D-HwT5g2iaXYiiy2aOOiCFS3RQ/viewform?usp=dialog).
+After you're in, come to the [#ontology-development-kit](https://obo-communitygroup.slack.com/archives/C01BKKED8R2)
 channel to get help (it is best to have an open repo so others have something to look at for helping to fix 
 problems).
 
-## 11. Updating your ODK Environment
+## 12. Updating your ODK Environment
+
 To update your ODK environment follow [this HowTo](odk-update.md).
 
 ## Good to Know
+
 Your cheat sheet for the [Frequently Used ODK Commands](http://incatools.github.io/ontology-development-kit/FrequentlyUsedODKCommands/).
 
 ## Contributors
