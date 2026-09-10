@@ -1,0 +1,7 @@
+ID	Label	Parent	Comment
+ID	LABEL	C %	A rdfs:comment
+EX:0000001	disease		
+EX:0000002	heart disease	disease	A type of disease that affects the heart.
+EX:0000003	respiratory disease	disease	A type of disease that affects the respiratory system.
+EX:0000004	coronary heart disease	heart disease	A type of heart disease where blood flow is restricted to the heart by plaque build-up in the arteries.
+EX:0000005	emphysema	respiratory disease	A type of respiratory disease where the air sacs in the lungs are damaged.

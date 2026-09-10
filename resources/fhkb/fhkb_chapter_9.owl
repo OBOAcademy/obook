@@ -1,0 +1,436 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_9.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_9.owl">
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://mowl-power.cs.man.ac.uk/fhkbtutorial/1.1/ontology/fhkb_chapter_8.owl</Import>
+    <Declaration>
+        <Class IRI="#Marriage"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAuntInLaw"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasBrotherInLaw"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCousin"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasFatherInLaw"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasFemalePartner"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasFirstCousin"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasFirstCousinOnceRemoved"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasHusband"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasInLaw"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasMalePartner"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasMotherInLaw"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasParentInLaw"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasPartner"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSecondCousin"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSiblingInLaw"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSisterInLaw"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSpouse"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasUncleInLaw"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasWife"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isAuntInLawOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isBrotherInLawOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isFatherInLawOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isFemalePartnerIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isHusbandOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isMalePartnerIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isMotherInLawOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isParentInLawOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isPartnerIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isSiblingInLawOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isSisterInLawOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isSpouseOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isUncleInLawOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isWifeOf"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasMarriageYear"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Diana_Pool"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Joyce_Gosport"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#m001"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#m002"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#m003"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Marriage"/>
+        <Class IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_4.owl#DomainEntity"/>
+    </SubClassOf>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFemalePartner"/>
+        <NamedIndividual IRI="#m001"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#Margaret_Grace_Rever_1934"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMalePartner"/>
+        <NamedIndividual IRI="#m001"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#David_Bright_1934"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFemalePartner"/>
+        <NamedIndividual IRI="#m002"/>
+        <NamedIndividual IRI="#Joyce_Gosport"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMalePartner"/>
+        <NamedIndividual IRI="#m002"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#John_Bright_1930"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFemalePartner"/>
+        <NamedIndividual IRI="#m003"/>
+        <NamedIndividual IRI="#Diana_Pool"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMalePartner"/>
+        <NamedIndividual IRI="#m003"/>
+        <NamedIndividual IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#Peter_William_Bright_1941"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMarriageYear"/>
+        <NamedIndividual IRI="#m001"/>
+        <Literal datatypeIRI="&xsd;integer">1958</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMarriageYear"/>
+        <NamedIndividual IRI="#m002"/>
+        <Literal datatypeIRI="&xsd;integer">1955</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMarriageYear"/>
+        <NamedIndividual IRI="#m003"/>
+        <Literal datatypeIRI="&xsd;integer">1964</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasAuntInLaw"/>
+        <ObjectProperty IRI="#hasInLaw"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasBrotherInLaw"/>
+        <ObjectProperty IRI="#hasSiblingInLaw"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasCousin"/>
+        <ObjectProperty IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_5.owl#hasBloodrelation"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasFatherInLaw"/>
+        <ObjectProperty IRI="#hasParentInLaw"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasFemalePartner"/>
+        <ObjectProperty IRI="#hasPartner"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasFirstCousin"/>
+        <ObjectProperty IRI="#hasCousin"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasFirstCousinOnceRemoved"/>
+        <ObjectProperty IRI="#hasCousin"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasHusband"/>
+        <ObjectProperty IRI="#hasSpouse"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasInLaw"/>
+        <ObjectProperty IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_3.owl#hasRelation"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasMalePartner"/>
+        <ObjectProperty IRI="#hasPartner"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasMotherInLaw"/>
+        <ObjectProperty IRI="#hasParentInLaw"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasParentInLaw"/>
+        <ObjectProperty IRI="#hasInLaw"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasSecondCousin"/>
+        <ObjectProperty IRI="#hasCousin"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasSiblingInLaw"/>
+        <ObjectProperty IRI="#hasInLaw"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasSisterInLaw"/>
+        <ObjectProperty IRI="#hasSiblingInLaw"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasUncleInLaw"/>
+        <ObjectProperty IRI="#hasInLaw"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasWife"/>
+        <ObjectProperty IRI="#hasSpouse"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isFatherInLawOf"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isMotherInLawOf"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasAuntInLaw"/>
+        <ObjectProperty IRI="#isAuntInLawOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasBrotherInLaw"/>
+        <ObjectProperty IRI="#isBrotherInLawOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasFatherInLaw"/>
+        <ObjectProperty IRI="#isFatherInLawOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasFemalePartner"/>
+        <ObjectProperty IRI="#isFemalePartnerIn"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasHusband"/>
+        <ObjectProperty IRI="#isHusbandOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isMalePartnerIn"/>
+        <ObjectProperty IRI="#hasMalePartner"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasMotherInLaw"/>
+        <ObjectProperty IRI="#isMotherInLawOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isParentInLawOf"/>
+        <ObjectProperty IRI="#hasParentInLaw"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasPartner"/>
+        <ObjectProperty IRI="#isPartnerIn"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasSiblingInLaw"/>
+        <ObjectProperty IRI="#isSiblingInLawOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasSisterInLaw"/>
+        <ObjectProperty IRI="#isSisterInLawOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasSpouse"/>
+        <ObjectProperty IRI="#isSpouseOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasUncleInLaw"/>
+        <ObjectProperty IRI="#isUncleInLawOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasWife"/>
+        <ObjectProperty IRI="#isWifeOf"/>
+    </InverseObjectProperties>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#hasFirstCousin"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#hasInLaw"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#hasSecondCousin"/>
+    </SymmetricObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasParentInLaw"/>
+        <Class IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_4.owl#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasPartner"/>
+        <Class IRI="#Marriage"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasFatherInLaw"/>
+        <Class IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_4.owl#Man"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasFemalePartner"/>
+        <Class IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_4.owl#Woman"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasMalePartner"/>
+        <Class IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_4.owl#Man"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasMotherInLaw"/>
+        <Class IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_4.owl#Woman"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasParentInLaw"/>
+        <Class IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_4.owl#Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasPartner"/>
+        <Class IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_4.owl#Person"/>
+    </ObjectPropertyRange>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_5.owl#hasAunt"/>
+            <ObjectProperty IRI="#hasHusband"/>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="#hasUncleInLaw"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_5.owl#hasUncle"/>
+            <ObjectProperty IRI="#hasWife"/>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="#hasAuntInLaw"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty IRI="#isFemalePartnerIn"/>
+            <ObjectProperty IRI="#hasMalePartner"/>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="#hasHusband"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty IRI="#isMalePartnerIn"/>
+            <ObjectProperty IRI="#hasFemalePartner"/>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="#hasWife"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty IRI="#isSpouseOf"/>
+            <ObjectProperty IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#hasFather"/>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="#hasFatherInLaw"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty IRI="#isSpouseOf"/>
+            <ObjectProperty IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_2.owl#hasMother"/>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="#hasMotherInLaw"/>
+    </SubObjectPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasMarriageYear"/>
+        <DataProperty IRI="http://owl.cs.manchester.ac.uk/tutorials/fhkbtutorial/fhkb_chapter_7.owl#hasEventYear"/>
+    </SubDataPropertyOf>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasMarriageYear"/>
+    </FunctionalDataProperty>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#m001</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Marriage of David and Margaret</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#m002</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Marriage of John and Joyce</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#m003</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Marriage of Peter and Diana</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+

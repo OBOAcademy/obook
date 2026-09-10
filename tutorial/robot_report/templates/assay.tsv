@@ -1,0 +1,5 @@
+ID	Label	Parent	Comment
+ID	LABEL	C %	A rdfs:comment
+EX:0000006	assay		
+EX:0000007	electrocardiogram	assay	An assay that records electrical signals in the heart.
+EX:0000008	CT scan	assay	A series of X-rays that create cross-sectional images of bones, blood vessels, and soft tissues.
