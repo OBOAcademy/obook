@@ -56,7 +56,7 @@ This workflow is appropriate if:
 1. You prefer to manage all your imported terms in a single file (rather than multiple files like in the "Using term files" workflow above).
 2. You wish to augment your imported ontologies with additional information. This requires a cautionary discussion.
 
-To enable this workflow, you add the following to your ODK config file (`src/ontology/cl-odk.yaml`), and update the repository (using `sh run.sh update_repo`):
+To enable this workflow, you add the following to your ODK config file (`src/ontology/cl-odk.yaml`), and update the repository (using `odkrun update_repo`):
 
 ```
 use_custom_import_module: TRUE
@@ -92,25 +92,14 @@ cd src/ontology
 Then, you regenerate the import that will now include any new terms you have added. Note: You must have [docker installed](../howto/odk-setup.md).
 
 ```
-sh run.sh make PAT=false imports/go_import.owl -B
+odkrun make refresh-go
 ```
 
-Since ODK 1.2.27, it is also possible to simply run the following, which is the same as the above:
+
+If you wish to skip refreshing the mirror, i.e. skip downloading the latest version of the source ontology for your import (e.g. `go.owl` for your go import) you can use instead:
 
 ```
-sh run.sh make refresh-go
-```
-
-Note that in case you changed the defaults, you need to add `IMP=true` and/or `MIR=true` to the command below:
-
-```
-sh run.sh make IMP=true MIR=true PAT=false imports/go_import.owl -B
-```
-
-If you wish to skip refreshing the mirror, i.e. skip downloading the latest version of the source ontology for your import (e.g. `go.owl` for your go import) you can set `MIR=false` instead, which will do the exact same thing as the above, but is easier to remember:
-
-```
-sh run.sh make IMP=true MIR=false PAT=false imports/go_import.owl -B
+odkrun make no-mirror-refresh-go
 ```
 
 ## Using the Base Module approach
@@ -172,10 +161,10 @@ cd src/ontology
 Then refresh imports by running
 
 ```
-sh run.sh make imports/merged_import.owl
+odkrun make imports/merged_import.owl
 ```
 
-Note: if your mirrors are updated, you can run `sh run.sh make no-mirror-refresh-merged`
+Note: if your mirrors are updated, you can run `odkrun make no-mirror-refresh-merged`
 
 This requires quite a bit of memory on your local machine, so if you encounter an error, it might be a lack of memory on your computer. A solution would be to create a ticket in an issue tracker requesting for the term to be imported, and your one of the local devs should pick this up and run the import for you.
 

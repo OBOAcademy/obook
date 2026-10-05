@@ -9,21 +9,6 @@ You may need assistance from someone with basic Unix knowledge in following the 
 
 * [Getting set up with Docker and the Ontology Development Kit](odk-setup.md).
 * [Install Protégé](set-up-protege.md)
-* OPTIONAL (Beta Testing): Install the [ODK runner](https://github.com/gouttegd/odkrunner) for
-  better user experience. In the Linux shell you can do this with:
-    * ```mkdir ~/tools``` (to create a _~/tools_ directory)
-    * ```wget wget https://github.com/gouttegd/odkrunner/releases/latest/download/odkrun-linux -O ~/tools/odk -O ~/tools/odk```
-      (to download and save the ODK runner binary file into the _~/tools_ directory.)
-    * ```chmod +x ~/tools/odk``` (to make the binary file executable)
-    * ```export PATH=$PATH:~/tools``` (to add the _~/tools_ folder to your path for the current
-      session)
-        * Assuming you use Bash as your shell (the Ubuntu default), you could add the _~/tools_ folder permanently to your path in your Bash config file with:
-          ```shell
-          echo "
-          # Adding ODK runner script living in ~/tools to PATH
-          export PATH=\"\$PATH:~/tools\"" >> ~/.bashrc
-          ```
-          If you’re using another shell, check its documentation to know how to add a directory to its executable search path.
 
 ## 2. Get the ontology you want to migrate into the right format
 
@@ -48,22 +33,22 @@ installed the ODK runner previously, you can simply run the following command (r
 [PATH TO YOUR “OLD” ONTOLOGY FILE] with the actual path to your “old” ontology file):
 
   ```console
-  $ odk robot convert \
+  $ odkrun robot convert \
     --input [PATH TO YOUR “OLD” ONTOLOGY FILE] \
     --format ofn --output [PATH TO YOUR “OLD” ONTOLOGY FILE].ofn
   ```
 
-* If you didn't install the ODK runner, you need to download the ODK wrapper script into your
-  working directory with
-* `wget https://oboacademy.github.io/obook/resources/odk.sh`. Then check that it works by
-  running `sh odk.sh robot --version`, which should return the version of ROBOT (e.g.: `ROBOT 
-version 1.9.6`). Now, you can convert your current ontology file with:
-
-  ```console
-  $ sh odk.sh robot convert \
-    --input [PATH TO YOUR “OLD” ONTOLOGY FILE] \
-    --format ofn --output [PATH TO YOUR “OLD” ONTOLOGY FILE].ofn
-  ```
+> If you didn't install the [ODK runner](../howto/odk-setup.md#odkrunner), you need to
+> download the ODK wrapper script into your working directory with
+> `wget https://oboacademy.github.io/obook/resources/odk.sh`. Then check that it works by
+> running `sh odk.sh robot --version`, which should return the version of ROBOT (e.g.:
+> `ROBOT version 1.9.6`). Now, you can convert your current ontology file with:
+>
+>  ```console
+>  $ sh odk.sh robot convert \
+>    --input [PATH TO YOUR “OLD” ONTOLOGY FILE] \
+>    --format ofn --output [PATH TO YOUR “OLD” ONTOLOGY FILE].ofn
+>  ```
 
 In the below example of the Chemical Methods Ontology (CHMO), you can see that it
 declares terms from the following namespaces:
@@ -175,23 +160,24 @@ To create a new ODK repository within your working directory based on the projec
 file you just created, you just have to call the following commands (replacing `[PATH TO
 YOUR PROJECT YAML FILE]` with the actual path to your project YAML file).
 
+* Using ODK runner:
+
+    ```console
+    $ odkrun seed --clean -C [PATH TO YOUR PROJECT YAML]
+    ```
+
 * Using the seed-via-docker wrapper script (which is downloaded in this call, and thus
   needs internet connection):
 
     ```console
-    $ sh -c "$(curl -fsSL https://raw.githubusercontent.com/INCATools/ontology-development-kit/master/seed-via-docker.sh)" --clean -C [PATH TO YOUR PROJECT YAML]
+    $ sh -c "$(curl -fsSL https://github.com/INCATools/ontology-development-kit/releases/latest/download/seed-via-docker.sh)" --clean -C [PATH TO YOUR PROJECT YAML]
     ```
   
-* Using ODK runner:
-
-    ```console
-    $ odk seed --clean -C [PATH TO YOUR PROJECT YAML]
-    ```
   
 This will create a folder called _target_ in which you will find your new ODK repository
 structure with all the necessary files and folders as well as some first GIT commits already
 made. For more details, see also
-[this OBOOK section](odk-create-repo.md#3-run-the-wrapper-script).
+[this OBOOK section](odk-create-repo.md#2-run-the-seeding-command).
 
 NOTE: This step may take a while and might seem to you that it stalled, because there is
 no output on the console when the script downloads the ontologies you specified in your
@@ -256,20 +242,20 @@ this, as described
 * You can either call the ODK command with which all import modules are build/updated at once using:
 
   ```console
-  $ ../src/ontology/$ sh run.sh make refresh-imports
+  $ ../src/ontology/$ odkrun make refresh-imports
   ```
   
 * or you can only update a specific import module by calling:
 
   ```console
-  $ ../src/ontology/$ sh run.sh make refresh-%
+  $ ../src/ontology/$ odkrun make refresh-%
   ```
   
   where the “%” is the placeholder for the id of the ontology from which you import. E.g. to build/update your
   IAO module, you’d have to call:
 
   ```
-  ../src/ontology/$ sh run.sh make refresh-iao
+  ../src/ontology/$ odkrun make refresh-iao
   ```
   
 * With the above commands ODK will first download the whole ontology from which ODK will build your
@@ -278,19 +264,19 @@ this, as described
   instead calling:
 
   ```console
-  $ ../src/ontology/$ sh run.sh make no-mirror-refresh-imports
+  $ ../src/ontology/$ odkrun make no-mirror-refresh-imports
   ```
   
   for building all import modules at once, or:
 
   ```console
-  $ ../src/ontology/$ sh run.sh make no-mirror-refresh-%
+  $ ../src/ontology/$ odkrun make no-mirror-refresh-%
   ```
   
   for building only a specific one.
 
 
-* If you use ODK runner, just replace `sh run.sh` with `odk` in any of the above commands.
+* If you do not use the ODK runner, just replace `odkrun` with `sh run.sh` in the above commands.
 
 In most cases the default way of building import modules in ODK via the extraction method called SLME-BOT will
 be the best option. In some cases this default can be too “noisy” by also importing terms you don’t need/want.
@@ -318,7 +304,7 @@ NOTE: If you need to add a new import dependency to your _project.yaml_ (e.g. yo
 ontology dependency to the `import_group` section), you need to run:
 
    ```console
-   $ ../src/ontology/$ sh run.sh update_repo
+   $ ../src/ontology/$ odkrun update_repo
    ```
 
 AND you need to add this newly added ontology dependency also to the import declaration sections of your
