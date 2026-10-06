@@ -65,8 +65,7 @@ Windows to save it in your working directory.
 
 Then you can open the file with a text editor like Notepad++, Atom, Sublime or
 even nano, and adapt it to your project. Other more comprehensive examples can
-be found
-[here](https://raw.githubusercontent.com/INCATools/odkcore/refs/heads/main/examples/).
+be found [here](https://github.com/INCATools/odkcore/tree/main/examples).
 
 
 ### Problems?
@@ -93,7 +92,7 @@ git config --global user.email alice@example.org
 If for some reason you do not wish to set a Git username and email globally,
 or you wish to use a different username and email than those already set in
 your `~/.gitconfig` file, you may explicitly pass a username and an email when
-you call the `odkrun seed` script as follows:
+you call the `odkrun seed` command as follows:
 
 ```sh
 odkrun seed --gitname Alice --gitemail alice@example.org ...
@@ -116,7 +115,7 @@ Windows machine get a wrong file ending, for example `project.yaml.txt`
 instead of `project.yaml`. If you have problems, double check your files are
 named correctly after the download!
 
-## 4. Push to Git hosting website
+## 3. Push to Git hosting website
 
 The development kit will automatically initialize a git project, add all files
 and commit.

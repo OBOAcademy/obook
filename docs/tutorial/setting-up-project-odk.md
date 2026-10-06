@@ -4,11 +4,6 @@
    the steps [here](../howto/odk-setup.md).
 2. Creating your first ontology repository
 
-The tutorial uses example tailored for users of UNIX systems, like Mac and
-Linux.  Users of Windows generally have analogous steps - wherever we talk
-about an `sh` file in the following there exists a corresponding `bat` file
-that can be run in the windows powershell, or CMD.
-
 ## Prerequisites
 
 You have:
@@ -192,7 +187,7 @@ repository to be initialised with a different username and/or email, you may
 explicitly pass them to the `seed` command as follows:
 
 ```
-odkrun seed -c -C cato.odk.yaml --gitname Alice --gitemail alice@example.org
+odkrun seed -c -C cato-odk.yaml --gitname Alice --gitemail alice@example.org
 ```
 
 > The above section assumes that you have installed the `odkrun` tool as
@@ -222,7 +217,7 @@ Then click `Publish the repository` on
 ### Using the Command Line
 
 Follow the instructions you see on the Terminal (they are printed after your
-seed-my-repo run).
+`odkrun seed` run.
 
 ## Finish!
 

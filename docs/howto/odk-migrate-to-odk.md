@@ -191,7 +191,7 @@ rerun with root permission.
 ## 5. Push your ODK Repository to GitHub / GitLab
 
 If you want to create a brand-new repository on GitHub / GitLab, you can
-just follow the steps explained [here](odk-create-repo.md#4-push-to-git-hosting-website).
+just follow the steps explained [here](odk-create-repo.md#3-push-to-git-hosting-website).
 
 ## 6. Make a new Branch to Work in
 

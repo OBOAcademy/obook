@@ -22,7 +22,7 @@ care of adding the daemon to the list of services that are automatically
 started at boot time; if not, check the documentation of your distribution to
 know how to do that.
 
-As a last resource, should Docker _not_ be available for you distribution, it
+As a last resort, should Docker _not_ be available for your distribution, it
 can be built from the source code provided by the [Moby
 project](https://github.com/moby/moby), though doing so is way out of scope
 for this document.
@@ -81,7 +81,8 @@ running: on macOS and Windows, make sure to launch the Docker Desktop
 application and try again; on GNU/Linux, check the documentation of your
 distribution to know how to start the daemon.
 
-If you get a line that looks like this:
+If you get a line that looks like this (exact column headers may vary
+depending on the version of Docker you have installed):
 
 ```
 IMAGE   ID             DISK USAGE   CONTENT SIZE   EXTRA
@@ -149,14 +150,14 @@ $ sudo chmod 0755 /usr/local/bin/odkrun
 Download the binary [here](https://github.com/INCATools/odkrunner/releases/latest/download/odkrun.exe)
 and put it into a directory that is in your system’s `PATH`.
 
-Unfortunately, as far as the author of those lines know, Windows does _not_
+Unfortunately, as far as the author of those lines knows, Windows does _not_
 have a pre-made directory already in the `PATH`, intended for custom
 executable programs (akin to GNU/Linux and macOS’ `/usr/local/bin` directory),
 so you are going to have to make one (we do _not_ recommend putting the ODK
 Runner binary directly under `C:\Windows\System32`, though that is a
 possibility).
 
-Create a `Local\bin` directory in your home’s directory and download the
+Create a `AppData\Local\bin` directory in your home’s directory and download the
 runner into that directory:
 
 ```console
@@ -165,8 +166,34 @@ curl -L -o "%USERPROFILE%\AppData\Local\bin\odkrun.exe" https://github.com/INCAT
 ```
 
 Now you need to add `%USERPROFILE%\AppData\Local\bin` to your user account’s
-`PATH`. Luckily, Windows is so user-friendly and intuitive that it can be done
-[in a breeze](https://stackoverflow.com/questions/44272416/add-a-folder-to-the-path-environment-variable-in-windows-10-with-screenshots), so we won’t cover the full procedure here.
+`PATH`. See [this discussion on StackOverflow](https://stackoverflow.com/questions/44272416/add-a-folder-to-the-path-environment-variable-in-windows-10-with-screenshots), for an
+illustrated procedure to do that.
+
+### Checking that the ODK Runner is properly installed
+
+After following the procedure above that is appropriate for your operating
+systems, you should be able to call the `odkrun` command from any terminal
+regardless of what your current directory.
+
+Check that by running:
+
+```console
+odkrun --version
+```
+
+You should get a message like this (version number may vary):
+
+```
+odkrun 0.5.0
+Copyright (c) 2026 Damien Goutte-Gattat
+
+This program is released under the 3-clause BSD license.
+See the COPYING file for more details.
+```
+
+If you don’t, go back to the procedure above. Maybe check that your `PATH`
+variable does include the directory where you put the `odkrun` file (`echo
+$PATH` on GNU/Linux and macOS; `echo %PATH% on Windows).
 
 <a id="odkrunner-alternatives"></a>
 ### Alternatives to the ODK Runner
@@ -184,13 +211,13 @@ macOS) or `odk.bat` (Windows).
 For the specific purpose of seeding a new ODK-managed repository, dedicated
 wrapper scripts are also available:
 
-- for GNU/Linux and macOS: [seed-via-docker.sh](https://github.com/INCATools/ontology-development-kit/releases/latest/download//seed-via-docker.sh)
-- for Windows: [seed-via-docker.bat](https://github.com/INCATools/ontology-development-kit/releases/latest/download//seed-via-docker.bat)
+- for GNU/Linux and macOS: [seed-via-docker.sh](https://github.com/INCATools/ontology-development-kit/releases/latest/download/seed-via-docker.sh)
+- for Windows: [seed-via-docker.bat](https://github.com/INCATools/ontology-development-kit/releases/latest/download/seed-via-docker.bat)
 
 ## Memory settings
 
-One of of the most frequent problems with running the ODK for the first time
-is failure because of lack of memory.
+One of the most frequent problems with running the ODK for the first time is
+failure because of lack of memory.
 
 There are two different settings involved:
 
@@ -202,7 +229,7 @@ There are two different settings involved:
 
 The first setting is configured in Docker’s preferences. With Docker Desktop
 (macOS, Windows), this is done in the _Preferences_ dialog, tab _Resources_,
-subtab _Advanced) (see picture below).
+subtab _Advanced_) (see picture below).
 
 ![dockermemory](../images/docker_memory.png)
 
@@ -212,8 +239,8 @@ do run into memory issues, check the documentation provided with your
 distribution about possible distribution-specific constraints.
 
 When using the ODK Runner, the second setting is automatically set to up to
-90% of the memory allocated to Docker, and so users should normally have to
-worry about it.
+90% of the memory allocated to Docker, and so users should not normally have
+to worry about it.
 
 When using a wrapper script such as those mentioned above, you may need to
 edit the wrapper script to set the required maximal amount of memory in the

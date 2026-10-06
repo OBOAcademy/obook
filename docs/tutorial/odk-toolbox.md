@@ -247,7 +247,7 @@ $ odkrun robot convert -i fbbt.obo -f ofn -o fbbt.ofn
 ```
 
 Compared to the `src/ontology/run.sh` wrapper script automatically created in
-an ODK-generated repository, the ODK Runner has the inconvenient that it
+an ODK-generated repository, the ODK Runner has the disadvantage that it
 requires additional setup (you must download and install the `odkrun`
 command), but it has the advantage that the `odkrun` can then be used from
 everywhere, even outside of an ODK-generated repository, and will then allow
