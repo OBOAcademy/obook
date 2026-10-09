@@ -217,7 +217,7 @@ Then click `Publish the repository` on
 ### Using the Command Line
 
 Follow the instructions you see on the Terminal (they are printed after your
-`odkrun seed` run.
+`odkrun seed` run).
 
 ## Finish!
 

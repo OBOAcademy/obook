@@ -157,8 +157,8 @@ so you are going to have to make one (we do _not_ recommend putting the ODK
 Runner binary directly under `C:\Windows\System32`, though that is a
 possibility).
 
-Create a `AppData\Local\bin` directory in your home’s directory and download the
-runner into that directory:
+Create an `AppData\Local\bin` directory in your home’s directory and download
+the runner into that directory:
 
 ```console
 mkdir "%USERPROFILE%\AppData\Local\bin"
@@ -172,8 +172,8 @@ illustrated procedure to do that.
 ### Checking that the ODK Runner is properly installed
 
 After following the procedure above that is appropriate for your operating
-systems, you should be able to call the `odkrun` command from any terminal
-regardless of what your current directory.
+system, you should be able to call the `odkrun` command from any terminal
+regardless of what your current directory is.
 
 Check that by running:
 
@@ -193,7 +193,7 @@ See the COPYING file for more details.
 
 If you don’t, go back to the procedure above. Maybe check that your `PATH`
 variable does include the directory where you put the `odkrun` file (`echo
-$PATH` on GNU/Linux and macOS; `echo %PATH% on Windows).
+$PATH` on GNU/Linux and macOS; `echo %PATH%` on Windows).
 
 <a id="odkrunner-alternatives"></a>
 ### Alternatives to the ODK Runner
