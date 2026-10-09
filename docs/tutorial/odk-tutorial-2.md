@@ -29,9 +29,9 @@ This is some useful background from the ICBO 2022 OBO Tutorial:
     github_org: matentzn
     repo: cat-ontology
     ```
-1. Run the ODK seeding script.
+1. Run the seeding command:
     ```
-    curl https://raw.githubusercontent.com/INCATools/ontology-development-kit/v1.3.1/seed-via-docker.sh | bash -s --  --clean -C cato-odk.yaml
+    odkrun seed --clean -C cato-odk.yaml
     ```
 1. Push the newly created repo to GitHub (for example with GitHub Desktop).
 
@@ -45,7 +45,7 @@ Let us now import planned process:
 
 1. Open the term file `src/ontology/imports/cob_terms.txt` in your favourite text editor
 2. Add `COB:0000082` to the term file (this is the `planned process` class in COB).
-3. From within the `src/ontology` directory, run `sh run.sh make refresh-cob`.
+3. From within the `src/ontology` directory, run `odkrun make refresh-cob`.
 4. Inspect the diff. Rather than importing just one term, it seems that we have important a whole bunch. This is because by default, ODK is using the SLME module extraction technique, which ensures that not only the terms we explicitly request are imported - [but all the logically dependent ones as well](project-ontology-development.md#extracting-modules).
 5. In `src/ontology/cato-odk.yaml`, locate the entry for importing `cob` and switch it to a different module type: `filter`.
     ```
@@ -55,8 +55,8 @@ Let us now import planned process:
         - id: cob
           module_type: filter
     ```
-6. Run `sh run.sh update_repo` to apply the changes. Check out the git diff to the `Makefile` to convince yourself that the new extraction method has been applied.
-7. Let us refresh the COB import again: From within the `src/ontology` directory, run `sh run.sh make refresh-cob`. Convince yourself that now only the `planned process` term is imported.
+6. Run `odkrun update_repo` to apply the changes. Check out the git diff to the `Makefile` to convince yourself that the new extraction method has been applied.
+7. Let us refresh the COB import again: From within the `src/ontology` directory, run `odkrun make refresh-cob`. Convince yourself that now only the `planned process` term is imported.
 
 <a id="testing"></a>
 
@@ -82,7 +82,7 @@ Great, we have done our change, now we are ready to make a release!
 
 1. Switch to the `main` branch in `git`.
 2. Make sure you you pull all changes (`git pull`).
-3. In `src/ontology` execute the release workflow: `sh run.sh make prepare_release_fast` (we are using `fast` release here which skips refreshing imports again - we just did that).
+3. In `src/ontology` execute the release workflow: `odkrun make prepare_release_fast` (we are using `fast` release here which skips refreshing imports again - we just did that).
 4. Inspect the changes. You should see that the `planned process` class has been added to all ontology release artefacts.
 5. Create a branch and commit the changes. Push. Create pull request. Request review (skipped in this tutorial). Wait for QC to pass. Merge.
 6. On GitHub (repository front page), click on "Create a new release".

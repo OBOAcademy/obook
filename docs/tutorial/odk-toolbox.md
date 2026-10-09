@@ -8,7 +8,8 @@ ODK-managed workflows.
 
 You have:
 
-- Docker installed and running on your machine.
+- Docker installed and running on your machine (see the [ODK setup
+  howto](../howto/odk-setup.md)).
 
 You know:
 
@@ -37,7 +38,7 @@ $ docker pull obolibrary/odkfull
 Using default tag: latest
 latest: Pulling from obolibrary/odkfull
 [… Output truncated for brevity …]
-Digest: sha256:272d3f788c18bc98647627f9e6ac7311ade22f35f0d4cd48280587c15843beee
+Digest: sha256:73364755375f2adc69f5a6df0f55ffb8bc444fcb6bb044785493d2d543d3c3a7
 Status: Downloaded newer image for obolibrary/odkfull:latest
 docker.io/obolibrary/odkfull:latest
 ```
@@ -47,7 +48,7 @@ Let’s see the images list again:
 ```sh
 $ docker images
 REPOSITORY           TAG       IMAGE ID       CREATED        SIZE
-obolibrary/odkfull   latest    0947360954dc   6 months ago   2.81GB
+obolibrary/odkfull   latest    73364755375f   6 months ago   2.81GB
 ```
 
 Docker images can exist in several versions, which are called _tags_ in Docker
@@ -58,14 +59,14 @@ latest ODK release.
 To download a specific version, append the tag after the image name (you can
 check which tags are available [on
 DockerHub](https://hub.docker.com/r/obolibrary/odkfull/tags)). For example,
-let’s download the 1.3.1 release from June 2022:
+let’s download the 1.6.1 release from March 2026:
 
 ```sh
-$ docker pull obolibrary/odkfull:v1.3.1
-v1.3.1: Pulling from obolibrary/odkfull
-Digest: sha256:272d3f788c18bc98647627f9e6ac7311ade22f35f0d4cd48280587c15843beee
-Status: Downloaded newer image for obolibrary/odkfull:v1.3.1
-docker.io/obolibrary/odkfull:v1.3.1
+$ docker pull obolibrary/odkfull:v1.6.1
+v1.6.1: Pulling from obolibrary/odkfull
+Digest: sha256:73364755375f2adc69f5a6df0f55ffb8bc444fcb6bb044785493d2d543d3c3a7
+Status: Downloaded newer image for obolibrary/odkfull:v1.6.1
+docker.io/obolibrary/odkfull:v1.6.1
 ```
 
 Again, let’s see the output of `docker images`:
@@ -73,16 +74,16 @@ Again, let’s see the output of `docker images`:
 ```sh
 $ docker images
 REPOSITORY           TAG       IMAGE ID       CREATED        SIZE
-obolibrary/odkfull   latest    0947360954dc   6 months ago   2.81GB
-obolibrary/odkfull   v1.3.1    0947360954dc   6 months ago   2.81GB
+obolibrary/odkfull   latest    73364755375f   6 months ago   2.81GB
+obolibrary/odkfull   v1.6.1    73364755375f   6 months ago   2.81GB
 ```
 
-Note how both the `latest` and the `v1.3.1` images have the same ID. This is
-because, at the time of this writing, the 1.3.1 release _is_ the latest ODK
-release, so the `latest` tag actually points to the same image as the `v1.3.1`
-tag. This will change when the ODK v1.3.2 is released: then, using `latest`
+Note how both the `latest` and the `v1.6.1` images have the same ID. This is
+because, at the time of this writing, the 1.6.1 release _is_ the latest ODK
+release, so the `latest` tag actually points to the same image as the `v1.6.1`
+tag. This will change when the ODK v1.7 is released: then, using `latest`
 (explicitly or by not specifying any tag at all) will point to the new
-release, while `v1.3.1` will forever continue to point to the June 2022
+release, while `v1.6.1` will forever continue to point to the March 2026
 release.
 
 In the rest of this tutorial, we will always use the `latest` image, and so we
@@ -140,7 +141,7 @@ For example, to test that ROBOT is there (and to see which version we have):
 
 ```sh
 $ docker run --rm obolibrary/odkfull robot --version
-ROBOT version 1.9.0
+ROBOT version 1.9.10
 ```
 
 
@@ -235,10 +236,22 @@ you could use:
 ./run.sh robot convert -i fbbt.obo -f ofn -o fbbt.ofn
 ```
 
-If you want to use the ODK toolbox with ontologies that are _not_ managed by
-the ODK (so, where a `run.sh` script is not readily available), you can set up
-an independent wrapper script, as explained in the [Setting up the
-ODK](../howto/odk-setup.md#for-maclinux) tutorial.
+This is also what the [ODK Runner](../howto/odk-setup.md#odkrunner) tool,
+which we suggest as the recommended way of invoking the ODK, is doing under
+the hood. With the ODK Runner installed (meaning the `odkrun` command is
+available in your `PATH`), you can use `odkrun` in place of the `docker run`
+command above:
+
+```sh
+$ odkrun robot convert -i fbbt.obo -f ofn -o fbbt.ofn
+```
+
+Compared to the `src/ontology/run.sh` wrapper script automatically created in
+an ODK-generated repository, the ODK Runner has the disadvantage that it
+requires additional setup (you must download and install the `odkrun`
+command), but it has the advantage that the `odkrun` can then be used from
+everywhere, even outside of an ODK-generated repository, and will then allow
+to use the ODK without having to craft independent wrapper scripts.
 
 
 ## Running a shell session within the container
@@ -275,7 +288,7 @@ as well, sending you back to your original terminal.
 ## What’s in the toolbox, actually?
 
 Now that you know how to invoke any tool from the ODK Toolbox, here’s a quick
-overview of which tools are available.
+(but non-exhaustive!) overview of which tools are available.
 
 For a definitive list, the authoritative source is the [ODK
 repository](https://github.com/INCATools/ontology-development-kit), especially
@@ -300,7 +313,5 @@ suggest that the tool be added in a future ODK release!
 ### Other semantic tools
 - [Apache Jena](https://github.com/apache/jena)
 - [Soufflé](https://github.com/souffle-lang/souffle)
-- [Konclude](https://github.com/konclude/Konclude)
 - [SSSOM-py](https://github.com/mapping-commons/sssom)
-- [SPARQLProg](https://github.com/cmungall/sparqlprog)
 - [curies](https://github.com/cthoyt/curies)
